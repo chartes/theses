@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rng:grammar 
+  xmlns:rng="http://relaxng.org/ns/structure/1.0" 
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" 
+  xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:h="http://www.w3.org/1999/xhtml" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  ns="http://www.tei-c.org/ns/1.0"
+  xml:lang="fr">
+  <a:documentation>
+    <h1>Positions de thèses de l'École des chartes, schéma</h1>
+    <h2>Mode d’emploi pour le secrétaire de rédaction dans InDesign</h2>
+    <ul>
+<li>Mettre en page en respectant le stylage en flux continu</li>
+<li>Mettre en correspondance les styles et les balises</li>
+<li>Rechercher / remplacer les ital., exposant et petites cap et les remplacer par les balises « i », « sup » et « sc ».</li>
+<li>Exporter en xml</li>
+
+      
+    </ul>
+    <h2>Légende</h2>
+    <dl>
+      <dd>Par défaut, ce qui est indiqué est obligatoire.</dd>
+      <dt>? = 0–1</dt>
+      <dd>optionnel</dd>
+      <dt>+ = 1–n</dt>
+      <dd>répétable et obligatoire</dd>
+      <dt>* = 0–n</dt>
+      <dd>répétable et optionnel</dd>
+      <dt>, (virgule)</dt>
+      <dd>Séquence</dd>
+      <dt>| (barre verticale)</dt>
+      <dd>alternative</dd>
+    </dl>
+    <a:example>
+<!-- Modèle TEI canonique -->
+<text>
+  <front>
+      <head>Titre</head>
+    <head type="sub">Sous-titre ?</head>
+    <byline>
+      <forename>Prénom</forename> 
+      <surname>Nom</surname>
+      <roleName>diplôme (optionnel avant 2006)</roleName>
+    </byline>
+    <div>
+      <head>Introduction</head>
+      <p>+</p>
+    </div>
+    <div>
+      <head>Sources</head>
+      <p>+</p>
+    </div>
+  </front>
+  <body>
+    <!-- Parties répétables avec sections imbriquées -->
+    <div>
+      <head n="Première partie">Titre de partie</head>
+      <p>* (optionnel répétable, en cas de tomes)</p>
+      <div>
+        <head n="Chapitre premier">Titre de chapitre</head>
+        <p>+</p>
+      </div>
+    </div>
+  </body>
+  <back>
+    <div>
+      <head>Conclusion</head>
+      <p>+</p>
+    </div>
+    <!-- * sections optionnelles -->
+    <div>
+      <head>Illustrations | Pièces justificatives | Annexes | Catalogue</head>
+      <p>+</p>
+    </div>
+  </back>
+</text>
+    </a:example>
+  </a:documentation>
+  <rng:define name="text">
+    <rng:element name="text">
+      <a:documentation>Partie visible du document, avec début, milieu, fin.</a:documentation>
+      <rng:ref name="front"/>
+      <rng:ref name="body"/>
+      <rng:ref name="back"/>
+    </rng:element>
+  </rng:define>
+  <h2>Tête</h2>
+  <rng:define name="front">
+    <rng:element name="front">
+      <a:documentation>L'entête comporte : 
+        <ul>
+          <li>un ou deux titres : un titre principal obligatoire, et un titre supplémentaire optionnel, pouvant paraître par dessus ou par dessous le titre principal ;</li>
+          <li>une ligne auteur : prénom, nom, diplôme ;</li>
+          <li>une présentation du travail en deux sections : introduction, sources.</li>
+        </ul>
+      </a:documentation>
+      <rng:choice>
+        <rng:group>
+          <rng:ref name="title"/>
+        </rng:group>
+        <rng:group>
+          <rng:ref name="title"/>
+          <rng:ref name="title-sub"/>
+        </rng:group>
+        <rng:group>
+          <rng:ref name="title-sub"/>
+          <rng:ref name="title"/>
+        </rng:group>
+      </rng:choice>
+      <rng:element name="byline">
+        <a:documentation>Prénom (<i>forename</i>), Nom (<i>surname</i>), diplôme (<i>roleName</i>)</a:documentation>
+        <rng:element name="forename">
+          <rng:text/>
+        </rng:element>
+        <rng:element name="surname">
+          <rng:text/>
+        </rng:element>
+        <rng:optional>
+          <rng:element name="roleName">
+            <rng:text/>
+          </rng:element>
+        </rng:optional>
+      </rng:element>
+      <rng:element name="div">
+        <a:documentation>Introduction</a:documentation>
+        <rng:element name="head">
+          <rng:value>Introduction</rng:value>
+        </rng:element>
+        <rng:oneOrMore>
+          <rng:ref name="p"/>
+        </rng:oneOrMore>
+      </rng:element>
+      <rng:zeroOrMore>
+        <rng:element name="div">
+          <rng:element name="head">
+            <rng:choice>
+              <rng:value>Sources</rng:value>
+              <rng:value>Historiographie</rng:value>
+              <rng:value>Historiographie et problématique</rng:value>
+              <rng:text/>
+            </rng:choice>
+          </rng:element>
+          <rng:oneOrMore>
+            <rng:ref name="p"/>
+          </rng:oneOrMore>
+        </rng:element>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="title">
+    <rng:element name="head">
+      <a:documentation>Titre principal obligatoire</a:documentation>
+      <rng:ref name="mix"/>
+    </rng:element>
+  </rng:define>
+  <rng:define name="title-sub">
+    <rng:element name="head">
+      <a:documentation>Sous-titre optionnel (peut paraître avant ou après le titre principal)</a:documentation>
+      <rng:attribute name="type">
+        <rng:value>sub</rng:value>
+      </rng:attribute>
+      <rng:ref name="mix"/>
+    </rng:element>
+  </rng:define>
+  <h2>Corps</h2>
+  <rng:define name="body">
+    <rng:element name="body">
+      <a:documentation>Développement, généralement une suite de partie contenant des chapitres.</a:documentation>
+      <rng:oneOrMore>
+        <rng:element name="div">
+          <a:documentation>Partie</a:documentation>
+          <rng:ref name="head"/>
+          <rng:zeroOrMore>
+            <rng:ref name="p"/>
+          </rng:zeroOrMore>
+          <rng:zeroOrMore>
+            <rng:element name="div">
+              <a:documentation>Chapitre</a:documentation>
+              <rng:ref name="head"/>
+              <rng:zeroOrMore>
+                <rng:ref name="p"/>
+              </rng:zeroOrMore>
+            </rng:element>
+          </rng:zeroOrMore>
+        </rng:element>
+      </rng:oneOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="head">
+    <rng:element name="head">
+      <a:documentation>Titre de partie ou de chapitre. Les intitulés comme “Première partie” ou “Chapitre II” sont contenus dans l'attribut @n.</a:documentation>
+      <rng:attribute name="n"/>
+      <rng:ref name="mix"/>
+    </rng:element>
+  </rng:define>
+  <h2>Pied</h2>
+  <rng:define name="back">
+    <rng:element name="back">
+      <a:documentation>Conclusion</a:documentation>
+      <rng:oneOrMore>
+        <rng:element name="div">
+          <rng:element name="head">
+            <rng:choice>
+              <rng:value>Conclusion</rng:value>
+              <rng:value>Illustrations</rng:value>
+              <rng:value>Édition</rng:value>
+              <rng:value>Catalogue</rng:value>
+              <rng:value>Pièces justificatives</rng:value>
+              <rng:value>Pièce justificative</rng:value>
+              <rng:value>Pièces justificatives et planches</rng:value>
+              <rng:value>Pièces justificatives et annexes</rng:value>
+              <rng:value>Planches</rng:value>
+              <rng:value>Appendice</rng:value>
+              <rng:value>Annexes</rng:value>
+              <rng:value>Annexes et pièces justificatives</rng:value>
+              <rng:value>Cartes</rng:value>
+              <rng:value>Catalogue iconographique</rng:value>
+              <rng:value>Iconographie</rng:value>
+              <rng:text/>
+            </rng:choice>
+          </rng:element>
+          <rng:oneOrMore>
+            <rng:ref name="p"/>
+          </rng:oneOrMore>
+        </rng:element>
+      </rng:oneOrMore>
+    </rng:element>
+  </rng:define>
+  <a:documentation>
+    <h2>Styles caractères</h2>
+  </a:documentation>
+  <rng:define name="mix">
+    <a:documentation>Texte mêlé de styles de caractères</a:documentation>
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:text/>
+        <rng:ref name="i"/>
+        <rng:ref name="num"/>
+        <rng:ref name="sup"/>
+        <rng:ref name="lb"/>
+      </rng:choice>
+    </rng:zeroOrMore>
+  </rng:define>
+  <rng:define name="p">
+    <rng:element name="p">
+      <a:documentation>Paragraphe de texte</a:documentation>
+      <rng:ref name="mix"/>    
+    </rng:element>
+  </rng:define>
+  <rng:define name="sup">
+    <rng:element name="hi">
+      <a:documentation>Ex<sup>posant</sup></a:documentation>
+      <rng:attribute name="rend">
+        <rng:value>sup</rng:value>
+      </rng:attribute>
+      <rng:text/>
+    </rng:element>
+  </rng:define>
+  <rng:define name="num">
+    <rng:element name="num">
+      <a:documentation><span style="font-variant:small-caps">Chiffre Romain</span></a:documentation>
+      <rng:text/>
+      <rng:optional>
+        <rng:ref name="sup"/>
+      </rng:optional>
+    </rng:element>
+  </rng:define>
+  <rng:define name="i">
+    <rng:element name="hi">
+      <a:documentation><i>italique</i></a:documentation>
+      <rng:attribute name="rend">
+        <rng:value>i</rng:value>
+      </rng:attribute>
+      <rng:zeroOrMore>
+        <rng:choice>
+          <rng:text/>
+          <rng:ref name="num"/>
+          <rng:ref name="sup"/>
+        </rng:choice>
+      </rng:zeroOrMore>
+    </rng:element>
+  </rng:define>
+  <rng:define name="lb">
+    <rng:element name="lb">
+      <a:documentation>Saut de ligne, principalement dans les titres.</a:documentation>
+      <rng:empty/>
+    </rng:element>
+  </rng:define>
+  <a:documentation>
+    <h2 id="inDesign">Format plat (ex : export inDesign)</h2>
+    <a:example>
+<!-- Format transitoire sans hiérarchie, notamment pour export inDesign -->
+<_>      
+  <title>Titre de thèse</title>
+  <title-sub>? Sous-titre optionnel</title-sub>
+  <author><author-forename>Prénom</author-forename> <author-surname>Nom</author-surname></author>
+  <education>diplôme</education>
+  <head1>Introduction</head1>
+  <p>+</p>
+  <head1>Sources</head1>
+  <p>+</p>
+  <head1-label>Première partie</head1-label>
+  <head1>Titre de partie</head1>
+  <head2-label>Premier chapitre</head2-label>
+  <head2>Titre de partie</head2>
+  <p>+</p>
+  <!-- ... -->
+  <head1>Conclusion</head1>
+  <p>+</p>
+  <head1>Annexes…</head1>  
+  <p>+</p>
+</_>
+    </a:example>
+  </a:documentation>
+  <a:documentation>
+    <h2>Métadonnées</h2>
+    <a:example>
+<TEI>
+  <!-- Les métadonnées TEI n'ont pas été réfléchies, 
+    elles peuvent être en partie générées avec le contenu visible -->
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title/>
+      </titleStmt>
+      <publicationStmt>
+        <p/>
+      </publicationStmt>
+      <sourceDesc>
+        <p/>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <!-- voir plus haut -->
+  </text>
+</TEI>
+    </a:example>
+  </a:documentation>
+  <rng:start>
+    <rng:element name="TEI">
+      <rng:attribute name="xml:lang">
+        <rng:value>fr</rng:value>
+      </rng:attribute>
+      <rng:element name="teiHeader">
+        <rng:element name="fileDesc">
+          <rng:element name="titleStmt">
+            <rng:element name="title">
+              <rng:text/>
+            </rng:element>
+          </rng:element>
+          <rng:element name="publicationStmt">
+            <rng:element name="p">
+              <rng:text/>
+            </rng:element>
+          </rng:element>
+          <rng:element name="sourceDesc">
+            <rng:element name="p">
+              <rng:text/>
+            </rng:element>
+          </rng:element>
+        </rng:element>
+      </rng:element>
+      <rng:ref name="text"/>
+    </rng:element>
+  </rng:start>
+</rng:grammar>
