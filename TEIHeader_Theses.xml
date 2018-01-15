@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="full">
+               <title type="main">Title </title><!-- csv file:Titre -->
+               <title type="desc">Position de thèse</title>
+            </title>
+            <principal>Prenom, Nom </principal><!-- - csv file: Nom, Prénom -->
+            <respStmt>
+               <resp>responsable du projet de publication</resp>
+               <name>Vincent Jolivet</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>Edition revisée par les étudiants du Master Technologies Numériques Appliquées
+               à l'histoire de l'Ecole des chartes <date>2018</date></edition>
+            <respStmt>
+               <resp>revision par</resp>
+               <name>Ekaterina Batova</name>
+            </respStmt>
+            <respStmt>
+               <resp>revision par</resp>
+               <name>Sybille Clochet</name>
+            </respStmt>
+            <respStmt>
+               <resp>revision par</resp>
+               <name>Sabine Rouleau</name>
+            </respStmt>
+            <respStmt>
+               <resp>revision par</resp>
+               <name>Aurelia Vasile</name>
+            </respStmt>
+            <respStmt>
+               <resp>revision par</resp>
+               <name>Anastasiia Zadykhina</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher> École nationale des chartes </publisher>
+            <pubPlace>Paris</pubPlace>
+            <address>
+               <addrLine>65 rue de Richelieu,75002, Paris</addrLine>
+            </address>
+            <date when="2018">2018</date>
+            <idno>id</idno><!-- fichier csv: ID -->
+            <availability>
+               <p> Le texte des positions de thèses depuis 2000 est librement et gratuitement
+                  consultable sur le site de l'Ecole des chartes.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Document numérique natif, encodée en xml-tei, sans teiHeadear</p><!-- peut-on considérer comme source les positions déja publiées sur le site de l'ecole? -->
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Les thèses de l'Ecole des chartes font l'objet de résumés détaillés et rédigés par
+               les auteurs, appelés positions de thèses qui donnent lieu, chaque année, à la
+               publication d'un recueil par l'École. L'encodage en xml-tei des positions des thèses
+               a lieu dans le context de valorisation des ressources électroniques du Campus
+               Condorcet</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            La position de thèse est issue d'une thèse soutenue en <date when="2000">2000</date> <!-- fichier csv:Promotion -->
+         </creation>
+         <textClass>
+            <keywords> <term>not before, not after</term></keywords><!-- fichier csv:notBefor, notAfter -->
+         </textClass>
+         <langUsage>
+            <language ident="fr">français</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change who="Aurelia Vasile" when="2018-01-03">creation du template teiHeader</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>
