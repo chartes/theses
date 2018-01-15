@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- De grands problèmes de validation d'après le these.rng, alors j'utilise les schemas tei standarts-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+        </title>
+      </titleStmt>
+      <publicationStmt>
+        <p>
+          <!-- Information about distribution of the resource -->
+        </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>
+          <!-- Information about source from which the resource derives -->
+        </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text xml:lang="fr">
+    <body>
+      <!-- AU cas où nous vraiment besoin d'intégrer le title dans le body - voilà. Je ne sais pas
+      comment meilleur incorporer le nom-->
+      <div n="head">
+        <head>Japonisme et érudition : le livre japonais dans les collections d’Auguste Lesouëf (1829-1906)</head>
+        <p>Véronique</p>
+        <p>BÉRANGER</p>
+      </div>
+      <!-- S'ensuivent l'introduction et les sources. On peut attribuer un "chaine de caractère" au @n - j'en profite. -->
+      <div n="introdus">
+        <head>Introduction</head>
+        <p>texte</p>
+        <p>texte</p>
+      </div>
+      <div n="sources">
+        <head>Sources</head>
+        <p>texte</p>
+        <p>texte</p>
+      </div>
+      <!-- Je n'ai presque rien changé ici, le body originale. Seulement, j'ai ajouté un @n au div. On pourrait même ajouter un @type au div - mais je n'ai voit pas besoin -->
+      <div n="partie I">
+        <head n="Première partie">Title</head>
+          <div n="chapitre I">
+            <head n="Première chapitre">Nom de la chapitre</head>
+            <p>...</p>
+          </div>
+       <div>
+       <div n="chapitre II">
+         <head n="Chapitre II">Nom de la chapitre</head>
+          <p>...</p>
+       </div>
+         <div n="chapitre III">
+           <head n=" Chapitre III">Nom de la chapitre</head>
+          <p>...</p>
+        </div>
+      </div>
+        <div n="partie II">
+        <head n="Deuxième partie">Title</head>
+        <div n="chapitre I">
+          <head n="Première chapitre">Title</head>
+          <p>...</p>
+        </div>
+         <div n="chapitre II">
+          <head n="Chapitre II">Title</head>
+          <p>...</p>
+        </div>
+         <div n="chapitre III">
+          <head n="Chapitre III">Title</head>
+          <p>...</p>
+        </div>
+      </div>
+        <!-- Maintenant pour le back... -->
+      <div n="conclusion">
+        <head>Conclusion</head>
+        <p>...</p>
+      </div>
+      <div n="justification">
+        <head>Pièces justificatives</head>
+        <p>...</p>
+      </div>
+      <div n="annexes">
+        <head>Annexes</head>
+        <p>...</p>
+      </div>
+      <div n="planches">
+        <head>Planches</head>
+        <p>...</p>
+      </div>
+     </div>
+    </body>
+  </text>
+</TEI>
