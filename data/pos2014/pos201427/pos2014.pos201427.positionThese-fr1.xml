@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201427.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Loin d'être absente du champ des études universitaires, la figure de Jacques-Guillaume Legrand y est à la fois discrète et omniprésente. Cet architecte, dont l'histoire de l'art n'a guère retenu le nom – lui préférant ceux de ses illustres contemporains Percier et Fontaine ou Ledoux –, n'avait jusqu'à présent pas fait l'objet d'une monographie. La présente étude se veut une réponse à l'invitation de Michel Gallet, qui conclut la notice biographique qu'il lui consacre dans son dictionnaire des architectes du <num>xviii<hi rend="sup">e</hi></num> siècle par ces mots : « Nous voudrions mieux connaître Legrand, qui fut audacieux dans ses créations architecturales, généreux dans ses écrits ». </p>
           <p>Quoique la majorité de ses réalisations ait disparu et que ses écrits soient tombés dans l'oubli, Legrand n'en demeure pas moins une figure digne d'intérêt. Il contribua en effet à la réflexion théorique sur l'architecture de son époque et entretint des liens avec de nombreux personnages importants de la vie artistique et intellectuelle parisienne. De plus, sa carrière connut une évolution singulière, de ses premières réalisations architecturales à ses écrits plus tardifs relevant de l'histoire et de la critique d'architecture. On souhaite donner, dans cette étude, une biographie approfondie de cette personnalité méconnue en évoquant ses différentes facettes : celles de l'architecte, du théoricien et de l'historien. On s'attachera à montrer que, plus que ses réalisations architecturales, ce sont ses écrits et ses activités intellectuelles qui sont les plus révélateurs de la personnalité de Legrand.</p>
@@ -62,12 +66,12 @@
           <p>Enfin, ce sont les publications de Legrand, une dizaine environ, qui constituent les sources principales de l'étude de sa carrière de théoricien et d'historien de l'architecture. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

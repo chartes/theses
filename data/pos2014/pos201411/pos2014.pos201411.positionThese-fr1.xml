@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201411.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Ce travail s’inscrit avant tout dans les questionnements de l’histoire sociale, mais s’intéresse aussi à des questions d’histoire économique et d’histoire urbaine. L’objectif est d’étudier les critères qui définissent l’identité d’un individu au sein d’une communauté formée par la population d’un territoire défini, celui de la petite ville de Villedieu-les-Poêles, actuellement située dans le département de la Manche, comptant à l’époque qui nous intéresse environ 2500 habitants. Cette localité se distingue par la place importante prise dans sa vie économique par le travail du cuivre, qui marque son identité au point de lui donner son nom, en usage au moins depuis le <num>xvi<hi rend="sup">e</hi></num> siècle. Elle se distingue aussi par un statut particulier, celui de commanderie hospitalière, qui entraîne le maintien d’un pouvoir seigneurial encore fort au <num>xviii<hi rend="sup">e</hi></num> siècle et une faible présence des institutions royales. Ce dernier aspect ne fait que renforcer la visibilité des activités artisanales, et l’importance de ceux qui les pratiquent au sein de la communauté, généralement reléguées au second plan dans les villes d’Ancien Régime, derrière les fonctions judiciaires et administratives et les élites qu’elles attirent en leur sein.</p>
           <p>La notion de communauté permet d’insister sur les relations entre individus. Les habitants d’un territoire forment une communauté dans la mesure où existent entre eux des relations de dépendance et d’interdépendance. L’identité sociale de l’individu est ainsi déterminée par la place qu’il occupe au sein du réseau communautaire, construit autour de liens de différentes natures, étudiés au cours du travail. La mise au jour de ces relations passe avant tout par l’étude des mots qui qualifient les individus dans les sources dépouillées. La réflexion porte aussi sur la communauté dans son ensemble, ainsi que sur le territoire qu’elle habite : comment peut-on la qualifier en comparaison d’autres localités de la province ou du royaume ? La thèse s’articule ainsi en trois axes. Le premier vise à déterminer si le cas de Villedieu relève ou non du fait urbain. Le second s’intéresse aux statuts sociaux et aux informations concernant la fortune des habitants du lieu. Le troisième concerne le rôle et l’importance des liens de parenté au sein de la communauté.</p>
@@ -60,12 +64,12 @@
           <p>Les documents originaux qui ont nourri ce travail sont des sources habituelles de l’histoire sociale (rôles fiscaux, notariat, état civil) ainsi que trois terriers. Ces terriers nous renseignent sur l’habitat et nous donnent l’identité des propriétaires fonciers de la communauté. Ils nous ont aussi fourni beaucoup d’informations sur les prérogatives du pouvoir seigneurial. Cette étude se concentre avant tout sur les possédants, plus que sur les habitants les plus modestes, même s’ils ne sont pas totalement ignorés. Ce biais nous a semblé intéressant, dans la mesure où la propriété immobilière reste faiblement concentrée et où les propriétaires ont toutes les chances d’être les individus les plus enracinés au sein de la communauté, et d’être ceux qui pèsent le plus sur son destin. D’autres documents tels que des délibérations paroissiales ou des rapports de l’administration royale issus de la série C des archives départementales du Calvados ont été utilisés. Le plus particulier d’entre eux est un manuscrit sur l’histoire du lieu écrit par un anonyme du début du <num>xviii<hi rend="sup">e</hi></num> siècle, qui a eu recours à un certain nombre de témoignages oraux (on le voit à la manière dont sont formulés certains récits d’événements). Ce manuscrit est dénommé « manuscrit traditionnel » par l’historien qui l’a édité dans la <emph>Revue de l’Avranchin</emph> dans les années 1950. Il nous renseigne donc de manière intéressante sur la mémoire collective de la communauté, d’autant plus que les historiens locaux du <num>xix<hi rend="sup">e</hi></num> siècle soulignent que des copies de ce document étaient conservées par un certain nombre de familles encore à leur époque.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

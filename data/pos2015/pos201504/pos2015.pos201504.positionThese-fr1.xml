@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201504.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Durant plus de dix ans, de 1641 à 1652, la Catalogne fut sous la coupe française, depuis la soumission de la province à Louis XIII par la délibération des <emph>Braços</emph> (représentants des trois états de la société catalane) en pleine guerre franco-espagnole. Cette soumission était la suite immédiate de la révolte de 1640, dite des <emph>Segadors</emph>, au cours de laquelle les principales institutions catalanes (Generalitat de Catalunya et Conseil des Cent de Barcelone, appelés « Consistoires ») avaient secoué le joug espagnol. Les années 1640 et 1641 ont été abondamment traitées par l’historiographie et constituent aujourd’hui des points importants de la <emph>doxa</emph> nationaliste, habituée à récupérer et à récrire les événements historiques. En revanche, les dix ans de présence française en Catalogne, tant militaire qu’administrative, qui s’étendent entre 1642 (date d’entrée du premier vice-roi) et 1652 (chute de Barcelone aux mains des Espagnols de Don Juan d’Autriche), ont été peu étudiés, car leur lecture catalaniste est plus difficile. Une partie des Catalans avait certes déserté la province et rejoint l’Espagne après la révolte – mouvement qui continuera durant la période –, mais une autre avait décidé de suivre le fil des événements, et finalement apporté un soutien à la France. Le parcours de cette élite demeure encore à ce jour assez obscur.</p>
           <p>Il est un fait avéré que les biens des Catalans qui avaient décidé de quitter la province pour aller servir Philippe IV (les « philippistes ») furent confisqués. Les quelques historiens qui se sont intéressés à la période – le prêtre Josep Sanabre en 1956, ou, plus récemment, des chercheurs comme Òscar Jané – ont pu résumer la question à une affirmation assez simple : ils furent redistribués aux partisans de la France afin de renforcer et/ou de récompenser leur fidélité. En 1659, le traité des Pyrénées qui mit fin à la guerre entre la France et l’Espagne ordonna la restitution de tous ces biens confisqués à leurs anciens propriétaires. Point à la ligne. Cette vision binaire semble devoir être revue aujourd’hui, compte tenu des nombreuses sources directement liées aux confiscations et encore inédites. Les archives françaises conservent de nombreuses suppliques des Catalans profrançais, mais aussi des pamphlets et divers écrits politiques qui montrent clairement l’importance capitale de la question des confiscations dans les relations sensibles entre les deux nations. Elle prend un relief particulier dans le contexte de la régence d’Anne d’Autriche, où le roi Louis XIV est un enfant, où la distance entre la Cour et la Catalogne est la principale difficulté, la faveur royale étant médiatisée par les ministres : c’est là qu’apparaît toute la finesse des rapports humains, d’homme à homme, qui se jouent sous une période caractérisée par le clientélisme. Les interférences observées sont décuplées par la Fronde. L’aspect diplomatique de la question – place de la Catalogne sur l’échiquier international comme monnaie d’échange ou comme coin enfoncé dans le flanc de l’Espagne – s’y lie également, et il importe de retracer l’origine exacte de la clause de restitution au cours des négociations de paix, redoutée par une élite catalane nécessaire à la France mais impossible à contenter. Les confiscations sont-elles un moyen de pouvoir ? Les posséder est-il synonyme de puissance ? Sont-elles l’instrument d’une politique de conquête ou d’assimilation de la Catalogne ?</p>
@@ -63,12 +67,12 @@
           <p>L’historien Philippe Lazerme de Règnes a également mis à disposition ses notes personnelles et inédites, soit cinq cent soixante-cinq notices généalogiques sur les familles nobles catalanes, qui ont été le premier instrument d’identification des protagonistes. L’identification et la datation des documents, objectifs importants de ce travail, ont pu permettre la réalisation d’un état des sources qui se lit finalement comme un inventaire complémentaire, avec quelque utilité pour le chercheur.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

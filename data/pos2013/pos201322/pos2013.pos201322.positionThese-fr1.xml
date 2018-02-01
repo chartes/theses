@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201322.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Himbert de Garda est un théologien franciscain qui a étudié à Paris vers le milieu du <num>xiv</num><hi rend="sup">e</hi> siècle. Les détails de sa vie ne nous sont connus que par quelques passages des manuscrits de son <hi rend="i">Commentaire du Livre des sentences</hi>, unique œuvre que nous ayons de lui. Aussi reste-t-il un auteur méconnu : Glorieux signale même dans son <hi rend="i">Répertoire des maîtres en théologie de Paris</hi> un de ses manuscrits comme l’œuvre d’un autre docteur, Humbert de Preuilly. Ce n’est que très récemment qu’il a attiré l’attention de C. Schabel et W. Duba, qui furent les premiers, en 2011, à publier un article ne portant que sur Himbert de Garda. Oublié, ce théologien fut cependant dépeint dans une fresque du couvent franciscain de Bolzano, avec le sobriquet de <hi rend="i">Doctor dulcis</hi>, non loin de ses maîtres Duns Scot († 1308) et François de Meyronnes (mort entre 1325 et 1330). En revanche, Himbert de Garda se montre toujours dans son <hi rend="i">Commentaire</hi> le critique acerbe des dominicains, et de Thomas d’Aquin en particulier, qu’il réfute à la moindre occasion.  </p>
 		<p>Si Himbert de Garda se revendique ouvertement scotiste, ce projet d’édition a cependant pour but de voir dans quelle mesure sa philosophie se rattache réellement aux idées de Scot. Elle ouvre ainsi une fenêtre sur les débats les plus importants qui avaient lieu alors dans les <hi rend="i">studia</hi> franciscains, depuis le problème de la simplicité divine jusqu’à la doctrine des idées.  </p>
@@ -63,12 +67,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

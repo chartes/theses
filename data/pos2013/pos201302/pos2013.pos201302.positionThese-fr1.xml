@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201302.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Les premiers romans arthuriens en prose naissent entre 1190 et 1240. C’est la période de la formation de cycles et de grandes sommes romanesques : le <hi rend="i">Petit cycle </hi>du pseudo-Robert de Boron, le <hi rend="i">Cycle vulgate</hi>, le <hi rend="i">Tristan en prose</hi>, le <hi rend="i">Perlesvaus</hi>, <hi rend="i">Guiron le courtois</hi>. La grande fortune de la littérature arthurienne se poursuit jusqu’au <num>xvi</num><hi rend="sup">e</hi> siècle : cette production tardive, c’est-à-dire postérieure aux premiers grands romans, demeure bien moins connue. Nous proposons une étude et une édition d’un roman arthurien tardif, resté inédit et inconnu jusqu’à présent, que nous appelons <hi rend="i">Ségurant ou le chevalier au dragon</hi>. La version la plus ample de ce roman est conservée dans le manuscrit 5229 de la bibliothèque de l’Arsenal, une compilation du <num>xv</num><hi rend="sup">e</hi> siècle : de nombreux épisodes romanesques relatés par ce seul manuscrit sont entrelacés avec les <hi rend="i">Prophéties de Merlin</hi>, roman arthurien rédigé en français à Venise vers 1270. Ce manuscrit a été brièvement décrit en 1926 par Lucy Allen Paton ; dans un article récent, Nathalie Koble a étudié plusieurs passages du manuscrit et a fourni une description plus détaillée du contenu. Excepté ces études, ce manuscrit demeure complètement inconnu. Puisque <hi rend="i">Ségurant </hi>n’a jamais été étudié, la thèse vise à dégager les lignes de faîte de l’œuvre et à fournir une édition complète de ce roman. </p>
     
@@ -59,12 +63,12 @@
      </div>
               <div type="sources"/>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201205.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>La diversification des publics, le problème des horaires d’ouverture ou encore les rapports entre pouvoir central et pouvoir local dans la gestion des bibliothèques municipales sont des thèmes récurrents dans les revues professionnelles des bibliothécaires. Pourtant, l’on sait moins que leur actualité est toute relative : ces questions étaient déjà débattues au début du <num>xx</num><hi rend="sup">e</hi> siècle. C’est dans les années 1910 qu’apparaît l’expression de lecture publique, qui se popularise dans les décennies suivantes. Elle désigne alors l’activité, le service rendu par les bibliothèques publiques, entendues comme bibliothèques ouvertes à tous, qu’elles dépendent de collectivités publiques ou de groupements privés. C’est un nouveau modèle de bibliothèque que défendent les « modernistes », ces bibliothécaires appelant, à travers leurs discours, à la modernisation des bibliothèques publiques, c’est-à-dire à l’application de mesures propres à organiser la lecture publique et à ouvrir les bibliothèques au grand public. Selon eux, la lecture ne doit plus être octroyée par une classe dominante à une classe dominée mais doit être partagée par tous. Pour autant, tous les modernistes n’ont pas exactement les mêmes motivations ni les mêmes opinions : le développement de la lecture publique n’a pas été si linéaire et progressif que l’histoire des bibliothèques a pu le laisser croire. Il importait donc d’étudier comment s’était forgé cet idéal moderniste, quelles en étaient les nuances et les limites, et l’évolution qu’il avait connue de la fin de la première guerre mondiale à la création de la Direction des bibliothèques et de la lecture publique, à la Libération. </p>
     
@@ -65,12 +69,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

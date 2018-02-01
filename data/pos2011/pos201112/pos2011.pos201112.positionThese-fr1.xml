@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201112.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Si le nom de Pierre Louvet n’évoque rien à personne aujourd’hui, sinon aux usagers des archives municipales de Montpellier et à quelques habitants de Villefranche-sur-Saône, ce n’est pas parce qu’il a sombré dans l’oubli, mais bien plutôt parce qu’il n’en est jamais sorti : auteur d’ouvrages peu estimés, P. Louvet fut, dès son vivant, tenu pour un historien des plus médiocres. L’étude de sa carrière n’est pourtant pas dénuée d’intérêt, bien au contraire même. P. Louvet, en effet, s’est illustré par un parcours et des pratiques peu ordinaires, qui l’individualisent assez nettement des autres historiens de son temps. Pendant plus de vingt ans, il a circulé dans le sud de la France, de province en province et de ville en ville, laissant ici un inventaire d’archives, là un livre d’histoire, généralement une Histoire locale, tantôt sous la forme d’un abrégé, tantôt sous celle d’un grand volume accompagné de preuves ; ce faisant, il fut tout à la fois l’un des rares historiens du <num>xvii</num><hi rend="sup">e</hi> siècle à avoir travaillé comme archiviste et le seul à s’être spécialisé dans l’histoire locale. Autrement dit, s’intéresser à ce personnage obscur permet de mettre en lumière des activités inusitées chez ses pairs et, partant, fort peu documentées de nos jours. Surtout, s’intéresser à ce personnage permet de faire apparaître un modèle de carrière à nul autre pareil et pas seulement parce que celle-ci fut entièrement provinciale : P. Louvet ne fut ni clerc ni domestique d’un Grand, sinon éphémèrement ; à la place, il sollicita de manière récurrente et systématique les institutions locales, leur demandant emploi ou gratification pour ses livres. </p>
       </div>
@@ -61,12 +65,12 @@
         <p>À cela, bien évidemment, s’est ajoutée l’étude de ses œuvres, soit trois inventaires (ceux des archives communales de Montpellier, Bordeaux et Villefranche-sur-Saône, tous trois conservés par les services d’archives municipales de ces villes – celui de Montpellier a fait l’objet d’une édition à la fin du <num>xix</num><hi rend="sup">e</hi> siècle), une table des matières (conservée aux archives municipales de Toulouse) et quinze Histoires, dont trois restées manuscrites (l’une d’entre elle – celle du Beaujolais – a été éditée au début du <num>xx</num><hi rend="sup">e</hi> siècle ; précisons que nous n’avons pas retrouvé ses Histoires des gouverneurs de Languedoc, de Montpellier et de Sisteron).  </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

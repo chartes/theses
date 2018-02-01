@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201421.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>David II Gradis, né le 12 mars 1742 et décédé le 6 novembre 1811, est un négociant juif bordelais. Sixième enfant d'une fratrie de sept, quatrième fils sur cinq de Benjamin I Gradis et de Hana Esther Gradis, il est le neveu et petit-neveu d'un armateur célèbre, à savoir Abraham I Gradis, le « roi de Bordeaux ». Après une première enfance assez tumultueuse, l'adolescent est envoyé pendant plusieurs années à l'étranger, tout d'abord à Londres, puis à Amsterdam, avant de revenir à Bordeaux. Ayant pris goût aux sciences, qu'il s'agisse de mathématiques ou de philosophie, il poursuit ces différentes passions pendant plusieurs années après avoir complété, à la demande de son père, son apprentissage de l'hébreu initié en Angleterre par celui des sciences rabbiniques. Mais c'est la goutte de trop lorsqu'il envoie un mémoire sur le commerce pour le faire publier dans un journal de commerce en 1766, alors qu'il n'a aucune vraie expérience du négoce. Dès lors, son grand-oncle Abraham I et son oncle Moïse I l'emploient à leur comptoir où il apprend la profession des Gradis, dans laquelle il s'investit avec enthousiasme après avoir eu la promesse de parvenir un jour à la tête de l'affaire, bien que cadet de famille avec trois frères au-dessus de lui. Si Abraham I meurt dès 1780, ce n'est qu'en 1788, à la mort de Moïse I que les quatre frères restants, Jacob, Abraham II, Moïse II et David II prennent la société commerciale en main, après vingt années de travail acharné de la part du plus jeune pour maîtriser tous les aspects d'une profession complexe et, surtout, pour acquérir et conserver les faveurs d'un oncle réticent. Mais le contexte historique, déjà effervescent tout au long de cette deuxième moitié du Siècle des Lumières, au niveau religieux, commercial, politique et intellectuel, évolue rapidement et un homme comme David II, qui porte en lui les germes de nombreuses identités, constitue un point pivot dans l'évolution de celles-ci, autant comme image d'une génération entière née sous l'Ancien Régime et qui connaît par la suite les bouleversements de la Révolution, que comme pilier dans l'établissement progressif d'une mémoire plus personnelle, ancrée dans une histoire familiale aux multiples facettes.</p>
           <p>David II est en effet un juif sépharade, dont la famille aurait été expulsée du Portugal par l'Inquisition et se serait réfugiée en France, et en particulier à Bordeaux, où cette communauté prit très tôt, en raison de sa grande culture et de sa grande fortune dans le négoce, une place privilégiée et protégée. Installée dans le port, la famille Gradis acquiert ses lettres de noblesse au début du <num>xviii<hi rend="sup">e</hi></num> siècle avec David I et son fils Abraham I Gradis, qui prennent de grands risques dans le commerce colonial, s'insérant par ce biais dans le milieu de la noblesse et de la grande bourgeoisie. Notables juifs et bordelais, les Gradis le sont principalement grâce à leurs entreprises de négoce qui sont en pleine croissance à l'époque. Mais David II, qui grandit dans cet âge d'or de la maison, est tiraillé entre le respect des traditions et le désir de faire ses propres preuves, comme le montre sa « Notice qui n'intéresse que moi, David Gradis », qui part des origines de sa famille pour s'achever en 1788, lors de la mort de son oncle Moïse I. Le manuscrit de 24 folios, rédigé dans une écriture fine et assurée, a été pendant deux siècles une source de première main sur les Gradis au <num>xviii<hi rend="sup">e</hi></num> siècle. Utilisé par la postérité de Jacob et surtout d'Abraham II Gradis en la personne de Benjamin II, de Benjamin III, et du fils de ce dernier, Henri Gradis, le manuscrit a servi aussi bien à l'histoire du négoce bordelais qu'à l'histoire des Juifs, toujours renouvelé dans son exploitation, mais trop peu envisagé pour lui-même et réinterrogé dans sa genèse. Comme tout écrit du for privé de ce genre, la notice présente un, voire plusieurs postulats où les questions irrésolues de la datation et de la sincérité de leur auteur ont une place de choix. Grâce à des brouillons de la notice, et à un corpus de lettres constitué aussi à partir du fonds Gradis, nous nous attachons à comprendre, en partant du cœur du for privé, la genèse de la notice et de l'homme à travers sa famille et à travers son insertion dans les domaines constitutifs de son identité propre.</p>
@@ -60,12 +64,12 @@
           <p>On a focalisé les dépouillements sur le fonds de la famille Gradis (Archives nationales, 181 AQ), donné en 2005, mais connu depuis longtemps par les historiens de Bordeaux, du négoce et des juifs. Des microfilms des années 1970 (Archives nationales du monde du travail, ancien fonds 180 et 181) conservent des copies d'originaux aujourd'hui perdus. Le dépouillement de ce fonds s'est fait de façon circulaire, en commençant par le manuscrit édité, avant d'élargir sa perspective à la période correspondant au vivant de David II, où se retrouvent les lettres de ses frères et sœurs, et de ses neveux. En amont, on a dépouillé les premières archives familiales, et, en aval, les travaux d’Henri Gradis, où se trouvent six brouillons qui ont vraisemblablement servi pour la notice, édités également. On s'est aussi servi des épreuves des œuvres philosophiques de David II (bibliothèque municipale de Bordeaux : B 10723/2.1, D 44414, Dble 7957 et S 4088, S 4024, D 60138 et P.F. 1110/ 1 Rés), corrigées par David II.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

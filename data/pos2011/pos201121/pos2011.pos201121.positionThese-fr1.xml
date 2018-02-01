@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201121.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Louis Delaporte, fondateur du premier musée d’art khmer en France, est un personnage méconnu de l’histoire de l’exploration archéologique de la péninsule indochinoise. Les ouvrages consacrés à cette question développent assez peu la période s’étendant de la « redécouverte » des sites d’Angkor par Henri Mouhot, en 1860, à l’inventaire systématique des monuments khmers mené par Étienne Lunet de Lajonquière, entre 1900 et 1909.  </p>
         <p>Deux raisons contribuent à ce manque d’informations. La première a trait au caractère inédit des archives personnelles de Louis Delaporte. La seconde intéresse l’absence de reconnaissance portée, depuis ses débuts en 1873-1874, à l’œuvre entreprise par Louis Delaporte. Formé à l’École navale, c’est un autodidacte dans les domaines de l’archéologie, de l’histoire de l’art et de l’architecture. Ses travaux apparaissent donc très confus en comparaison de ceux menés, plus tard, par les membres de l’École française d’Extrême-Orient. Par ailleurs, les méthodes souvent illégales employées par Louis Delaporte pour importer en France les spécimens destinés à former puis enrichir ses collections ont sans doute contribué à ce silence. </p>
@@ -65,12 +69,12 @@
         <p>Cette thèse s’appuie dans un premier temps sur des sources publiques. Les deux principales ont été les dossiers individuels concernant les missions organisées par Louis Delaporte et l’ensemble de ses collaborateurs, conservés dans la sous-série F<hi rend="sup">17</hi> des Archives nationales, ainsi que les archives des deux institutions fondées par Delaporte, le Musée khmer et le Musée indochinois (sous-série F<hi rend="sup">21</hi> aux Archives nationales). Des documents complémentaires ont été mis à profit, provenant des archives du Service historique de la Marine, et de celles des Musées nationaux. Un éclairage particulièrement intéressant a été conféré par la consultation des archives personnelles de Louis Delaporte. Divisées en deux ensembles (correspondance et documents de travail), elles sont aujourd’hui conservées par deux branches de la famille Delaporte. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

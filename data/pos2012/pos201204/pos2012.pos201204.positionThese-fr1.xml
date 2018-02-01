@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201204.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>L’abbaye de la Trinité de Fécamp, fondée vers 658 puis rasée par les Vikings à la fin du <num>ix</num><hi rend="sup">e</hi> siècle, fut refondée dans l’enceinte même du palais ducal en 990 par le duc de Normandie Richard I<hi rend="sup">er</hi>, qui en fit la nécropole ducale. Son chartrier est l’un des plus importants de Normandie, mais il n’a été à ce jour l’objet que d’études ponctuelles – comme celles de Charles Homer Haskins sur les premières chartes ducales pour Fécamp, dans son ouvrage <hi rend="i">Norman institutions</hi>, de Lucien Musset sur les notices de l’abbé Jean de Ravenne (1028-1078), de dom Jean Laporte sur certains actes de l’abbé Henri de Sully (1140-1187), de Léopold Delisle et, plus récemment, de Fabien Paquet, sur les actes de l’abbé Raoul d’Argences (1189/1190-1219). Certes, Henri Gourdon de Genouillac avait publié en 1875, à la fin de son <hi rend="i">Histoire de l’abbaye de Fécamp et de ses abbés</hi>, un catalogue de soixante-treize actes du chartrier issus de la collection Moreau de la Bibliothèque nationale de France, mais sans prétendre à l’exhaustivité. </p>
     <p>La présente thèse consiste donc en une étude et une édition critique du chartrier de l’abbaye de la Trinité, des origines à l’arrivée de Raoul d’Argences sur le siège abbatial en 1189-1190, période d’apogée de l’abbaye qui a l’avantage de coïncider avec la période ducale et qui présente une certaine unité du point de vue diplomatique, au regard de la rupture que marquent au début du <num>xiii</num><hi rend="sup">e</hi> siècle un usage plus systématique du millésime et le déclin des listes de témoins. Sont inclus dans cette édition les actes des prieurés et des abbayes qui sont restés dépendants de Fécamp jusqu’à la Révolution française, notamment Sainte-Berthe de Blangy-sur-Ternoise, Saint-Gabriel-Brécy, et Saint-Georges de Mantes. Ceux des abbayes qui se sont émancipées (Notre-Dame de Bernay et Saint-Taurin d’Évreux), en revanche, sont trop nombreux et donc exclus de l’étude. </p>
@@ -74,12 +78,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

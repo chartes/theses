@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201320.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Le point de départ de cette recherche est un fonds romain d’archives privées du <num>xv</num><hi rend="sup">e</hi> siècle et pas une question historique, ce qui explique la diversité des sujets traités. D’un côté se trouvent des changeurs installés à Toulouse et à Montpellier, qui envoient de l’argent à Rome pour le compte de tiers ; de l’autre, des échanges de fortes sommes sur diverses grandes places commerçantes de l’Europe occidentale de l’époque. Une telle source, confrontée à d’autres, permet donc de mieux connaître la banque en cour de Rome d’Antonio di Ser Lodovico della Casa et sa comptabilité, d’essayer d’appréhender indirectement le rôle des marchands languedociens dans le grand commerce international européen de l’époque et de confronter d’abondantes données chiffrées aux sources de la Chambre apostolique. L’intérêt de cette étude ne pouvait d’ailleurs que se trouver redoubler par un contexte extrêmement riche. En France, c’était la fin de la guerre de Cent Ans, qui toucha le Languedoc, dans sa partie occidentale pour l’essentiel ; pour l’Eglise, c’était la période du schisme du concile de Bâle. Pour ce qui est du commerce même, les années 1440 sont peut-être les plus prospères qu’ait connues Montpellier à la fin du Moyen âge, grâce à la recrudescence de son commerce oriental, qui était fondamental pour une ville dont l’importance tenait surtout à son rôle de porte d’entrée maritime des épices dans le royaume de France. Les affaires aux foires de Genève, quant à elles, étaient tout aussi florissantes, et ce n’est que quelques décennies plus tard que la concurrence de Lyon les rabaissa à un rang secondaire. Les livres de la banque della Casa sont donc une fenêtre sur un monde très large.  </p>
     
@@ -63,12 +67,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

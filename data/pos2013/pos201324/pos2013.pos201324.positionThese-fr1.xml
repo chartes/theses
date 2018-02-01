@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201324.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p> La réflexion historique portée sur les moyens de normalisation de la société médiévale fait encore aujourd’hui trop souvent l’économie de la doctrine. La question de savoir dans quelle mesure les textes savants des juristes peuvent connaître à la fin du Moyen Âge une répercussion concrète dans les règlements des conflits et dans la contraction des obligations continue à faire l’objet de nombreux débats. Mais on ne pourra apprécier l’importance de la doctrine comme source du droit sans approfondir notre connaissance de ses acteurs et de leur production intellectuelle. Le présent travail a pour but d’apporter une modeste contribution à l’histoire de l’emphytéose d’une part, et de l’école de droit de Toulouse au <num>xiv</num><hi rend="sup">e</hi> siècle d’autre part. Pour cela, on s’est penché sur la figure d’un <hi rend="i">doctor tholosanus</hi> du milieu du <num>xiv</num><hi rend="sup">e</hi> siècle, Pierre Hélie, et plus particulièrement sur ce qui constitue son texte majeur, le <hi rend="i">Tractatus de jure emphiteotico</hi>.  </p>
 		<p>Contrairement à ce qui a pu se faire dans le reste de l’Europe, l’édition critique des textes juridiques médiévaux s’est trop longtemps cantonnée en France aux seuls actes de la pratique. Si on s’intéresse à la doctrine, le travail d’établissement du texte se heurte à un certain nombre de difficultés : constructions composites, gloses marginales, questions traitées en plus ou moins grand nombre et dans un ordre différent suivant les manuscrits. Le <num>xiv</num><hi rend="sup">e </hi>siècle, moment où Pierre Hélie a exercé en tant que professeur, correspond de surcroît à une période où les variantes textuelles se multiplient. Les écarts importants qu’accusent les témoins de la tradition obligent alors l’historien à renoncer à un schéma linéaire de constitution de l’œuvre. Les efforts déployés pour restituer la teneur du traité sur l’emphytéose se trouvent cependant justifiés en raison de l’importance historique qu’il revêt, essentiellement pour deux raisons : d’une part, ce traité a été élaboré dans la période où la faculté de droit de Toulouse connaît son rayonnement le plus important ; d’autre part, il s’agit d’un des textes les plus anciens consacrés au bail emphytéotique produit dans le Midi.  </p>
@@ -65,12 +69,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

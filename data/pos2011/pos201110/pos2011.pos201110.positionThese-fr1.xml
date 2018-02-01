@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201110.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Domaine d’étude privilégié depuis quelques années, la liturgie est la porte d’entrée par excellence pour qui étudie l’influence du sacré dans la société médiévale, au sein de laquelle toute chose sacrée se rapporte à Dieu et donc au culte par lequel on l’honore. L’organisation liturgique a été transmise par les livres, multiples, et spécifiques à chaque cathédrale : est étudié et édité ici l’ordinaire de la cathédrale de Marseille. L’ordinaire, ou <hi rend="i">liber ordinarius</hi>, est un directoire perpétuel qui rassemble pour chaque jour de l’année les <hi rend="i">incipit</hi> des principales pièces qui devront être lues ou chantées, avec parfois quelques détails sur la concurrence des fêtes, et quelques notations sur l’entourage visuel, sonore, et même olfactif de la liturgie. On voit l’importance de relier la liturgie et l’environnement dans lequel prend vie le texte liturgique : est donc rappelée brièvement l’histoire de Marseille, ville qui revendique son indépendance tout au long du Moyen Âge, qui est marquée par une histoire religieuse ancrée dans la dévotion à ses saints fondateurs, saint Lazare et saint Victor, et dont les évêques s’insèrent au <num>xiv</num><hi rend="sup">e</hi> siècle dans le courant réformateur entrepris par la papauté. </p>
       </div>
@@ -59,12 +63,12 @@
         <p>L’édition proposée repose sur le manuscrit 85 de la Bibliothèque inguimbertine de Carpentras, dont les 73 premiers feuillets constituent un ordinaire de la cathédrale de Marseille, datant de 1361. Une comparaison fructueuse a pu être effectuée avec l’ordinaire du <num>xiii</num><hi rend="sup">e</hi> siècle, édité en 1910 par Ulysse Chevalier. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

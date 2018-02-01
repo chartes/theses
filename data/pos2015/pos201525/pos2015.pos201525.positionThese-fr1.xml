@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201525.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>En 1404, Jean, archevêque dominicain de Sultanieh, ville située dans le nord de l’Iran, rédige un ouvrage général qui a pour but de faire le point sur les différentes religions qu’il est possible de trouver en Orient : le <emph>Libellus de notitia orbis.</emph></p>
           <p>Jean de Sultanieh, né en Orient d’une famille italienne, apporte à son œuvre ce regard particulier, propre à celui qui peut observer à distance deux mondes quasiment étrangers l’un à l’autre. Son expérience personnelle emplit le <emph>Libellus de notitia orbis</emph> de tout ce qu’il a pu concevoir au cours de sa vie riche en événements. Il s’est acquitté de diverses missions diplomatiques : les cardinaux du concile de Pise en font leur ambassadeur, comme l’avait fait Tamerlan quelques années auparavant. Familier des souverains, il fréquente Tamerlan, Charles VI, roi de France, ou Henri IV, roi d’Angleterre.</p>
@@ -62,12 +66,12 @@
           <p>Six manuscrits sont connus à ce jour et il demeure la trace d’un autre manuscrit disparu après le <num>xvii<hi rend="sup">e</hi></num> siècle. Nous n’avons collationné pour cette étude que cinq de ces six manuscrits : le manuscrit E III 17 conservé à l’Universitätsbibliothe<emph>k</emph> de Bâle n’est pas compris dans ce travail. Quatre des manuscrits contiennent l’intégralité du <emph>Libellus de notitia orbis</emph> : Graz, Universitätsbibliothek, 1221, fol. 41-127 ; Klosterneuburg, Stiftsbibliothek, 1099, fol. 175-242v ; Leipzig, Universitätsbibliothek, 1225, fol. 183-224vb ; Sankt Pölten, Diözesanarchiv, 63, fol. 1-113. Et le cinquième ne contient que les éléments plus particulièrement liés à l’islam et aux chrétiens d’Orient : Bâle, Universitätsbibliothek, A V 25, fol. 120-157v.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201321.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>La troupe unique dérivée des trois troupes de Molière, du Marais et de l’hôtel de Bourgogne arrive au faîte de sa gloire politique et artistique quand elle se voit octroyer le monopole sur la comédie francophone.  </p>
 		<p>Cette ère de la première Comédie-Française n’est pas le moins du monde inconnue de la science historique, d’autant que ces années avaient déjà leurs chroniqueurs contemporains : Traslage, Dangeau dans son <hi rend="i">Journal</hi>, ou encore Grimarest, biographe de Molière et contemporain de la fin de la période couverte par les feuillets d’assemblée. Ce n’est pas non plus une nouvelle troupe ; tous ses développements précédents sont bien connus, passage incontournable de toutes les histoires de la Comédie-Française, notamment pour la période d’occupation de l’hôtel de Guénégaud. Les protagonistes de cette première période suivent des parcours pour certains très bien étudiés : les premiers compagnons de Molière, Charles La Grange, Raisin cadet, François du Périer, Michel Baron et d’autres comédiens – auteurs comme Poisson père ou Dancourt –, ainsi que les auteurs bien repérés dans l’histoire littéraire. Mais à strictement parler, les feuillets d’assemblée n’ont pas suscité d’étude spécifique, ni d’édition. Le fonds n’a été, pour la plus grande part, utilisé que ponctuellement. Des assemblées ont été plus particulièrement examinées pour les détails qu’elles contenaient : disposition de rôles à la sortie de comédiens, résolution marquante pour l’organisation de la troupe. Les assemblées sont autant d’entrées ponctuelles, examinées dans un but global dans ce projet d’édition.  </p>
@@ -69,12 +73,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

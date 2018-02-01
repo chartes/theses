@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201516.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>La France, contrairement aux pays de langues russe, allemande, anglaise et italienne, ne dispose pas d'édition de référence des écrits de Marx et Engels. Ces derniers souffrent en français d'une grande dispersion éditoriale : les textes les plus emblématiques existent dans plusieurs traductions concurrentes, quand d'autres ne sont plus disponibles. Bien qu'inachevée, c'est l'édition des <emph>Œuvres</emph> de Marx dans la Bibliothèque de la Pléiade, établie par Maximilien Rubel et publiée de 1963 à 1994, qui offre le corpus le plus riche d'écrits de Marx en français, dans une édition et une traduction unifiées.</p>
           <p>Cette étude se concentre sur les deux premiers volumes <emph>Économie I</emph> et <emph>II</emph>, qui permettent de saisir le projet éditorial de Maximilien Rubel, de sa genèse en 1955 à sa mise en œuvre jusqu'en 1968. De la veille de l'insurrection de Budapest aux événements de Mai, le spectre de Marx hante l'actualité politique, sociale et intellectuelle française et internationale. Maximilien Rubel, fidèle à l'enseignement de Marx mais antimarxiste et anticommuniste, séduit par le communisme de conseils, souffre d'un relatif isolement sur la scène française, ce qu'explique aisément son hostilité à la forme du parti. C'est au titre de cette indépendance qu'il revendique sa légitimité à mener à bien une édition historique et critique des œuvres de Marx, à laquelle s'ajoute l'enjeu de la traduction en français, qu'il faut lire à la lumière des travaux récents sur l'histoire de la traduction.</p>
@@ -64,12 +68,12 @@
           <p>Plusieurs entretiens ont complété l'apport des sources manuscrites et imprimées. Un premier avec Jacques Cotin, qui a travaillé sous la direction de Pierre Buge, directeur littéraire de la Bibliothèque de la Pléiade de 1966 à 1987, avant de lui succéder jusqu'en 1997, a apporté des informations utiles sur le point de vue de la maison Gallimard et le fonctionnement interne de la Bibliothèque de la Pléiade. Un point de vue de la maison d'édition du Parti communiste français, les Éditions sociales, qui est le principal éditeur de Marx en français, méritait d'être entendu. Lucien Sève (né en 1926) les a dirigées de 1970 à 1982. Sous sa direction, elles ont repris la publication des œuvres complètes de Marx, en mettant l'accent sur leur caractère scientifique et en s'autorisant de nouvelles traductions, comme celle de Jean-Pierre Lefebvre (né en 1943) pour le livre I du <emph>Capital</emph>, qu'il nous a semblé pertinent de consulter pour son expérience de traducteur de Marx.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

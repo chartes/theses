@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201519.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
            <p>En 2013, les commémorations des 850 ans de la cathédrale de Paris étaient marquées par la bénédiction de neuf nouvelles cloches, toutes accordées sur le bourdon <emph>Emmanuel</emph> qui se trouvait ainsi au cœur des festivités. Mais de son fondeur, Florentin Le Guay, on ignorait presque tout, bien que son nom fût bien connu des spécialistes et la production de sa dynastie hautement estimée. Cette lacune et l’actualité appelaient de leurs vœux que l’histoire de cette famille fût étudiée.</p>
            <p>L’étude s’étend de 1650 à 1741, bornes chronologiques au-delà desquelles on ne trouve aucune mention des Le Guay, que ce soit dans les archives ou sur les cloches encore conservées. Elle se déroule principalement dans le cadre géographique de l’Île-de-France, à quelques exceptions près.</p>
@@ -61,12 +65,12 @@
             <p>Les sources se caractérisent par leur triple nature : les unes sont constituées par des archives proprement dites, d’autres par leur origine strictement bibliographique, et les dernières enfin sont les cloches elles-mêmes, par les inscriptions qu’elles portent (dix-huit clochers et campaniles différents, regroupant trente cloches, ont été visités dans quatre départements). Elles se caractérisent également par une extrême dispersion des archives, qui se double paradoxalement d’une concentration exceptionnelle : des dépouillements d’archives ont été menés dans les archives de tous les départements d’Île-de-France (excepté le Val-de-Marne), les archives de l’Assistance Publique-Hôpitaux de Paris, les archives de l’Aisne, d’Eure-et-Loir, de la Marne et de l’Oise, ainsi que dans plusieurs bibliothèques ; cependant, la majeure partie des sources consultées se trouvait aux Archives nationales, surtout dans le Minutier central des notaires parisiens. L’étude XVII, à laquelle la dynastie a de loin le plus recouru, a fait l’objet d’un dépouillement quasi intégral. Il faut remarquer que les destructions d’archives liées aux conflits ont privé la recherche de nombreuses sources. Enfin, les bases de données de la Société française de campanologie (SFC) et leurs équivalents en Belgique, en ligne sur internet, se sont révélées des plus précieuses.</p>
         </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

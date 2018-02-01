@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201313.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Les Chalopin sont aujourd’hui renommés pour avoir été d’importants imprimeurs de la <hi rend="i">Bibliothèque bleue. </hi>En réalité, les Chalopin ne lancent ces impressions qu’à la Révolution ; elles ne caractérisent donc la production de l’atelier qu’au <num>xix</num><hi rend="sup">e </hi>siècle. Au-delà de cette production tardive, la maison Chalopin demeure encore largement méconnue : à la Révolution, cela fait pourtant plus de cinquante ans que l’atelier fonctionne, plus d’un siècle que leur librairie est ouverte ! Six libraires et imprimeurs-libraires se succèdent en effet à la tête de cette entreprise en activité à Caen pendant deux siècles, de l’installation de Charles dans les années 1660 à la mort du dernier imprimeur, Pierre-Théodore, en 1832.  </p>
 		<p>Il convient donc de découvrir comment les Chalopin, simples libraires à la fin du <num>xvii</num><hi rend="sup">e</hi> siècle, réussissent le tour de force, au milieu du <num>xviii</num><hi rend="sup">e</hi> siècle, d’ouvrir et de faire prospérer leur atelier. Notre travail se limite à l’Ancien Régime, pour des raisons qui tiennent tant aux sources qu’à la logique de notre étude : la production de l’atelier se modifie après un changement à la tête de l’entreprise qui amène l’introduction de la <hi rend="i">Bibliothèque bleue</hi> et, de manière plus générale, l’encadrement du métier et la situation économique sont bouleversés à la Révolution. Ces travaux s’attachent ainsi à saisir la manière dont les Chalopin et plus particulièrement Pierre, le créateur de l’atelier, parviennent à surmonter un contexte <hi rend="i">a priori</hi> désavantageux pour les imprimeurs de province, en exploitant au mieux tous les atouts de la Basse-Normandie. Grâce à l’étude de leur commerce de librairie et de la production de leur atelier dans un large <num>xviii</num><hi rend="sup">e</hi> siècle, nous serons alors en mesure de mettre à jour les mécanismes qui les mènent à la <hi rend="i">Bibliothèque bleue</hi>. Réaliser la monographie d’un atelier provincial du <num>xviii</num><hi rend="sup">e</hi> siècle est rarement possible, du fait de l’absence de sources ; au-delà du cas particulier des Chalopin, cette thèse ambitionne plus largement d’enrichir notre connaissance du circuit des livres au <num>xviii</num><hi rend="sup">e </hi>siècle, dans ses aspects économique, politique, social et culturel<hi rend="i">. </hi></p>
@@ -64,12 +68,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

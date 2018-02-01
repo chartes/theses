@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201202.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>La prison et l’exil sont des thèmes récurrents dans la mémoire républicaine que le <num>xix</num><hi rend="sup">e</hi> siècle a forgée. Victor Hugo construisit depuis Jersey sa renommée de grand écrivain républicain et la prison fait partie de l’itinéraire-type du révolutionnaire entre 1830 et 1870. L’image des nombreux « martyrs de la République » de cette période, honorés plus tard dans la topographie de la III<hi rend="sup">e</hi> République, s’est largement nourrie des emprisonnements qu’ils ont subis. Blanqui « l’enfermé », Barbès, Raspail ou Charles Delescluze, pour n’en citer que quelques-uns, font partie des célèbres opposants qui payèrent ainsi le prix de leur engagement politique. Plusieurs ont laissé des écrits qui racontent leurs années d’enfermement. </p>
     <p>De 1850 à 1857, mis à part les déportés des commissions mixtes de 1852, les principaux condamnés politiques furent regroupés dans la maison de détention et déportation de Belle-Île-en-Mer. Henri Delescluze, frère du célèbre journaliste mort sur une barricade de la Commune, a séjourné dans cette prison.  Arrêté en octobre 1850 pour l’affaire du « complot de Lyon », il a été condamné à dix ans de détention par le conseil de guerre de Lyon, en août 1851. Sa peine commuée en bannissement en avril 1853, il s’est exilé en Angleterre, puis aux États-Unis, après dix-huit mois passés à Belle-Île. S’il n’a publié aucun ouvrage avant la parution de <hi rend="i">La Commune de Paris</hi>, en 1871, son passage en prison fut l’occasion d’une frénésie d’écriture.  </p>
@@ -67,12 +71,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201312.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p> Cette étude porte sur la délinquance matrimoniale aux <num>xvii</num><hi rend="sup">e</hi> et <num>xviii</num><hi rend="sup">e</hi> siècles : en analysant les multiples infractions au lien matrimonial, nous souhaitions étudier, dans un contexte où le pouvoir royal se place comme un nouvel acteur dans la législation matrimoniale, l’évolution de la compétence de l’Église sur les affaires matrimoniales. Derrière cette interrogation se dessine la progressive sécularisation du mariage, c’est-à-dire le fait que le contrôle du mariage passe des mains du juge d’Église à celles du juge séculier. Cependant, l’historiographie portant sur les juridictions d’Église à l’époque moderne ainsi que, plus généralement, sur les juridictions inférieures d’Ancien Régime, est lacunaire et nous avons senti la nécessité de fonder notre travail sur des courants historiographiques divers : nous avons donc souhaité combiner deux types d’approche que sont l’utilisation du mariage comme observatoire de la société et des mentalités d’Ancien Régime dans un premier temps, puis le mariage comme objet à part entière de l’histoire du droit, dans un second temps. Nous nous posions ainsi une autre question fondamentale pour cette étude : celle du rapport complexe qui existe entre le droit et la société à l’époque moderne. En conséquence, ce travail se divise en deux axes principaux : un premier s’intéresse aux rapports qu’entretiennent justices et justiciables sur la question du mariage dans l’Ancien Régime, et permet ainsi de donner un premier aperçu de la répartition des compétences entre les divers acteurs du droit matrimonial à l’époque moderne ; le second axe se penche plus spécifiquement sur la répartition des compétences entre juridictions ecclésiastiques et séculières au travers de deux types de contentieux matrimoniaux bien définis que sont le concubinage et la séparation des époux. </p>
     
@@ -64,12 +68,12 @@
 		<p><hi rend="i">Beauvais et le Beauvaisis.</hi> — Étant donné l’objectif de cette étude, nous ne pouvions mener notre recherche sur tout le royaume de France. Nous avons donc choisi de concentrer notre effort sur le Beauvaisis, où se trouvent un bailliage et une officialité dont les fonds produisaient une matière suffisante à ce travail. Encore fallait-il cerner le contexte historique et géographique du Beauvaisis à l’époque moderne. Pour cela, l’étude de Pierre Goubert, intitulée <hi rend="i">Beauvais et le Beauvaisis de 1700 à 1730</hi>, s’est avérée d’un grand secours : l’auteur décrit ainsi une région isolée quant à ses voies de communication mais dynamique sur le plan économique, divisée entre l’industrie du textile et l’agriculture. Il oppose également un Beauvaisis « large », dont les frontières correspondraient à celles du diocèse de Beauvais, à un Beauvaisis « étroit » du bailliage de Beauvais, juridiction récente qui a dû se tailler sa part de compétence sur les bailliages voisins, et dont l’influence est assez réduite. Enfin, Pierre Goubert évoque l’influence parisienne sur le Beauvaisis, notamment en matière économique et religieuse. </p>
 		</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

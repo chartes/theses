@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201414.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>L'information au Moyen Âge, c'est « l'instruction à laquelle on procède pour la recherche ou la constatation de faits » (Claude Gauvard). Ces deux actions ne sont possibles, avec régularité et efficacité, que dans un cadre où l'organisation politique a atteint un certain niveau de développement, et où les intérêts poussent les autorités à chercher à acquérir et à diffuser l'information. Il semble donc intéressant de s'intéresser à la diffusion de l'information au sein des villes et de leurs gouvernements, émancipés par l'action des communes ou consulats.</p>
           <p>L'information est en effet vitale dans ce contexte urbain, celui de l'<emph>universitas</emph>, c'est-à-dire la communauté des habitants. Les administrations consulaires font une large place à la diffusion de l'information ; elle leur est nécessaire pour gouverner, pour prévoir, pour répondre aux exigences de plus en plus fortes du pouvoir royal. Et les administrés eux-mêmes l'attendent de leur gouvernement urbain : ne pas informer, c'est ne pas répondre aux attentes des habitants, c'est oublier que cette administration est d'abord, en théorie, l'émanation de la volonté de la communauté tout entière.</p>
@@ -64,12 +68,12 @@
           <p>Il a été également jugé intéressant d'examiner la façon dont les sources sont en elles-mêmes un vecteur de communication et surtout la donnent à voir – lettres copiées ou conservées en original, résumés de délégués faits à l'oral et retranscrits, dialogues ou débats au sein du conseil notés, etc. Les textes conservés ne donnent pas à voir une image réelle des relations entre les différents acteurs politiques, mais une représentation idéale. De plus, ils ne permettent de relever qu'une partie des relations, les autres, trop habituelles ou fréquentes, n'étant pas notées. Ainsi, les relations avec certaines villes sont quotidiennes ou presque – et il en va de même avec le sénéchal –, ce qui fait qu’elles ne sont pas toujours notées. Lorsqu'elles le sont, elles montrent des échanges de deux types : entre la ville – ou du moins le gouvernement urbain – et un acteur extérieur, ou bien au sein de la cité elle-même.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

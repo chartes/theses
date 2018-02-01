@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201412.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Au cours des dernières décennies du <num>xix<hi rend="sup">e</hi></num> siècle et de la première moitié du <num>xx<hi rend="sup">e</hi></num>, on voit se mettre en place de nombreux « instituts », tant au sein de l’université de Paris que des universités de province. Un décret du 31 décembre 1920 vient réglementer leur existence, en autorisant la création d’instituts de faculté et d’université qui permettent le développement de disciplines au croisement des enseignements universitaires traditionnels, tant dans le domaine des sciences naturelles que dans celui des sciences sociales. Derrière une appellation commune d’institut, les réalités sont cependant bien disparates, aussi bien du point de vue des statuts de ces divers établissements que de leurs objectifs – recherche, enseignement – et des diplômes qu’ils délivrent.</p>
           <p>L’Institut de psychologie, premier institut d’université créé au sein de l’université de Paris en 1920 à l’initiative d’Henri Piéron, est un cas particulièrement intéressant et emblématique. La psychologie, en effet, discipline nouvelle au carrefour de la philosophie, de la biologie et de la médecine, est un exemple typique de discipline que les cadres universitaires traditionnels sont incapables de circonscrire. Au début de notre période, en 1920, il n’existe encore aucun cursus d’études suivi ni aucun diplôme qui soit consacré à la psychologie scientifique. Unifiant plusieurs enseignements déjà existants et dispersés au sein de divers établissements d’enseignement supérieur, l’Institut de psychologie en crée également de nouveaux et suscite la création de plusieurs diplômes d’études de psychologie. Dès le départ, sa caractéristique est de donner une grande place aux enseignements pratiques, s’assurant pour cela le concours de plusieurs laboratoires de l’École pratique des hautes études.</p>
@@ -63,12 +67,12 @@
           <p>De nombreuses informations chronologiques sont tirées de la chronique annuelle publiée par Henri Piéron dans l’<emph>Année psychologique</emph> dont il fut directeur. Le <emph>Bulletin du groupe d’études de psychologie</emph> fournit enfin des indications précieuses sur l’organisation des enseignements et sur la vie de l’institut du point de vue des étudiants</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201420.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Rares sont les hommes à avoir été autant adulés et admirés que le général Lafayette, dont la gloire repose sur ses jeunes années, lorsqu’il était le « héros » de la guerre d’indépendance américaine. En France, mais surtout aux États-Unis, il a joui de son vivant d’une popularité et d’une renommée considérables, qui font de lui l’emblème de la lutte libérale et révolutionnaire.</p>
           <p>En France, durant ses dix dernières années, loin d’être aimé de tous, son image est pourtant régulièrement ternie par de virulentes critiques qui émanent tout d’abord des ultraroyalistes, avant de provenir des républicains de gauche qui le trouvent trop modéré. Aux États-Unis, à l’inverse, son image reste intacte jusqu’à sa mort et au-delà jusqu’à nos jours. Malgré une propagande active en sa faveur, manifeste grâce à une immense production littéraire, journalistique et artistique qui traduit et entretient sa popularité, c’est en définitive une image plus nuancée et complexe qui se construit.</p>
@@ -63,12 +67,12 @@
           <p>Pour les sources imprimées, il est désormais possible de consulter en ligne un grand nombre de publications de l’époque de Lafayette. Les bibliothèques numériques Gallica, Europeana, celle de la Bibliothèque du Congrès, mais aussi Internet Archive et Google Livres, ou encore la Bibliothèque numérique publique d’Amérique, ainsi que plus récemment Numistral, ont ainsi mis en ligne beaucoup de journaux, de livres, de brochures, de poèmes et d’images dédiés à Lafayette, ou qui le mentionnent simplement. Ces corpus en ligne étant sélectifs, nous avons poursuivi nos recherches par la consultation de cent cinquante publications physiques à la Bibliothèque nationale de France, dont une grande partie n’a jamais été exploitée, les historiens se concentrant souvent sur une sélection restreinte de titres.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

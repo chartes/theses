@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201505.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
             <p>Plusieurs thèses de l'École des chartes ont dans le passé traité des recueils d'<emph>exempla</emph> ; ce travail se situe dans leur héritage direct tout en bénéficiant de l'apport des technologies contemporaines. Les <emph>exempla</emph> sont des récits de longueur variable et portant sur des sujets divers, employés par les orateurs comme moyens de persuasion : ils apportent à leur auditoire un exemple frappant de comportement valorisé ou condamné. L'essor de la prédication au <num>xii<hi rend="sup">e</hi></num> siècle et le goût des cisterciens pour ce genre de récits ont permis leur introduction dans les sermons et les prêches ainsi que leur usage par les prédicateurs pour éveiller l'attention de leur auditoire et fournir une illustration de leur discours abstrait. L'étude de ces récits, difficiles à définir en tant que genre littéraire, est née en France au <num>xix<hi rend="sup">e</hi></num> siècle avec les éditions des recueils d’Étienne de Bourbon et de Jacques de Vitry par Albert Lecoy de la Marche et Thomas Frederick Crane. Jean-Thiébaut Welter apporta au début du <num>xx<hi rend="sup">e</hi></num> siècle sa pierre à l'édifice, en particulier grâce à sa thèse sur l'<emph>exemplum</emph> dans la littérature religieuse et didactique au Moyen Âge. Puis l’École des Annales, et plus précisément l'étude de l'histoire des mentalités, donna au genre une nouvelle dynamique dans les années 1960 autour de Jacques Le Goff, Jean-Claude Schmitt et Jacques Monfrin. L'<emph>Index exemplorum</emph>, publié en 1969 par le Finlandais Frederic Tubach, fut un ouvrage majeur qui établit une première typologie des <emph>exempla</emph> en se basant sur toutes les éditions antérieures. En 1970 naquit, autour de Jacques Le Goff et Claude Bremond, le Groupe d'anthropologie historique de l'Occident médiéval (GAHOM) dont l'un des axes de recherche est justement l'étude des <emph>exempla</emph> sur le plan narratif, lexical et anthropologique : de ces recherches sont nées plusieurs bases de données, dont le <emph>Thesaurus exemplorum medii aevi</emph> (ThEMA), qui regroupe l'ensemble des récits exemplaires édités et/ou connus à ce jour. </p>
             <p>Au cours de ses travaux, Jean-Thiébaut Welter s'est intéressé à un recueil d'<emph>exempla</emph> méridional anonyme inclus dans le manuscrit lat. 3555 de la Bibliothèque nationale de France, entre deux recueils de sermons, et en a fourni une première édition partielle en 1930 dans la revue <emph>Études franciscaines.</emph> Ce manuscrit unique a également été étudié par Marie Anne Polo de Beaulieu en 1997 dans les <emph>Cahiers de Fanjeaux</emph> consacrés à la prédication en pays d'Oc. L'objet de cette thèse est en premier lieu l'édition du recueil dans son intégralité, accompagnée de la recherche des sources et de la postérité éventuelle des deux cent quarante -quatre récits qui le composent ; cette édition a donné lieu à une analyse codicologique du recueil, à une étude de l’œuvre du compilateur ainsi qu'à un travail sur les thèmes religieux, culturels et sociaux qui y sont développés. </p>
@@ -60,12 +64,12 @@
           <p>Le manuscrit lat. 3555 de la Bibliothèque nationale de France, à Paris, est pour le moment l'unique exemplaire recensé de ce recueil. L'édition et le commentaire se sont par conséquent tous deux basés sur celui-ci. Les comparaisons des récits avec leur source et leurs variantes ont été permises par les précédentes éditions de tels recueils ainsi que par la base de données ThEMA. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

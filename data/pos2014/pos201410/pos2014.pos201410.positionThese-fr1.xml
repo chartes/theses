@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201410.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
             <p>Aborder la diplomatie de la seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle à partir de l’exemple de la Savoie entraîne hors des sentiers battus de l’historiographie, laquelle se concentre davantage sur les grandes puissances ou les rapports de force entre protestants et catholiques. Cette place légèrement en retrait de l’histoire de la Savoie semble d’autant plus étrange que la situation géopolitique de cet État le place au cœur des enjeux politiques de l’époque. Sis entre les Alpes et la plaine du Piémont, le duché de Savoie fait figure de carrefour européen et se trouve doté de nombreux voisins avec lesquels il convient de composer : la France, les cantons suisses ou encore l’Espagne, qui règne sur le duché de Milan. Les limites géographiques s’accompagnent de repères militaires et d’aires confessionnelles distinctes qui sont autant de démarcations pour définir les États savoyards ainsi que leurs relations avec les pays frontaliers. Ce décor met en place les grands axes d’étude dans le cadre des relations franco-savoyardes. Outre le voisinage, les deux pays sont liés par des relations familiales entretenues, que ce soit entre les familles régnantes ou entre les nobles ayant des intérêts dans les deux États.</p>
             <p>La période envisagée s’étend de 1559 à 1580 : elle débute au lendemain du traité du Cateau-Cambrésis après la restitution par la France des États ducaux à Emmanuel-Philibert, et s’achève à la mort du duc de Savoie, le 30 août 1580. Ce choix se justifie par l’intérêt majeur qu’ont alors les deux puissances à reconstruire leur diplomatie. La France est fragilisée durant toute cette période en raison des troubles civils causés par les différends entre les partis protestant et catholique. Cette situation ne peut qu’influencer les relations entre le royaume et le duché. Par ailleurs, il convient de souligner une année particulièrement importante dans les relations franco-savoyardes : 1574, marquée par la mort de la duchesse Marguerite de France, par les dernières restitutions françaises en faveur de la Savoie, ainsi que par l’avènement d’un nouveau roi de France, Henri III. Ces événements bouleversent l’équilibre établi et infléchissent les relations entre les deux pays.</p>
@@ -64,12 +68,12 @@
             <p>Les fonds des archives départementales de Savoie constituent un apport fructueux quant aux archives judiciaires, fiscales et économiques – notamment sur certaines questions commerciales – rattachées au Sénat de Savoie. Ces dernières ont permis d’éclairer des affaires plus locales mettant en cause les deux pays. Ce travail prend enfin en considération le regard étranger porté sur les relations diplomatiques entre la France et la Savoie à travers les dépêches des agents de certaines puissances italiennes en France.</p>
         </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

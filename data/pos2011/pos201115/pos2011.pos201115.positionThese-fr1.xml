@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201115.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>La décision de François I<hi rend="sup">er</hi> prise en 1528 d’agrandir et d’embellir le château de Fontainebleau, décisive pour l’histoire de la monarchie française, le fut tout autant pour l’histoire de l’art français, plus encore que les guerres d’Italie ou que le séjour français de Léonard de Vinci. Les chantiers d’aménagement intérieur sous la direction de deux Italiens, le Florentin Rosso Fiorentino, arrivé en 1530, et le Bolonais Primatice, qui rejoint le château en 1532, constituent la plus importante entreprise décorative de la première moitié du <num>xvi</num><hi rend="sup">e</hi> siècle en France, et le vocabulaire ornemental mis en place par ces deux maîtres marque l’art français du siècle tout entier. Les équipes semblent composées presque uniquement de Français et d’Italiens et l’on s’étonne d’y trouver dès 1536, et jusque dans les années 1540, un peintre d’origine flamande, Léonard Thiry. </p>
         <p>Comme de nombreux artistes de l’école française du milieu du <num>xvi</num><hi rend="sup">e</hi> siècle, il est avant tout connu à travers de rares dessins et par quelques estampes réalisées par d’autres d’après ses compositions, lui-même n’étant pas graveur. Les diverses études consacrées à la première école de Fontainebleau et à ses acteurs ont mis en avant son nom plus d’une fois depuis la fin du <num>xix</num><hi rend="sup">e</hi> siècle. L’historiographie le considérait comme un des principaux assistants de Rosso sur le chantier bellifontain à la fin des années 1530, du moins comme un de ses meilleurs imitateurs, son œuvre se situant à la croisée de celui de Rosso et de ceux de quatre graveurs français du milieu du <num>xvi</num><hi rend="sup">e</hi> siècle : Pierre Milan, René Boyvin, Jacques Androuet du Cerceau et Léon Davent. Quelques chercheurs s’étaient déjà interrogé sur son cas, sans pour autant qu’une étude spécifique et approfondie ne lui ait été consacrée : son parcours demeurait flou, ou du moins était-il l’objet d’hypothèses contestées, et son œuvre, considérablement augmenté sous le coup des nouvelles attributions, demandait à être épuré et précautionneusement examiné.  </p>
@@ -62,12 +66,12 @@
         <p>Les sources iconographiques offrent, quant à elles, un angle d’approche plus commode à l’étude de Thiry. Il convient de prendre en compte à la fois les œuvres qui lui sont attribuées et celles des artistes autour desquels il évoluait : Rosso et Primatice bien sûr, mais aussi les burinistes parisiens, Pierre Milan et René Boyvin, ou encore Jacques Androuet du Cerceau et Léon Davent et, de façon générale, les artistes de la première école de Fontainebleau. En outre, il est nécessaire, du fait de l’origine de l’artiste, d’examiner les productions des artistes des anciens Pays-Bas de la première moitié du <num>xvi</num><hi rend="sup">e</hi> siècle. Ont principalement été consultées les collections de la Bibliothèque nationale de France, de l’École nationale supérieure des beaux-arts, du musée du Louvre, du British Museum, du Victoria &amp; Albert Museum, du cabinet des Dessins de l’université de Liège, de la Kunstbibliothek et du Kupferstichkabinett de Berlin. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

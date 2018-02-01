@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200206.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
       <p>Les nécropoles et les tombeaux monumentaux  légués par le Moyen Âge n'ont souvent été étudiés que dans des perspectives  d'histoire de l'art et des formes. Par ailleurs, les connaissances  actuelles sur la mort des nobles demeurent influencées par un courant  historique centré sur l'étude des rituels politiques, et notamment des  cérémonies, et n'ont pas été encore modifiées largement par les travaux  plus récents sur la mémoire. Aussi de nombreuses questions méritent-elles  d'être approfondies : quelles sont les attitudes des nobles devant la mort  et les morts ? Comment leur mémoire s'organise-t-elle ? Comment se  répartissent leurs suffrages en vue de leur salut ? En amont des commandes  d'art funéraire et de l'organisation des obsèques, l'élection de sépulture  est une décision importante : elle fixe le cadre principal de la  commémoration du défunt dans l'attente de la résurrection de la chair. Chez  des seigneurs du sang de France comme les ducs de Bourbon, ce choix peut  faire s'entremêler des préoccupations politiques et dynastiques avec des  motivations religieuses. Aussi, partagés entre dévotions personnelles,  fidélité à leurs prédécesseurs, considérations de politique locale ou  nationale et modèle des autres seigneurs des lys, les ducs de Bourbon  changèrent-ils souvent de parti, hésitant entre Paris et Bourbonnais, entre  des églises déjà existantes et celles fondées par eux-mêmes, entre une  séparation superbe et novatrice d'avec leur famille et la proximité de  leurs parents. Enfin, à l'intérieur même de l'église choisie, l'emplacement  exact du tombeau par rapport aux reliques, à la clôture, aux autels et aux  tombeaux déjà en place pouvait lui-même revêtir de multiples  significations, qui rendent du reste indispensable une connaissance  détaillée des aménagements liturgiques de ces édifices pour comprendre  toute la portée des volontés des ducs. Les hésitations des Bourbons se  prolongèrent pendant toute l'histoire de la lignée et entraînèrent la  multiplication des nécropoles ducales, au nombre de cinq, sans compter  divers projets abandonnés.</p>
       
@@ -74,12 +78,12 @@
       
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

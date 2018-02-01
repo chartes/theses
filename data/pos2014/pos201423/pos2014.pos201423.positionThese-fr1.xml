@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201423.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>En 2010, deux événements concomitants contribuèrent à faire du haras national de Cluny un objet d'étude : la restructuration des haras et le onzième centenaire de l'abbaye. Ancien service du ministère de l'Agriculture devenu établissement public à caractère administratif en 1999, les Haras connaissaient alors une nouvelle mutation en fusionnant avec le Cadre noir au sein de l'Institut français du cheval et de l'équitation (IFCE). Ce bouleversement institutionnel, symptomatique d'un changement notoire de leur fonction au sein de la société et de l'administration françaises, était une circonstance propice aux interrogations sur le passé de l'institution. Plus spécifiquement, les recherches pouvaient porter sur le haras national de Cluny qui était mis en exergue par les réflexions et chantiers engagés en vue de l'anniversaire du site abbatial. De fait, les projecteurs braqués sur le cœur urbain de Cluny à l'occasion de cette échéance révélaient du même coup la méconnaissance voire le désintérêt dont il était souvent fait preuve à l'égard du haras, pourtant édifié au pied du clocher avec les pierres de l'illustre monument.</p>
           <p>L'actualité n'était pas seule à favoriser un travail sur le haras de Cluny : une telle étude venait s'inscrire à la croisée de plusieurs courants historiographiques qui semblaient l'appeler de leurs vœux ou tout au moins l'encourageaient de leurs zones d'ombre. Ainsi, dans le sillage de René Musset et de Jacques Mulliez, l'histoire des Haras a bénéficié d'un éclairage particulier, mais les recherches furent très majoritairement dédiées à l'Ancien Régime. Elles présentaient en cela la même caractéristique que les travaux consacrés à l'élevage en général – qui n'ont d'ailleurs pas fait de l'équidé leur priorité. Il est vrai que l'animal, comme le rappelle chaque écrit de Daniel Roche, a un statut singulier qui le rend comparable à nul autre et conduit le plus souvent à l'étudier de manière isolée. Dans un tout autre domaine, l'historiographie clunisienne accuse elle aussi – encore plus profondément – la césure révolutionnaire ; l'histoire du <num>xix<hi rend="sup">e</hi></num> siècle clunisois fait figure de parent pauvre. Ce <num>xix<hi rend="sup">e</hi></num> siècle, les historiens de l'architecture s'en sont emparé, et le Conseil des bâtiments civils, organe phare de la période, a notamment attiré leur attention. Néanmoins, l'architecture publique équestre qu'il contribua à faire naître et dont il supervisa l'édification n'a pas joui des mêmes considérations que les établissements de pouvoir (préfectures, palais de justice), de concentration humaine (prisons, hôpitaux) ou de prestige (théâtres, opéras).</p>
@@ -63,12 +67,12 @@
           <p>Le propos s'appuie également sur un certain nombre de sources imprimées. Outre les outils fort utiles que sont les almanachs impériaux puis royaux et les annuaires du département de Saône-et-Loire, il était incontournable de compulser les textes fondateurs de Buffon et de Bourgelat. Ont également été lus avec profit les ouvrages du colonel Flandre d'Espinay (autrement appelé Pierre-Marie d'Espinay Saint-Denis) et une demi-douzaine d’œuvres produites par autant de contemporains versés dans l'élevage et désireux d'exprimer ce que, selon leurs vues, devait être l'administration des Haras : Esprit-Paul de Lafont-Pouloti, Jean-Baptiste Huzard, Georges-Hector-Henri Collot, Louis de Maleden, François-Philibert Loubat de Bohan figurent dans ce travail.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

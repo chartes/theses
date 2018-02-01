@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201213.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Unique témoin de la liturgie médiévale, l’ordinaire de l’abbaye bénédictine Saint-Martin de Savigny (Rhône) est une source unique pour connaître la tradition liturgique savinienne développée tout au long de l’année selon le calendrier des fêtes. Il présente un second intérêt en raison de l’originalité de sa forme, à mi-chemin entre l’ordinaire et le coutumier : il nous livre de nombreux renseignements sur l’organisation de la vie quotidienne du monastère autour de sa liturgie (la <hi rend="i">familia</hi> monastique, l’alimentation, l’hygiène, le mobilier liturgique, la charité), ce qui est d’une aide précieuse pour étudier les interactions entre liturgie et activités quotidiennes. </p>
     <p>Cette édition se situe à une période de renouveau historiographique de l’étude de la liturgie. Le liturgiste s’appuie désormais sur l’apport d’autre sciences (archéologie, histoire de l’art, anthropologie) pour élargir le concept même de liturgie dont les implications sociales font depuis plusieurs années l’objet de nombreuses études. L’historiographie savinienne n’est pas en reste non plus. Après les contributions des érudits locaux du <num>xix</num><hi rend="sup">e</hi> et du début du <num>xx</num><hi rend="sup">e</hi> siècle, les recherches sur l’abbaye de Savigny se sont de nouveau développées ces dernières années montrant la nécessité d’une transdisciplinarité dont l’étude des sources liturgiques fait partie. Il faut dire que l’abbaye de Savigny était loin d’être un simple petit monastère rural. Quatrième puissance féodale médiévale du diocèse de Lyon au faîte de sa puissance, après l’archevêque, les comtes de Forez et les sires de Beaujeu, l’abbaye eut un rayonnement important sur toute la région environnante dans l’aire d’influence constituée par le réseau de ses dépendances. </p>
@@ -67,12 +71,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201214.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Apparu à la fin du <num>xix</num><hi rend="sup">e </hi>siècle, l’Art nouveau s’est diffusé dans toute l’Europe. Outre l’abandon des « règles apprises de l’écriture artistique », il prônait également l’abandon de la distinction entre « arts majeurs » et « arts mineurs » au nom d’un art total. De là découlent des réflexions pour un enseignement renouvelé des arts décoratifs. Créée en 1890 par une administration allemande soucieuse de fournir à Strasbourg des institutions modernes, l’École des arts décoratifs bénéficie plus tôt que les écoles françaises des résultats de ces réflexions. L’établissement est d’emblée placé sous la direction d’Anton Seder, un théoricien de l’Art nouveau allemand, et la réalisation d’objets d’art par le travail en atelier est une partie intégrante de la formation qu’il dispense. L’École des arts décoratifs de Strasbourg s’inscrit dans un réseau européen d’écoles en rupture avec l’académisme et ayant un but similaire : former des « artistes qui puissent satisfaire à toutes les exigences de l’industrie d’art ». </p>
     <p>Avec le retour de l’Alsace à la France, l’École tente de s’intégrer au système français tout en gardant son identité régionale. Si l’année 1919 constitue un moment critique, car on dresse un bilan assez négatif de l’enseignement de l’École en lui reprochant d’avoir été un organe de « germanisation de l’art régional », l’arrivée du sculpteur François Rupert Carabin (1862-1932) à la direction de l’École marque le début d’une période de stabilité. Il donne en effet à l’établissement une organisation et une méthode qui lui survivront. Cette stabilité est néanmoins de courte durée : la deuxième guerre mondiale marque la fin de la tentative d’élaboration d’un art régional et de la volonté de former des artisans d’élite.  </p>
@@ -70,12 +74,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

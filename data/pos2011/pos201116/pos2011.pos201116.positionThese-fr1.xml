@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201116.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Léon Bloy (1846-1917) s’est taillé dans la littérature de la fin du <num>xix</num><hi rend="sup">e</hi> siècle et du début du <num>xx</num><hi rend="sup">e </hi>siècle une place à part d’écrivain incompris et volontairement marginalisé. Il est l’homme de tous les paradoxes : chrétien anticlérical, homme de lettres fustigeant les impératifs de la littérature, marginal avide de la reconnaissance de la multitude. Ce sont là autant de paradoxes qu’il résout en établissant un système de pensée ouvertement placé dans ce qu’il estime être l’absolu. Proche à bien des égards de l’intransigeantisme catholique dont il procède par de nombreux points, Bloy affirme néanmoins n’appartenir à aucun mouvement, à aucun système.  </p>
         <p>De même que ses contemporains, Bloy n’échappe pas à la prédilection de son époque pour l’histoire, alors vecteur d’identité et cristallisation des opinions politiques et sociales. En dehors de ses lectures et de ses pratiques propres d’approche de l’histoire, Bloy touche à ce domaine tout au long de son œuvre et non pas uniquement dans ses romans ou dans ses ouvrages d’exégèse historique. L’histoire est en réalité omniprésente chez Bloy.  </p>
@@ -67,12 +71,12 @@
         <p>De même, ont été consultés les écrits des proches de Bloy (Barbey d’Aurevilly, Blanc de Saint-Bonnet, Féval, De Groux, Huysmans, Lasserre, Maritain, Martineau) et de plusieurs de ses contemporains afin de définir au mieux l’originalité de Bloy. Ont ainsi été mis à profit des ouvrages d’historiens (Gautier, Ratisbonne, Roselly de Lorgues), d’écrivains catholiques (Hello, Huysmans, Richepin, De Gourmont, Péguy) afin d’établir une mise en perspective pertinente des écrits de Bloy.  </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

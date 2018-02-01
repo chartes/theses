@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201308.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>À partir de 1471, Charles le Téméraire, duc de Bourgogne, s’efforce de mettre en place une armée permanente pour la « garde, seürté et deffense » de ses terres ; cette armée est constituée de ce que l’on appelle « les compagnies de l’ordonnance », ou les compagnies d’ordonnance. Il suit en cela l’exemple de son cousin le roi de France, qui s’est doté d’un tel outil vingt-six ans plus tôt. L’ordonnance d’Abbeville met en place cette institution le 31 juillet 1471. Elle est par la suite remplacée par deux ordonnances successives, celle de Bohain le 13 novembre 1472 puis celle de Saint-Maximin de Trèves en novembre 1473. Cette dernière ordonnance est en outre complétée par une dernière ordonnance, dite du camp de Lausanne, prise lors de la campagne de 1476 contre les Suisses, pour réorganiser l’armée bourguignonne après la défaite de Grandson. </p>
 		<p>Une telle institution est une chose exceptionnelle au Moyen Âge, n’ayant eu qu’un seul précédent. De fait, elle a très tôt intéressé les historiens et bénéficie d’une bibliographie relativement abondante. Toutefois, les textes à son origine sont relativement méconnus, faisant au mieux l’objet de vieilles éditions. L’objectif principal de ce travail est donc de fournir une édition critique de toutes ces ordonnances, et d’en livrer un commentaire prenant en compte des points jusqu’alors négligés de ces ordonnances ainsi que les avancées récentes de la recherche. Il s’agit de déterminer l’originalité de cette institution, et donc la part de l’influence du modèle français, mais aussi d’autres éventuelles sources d’inspiration, autour de trois axes d’étude, que sont les aspects militaires, l’encadrement de l’armée et enfin le service du duc. </p>
@@ -66,12 +70,12 @@
     
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201510.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>L'histoire de l’Église est un domaine vaste, qui a fait l'objet de nombreuses études dès avant la Révolution. De multiples champs d'étude ont été bel et bien explorés par les chercheurs dès la fin de l'époque moderne, et ont connu des développements croissants avec l'essor des sciences historiques au milieu du <num>xix<hi rend="sup">e</hi></num> siècle. Cet éventail s'est considérablement enrichi au <num>xx<hi rend="sup">e</hi></num> siècle sous l'influence de l'histoire économique et sociale, et par l'action de l'archéologie – plus particulièrement de sa composante qui est l'archéologie du bâti, discipline qui permet aujourd'hui de revisiter une part importante du patrimoine subsistant ou disparu et qui s'avère être un outil appréciable pour l'histoire des structures restées debout. Cette variété des angles d'approche n'a cependant pas épuisé la richesse du sujet. En particulier, la question du quotidien et du mode de vie des ecclésiastiques et des personnels gravitant autour d'eux n'a encore que rarement été posée. Si on a pu étudier l'héritage architectural et artistique de l'Église, on ne s'est que peu intéressé aux chanoines, dignitaires, chapelains, voire aux officiers laïcs, qui entretenaient les édifices, commandaient les objets, ou assuraient le bon déroulement du culte. Certes, les ouvrages sur le monde canonial et les groupes cathédraux se sont multipliés au <num>xx<hi rend="sup">e</hi></num> siècle, mais c'est omettre une chose : il s'agit rarement d'une approche concrète de la vie des hommes concernés. Ce constat renouvèle les interrogations quant à la place des clercs dans les hiérarchies sociales et à leur insertion dans un habitat local, et porte à se tourner vers un milieu bien connu en apparence, mais dont les traces archivistiques et architecturales n'ont été que partiellement exploitées : le monde des chanoines.</p>
           <p>Ce thème comporte un avantage certain : si toutes les communautés canoniales semblent fonctionner d'après le même modèle, leur nombre écrasant est une assurance de diversité. Même sur le plan individuel, le chanoine, trop souvent réduit à son rôle de desservant plus ou moins assidu des cathédrales ou des collégiales, est en réalité un individu complexe, rattaché toujours de par ses activités à l’Église universelle, ouvert souvent par le jeu des carrières à un horizon plus large que son diocèse, imprégné même parfois d'une culture étrangère à son lieu d'exercice. Les évolutions de la règle de Chrodegang et l'apparition de nouvelles pratiques communautaires ont fini par faire des chanoines des clercs séculiers, vivant parmi les laïcs en observant toutefois un certain nombre d'obligations communes. Le cas du tout premier chapitre historique, à Metz, est prometteur, car les aléas de l'histoire l'ont placé sur un terrain intéressant, l'ancienne Lotharingie, relevant du Saint-Empire dès la fin de l'époque carolingienne, mais restant culturellement lié à l'ancien royaume franc. L'histoire et l'historiographie locales amènent à restreindre le champ d'analyse à la période médiévale, plus exactement à la période comprise entre 1200 et les années 1520. Il faut préciser dès maintenant qu'il s'agit de l'époque traditionnellement considérée comme l'apogée de la ville, ce qui ne peut que garantir la richesse de toute étude concernant ces trois siècles de Bas Moyen Âge messin.</p>
@@ -64,12 +68,12 @@
         <p>On peut compléter notre examen du patrimoine capitulaire au moyen de quelques documents conservés à la Bibliothèque nationale de France, notamment le cartulaire-censier du chapitre élaboré en 1330.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

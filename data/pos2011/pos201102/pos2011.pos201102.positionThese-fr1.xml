@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201102.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Les données factuelles de la carrière d’Alain Saint-Ogan sont connues et l’ouvrage de Thierry Groensteen, <hi rend="i">L’art d’Alain Saint-Ogan</hi>, publié en 2007, en offre une chronologie détaillée. En revanche, comme de nombreux autres dessinateurs de bande dessinée, Saint-Ogan n’a jamais été confronté à des perspectives autres que celles de l’histoire de la bande dessinée. Même dans ce domaine, il est resté pendant très longtemps pour les spécialistes le « père » de la bande dessinée française, sans qu’une réflexion critique ne le resitue clairement face à ses collègues. Dès lors, étudier la carrière de Saint-Ogan en considérant son partage entre deux publics – d’un côté, le dessin de presse pour adultes ; de l’autre, les histoires en images pour enfants – ouvre de nouvelles perspectives pour la connaissance du dessinateur, mais également pour l’histoire de la bande dessinée en général. </p>
         <p>L’œuvre de Saint-Ogan oscille entre deux contextes qu’il est nécessaire de détailler pour étudier les images dont il est à l’origine. Le premier contexte est celui du dessin d’humour publié dans la presse, contenu traditionnel depuis le <num>xix</num><hi rend="sup">e</hi> siècle, mais qui connaît au début du <num>xx</num><hi rend="sup">e</hi> siècle une importante expansion vers la presse quotidienne, et donc vers une publication de masse. Le second contexte est celui de la culture enfantine, conçue par des adultes pour des enfants et obéissant à des normes esthétiques et éditoriales spécifiques. Elle aussi est en pleine mutation quand arrivent de « nouveaux héros », les héros de l’image. </p>
@@ -62,12 +66,12 @@
         <p>Des sources d’archives complémentaires ont pu permettre d’accéder à d’autres informations que celles contenues dans les cahiers qui donnent une vision profondément subjective sur une carrière : celle de l’auteur lui-même. Plusieurs fonds conservés à la Bibliothèque nationale de France ont pu être utilisés pour compléter l’étude du Théâtre du Petit Monde (8-RF-84738 à 84756) et de la Société des humoristes (YD2-1469 -8). Mais des sources d’archives primaires dispersées, malheureusement absentes des cahiers, constituent sans doute l’apport le plus important et le plus inédit pour la réflexion sur la carrière de Saint-Ogan. Aux Archives nationales, les fonds concernant le ministère de l’Information du gouvernement de Vichy (F<hi rend="sup">41</hi>), les procès-verbaux de la commission de surveillance et de contrôle des publications destinées à l’enfance (19900208-1 et 2) ou l’administration du journal <hi rend="i">Le Petit Parisien </hi>(11 AR) ont permis de diversifier les méthodes d’analyse. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

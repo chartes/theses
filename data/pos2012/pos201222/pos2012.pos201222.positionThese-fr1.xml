@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201222.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction  </head>
     <p>L’hôpital Laennec de Paris se trouve, depuis sa fermeture en 2000, au cœur d’un scandale immobilier et patrimonial, visant, notamment, le destin des deux corps de bâtiments et de la chapelle de l’hôpital, datés des <num>xvii</num><hi rend="sup">e</hi> et <num>xviii</num><hi rend="sup">e</hi> siècles. La médiatisation du litige qui en a résulté a rappelé la longue histoire de l’ancien hôpital des Incurables de Paris, premier occupant des lieux. Structures intermédiaires, souvent de petites tailles, les hôpitaux d’incurables ne s’apparentent ni aux hôtels-Dieu ni aux hôpitaux généraux et ont été jusqu’ici relativement délaissés par les historiens. La définition même d’un « hôpital d’incurables » s’avère difficile à établir, dans la mesure où chaque établissement détermine une liste différente des maladies qu’il accepte et de celles qu’il refuse.  </p>
     <p>L’objectif de notre étude est donc double. Il s’agit, en premier lieu, d’étudier l’hôpital des Incurables de Paris, dont les caractéristiques de fonctionnement et d’accueil des malades spécifiques offrent de nouvelles approches des pratiques charitables au <num>xviii</num><hi rend="sup">e</hi> siècle. D’autre part, il est apparu nécessaire d’élargir la vision habituelle de l’hôpital à l’époque moderne, en tirant profit du renouveau actuel et de l’historiographie riche et féconde de l’histoire de l’assistance. Considéré comme un objet d’histoire ouvert, l’hôpital peut aujourd’hui être envisagé comme un prisme à travers lequel se reflète la société toute entière. Institution majeure de l’époque moderne, l’hôpital permet un maillage et un encadrement de la société, de la ville, du quartier. Après avoir été étudié et questionné dans son existence institutionnelle, son utilité médicale, l’hôpital est aujourd’hui perçu comme une ressource sociale : tous les groupes sociaux, ou presque, fréquentent l’hôpital, d’une manière ou d’une autre et l’utilisent à divers niveaux. Structure d’accueil, débouché économique, propriétaire de maisons, source de pouvoir ou de prestige, l’hôpital joue plusieurs rôles et est un instrument de la cohésion sociale.  </p>
@@ -66,12 +70,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

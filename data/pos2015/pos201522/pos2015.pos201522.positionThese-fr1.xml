@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201522.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Le lien bien connu entre les Bourbons et la chasse est parfaitement illustré par Louis XVI. Le temps que ce roi y consacra se reflète dans son <emph>Journal</emph>, qui ne saurait se résumer à la trop fameuse mention « Rien » du 14 juillet 1789. De ses ancêtres, il hérita d'un monde tout entier dédié à ses plaisirs, qui connut de profondes inflexions durant son règne. Composé de nombreux équipages, d'un personnel abondant et diversifié, de chiens et de chevaux, de bâtiments et de forêts, cet ensemble, qui façonna jusqu'au droit de chasse d'Ancien Régime, n'a été jusqu'ici étudié que par parties, sans vision d'ensemble. C'est cette vision que se propose de rendre le présent travail : l'univers des chasses royales dans sa globalité et l'ensemble de ses composantes, ainsi que dans ses évolutions au cours du règne de Louis XVI – en particulier lorsqu'il fut confronté à la période révolutionnaire. Loin d'être immuable, ce monde touchant à la fois la cour et les domaines royaux, fut soumis aux goûts du souverain, aux contraintes financières de la fin de l'Ancien Régime et aux événements de la Révolution. Le sort des chasses royales fut lié tant aux décisions du roi qu'aux bouleversements législatifs, institutionnels et aux troubles populaires. Cette étude cherche à analyser toutes les conséquences de l’attachement des souverains pour cette activité et à comprendre ce que devinrent les différents éléments de cet univers bâti en plusieurs siècles par et pour le roi, et jeté à bas en quelques années sans pour autant disparaître complètement : les chasses royales laissèrent malgré leur suppression des traces encore visibles aujourd’hui.</p>
       </div>
@@ -59,12 +63,12 @@
           <p>Les recherches menées dans le cadre de ce travail ont conduit à exploiter des sources variées, provenant d’institutions tant centrales que locales. La période d’Ancien Régime peut être documentée d’abord par les fonds conservés aux Archives nationales. La sous-série O<hi rend="sup">1</hi> déjà bien connue des chercheurs livre une masse d’informations sur la composition des services de chasse, dans sa partie généralement appelée par commodité « Papiers du grand veneur » ; mais cet ensemble de documents reçus par le secrétaire d’État de la Maison du roi reste assez décevant pour la compréhension du fonctionnement interne des services. La sous-série O<hi rend="sup">1</hi> contient en outre de nombreux plans issus de la direction des Bâtiments, ainsi que les instructifs bons du roi. Les fonds de la Cour des aides (Z<hi rend="sup">1A</hi>), des Eaux et Forêts (Z<hi rend="sup">1E</hi>) et de la Varenne du Louvre (Z<hi rend="sup">1Q</hi>), ont été riches en renseignements sur le personnel, les routes de chasse et les permissions de chasse. La série E en est un complément intéressant, notamment du point de vue forestier, par les minutes des arrêts du Conseil du roi. Les fonds des archives départementales de Seine-et-Marne et des Yvelines ont été des apports décisifs, complétant utilement la période de l’Ancien Régime. La série A de ces deux services a surtout apporté des cartes et des plans, tandis que les séries B et C renseignent sur les maîtrises, les capitaineries, ou encore les élections. Quelques documents complémentaires peuvent se trouver dans les papiers de familles (série E) et dans les archives privées (séries Fi et J). Le département des Cartes et Plans de la Bibliothèque nationale fournit quelques documents cartographiques à même de compléter ceux conservés dans les archives départementales et aux Archives nationales, en particulier la fameuse carte des chasses. Enfin, des almanachs de la vénerie ont été consultés au département des Manuscrits et à la Bibliothèque de l’Arsenal. Pour ce qui est de la période révolutionnaire, les fonds conservés aux Archives nationales sont bien plus pauvres : seuls quelques documents dans la sous-série F<hi rend="sup">10</hi> ont pu être exploités. En revanche, les fonds des archives départementales de Seine-et-Marne et des Yvelines ont fourni presque l’intégralité des sources pour la période révolutionnaire, surtout à partir de la chute de la monarchie. La série L tant en Seine-et-Marne qu’aux Yvelines ainsi que la série Q aux archives départementales des Yvelines ont ainsi documenté tous les propos de cette étude, que ce soit sur les forêts, les bâtiments, ou encore la législation. Quant aux sources imprimées, elles comprennent à la fois des traités cynégétiques emblématiques, des biographies, des récits et des mémoires, mais aussi des almanachs, des textes législatifs et réglementaires, tant isolés que sous forme de recueils parfois commentés. Des ouvrages de généalogie ainsi que des écrits relevant de l’opinion publique les complètent.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

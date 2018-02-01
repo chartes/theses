@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201105.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>La première guerre mondiale représente une rupture en termes géopolitiques autant que culturels. L’époque est celle des évolutions radicales, dans tous les domaines. Les hommes de l’entre-deux-guerres, conscients que plus rien ne sera comme avant, vivent dans la crainte qu’une nouvelle hécatombe ait lieu. La Société des nations (SDN) voit le jour dans ces temps difficiles. Cette organisation internationale a pour ambition de rétablir un équilibre dans le jeu international, sur des bases diplomatiques, économiques, juridiques, mais également culturelles. Les musées apparaissent alors comme un des moyens d’ancrer le pacifisme dans les esprits. Quoi de plus cosmopolite en effet que les collections d’un musée ? Le visiteur, en passant d’une salle à une autre, explore les cultures à travers les œuvres d’art. L’émotion esthétique que suscite la contemplation d’un chef-d’œuvre doit amener à une prise de conscience de l’universalité du génie humain, et à une meilleure appréhension des autres cultures. Selon ce raisonnement, l’art deviendrait dès lors le meilleur rempart contre la guerre.  </p>
         <p>C’est dans cette optique qu’est fondé en 1926, sous les auspices de la SDN, l’Office international des musées (OIM) ou <hi rend="i">International Museums Office</hi>. Ancêtre de l’actuel <hi rend="i">International Council of Museums</hi> (ICOM), l’OIM a pour ambition de susciter la coopération internationale entre les musées, par le biais d’expositions transnationales, d’échanges d’œuvres d’art et, surtout, par la diffusion des techniques muséales. La revue <hi rend="i">Mouseion</hi>, fondée en 1927, répond à ces trois exigences. Diffusée d’abord dans les musées européens, puis dans le reste du monde, le bulletin de l’OIM publie des articles muséologiques de qualité, en faisant appel aux principales personnalités scientifiques de l’époque. </p>
@@ -62,12 +66,12 @@
         <p>Les sources utilisées sont conservées au centre des archives de l’Unesco. Le sujet impliquait de s’intéresser d’abord à l’organisation de la coopération culturelle par la SDN. A donc été dépouillée une partie des archives de l’IICI, portant sur la commission des Lettres et des Arts de la SDN et sur l’OIM (Unesco-IICI-boîtes 245, 465-466, 529, 642-643). Les archives de l’OIM ont ensuite fourni de précieux renseignements sur le fonctionnement de l’organisation ainsi que sur la rédaction de <hi rend="i">Mouseion</hi>. Le réseau professionnel et amical tissé par les membres de l’OIM – qui sont souvent des rédacteurs de la revue – a ainsi pu être reconstitué, grâce aux archives du fonds de l’OIM (Unesco-IICI-OIM-boîtes 347, 350, 353-360 et 373). Les comptes rendus des premières séances de l’Unesco ont permis de retracer la transition entre l’OIM, d’une part, et l’Unesco et l’ICOM, d’autre part. La revue <hi rend="i">Mouseion</hi> elle-même, enfin, constitue une source de premier ordre. Ses cinquante-six numéros représentent plusieurs milliers de pages et des centaines de planches sur les musées, les monuments, les techniques de conservation et de restauration.  </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

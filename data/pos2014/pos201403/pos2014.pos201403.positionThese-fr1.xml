@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201403.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
         <p>Rose Adler fait partie de cette génération d'artistes touche-à-tout qui ont débuté et écrasé de leur omniprésence la période Art déco et qui ensuite ont souffert d'une certaine méconnaissance. Ce n'est pas surprenant : la reliure est un des « arts mineurs », notre manque de recul sur les années 1930 à 1950 nous empêche d'adopter une vision d'ensemble, et la crise puis la seconde guerre mondiale ont étouffé l'importance croissante que la reliure avait prise dans les années 1920. Rose Adler, découverte par Jacques Doucet en 1923, n'apparaît guère que dans les ouvrages consacrés à l'Art déco ; malgré l'attention accrue que l'on porte aujourd'hui à la reliure, l'artiste n'a jamais été le seul objet d'une étude, et l'absence de catalogue tenu de son vivant rend toute estimation quantitative de sa production pratiquement impossible. Une étude approfondie de la production de Rose Adler est nécessaire, afin de mettre en lumière ses œuvres, trop méconnues pour la plupart parce que pas assez mises en valeur par les institutions les possédant – étude qui se doublerait de l'examen de sa formation, de son entourage et environnement artistiques, de ses innovations et apports, de ses reliures et de leur réception, hier comme aujourd'hui. Les bornes choisies pour cette étude vont de 1922 – date de l'accession de Rose Adler au grade de « professionnelle » au sein de l'Union centrale des arts décoratifs (UCAD) – à 1959, date de sa mort.</p>
       </div>
@@ -61,12 +65,12 @@
         <p>Rose Adler a peu écrit, et encore plus rares sont les ouvrages de sa plume qui ont été publiés. L'inventaire comprend également des ouvrages publiés la mentionnant ou permettant de mieux comprendre le contexte de l'époque.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

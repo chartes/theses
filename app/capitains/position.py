@@ -135,6 +135,12 @@ class PositionThese:
             src_edition = ET.parse(src_edition_fn)
             nsmap = {"ti" : 'http://www.tei-c.org/ns/1.0'}
 
+            # work label & description
+            for body in template.xpath("//ti:body", namespaces=nsmap):
+                body.set("n",
+                         "urn:cts:frenchLit:pos{0}.pos{1}.positionThese-fr1".format(meta["promotion"], meta["id"])
+                         )
+
             #print(meta["id"])
 
             def update(keyword, struct):

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201404.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Le trésor de Saint-Just n'est pas un trésor de cathédrale parmi d'autres : Narbonne est l'un des plus anciens et prestigieux archevêchés de la France de l'Ancien Régime. L'étude de cet ensemble , qui doit être à la hauteur du rang du siège métropolitain narbonnais, commence au <num>xii<hi rend="sup">e</hi></num> siècle, époque de la sécularisation du chapitre cathédral et de l'institution du sacriste majeur, et s'achève en 1793, année de la dispersion des objets. L’historiographie est assez pauvre à son sujet, mais extrêmement riche et dense en ce qui concerne les trésors d'église en général. Après avoir été analysés au <num>xix<hi rend="sup">e</hi></num> siècle comme des ensembles d'objets totalement isolés de leur contexte historique, les trésors d'église, et <emph>a fortiori</emph> de cathédrale, ont fait l'objet d'études considérablement renouvelées, surtout à partir de la seconde moitié du <num>xx<hi rend="sup">e</hi></num> siècle. Expositions, éditions et études générales présentent de plus en plus le trésor dans sa globalité.</p>
           <p>Notre étude s'appuie sur ces évolutions historiographiques qui abordent le trésor de façon plus complète, en faisant collaborer l'histoire, l'histoire de l'art et les sciences sociales. Il s’agit d’appliquer leurs fruits sur un seul et même sujet et de les exploiter plus en profondeur. Le trésor de Saint-Just est donc exploré dans toute sa globalité : les modalités de sa constitution, sa gestion, ses relations avec le chapitre cathédral et les espaces qui l'entourent, les conditions de sa conservation et, enfin, sa place dans la liturgie tant quotidienne que festive. Nous tentons ainsi de constituer une grille d'étude la plus complète possible, bien que de nombreuses questions soient restées sans réponse faute de sources. Nous nous engageons sur des champs de réflexion encore presque vierges, comme l'analyse de la place du trésor dans la cathédrale, sa répartition dans les espaces qui lui sont dévolus et l'histoire de sa gestion, qui comprend sa sécurité mais aussi les finances.</p>
@@ -63,12 +67,12 @@
           <p>Les fonds sont extrêmement dispersés. Ce sont essentiellement des copies et des compilations modernes, car les archives médiévales ont presque été réduites à néant. Les plus importants se trouvent aux Archives départementales de l'Aude, comme les archives du chapitre cathédral, les inventaires révolutionnaires, et quelques petites perles que nous avons découvertes, comme des fragments du coutumier des archives et du sacraire (la chambre forte du trésor). La médiathèque du Grand Narbonne conserve des statuts et des archives capitulaires compilés à l'époque moderne. Nous avons trouvé des informations importantes à la médiathèque d'Étude et du Patrimoine de Toulouse, notamment l'ouvrage du R. P. Laporte sur les reliques de saint Just et saint Pasteur, les saints patrons de la primatiale narbonnaise. Toutefois, c'est à la bibliothèque municipale de Périgueux que se trouve le plus beau joyau d'archives qui a nourri notre réflexion : le procès-verbal de la visite du cardinal de Bonzy en 1677. Les sacristies et leurs objets sont inventoriés, ainsi que toute la cathédrale. Un commentaire lui est consacré en annexe, illustré par des comparaisons avec des objets d'autres trésors. C'est grâce à cette source exceptionnelle, découverte tardivement dans nos recherches, que nous pouvons donner chair au trésor de Saint-Just et l'insérer dans des courants esthétiques de différentes époques. </p>
         </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

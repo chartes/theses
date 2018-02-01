@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201310.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Indéniablement passé à la postérité en raison d’un dévouement inconditionnel à la personne impériale, dont témoigne tout particulièrement son partage de la captivité de l’Empereur déchu à Sainte-Hélène, le général Bertrand n’en est pas moins demeuré dans l’ombre de son maître. Figure éminente du plus proche entourage de Napoléon durant de nombreuses années, force est de constater que Bertrand n’a pas suscité énormément d’intérêt de la part d’historiens qui, d’une manière générale, ont toujours jugé bon de réduire le personnage à une fidélité exemplaire qu’ils avaient jugé être son caractère dominant ; une approche somme toute assez déterministe qui aboutit non seulement à un grand nombre d’inexactitudes, mais parfois aussi au contresens pur et simple. Il convenait donc de revisiter la biographie du général Bertrand, par le biais d’une réflexion plus large visant à faire la part du mythe et de la réalité ; problématique d’autant plus adaptée que l’emprise de la légende sur les esprits est plus forte à mesure que l’on se rapproche de l’Empereur, et que, sous cet aspect, le cas de Bertrand ne déroge en rien à la règle. La longévité du personnage, ainsi que l’extrême richesse de son parcours, ont naturellement conduit à une focalisation de la présente étude sur les trente dernières années de sa vie, et donc sur la partie de son existence postérieure à la chute du Premier Empire. Ce qui a d’abord été l’occasion de mettre en évidence l’ampleur et les limites du service de Napoléon par Bertrand à Sainte-Hélène, ainsi que l’aspect extrêmement subtil de ce rapport maître-serviteur si particulier. L’examen de la période 1821-1844 a également permis de constater à quel point l’influence sur Bertrand de ces années passées au service de l’Empereur a perduré jusqu’à sa mort ; une mort qui pour lui fut aussi le point de départ (comme pour Napoléon) d’une véritable transfiguration, ayant fait de lui une légende, qui a beaucoup contribué à occulter la complexité du personnage. </p>
     
@@ -64,12 +68,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

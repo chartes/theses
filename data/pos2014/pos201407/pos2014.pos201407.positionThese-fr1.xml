@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201407.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
             <p>Le nom de Michel Villedo, célèbre entrepreneur en bâtiment du <num>xvii<hi rend="sup">e</hi></num> siècle, est omniprésent dans les archives parisiennes, et son œuvre encore intact témoigne de ses qualités de bâtisseur et d’homme d’affaires. On peut l'admirer aux alentours de la capitale, au petit manoir de Bâville en Essonne, au château de Vaux-le-Vicomte en Seine-et-Marne, et à Paris dans le quartier du Marais. À défaut de portrait peint, les mots de Noël d’Argonne, dit Dom Bonaventure d’Argonne, dans ses <emph>Mélanges d’histoire et de littérature</emph> donnent vie au personnage :</p>
             <p rend="indent">Villedo avait été dans sa jeunesse l’un de ces petits Limousins qui servent les maçons à Paris, et portent l’oiseau dans les atteliers : mais comme il avait beaucoup d’esprit, et qu’il considéroit tout avec bien de l’attention, il devint un fort habile et riche architecte. Il donna sa fille en mariage au médecin La Vigne, frère de l’illustre Mademoiselle de La Vigne dont il est parlé dans ces <emph>Mélanges.</emph></p>
@@ -64,12 +68,12 @@
             <p>Pour se faire une idée aussi juste que possible de Michel Villedo, il fallait d’abord distinguer la signature des différents membres de la famille Villedo, identifier leur écriture et reconstituer ainsi les principales étapes de leur vie. À partir de la chronologie et des arbres généalogiques fondés sur les sources de première main, la réflexion s’est construite principalement à partir du matériau fourni par les fonds conservés aux Archives nationales : actes notariés du Minutier central des notaires de Paris, registres de lettres patentes du Bureau des finances (Z<hi rend="sup">1F</hi>), procès-verbaux d’expertise des greffiers des Bâtiments (Z<hi rend="sup">1J</hi>), minutes des délibérations du Bureau de la Ville (H<hi rend="sup">2</hi>), complétés par les archives de la Maison du roi (O<hi rend="sup">1</hi>), et celles des établissements religieux (S). À la Bibliothèque nationale, les pièces isolées du cabinet des Titres, la correspondance de certains clients de Michel Villedo et quelques imprimés judiciaires ont apporté un éclairage différent et ouvert d’autres pistes de recherche. Les cartes anciennes de Paris, en particulier les plans de Gomboust et de Jouvin de Rochefort, ainsi que les estampes du <num>xvii<hi rend="sup">e</hi></num> siècle se sont révélées indispensables à la compréhension des textes. À chaque fois que c’était possible, Les informations recueillies dans les archives ont été confrontées à la visite des lieux.</p>
         </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

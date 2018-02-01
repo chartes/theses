@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201416.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Rome et Paris sont emblématiques de deux façons différentes de réglementer le marché et de contrôler le commerce afin de gérer la subsistance et de veiller sur la satisfaction des besoins des populations. La fin du <num>xvii<hi rend="sup">e</hi></num> siècle et la première moitié du <num>xviii<hi rend="sup">e</hi></num> siècle représentent une période remarquable tant pour Rome que pour Paris. Pour cette dernière, c’est le règne de Louis XIV et sa doctrine de l'administration des affaires de l'État : le colbertisme, soit l'époque où la France devient la première puissance européenne – ce qu’on appelera le « Grand Siècle ». À Rome, le centre de la chrétienté s’est transformé pour devenir le symbole d'un « empire qui n'a pas de frontières ». Il s’agit également d'une période décisive, car elle marque le passage d'un système d'économie paternaliste – où le Prince, le monarque, est considéré comme le « père du peuple » (ou <emph>maritus Reipublicae</emph>) et a le devoir de protéger son peuple, ce qui implique une intervention assez étendue des autorités gouvernementales – à un système de « laisser faire » (de libéralisation, dirions-nous aujourd’hui) – qui abandonne toute prétention morale, tout contrôle, pour confier au seul fonctionnement du marché la réglementation et la répartition du commerce de subsistance.</p>
       </div>
@@ -59,12 +63,12 @@
           <p>Les sources employées pour reconstruire les systèmes de contrôle du commerce et de réglementation du marché sont nombreuses. À Rome, le travail de repérage des sources a été effectué auprès de plusieurs instituts de conservation du fait de la grande variété d'institutions ayant opéré à la réglementation et au contrôle, et à la dispersion de leurs archives. On mentionnera, tout particulierement , la Biblioteca nazionale centrale Vittorio Emanuele et l'Archivio storico capitolino ; l'Archivio di Stato di Roma pour les fonds du Tribunale dei Conservatori, le Camerale II, arti e mestieri merciai e fornai et Annona, celui des Congregazioni economiche et de la Congregazione del sollievo. La collection Bandi de l'Archivio di Stato de Rome offre également un tableau assez précis des mesures législatives adoptées à Rome au cours de la période examinée. Pour Paris, les manuscrits faisant partie de la collection de Nicolas Delamare, qui se compose de 263 volumes in-folio (Ms. fr. 21545-21808), essentiellement constituée de notes prises par Nicolas Delamare pour la préparation de son <emph>Traité de la police</emph>, fournissent un témoignage des mesures de réglementation du marché et des procédures effectivement adoptées pour son contrôle. La série Y 93, minutes de sentences et d'ordonnances de police, des Archives nationales, met en lumière le travail des commissaires, devenus véritables protecteurs du peuple sur le marché.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

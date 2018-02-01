@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201517.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
             <p>Le nom de Tristan de Salazar, archevêque de Sens de 1474 à 1519, est assez familier à ceux qui s’intéressent à l’histoire de l’art français autour de 1500, à l’histoire politique des règnes de Charles VIII et Louis XII, ou encore au patrimoine de Sens et de sa région. Sans que le prélat ait jamais fait l’objet d’une monographie, l’historiographie, dans ces trois domaines, a souvent évoqué le nom de ce personnage haut en couleur. Fils d’un simple routier espagnol, il accède par faveur royale à l’un des sièges épiscopaux les plus prestigieux et les plus rémunérateurs du royaume ; caractère ambitieux, il se fait remarquer dès son vivant par ses actes d’éclat et ses fréquents procès ; quoiqu’évêque de cour et diplomate, il n’en fréquente pas moins souvent son diocèse, où il déploie une grande activité d’administrateur. Enfin, il laisse l’image d’un grand commanditaire en attachant la mémoire de son nom à deux réalisations majeures de son temps : la rose du bras sud du transept de la cathédrale de Sens, et l’hôtel parisien des archevêques sénonais, mieux connu sous le nom d’hôtel de Sens. </p>
             <p>Toutefois, le personnage, malgré une documentation abondante, reste mal connu. Jusqu’à la fin <num>xix<hi rend="sup">e</hi></num> siècle, son nom n’apparaît que dans des <emph>Histoires</emph> des archevêques de Sens réalisées à l’époque moderne par des auteurs locaux, ainsi que dans les grands ouvrages de prosopographie ou de bibliographie universelle (ainsi la <emph>Gallia christiana</emph>). Par la suite, le prélat n’est évoqué que dans de petites études consacrées à telle ou telle œuvre due à sa commande artistique, ou à un aspect particulier de la vie politique du temps. Plus récemment, le regain d’intérêt pour la période des années 1500 a remis Tristan de Salazar sur le devant de la scène de la recherche en histoire de l’art : en 2000, Guy-Michel Leproux publiait le marché conclu par le prélat avec le sculpteur Guillaume Chaleveau pour la réalisation des statues destinées à son tombeau dans la cathédrale de Sens et au monument qu’il était en train d’y ériger à la mémoire de ses parents ; en 2001, Agnès Bos a sorti de l’oubli le marché de maçonnerie passé en 1498 par l’archevêque pour la construction du corps de logis sud de l’hôtel de Sens. Or, malgré ces études récentes, et les généreux renseignements apportés par les travaux de Denis Cailleaux (1999) et de Vincent Tabbagh (2009), l’étendue réelle du pouvoir politique du prélat, de même que la portée véritable de son rôle artistique, n’ont pas encore été évaluées à leur juste mesure. Il reste encore à livrer non seulement une biographie qui permette de comprendre les moyens d’action du personnage, mais aussi une étude plus approfondie de son mécénat.</p>
@@ -61,12 +65,12 @@
             <p>Les anciennes archives de l’archevêché de Sens (consultables aux archives départementales de l’Yonne) sont exceptionnellement bien conservées et renferment des documents très complets sur Tristan de Salazar lui-même, ainsi que deux liasses très riches renfermant des documents de gestion de l’hôtel de Sens du <num>xvii<hi rend="sup">e</hi></num> et du <num>xviii<hi rend="sup">e</hi></num> siècle. Un dépouillement systématique des instruments de recherche des Archives nationales a permis d’utiliser de nombreux documents du Minutier central des notaires de Paris, source précieuse pour l’histoire de l’hôtel à l’époque moderne. Les archives de la Commission municipale du Vieux Paris (cvp), les procès-verbaux des séances de cette même Commission et le dossier de restauration de l’hôtel de Sens, conservé à la Médiathèque de l’architecture et du patrimoine, ont permis quant à eux de retracer l’histoire de l’édifice à l’époque contemporaine. Enfin, les fonds iconographiques de plusieurs institutions ont livré un grand nombre de vues anciennes de l’hôtel (dessins, estampes et photographies), grâce auxquelles on a pu restituer beaucoup de détails formels de l’édifice (Musée Carnavalet, cvp, <emph>Topographie de la France</emph> de la Bibliothèque nationale, Bibliothèque historique de la Ville de Paris, fonds Albert Lenoir à l’Institut national d’histoire de l’art, Médiathèque de l’architecture et du patrimoine).</p>
         </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

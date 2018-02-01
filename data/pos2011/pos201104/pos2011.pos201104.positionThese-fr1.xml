@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201104.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Héritage de l’œuvre de Louis XIV, les jardins de Versailles sont les témoins de la création artistique et des usages du Grand Siècle. Au <num>xviii</num><hi rend="sup">e </hi>siècle, ils sont au centre d’un débat entre partisans et détracteurs. Les critiques vont dans deux directions : on déplore leur abandon et leur vieillissement, et on se plaint de l’ennui qui y règne. Ce manque d’intérêt dénoncé dans les jardins est contredit par les guides officiels qui présentent une vision grandiose du parc de Versailles. Entre célébration et dénigrement, se pose alors la question de l’avenir du jardin à la française, question d’autant plus légitime que l’art des jardins, reposant sur des éléments vivants, subit des transformations excessivement rapides. Création du <num>xvii</num><hi rend="sup">e </hi>siècle, cette mode du jardin symétrique se heurte aux différentes évolutions du siècle suivant, qui viennent remettre en cause le jardin à la française : évolution des préféfrences en matière de jardin, avec l’apparition du jardin à l’anglaise, évolution des goûts de la cour en matière de promenade et de divertissement, évolution de la fréquentation par le roi et par le peuple. </p>
         <p>Grâce à l’homogénéité des sources, l’étude des jardins porte sur l’ensemble des deux règnes de Louis XV et Louis XVI, à partir du retour de la cour à Versailles en 1722. D’un point de vue spatial, elle se limite aux jardins proprement dits, comprenant les terrasses, les bosquets, le Grand Canal et la Pièce d’eau des Suisses. Elle exclut donc le Petit Trianon. Consacrée à la transformation des jardins sur un siècle, cette recherche ne se limite pas à une étude spatiale, mais se penche aussi sur les usages pratiqués dans les jardins, étudiés sous l’angle de l’histoire de l’art, pour comprendre leur impact sur l’évolution de l’espace.  </p>
@@ -63,12 +67,12 @@
         <p>Enfin les récits des mémorialistes, parmi lesquels surtout le duc de Croÿ et le duc de Luynes, livrent la vision que les contemporains pouvaient avoir des jardins, alors que la réflexion théorique s’accompagne de la rédaction de traités sur le jardinage, la botanique ou les spectacles d’extérieur comme les feux d’artifice.  </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

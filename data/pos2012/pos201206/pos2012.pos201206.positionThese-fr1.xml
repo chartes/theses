@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201206.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
     <p>La notion d’« inaliénabilité » appliquée aux collections publiques d’œuvres d’art est aujourd’hui admise comme un précepte incontestable du droit français. Inscrite « au cœur même du patrimoine », elle a une origine très ancienne dans le royaume de France, puisqu’elle est déjà mise en application sous l’Ancien Régime. Pourtant, on excepte la période de la Révolution française qui aurait dérogé à ce principe en permettant l’aliénation des biens du domaine de la Nation, le terme même d’« inaliénabilité » appliqué aux biens artistiques disparaissant dans le tumulte révolutionnaire et ne réapparaissant qu’avec le sénatus-consulte du 30 janvier 1810. Ces travaux s’attachent donc à l’étude de la période révolutionnaire et consulaire, du « Code d’aliénation », décrété les 22 novembre-1<hi rend="sup">er</hi> décembre 1790, qui abolit le principe d’inaliénabilité du domaine, à la publication du Code civil en avril 1804. Si la maxime de l’inaliénabilité est devenue sans motif pour les révolutionnaires, car trop liée à l’ancienne monarchie, ils doivent penser une nouvelle forme de protection pour préserver cet héritage artistique, conférant finalement aux objets d’art qu’ils ont sélectionnés une portée juridique quasi exceptionnelle et unique pour l’époque. Il convenait donc d’aborder le statut de l’œuvre d’art à la fois à travers la création de ce régime de propriété à part, et de définir les enjeux et critères de sélection choisis par les commissaires révolutionnaires pour former le nouvel ensemble national, en se consacrant à la question de l’œuvre d’art, bien meuble.  </p>
     
@@ -63,12 +67,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

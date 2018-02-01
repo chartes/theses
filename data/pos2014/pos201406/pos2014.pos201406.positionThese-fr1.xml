@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201406.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
               <p>Le 25 septembre 1513, le conquistador Balboa devenait le premier Européen à poser ses yeux sur la mer du Sud, le Pacifique espagnol, prélude à la conquête par les puissances ibériques d’un nouveau continent. Près de deux siècles après cet épisode, l’espace maritime nourrit encore les fantasmes et les rêves d’aventure et de réussite commerciale des Européens. S’il est d’abord sillonné par la flibuste anglaise, hollandaise et française, il faut attendre les années 1690 pour que des expéditions européennes conséquentes et bien organisées soient envoyées en mer du Sud. Pour la France, les années 1695-1725 correspondent à la période la plus dynamique de l’expansion maritime vers le Pacifique. Ces trente années à la charnière des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles sont aussi marquées par la fin du règne de Louis XIV : quel lien y a-t-il entre la guerre de la Ligue d’Augsbourg – moment où une grande partie de la puissance maritime française s’épanouit dans la guerre de course – et une aventure commerciale telle que celle de la mer du Sud ? Les difficultés financières engendrées par la guerre sont-elles un moteur pour se « reconvertir » dans cette affaire ? Enfin, quelles sont les conséquences de la paix d’Utrecht et les tensions entre Philippe V et le Régent après 1715 ?</p>
               <p>Par ailleurs, la mer du Sud est l’un des théâtres des affrontements de la « seconde guerre de Cent Ans » qui oppose la France à l’Angleterre, guerre qui tourne autour de l’enjeu déterminant de l’accès au commerce des colonies, notamment espagnoles. La notion de contact et de connexions est également essentielle : il s’agit d’aborder le sujet en s’intéressant à ce qui se passe en Europe, mais aussi dans la vice-royauté du Pérou, et d’étudier l’espace maritime « mer du Sud » comme lieu de circulations, de relations et de communications entre les diverses puissances européennes et les sociétés créoles hispaniques, l’espace d’une première « globalisation ». Enfin, le dernier domaine à aborder est celui du droit : ce commerce français en mer du Sud se fait malgré les lois des Indes qui interdisent tout commerce étranger avec l’Espagne et donc avec ses colonies. Néanmoins, il a l’originalité de se développer alors que les deux nations, par-deçà et par-delà les Pyrénées, connaissent une union très forte et que leurs monarques œuvrent ensemble contre la Grande Alliance. Les limites entre trafic illicite, interlope, contrebande et commerce autorisé sont ici très minces.</p>
@@ -62,12 +66,12 @@
               <p>En complément de ces sources manuscrites, il a aussi été précieux de consulter des sources imprimées telles que des chroniques d’auteurs américains légèrement postérieurs au début du <num>xviii<hi rend="sup">e</hi></num> siècle ou encore des récits de voyageurs comme Frézier ou Le Gentil de la Barbinais.</p>
           </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

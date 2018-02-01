@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201301.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>L’intérêt croissant pour l’histoire du costume en a fait un objet d’étude historique à part entière. Les travaux sur l’histoire de la cour – et sur le costume de cour d’une manière plus spécifique –, s’inscrivent dans un renouveau historiographique qui prend son essor dans la seconde moitié du <num>xx</num><hi rend="sup">e</hi> siècle. L’histoire du vêtement participe désormais pleinement de la recherche historique et non plus seulement de l’histoire de l’art. Longtemps considéré comme appartenant à la « petite histoire », ce domaine d’étude a acquis ses lettres de noblesse il y a plusieurs années avec des travaux liés surtout aux cours princières du Moyen Âge, de Bourgogne, d’Anjou ou encore de Savoie. Le costume de cour au <num>xvi</num><hi rend="sup">e</hi> siècle est un sujet nouveau, qui bénéficie d’une bibliographie récente. La description des costumes portés à la cour est une particularité récurrente des relations et correspondances officielles du <num>xvi</num><hi rend="sup">e</hi> siècle et confirme l’importance de consacrer une recherche à part entière sur ce sujet. En s’intéressant à un règne long et aussi emblématique que celui de François I<hi rend="sup">er</hi>, ont pu être ainsi démontrés l’importance de la mode à la cour de France ainsi que le rôle moteur joué dans ce domaine par le roi et la reine dans la première moitié du siècle. En effet, avant même le règne d’Henri III, le vêtement et les codes qui l’accompagnent sont une des spécificités de la cour de France de la Renaissance. </p>
 		<p>Deux axes d’études ont ainsi pu être dégagés. Dans un premier temps, il convient de s’attarder sur l’étude des garde-robes de François I<hi rend="sup">er</hi> et Éléonore d’Autriche d’après ce que peuvent en apprendre les comptes de l’Argenterie (service chargé de l’approvisionnement des garde-robes royales). L’histoire des garde-robes royales est liée à l’histoire institutionnelle et économique. C’est en effet en cherchant à comprendre la part – notamment budgétaire – que prend l’Argenterie dans la maison du roi et comment elle fonctionne, qu’on peut appréhender la « politique vestimentaire » de François I<hi rend="sup">er</hi>. Pour cette première partie, on s’est attaché à une garde-robe « de tous les jours » : les recherches sur les matières premières ainsi que sur la structure même des vêtements royaux permettent de comprendre comment était fabriqué et articulé le costume de cour au début du <num>xvi</num><hi rend="sup">e</hi> siècle. L’évolution des formes, et donc de la mode, est perceptible, et nous donne un aperçu du costume de cour, mieux connu, des derniers Valois. </p>
@@ -68,12 +72,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

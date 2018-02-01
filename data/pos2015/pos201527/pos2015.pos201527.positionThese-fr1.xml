@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201527.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Les Elle, dits « Ferdinand », sont une famille de peintres d’origine flamande actifs à Paris de 1601 à 1695, puis à Rennes de 1696 à 1717. Le premier d’entre eux, Ferdinand Elle (v. 1580-1637), apparaît au tout début du <num>xvii<hi rend="sup">e</hi></num> siècle à Fontainebleau puis dans le quartier de Saint-Germain-des-Prés. Protestant, probablement originaire de Malines, dans les Pays-Bas espagnols, il se fait connaître sous son prénom à défaut de pouvoir utiliser son patronyme, qui se confond en français avec le pronom personnel féminin de la troisième personne du singulier. Ses fils, Louis Elle le Père (1612-1689) et Pierre Elle (1617-1665) se font également appeler « Ferdinand », tout comme leur fils et neveu, Louis Elle le Jeune (1649-1717). Le premier enjeu de ce sujet consistait donc à redonner une identité propre à chacun de ces peintres, confondus dès le <num>xviii<hi rend="sup">e</hi></num> siècle. Pour des raisons de clarté, le prénom de « Ferdinand » a été réservé, dans le corps de la thèse, à Ferdinand Elle, le fondateur de la lignée. Son fils cadet, Pierre, possède un prénom permettant de le distinguer des autres. Son frère, Louis Elle, est systématiquement appelé « Louis Elle le Père » afin d’éviter toute confusion avec son propre fils, « Louis Elle le Jeune ». Toutefois, ces commodités onomastiques ne doivent pas faire oublier que c’est sous le seul nom de « Ferdinand » que les Elle ont fait carrière : celui-ci a donc été maintenu, entre guillemets, dans le titre de cette thèse. La connaissance des Elle, famille de bourgeois parisiens protestants du <num>xvii<hi rend="sup">e</hi></num> siècle, ne présente saveur et intérêt que parce qu’elle éclaire celle des Ferdinand, peintres actifs spécialisés dans le portrait. </p>
           <p>Malgré cette nécessaire individualisation, il nous a paru inopportun de séparer les peintres les uns des autres en les étudiant artiste par artiste. À l’exception de Ferdinand Elle, dont la vie est parfaitement inconnue avant 1601, tous les Elle ont été formés par leurs pères. À plusieurs reprises, deux générations ont cohabité dans l’atelier familial. Autour d’elles gravitent d’autres figures : gendres – comme Jean Cassiopin, qui peint à quatre reprises les membres du Bureau de la Ville de Paris –, frères, cousins, apprentis, miniaturistes… C’est ce groupe, au sens large, qui est ici qualifié d’« atelier. » Cette notion ne revêt donc pas la signification du <num>xix<hi rend="sup">e</hi></num> siècle, mais désigne plutôt la capacité des Elle à « fabriquer des peintres » sur trois générations, hors de tout cadre strictement formel, suivant l’évolution du portrait et s’essayant à d’autres genres avec plusieurs réussites extrêmement brillantes.</p>
@@ -64,12 +68,12 @@
           <p>Le catalogue des gravures a été établi à partir des collections du département des Estampes et de la Photographie de la Bibliothèque nationale de France, et de celles de Jacques Doucet à la bibliothèque de l’Institut national d’histoire de l’art. Enfin, la documentation du département des peintures du musée du Louvre, de la Witt Library à Londres, des châteaux de Versailles et de Trianon, du musée des Beaux-Arts de Rennes et du musée Condé à Chantilly ont été exploitées pour réaliser le catalogue des peintures certaines des Elle. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201523.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Avec l’invention de Gutenberg, les pratiques scripturales et les usages de l’écrit se modifient en profondeur. L’imprimerie ne remet cependant pas immédiatement en cause l’ensemble des mécanismes médiévaux. Le changement de paradigme ne s’opère pas sans résistance. Le fonctionnement institutionnel de la monarchie, fondé sur la tradition de pratiques séculaires, constitue l’un de ces points de tension. Les intérêts de l’imprimé se confrontent aux usages monarchiques sur lesquels reposent partiellement la légitimité et l’efficacité de l’intervention royale. La production normative ne recourt pas uniquement au manuscrit pour ses vertus utilitaires de transmission et de conservation de l’information, mais incorpore aussi au document des valeurs symboliques et surtout juridiques attachées à sa forme. Par conséquent, le bouleversement formel opéré par l’imprimerie frappe de plein fouet la pratique législative. Au cours du siècle qui suit cette invention, la loi connaît d’importantes évolutions, qui résultent pour partie des effets de l’imprimerie.</p>
           <p>Du point de vue institutionnel, le début des Temps modernes se caractérise par de profondes transformations du pouvoir législatif. Le pouvoir de faire loi bénéficie désormais d’une forte assise théorique, qui légitime l’intervention croissante du monarque. Ainsi, la législation du roi de France tend à se faire plus prégnante. Le phénomène se traduit par une production accrue de textes concernant des sujets qui échappaient auparavant à la compétence royale. Pour ce faire, le roi dispose d’une grande variété d’instruments, qui rend difficile l’appréhension de la pratique législative.</p>
@@ -68,12 +72,12 @@
           <p>Par conséquent, c’est sous toutes ces réserves qu’est menée l’étude des premières lois imprimées.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

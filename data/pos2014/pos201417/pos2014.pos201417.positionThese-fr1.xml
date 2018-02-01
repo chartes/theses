@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201417.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Le village de Saint-Félix-de-Sorgues se trouve au pied d'un Avant-Causse du Larzac, dans le sud du département actuel de l'Aveyron. Contrairement à sa voisine Sainte Eulalie, cette commanderie hospitalière fondée vers le milieu du <num>xii<hi rend="sup">e</hi></num> siècle a été peu étudiée. Le village est situé dans un paysage particulier, au pied d'un vallon, dominé d'un côté par un plateau calcaire et des pentes plus légères de l'autre.</p>
           <p>Depuis les années 1930, les historiens ont tenté d'étudier l'espace, notamment au moyen de sources planimétriques telles que les plans-terriers de la fin de l'Ancien Régime. Cependant, l'espace est mobile et en perpétuel changement ; les sources postérieures nous permettent uniquement d'entrevoir ce qu'aurait pu être un paysage. C'est pourquoi il est nécessaire de se rapprocher des périodes étudiées en faisant appel à d'autres sources qui ressemblent le plus aux documents planimétriques modernes, les compoix et les terriers.</p>
@@ -61,12 +65,12 @@
           <p>L'étude se fonde sur un corpus de quatre registres fiscaux et seigneuriaux : trois compoix et deux terriers. Datés de 1413, 1437 et du milieu du <num>xv<hi rend="sup">e</hi></num> siècle, les trois compoix sont conservés aux archives départementales de l'Aveyron, dans le fonds de la commune de Saint-Félix-de-Sorgues. Daté de 1420, le terrier fait partie du fonds de la commanderie, conservé dans le Fonds de Malte des archives départementales de Haute-Garonne. Des documents planimétriques – une vue figurée pour un procès du <num>xvi<hi rend="sup">e</hi></num> siècle, des plans-terriers du milieu du <num>xviii<hi rend="sup">e</hi></num> siècle et le cadastre parcellaire « napoléonien » – ont pu aussi servir d’élément de comparaison, voire de complément lorsque les sources principales étaient trop peu bavardes. Par ailleurs, l'ensemble du fonds a été utilisé pour établir un rapide historique de la commanderie et remettre en contexte les sources principales. D'autres sources, plus éparses, ont aussi été utilisées, comme un arbitrage de la cour du grand prieur de Saint-Gilles daté de 1410 conservé aux archives départementales de Haute-Garonne ou l'enquête de 1373 conservée aux Archives vaticanes.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

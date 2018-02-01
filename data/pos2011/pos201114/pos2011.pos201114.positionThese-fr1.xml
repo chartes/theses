@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201114.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Dès le 20 octobre 1792, la vente du mobilier garnissant les résidences royales, dit « de la liste civile », est officiellement entérinée ; elle ne fait toutefois l’objet d’un véritable décret d’application que le 10 juin 1793. Tout s’organise alors très vite. Quinze jours plus tard, les députés chargés d’encadrer l’aliénation sont élus. Le mois de juillet est occupé à ajuster le dispositif législatif, puis les membres de cette « Commission des Dix » quittent Paris pour la Seine-et-Oise où ils se répartissent dans trois résidences royales, Rambouillet, Versailles et Marly. Les huissiers choisis, le mobilier récolé, certaines pièces distraites et les ventes publiées, elles sont respectivement lancées les 20, 25 août et 6 octobre 1793. Au printemps 1794 puis 1795, c’est au tour de l’ameublement de Saint-Cloud et de Bellevue d’être dispersé. Ce sont, de Versailles à Bellevue, plusieurs dizaines de milliers de lots qui passent alors sous le feu des enchères.  </p>
         <p>L’apparente banalité de cet événement, considéré rétrospectivement comme un dysfonctionnement administratif majeur, resté dans les esprits comme une erreur manifeste – pour ne pas dire un traumatisme patrimonial – a totalement occulté la réalité de sa préparation et de son déroulement. La possibilité d’un écart entre l’ordinaire d’un « encan pur et simple » dont le modèle a émaillé l’histoire des confiscations révolutionnaires et les options adoptées pour vendre le mobilier royal méritait d’être questionnée, comme d’ailleurs le <hi rend="i">topos</hi> de la participation des amateurs étrangers à la liquidation qui, <hi rend="i">a posteriori</hi>, n’avait fait qu’amplifier le sentiment de perte. </p>
@@ -62,12 +66,12 @@
         <p>Enfin, les registres paroissiaux puis d’état-civil des grandes localités de Seine-et-Oise pour la période 1770-1850, entièrement numérisés et mis en ligne, permettent l’identification des adjudicataires de mobilier royal. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

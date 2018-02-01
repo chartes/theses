@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201117.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
         <p>Au cours du <num>xiv</num><hi rend="sup">e</hi> siècle a lieu un événement fondamental dans l’histoire de l’écriture latine : la réception et l’adaptation des formes propres à l’écriture documentaire dans le cadre de l’écriture des livres. Ce phénomène, qu’on interprète comme la manifestation d’une irruption du monde documentaire (scripteurs et lecteurs) dans celui du livre, connaît une évolution complexe : on voit se former, à partir du <num>xiii</num><hi rend="sup">e</hi> siècle, puis passer dans le livre, des écritures diversement articulées qu’on peut grouper sous le terme générique de « gothique cursive ». Ce sont en réalité des tracés et des modes d’exécution variés, tantôt posés, tantôt proprement cursifs, et plus ou moins soignés. S’orienter dans ces écritures n’est pas aisée : l’exploration des systèmes graphiques a été surtout menée jusqu’ici à l’échelle géographique des limites nationales d’aujourd’hui (écritures germaniques, anglaises, italiennes, etc.) ; aucune étude paléographique générale, cependant, n’a encore porté sur les manuscrits français de la fin du Moyen Âge. </p>
         <p>Albert Derolez, en 2003, à la suite des travaux de G. I. Lieftinck et de J. P. Gumbert, a produit une synthèse typologique sur l’ensemble des écritures gothiques, en se fondant sur deux critères : l’analyse morphologique, distribuée entre deux pôles qualifiés de <hi rend="i">textualis</hi> et <hi rend="i">cursiva</hi>, en fonction de quelques lettres distinctives ; et le niveau d’exécution de l’écriture, de <hi rend="i">formata</hi> à <hi rend="i">currens</hi>. Il a notamment montré combien l’aspect général de l’écriture, au-delà de quelques lettres distinctives, peut contribuer à établir une classification significative des catégories historiques. Les écritures ici regroupées sous le nom de « cursives » sont principalement celles qu’A. Derolez appelle respectivement <hi rend="i">cursiva</hi> et <hi rend="i">hybrida</hi> (distinctes seulement par l’usage ou non des hastes bouclées) ; elles doivent cependant toujours être envisagées dans leurs rapports avec la <hi rend="i">textualis</hi>, rapports formels, techniques et fonctionnels. </p>
@@ -65,12 +69,12 @@
         <p>Les clichés qui ont servi à illustrer le <hi rend="i">Catalogue</hi>, mais dont seule une partie a été imprimée dans les tomes parus, ont été depuis peu intégralement numérisés par l’IRHT, avec une qualité meilleure que celle de l’impression : l’analyse paléographique, morphologique et métrologique a donc pu être conduite sur les reproductions numériques, à l’aide du logiciel Graphoskop développé à cette fin. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

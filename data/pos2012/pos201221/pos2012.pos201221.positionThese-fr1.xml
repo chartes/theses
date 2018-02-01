@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201221.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Bien que l’Occident médiéval n’ait pas eu accès aux épopées homériques avant le <num>xiv</num><hi rend="sup">e</hi> siècle et surtout le <num>xv</num><hi rend="sup">e</hi> siècle, la guerre de Troie a continué d’être considérée comme un événement fondateur et à faire partie de la culture collective de l’ensemble de l’Empire romain. En effet, l’histoire de cette guerre fut transmise à l’Occident à travers plusieurs œuvres, en particulier l’<hi rend="i">Ilias Latina</hi>, un résumé de l’<hi rend="i">Iliade</hi> composé dans le milieu scolaire au temps de l’empereur Néron, ainsi que, de manière incomplète, à travers l’<hi rend="i">Énéide</hi>. Mais ce sont surtout les œuvres de Darès de Phrygie, le <hi rend="i">De excidio Trojae</hi>, et de Dictys de Crète, l’<hi rend="i">Ephemeris belli Trojani</hi>, qui assurèrent la postérité des récits homériques. Le récit de la guerre de Troie connut une fortune extraordinaire tout au long du Moyen Âge et même jusqu’à la fin du <num>xvi</num><hi rend="sup">e</hi> siècle, fortune liée à la fois au mythe des origines troyennes invoqué par les différentes nations européennes et à l’image de perfection culturelle et artistique que représente la ville de Troie. </p>
     <p>L’<hi rend="i">Historia destructionis Troiae</hi> de Guido delle Colonne illustre tout à fait cet engouement médiéval pour la matière troyenne. Achevée en 1287, cette œuvre, qui s’inspire largement du <hi rend="i">Roman de Troie</hi> de Benoît de Sainte-Maure, propose une nouvelle façon d’envisager et d’écrire ce récit fondateur : proposer une vision morale et érudite de la guerre de Troie sans en perdre le potentiel littéraire et merveilleux. C’est à ce titre que l’œuvre de Guido n’est pas une simple traduction latine du <hi rend="i">Roman de Troie. </hi>Son souci de véracité historique lui fait d’ailleurs corriger certains passages de Benoît et faire des ajouts érudits. De plus, l’<hi rend="i">Historia</hi> se distingue également des œuvres qui l’ont précédée par un profond pessimisme face au sens de l’histoire, dont l’auteur semble seulement tirer une morale toute pragmatique à l’usage des grands de ce monde : puisque l’histoire est vouée à un éternel recommencement et soumise à un hasard aveugle, les gouvernants se doivent d’adopter une politique pragmatique propre à éviter, autant que faire se peut, de soumettre leur royaume et leur peuple aux vicissitudes de la guerre. </p>
@@ -62,12 +66,12 @@
     </div>
               <div type="sources"/>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

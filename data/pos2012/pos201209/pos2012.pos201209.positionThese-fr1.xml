@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201209.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Parmi les textes scolaires médiévaux, les <hi rend="i">Disticha Catonis</hi> constituent l’une des œuvres les plus répandues. Composé à la fin du <num>iii</num><hi rend="sup">e</hi> siècle de notre ère, cet ensemble de cent quarante-quatre distiques, divisés en quatre livres et précédés d’une <hi rend="i">Epistula ad filium </hi>ainsi que de cinquante-six <hi rend="i">Breves Sententiæ</hi>, fournit aux maîtres la possibilité d’enseigner à leurs jeunes élèves les bases de la langue latine, à partir d’un support moral qui se conforme aux dogmes chrétiens. Guide spirituel ou simple recueil de bons mots, le succès des <hi rend="i">Distiques</hi> se mesure à la fréquence des citations que l’on relève dans un nombre incalculable d’écrits médiévaux, et dépasse incontestablement le cadre de la petite école. </p>
     <p>Traduits à de nombreuses reprises au cours des <num>xii</num><hi rend="sup">e</hi> et <num>xiii</num><hi rend="sup">e</hi> siècles, les <hi rend="i">Disticha Catonis</hi> le sont une fois de plus au <num>xiv</num><hi rend="sup">e</hi> siècle par Jean Le Fèvre de Ressons, procureur au Parlement de Paris, qui consacre son temps libre à l’écriture. Le <hi rend="i">Chatonnet</hi>, nom attribué par certains copistes à la traduction des <hi rend="i">Disticha</hi>, est sa deuxième traduction. Faisant alterner distiques latins et quatrains français, cette œuvre permet de cerner avec netteté les correspondances qu’effectue le traducteur entre les deux langues, et ainsi d’analyser ses méthodes de traduction.  </p>
@@ -65,12 +69,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

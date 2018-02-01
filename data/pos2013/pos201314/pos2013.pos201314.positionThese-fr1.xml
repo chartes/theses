@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201314.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>La France et la Suède sont deux pays dont l’éloignement géographique ainsi que les différences culturelles et religieuses, en ce début du <num>xvii</num><hi rend="sup">e</hi> siècle, ne sont plus à démontrer. C’est uniquement dans le contexte de la guerre de Trente Ans, qui déchire alors le Saint-Empire, que se justifie l’alliance conclue à Bärwald le 23 janvier 1631. L’étude de l’union paradoxale entre ces deux pays a motivé notre travail, ainsi que la volonté de comprendre les ressorts plus particuliers de cette alliance offensive fondée sur le versement de subsides ; l’édition des instructions aux ambassadeurs, reflet de la pensée politique sur la situation en Allemagne lors de la période qui nous intéresse, en a été l’outil privilégié. </p>
 		<p>L’alliance de la France avec la Suède intervient alors que la guerre de Trente Ans dure déjà depuis une douzaine d’années. Après l’échec des négociations menées en 1629 pour que le Danemark reste dans la guerre, Louis XIII cherche l’appui de la Suède. La nécessité d’intervenir contre l’empereur Ferdinand II se fait sentir après que Richelieu a refusé la ratification de la paix de Ratisbonne en 1630. Celle-ci contraignait la France à abandonner toute velléité d’intervention dans les affaires de l’Empire. En outre, la puissance des Habsbourg grandit et leur situation au sein de l’Empire est assez favorable par rapport aux princes protestants, dont le parti est fortement affaibli par la défection de Christian IV de Danemark. Pour la Suède, le soutien de l’empereur à son ennemi polonais, dans le conflit qui les oppose pour la possession de la Livonie et des différends dynastiques, ainsi que la spoliation de princes protestants, comme l’électeur palatin, sont autant d’arguments qui justifient une intervention en Allemagne. Les négociations commencent donc auprès de Gustave-Adolphe dès 1629 par la négociation d’une trêve entre la Suède et la Pologne. À ce moment-là, les intérêts du Suédois concordent avec ceux de Louis XIII dans leur inimitié contre l’empereur, mais, cependant, leurs préoccupations territoriales, religieuses, politiques et militaires divergent profondément.  </p>
@@ -68,12 +72,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201508.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>L’Église byzantine au <num>xiv<hi rend="sup">e</hi></num> siècle fut déchirée par une grave crise connue sous le nom de crise hésychaste ou palamite, du nom de son principal protagoniste : Grégoire Palamas. La théologie de Grégoire Palamas fut considérée par ses partisans comme la formalisation de traditions orthodoxes anciennes dans la lignée de l’hésychasme des Pères du désert des premiers siècles chrétiens, tandis que ses détracteurs la dénoncèrent pour ses formules révolutionnaires et contraires, selon eux, aux écrits des Pères de l’Église. La théologie palamite conféra en effet un fondement doctrinal à une prière mystique censée conduire à la connaissance de Dieu par la participation à ses énergies incréées. Grégoire Palamas distinguait en effet l’essence divine incréée et imparticipable et l’énergie divine incréée mais participable ; cela lui valut d’ailleurs d’être accusé de dithéisme. Pour expliquer sa doctrine, Palamas a souvent recouru à l’image du soleil – ici l’essence divine incréée et imparticipable – et de ses rayons – les énergies divines qui sont incréées car de nature divine, mais qui sont participables. Cette participation divine était rendue possible grâce à l’expérience mystique de la prière du cœur qui donne à voir à l’orant la lumière divine semblable à celle qui entoura le Christ lors de sa Transfiguration au mont Thabor. Cette insistance sur la lumière thaborique dans la théologie de Palamas en a fait un des thèmes les plus débattus au cours des différentes phases que connut la querelle palamite.</p>
           <p>Au milieu du siècle, tout semblait réglé ; la théologie de Palamas avait été établie comme doctrine officielle de l’Église byzantine lors du synode des Blachernes de 1351. Mais c’était sans compter sur l’opposition persistante de certains moines et intellectuels, qui resurgit à l’occasion du procès de Prochoros Kydonès à la fin des années 1360. Ce procès fut certes celui de Prochoros Kydonès, savant moine athonite, auteur d’ouvrages polémiques antipalamites ; mais aussi et surtout le procès de celui dont il fut l’épigone et le zélateur : Thomas d’Aquin. Prochoros Kydonès fut en effet profondément influencé par la pensée thomiste qu’il contribua à diffuser dans le monde byzantin de langue grecque, en traduisant nombre d’œuvres du docteur angélique en collaboration avec son frère Dèmètrios, figure de premier plan de l’histoire politique et de la vie intellectuelle de Byzance au <num>xiv<hi rend="sup">e</hi></num> siècle. À la lecture de Thomas d’Aquin, Prochoros Kydonès récusa la doctrine palamite et considéra que tout effort de connaissance de Dieu était avant tout un processus intellectuel, rationnel et indirect.</p>
@@ -61,12 +65,12 @@
           <p>Cette étude est essentiellement fondée sur le texte édité et traduit de la <emph>Réfutation de la profession de foi des Athonites</emph> de Prochoros Kydonès. Cette <emph>Réfutation</emph> a été rédigée vers 1367 ou 1368, peu avant la condamnation comme hérétique de Prochoros Kydonès en avril 1368 et au plus fort du conflit qui l’opposa à ses détracteurs au mont Athos, en particulier l’higoumène du monastère de Lavra Jacob Trikanas, et au-delà de la Sainte Montagne, le patriarche de Constantinople Philothée Kokkinos. Par ailleurs, l’exposé précédant l’édition proprement dite s’appuie sur des recherches récentes qui éclairent des points jusque-là mal connus de la vie et de l’œuvre de Prochoros Kydonès. Cette thèse propose une vision détachée de toute polémique entre catholiques et orthodoxes, suivant en cela les travaux des chercheurs les plus récents comme Antonio Rigo, sans pour autant négliger par exemple l’étude fondatrice du cardinal Giovanni Mercati sur les grandes figures antipalamites du <num>xiv<hi rend="sup">e</hi></num> siècle. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201428.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Formant une institution de chanoines réguliers depuis 1031, les chanoines de Saint-Thomas étaient au nombre de vingt-six à l'époque où commence cette étude. Recrutés dans des milieux proches du patriciat urbain, ils ne vivaient plus en communauté. Le rayonnement du chapitre s'appuyait sur le patronage de plusieurs paroisses et un riche patrimoine foncier. Les derniers siècles du Moyen Âge avaient aussi été l'occasion pour lui de s'émanciper de la tutelle de l'évêque de Strasbourg, qui du reste ne résidait plus sur place depuis 1262.</p>
           <p>Les idées de Luther trouvèrent à Strasbourg un terrain propice à leur développement, et ce dès le début des années 1520. Les écrits du réformateur de Wittemberg y sont imprimés dès 1519 ; et, malgré l'édit de Worms de 1521, ils continuèrent d'y être publiés grâce à la tolérance du magistrat. L'année 1523 vit la venue des trois principaux réformateurs de Strasbourg, Martin Bucer, Wolfgang Capiton et Caspar Hédion, ainsi que les premières manifestations de la doctrine luthérienne au sein de la ville et du chapitre. Saint-Thomas se trouva alors au centre des négociations concernant l'adoption des nouvelles réformes qui remettaient en cause un grand nombre de ses privilèges. L'échec des négociations conduisit une partie du chapitre, à la fin de l'année 1524, sur le chemin de l'exil. L'éclatement du chapitre ne se résolut qu'en 1529, année durant laquelle fut adoptée la réforme de la suppression de la messe, marquant ainsi officiellement le passage de Strasbourg à la Réforme. Vint ensuite le temps de l'implantation des idées nouvelles et de leur réalisation sur le terrain, durant les décennies 1529-1549. Le chapitre, devenu majoritairement protestant, fut au centre des réformes mises en place par la municipalité, notamment dans le processus de réforme de l'enseignement strasbourgeois. </p>
@@ -68,12 +72,12 @@
           <p>Saint-Thomas n'était pas épargné par les problèmes de discipline. Le plus récurrent, pendant tout le Moyen Âge, était l'absentéisme, qui allait souvent de paire avec le cumul de bénéfices, et que différents statuts successifs peinèrent à combattre. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

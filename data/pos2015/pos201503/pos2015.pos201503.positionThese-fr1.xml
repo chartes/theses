@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201503.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
         <p>Dans la série des règnes du Moyen Âge, celui de Philippe le Bel tient une place éminemment ambivalente, entre le modèle de son saint aïeul et une sorte de préfiguration du machiavélisme d'État – qui lui est d'ailleurs assez injustement imputé comme l'ont montré notamment les travaux de Robert-Henri Bautier, Elizabeth Brown et Élisabeth Lalou. Les aléas de ce règne, période de vaste offensive sacrale de la royauté, sont un point d'observation pour une historiographie des plus fournies, et récente qui plus est, entre dévotions royales, idéologie du pouvoir, dynamique lignagère, et investissement territorial. Si l'utilisation par le pouvoir royal de la liturgie en particulier, et de la sphère religieuse en général, a largement été mise en valeur, dans ses grandes cérémonies, dans son discours et ses représentations, la confusion a rarement été levée entre la dévotion du roi, personnelle ou héritée, et la réalité de son inscription dans le royaume. L'étude de la construction spatiale de la liturgie royale a privilégié l'approche monumentale et exceptionnelle (sacre, fondations monastiques) au détriment de l'intercession quotidienne que ses sujets entretiennent pour le souverain. Cette dévotion est certes difficilement perceptible, mais elle peut se révéler riche d'enseignements. Prier pour le roi, c'est reconnaître une supériorité, s'ancrer dans un territoire et des modes de dévotion ; c'est se reconnaître partie prenante d'un corps social. Mettre en parallèle l'investissement royal dans l'édification de sa mémoire religieuse et l'initiative des régnicoles dans ce domaine permet ainsi de prendre la mesure de la politique mémorielle qu'a pu mener le roi et du succès qu'elle a rencontré.</p>
       </div>
@@ -59,12 +63,12 @@
         <p>Les sources utilisées ont été d'abord les cartons des « Fondations » du Trésor des chartes, réunissant des lettres et des actes de toutes sortes ayant pour objet l'organisation du culte pour le roi. Une typologie en particulier a orienté le sujet : celle des promesses de prières que les clercs et les religieux envoient au roi pour l'assurer de leurs suffrages. Les cartons des Archives nationales (J 460 à J 467) conservent ainsi des liasses importantes, concernant spécialement Saint Louis, mais aussi quelques exemples pour Philippe le Bel. Les testaments royaux ont également fait l'objet d'une étude comparative pour leurs legs pieux (J 403). Les actes répertoriés par Robert Fawtier dans le <emph>Corpus Philippicum</emph> ont fait l'objet d'un traitement sériel, ainsi que ceux copiés des registres de la chancellerie à partir de 1303. Pour ce faire, la base de données Telma de l'Institut de recherche et d'histoire des textes, qui catalogue les actes utilisés pour établir l'itinéraire royal quel que soit leur lieu de conservation, ainsi que l'édition des registres de Robert Fawtier, ont été mis à profit. Les actes relatifs à des demandes de prières du roi, à des fondations de chapelles, particulièrement sous le vocable de Saint Louis, ainsi que ceux comprenant des clauses de salut – c'est-à-dire un élément rappelant que le roi agit en la matière <emph>pro remedio anime</emph> – ont été ainsi répertoriés. Enfin, l’étude s’est appuyée sur les sources ecclésiastiques, cartulaires, bréviaires et obituaires.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

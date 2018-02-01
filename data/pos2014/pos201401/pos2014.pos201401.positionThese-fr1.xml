@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201401.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
 		    <p>En 1907, l'historien méthodique Charles-Victor Langlois découvre, au gré de sa fréquentation du Trésor des chartes, une série de documents ayant été produits au cours de la même enquête royale dont les circonstances d'ouverture ne vont pas sans susciter sa curiosité. L'enquête – ouverte en Languedoc à l'automne 1298 – fait suite aux plaintes d'un certain nombre de communautés du Lauragais à l'encontre des agissements de deux commissaires royaux, Pierre de Latilly et Raoul de Breuilly, mandatés l'année précédente en Toulousain afin de lever des taxes dues au souverain dans la région. Leur action, qui s'est déployée durant presque un an dans la sénéchaussée de Toulouse, est sans précédent, notamment du point de vue des méthodes employées. Celles-ci, que l'on pourrait qualifier d'expéditives, ont généralement consisté au déploiement de nombreuses épreuves de force, destinées à contraindre les communautés à s'acquitter de ces multiples taxes par le biais de compositions générales négociées. Ces négociations forcées ont conduit au dépôt de plusieurs demandes de grâce, dont la réponse semble résider dans l'ouverture de la procédure de 1298. Pour celle-ci, toutefois, on ne conserve aucune sentence à l'égard des deux officiers ; la véritable conclusion de l'affaire réside plutôt dans l'ordonnance royale d'avril 1299, qui, tout en proclamant l'abolition générale des fouages et des caselages de la sénéchaussée de Toulouse, concède que les amendes et les peines prononcées contre les communautés et les particuliers du pays ne seront pas exigées et que les compositions conclues avec Pierre de Latilly et Raoul de Breuilly seront annulées.</p>
         <p>À la suite de l'étude initiale de Langlois, le caractère exceptionnel du corpus le conduit à réapparaître dans les études historiques, à partir des années 1960. Les travaux effectués sur le dossier s'attachent principalement à interpréter l'enquête comme un élément de la politique fiscale parfois agressive de Philippe le Bel. Hormis l'étude d'Elizabeth A. R. Brown dans les années 1980, peu d'analyses se sont intéressées à l'autre partie prenante de l'enquête : les communautés d'habitants. Or, à la lumière du récent regain des études sur l'enquête, on peut considérer qu'elle constitue justement le lieu d'une rencontre, qu'on peut par conséquent espérer propice à une étude croisée des deux forces en présence et du dialogue qui se noue entre elles. Envisager l'étude de l'enquête royale de 1298 sous l'angle des communautés constituerait donc une approche novatrice de cette affaire, mais aussi de l'histoire des communautés haut-languedociennes au tournant du <num>xiv<hi rend="sup">e</hi></num> siècle.</p>
@@ -62,12 +66,12 @@
         <p>Au corpus constitué par les documents de l'enquête s'ajoutent un certain nombre de documents annexes, qui témoignent de l'étendue de l'action menée par les commissaires Raoul de Breuilly et Pierre de Latilly. On retrouve notamment leur trace dans plusieurs registres des comptes royaux effectués pour les années 1297 et 1298, conservés aux Archives nationales, à la Bibliothèque nationale de France et à la bibliothèque municipale de Rouen, et dont l'ensemble a été édité par François Maillard et Robert Fawtier. Il est fait mention de leur action dans deux actes du registre JJ 38, et dans les journaux du Trésor. À ces documents issus des dépôts centraux s'ajoutent une série d'actes concernant le monastère de Prouille, dont le cartulaire – qui a fait l'objet d'une édition par Jean Guiraud – est conservé dans la série H des archives départementales de l'Aude. Un certain nombre de lettres de Philippe le Bel font aussi état de leurs démêlés avec l'évêque et la ville de Toulouse. En partie éditées par Alphonse Baudoin, elles sont respectivement conservées dans la série G des archives départementales de la Haute-Garonne et dans la série AA des archives municipales de Toulouse. De manière exceptionnelle, les archives municipales de Verdun-sur-Garonne, actuellement en dépôt aux archives départementales du Tarn-et-Garonne, conservent un acte délivré en leur nom.</p>
 		  </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

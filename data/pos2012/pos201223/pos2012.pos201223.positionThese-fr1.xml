@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201223.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>Le <num>xiv</num><hi rend="sup">e</hi> siècle, marqué par des troubles à la fois politiques, économiques et sociaux, fut aussi un grand siècle d’art. Les prestigieuses commandes de quelques grands mécènes comme Charles V ou Jean de Berry ont traversé les siècles pour parvenir jusqu’à nous, et ont fortement conditionné la connaissance que nous avons de ce siècle du point de vue de l’histoire de l’art et de la commande artistique. Néanmoins, ces exemples fameux faussent notre perception de ce qu’était la véritable place des arts et du mécénat dans le milieu nobiliaire en général, dans des familles qui n’avaient ni le goût ni les moyens presque illimités des princes de fleurs de lys. Le mécénat princier de la première partie du siècle, en particulier, est mal connu et mériterait qu’on s’y intéresse de plus près. </p>
     <p>Charles de Blois, candidat malheureux au trône de Bretagne, tiraillé entre les impératifs de son rang et son aspiration à une vie ascétique, apparaît comme un exemple représentatif de cette époque tout en conservant des singularités qui en font un sujet d’étude intéressant. Si par son rang, il appartient à la plus haute noblesse de France, les ressources du duché de Bretagne et les aléas politiques de la période ne lui donnent pas les même « facilités » que ses cousins Valois pour la commande artistique, sans compter qu’il ne manifeste pas le même tempérament de collectionneur que ces derniers. Son rapport aux arts est très différent de celui que l’on connaît aux grands mécènes de la fin du siècle. Pour lui, la commande artistique n’est en aucun cas une fin en soi, mais toujours un moyen : à la fois glorification de Dieu par l’intermédiaire de beaux objets, affirmation de son rang en affichant le luxe requis, et outil idéologique dans la lutte contre son rival Montfort. </p>
@@ -66,12 +70,12 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

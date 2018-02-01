@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2011.pos201124.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction  </head>
         <p>En dépit de nombreux et récents travaux universitaires et expositions consacrés à la pratique de la chasse des rois, des princes ou d’aristocrates ayant marqué l’histoire de France, un certain vide historiographique reste à combler. En effet, entre les études sur la chasse sous l’Ancien Régime, comme celle de Philippe Salvadori, et la thèse d’École des chartes de Géraldine Péoc’h soutenue en 2005 sur les chasses impériales de Napoléon III, le premier <num>xix</num><hi rend="sup">e</hi> siècle apparaît comme singulièrement délaissé. Il semble exister en particulier un vide historiographique autour de l’histoire de la chasse sous le règne de Napoléon I<hi rend="sup">er</hi>. Le sujet n’est bien entendu pas entièrement neuf : les forêts, et en particulier leur exploitation, ont été bien étudiées ces dernières années, à la suite des progrès de l’histoire forestière. En revanche, le personnage de Napoléon lui-même, sa pratique de la chasse et celle de son entourage n’ont jusqu’à présent été qu’imparfaitement traités. La plupart des historiens s’essayant à une histoire du Premier Empire y consacrent moins d’une page, brossant au sein d’un chapitre sur la cour impériale un tableau rapide à l’aide de sources limitées aux quelques mémoires des contemporains les plus connus. Il en ressort qu’au bout de presque deux siècles d’études, sur ce point précis, l’historiographie n’a pu se détacher de l’image d’un Napoléon chasseur maladroit, et ne chassant que rarement pour se conformer à la tradition monarchique. Cette vision peut cependant sembler caricaturale, au moins autant que celle présentant Louis XVI comme un forcené de la chasse.  </p>
         <p>Étudier les chasses de Napoléon I<hi rend="sup">er</hi> implique de bâtir un corpus de sources suffisamment large pour aller au-delà des poncifs, et suffisamment cohérent pour restituer la totalité d’une image entièrement brouillée depuis la chute de l’Empire. Il faut également prendre en compte l’historiographie de la période et replacer les chasses impériales dans leur contexte, celui d’une reconstitution de la tradition monarchique au service d’une dynastie nouvelle. Si les chasses participent sans conteste de la thématique bien connue de la continuité symbolique entre l’Ancien Régime et le Premier Empire, il convient de mesurer l’usage qui est fait de cette tradition, en rendant sa place à la pratique de la chasse dans la vie politique de l’Empire, dans les habitudes de vie de la cour impériale et dans la vie quotidienne de Napoléon. L’intérêt est de parvenir à cerner en quoi la chasse, comme événement et comme tradition, était instrumentalisée et mise au service de la pratique du pouvoir de l’empereur. Cette étude prend ainsi place dans le mouvement plus large du retour aux sources primaires de l’histoire du Premier Empire, et dans le sillage des nombreuses recherches réalisées autour de la pratique du pouvoir sous l’Empire ou du rôle des différents grands officiers.  </p>
@@ -60,12 +64,12 @@
         <p>Le corpus de sources utilisé est étonnamment vaste pour un sujet aussi peu connu. En effet, au sein de la sous-série O<hi rend="sup">2</hi> des Archives nationales, renfermant les archives de la Maison de l’empereur, il faut ajouter aux archives de l’administration du grand veneur une partie significative de celles des autres grands officiers, intendants et administrateurs. Ce corpus peut aussi s’étendre aux archives de la secrétairerie d’État impériale, ainsi qu’à différents fonds d’archives privées. Les allusions à la chasse sont en effet nombreuses dans l’ensemble de ces documents, car certains des aspects annexes de l’organisation des chasses relevaient des attributions d’un nombre important des acteurs de la période, comme le grand écuyer, ou l’intendant général. Les sources imprimées sont également essentielles, à commencer par les journaux qui consacraient au déroulement des chasses des entrefilets réguliers, comportant nombre d’indications importantes. Les mémorialistes, enfin, par les jugements qu’ils formulent et les récits qu’ils rapportent, donnent des éclairages importants sur le déroulement des chasses impériales, ainsi que sur l’attitude de Napoléon I<hi rend="sup">er</hi> au cours de ses chasses. Enfin, différentes sources de seconde main procurent un éclairage historiographique, comme les archives de l’historien Frédéric Masson, dont les notes de travail relatives aux chasses constituent un important dossier. Il faut également étendre la notion de « source » aux objets et tableaux conservés dans les musées, aux bâtiments et aux espaces liés aux chasse, dont la plupart existent encore. À titre d’exemple, les armes de Napoléon, les peintures représentant ses chasses, et les bâtiments édifiés pour accueillir les chasseurs sont également des sources à prendre en compte. </p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

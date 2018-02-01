@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201513.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>La question des fonds attribués aux Ponts-et-Chaussées et de leur mobilisation se pose avec plus d’acuité sous les règnes de Louis XV et de Louis  XVI. En effet, à compter des années 1730, l’aménagement routier du territoire préoccupe de plus en plus les autorités politiques et économiques, comme le révèle le plan ambitieux d’amélioration et de développement des axes structurants du royaume souhaité par le contrôleur général Orry. Le financement des Ponts-et-Chaussées est assuré, sous la supervision de l’intendant des finances chargé de ce département, par des comptables publics spécifiques à ce service : les trésoriers généraux et les trésoriers particuliers des Ponts-et-Chaussées. Les premiers sont chargés de recouvrer les recettes et de réaliser les dépenses ordonnées pour le service. Ils doivent rétrocéder aux trésoriers particuliers la part des fonds affectés par l’État au paiement des travaux et charges à effectuer dans les généralités du royaume relevant de l’administration des Ponts-et-Chaussées. Ces aspects généraux du financement des travaux publics ont été présentés à plusieurs reprises mais sous un angle essentiellement institutionnel qui se limitait à réduire les mécanismes de mobilisation des fonds au système de prélèvement fiscal prévu par la monarchie. Celui-ci connaît des dysfonctionnements dans la seconde moitié du <num>xviii<hi rend="sup">e</hi></num> siècle. Le trésorier général des Ponts-et-Chaussées se trouve confronté, à l’échelle de son département, aux problèmes inhérents d’une part à la crise financière de l’État (insuffisance des ressources) et, d’autre part, aux modalités de financement de sa caisse. C’est en rescriptions des receveurs généraux des finances – instruments monétaires gagés sur le montant futur des impôts – que la monarchie approvisionne la caisse du trésorier général. </p>
           <p>Dans le contexte d’une augmentation des dépenses étatiques engendrées par la guerre de Sept Ans et d’une politique coûteuse de construction et d’entretien des infrastructures de transport, l’objet de notre thèse consiste à saisir les circuits et les instruments financiers utilisés par les trésoriers généraux et particuliers pour permettre la rentrée effective, dans leur caisse, des fonds alloués par la royauté pour les Ponts-et-Chaussées. Nos recherches sont centrées sur l’étude de la gestion du trésorier général Gabriel Prévost, qui fut titulaire de 1748 à 1778 de l’office de trésorier général alternatif et quadriennal, en charge des exercices pairs uniquement. Ce dernier fait appel à des bailleurs de fonds locaux qui avancent des capitaux aux trésoriers particuliers à titre personnel et en dehors du cadre des contrats collectifs conclus pour les affaires du roi. Il s’agit d’apprécier l’ampleur des emprunts contractés par Prévost et d’appréhender dans quelle mesure ces prêts permirent de résoudre les difficultés du financement des services des Ponts-et-Chaussées établis en province et de remédier au dysfonctionnement du système fisco-financier. Par ailleurs, par une étude du système de mobilisation des fonds fonctionnant au profit des Ponts-et-Chaussées de la généralité de Tours, nos travaux visent à identifier ce groupe social qui participe au financement des travaux publics et à saisir ses intérêts.</p>
@@ -60,12 +64,12 @@
           <p>Le fonds Gabriel Prévost, conservé dans la sous-série Z<hi rend="sup">1A</hi> de la Cour des aides aux Archives nationales, constitue le corpus principal d’étude. Il contient les papiers personnels et les pièces comptables officielles et privées de ce trésorier général qui furent saisis par la Chambre des comptes, par suite de l’impossibilité de celui-ci de justifier de sa gestion devant cette juridiction et de sa faillite. Quand le contentieux sur les biens et les dettes de Prévost fut transféré par le roi à la Cour des aides, en novembre 1779, une partie des documents confisqués par les commissaires de la Chambre fut remise à la Cour des aides. La diversité et l’abondance des documents contenus dans ce fonds permettent d’étudier le financement des Ponts-et-Chaussées tant au niveau de la trésorerie générale que des caisses particulières et de dégager les circuits financiers existants. Les divers types de pièces comptables conservées font l’objet d’une analyse détaillée dans l’inventaire du fonds Prévost contenu dans le second volume de notre thèse. La correspondance que chaque trésorier particulier et plusieurs créditeurs des Ponts-et-Chaussées ont adressée à Prévost offre une source inédite pour explorer la gestion qualitative des trésoriers et les motivations qui poussaient des financiers et des négociants à prêter leurs ressources à un service local des Ponts-et-Chaussées. Pour mieux apprécier la politique générale de l’État en matière de travaux publics, les actes législatifs et réglementaires relatifs aux travaux publics, conservés dans la sous-série F<hi rend="sup">14</hi> des Archives nationales, ont également été exploités. Enfin, pour compléter notre étude du financement de la caisse des Ponts-et-Chaussées de la généralité de Tours, nous avons consulté les fonds relatifs à cette administration classés  dans la série C des archives départementales d’Indre-et-Loire.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

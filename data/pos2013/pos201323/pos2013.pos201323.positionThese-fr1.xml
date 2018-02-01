@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201323.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction </head>
     <p>La réouverture de la galerie des Gobelins en 2007 et les polémiques autour de la destination de l’hôtel de la Marine ont récemment attiré l’attention générale sur l’institution culturelle qu’est le Mobilier national. Son histoire, très ancienne, est intimement liée à la monarchie. Elle puise ses sources dans les fonctions de gestion du mobilier royal dévolues à un simple valet de chambre de l’Hôtel du Roi au Moyen Âge. C’est Henri IV qui en fait une institution, à laquelle Louis XIV donne une ampleur sans précédent. On trouve peu d’équivalents en Europe. La <hi rend="i">Government Art Collection</hi> britannique, par exemple, n’a qu’un siècle d’existence. Ce lien très fort qui existe avec la monarchie pose la question du devenir du Garde-Meuble lorsque celle-ci s’effondre. De même, que se passe-t-il lorsqu’une nouvelle dynastie, celle des Bonaparte, se met en place ? Ces travaux s’attachent à l’étude du fonctionnement concret du Garde-Meuble pendant ces années, sous les aspects pragmatiques que sont l’emplacement, le personnel et la gestion de l’institution. Les différents dysfonctionnements, sans arrêt pointés du doigt pour la période révolutionnaire, sont à remettre en perspective dans le contexte d’activité redoublée dont a su faire preuve le Garde-Meuble avant sa suppression en 1798. En ce qui concerne le travail accompli par le Mobilier impérial, en plus de décrire l’ampleur des efforts consentis, cette étude aborde ce qu’il en reste aujourd’hui, en prenant l’exemple de trois palais impériaux de la région parisienne. Le thème de la restitution historique, d’actualité depuis un demi-siècle, laisse aujourd’hui encore peu de conservateurs de châteaux-musées indifférents.  </p>
     
@@ -63,12 +67,12 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

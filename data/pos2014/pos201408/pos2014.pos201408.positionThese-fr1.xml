@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201408.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
             <p>Pourquoi s'intéresser au singe à l'époque médiévale ? À première vue, on pourrait penser que cet animal occupe un plan secondaire au Moyen Âge, par rapport aux classiques chats, chiens et oiseaux qui peuplent le quotidien des hommes, ou par rapport aux renards et aux loups si souvent rencontrés en littérature. Il suffit pourtant de se pencher un peu sur la question pour s'apercevoir que le singe ne tient pas un second rôle dans le bestiaire médiéval, bien au contraire. La meilleure manière de s'en convaincre est d'ouvrir les manuscrits de l'époque gothique et de constater que les singes colonisent allègrement les marges. Mais l'argument quantitatif n'est pas le seul à légitimer cette étude : la charge symbolique du singe justifie que l'on s'arrête sur lui. Héritier des connaissances et des superstitions antiques, le Moyen Âge porte un regard ambivalent sur le singe : tiraillé entre une vision pseudo-scientifique relayée par l'Église et une attirance pour cet animal facétieux, il offre des témoignages contradictoires. En effet, durant toute la période, la symbolique diabolique – et plus généralement la symbolique du mal et du péché – dégagée par le singe, cohabite avec un capital de sympathie de la part d'une population fascinée par cet animal si divertissant. Malheureusement pour le singe, c'est avant tout son mauvais visage qui a été souligné jusqu'ici par les chercheurs. Ainsi, l'ouvrage de référence écrit par H. W. Janson – <emph>Apes and Ape Lore in the Middle Ages and the Renaissance</emph>, Londres, 1952 – a gravé dans le marbre la légende noire du singe diabolisé par l’Église au haut Moyen Âge. Les sources offrent pourtant tout le matériel nécessaire pour faire un portrait nuancé du singe médiéval. L'objet de cette thèse est de présenter un apparat littéraire et iconographique le plus complet possible autour de l'animal, afin d'éclairer les différentes facettes de la figure simiesque : symbolique, littéraire, réelle et quotidienne.</p>
         </div>
@@ -59,12 +63,12 @@
             <p>L'étude se construit autour des sources écrites et figurées. Les éditions de textes existantes permettent de construire un corpus assez complet autour de l'animal : une quarantaine de documents de différentes natures (littéraire, scientifique, religieuse, didactique, réglementaire, comptable) sont ainsi convoqués pour définir la manière dont le Moyen Âge perçoit le singe. Quant aux images, elles aussi issues de supports variés (orfèvrerie, sculpture sur pierre et sur bois, manuscrits enluminés, gravures, peintures, tapisseries), elles viennent corroborer ou illustrer les informations tirées des sources écrites et autorisent une approche iconographique du sujet.</p>
         </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

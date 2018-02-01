@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201415.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p><emph>L'auteur.</emph> — Eustache-Antoine Hua (1759-1836) est un avocat et magistrat originaire de Mantes qui a vu se succéder l'Ancien Régime, la Révolution, le Consulat et l'Empire, les Cent-Jours et la Restauration. Il est principalement connu pour ses mémoires – dont on n'a qu'une copie et qui ont été partiellement édités en 1871 – dans lesquels il se présente à la fois comme témoin historique et comme père attentionné vis-à-vis de ses filles et lectrices désignées. Élu député à l'Assemblée législative, il s'est donné pour buts de rapporter et d'analyser les événements historiques s'étant produits durant son mandat, et de relater l'histoire de sa vie personnelle et professionnelle, de sa formation d'avocat à 1827, l'année où il écrit.</p>
           <p><emph>L'éditeur et l'édition de 1871.</emph> — Ces mémoires ont été édités partiellement par Eustache-Maur François Saint-Maur (1825-1901), fils unique de la fille aînée d'Eustache-Antoine, en 1871. Dans le contexte d'une nouvelle insurrection parisienne, cette édition partielle s'est concentrée sur le récit des événements révolutionnaires des années 1789 à 1795. Presque tous les éléments relevant de sa vie privée en ont été censurés, ce qui représente une portion importante des premières des trois parties et la totalité de la dernière.</p>
@@ -62,12 +66,12 @@
           <p><emph>Sources complémentaires.</emph> — Pour établir l'apparat critique et le commentaire de l'édition faisant l'objet de cette thèse, ont aussi été particulièrement consultés les registres paroissiaux et d'état civil de plusieurs départements français, les dossiers de légion d'honneur du grand-père et du petit-fils (Archives nationales, LH 314 5 et LH 1028 56), et le dossier de carrière d'Eustache-Maur François Saint-Maur (AN, BB6 II 164). Parmi les sources imprimées, les plus consultées ont été certains numéros de périodiques, notamment le <emph>Courrier de la Vienne</emph>, dans lequel a été fait la promotion de l'édition de 1871, et la <emph>Bibliothèque de l'École des chartes</emph>, car Eustache-Maur François Saint-Maur, comme son fils René-Eustache-Octave, y ont été formés. Les bibliographies respectives d'Eustache-Antoine Hua et d'Eustache-Maur François Saint-Maur ont été reconstituées de manière non exhaustive, ainsi que celle des ouvrages où ces personnages sont mentionnés.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

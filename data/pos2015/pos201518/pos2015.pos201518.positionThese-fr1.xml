@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201518.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Définir avec exactitude la bibliothèque populaire semble impossible à première vue. Chaque association, chaque initiative a développé son propre fonctionnement, son propre programme de lecture, et élaboré des stratégies spécifiques pour croître et se maintenir dans un paysage culturel urbain marqué par l'apparition constante de nouvelles offres. Quelques tendances se dégagent tout de même, à l'étude de ces bibliothèques, qui permettent sans en donner une définition générale et arrêtée, de s'avancer sur un certain nombre de leurs caractères.</p>
           <p>Ces bibliothèques, principalement fondées à la fin du <num>xix<hi rend="sup">e</hi></num> siècle et au début du <num>xx<hi rend="sup">e</hi></num> siècle, sont en réalité quasiment toutes issues de la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle. Leurs fondateurs ont en effet été profondément influencés par les courants de pensée du début du <num>xix<hi rend="sup">e</hi></num> siècle, et ont parfois participé aux événements politiques et sociaux majeurs de l'époque. Pour les hommes à l'origine des premières bibliothèques laïques, 1848 signifie la formation en même temps que la mise en pratique d'idées nouvelles. Héritées d'une plus ancienne tradition, les bibliothèques paroissiales ne se développent qu'à partir des années 1820 en France, et sans doute 1840 à Paris. Seules les bibliothèques ouvrières du début du <num>xx<hi rend="sup">e</hi></num> siècle, issues de mouvements qui se structurent après la loi Waldeck-Rousseau, échappent plus ou moins à cette influence du premier <num>xix<hi rend="sup">e</hi></num> siècle.</p>
@@ -60,12 +64,12 @@
       </div>
               <div type="sources"/>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

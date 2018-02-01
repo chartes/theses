@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201405.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
                 <p>La Biennale de Venise, qui s’intitule à ses débuts Exposition internationale des beaux-arts de la ville de Venise, est créée en 1895 par un petit groupe d’intellectuels, d’artistes et d’hommes d’affaires vénitiens, désireux d’œuvrer pour le prestige et l’économie de leur ville. D’emblée, la manifestation est internationale, et l’Europe entière se rencontre sur les cimaises du Palais de l’Exposition. L’aventure de la Biennale prend un tournant majeur en 1907, alors que le premier pavillon national est inauguré par la Belgique. Suivront l’Allemagne, la Grande-Bretagne, la Hongrie, et, en 1912, la France, puis la Russie. Les pavillons sont au nombre de vingt-et-un lorsque la seconde guerre mondiale interrompt la XXIII<hi rend="sup">e</hi> édition en 1942. La participation française à Venise est constante : de 1895 à 1938, la France ne manque pas une seule Biennale, même après la guerre ou en temps de crise, ce qui la distingue par exemple de la Grande-Bretagne ou de l’Allemagne. La présence française était prévue jusqu’en 1940, mais la participation est annulée <emph>in extremis</emph> au mois d’avril. C’est donc sur ce corpus de vingt-et-une participations que l’étude de la présence française à la Biennale de Venise a été envisagée, en poussant l’examen jusqu’à la participation avortée de 1940.</p>
                 <p>Dans un premier temps, le sujet a été conçu comme étude de l’œuvre d’art en tant que système de communication, vecteur de discours et moyen d’une action politique, dans le cadre particulier de la Biennale. L’intérêt et même la nécessité d’une étude artistique et d’une confrontation directe avec l’art exposé ont émergé. Enfin, une troisième dimension s’est peu à peu greffée au sujet, faisant évoluer sa définition vers l’histoire des expositions. Nous nous sommes en effet interrogée sur l’organisation même du phénomène et sur son évolution, sur ses conditions d’expression et sur les acteurs qui en sont responsables. Notre étude s’est alors trouvée au carrefour de trois histoires : histoire culturelle des relations internationales, histoire des expositions et histoire de l’art.</p>
@@ -61,12 +65,12 @@
                 <p>Les sources dont nous disposions étaient très diverses. L’intérêt de notre approche réside dans la confrontation des sources italiennes et françaises, issues de producteurs très différents, dont les interactions révèlent l’imbrication des niveaux d’action publics et privés, officiels et personnels. Les principaux gisements illustrent la complexité de l’organisation. Au centre de ce réseau d’archives se trouvent les fonds conservés à l’Archivio Storico delle Arti Contemporanee (ASAC) : les documents produits par les organisateurs de la Biennale y sont conservés depuis les prémices de l’événement en 1887. La richesse de l’ASAC nous a aidée à comprendre le fonctionnement de l’institution, et ses liens avec la France, puisque les correspondances avec les contacts français comptent pour une grande partie des fonds conservés. Ceux-ci sont multiples et de natures diverses : il s’agit d’agents diplomatiques, de conservateurs, d’artistes, de fonctionnaires des Beaux-Arts. Aussi avons-nous suivi la trace de ces acteurs et de leur action au sein des fonds français. Trois fonds sont particulièrement intéressants ; les archives du musée du Luxembourg, conservées aux archives des musées nationaux, au musée du Louvre ; la série de la correspondance politique et commerciale de la France avec l’Italie, aux archives diplomatiques à La Courneuve, ainsi que les archives de l’ambassade de France à Rome et du consulat de France à Trieste conservées au Centre des archives diplomatiques de Nantes. En parallèle de ces sources archivistiques, les catalogues de la Biennale constituent l’une des bases de notre étude. Enfin, les sources publiées – articles, essais, mémoires – ont apporté un éclairage complémentaire essentiel.</p>
             </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

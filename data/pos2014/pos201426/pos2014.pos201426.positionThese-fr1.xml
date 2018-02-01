@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2014.pos201426.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Proportionnellement à leur présence dans le discours, on peut encore dire aujourd’hui que les interjections n’ont pas reçu l’attention qui leur était due. Malgré quelques études éparses, des traités de grammaire antiques jusqu’à la seconde guerre mondiale, ce phénomène restait cantonné à un statut périphérique, tenant plus du hors-norme que de la structure de la langue, de l’exception plutôt que de l’ordre. Il faut attendre l’évolution de la linguistique vers des théories non-vériconditionnelles (pragmatique du langage, linguistique cognitive, analyse de conversation) pour que l’attention portée au phénomène interjectif corresponde enfin à l’importance de ces morphèmes.</p>
           <p>Bien que cette idée soit de plus en plus battue en brèche, il est crucial de noter que l’interjection n’est en aucun cas un morphème naturel mais un signe linguistique motivé, d’un abord complexe du fait de ses nombreuses réalisations. Bien des chercheurs ont pu tomber dans le « piège expressif » consistant à ne voir que des marqueurs d’émotion primitifs là où l’ampleur des possibilités interjectives ne fait pas de doute. Cette étendue peut se révéler par le recours à la notion floue d’« entre-deux » : l’interjection se situe entre l’écrit et l’oral, entre le dire et le reconstruire (un phénomène procédural ayant lieu entre l’énonciation et l’actualisation de cette énonciation par l’interlocuteur), entre un contenu spécifié et inspécifié (forte dépendance contextuelle mais conservation d’une base sémantique plus ou moins large), entre le langage et le monde ou entre deux parties de la phrase, du discours, voire du texte.</p>
@@ -61,12 +65,12 @@
       </div>
               <div type="sources"/>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

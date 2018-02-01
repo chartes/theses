@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201501.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Les lettres de prison de Paul Nothomb renvoient à la douloureuse question de l’épuration dans l’après-guerre. Souvent cité, notamment chez les communistes belges, comme l’exemple même du traître, Paul Nothomb est une figure controversée de l’histoire de la Seconde Guerre mondiale en Belgique. </p>
           <p>Qu’il se fasse appeler Paul Bernier, Paul Nothomb ou Julien Segnaire, cet homme évoque, selon les personnes et les époques, un héros de la guerre civile espagnole, un militant communiste engagé, un membre de la Résistance belge, un traître au service de la Gestapo, un écrivain, ou bien encore un intellectuel spécialiste de l’exégèse et de l’hébreu. La palette d’évènements auxquels il a participé ou assisté et les différents témoignages le concernant peinent à offrir toutes les couleurs nécessaires pour dresser le portrait d’un homme aussi nuancé que Paul Nothomb. Personne ne s’est encore attelé à sa biographie malgré le potentiel d’une telle étude. Si ce travail entreprend de présenter une étape décisive de la vie de Paul Nothomb, il n’a pas pour objet d’offrir une vision détaillée de son parcours. Il s’agit plutôt de se concentrer sur sa captivité au moment où il est jugé pour collaboration, après la Seconde Guerre mondiale, épisode illustré par les lettres clandestines qu’il écrit alors à sa femme. Cette édition a pour ambition d’apporter un éclairage nouveau sur les phénomènes de collaboration et de répression. Ces lettres permettent aussi et surtout d’entrevoir le portrait en creux de leur destinataire, Marguerite Develer, ainsi que celui d’un homme au parcours atypique.</p>
@@ -67,12 +71,12 @@
           <p>Enfin, d’autres sources ont été consultées en Belgique, notamment le fonds comprenant diverses interviews de contemporains des faits (AA 2268), au Centre d’Études et de Documentation Guerre et Sociétés contemporaine (CEGESOMA) ; ainsi que le dossier judiciaire de Paul Nothomb (Dossier répressif en cause de Nothomb Paul (Saint‑Gilles<term rend="index" key="SAINT-GILLES"/>, 7.12.1913) - Cour Militaire Bruxelles, 10.01.1947 (780/46)), conservé dans les archives du conseil de guerre de Bruxelles, au Collège des Procureurs généraux de Belgique.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

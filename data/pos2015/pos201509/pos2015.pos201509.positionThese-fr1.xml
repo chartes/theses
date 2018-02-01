@@ -1,6 +1,6 @@
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -37,21 +37,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+    <!--
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+    -->
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="@TODO@">
-      <body>
-          <div n="1" type="textpart" sub="section">
+  <text>
+      <body xml:lang="fr" n="urn:cts:frenchLit:pos2015.pos201509.positionThese-fr1">
+          <div n="1" type="textpart" subtype="section">
               <div type="introduction"><head>Introduction</head>
           <p>Du Second Empire, on ne conserve aucune œuvre chorégraphique originale. Le ballet de l’Opéra de cette période souffre d’une mauvaise image dans l’historiographie, qui le considère en déclin par rapport au ballet romantique des années 1830-1840. Pourtant, force est de constater que le ballet du Second Empire a été très peu étudié par les historiens de la danse. </p>
           <p>La période est introduite par les retraites successives des grandes étoiles romantiques telles que Marie Taglioni ou Carlotta Grisi et par le départ d’Arthur Saint‑Léon, qui quitte son poste de premier maître de ballet en 1852, laissant la place à Joseph Mazilier. Elle se termine avec les événements de 1870 qui bouleversent complètement l’organisation de l’Opéra. Le ballet sera ensuite mis de côté sous la Troisième République, avant que le centre européen de la danse se déplace de Paris vers Saint‑Pétersbourg grâce aux réadaptations de ballets de la période par Marius Petipa.</p>
@@ -61,12 +65,12 @@
           <p>La grande majorité des sources utilisées pour cette étude est constituée par les très riches archives de l’Opéra conservées dans la sous‑série AJ/13 des Archives nationales. Elles regroupent des documents très nombreux et divers : traités et contrats, documents officiels, mais aussi notes de services, rapports internes, correspondance très abondante, listes de matériel, parfois croquis et photographies, etc. L’autre partie des sources est constituée d’écrits et de témoignages d’époque, publiés ou manuscrits, notamment des personnages importants comme le maître de ballet Arthur Saint‑Léon ou le professeur Léopold Adice. Ces ouvrages sont conservés dans plusieurs départements de la Bibliothèque nationale de France, tout comme l’iconographie illustrant ces travaux, accessible grâce aux ressources numérisées de la BNF.</p>
       </div>
           </div>
-          <div n="2" type="textpart" sub="section">
+          <div n="2" type="textpart" subtype="section">
               <div type="part">
                 <!-- @TODO@ -->
               </div>
           </div>
-          <div n="3" type="textpart" sub="section">
+          <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>
