@@ -28,9 +28,9 @@ METADATA = '../../theses.csv'
 
 if __name__ == "__main__":
 
-    pt = PositionThese(METADATA, '__cts__textgroup.xml', '__cts__work.xml')
+    pt = PositionThese(METADATA, '__cts__textgroup.xml', '__cts__work.xml', 'edition.xml')
 
     for folder_name in SRC_FOLDERS:
         pt.write_textgroup(folder_name, DEST_PATH)
         pt.write_work(folder_name, DEST_PATH)
-        pt.write_edition(folder_name, DEST_PATH)
+        pt.write_edition(folder_name, SRC_PATH, DEST_PATH)

@@ -1,53 +1,60 @@
 import os
 import lxml.etree as ET
+import copy
 
 
 class PositionThese:
 
-    def __init__(self, metadata, textgroup_template, workgroup_template):
+    def __init__(self, metadata, textgroup_template, work_template, edition_template):
         self.__tg_template_filename = textgroup_template
-        self.__wg_template_filename = workgroup_template
+        self.__w_template_filename = work_template
+        self.__e_template_filename = edition_template
         self.__metadata = {}
 
+        #remove double quotes then trim
         clean = lambda s: s[1:-1].strip()
 
         with open(metadata, 'r') as meta:
             for line in meta.readlines()[1::]:
                 line = line.split(",")
-                print(line)
                 line.extend([""]*(13-(len(line)-1)))
-
                 titres = clean(line[6]).split(".")
-
                 self.__metadata[line[0]] = {
                     "id" : line[0],
                     "promotion" : line[1],
-                    "tri": line[2],
-                    "nom": line[3],
-                    "prenom": line[4],
+                    "tri": clean(line[2]),
+                    "nom": clean(line[3]),
+                    "prenom": clean(line[4]),
                     "sexe": line[5],
                     "titre": "",
                     "notBefore": line[7],
                     "notAfter": line[8],
-                    "authorKey": line[9],
-                    "authorRef": line[10],
+                    "authorKey": clean(line[9]),
+                    "authorRef": clean(line[10]),
                     "ppn_position": line[11],
                     "ppn_these": line[12],
                     "an_these": line[13],
                     "sous_titre": ""
                 }
 
+                # split the subtitle from the title if any
                 self.__metadata[line[0]]["titre"] = titres[0].strip()
                 if len(titres) > 1:
                     self.__metadata[line[0]]["sous_titre"] = titres[1].strip()
+
+                # print(self.__metadata[line[0]])
 
     @property
     def __tg_template(self): return ET.parse(self.__tg_template_filename)
 
     @property
-    def __wg_template(self): return ET.parse(self.__wg_template_filename)
+    def __wg_template(self): return ET.parse(self.__w_template_filename)
+
+    @property
+    def __e_template(self): return ET.parse(self.__e_template_filename)
 
     def write_textgroup(self, pos_year, dest_path):
+        # get a fresh new etree
         template = self.__tg_template
         #TODO title ??
 
@@ -72,8 +79,8 @@ class PositionThese:
                 #print(cts_tg)
 
     def write_work(self, pos_year, dest_path):
-
         for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
+            # get a fresh new etree
             template = self.__wg_template
 
             # Update the URN parts : pos -> pos2015
@@ -105,24 +112,55 @@ class PositionThese:
             w_filepath = os.path.join(w_dirname, "__cts__.xml")
             if not os.path.isfile(w_filepath):
                 with open(w_filepath, 'w') as f:
-                    cts_wg = ET.tounicode(template, pretty_print=True)
-                    f.write(cts_wg)
-                    #print(cts_wg)
+                    cts_w = ET.tounicode(template, pretty_print=True)
+                    f.write(cts_w)
+                    #print(cts_w)
 
-
-    def write_edition(self, pos_year, dest_path):
-        pass
-        #template = self.__edition_template
+    def write_edition(self, pos_year, src_path, dest_path):
         for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
+            # get a fresh new etree
+            template = self.__e_template
+
             e_dirname = os.path.join(dest_path, "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]))
 
             e_filepath = os.path.join(e_dirname, "{0}.{1}.{2}".format(
-                "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]),"positionThese-fr1.xml"
+                "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]), "positionThese-fr1.xml"
             ))
 
+
+            src_edition_fn = os.path.join(src_path, pos_year, "{0}.xml".format(meta["tri"]))
+            if not os.path.isfile(src_edition_fn):
+                raise FileNotFoundError("src file not found: {0}".format(src_edition_fn))
+
+            src_edition = ET.parse(src_edition_fn)
+            nsmap = {"ti" : 'http://www.tei-c.org/ns/1.0'}
+
+            #print(meta["id"])
+
+            def update(keyword, struct):
+                for intro in template.xpath("//ti:body//ti:div[@type='{0}']".format(keyword), namespaces=nsmap):
+                    for c in struct.getchildren():
+                        intro.append(copy.deepcopy(c))
+
+
+            front = src_edition.xpath("//ti:front//ti:div", namespaces=nsmap)
+            if len(front) > 0:
+                update('introduction', front[0])
+                if len(front) > 1:
+                    update('sources', front[1])
+
+            #TODO
+            body = template.xpath("//ti:body", namespaces=nsmap)
+            for part in src_edition.xpath("//ti:body/ti:div", namespaces=nsmap):
+                new_part = ET.fromstring("<div type='part'></div>")
+                for c in part.getchildren():
+                    new_part.append(copy.deepcopy(c))
+
+                body.insert(2, new_part)
+
+
+            cts_edition = ET.tounicode(template, pretty_print=True)
             if not os.path.isfile(e_filepath):
                 with open(e_filepath, 'w') as f:
-                    pass
-                    #cts_wg = ET.tounicode(template, pretty_print=True)
-                    #f.write(cts_wg)
-                    # print(cts_wg)
+                    f.write(cts_edition)
+
