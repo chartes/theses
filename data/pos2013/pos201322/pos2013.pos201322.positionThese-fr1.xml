@@ -4,16 +4,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">@TODO@</title>
-        <title type="sub">@TODO@</title>
-        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+        <title type="main">Le scotisme de Himbert de Garda O</title>
+        <title type="sub">F</title>
+        <author key="Susini, Baptiste" ref="https://www.idref.fr/@TODO@">Baptiste Susini</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
       </editionStmt>
       <publicationStmt>
         <publisher>École des chartes</publisher>
-        <date when="@TODO@"/>
+        <date when="2013"/>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
         </availability>
@@ -24,12 +24,12 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2013 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
-        <date when="@TODO@"/>
+        <date when="2018"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -39,15 +39,14 @@
       <refsDecl n="CTS">
     <!--
         <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
+    -->
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-    -->
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
@@ -55,7 +54,7 @@
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201322.positionThese-fr1">
-          <div n="1" type="textpart" subtype="section">
+          <div n="1" type="section">
               <div type="introduction"><head>Introduction </head>
     <p>Himbert de Garda est un théologien franciscain qui a étudié à Paris vers le milieu du <num>xiv</num><hi rend="sup">e</hi> siècle. Les détails de sa vie ne nous sont connus que par quelques passages des manuscrits de son <hi rend="i">Commentaire du Livre des sentences</hi>, unique œuvre que nous ayons de lui. Aussi reste-t-il un auteur méconnu : Glorieux signale même dans son <hi rend="i">Répertoire des maîtres en théologie de Paris</hi> un de ses manuscrits comme l’œuvre d’un autre docteur, Humbert de Preuilly. Ce n’est que très récemment qu’il a attiré l’attention de C. Schabel et W. Duba, qui furent les premiers, en 2011, à publier un article ne portant que sur Himbert de Garda. Oublié, ce théologien fut cependant dépeint dans une fresque du couvent franciscain de Bolzano, avec le sobriquet de <hi rend="i">Doctor dulcis</hi>, non loin de ses maîtres Duns Scot († 1308) et François de Meyronnes (mort entre 1325 et 1330). En revanche, Himbert de Garda se montre toujours dans son <hi rend="i">Commentaire</hi> le critique acerbe des dominicains, et de Thomas d’Aquin en particulier, qu’il réfute à la moindre occasion.  </p>
 		<p>Si Himbert de Garda se revendique ouvertement scotiste, ce projet d’édition a cependant pour but de voir dans quelle mesure sa philosophie se rattache réellement aux idées de Scot. Elle ouvre ainsi une fenêtre sur les débats les plus importants qui avaient lieu alors dans les <hi rend="i">studia</hi> franciscains, depuis le problème de la simplicité divine jusqu’à la doctrine des idées.  </p>
@@ -67,18 +66,47 @@
 
 			</div>
           </div>
-          <div n="2" type="textpart" subtype="section">
-              <div type="part">
-                <!-- @TODO@ -->
-              </div>
-          </div>
-          <div n="3" type="textpart" subtype="section">
-              <div type="conclusion">
-                  <!-- @TODO@ -->
-              </div>
-              <div type="appendix">
-                  <!-- @TODO@ -->
-              </div>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Analyse codicologique </head>
+		</div><div n="2" type="part"><head n="Deuxième partie">Étude philosophique du <hi rend="i">Commentaire du Livre des Sentences </hi></head>
+
+
+		  <div>
+<head n="Chapitre premier">La théorie des distinctions </head>
+
+    <p>La théorie des distinctions est l’épine dorsale de la philosophie scotiste, car c’est elle qui permet de distinguer les personnes divines, sans rompre avec le dogme de la simplicité de l’essence de Dieu. Himbert est un héritier de la distinction modale ou <hi rend="i">ex natura rei </hi>de Duns Scot, et n’y apporte que peu d’éléments nouveaux, si ce n’est l’étude des formalités, qu’il reprend peu ou prou de François de Meyronnes.  </p>
+    
+		
+			</div>
+      <div>
+<head n="Chapitre II">La métaphysique trinitaire </head>
+		<p>Himbert va à contre-courant de la quête de la simplicité, qui était aux yeux de Russell Friedmann le trait dominant de la théologie du <num>xiv</num><hi rend="sup">e </hi>siècle : les maîtres franciscains auraient eu tendance à privilégier la simplicité divine aux explications trinitaires. Tout au contraire, si Himbert reprend bien à son compte les explications psychologiques ou émanationnelles, il n’hésite pas à multiplier les distinctions en Dieu.  </p>
+    
+      </div>
+      <div>
+<head n="Chapitre III">L’équivocité de l’étant </head>
+    <p>C’est la partie la plus surprenante de la doctrine de Himbert. Tout en se revendiquant fidèle scotiste, il renonce à la pièce essentielle de la philosophie de Duns<hi rend="sup"> </hi>Scot<hi rend="sup"> </hi>– l’univocité de l’étant –, au point de se rapprocher de la doctrine de l’analogie thomasienne.  </p>
+		
+      </div>
+      <div>
+<head n="Chapitre IV">La connaissance de Dieu </head>
+		<p>C’est donc naturellement que Himbert abandonne la démonstration a posteriori métaphysique de Duns Scot, puisque celle-ci dépendait de l’univocité. Il penche davantage en faveur d’une démonstration <hi rend="i">quia</hi>, proche de celle de Thomas, ou d’une démonstration logique de type anselmien.  </p>
+
+      </div>
+      <div>
+<head n="Chapitre V">Le néoplatonisme de Himbert de Garda </head>
+		<p>Dans son examen des <hi rend="i">esse essentie</hi>, Himbert se montre l’épigone de François de Meyronnes, qu’il n’hésite pas à plagier parfois. Himbert accepte la doctrine platonicienne des Idées, telle qu’elle fut au moins décrite par Augustin ou le pseudo-Denys, car il ne cite pas directement Platon.  </p>
+    
+      </div>
+		</div><div n="3" type="part"><head n="Troisième partie">Synopsis du Prologue et du Premier Livre </head>
+			</div><div n="4" type="part"><head n="Quatrième partie">Prologue et livre premier du <hi rend="i">Commentaire du Livre des Sentences</hi> de Himbert de Garda </head>
+    </div></div>
+          <div n="3" type="section">
+              <div type="conclusion"><head>Conclusion </head>
+    <p>Si la doctrine de Scot subsiste dans les détails et dans la plupart des opinions de Himbert, il n’en reste pas moins qu’elle a été modifiée dans ses caractères les plus essentiels : l’univocité et la démonstration de Dieu en sont des exemples frappants, ce qui montre à quel point le terme de scotiste saisit mal la réalité de la doctrine de Himbert. Cependant ces transformations semblent loin de lui être profitables, puisqu’il renonce aux avantages de la doctrine de Scot, sans gagner nettement au change, et sa façon de multiplier les distinctions en Dieu lui fait prendre le contre-pied de son époque, ce qui n’est peut-être pas étranger au peu de succès qu’il a rencontré. </p>
+    
+		
+		 </div>
+              <div type="appendix"/>
           </div>
       </body>
   </text>

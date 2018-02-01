@@ -4,16 +4,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">@TODO@</title>
-        <title type="sub">@TODO@</title>
-        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+        <title type="main">La France face aux initiatives économiques de la Commission européenne dans le cadre de la politique industrielle commune sous la Présidence de Georges_Pompidou (1969-1974)</title>
+        <title type="sub"></title>
+        <author key="Derboule, Aloïs" ref="https://www.idref.fr/@TODO@">Aloïs Derboule</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
       </editionStmt>
       <publicationStmt>
         <publisher>École des chartes</publisher>
-        <date when="@TODO@"/>
+        <date when="2010"/>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
         </availability>
@@ -24,12 +24,12 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2010 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
-        <date when="@TODO@"/>
+        <date when="2018"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -39,15 +39,14 @@
       <refsDecl n="CTS">
     <!--
         <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
+    -->
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-    -->
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
@@ -55,7 +54,7 @@
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201011.positionThese-fr1">
-          <div n="1" type="textpart" subtype="section">
+          <div n="1" type="section">
               <div type="introduction"><head>Introduction</head>
           <p>Lorsque Georges Pompidou parvint à la magistrature suprême, en 1969, la construction économique initiée par le Traité de Rome de 1957
             souffrait de lacunes importantes. D’une part, l’élimination de tous les types d’entraves techniques aux échanges n’était pas terminée.
@@ -95,18 +94,154 @@
             nécessaires pour appréhender l’histoire de la construction européenne plus concrètement et plus humainement.</p>
         </div>
           </div>
-          <div n="2" type="textpart" subtype="section">
-              <div type="part">
-                <!-- @TODO@ -->
-              </div>
-          </div>
-          <div n="3" type="textpart" subtype="section">
-              <div type="conclusion">
-                  <!-- @TODO@ -->
-              </div>
-              <div type="appendix">
-                  <!-- @TODO@ -->
-              </div>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’idée de politique industrielle durant la présidence de Georges Pompidou (1969-1974)</head>
+        <div>
+          <head n="Chapitre premier">La situation de l’industrie communautaire à la fin des années 1960 et les défis lancés par les pays
+            tiers</head>
+          <p><hi rend="i">La situation de l’industrie nationale des différents pays de la CEE.</hi> — À la fin des années 1960, l’industrie des pays
+            de la CEE présentait des divergences. Alors que l’Allemagne, les Pays-Bas et la Belgique réalisaient des percées dans certains domaines
+            industriels, la France et l’Italie étaient quelque peu en retrait par rapport à ces derniers. Cependant, malgré cette situation inégale au
+            niveau des performances industrielles, tous connaissaient des difficultés touchant leurs plus vieux secteurs industriels et se trouvaient
+            confrontés à la concurrence des pays tiers. L’idée d’une action commune, à l’image d’autres politiques européennes, se posait donc
+            légitimement.</p>
+          <p><hi rend="i">La présence des investissements étrangers dans la CEE. —</hi> Le flux important des investissements étrangers en Europe,
+            notamment des investissements américains, avaient de nombreuses conséquences positives reconnues par la Communauté, en jouant un rôle de
+            catalyseur économique. Mais ces investissements faisaient aussi craindre une perte d’indépendance économique de la CEE et créaient des
+            asymétries entre des pays européens qui se livraient une concurrence pour les attirer. Pour la Commission, il fallait élaborer une réponse
+            européenne commune à ces problèmes. Alors que certains pays mettaient en valeur le côté bénéfique de ces investissements (République
+            fédérale d’Allemagne, Pays-Bas), la France soutenait un point de vue radical de défense de ses intérêts, y compris contre ses partenaires
+            européens.</p>
+          <p><hi rend="i">Les positions des différents pays de la CEE</hi> : <hi rend="i">une opposition France-Allemagne.</hi> — Le président de la
+            République française, Georges Pompidou, était décidé à consolider l’industrie du pays. Ce renforcement ne pouvait se faire que dans le
+            cadre de la CEE, que la France devait utiliser pour atteindre ses objectifs. Toutefois, l’Allemagne était contre toute idée de politique
+            industrielle, qui signifiait pour elle des interventions des États dans le libre jeu économique. Elle était soutenue par les Pays-Bas,
+            tandis que l’Italie se rangeait aux côtés de la France, la Belgique et la Commission occupant une position intermédiaire.</p>
+        </div>
+        <div>
+          <head n="Chapitre II">La réflexion d’ensemble de la Commission européenne sur l’idée de politique industrielle européenne</head>
+          <p><hi rend="i">Les hommes de la politique industrielle</hi> : <hi rend="i">éléments prosopographiques.</hi> — Au sommet de la hiérarchie,
+            l’engagement des commissaires européens en charge des affaires industrielles, d’une part, et de leur directeur général, de l’autre, ainsi
+            que leur bonne entente, ont été décisifs dans la genèse de la politique industrielle européenne. La France et l’Italie étaient les deux
+            pays les plus favorables à des interventions actives dans le domaine industriel au niveau européen. Il existait de nombreux contacts entre
+            la Commission et les institutions françaises et on retrouvait au sein de la direction des Affaires industrielles les problématiques
+            apparues avec la question des investissements américains dans la CEE.</p>
+          <p><hi rend="i">La réflexion sur la politique industrielle européenne.</hi> — La politique industrielle européenne apparaissait liée à la
+            politique de recherche de la Commission, qu’elle pouvait accueillir en son sein. Les objectifs vastes de la politique industrielle
+            pouvaient justifier, soit de l’intégrer à la politique à moyen terme d’une union économique européenne, soit de la considérer comme une
+            politique à part entière avec sa logique propre.</p>
+          <p>L’idée de politique industrielle mêlait la volonté des États d’intervenir individuellement dans le domaine industriel, conformément à
+            l’attitude qu’ils avaient eue jusque-là, et le souci, prôné par la Commission, de dépasser cette démarche nationale dans une approche
+            d’ensemble de l’économie européenne. Une ambitieuse politique industrielle commune pouvait impliquer des avancées sur le terrain politique
+            européen, que la France craignait et rejetait.</p>
+        </div>
+        <div>
+          <head n="Chapitre III">Les propositions d’action concrètes dans le domaine industriel et le développement de la politique industrielle
+            européenne à partir de 1970</head>
+          <p><hi rend="i">Les propositions de la France et de la Commission</hi> : <hi rend="i">les deux mémorandums sur la politique industrielle
+              (1970).</hi> — Le mémorandum sur la politique industrielle élaboré par la France visait à l’origine autant à inscrire la politique
+            industrielle de la France dans le cadre économique européen qu’à proposer des actions concrètes dans le domaine industriel ; la logique de
+            ces dernières prédominait toutefois pour en faire essentiellement un programme d’action limité.</p>
+          <p>À l’inverse, le mémorandum de la Commission visait à inscrire la politique industrielle européenne dans le processus continu de la
+            construction économique européenne et à lui donner une résonance mondiale.</p>
+          <p>S’appuyant sur le besoin de renforcement des structures industrielles des pays de la CEE, ces deux approches de la politique industrielle
+            prévoyaient une action positive de caractère interventionniste et l’instauration d’une coopération économique européenne, en agissant sur
+            l’environnement des entreprises.</p>
+          <p>L’accueil réservé aux initiatives de la France et de la Commission fut mitigé. L’Allemagne, notamment sous l’influence de ses milieux
+            industriels, les rejeta en bloc à cause de leur caractère interventionniste et les Pays-Bas soutinrent la position allemande. En revanche,
+            les milieux industriels européens et le Parlement européen les accueillirent plutôt favorablement, même s’ils insistaient sur la liberté
+            économique qui devait être préservée.</p>
+          <p><hi rend="i">Le développement de la politique industrielle commune (1971-milieu 1973).</hi> — L’année 1971 fut consacrée aux questions
+            juridiques et institutionnelles qui conditionnaient l’organisation des travaux. L’échec, principalement à cause de la France, du projet de
+            création d’un comité de politique industrielle inaugurait les difficultés d’application de cette politique.</p>
+          <p>Parallèlement à la succession des propositions de la Commission, plusieurs initiatives institutionnelles tentèrent, en 1972, de
+            consolider la politique industrielle commune et de lui donner une ampleur plus importante (Sommet de Paris, Conférence de Venise). Le
+            programme de politique industrielle et technologique présenté par la Commission fut l’indicateur d’un abandon de sa volonté
+            interventionniste, pour insister sur l’évolution de l’environnement économique de la CEE, et d’une certaine rupture avec la France.</p>
+          <p>Les changements introduits à la Commission européenne en 1973, avec l’arrivée d’un nouveau directeur de la direction des affaires
+            industrielles et les restructurations internes de celle-ci, réduisirent considérablement ses moyens d’action et y introduisirent une
+            mentalité différente.</p>
+          <p>La conjoncture économique mondiale, ainsi que les réticences des pays européens de la CEE à appliquer le programme de politique
+            industrielle de la Commission, signèrent dès lors la fin de la politique industrielle commune.</p>
+        </div>
+      </div><div n="2" type="part"><head n="deuxième partie">Les réalisations effectives de la politique industrielle à travers plusieurs exemples de travaux :
+          applications sectorielles, rapprochement des entreprises et politique commune</head>
+        <div>
+          <head n="Chapitre premier">Les tentatives de mise en place d’une coopération des entreprises publiques par l’intermédiaire des
+            États</head>
+          <p><hi rend="i">Les notions d’entreprise commune, de contrats communautaires de développement et de coordination des achats publics.</hi> —
+            Que ce soit au plan national ou européen, les membres de la CEE encourageaient traditionnellement leurs entreprises publiques à coopérer
+            et à se rapprocher. Trois formes complémentaires d’action permettaient un tel rapprochement et une coopération privilégiée des pays
+            européens : l’entreprise commune, les contrats communautaires de développement et la coordination des achats publics. Ce fut finalement
+            parce que les privilèges conférés à ces trois projets, envisagés sinon par la Commission du moins par la France, les dotaient d’un
+            caractère européen, par opposition à un cadre économique mondial, que ces derniers échouèrent.</p>
+          <p><hi rend="i">La tentative de construction d’une industrie dans les technologies de pointe</hi> : <hi rend="i">l’exemple de l’informatique
+              européenne.</hi> — Le regroupement des industries européennes de l’informatique sous la forme de l’accord UNIDATA répondait aux besoins
+            de contrecarrer l’hégémonie américaine. Toutefois, la divergence des objectifs politico-économiques de chaque État dans le cadre d’une
+            simple coopération horizontale entre pays participant à l’accord fut à l’origine de son éclatement.</p>
+        </div>
+        <div>
+          <head n="Chapitre II">Favoriser le rapprochement des entreprises de la Communauté</head>
+          <p><hi rend="i">Le regroupement d’intérêt économique européen (GIEE).</hi> — Le GIEE était un instrument dont le but était un élément du
+            projet de coopération des entreprises, essentiellement privées, des États membres. Cette notion étant encore floue au début des années
+            1970, le GIEE proposait un exemple de coopération souple, à l’origine plutôt orienté vers des secteurs technologiques qui nécessitaient un
+            regroupement des forces économiques des entreprises. Après quelques difficultés juridiques, il fut finalement adopté au milieu des années
+            1980.</p>
+          <p><hi rend="i">Un instrument pour rapprocher les entreprises les petites et moyennes entreprises (PME) de la Communauté : le bureau de
+              rapprochement des entreprises (BRE).</hi> — L’importance économique des PME était reconnue par tous les pays européens, certains comme
+            la République fédérale d’Allemagne offrant l’exemple d’un modèle de coopération active des ses PME. La Communauté dans sa volonté de
+            proposer une action européenne dans ce domaine partait des mêmes considérations.</p>
+          <p>Grâce à des bourses de sous-traitance et à la création d’un bureau de rapprochement des entreprises (BRE), la Communauté appuya à une
+            échelle européenne les efforts des pays de la CEE pour faire coopérer leurs entreprises, en facilitant leurs relations de sous-traitance
+            et leur capacité d’autofinancement. Ces deux dispositifs furent une réponse efficace au défi de la coopération économique européenne.</p>
+          <p><hi rend="i">L’impossible identité européenne des entreprises de la CEE</hi> : <hi rend="i">les tentatives pour instituer une société
+              européenne.</hi> — Si le projet de création d’un régime juridique de société européenne existait depuis le milieu des années 1960, ses
+            tentatives d’instauration dans le cadre de la politique industrielle une dizaine d’années plus tard posèrent plus profondément la question
+            de l’existence et de l’utilisation d’un espace économique européen unifié, différent du cadre économique mondial. L’échec d’une référence
+            à ce cadre, soit qu’il définisse un système de particularisme européen souhaité par la France, soit qu’il ne soit qu’un outil économique
+            et juridique que puissent utiliser les entreprises européennes et celles des pays tiers pour se développer dans la CEE, révélait
+            l’impossibilité d’une réponse européenne aux enjeux économiques mondiaux.</p>
+        </div>
+        <div>
+          <head n="Chapitre III">La politique de concurrence de la CEE</head>
+          <p><hi rend="i">La politique de concurrence à la fin des années 1960.</hi> — Alors que la législation américaine semblait favoriser les
+            entreprises de même nationalité, la réglementation de la Commission européenne était critiquée pour son manque de souplesse, la lourdeur
+            de sa procédure administrative et son incapacité à définir clairement les entités contre lesquelles elle déclarait vouloir lutter, telles
+            les concentrations. Pour faire appliquer sa politique de concurrence, la Commission était amenée à sanctionner des États qui, comme
+            l’Italie et la France, rechignaient à aménager leurs monopoles nationaux.</p>
+          <p><hi rend="i">La politique de concurrence vue par la France.</hi> — Fondamentalement en accord avec le bien-fondé d’une politique de la
+            concurrence, la France déplorait cependant que la politique de concurrence européenne ait un impact négatif sur la coopération des
+            entreprises.</p>
+          <p>L’État français allait plus loin en voulant faire de la politique de concurrence un instrument orienté contre les pays tiers et destiné à
+            renforcer explicitement les structures industrielles de la France et de la CEE, en la plaçant sous le contrôle des États de la
+            Communauté.</p>
+          <p><hi rend="i">L’action de la Commission européenne.</hi> — Décidée à adopter une ligne de conduite ferme, la Commission mit l’accent sur
+            un contrôle des concentrations dont le nombre augmentait. Cependant, les ententes, contrairement aux abus de position dominante, restèrent
+            difficiles à cerner, tandis que des États comme la France lui refusaient la prérogative d’un contrôle systématique a priori des
+            concentrations.</p>
+          <p>La Commission européenne, sous l’impulsion des États de la CEE, adopta des mesures qui préservaient les accords de coopération
+            économiquement souhaitables passées entre les entreprises de la CEE, en les soustrayant à la législation communautaire qui sanctionnait
+            les concentrations.</p>
+        </div>
+      </div></div>
+          <div n="3" type="section">
+              <div type="conclusion"><head>Conclusion</head>
+          <p>L’instauration d’une véritable politique industrielle européenne a été victime de l’insuffisance des réalisations qui avaient été
+            envisagées par la Commission européenne. Cet échec est essentiellement dû au défaut d’engagement ou à la réticence des États de la CEE,
+            notamment de la France, qui soutenait originellement une politique industrielle européenne. Une politique industrielle commune ne pouvait
+            être définitivement instaurée qu’avec l’achèvement de la construction de l’espace économique européen, ce qui ne fut possible que
+            progressivement, sur un temps plus long. Cependant, l’exigence de cette dimension économique, d’une logique différente d’un
+            interventionnisme économique, changeait la forme et le sens de la politique industrielle telle qu’elle avait été définie à la fin des
+            années 1960. La France, dont les réactions et les choix s’inscrivaient au cœur des travaux de ce que furent les tentatives d’instauration
+            de la politique industrielle commune, symbolisait et incarnait les contradictions de cette politique.</p>
+        </div>
+              <div type="appendix"><head>Annexes</head>
+          <p>Mémorandum français sur les modalités d’un renforcement de la coopération européenne en matière de développement industriel et
+            scientifique. — Tableau comparatif des mémorandums de la France et de la Commission. — Projet d’une coopération européenne
+            franco-allemande. — Projet de loi portant création d’une entreprise d’intérêt européen. — Règlement communautaire sur l’arrangement de
+            l’article 85 du Traité de Rome. — Indicateurs statistiques sur les exportations et les importations extracommunautaires de la CEE. —
+            Indicateurs statistiques sur le capital des filiales des entreprises américaines dans la CEE (origine, montant, composition). —
+            Indicateurs statistiques sur la différence des prix à l’intérieur de la CEE.</p>
+        </div>
           </div>
       </body>
   </text>

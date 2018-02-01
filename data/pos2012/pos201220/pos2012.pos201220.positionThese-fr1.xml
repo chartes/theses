@@ -4,16 +4,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">@TODO@</title>
-        <title type="sub">@TODO@</title>
-        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+        <title type="main">« Considérant le profond malaise qui règne chez les militants… »</title>
+        <title type="sub">Aspects de la critique et de la parole militante au Parti socialiste SFIO sous la &lt;abbr&gt;iv&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; République (1944-1958)</title>
+        <author key="Michel, François" ref="https://www.idref.fr/@TODO@">François Michel</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
       </editionStmt>
       <publicationStmt>
         <publisher>École des chartes</publisher>
-        <date when="@TODO@"/>
+        <date when="2012"/>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
         </availability>
@@ -24,12 +24,12 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2012 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
-        <date when="@TODO@"/>
+        <date when="2018"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -39,15 +39,14 @@
       <refsDecl n="CTS">
     <!--
         <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
+    -->
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-    -->
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
@@ -55,7 +54,7 @@
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201220.positionThese-fr1">
-          <div n="1" type="textpart" subtype="section">
+          <div n="1" type="section">
               <div type="introduction"><head>Introduction </head>
     <p>L’idée initiale de cette étude était de se pencher sur le militantisme socialiste sous la IV<hi rend="sup">e</hi> République dans son ensemble. Mais, face à l’ampleur de la question, et après une analyse approfondie du fonds des correspondances du Parti avec ses fédérations, qui constitue la principale source, il a été décidé de restreindre le champ d’étude, ce qui semblait plus raisonnable dans le temps imparti pour ce travail de thèse. Aussi faut-il lire l’optique choisie, à savoir l’étude de la critique et de la parole militante, comme un prétexte pour étudier le militantisme, ou plutôt pour tenter d’approcher un pan de l’opinion militante socialiste de l’époque.  </p>
     <p>Le choix de la « critique » militante comme angle d’attaque est somme toute assez logique, compte tenu des caractéristiques de la période étudiée : la IV<hi rend="sup">e</hi> République représenta à bien des égards, jusqu’à aujourd’hui d’ailleurs, une plaie dans la conscience de la gauche française, car elle fut perçue comme le symbole des occasions manquées, des compromissions et des erreurs d’appréciation du socialisme de gouvernement. Il est donc normal de privilégier les critiques, la remise en cause dans les témoignages militants utilisables.  </p>
@@ -74,18 +73,76 @@
     
     </div>
           </div>
-          <div n="2" type="textpart" subtype="section">
-              <div type="part">
-                <!-- @TODO@ -->
-              </div>
-          </div>
-          <div n="3" type="textpart" subtype="section">
-              <div type="conclusion">
-                  <!-- @TODO@ -->
-              </div>
-              <div type="appendix">
-                  <!-- @TODO@ -->
-              </div>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude </head>
+    
+    
+    
+      <div>
+<head n="Chapitre premier">« Il oblige ses mandataires à vivre dans la clameur des critiques » Le militant, enjeux et définition. </head>
+    <p>La définition même du « militant », qui se trouve difficile à cerner avec certitude au PS SFIO sous la IV<hi rend="sup">e</hi> République, est au cœur de ce chapitre. « Fédération de fédérations », sans centralisation forte, le Parti n’a pas conservé d’informations sérielles sur ses militants, qui sont par conséquent difficiles à identifier.  </p>
+    
+    <p><hi rend="i">Identité militante, identité partisane</hi>. — Un bilan de l’historiographie sur cette question du militantisme conduit à revenir par exemple sur les enquêtes réalisées par le Parti dans les années 1950, qui permettent de se faire une bonne idée de sa composition sociologique, sans pour autant que se détache une catégorie sociale bien définie et majoritaire parmi les adhérents. L’analyse porte également sur les cadres de l’action militante (sections, fédérations, mais aussi poids des réseaux socialistes dans les associations, collectivités locales, etc.) ainsi que sur les délimitations théoriques entre militants, adhérents, sympathisants, etc.  </p>
+    
+    <p><hi rend="i">« Militants de base » et « élite militante ». —</hi> La difficile délimitation entre « élus », « dirigeants » et « militants » entre forcément en ligne de compte dans une étude sur les militants socialistes. Or il est parfois délicat de décréter qui est ou n’est pas militant : les élus locaux constituaient une bonne part des bataillons de la SFIO, et étaient souvent très actifs dans la propagande locale. De même, les parlementaires ou les permanents de la SFIO étaient sans conteste des hommes dévoués à leur Parti, peu avares de leur temps quand il s’agissait de travailler pour lui.  </p>
+    <p>Mais, comme le montre l’étude des correspondances émanant des militants de base et des secrétaires fédéraux, la « base », justement, exprime clairement une défiance tantôt envers les « élus » en général, tantôt envers les dirigeants ou les ministres : c’est bien le signe qu’il existait différents niveaux de militantisme au sein du Parti, qui pouvaient bouger selon les cas. Tout l’enjeu est de savoir où placer une frontière théorique, quitte à la franchir parfois. </p>
+    <p>En fin de compte, il a été décidé de considérer comme « expression de la base » les lettres émanant de « simples militants », des secrétaires de sections et des secrétaires fédéraux, dans la mesure où souvent ces derniers s’expriment « au nom » de leurs camarades et de leur fédération.  </p>
+    
+    
+      </div>
+      <div>
+<head n="Chapitre II">« Il est regrettable que le Parti ne sente pas battre le sentiment populaire » Aspects de la critique militante </head>
+    <p>Comme l’indique ce titre tiré d’une lettre d’un militant, l’enjeu de ce chapitre est de mettre en valeur les grands thèmes qui traversent les lettres critiques des militants sur la période. Après avoir essayé de saisir la figure du militant dans la première partie, il s’agit ici de se pencher sur les principales caractéristiques de ses revendications.  </p>
+    
+    <p><hi rend="i">Sortie de guerre et unité ouvrière (1944-1949)</hi>. — La critique contre l’action menée par le Parti est logiquement marquée, dans les années suivant la Libération, par un poids considérable des questions liées à la « sortie de guerre », c’est-à-dire les frustrations liées à l’épuration, au ravitaillement, à la vie chère, etc. Même si le Parti n’est pas tenu pour seul responsable des difficultés de cette époque, force est de constater que les lettres étudiées ici sont souvent sévères à l’encontre de l’action menée par les ministres et les députés : c’est leur impuissance face à la situation de pénurie et de crise qui est visée. Il leur est reproché de ne pas faire changer les choses, de ne pas faire mieux, finalement, que les ministres MRP ou que les autres adversaires politiques… La frustration née de la Libération s’exprime très rapidement – les désillusions sont visibles dès 1945 – et dure longtemps, au moins jusqu’à la fin progressive du rationnement, en 1949.  </p>
+    <p>Sans qu’il soit possible d’établir un parallélisme strict, il est intéressant de constater que s’observe dans le même temps une forte présence de lettres réclamant un retour à l’alliance avec le PCF. Cette double préoccupation est somme toute logique : le retour à un idéal d’union ouvrière de type Front populaire est vue comme un moyen pour la SFIO de retrouver son efficacité, sacrifiée sur l’autel de la solidarité gouvernementale avec les chrétiens-démocrates. Même si de fortes nuances doivent être apportées à ce constat, puisqu’on trouve également des exemples de lettres de militants hostiles au PCF, il faut quand même noter une vraie majorité de lettres favorables à cette alliance, au moins sur la période 1944-1947. La chute brutale des appels à l’unité ouvrière entre 1947 et 1948 – vingt-deux lettres ont été retenues en 1946, six en 1947, aucune en 1948 – est logique quand on connaît la rupture qui s’opéra entre les deux partis à tous les niveaux en 1947, entre la crise ministérielle de mai et les grandes grèves de l’automne.  </p>
+    
+    <p><hi rend="i">Pouvoir et mauvaise conscience militante (1944-1958)</hi>. — Ce thème de la critique militante est encore plus généralisé que le précédent, c’est une constante tout au long de notre période : l’exercice du pouvoir, avec les inévitables compromis qui en découlent, est clairement identifié par les militants comme la principale cause du déclin du Parti, très visible au niveau du nombre d’adhérents.  </p>
+    <p>Des différences notables existent selon le moment étudié au sein de la période : on notera par exemple que le poids des questions de politique extérieure, largement minoritaire au début de la période, devient bien plus important en 1956-1958, au moment de la guerre d’Algérie.  </p>
+    <p>Cela étant, les caractéristiques communes des correspondances l’emportent largement : il existe une vraie cohérence de la critique militante face à l’exercice du pouvoir. La mauvaise conscience des militants face à la présence de « camarades ministres » au gouvernement, le décalage entre la volonté révolutionnaire et la pratique gestionnaire, et la sensation qu’il existait un écart entre les préoccupations des ministres et députés et celles de la base, tous ces thèmes se retrouvent de manière récurrente. Il faut surtout mettre en avant les écarts quantitatifs. Un pic de critiques est visible en 1945-1948 : c’est à ce moment que le rejet de la participation gouvernementale s’observa le plus nettement. Les années 1945-1946, plus précisément, furent les plus remarquables à cet égard.  </p>
+    
+    <p><hi rend="i">Critique et spécificités locales</hi>. — Il s’agit ici de pointer du doigt les grandes caractéristiques critiques des différentes fédérations. Sans déboucher sur des conclusions systématiques, il est possible de tirer certains constats : les petites fédérations rurales sont dans l’ensemble plus radicalement opposées au rapprochement avec les démocrates-chrétiens, tandis que les « bastions » socialistes affichent plus fréquemment une hostilité à l’égard des communistes. Rien de très surprenant : les fédérations fragiles marquées par un environnement conservateur étaient naturellement plus craintives à l’égard des partis de droite que les fédérations solides, où la concurrence des communistes était un problème plus brûlant dans l’immédiat.  </p>
+    <p>Mais, de fait, même si on observe des différences selon les lieux d’où venaient les lettres, on constate tout de même une forte cohérence du corpus, une sensibilité commune au sein du Parti, quelles que soient les fédérations.  </p>
+    
+    
+      </div>
+      <div>
+<head n="Chapitre III">« Ceci n’est pas la prose de quelque savant doctrinaire » Aspects de la parole militante. </head>
+    
+    <p><hi rend="i">Parler socialiste, connaître l’ennemi</hi>. — Ce chapitre résume d’abord les grands traits spécifiques à l’expression socialiste, les grands réflexes rhétoriques et les références historiques et idéologiques. Le langage est vu ici comme un élément de l’identité partisane. Ce point est d’autant plus important que le Parti socialiste fut de tout temps marqué par une utilisation très codifiée du vocabulaire.  </p>
+    <p>L’étude envisage ensuite plus précisément les aspects de la parole militante, dans sa spécificité par rapport à la parole plus policée des déclarations de principes ou des motions votées en congrès, par exemple.  </p>
+    <p>Enfin, « connaître l’ennemi », c’est-à-dire l’ennemi politique, implique d’abord de le nommer : sont analysés ici les termes utilisés par les socialistes pour parler des autres partis, des ennemis politiques, de l’extérieur.  </p>
+    
+    <p><hi rend="i">Parole de soi, parole d’autrui</hi>. — À ce stade, la prise en compte de l’usage du « je » et du « nous » permet d’envisager la manière dont les rédacteurs de lettres se présentent comme les porte-paroles de leur section, de leur fédération, ou bien de l’ensemble des « camarades » de la base. En précisant qu’ils s’expriment au nom de leurs camarades, qu’ils répètent ce que tous pensent, les militants rédacteurs permettent de toucher du doigt à une « opinion » militante, ou en tout cas à ce qui est présenté comme telle.  </p>
+    
+    <p><hi rend="i">Une parole contre une autre, les réactions du centre : « On n’a jamais raison contre son parti »</hi>. — En dernier lieu, plusieurs exemples permettent de résumer les grandes caractéristiques des réponses de l’appareil dirigeant aux correspondances militantes : justification de la ligne politique, éducation militante, indifférence ou, le cas échéant, sanction. </p>
+    
+    
+     </div>
+      
+   <div>
+    <head n="Conclusion"/>
+    <p>Cette partie analytique, qu’il convient de lire en parallèle à l’édition elle-même, constitue donc une sorte de grille de lecture de notre corpus. Il apparaît que la base militante fut constamment en porte-à-faux entre ses luttes quotidiennes et la politique menée sur le long terme par le parti. Dès lors, de nombreux constats s’imposent. Il convient tout d’abord de souligner une des caractéristiques principales, à savoir les écarts entre la base et le centre. À une base très marquée par la rhétorique ouvrière et marxiste, affichant une hostilité têtue face à la participation gouvernementale, et mue par un sentiment d’injustice qui persista longtemps après la Libération, s’opposèrent des ministres et des parlementaires plus pragmatiques, dont la volonté d’exercer le pouvoir, par volontarisme plus que par opportunisme, fut à l’origine d’un malentendu que la direction du Parti ne parvint jamais réellement à dissiper. Ce malentendu intervint à un moment extrêmement révélateur de l’histoire du mouvement ouvrier en France, moment délicat où la tension entre les deux composantes historiques du socialisme jaurésien, démocratie et révolution, fut peut-être la plus palpable, tiraillé qu’était le Parti entre son désir d’investissement et le poids de sa tradition d’opposition, en permanence piqué au vif par la présence d’un Parti communiste fort. </p>
+    <p>Pour en revenir plus précisément aux différents aspects de la critique observables à travers cette étude, plusieurs « moments » sont à repérer. La principale vague de protestations se situa entre 1945 et 1948, marquée par un rejet de la participation gouvernementale, rejet accompagné d’une série d’appels à l’unité ouvrière et de critiques durables contre l’inefficacité de l’épuration et de la lutte contre le marché noir. À côté de ces trois principaux thèmes de la critique militante, notons la faiblesse des questions liées à la politique extérieure, même si elles ne furent pas totalement absentes – avec notamment une hausse en 1956-1957, au moment du retour des socialistes au pouvoir, au tournant de la guerre d’Algérie. Enfin, de manière moins marquée et plus continue, sans que l’on puisse observer une véritable concentration à un moment précis, une remise en cause de l’attitude générale du parti, dans sa relation avec la base comme dans sa combativité, est également notable sur l’ensemble du corpus.  </p>
+    <p>De fait, c’est bien l’homogénéité des préoccupations qui ressort, au point de confiner par moments à la redondance. Le lecteur a affaire ici à des textes bourrés de caractéristiques communes, qui semblent unifiés par un même ton, une même atmosphère. S’il fallait résumer ce ton en une phrase, on pourrait parler d’hostilité latente, de mécontentement diffus, ou encore de malaise généralisé. Plus qu’un catalogue de réactions ponctuelles à des mesures prises au niveau national, le corpus révèle une critique militante dont les tenants et les aboutissants restèrent à peu de choses près les mêmes entre 1944 et 1958. Les événements étaient moins en cause que la contradiction fondamentale que le Parti n’avait pas résolue en 1944-1946, entre volontarisme ministériel de ses « élites militantes » et raidissement doctrinal mollétiste de 1946 que les militants de base prirent pour argent comptant. Au niveau géographique, là encore, c’est bien l’homogénéité qui s’impose comme la caractéristique principale. Il faut bien sûr relativiser ce constat, mais globalement, il est frappant de voir à quel point les préoccupations furent similaires entre les différentes fédérations socialistes du pays.  </p>
+    <p>En fin de compte, il est difficile de ne pas lire dans ces témoignages militants un constat d’échec, l’illustration d’une incompréhension radicale entre les troupes et les chefs. Le point de vue choisi introduit certes un biais, dans la mesure où il laisse de côté les zones de contact pourtant multiples entre base et élus, mais il est indéniable que la fréquence des critiques révèle bien une cassure. Surtout, c’est la radicalité de ces critiques qu’il importe de relever : la critique militante observée porte majoritairement sur des points d’achoppement majeurs, sur la conception même de l’exercice du pouvoir, sur la définition du socialisme de gouvernement.  </p>
+    
+    
+    
+      </div>
+    </div><div n="2" type="part"><head n="Deuxième partie">Édition de correspondances </head>
+    
+    <p>Édition critique des correspondances répondant aux critères indiqués en introduction et écrites entre le 1<hi rend="sup">er</hi> octobre 1944 et le 23 décembre 1958. L’étude a porté sur toutes les fédérations de France métropolitaine et de l’Union française, mais le fond est largement lacunaire, notamment pour les fédérations ultramarines, où l’implantation du Parti était moins solide qu’en métropole. Le nombre de lettres par fédération est variable selon les cas. </p>
+    <p>Les lettres sont éditées dans l’ordre chronologique, sans séparation liée à la provenance géographique. La période a été découpée en quatre « moments » : la libération et ses lendemains (1944-1946) ; l’exercice du pouvoir dans le cadre de la Troisième force (1947-1952) ; le passage dans l’opposition (1952-1955) ; et enfin le Front républicain et la Guerre d’Algérie (1956-1958). Chacune de ces parties est introduite par une courte présentation des principaux enjeux et événements du temps.  </p>
+    
+    
+    </div></div>
+          <div n="3" type="section">
+              <div type="conclusion"><head>Annexes </head>
+    <p>Tableaux récapitulatifs, figures, cartes et illustrations sur le corpus de correspondances, la provenance géographique des lettres et l’organisation du Parti sous la IV<hi rend="sup">e</hi> République. — Liste des rédacteurs de lettres, par fédération. — Index des noms propres.  </p>
+    
+  
+     </div>
+              <div type="appendix"/>
           </div>
       </body>
   </text>

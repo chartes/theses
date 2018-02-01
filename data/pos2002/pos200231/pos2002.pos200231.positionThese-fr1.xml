@@ -4,16 +4,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">@TODO@</title>
-        <title type="sub">@TODO@</title>
-        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+        <title type="main">Recherches sur les actes du monastère_Saint-Jean_Prodrome sur le mont Menoikion (Serrè</title>
+        <title type="sub"></title>
+        <author key="Verdure, Marc" ref="https://www.idref.fr/@TODO@">Marc Verdure</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
       </editionStmt>
       <publicationStmt>
         <publisher>École des chartes</publisher>
-        <date when="@TODO@"/>
+        <date when="2002"/>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
         </availability>
@@ -24,12 +24,12 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2002 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
-        <date when="@TODO@"/>
+        <date when="2018"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -39,15 +39,14 @@
       <refsDecl n="CTS">
     <!--
         <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
+    -->
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-    -->
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
@@ -55,7 +54,7 @@
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200231.positionThese-fr1">
-          <div n="1" type="textpart" subtype="section">
+          <div n="1" type="section">
               <div type="introduction"><head>Introduction</head>
         <p>Le monastère Saint Jean Prodrome, établi dans la montagne du Ménoikion, se situe près de Serrès, au nord de Thessalonique. Devenu de nos
           jours un couvent de jeunes filles, il abritait jusqu’au début du <num>xx<hi rend="sup">e</hi></num> siècle une communauté de moines et une importante
@@ -87,18 +86,55 @@
       </div>
               <div type="sources"/>
           </div>
-          <div n="2" type="textpart" subtype="section">
-              <div type="part">
-                <!-- @TODO@ -->
-              </div>
-          </div>
-          <div n="3" type="textpart" subtype="section">
-              <div type="conclusion">
-                  <!-- @TODO@ -->
-              </div>
-              <div type="appendix">
-                  <!-- @TODO@ -->
-              </div>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La date de la fondation et la vie du monastère de 1280 à 1350</head>
+        <p>André Guillou, suivi aveuglément par Lisa Bénou, faisait remonter à 1275 la date de la fondation du monastère. Tous deux s’appuyaient sur
+          un texte capital rédigé par le plus grand abbé connu du Prodrome, nommé Iôakeim, qui faisait de son oncle le véritable fondateur du
+          Prodrome. Or, ce document n’a pas été confronté par Lisa Bénou aux actes qu’elle éditait ; certains, que la tradition faisait remonter au
+          deuxième tiers du <num>xiv<hi rend="sup">e</hi></num> siècle et qui doivent être antidatés de plus de cinquante ans en raison des personnages cités et
+          des événements qu’ils relatent, montrent en effet sans ambiguïté que le monastère existait déjà au début du <num>xiii<hi rend="sup">e</hi></num>
+          siècle et qu’il a subi les conséquences de l’invasion franque. Le Prodrome est encore attesté vers le milieu de ce même siècle, au moment de
+          la reconquête de la Macédoine par les Byzantins de Nicée. Il existe ainsi un monastère Saint Jean Prodrome bien avant la “ fondation ” par
+          l’oncle de Iôakeim, qui ne pouvait dès lors être qu’une refondation. <lb/>Les informations sont beaucoup plus nombreuses après 1280 et
+          jusque vers 1355, permettant ainsi de suivre à peu près la politique d’acquisition du monastère et sa stratégie pendant les luttes civiles
+          et les invasions qui émaillèrent le <num>xiv<hi rend="sup">e</hi></num> siècle. Le monastère, probablement grâce à l’influence de son protecteur,
+          Iôakeim, devenu évêque de Zichna, une grande ville située près de Serrès, sut conserver la bienveillance des souverains grecs et serbes,
+          sans souffrir apparemment des difficultés liées aux mouvements de troupes. Cependant, si les nombreux actes privés et impériaux rendent
+          possible une estimation de la fortune du Prodrome, les inventaires apportant des informations fiscales ( <hi rend="i">praktika</hi>) sont
+          très peu nombreux et ne permettent pas d’apprécier à intervalles réguliers l’importance de ses propriétés et de ses revenus.</p>
+      </div><div n="2" type="part"><head n="Deuxième partie">La vie du “ fondateur ”</head>
+        <p>Des archives du Prodrome émerge une figure particulièrement emblématique, qui semble à l’origine de la fortune de l’établissement. Il
+          s’agit de Iôakeim, neveu du fondateur légendaire, devenu évêque de Zichna et protecteur du monastère. En raison d’un acte de décès mal daté,
+          on a longtemps cru que ce personnage était mort en 1333 ; les documents du <hi rend="i">codex B</hi> permettent de retarder de cinq ans cette
+          date. Du moment où il devint évêque, on le voit sans cesse œuvrer pour l’amélioration et l’agrandissement du Prodrome ; grâce à son
+          influence, l’aristocratie locale, de grands propriétaires terriens, les empereurs et leurs proches, ainsi que plusieurs patriarches, eurent
+          des contacts avec le Prodrome et lui prodiguèrent leur protection. En 1333, au sommet probablement de sa richesse, c’est le plus proche
+          conseiller d’Andronic III, Jean Cantacuzène, futur empereur, qui devint protecteur en titre du Prodrome, témoignant ainsi des liens que
+          Iôakeim entretenait avec la capitale et le pouvoir. Iôakeim est en outre à l’origine d’un certain nombre de donations en faveur du monastère
+          et de plusieurs acquisitions de celui-ci ; soucieux de la pérennité de son établissement, il le dota d’un règlement intérieur et d’un code
+          de conduite. Son rôle prépondérant lui valut le titre de “ fondateur ” du Prodrome, titre équivalent en grec à celui de “ bienfaiteur ” (
+            <hi rend="i">ktètôr</hi>).</p>
+      </div><div n="3" type="part"><head n="Troisième partie">La région de Serrès au début du <num>xiv<hi rend="sup">e</hi></num> siècle</head>
+        <p>Un des apports non négligeables des actes inédits du <hi rend="i">codex B</hi> est d’enrichir la connaissance prosopographique des grands
+          de la région de Serrès dans la première moitié du <num>xiv<hi rend="sup">e</hi></num> siècle. Tant pour les officiers des métropoles et évêchés
+          (Serrès et Zichna) que pour les officiers impériaux, les personnages cités sont nombreux, nouveaux ou non, et s’ajoutent aux informations
+          données par les actes du mont Athos. Les tableaux placés en annexe donnent une idée de ce qu’était la carrière des officiers locaux, qui
+          pouvait souvent durer plus de trente ans. On peut y suivre également la progression de plusieurs fonctionnaires au sein de la hiérarchie et
+          en déduire la logique de certaines carrières. L’autre intérêt de ces tableaux est de mettre en valeur l’importance de la prosopographie pour
+          étudier des actes le plus souvent datés de façon lacunaire ou simplifiée, laissant une large marge d’erreur. Partant de l’hypothèse qu’il
+          serait illogique que la carrière d’un fonctionnaire régressât, il a été possible de replacer certains actes dans un contexte plus juste et
+          de confirmer pour d’autres une datation discutée. <lb/>Les nombreux actes privés et officiels que contient le <hi rend="i">codex
+          B</hi> apprennent beaucoup au chercheur sur la vie rurale en Macédoine au <num>xiv<hi rend="sup">e</hi></num> siècle, sur la politique d’acquisition
+          d’un monastère de taille médiocre comme devait probablement l’être le Prodrome, sur des exploitations de superficie moyenne, sur la présence
+          de domaines impériaux ou aux mains de grands personnages dans la région de Serrès et sur la toponymie des villages entre Serrès et Zichna.
+      </p>
+      </div></div>
+          <div n="3" type="section">
+              <div type="conclusion"><head>Conclusion</head>
+        <p>Ce travail a permis de mettre au jour d’importantes découvertes et de couper court aux affirmations d’une tradition longtemps acceptée sans
+          discussion. C’est un premier pas vers une connaissance plus rationnelle de la vie du Prodrome, même si le niveau des revenus du monastère,
+          la valeur de ses biens et son sort après 1355 restent dans l’ombre.</p>
+      </div>
+              <div type="appendix"/>
           </div>
       </body>
   </text>

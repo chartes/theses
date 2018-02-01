@@ -4,16 +4,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">@TODO@</title>
-        <title type="sub">@TODO@</title>
-        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+        <title type="main">L’iconographie de saint_Antoine_de_Padoue</title>
+        <title type="sub">Sources et représentations (XIII&lt;sup&gt;e&lt;/sup&gt;-XVI&lt;sup&gt;e&lt;/sup&gt; siècle)</title>
+        <author key="Koskas, Mathilde" ref="https://www.idref.fr/@TODO@">Mathilde Koskas</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
       </editionStmt>
       <publicationStmt>
         <publisher>École des chartes</publisher>
-        <date when="@TODO@"/>
+        <date when="2007"/>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
         </availability>
@@ -24,12 +24,12 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2007 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
-        <date when="@TODO@"/>
+        <date when="2018"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -39,15 +39,14 @@
       <refsDecl n="CTS">
     <!--
         <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
+    -->
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-    -->
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
@@ -55,7 +54,7 @@
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200714.positionThese-fr1">
-          <div n="1" type="textpart" subtype="section">
+          <div n="1" type="section">
               <div type="introduction"><head>Introduction</head>
         <p>Si la spiritualité, la vie et les sermons de saint Antoine de Padoue (1195-1231) ont fait l’objet de nombreuses études érudites, son
           iconographie, elle, a été assez peu prise en considération. Quelques travaux et expositions lui ont été consacrés à l’occasion des
@@ -131,18 +130,85 @@
             <hi rend="i">la Légende dorée</hi> de Jacques de Voragine.</p>
       </div>
           </div>
-          <div n="2" type="textpart" subtype="section">
-              <div type="part">
-                <!-- @TODO@ -->
-              </div>
-          </div>
-          <div n="3" type="textpart" subtype="section">
-              <div type="conclusion">
-                  <!-- @TODO@ -->
-              </div>
-              <div type="appendix">
-                  <!-- @TODO@ -->
-              </div>
+          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">Vie et patronages</head>
+        <p>Antoine est canonisé moins d’un an après sa mort. Dans les premiers temps, l’ordre franciscain se consacre presque exclusivement à la
+          promotion du culte de saint François, et celui de saint Antoine reste confiné à Padoue et à l’ordre lui-même. Saint tardif, et homonyme d’un
+          grand saint des premiers temps, il influence peu l’onomastique : dans les cas, peu nombreux, où l’on peut déterminer avec certitude auquel
+          des deux saints un toponyme ou un anthroponyme fait référence, c’est d’Antoine Ermite qu’il s’agit.</p>
+      </div><div n="2" type="part"><head n="Chapitre II">Les premières représentations (XIII<hi rend="sup">e</hi> siècle)</head>
+        <p>Les représentations de saint Antoine prennent place dès le <num>xiii<hi rend="sup">e</hi></num> siècle dans des lieux et auprès de personnages très
+          prestigieux, mais restent très dépendantes de l’ordre franciscain. Antoine reste d’abord dans l’ombre de François, puis la promotion de son
+          culte bénéficie du dynamisme de l’ordre franciscain. Tous deux sont révérés dans l’iconographe franciscaine comme de nouveaux apôtres.</p>
+      </div><div n="3" type="part"><head n="Chapitre III">Saint Antoine de Padoue et les autres saints des ordres mendiants</head>
+        <p>Antoine est associé à une grande variété de saints, dans les groupes qui entourent la Vierge à l’Enfant par exemple, mais il est possible
+          de relever des association récurrentes. Pierre Martyr semble son pendant dominicain. Les associations les plus fréquentes sont faites avec
+          d’autres saints franciscains, principalement François – il n’y a pas d’autre grand saint canonisé dans l’ordre avant la fin du XIII <hi rend="sup">e</hi> siècle. Si Antoine est peu associé avec les saintes franciscaines, c’est que celles-ci sont manifestement un cas à part,
+          dont les représentations connaissent un essor plus tardif, et qui sont généralement associées au fondateur ou à d’autres femmes.</p>
+      </div><div n="4" type="part"><head n="Chapitre IV">Saint Antoine de Padoue et deux saints antiques <lb/>Antoine ermite et Catherine d’Alexandrie</head>
+        <p>Au Moyen Âge, saint Antoine Ermite est bien plus populaire que saint Antoine de Padoue, son culte est répandu partout. La confusion
+          iconographique entre les deux saint Antoine est plus souvent le fait des catalogueurs modernes que des peintres et enlumineurs médiévaux,
+          qui, plutôt que de véritables confusions, offrent parfois des types hybrides, donnant au saint de Padoue un attribut de l’ermite. Un
+          retournement se produit à l’époque moderne, autour du concile de Trente. Le saint plus récent correspond plus alors aux modèles mis en
+          valeur par l’Église et offerts en exemples aux fidèles. Cette dévotion nouvelle à saint Antoine de Padoue se développe en particulier autour
+          de son image de « saint de l’Enfant Jésus ».</p>
+        <p>C’est également cette qualité de « saint de l’Enfant Jésus » qui explique l’association de saint Antoine de Padoue à sainte Catherine
+          d’Alexandrie, spécialement dans les représentations du mariage mystique de cette dernière avec le Christ enfant.</p>
+      </div><div n="5" type="part"><head n="Chapitre V">Les attributs</head>
+        <p>L’identification est une question récurrente de l’iconographie. Certains saints sont très caractérisés, très faciles à reconnaître ; pour
+          d’autres il est vraiment nécessaire d’observer les attributs, et parfois un seul ne suffit pas à lever l’ambiguïté, il en faut plusieurs,
+          comme un faisceau de signes qui convergent vers une personnalité. En dehors de l’habit franciscain, qui est plutôt une caractéristique qu’un
+          attribut, le premier attribut qu’Antoine ait reçu est le livre. Dans bien des cas, il est, dans les images, le franciscain au livre ; ce qui
+          n’est pas sans poser quelques problèmes aux historiens : un franciscain tenant un livre peut aussi bien être saint François. Pour un saint
+          tardif comme Antoine, qui plus est second dans un ordre qui voue un culte extraordinaire à son fondateur, il est nécessaire de croiser les
+          indices, non seulement attributs multiples, mais, pour l’œil du <num>xxi<hi rend="sup">e</hi></num> siècle du moins, éléments de contexte.</p>
+      </div><div n="6" type="part"><head n="Chapitre VI">Saint Antoine de Padoue dans les manuscrits enluminés</head>
+        <p>Les manuscrits dans lesquels apparaissent des images d’Antoine de Padoue sont assez variés. Il s’agit essentiellement des différents types
+          de livres liturgiques. Les représentations de saint Antoine dans les manuscrits sont souvent des scènes statiques, peu narratives. Il
+          n’apparaît généralement qu’une fois, dans des manuscrits de dévotion où l’image doit être support de cette dévotion, favoriser la
+          contemplation, et, pour cela, permettre l’identification rapide du sujet. Une scène de sa vie ou un portrait avec ses attributs remplissent
+          ce rôle.</p>
+      </div><div n="7" type="part"><head n="Chapitre VII">Saint Antoine prédicateur</head>
+        <p>L’activité principale de saint Antoine de Padoue est la prédication. Dès sa première représentation, il apparaît dans l’action de prêcher.
+          Les images narratives favorisent les scènes de prédication, mais c’est aussi le cas des images thématiques : le livre, son principal
+          attribut, représente le savoir du prédicateur et souvent sa main levée dans le geste d’enseignement vient renforcer cette signification. Sa
+          principale scène de prédication est celle du chapitre d’Arles, où François apparaît à un des frères qui écoutent Antoine. Cette prédication
+          de saint Antoine à laquelle François a apporté une légitimité supplémentaire, historiquement et symboliquement, est son activité la plus
+          importante dans l’iconographie. Les miracles qu’elle a retenus, qui ont été représentés de préférence, sont tous liés à l’éloquence du
+          thaumaturge.</p>
+      </div></div>
+          <div n="3" type="section">
+              <div type="conclusion"><head>Conclusion</head>
+        <p>Le repérage des sources pour l’iconographie de saint Antoine de Padoue a apporté son lot de surprises, comme il est d’usage même lorsqu’on
+          s’efforce d’aborder le travail de recherche sans idées préconçues.</p>
+        <p>La moisson d’images, commencée dans les manuscrits, s’en est finalement bien éloignée, puisque, dans le corpus de travail, seules soixante
+          et onze images sur environ trois cent cinquante sont des enluminures. Les vitraux, tapisseries et marqueteries forment par leur petit nombre
+          un groupe à part. Des formes plus populaires ont fourni des objets en très grand nombre, qui méritent une étude sérielle spécialisée :
+          ex-voto peints, sculptés ou brodés, médailles, faïences de pharmacie. Les gravures, lorsqu’il ne s’agit pas de reproductions de tableaux de
+          maîtres destinées à un public choisi, appartiennent également à cette catégorie. Beaucoup en effet sont des tirages en série, dont les bois
+          sont réemployés jusqu’à usure complète pour illustrer de petits livrets de dévotion, des almanachs ou des feuilles volantes. Dans le domaine
+          bien particulier de la dévotion populaire, où l’étude des sources repose sur l’analyse sérielle de grands nombres, n’a été fait qu’une
+          incursion rapide, afin d’en saisir les grandes lignes.</p>
+        <p>L’ordre des Frères mineurs a joué un rôle prépondérant dans le développement et la diffusion du culte d’Antoine, dans les images comme dans
+          la liturgie. Dans les premiers siècles en particulier, la production d’images est étroitement liée à l’ordre et au grand centre antonien
+          qu’est Padoue. Il n’est donc pas juste de dire que les représentations d’Antoine appartiennent seulement à la piété populaire. Cette
+          production populaire, si massive qu’elle en vient à dissimuler tout le reste, se développe lentement, et, pour la voir s’épanouir pleinement
+          dans toute la Chrétienté, il faut attendre l’époque moderne. Le rayonnement de l’ordre franciscain a permis à Antoine d’entrer dans tous les
+          calendriers liturgiques du Moyen Âge tardif, et la piété moderne, en retenant l’aspect de sa légende qui convenait le mieux aux nouvelles
+          sensibilités, l’a fait entrer, par le biais des images, dans la plupart des églises et sans doute, avec les images de piété et autres
+          médailles, dans un grand nombre de maisons.</p>
+        <p>Au fur et à mesure de la quête de ces images et de la lecture des sources écrites, un certain nombre de questions se sont fait jour,
+          complétant celles avec lesquelles cette recherche avait commencé. Certains points demandent à être approfondis, en particulier les dossiers
+          d’œuvres qui nécessitent des études chronologiques, stylistiques et, dans le cas des manuscrits, codicologiques ; le champ d’investigation
+          mérite également d’être élargi, par l’apport de nouvelles recherches thématiques, comme celles des cycles antoniens, nombreux à Padoue, des
+          scènes miraculeuses qui composent ces cycles, ou des supports tels que la sculpture, la gravure, le verre églomisé. Le prolongement au-delà
+          du <num>xvi<hi rend="sup">e</hi></num> siècle, le développement de la comparaison avec les ex-voto et l’art « populaire », avec la production de la
+          Péninsule ibérique, sont les autres directions dans lesquelles des travaux ultérieurs devraient être menés.</p>
+        <p>Ce dossier sur saint Antoine pourra fournir aux iconographes et aux historiens des éléments pour une étude de plus grande ampleur sur les
+          modes de dévotion et de représentations médiévaux et de la première modernité.</p>
+      </div>
+              <div type="appendix"><head>Pièces justificatives</head>
+        <p>Extraits de légendes de saint Antoine.</p>
+      </div>
           </div>
       </body>
   </text>
