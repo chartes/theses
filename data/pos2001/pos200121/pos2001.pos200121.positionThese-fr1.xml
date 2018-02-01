@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’église cathare du Carcassès (1167-début du &lt;abbr&gt;xiv&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle)</title>
+        <title type="main">L’Église cathare du Carcassès (1167-début du </title>
         <title type="sub"></title>
-        <author key="Roche, Julien" ref="https://www.idref.fr/@TODO@">Julien Roche</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Roche, Julien">Julien Roche</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

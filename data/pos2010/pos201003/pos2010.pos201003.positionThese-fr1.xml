@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Georges_Lallemant</title>
+        <title type="main">Georges Lallemant</title>
         <title type="sub">Étude des sources de la vie d’un peintre</title>
-        <author key="Billard, Alice" ref="https://www.idref.fr/@TODO@">Alice Billard</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Billard, Alice">Alice Billard</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

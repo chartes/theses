@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’abbaye de Lessay du &lt;abbr&gt;ix&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; au &lt;abbr&gt;xi&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">L’abbaye de Lessay du </title>
         <title type="sub">Histoire et architecture</title>
-        <author key="Gosselin, Sébastien" ref="https://www.idref.fr/@TODO@">Sébastien Gosselin</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Gosselin, Sébastien">Sébastien Gosselin</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

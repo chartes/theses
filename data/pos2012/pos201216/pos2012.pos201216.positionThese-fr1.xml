@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Caxton imprimeur</title>
+        <title type="main">Caxton imprimeur. Le troisième livre du Recueil des histoires de Troyes  </title>
         <title type="sub">Le troisième livre du &lt;i&gt;Recueil des histoires de Troyes&lt;/i&gt;</title>
-        <author key="Le Corfec, Delphine" ref="https://www.idref.fr/@TODO@">Delphine Le Corfec</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Le Corfec, Delphine">Delphine Le Corfec</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

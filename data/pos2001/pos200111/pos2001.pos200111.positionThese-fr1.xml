@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édition critique de lettres de Guy_Patin (Bibl</title>
+        <title type="main">Édition critique de lettres de Guy Patin (Bibl. nat. de France, Baluze 148)</title>
         <title type="sub">nat</title>
-        <author key="Jestaz, Laure" ref="https://www.idref.fr/@TODO@">Laure Jestaz</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Jestaz, Laure">Laure Jestaz</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

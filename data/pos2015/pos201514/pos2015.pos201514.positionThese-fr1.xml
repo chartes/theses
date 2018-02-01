@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édition critique du Trialogue Quiéret (1461)</title>
+        <title type="main">Édition critique du </title>
         <title type="sub"></title>
-        <author key="Landais, Anne" ref="https://www.idref.fr/@TODO@">Anne Landais</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Landais, Anne">Anne Landais</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

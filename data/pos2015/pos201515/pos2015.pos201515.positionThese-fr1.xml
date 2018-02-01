@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Das ist der stat Strassburg ordenunge irs fussvolckes</title>
-        <title type="sub">L’organisation d’une armée communale au &lt;abbr&gt;xv&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle : l’exemple de Strasbourg</title>
-        <author key="leberre, Gilles" ref="https://www.idref.fr/@TODO@">Gilles leberre</author>
+        <title type="main">L’organisation d’une armée communale au </title>
+        <title type="sub">Das ist der stat Strassburg ordenunge irs fussvolckes</title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="leberre, Gilles">Gilles leberre</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;i&gt;Commentaire_des_Psaumes&lt;/i&gt; de saint_Thomas_d_Aquin</title>
+        <title type="main">Le </title>
         <title type="sub"></title>
-        <author key="Morard, Martin" ref="https://www.idref.fr/@TODO@">Martin Morard</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Morard, Martin">Martin Morard</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

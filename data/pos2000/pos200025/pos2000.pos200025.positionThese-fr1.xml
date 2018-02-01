@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Un manuscrit arthurien et son commanditaire : le &lt;i&gt;Guiron_le_Courtois&lt;/i&gt; de Bernarbo_Visconti (BN</title>
+        <title type="main">Un manuscrit arthurien et son commanditaire : le </title>
         <title type="sub"></title>
-        <author key="Lauby, Aurélie" ref="https://www.idref.fr/@TODO@">Aurélie Lauby</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Lauby, Aurélie">Aurélie Lauby</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

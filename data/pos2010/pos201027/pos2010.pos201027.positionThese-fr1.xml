@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les collections d’objets d’art d’Anne_de_Bretagne à travers ses inventaires</title>
+        <title type="main">Les collections d’objets d’art d’Anne de Bretagne à travers ses inventaires</title>
         <title type="sub">Le spectacle et les coulisses</title>
-        <author key="Vrand, Caroline" ref="https://www.idref.fr/@TODO@">Caroline Vrand</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Vrand, Caroline">Caroline Vrand</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

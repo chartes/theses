@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Jeu du roi et jeu de la reine aux &lt;abbr&gt;xvii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; et &lt;abbr&gt;xviii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècles</title>
+        <title type="main">Jeu du roi et jeu de la reine aux </title>
         <title type="sub">Du délassement personnel à la cérémonie de cour</title>
-        <author key="Billoir, Thibault" ref="https://www.idref.fr/@TODO@">Thibault Billoir</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Billoir, Thibault">Thibault Billoir</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

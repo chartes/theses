@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La Société_des_auteurs_de_films (1917-1929)</title>
+        <title type="main">La Société des auteurs de films (1917-1929)</title>
         <title type="sub"></title>
-        <author key="Loyant, Xavier" ref="https://www.idref.fr/@TODO@">Xavier Loyant</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Loyant, Xavier">Xavier Loyant</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

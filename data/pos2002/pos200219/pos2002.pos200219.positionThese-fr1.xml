@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Gabriel_Marcel et le théâtre</title>
+        <title type="main">Gabriel Marcel et le théâtre</title>
         <title type="sub"></title>
-        <author key="Mary, Anne" ref="https://www.idref.fr/@TODO@">Anne Mary</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Mary, Anne">Anne Mary</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

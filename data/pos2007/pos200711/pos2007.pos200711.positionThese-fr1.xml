@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Henry_Marcel (1854-1926)</title>
+        <title type="main">Henry Marcel (1854-1926)</title>
         <title type="sub"></title>
-        <author key="Dufour, Agathe" ref="https://www.idref.fr/@TODO@">Agathe Dufour</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Dufour, Agathe">Agathe Dufour</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le Couvent_des_Mathurins de Paris et l’estampe au &lt;abbr&gt;xvii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Le couvent des Mathurins de Paris et l’estampe au </title>
         <title type="sub"></title>
-        <author key="Bermès, Emmanuelle" ref="https://www.idref.fr/@TODO@">Emmanuelle Bermès</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Bermès, Emmanuelle">Emmanuelle Bermès</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

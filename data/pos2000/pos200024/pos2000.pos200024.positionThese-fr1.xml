@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le fermier général Claude_Dupin (1686-1769)</title>
+        <title type="main">Le fermier général Claude Dupin (1686-1769)</title>
         <title type="sub"></title>
-        <author key="Ladant, Julie" ref="https://www.idref.fr/@TODO@">Julie Ladant</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Ladant, Julie">Julie Ladant</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Camille_Gaston_Kahn (1864-1928)</title>
+        <title type="main">Camille Gaston Kahn (1864-1928)</title>
         <title type="sub">Un consul français en Chine</title>
-        <author key="Suchet, Soline" ref="https://www.idref.fr/@TODO@">Soline Suchet</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Suchet, Soline">Soline Suchet</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

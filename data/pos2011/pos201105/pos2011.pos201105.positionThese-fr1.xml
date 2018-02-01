@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La revue &lt;i&gt;Mouseion&lt;/i&gt; (1927-1946)</title>
-        <title type="sub">Les musées et la coopération culturelle internationale</title>
-        <author key="Caillot, Marie" ref="https://www.idref.fr/@TODO@">Marie Caillot</author>
+        <title type="main">La revue </title>
+        <title type="sub">Les musées et la coopération culturelle internationale </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Caillot, Marie">Marie Caillot</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

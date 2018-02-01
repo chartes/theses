@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La bibliothèque médiévale du collège_des_Cholets</title>
+        <title type="main">La bibliothèque médiévale du collège des Cholets</title>
         <title type="sub"></title>
-        <author key="Rebmeister, Karine" ref="https://www.idref.fr/@TODO@">Karine Rebmeister</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Rebmeister, Karine">Karine Rebmeister</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

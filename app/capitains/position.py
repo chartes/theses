@@ -109,7 +109,6 @@ class PositionThese:
             w_dirname = os.path.join(dest_path, "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]))
             if os.path.isdir(w_dirname):
                 shutil.rmtree(w_dirname)
-            #if not os.path.isdir(w_dirname):
             os.makedirs(w_dirname)
 
             w_filepath = os.path.join(w_dirname, "__cts__.xml")
@@ -145,13 +144,19 @@ class PositionThese:
                         intro.append(copy.deepcopy(c))
 
             # titles
+            for title in src_edition.xpath("//ti:front/ti:head", namespaces=nsmap):
+                if title.get('type') == "sub":
+                    meta["sous_titre"] = title.text
+                else:
+                    meta["titre"] = title.text
+
             for title in template.xpath("//ti:teiHeader//ti:titleStmt//ti:title", namespaces=nsmap):
                 if title.get("type") == "main":
                     title.text = meta["titre"]
                 elif title.get("type") == "sub":
                     title.text = meta["sous_titre"]
 
-            # author
+            # author : en attendant meta["authorKey"] et meta["authorRef"]
             for auth in template.xpath("//ti:teiHeader//ti:author", namespaces=nsmap):
                 auth.set("key", "{0}, {1}".format(meta["nom"], meta["prenom"]))
                 auth.text = "{1} {0}".format(meta["nom"], meta["prenom"])

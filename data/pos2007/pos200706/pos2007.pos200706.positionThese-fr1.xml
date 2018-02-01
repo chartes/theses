@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Pierre_Germain dit le Romain (1703-1783)</title>
+        <title type="main">Pierre Germain dit le Romain (1703-1783)</title>
         <title type="sub">Vie d’un orfèvre et de son entourage</title>
-        <author key="Cavalié, Hélène" ref="https://www.idref.fr/@TODO@">Hélène Cavalié</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Cavalié, Hélène">Hélène Cavalié</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

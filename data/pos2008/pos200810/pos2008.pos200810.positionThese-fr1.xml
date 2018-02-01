@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le livre de raison d’Honoré_de_Quiqueran_de_Beaujeu</title>
-        <title type="sub">Une famille noble arlésienne aux &lt;abbr&gt;xvi&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; et &lt;abbr&gt;xvii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècles</title>
-        <author key="Daigne, Nathalie" ref="https://www.idref.fr/@TODO@">Nathalie Daigne</author>
+        <title type="main">Le livre de raison d’Honoré de Quiqueran de Beaujeu</title>
+        <title type="sub">Une famille noble arlésienne aux </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Daigne, Nathalie">Nathalie Daigne</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

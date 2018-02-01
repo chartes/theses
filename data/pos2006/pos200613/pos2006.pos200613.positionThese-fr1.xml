@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les châteaux de l’orbite des Polignac en Velay (XIII&lt;sup&gt;e&lt;/sup&gt;-XVI&lt;sup&gt;e&lt;/sup&gt; siècle)</title>
+        <title type="main">Les châteaux de l’orbite des Polignac en Velay (XIII</title>
         <title type="sub"></title>
-        <author key="Dumalle, Bérangère" ref="https://www.idref.fr/@TODO@">Bérangère Dumalle</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Dumalle, Bérangère">Bérangère Dumalle</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les écritures cursives livresques en France (1250-1420)</title>
-        <title type="sub">Essai de paléographie quantitative d’après le &lt;i&gt;Catalogue des manuscrits datés&lt;/i&gt;</title>
-        <author key="Gurrado, Maria" ref="https://www.idref.fr/@TODO@">Maria Gurrado</author>
+        <title type="main">Les écritures cursives livresques en France (1250-1420) </title>
+        <title type="sub">Essai de paléographie quantitative d’après le </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Gurrado, Maria">Maria Gurrado</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

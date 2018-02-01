@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les parcheminiers de Paris au &lt;abbr&gt;xviii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Les parcheminiers de Paris au </title>
         <title type="sub"></title>
-        <author key="Girold, Élise" ref="https://www.idref.fr/@TODO@">Élise Girold</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Girold, Élise">Élise Girold</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

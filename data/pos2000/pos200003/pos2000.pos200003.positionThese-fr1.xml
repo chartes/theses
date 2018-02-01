@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La traduction occitane de l’&lt;i&gt;Arbre_des_batailles&lt;/i&gt; d’Honoré_Bovet</title>
+        <title type="main">La traduction occitane de </title>
         <title type="sub">Édition et commentaire (BNF fr</title>
-        <author key="Biu, Hélène" ref="https://www.idref.fr/@TODO@">Hélène Biu</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Biu, Hélène">Hélène Biu</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

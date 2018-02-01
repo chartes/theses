@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les &lt;i&gt;Cronice_ab_origine_mundi&lt;/i&gt; de Gonzalo_de_Hinojosa</title>
-        <title type="sub">Une chronique universelle écrite par un évêque castillan au début du &lt;abbr&gt;xi&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle et traduite pour Charles_V</title>
-        <author key="Aubert, Stéphanie" ref="https://www.idref.fr/@TODO@">Stéphanie Aubert</author>
+        <title type="main">Les </title>
+        <title type="sub">Une chronique universelle écrite par un évêque Castillan au début du </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Aubert, Stéphanie">Stéphanie Aubert</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’histoire de Troie au &lt;abbr&gt;xv&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle</title>
-        <title type="sub">Édition critique de la première traduction française de l’&lt;i&gt;Historia destructionis Troiae&lt;/i&gt; de Guido delle Colonne</title>
-        <author key="Milhat, Morgane" ref="https://www.idref.fr/@TODO@">Morgane Milhat</author>
+        <title type="main">L’histoire de Troie au </title>
+        <title type="sub">Édition critique de la première traduction française de l’</title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Milhat, Morgane">Morgane Milhat</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

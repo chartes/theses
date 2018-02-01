@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La correspondance du docteur Pierre-Fidèle Bretonneau (1778-1862)</title>
-        <title type="sub">Édition critique et commentaire</title>
-        <author key="Boissière, Marie" ref="https://www.idref.fr/@TODO@">Marie Boissière</author>
+        <title type="main">La correspondance du docteur Pierre-Fidèle Bretonneau (1778-1862) </title>
+        <title type="sub">Édition critique et commentaire </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Boissière, Marie">Marie Boissière</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’&lt;i&gt;Ilias&lt;/i&gt; de Simon_Chèvre_d_Or</title>
+        <title type="main">L’</title>
         <title type="sub">Édition critique et commentaire</title>
-        <author key="Peyrard, Sébastien" ref="https://www.idref.fr/@TODO@">Sébastien Peyrard</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Peyrard, Sébastien">Sébastien Peyrard</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

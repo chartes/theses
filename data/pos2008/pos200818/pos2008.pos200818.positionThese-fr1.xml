@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les lettres de cachet pour affaires de famille en Franche-Comté au &lt;abbr&gt;xviii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Les lettres de cachet pour affaires de famille en Franche-Comté au </title>
         <title type="sub"></title>
-        <author key="Jandeaux, Jeanne-Marie" ref="https://www.idref.fr/@TODO@">Jeanne-Marie Jandeaux</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Jandeaux, Jeanne-Marie">Jeanne-Marie Jandeaux</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Henri_Ghéon et le théâtre</title>
+        <title type="main">Henri Ghéon et le théâtre</title>
         <title type="sub"></title>
-        <author key="Coste, Hélène" ref="https://www.idref.fr/@TODO@">Hélène Coste</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Coste, Hélène">Hélène Coste</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

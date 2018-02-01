@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">&lt;i&gt;La_Reine_Margot&lt;/i&gt; de Patrice_Chéreau</title>
+        <title type="main">
+        </title>
         <title type="sub">Genèse et réalisation d’un film historique</title>
-        <author key="Rouchy, Violette" ref="https://www.idref.fr/@TODO@">Violette Rouchy</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Rouchy, Violette">Violette Rouchy</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

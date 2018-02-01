@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les &lt;i&gt;Mirabilia_descripta&lt;/i&gt; de Jordan_Catala_de_Sévérac</title>
+        <title type="main">Les </title>
         <title type="sub">Une image de l’Orient au &lt;abbr&gt;xiv&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
-        <author key="Gadrat, Christine" ref="https://www.idref.fr/@TODO@">Christine Gadrat</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Gadrat, Christine">Christine Gadrat</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

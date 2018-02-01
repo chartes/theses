@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Guillaume_de_Saint-Lô un prédicateur à l’œuvre au &lt;abbr&gt;xiv&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Guillaume de Saint-Lô un prédicateur à l’œuvre au </title>
         <title type="sub"></title>
-        <author key="Roger, Cécile" ref="https://www.idref.fr/@TODO@">Cécile Roger</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Roger, Cécile">Cécile Roger</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

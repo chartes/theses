@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La cinquième mise en prose du &lt;em&gt;Roman_de_Troie&lt;/em&gt; de Benoît_de_Sainte-Maure</title>
+        <title type="main">La cinquième mise en prose du </title>
         <title type="sub">Édition partielle et commentaire</title>
-        <author key="Rochebouet, Anne" ref="https://www.idref.fr/@TODO@">Anne Rochebouet</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Rochebouet, Anne">Anne Rochebouet</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

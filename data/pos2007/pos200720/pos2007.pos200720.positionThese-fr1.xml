@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La mise en archives du Trésor des chartes (XIII&lt;sup&gt;e&lt;/sup&gt;-XIX&lt;sup&gt;e&lt;/sup&gt; siècle)</title>
+        <title type="main">La mise en archives du trésor des chartes (XIII</title>
         <title type="sub"></title>
-        <author key="Potin, Yann" ref="https://www.idref.fr/@TODO@">Yann Potin</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Potin, Yann">Yann Potin</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

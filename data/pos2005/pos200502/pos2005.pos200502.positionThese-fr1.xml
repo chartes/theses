@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les sermons d’Arnoul_de_Lisieux</title>
+        <title type="main">Les sermons d’Arnoul de Lisieux</title>
         <title type="sub"></title>
-        <author key="Bettant, Audry" ref="https://www.idref.fr/@TODO@">Audry Bettant</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Bettant, Audry">Audry Bettant</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

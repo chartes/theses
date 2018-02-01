@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’enseignement de l’histoire de la médecine à Paris au &lt;abbr&gt;xix&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle (1794-1914)</title>
+        <title type="main">L’enseignement de l’histoire de la médecine à Paris au </title>
         <title type="sub">La défaite de l’érudition</title>
-        <author key="Galanopoulos, Philippe" ref="https://www.idref.fr/@TODO@">Philippe Galanopoulos</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Galanopoulos, Philippe">Philippe Galanopoulos</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

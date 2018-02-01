@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’administration municipale de Sélestat au &lt;abbr&gt;xviii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">L’administration municipale de Sélestat au </title>
         <title type="sub"></title>
-        <author key="Lutz, Jean-François" ref="https://www.idref.fr/@TODO@">Jean-François Lutz</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Lutz, Jean-François">Jean-François Lutz</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

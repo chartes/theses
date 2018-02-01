@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les études grecques à l’abbaye de Saint-Denis au &lt;abbr&gt;xii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Les études grecques à l’abbaye de Saint-Denis au </title>
         <title type="sub"></title>
-        <author key="Gandil, Pierre" ref="https://www.idref.fr/@TODO@">Pierre Gandil</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Gandil, Pierre">Pierre Gandil</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

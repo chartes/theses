@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le roman en prose &lt;i&gt;Guy_de_Warewyk&lt;/i&gt; (XV&lt;sup&gt;e&lt;/sup&gt; siècle)</title>
-        <title type="sub">Édition et commentaire</title>
-        <author key="Desmet, Frédérique" ref="https://www.idref.fr/@TODO@">Frédérique Desmet</author>
+        <title type="main">Le roman en prose </title>
+        <title type="sub">Édition et commentaire.</title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Desmet, Frédérique">Frédérique Desmet</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Tristan_Tzara et le livre : ses éditeurs et ses illustrateurs</title>
+        <title type="main">Tristan Tzara et le livre : ses éditeurs et ses illustrateurs</title>
         <title type="sub"></title>
-        <author key="Lévy-Bruhl, Hélène" ref="https://www.idref.fr/@TODO@">Hélène Lévy-Bruhl</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Lévy-Bruhl, Hélène">Hélène Lévy-Bruhl</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

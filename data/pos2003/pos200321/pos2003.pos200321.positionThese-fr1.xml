@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La &lt;i&gt;Divine_tragédie&lt;/i</title>
+        <title type="main">La </title>
         <title type="sub"></title>
-        <author key="Sené, Xavier" ref="https://www.idref.fr/@TODO@">Xavier Sené</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Sené, Xavier">Xavier Sené</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

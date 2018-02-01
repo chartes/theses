@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le manuscrit Bibl</title>
-        <title type="sub">nat</title>
-        <author key="Moreau, Nathalie" ref="https://www.idref.fr/@TODO@">Nathalie Moreau</author>
+        <title type="main">Le manuscrit Bibl. nat. de France, fr 688 et son traducteur</title>
+        <title type="sub">Édition de la </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Moreau, Nathalie">Nathalie Moreau</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

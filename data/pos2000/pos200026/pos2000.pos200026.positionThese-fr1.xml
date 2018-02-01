@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;i&gt;Liber_Visionum_et_Miraculorum&lt;/i&gt;</title>
-        <title type="sub">Édition du manuscrit 946 de la bibliothèque_municipale de Troyes</title>
-        <author key="Legendre, Olivier" ref="https://www.idref.fr/@TODO@">Olivier Legendre</author>
+        <title type="main">Le </title>
+        <title type="sub">Édition du manuscrit de Troyes (Bibl. mun., ms. 946).</title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Legendre, Olivier">Olivier Legendre</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

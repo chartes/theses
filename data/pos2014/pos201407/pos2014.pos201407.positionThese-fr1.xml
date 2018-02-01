@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Michel Villedo et Cie : entreprise et expertise à Paris au &lt;abbr&gt;xvii&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle</title>
-        <title type="sub"></title>
-        <author key="Fritz, Viviane" ref="https://www.idref.fr/@TODO@">Viviane Fritz</author>
+        <title type="main">Michel Villedo et C</title>
+        <title type="sub">Entreprise et expertise à Paris au </title>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Fritz, Viviane">Viviane Fritz</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Michel_Butor et ses artistes : livres manuscrits (1968-1998)</title>
+        <title type="main">Michel Butor et ses artistes : livres manuscrits (1968-1998)</title>
         <title type="sub"></title>
-        <author key="Chamonard, Marie" ref="https://www.idref.fr/@TODO@">Marie Chamonard</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Chamonard, Marie">Marie Chamonard</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

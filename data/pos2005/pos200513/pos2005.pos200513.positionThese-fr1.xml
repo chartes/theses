@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Une nouvelle édition du &lt;em&gt;Bestiaire&lt;/em&gt; de Philippe_de_Thaon</title>
+        <title type="main">Une nouvelle édition du </title>
         <title type="sub"></title>
-        <author key="Hogan Cottin-Bizonne, Shannon" ref="https://www.idref.fr/@TODO@">Shannon Hogan Cottin-Bizonne</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Hogan Cottin-Bizonne, Shannon">Shannon Hogan Cottin-Bizonne</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

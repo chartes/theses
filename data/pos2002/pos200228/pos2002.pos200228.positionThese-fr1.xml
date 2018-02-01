@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les éditions René_Kieffer (1909-1950)</title>
+        <title type="main">Les éditions René Kieffer (1909-1950)</title>
         <title type="sub"></title>
-        <author key="Sanjuan, Agathe" ref="https://www.idref.fr/@TODO@">Agathe Sanjuan</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Sanjuan, Agathe">Agathe Sanjuan</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

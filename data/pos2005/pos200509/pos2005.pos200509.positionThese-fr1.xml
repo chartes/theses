@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’entreprise Théodore_Haviland de 1892 à 1941</title>
+        <title type="main">L’entreprise Théodore Haviland de 1892 à 1941</title>
         <title type="sub">Destinées industrielles de la porcelaine à Limoges</title>
-        <author key="Fléjou, Lucie" ref="https://www.idref.fr/@TODO@">Lucie Fléjou</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Fléjou, Lucie">Lucie Fléjou</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

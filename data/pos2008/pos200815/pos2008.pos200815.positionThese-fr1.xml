@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Cartographier la Louisiane française au &lt;abbr&gt;xviii&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Cartographier la Louisiane française au </title>
         <title type="sub"></title>
-        <author key="Dujardin, Justine" ref="https://www.idref.fr/@TODO@">Justine Dujardin</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Dujardin, Justine">Justine Dujardin</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La maison et les métiers du bâtiment à Paris (milieu du &lt;abbr&gt;xiv&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt;-milieu du &lt;abbr&gt;xv&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle)</title>
+        <title type="main">La maison et les métiers du bâtiment à Paris (milieu du </title>
         <title type="sub"></title>
-        <author key="Chemel, Claire" ref="https://www.idref.fr/@TODO@">Claire Chemel</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Chemel, Claire">Claire Chemel</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>

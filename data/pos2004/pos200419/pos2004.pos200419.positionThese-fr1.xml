@@ -4,9 +4,10 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Images et usages du château de Versailles au &lt;abbr&gt;xx&lt;sup&gt;e&lt;/sup&gt;&lt;/abbr&gt; siècle</title>
+        <title type="main">Images et usages du château de Versailles au </title>
         <title type="sub"></title>
-        <author key="Oppermann, Fabien" ref="https://www.idref.fr/@TODO@">Fabien Oppermann</author>
+        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <author key="Oppermann, Fabien">Fabien Oppermann</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
