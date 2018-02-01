@@ -139,7 +139,7 @@ class PositionThese:
             nsmap = {"ti" : 'http://www.tei-c.org/ns/1.0'}
 
 
-            def update(keyword, struct):
+            def insert_into(keyword, struct):
                 for intro in template.xpath("//ti:body//ti:div[@type='{0}']".format(keyword), namespaces=nsmap):
                     for c in struct.getchildren():
                         intro.append(copy.deepcopy(c))
@@ -164,12 +164,16 @@ class PositionThese:
             for pub_date in template.xpath("//ti:teiHeader//ti:profileDesc/ti:creation/ti:date", namespaces=nsmap):
                 pub_date.set("when", str(date.today().year))
 
+            # année de la promotion dans le titre de la bibliographie
+            for bibl_title in template.xpath("//ti:teiHeader//ti:sourceDesc/ti:bibl/ti:title", namespaces=nsmap):
+                bibl_title.text = bibl_title.text.replace("@PLACE_HOLDER@", meta["promotion"])
+
             # front
             front = src_edition.xpath("//ti:front//ti:div", namespaces=nsmap)
             if len(front) > 0:
-                update('introduction', front[0])
+                insert_into('introduction', front[0])
                 if len(front) > 1:
-                    update('sources', front[1])
+                    insert_into('sources', front[1])
 
             # body
             for body in template.xpath("//ti:body", namespaces=nsmap):
@@ -183,6 +187,12 @@ class PositionThese:
                         new_part.append(copy.deepcopy(c))
                     body.append(new_part)
 
+            # back
+            back = src_edition.xpath("//ti:back//ti:div", namespaces=nsmap)
+            if len(back) > 0:
+                insert_into('conclusion', back[0])
+                if len(back) > 1:
+                    insert_into('appendix', back[1])
 
 
             # write the edition file

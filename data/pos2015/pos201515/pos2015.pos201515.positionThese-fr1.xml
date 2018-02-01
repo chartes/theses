@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Das ist der stat Strassburg ordenunge irs fussvolckes</title>
         <title type="sub">L’organisation d’une armée communale au &lt;abbr&gt;xv&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle : l’exemple de Strasbourg</title>
-        <author key="leberre, Gilles" ref="@TODO@">Gilles leberre</author>
+        <author key="leberre, Gilles" ref="https://www.idref.fr/@TODO@">Gilles leberre</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -63,13 +62,7 @@
             <p>Les sources primaires viennent exclusivement des archives de la ville et de la communauté urbaine de Strasbourg, particulièrement de la série AA (Correspondances politiques), ainsi que, dans une moindre mesure, des séries III à VI. Ces fonds contiennent des ordonnances et règlements militaires pour certaines campagnes ou pour la défense des murailles ; des listes de mobilisables, comportant parfois la mention de l’armement ou des chevaux dont ils disposent ; des inventaires de l’arsenal de la ville ou des châteaux qu’elle possède ; enfin, une abondante correspondance, abordant tous les sujets, en particulier le ravitaillement, la solde et la discipline des troupes, et les renseignements transmis par et pour les alliés. Une écrasante majorité des documents concerne les moments de crise, notamment les guerres de Bourgogne (1473-1477).</p>
         </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Strasbourg au <num>xv<hi rend="sup">e</hi></num> siècle</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Strasbourg au <num>xv<hi rend="sup">e</hi></num> siècle</head>
          <div>
            <head n="Chapitre premier">Le gouvernement de la ville</head>
              <p>Strasbourg, auparavant sous l’autorité de son évêque, devient ville d’Empire en 1262, après sa victoire à la bataille de Hausbergen. Au <num>xv<hi rend="sup">e</hi></num> siècle, on peut estimer sa population à environ 18 000 habitants, dont certains sont des « bourgeois de Strasbourg », possédant des privilèges divers.</p>
@@ -129,13 +122,17 @@
               <p>La hiérarchie militaire, en revanche, est pour le moins sommaire, puisque le seul titre qui apparaît systématiquement dans les documents est celui de capitaine (<emph>hauptman</emph>), terme polysémique qui peut désigner le chef d’une troupe d’une dizaine d’hommes comme d’une compagnie ou d’une armée entière. Il est parfois flanqué d’un lieutenant (<emph>verweser</emph> ou <emph>stathalter</emph>), et peut-être de sous-officiers, non explicitement nommés mais apparaissant en creux dans certaines fonctions : ordonnance, serre-files, musiciens, gardes de la bannière.</p>
               <p>L’entraînement des troupes est lui aussi peu important : si les arbalétriers et arquebusiers font parfois partie de sociétés qui s’entraînent les dimanches sur le champ de tir, cette appartenance n’a rien d’obligatoire. Par ailleurs, il n’existe aucune mention de maîtres d’armes établis à Strasbourg avant au moins le milieu du <num>xvi<hi rend="sup">e</hi></num> siècle.</p>
           </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Malgré les nombreuses réglementations dont elle est l’objet, l’armée de Strasbourg ne semble pas très efficace sur le champ de bataille, un peu plus lors des sièges, en attaque ou en défense. Aucune grande bataille ne fut gagnée par la ville sans l’aide d’alliés. Pour autant, dans la mesure où les objectifs que Strasbourg assigne à ses forces armées sont dès le départ limités, on peut considérer que celles-ci jouent leur rôle : dissuader les ennemis, garder les murailles, mener des contre-attaques et coups de main, détruire les places fortes ennemies. Il serait tentant, quoiqu’anachronique et sujet à débat, de dire que le Magistrat a, dans une perspective clausewitzienne, volontairement subordonné son armée à sa politique, qui n’autorise ni ne nécessite de forces armées professionnelles, permanentes et entraînées. Les évolutions de la géopolitique au cours du <num>xv<hi rend="sup">e</hi></num> siècle, notamment l’apparition « d’États épais » (Francis Rapp) force de fait la ville à limiter ses ambitions guerrières et à se redéployer derrière ses puissantes murailles, que Daniel Specklin améliore au <num>xvi<hi rend="sup">e</hi></num> siècle. Strasbourg n’y a cependant pas forcément perdu au change, puisqu’en développant sa fonderie d’artillerie, devenue bientôt célèbre dans tout l’Empire, elle passe peu à peu du rôle de belliciste interventionniste à celui de marchand de canons, autrement plus rentable.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Pièces justificatives</head>
+          <p>Inventaire de l'arsenal de Strasbourg (1445). — Catalogue des techniques militaires que dit maîtriser maître Hans Widerstein (1461). — Considérations de Johann von der Zittau sur le coût des opérations militaires. — Suggestion de Johann von der Zittau de systématiser l'utilisation des <emph>wagenburg</emph> (ou convois de chariots de guerre) et de mieux utiliser les armes à poudre. — Règlement organisant le ravitaillement en campagne (1476). — Règlement pour les fantassins strasbourgeois participant à la campagne de Frédéric III en Flandre (1488).</p>
+      </div>
           </div>
       </body>
   </text>

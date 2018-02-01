@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Souvenirs et impressions du siège de Paris</title>
         <title type="sub">Édition critique et commentaire</title>
-        <author key="Paris, Louis" ref="@TODO@">Louis Paris</author>
+        <author key="Paris, Louis" ref="https://www.idref.fr/@TODO@">Louis Paris</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -62,13 +61,7 @@
       </div>
               <div type="sources"/>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Mise en contexte biographique et historique</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Mise en contexte biographique et historique</head>
           <div>
             <head n="Chapitre premier">Biographie de Georges Perrot</head>
               <p>Georges Perrot naquit le 12 novembre 1832 à Villeneuve-Saint-Georges, dans le département du Val-de-Marne. Orphelin de père dès sa prime enfance, il fut éduqué dans une tradition protestante aux mains de trois femmes, grand-mère, mère et tante. Brillant élève au lycée Charlemagne de Paris, il entra à l'âge de vingt ans, en 1852, à l'École normale supérieure de la rue d'Ulm, avant de rejoindre l'École française d'Athènes. Sa formation classique, son goût pour l'histoire et l'Antiquité l'orientent vers la carrière d'archéologue et d'historien de l'art antiques : reçu premier à l'agrégation de lettres en 1859, il fut chargé dans un premier temps d'enseigner au lycée, puis, l'année suivante, de mener à bien une expédition archéologique en Asie mineure.</p>
@@ -99,13 +92,17 @@
       </div><div n="4" type="part"><head n="Quatrième partie">Édition critique des <emph>Souvenirs et impressions du siège de Paris</emph></head>
           <p>L'édition critique concerne un manuscrit inédit de Georges Perrot, conservé au département des Manuscrits de la Bibliothèque nationale de France, sous la cote NAF 19780. Le texte a été établi selon les règles habituelles d'édition contemporaine. La syntaxe et la mise en page de l'auteur ont été respectées, tandis que les rares fautes d'orthographe ou de conjugaison ont été corrigées. Deux apparats de notes accompagnent l'édition du texte : d'abord historique, pour éclairer les références, personnages et autres situations égrenées au fil de l'écriture, puis critique, pour rendre compte des biffures les plus significatives.</p>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Georges Perrot fut l'un de ces savants dont le parcours, au <num>xix<hi rend="sup">e</hi></num> siècle, se confond avec la tradition française des concours. Cette éducation et l'environnement socioculturel firent de ce jeune érudit un témoin parfois perspicace, du moins attentif du siège de Paris et des conséquences de cette guerre entre la France et la Prusse. Son manuscrit permet de retracer l'évolution intellectuelle de son rapport à l'Allemagne, d'une estime profonde envers sa culture et sa science aux germes d'une hostilité à peine voilée. Les responsabilités qui incombèrent par la suite à l'archéologue, le rôle qu'il eut à jouer en tant que professeur et pédagogue des élites à venir de la jeune République, font de cette présente édition une pièce estimable pour la compréhension de l'univers culturel et intellectuel républicain né de la défaite de 1870.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Documents liés au manuscrit. — Chronologies de la guerre et du siège. — La défense de Paris. — Notices biographiques. — Préface de Fustel de Coulanges. — Bibliographie de Georges Perrot. — Index des noms de personnes. — Index des noms de lieux.</p>
+      </div>
           </div>
       </body>
   </text>

@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">L’abbaye cistercienne de Vauclair et sa bibliothèque</title>
         <title type="sub">Lire et écrire dans une abbaye cistercienne du Moyen Âge au &lt;abbr&gt;xviii&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle</title>
-        <author key="Jacquemard, Hélène" ref="@TODO@">Hélène Jacquemard</author>
+        <author key="Jacquemard, Hélène" ref="https://www.idref.fr/@TODO@">Hélène Jacquemard</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -65,13 +64,7 @@
          <p>Le fonds principal était bien entendu constitué par les manuscrits de Vauclair conservés à la bibliothèque de Laon à l’exception de deux d’entre eux (BNF, ms. lat. 3065 et Staats - und Universität Göttingen, Philog. 142, qui n’a pu être exploité pour ce travail). Du côté des fonds d’archives, ceux de la Bibliothèque nationale furent particulièrement mis à contribution, en particulier le fonds des « Provinces françaises ». À cela s’ajoute les documents produits par l’abbaye elle-même, deux cartulaires et un registre de comptes de l’abbaye (ms. lat. 11073-11076), des documents isolés des Archives nationales de France (série L) ainsi qu’un ensemble datant des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles provenant des archives départementales de l’Aisne (série H). </p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">L’histoire de l’abbaye de Vauclair : quelle place au sein du monde cistercien ?</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’histoire de l’abbaye de Vauclair : quelle place au sein du monde cistercien ?</head>
           <div>
             <head n="Chapitre premier">Le <num>xii<hi rend="sup">e</hi></num> siècle à Vauclair : fondation et essor d’une abbaye</head>
               <p><emph>Le contexte de fondation de l’abbaye de Vauclair.</emph> — La  date de fondation de l’abbaye retenue dans ce travail est celle de 1134. Le premier tiers du <num>xii<hi rend="sup">e</hi></num> siècle constitue en effet un tournant pour les Cisterciens, puisque leur ordre connait un certain essor mais aussi un tournant marqué par l’activité de Bernard de Clairvaux, qui appartient à la seconde génération cistercienne. La date de 1134 correspond aussi à la mort d’Etienne Harding. Vauclair appartient à la filiation de Clairvaux dont elle est une des abbayes-filles. Il s’agit de la filiation la plus dynamique de l’ordre en termes de nombre d’établissements. L’examen des documents met en avant le rôle fondamental de Barthélemy de Jur, évêque de Laon (1113-1151). Il est reconnu par les moines de Vauclair comme le véritable fondateur de leur abbaye, ce qui montre que, pour écrire leur histoire, ceux-ci se placent plutôt dans une perspective locale que cistercienne. Il est également mentionné comme le constructeur des premiers bâtiments de l’abbaye. Le premier abbé de Vauclair, Henri Murdach, passe assez peu de temps à l’abbaye. Les abbés qui lui succèdent sont généralement peu documentés, même si l’on note une évolution d’un recrutement cistercien à un recrutement local. </p>
@@ -106,13 +99,18 @@
               <p><emph>Influences à l’œuvre dans la réalisation des manuscrits : sources et imitations.</emph> — Le manuscrit 41 de la bibliothèque municipale de Laon a été réalisé par des mains différentes : le second volume abandonne l’inspiration mosane pour des formes plus simples que l’on retrouve dans la deuxième partie du manuscrit 106. On peut également rattacher à la production de Vauclair, sur la base de considérations stylistiques, les manuscrits 56, 47 et 186 conservés à la bibliothèque municipale de Laon. L’initiale liminaire du manuscrit 56 a pu être inspirée dans les motifs comme dans la mise en page par la première enluminure du manuscrit 29. Les peintres de Vauclair témoigneraient dans ce cas d’une attention particulière portée aux manuscrits produits hors de l’abbaye. Une même mise en page, un même format et une alternance de couleurs identiques peuvent conduire à considérer le manuscrit comme produit à l’abbaye de Vauclair, d’autant que les formes utilisées font partie du répertoire caractéristique des scribes de l’abbaye. Enfin, le manuscrit 328 possède une initiale liminaire assez maladroite sur un schéma pourtant simple, ce qui exclut qu’elle ait pu être réalisée dans un centre spécialisé. Il est donc possible que le manuscrit soit originaire de Vauclair. Les formes stéréotypées qui ont été auparavant dégagées reprennent celles mises en place dans l’enluminure parisienne des années 1160-1180. Le seul manuscrit produit au <num>xiii<hi rend="sup">e</hi></num> siècle à Vauclair montre le passage du vert au bleu comme couleur complémentaire du rouge et des formes de filigranes plus maniéristes. Ces dernières se retrouvent dans un décor apposé dans un deuxième temps sur des initiales de couleur simples, telles qu’on les retrouve dans les manuscrits 287 et 303 de la bibliothèque municipale de Laon. </p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Loin d’être implantée dans un « désert », l’abbaye de Vauclair est un acteur important du territoire où elle s’est développée, entretenant de nombreux rapports avec des ecclésiastiques et laïcs locaux, ce qui ne l’empêche pas de maintenir ses relations avec l’abbaye de Clairvaux de manière relativement constante, aussi bien sur le plan institutionnel que pour sa bibliothèque. </p>
+          <p>La gestion de la bibliothèque montre un très grand intérêt porté aux livres, à la fois objets liturgiques et objets usuels. De même, la définition d’une production de manuscrits originaires de Vauclair montre une double influence : l’une provient de modèles cisterciens, l’autre de centres extérieurs à l’ordre, que ceux-ci soient locaux ou plus lointains. L’étude du décor montre l’importance des formes ornementales souvent considérées comme secondaires, alors qu’elles constituent un répertoire propre.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Liste des manuscrits produits à Vauclair. — Liste des manuscrits conservés à Vauclair. — Liste des abbés de Vauclair. — Éditions du <emph>memento</emph> de l’abbaye au <num>xii<hi rend="sup">e</hi></num> siècle ainsi que de l’épitaphe de Nicolas I<hi rend="sup">er</hi>. — Éditions de diverses chartes (accord, diplômes et bulles) en faveur ou passés par l’abbaye de Vauclair. — Dossier iconographique (manuscrits évoqués classés par établissement, numéro de référence et folio). </p>
+      </div>
           </div>
       </body>
   </text>

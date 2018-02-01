@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Financer le service des Ponts-et-Chaussées</title>
         <title type="sub">La gestion du trésorier général Gabriel Prévost (1748-1778)</title>
-        <author key="Jolly, Anne" ref="@TODO@">Anne Jolly</author>
+        <author key="Jolly, Anne" ref="https://www.idref.fr/@TODO@">Anne Jolly</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -64,13 +63,7 @@
           <p>Le fonds Gabriel Prévost, conservé dans la sous-série Z<hi rend="sup">1A</hi> de la Cour des aides aux Archives nationales, constitue le corpus principal d’étude. Il contient les papiers personnels et les pièces comptables officielles et privées de ce trésorier général qui furent saisis par la Chambre des comptes, par suite de l’impossibilité de celui-ci de justifier de sa gestion devant cette juridiction et de sa faillite. Quand le contentieux sur les biens et les dettes de Prévost fut transféré par le roi à la Cour des aides, en novembre 1779, une partie des documents confisqués par les commissaires de la Chambre fut remise à la Cour des aides. La diversité et l’abondance des documents contenus dans ce fonds permettent d’étudier le financement des Ponts-et-Chaussées tant au niveau de la trésorerie générale que des caisses particulières et de dégager les circuits financiers existants. Les divers types de pièces comptables conservées font l’objet d’une analyse détaillée dans l’inventaire du fonds Prévost contenu dans le second volume de notre thèse. La correspondance que chaque trésorier particulier et plusieurs créditeurs des Ponts-et-Chaussées ont adressée à Prévost offre une source inédite pour explorer la gestion qualitative des trésoriers et les motivations qui poussaient des financiers et des négociants à prêter leurs ressources à un service local des Ponts-et-Chaussées. Pour mieux apprécier la politique générale de l’État en matière de travaux publics, les actes législatifs et réglementaires relatifs aux travaux publics, conservés dans la sous-série F<hi rend="sup">14</hi> des Archives nationales, ont également été exploités. Enfin, pour compléter notre étude du financement de la caisse des Ponts-et-Chaussées de la généralité de Tours, nous avons consulté les fonds relatifs à cette administration classés  dans la série C des archives départementales d’Indre-et-Loire.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">L’administration comptable des Ponts-et-Chaussées</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’administration comptable des Ponts-et-Chaussées</head>
           <div>
             <head n="Chapitre premier">L’organisation comptable des Ponts-et-Chaussées</head>
               <p>Sous l’autorité de l’intendant des finances Trudaine et de ses commis, une administration comptable des Ponts-et-Chaussées structurée et étoffée existe à part entière dans la seconde moitié du <num>xviii<hi rend="sup">e</hi></num> siècle. Les trésoriers généraux disposent de commis et d’un caissier, au sein de leur hôtel, et de vingt-quatre trésoriers particuliers répartis entre les diverses généralités du royaume. Ceux-ci relèvent directement des trésoriers généraux et ne peuvent ni recevoir ni acquitter des fonds sans en avoir reçu expressément l’ordre de leurs supérieurs.</p>
@@ -123,13 +116,19 @@
               <p>Les modalités de financement des différentes caisses particulières des Ponts-et-Chaussées présentent des caractères similaires quant à la nature des fonds. Gabriel Prévost effectue ses remises au profit de chaque commis sous trois formes essentiellement : les rescriptions, les effets de commerce et les lettres de change que les trésoriers particuliers tirent sur lui. Le crédit d’acteurs locaux constitue de manière générale, selon une part plus ou moins conséquente, un recours pour alimenter les caisses provinciales des Ponts-et-Chaussées. La part des avances dans les ressources de ces caisses augmente dans l’ensemble des généralités à la fin des années 1760 et celle des rescriptions s’infléchit. Le choix des bailleurs de fonds et le poids variable de leur rôle conduisent à l’établissement de configurations de financement plurielles. Le trésorier général et les trésoriers particuliers des Ponts-et-Chaussées développent des stratégies diversifiées pour s’adapter au paysage financier, économique et social propre à chaque province, et plus particulièrement à chaque ville dans laquelle est établie une caisse particulière des Ponts-et-Chaussées. Les trésoriers s’appuient sur un nombre limité de créditeurs au cours d’une période donnée, qui sont issus de trois groupes socioprofessionnels : les receveurs généraux des fermes, des aides et des domaines ; les receveurs généraux des domaines et des bois ; enfin les négociants et les armateurs. Les premiers sont de loin le type de pourvoyeurs de fonds le plus important. Des exceptions locales apparaissent tels les pays d’imposition au sein desquels les dépenses en matière de travaux publics sont acquittées sans qu’il soit nécessaire de contracter des emprunts.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+         <p>Le système de financement de la trésorerie générale des Ponts-et-Chaussées que la monarchie a institué, reposant sur la fiscalité directe, fonctionne effectivement jusqu’en 1759 avec quelques ajustements. Il permet aux trésoriers particuliers de pourvoir aux paiements des travaux publics et des charges en donnant à Prévost les moyens de respecter les distributions mensuelles fixées par le contrôleur général pour chaque généralité. Dès 1759 et jusqu’en 1765, la Caisse commune des receveurs généraux ne verse plus que des fonds irréguliers à la trésorerie générale et d’un montant inférieur aux années précédentes. Le système fisco-financier sur lequel repose la mobilisation des fonds au profit des travaux publics n’est plus en mesure de répondre aux besoins de cette administration, du fait de la politique monarchique d’anticipation et de réduction de l’enveloppe budgétaire initialement accordée aux Ponts-et-Chaussées dans le contexte de la guerre de Sept Ans. Indépendamment des pratiques comptables et financières de Prévost, la monarchie n’a pas su accorder au département des Ponts-et-Chaussées les ressources nécessaires pour accomplir son ambitieuse politique routière et permettre la réalisation des états du roi.</p>
+         <p> À compter de la fin de l’année 1763, le système de financement employé par Prévost se modifie. Pour assurer le service des Ponts-et-Chaussées, le trésorier général systématise le recours aux emprunts locaux dans les généralités de pays d’élections en délivrant des traites à ses subordonnés, qui les négocient pour obtenir des avances auprès de financiers et de négociants intervenant à titre personnel. Il édifie un réseau de crédit reposant sur des bailleurs de fonds locaux qui double celui reliant les principaux financiers au roi. Sous la gestion de Gabriel Prévost, le circuit de financement des caisses locales des Ponts-et-Chaussées est principalement articulé à celui du recouvrement des impôts affermés. Cette connexion ne résulte pas des logiques fiscales ordinaires instaurées par la monarchie qui impliquent uniquement les recettes générales des finances dans la mobilisation des fonds pour les Ponts-et-Chaussées. </p>
+         <p> Les causes de la prépondérance du crédit local dans le financement des caisses particulières des Ponts-et-Chaussées restent encore à préciser. Dans un premier temps, Prévost recourt aux emprunts pour pallier les déficiences de la Caisse commune des receveurs généraux, mais il maintient ensuite ce système dans les années 1770, alors que celle-ci parvient de nouveau à alimenter plus régulièrement sa caisse centrale. Deux logiques différentes de financement des Ponts-et-Chaussées apparaissent, l’une instituée au profit de la trésorerie générale par la monarchie et l’autre mise en œuvre au bénéfice des trésoriers particuliers par Prévost. L’histoire de la gestion de Prévost doit donc encore être éclaircie pour évaluer la part respective, dans cette évolution, des défaillances fiscales et des choix financiers de ce trésorier. S’il est parvenu à assurer jusqu’en 1777 le versement aux trésoriers particuliers des fonds affectés par la monarchie aux services locaux des Ponts-et-Chaussées par le recours aux emprunts locaux, les fonds versés directement dans sa caisse ont pu être détournés à d’autres fins. Les défaillances récurrentes des paiements par rescriptions ne peuvent pas constituer le seul motif de la généralisation du recours au crédit local.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Inventaire critique du fonds Prévost</head>
+          <p>Cet inventaire consiste en une présentation et un examen critique des documents comptables conservés dans le fonds Prévost de la Cour des aides des Archives nationales (Z<hi rend="sup">1A</hi> 894 à Z<hi rend="sup">1A</hi> 962), qui ont servi de fondement à nos travaux. Il doit permettre de faciliter la compréhension des logiques comptables de cette administration et de justifier l’exploitation historique qui en a été faite. Des photographies des différents types de documents illustrent cette présentation.</p>
+      </div>
           </div>
       </body>
   </text>

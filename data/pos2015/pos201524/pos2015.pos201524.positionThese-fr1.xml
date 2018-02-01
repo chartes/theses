@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Partition pour flûtes sur fond de mer</title>
         <title type="sub">L'intégration des flûtes hollandaises dans la marine français</title>
-        <author key="Talarmin, Marguerite" ref="@TODO@">Marguerite Talarmin</author>
+        <author key="Talarmin, Marguerite" ref="https://www.idref.fr/@TODO@">Marguerite Talarmin</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -63,13 +62,7 @@
           <p>L'étude s’est fondée sur des documents de natures très diverses, en raison de la grande lacune des archives au début de la période étudiée. En ce qui concerne l'origine néerlandaise des flûtes, les recherches se sont appuyées sur un corpus iconographique rassemblé au Scheepvaartmuseum et au Rijkmuseum à Amsterdam. Quelques maquettes sont comprises dans cet ensemble. Pour la partie française de l'étude, à partir de Colbert, les séries B5 et B7 des archives de la Marine ont fourni des indications sur l'imitation du savoir-faire hollandais tandis que la série D1 sur le matériel a permis de saisir l'application concrète des directives de l’État dans les arsenaux du royaume. Des recherches plus ponctuelles menées à Rochefort, Lorient, Toulon et Brest ainsi que l'étude de précieux plans de flûtes conservés au Service historique de la défense à Vincennes et au musée national de la Marine soutiennent le propos en apportant des détails sur telle ou telle spécificité des flûtes à un moment donné. Les archives du Département des recherches archéologiques subaquatiques et sous-marines (DRASSM) à Marseille furent exploitées pour apporter à ce travail des éléments archéologiques glanés autour de trois épaves de flûtes. Des traités de construction navale des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles furent un auxiliaire indispensable afin de comprendre les enjeux de la construction navale à l'époque moderne.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Survivances</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Survivances</head>
           <div>
             <head n="Chapitre premier">À l'aube de la Compagnie des Indes : Le <emph>Mauritius</emph></head>
               <p>Le 19 mars 1609, de retour de Chine, le <emph>Mauritius</emph> heurtait un banc de sable à quelques encablures des côtes du Gabon. Ce vaisseau de la Compagnie hollandaise des Indes orientales rapportait vers l'Europe un précieux chargement d'épices, de porcelaine et de métaux. Près de quatre siècles plus tard, en 1985, l'épave fut découverte par hasard par une opération de prospection pétrolière et dès l'année suivante deux campagnes de fouilles archéologiques sous-marines firent resurgir du néant le <emph>Mauritius</emph> et son histoire. Il est à ce jour le plus ancien vaisseau retrouvé de la Compagnie hollandaise des Indes orientales. L'étude de la cargaison et de la construction du <emph>Mauritius</emph> ainsi que l'examen des archives ont donné l'image d'un navire « expérimental », dans le cadre de la phase de mise en place de la Compagnie. Le <emph>Mauritius</emph> est en ce sens le jalon providentiel d'une période privilégiée sans la compréhension de laquelle l'histoire même de la VOC nous échapperait partiellement.</p>
@@ -139,13 +132,17 @@
               <p>La première qualité d'un navire employé pour une longue campagne de découvertes et d'observations scientifiques était la capacité ; il fallait loger les savants, leurs collections, leurs instruments – dont certains fort encombrants – et prévoir des vivres pour une très longue période. L'équipage aussi devait être correctement logé, première condition pour éviter les problèmes sanitaires lors de longues navigations. Mieux valait choisir un bâtiment solide, comme les bateaux de transport, qu'une frégate, plus rapide et maniable, mais moins robuste et peu spacieuse. Enfin, la coque large et plate des flûtes et autres navires marchands permettait de naviguer même dans des baies peu profondes, point important pour explorer une côte inconnue. Au <num>xviii<hi rend="sup">e</hi></num> siècle après que Cook eut ouvert la voie avec le navire charbonnier l'<emph>Endeavour</emph>, tous les grands voyages scientifiques suivirent cet exemple. Bougainville comme Lapérouse jetèrent leur dévolu sur des flûtes, qui furent aménagées en fonction des contraintes que représentaient de tels voyages.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Cette thèse émousse d'un côté le mythe de l'apparition en 1595 des flûtes hollandaises tout en le renforçant de l'autre. Elle l'émousse en montrant que ce type « révolutionnaire » de navire de charge s'inscrivait en fait dans la tradition de la construction navale néerlandaise et représentait l'aboutissement d'une lente évolution dans la conception des bateaux de commerce. Elle renforce ce mythe en démontrant la part indéniable des flûtes non seulement dans l'âge d'or des Pays-Bas mais également en France, notamment comme auxiliaires de la flotte de guerre. Caractérisée à l'origine par ses formes empruntées au bâtiment hollandais nommé <emph>fluyt</emph>, la flûte française évolua ensuite et le terme finit par désigner le navire de la marine royale, transport par destination première ou par fonction occasionnelle. À la fin du <num>xviii<hi rend="sup">e</hi></num> siècle, la flûte, tout en conservant ses formes un peu plus rondes que celles des bâtiments de combat, ne sera plus très différente de la frégate ou de la corvette. La désignation « flûte » disparaît enfin de la classification officielle pour être remplacée au début du <num>xix<hi rend="sup">e</hi></num> siècle par « corvette de charge ». L'intérêt du sujet réside justement dans cette tension entre héritage et innovation, entre les caractéristiques du modèle d'origine et l'extrême variété de flûtes qui en fut issue. Humbles mais prisées, simples mais polyvalentes, les flûtes ont laissé la trace de leur passage tant sur les assiettes de porcelaine de la Compagnie des Indes et sur les toiles des peintres flamands que dans les archives de la côte ou quelques pièces de charpente conservées au fond des mers. Cette thèse, en rassemblant et confrontant des sources aussi éparses, permet de rendre justice à des navires peu connus qui furent pourtant largement mis à contribution dans l'épopée maritime de l'Ancien Régime.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Édition de cinq documents, instructions de Colbert et rapports de Seignelay sur la construction navale hollandaise. — Graphiques. — Tableaux, liste des flûtes intégrées à la Royale de 1654 à 1765. — Dossier iconographique de quarante-neuf planches : cartes, plans de construction, documents figurés et maquettes. — Glossaire. — Chronologie.</p>
+      </div>
           </div>
       </body>
   </text>

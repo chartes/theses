@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Un recueil d'exempla franciscain méridional du &lt;abbr&gt;xiii&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle</title>
         <title type="sub">Édition critique du manuscrit BN</title>
-        <author key="Dandine, Charles" ref="@TODO@">Charles Dandine</author>
+        <author key="Dandine, Charles" ref="https://www.idref.fr/@TODO@">Charles Dandine</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -64,13 +63,7 @@
           <p>Le manuscrit lat. 3555 de la Bibliothèque nationale de France, à Paris, est pour le moment l'unique exemplaire recensé de ce recueil. L'édition et le commentaire se sont par conséquent tous deux basés sur celui-ci. Les comparaisons des récits avec leur source et leurs variantes ont été permises par les précédentes éditions de tels recueils ainsi que par la base de données ThEMA. </p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Analyse du recueil</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Analyse du recueil</head>
           <div>
             <head n="Chapitre premier">La nature du recueil</head>
               <p><emph>Description et histoire du manuscrit.</emph> — Le manuscrit se compose de vingt et un cahiers de douze feuillets ; le recueil d'<emph>exempla</emph> se situe entre les folios 168v et 212. Les <emph>exempla</emph> sont séparés les uns des autres par des pieds-de-mouche et, pour une partie d'entre eux, par des rubriques ; certains sont également introduits par une lettrine avec antennes. L'écriture est très lisible, relativement peu abrégée et les seules annotations du manuscrit se situent dans les recueils de sermons qui encadrent les <emph>exempla.</emph> La période de rédaction peut être estimée entre 1272, date mentionnée dans le recueil, et 1290, peu après la venue en France de Jean de Galles, l'une des sources orales de ces récits. La trace du manuscrit a été retrouvée dans la bibliothèque pontificale d'Avignon en 1369, puis dans celle du cardinal Giovanni Francesco Guidi di Bagno, mort en 1641. Nous le retrouvons ensuite dans les collections de Mazarin, puis dans celles de Colbert en 1667, ce qui explique sa présence au sein de la Bibliothèque nationale de France. </p>
@@ -110,10 +103,12 @@
               <p>Les résumés en français reprennent les <emph>exempla</emph> sans constituer une traduction mot à mot du texte latin. À leur suite sont indiqués pour chaque récit leur numéro dans l'<emph>Index exemplorum</emph> de Frederic Tubach le cas échéant, la source supposée du compilateur, les autres occurrences dans des recueils antérieurs, contemporains et ultérieurs, les variantes notables et les identifications de lieux et de personnes. </p>
           </div>
         </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Glossaire des mots latins remarquables. — Carte des lieux cités dans les <emph>exempla</emph> dans le sud du royaume de France ; carte comparative des lieux cités et des établissements franciscains dans le sud du royaume de France à la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. — Table des correspondances avec l'édition de Jean-Thiébaut Welter ; table des reprises des récits dans des recueils contemporains et postérieurs ; table des villes mentionnées ; table des églises citées. </p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
               </div>

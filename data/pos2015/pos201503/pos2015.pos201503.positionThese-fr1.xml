@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Die</title>
         <title type="sub"></title>
-        <author key="Bur, Gabriel" ref="@TODO@">Gabriel Bur</author>
+        <author key="Bur, Gabriel" ref="https://www.idref.fr/@TODO@">Gabriel Bur</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -63,13 +62,7 @@
         <p>Les sources utilisées ont été d'abord les cartons des « Fondations » du Trésor des chartes, réunissant des lettres et des actes de toutes sortes ayant pour objet l'organisation du culte pour le roi. Une typologie en particulier a orienté le sujet : celle des promesses de prières que les clercs et les religieux envoient au roi pour l'assurer de leurs suffrages. Les cartons des Archives nationales (J 460 à J 467) conservent ainsi des liasses importantes, concernant spécialement Saint Louis, mais aussi quelques exemples pour Philippe le Bel. Les testaments royaux ont également fait l'objet d'une étude comparative pour leurs legs pieux (J 403). Les actes répertoriés par Robert Fawtier dans le <emph>Corpus Philippicum</emph> ont fait l'objet d'un traitement sériel, ainsi que ceux copiés des registres de la chancellerie à partir de 1303. Pour ce faire, la base de données Telma de l'Institut de recherche et d'histoire des textes, qui catalogue les actes utilisés pour établir l'itinéraire royal quel que soit leur lieu de conservation, ainsi que l'édition des registres de Robert Fawtier, ont été mis à profit. Les actes relatifs à des demandes de prières du roi, à des fondations de chapelles, particulièrement sous le vocable de Saint Louis, ainsi que ceux comprenant des clauses de salut – c'est-à-dire un élément rappelant que le roi agit en la matière <emph>pro remedio anime</emph> – ont été ainsi répertoriés. Enfin, l’étude s’est appuyée sur les sources ecclésiastiques, cartulaires, bréviaires et obituaires.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">La mémoire en actes</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La mémoire en actes</head>
             <div>
               <head n="Chapitre premier">Les layettes des fondations</head>
                 <p>La sous-série des Fondations, peu étudiée, a connu une histoire relativement banale, mais qui révèle l'intérêt croissant porté aux actes à connotation purement spirituelle dans les archives. Placés initialement dans les layettes relatives aux lieux concernés ou aux personnes ecclésiastiques en général, leur destin change après le règne de Saint Louis. Le saint roi bénéficie en effet du juste retour de sa générosité aux églises. Après la mort de sa mère, dans les années 1255, à sa demande jointe à celle du pape, une vingtaine d'églises, abbayes, hôpitaux et autres établissements religieux envoient au roi des lettres détaillant les suffrages (messes, oraisons, participation aux bénéfices spirituels) qu'ils établissent en faveur de la reine et de son fils. En 1271, après l'issue tragique de la croisade tunisienne, c'est Philippe le Hardi qui demande à grande échelle des suffrages, demande à laquelle répondent plus de soixante-dix établissements religieux. Ces liasses sont alors pour la première fois réunies dans une layette particulière, sans pour autant que le traitement soit exhaustif à la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. Le règne de Philippe le Bel connaît seulement quatre lettres de promesses de prières : des clarisses de Sainte-Catherine de Provins, du chapitre général de Cluny (deux lettres), des bénédictins de Ferrières-en-Gâtinais et de Saint-Faron de Meaux et des bénédictines d'Horreen (à Trêves). Le premier inventaire détaillé n'a été rédigé que vers 1360 (AN JJ 1<hi rend="sup">10</hi> fol. 3-5v). Il répartit ces actes en quatre coffrets cotés CA et CB (cette dernière cote étant divisée en trois coffrets). Ces coffrets portent tous un intitulé général d'oraison pour le roi et répartissent indifféremment les actes relatifs au règne des souverains. Dans le dernier inventaire médiéval, établi vers 1510 (BNF lat. 9042), ils sont répartis selon l'ordre actuel – c’est le cas depuis le début du <num>x</num><num>v<hi rend="sup">e</hi></num> siècle –, en trois intitulés qu'a conservés Pierre Dupuy au <num>xvii<hi rend="sup">e</hi></num> siècle : « Fondations » I (créations d'établissements proprement dites) II et III (oraisons pour le roi). On y trouve alors les archives d'Alphonse de Poitiers, auparavant absentes ; surtout, les nouvelles dénominations recouvrent un effort de classement net et une innovation importante : on y a en effet transféré toutes les pièces relatives à des établissements de prières et de chapelles, autrefois conservées dans des layettes génériques. N'y sont plus conservés seulement les actes mentionnant des prières, mais également ceux relatifs à la constitution de chapelles, voire les actes de fondation monastique, ce qui explique l'hétérogénéité actuelle.</p>
@@ -121,13 +114,18 @@
                 <p>Au-delà de l'initiative royale, les sujets du roi peuvent l'associer à leurs fondations et aux prières pour leur âme. Le patronage ludovicien qui se répand dans tout le royaume est symbolique de cet état des choses, car le roi y associe fréquemment sa mémoire par l'amortissement. Églises et chapelles se concentrent principalement en Île-de-France et en Normandie, mais les sénéchaussées méridionales voire les terres alphonsines n'en sont pas exemptes. Dans la diffusion du culte ludovicien et de la mémoire royale, les réseaux monastiques jouent également un rôle majeur mais difficile à situer géographiquement. Les cisterciens, les dominicains et les cordeliers notamment avaient déjà établi des célébrations dans tous leurs monastères et couvents de France pour Saint Louis, dont le culte est relayé encore plus largement par la suite dans ces mêmes ordres. Pour Philippe le Bel, l'ordre de Cluny promet une intercession générale, dans le cadre de ses prieurés du royaume. Certains sujets associent nommément le roi à l'intercession pour leur âme. Le plus souvent il s'agit de grands officiers de la couronne, de clercs ou de chevaliers du roi. Il est alors difficile de faire la part des choses entre l'intérêt que peut recouvrir une telle association (amortissement, protection royale) et le rapport qu'elle induit avec le roi. Elles sont néanmoins très symboliques de la place que tient le souverain, qui est partie prenante de l'intercession de ses sujets, mais sur un mode restreint, limité à une frange aisée et plus ou moins proche de la royauté, dans un cadre strictement limité au Domaine.</p>
             </div>
         </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion<lb/>
+          Une politique territoriale ?</head>
+        <p>Au terme de l'étude, le constat est sans surprises celui du caractère très traditionnel et prudent de l'établissement de la prière pour le roi dans le royaume, que l'on peut diviser en quatre cercles quasiment concentriques : un centre monarchique, contrôlé et construit autour de la chapelle et de la nécropole des rois avec l'église majeure de la capitale ; tout autour, et intégrant ce premier cercle, la mémoire du roi s'inscrit dans le vieux Domaine dans un cadre plus familial de dévotions quotidiennes ; dans les acquisitions plus récentes – Normandie, sénéchaussées méridionales, terres alphonsines –, où l'intensité des suffrages pour le roi est tributaire de l'ancienneté de sa présence et de son itinéraire personnel, la prière s'inscrit dans des cadres non maîtrisés, que le roi intègre et hiérarchise ; enfin les terres échappant au contrôle direct de la royauté sont presque vierges, à quelques exceptions près. On prie expressément pour le roi non dans le royaume tout entier, mais sur ses terres : les patronages hérités, les droits féodaux dus laissent églises et monastères plus enclins à assurer la mémoire de leurs protecteurs proches. La carte dévotionnelle reflète donc, voire minore la carte féodale du pouvoir royal, sans pour autant porter préjudice à la conscience d'une identité historique commune. L'investissement religieux de la royauté – exception faite du cœur parisien – semble moins porteur d'un projet d'intégration politique ou idéologique qu'au contraire refléter les devoirs inhérents à la fonction royale, de piété et de protection aux églises.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+        <p>Chronologie des inventaires médiévaux du Trésor des Chartes. — Inventaires des actes de 1232 à 1313 des cartons des Fondations (AN J 460 à 464). — Édition de l'inventaire de 1360 des layettes <emph>super orationibus.</emph> — Listes comparatives des legs pieux des rois dans leurs testaments (1222- 1314). — Cartographie des legs pieux de Philippe le Bel. — Tableau comparatif du coût des legs pieux royaux au <num>xiii<hi rend="sup">e</hi></num> siècle. — Liste des diplômes copiés dans les registres de Philippe le Bel. — Diagramme de l'évolution chronologique de la dévotion de Philippe le Bel. — Cartographie des amortissements royaux (1302-1314). — Cartographie des fondations sous le vocable de Saint Louis. — Cartographie des promesses de prière pour Philippe le Hardi et Saint Louis. — Liste et cartographie des actes mentionnant des clauses de salut (Philippe le Bel). — Liste et cartographie des actes mentionnant des offices pour Philippe le Bel. — Liste et cartographie des fondations de Philippe le Bel.</p>
+      </div>
           </div>
       </body>
   </text>

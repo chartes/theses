@@ -5,16 +5,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">@TODO@</title>
-        <title type="sub">@TODO@</title>
-        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+        <title type="main"></title>
+        <title type="sub"></title>
+        <author key="" ref="https://www.idref.fr/@TODO@"></author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
       </editionStmt>
       <publicationStmt>
         <publisher>École des chartes</publisher>
-        <date when="@TODO@"/>
+        <date when=""/>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
         </availability>
@@ -25,12 +25,12 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @PLACE_HOLDER@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
-        <date when="@TODO@"/>
+        <date when=""/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -48,7 +48,6 @@
           replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
@@ -62,14 +61,8 @@
               <div type="introduction"></div>
               <div type="sources"></div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          </div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="2" type="section"></div>
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
               </div>

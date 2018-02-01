@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Les premières lois imprimées</title>
         <title type="sub">Étude des actes royaux imprimés de Charles VIII à Henri II (1483-1559)</title>
-        <author key="Prévost, Xavier" ref="@TODO@">Xavier Prévost</author>
+        <author key="Prévost, Xavier" ref="https://www.idref.fr/@TODO@">Xavier Prévost</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -72,13 +71,7 @@
           <p>Par conséquent, c’est sous toutes ces réserves qu’est menée l’étude des premières lois imprimées.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">L’impression de la législation</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’impression de la législation</head>
           <div>
             <head n="Chapitre premier">Les formes des actes royaux imprimés</head>
               <p><emph>Des évolutions propres à l’histoire générale du livre.</emph> — L’impression de la législation royale à partir de la fin du <num>xv<hi rend="sup">e</hi></num> siècle modifie la forme des actes royaux. Certes, ces actes restent formellement des lettres patentes, mais leur version manuscrite connaît désormais son ou ses pendants imprimés. Les décisions du pouvoir royal se mêlent alors à la foule des ouvrages que multiplie l’invention de Gutenberg. La crainte de voir les actes de l’autorité se banaliser n’a certainement pas facilité la mise sous presse des lettres patentes, qui se trouvent transformées par leur passage chez l’imprimeur. Il s’agit en effet d’un changement radical, qui rompt avec la tradition séculaire du processus législatif. Le changement est d’autant plus important que la toute nouvelle technique de reproduction des textes connaît elle-même de profondes évolutions au cours de ses premières décennies d’existence. Les actes royaux imprimés s’inscrivent alors dans la riche histoire générale du livre du début des Temps modernes. Ainsi, la forme des lois éditées diffère radicalement si l’on compare les incunables aux actes imprimés en 1559, que ce soit au regard de la typographie employée ou des illustrations accompagnant les textes de la monarchie. Les imprimeurs abandonnent progressivement les caractères gothiques au profit du romain. Il n’existe pas de rupture très tranchée marquant le passage d’une forme typographique à une autre. Il faut plutôt distinguer trois périodes, qui détachent progressivement les reproductions de leur modèle manuscrit. À un recours exclusif aux caractères gothiques, succède une période de transition, qui permet au romain de s’imposer durant le règne d’Henri II. Concernant les illustrations, les bois employés au <num>xv<hi rend="sup">e</hi></num> siècle ne sont en rien propres aux actes royaux, mais servent à l’ornementation d’une grande variété d’incunables. Ces illustrations disparaissent assez rapidement pour laisser place à des fascicules ne reproduisant que les lettres patentes, éventuellement accompagnées d’arrêts d’enregistrement. Quelques pièces font cependant exception. C’est particulièrement le cas des exemplaires de luxe richement décorés, mais aussi de la législation monétaire. Cette dernière est le plus souvent imprimée avec une série de gravures représentant les monnaies concernées par l’acte en question.</p>
@@ -101,13 +94,17 @@
               <p><emph>La conservation des actes royaux imprimés.</emph> — De la même manière, l’imprimé ne supplante pas les modes de conservation traditionnels de la loi. L’innovation technique ne fait pas disparaître les mécanismes antérieurs, et le changement s’opère de manière très progressive. Avant 1559, les actes royaux imprimés ne trouvent qu’une place réduite dans la procédure de l’enregistrement, mais donnent déjà naissance à un nouveau mode de conservation non institutionnel de la législation royale. La diffusion massive des actes royaux conduit certains érudits à forger d’importantes collections. Certes, ces dernières souffrent de lacunes, mais elles constituent un complément essentiel qui comble encore aujourd’hui certains vides de la conservation officielle de la législation royale. La masse des actes royaux imprimés à la pièce a également permis la formation des immenses recueils factices de la série F de la BNF, qui offrent d’inépuisables ressources pour les chercheurs.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Les insuffisances des registres officiels et la dispersion des expéditions authentiques rendent difficile l’appréhension globale de la législation d’Ancien Régime. Le dépouillement des lettres patentes imprimées conservées dans les collections de la Bibliothèque nationale de France a notamment cherché à combler partiellement cette lacune. Non seulement ces petites pièces imprimées permettent de prendre facilement connaissance du texte d’un grand nombre d’actes royaux, mais elles ont en elles-mêmes fait évoluer le processus législatif à l’aube des Temps modernes. Les trois cent sept pièces analysées et les deux cent soixante-sept actes royaux différents qu’elles contiennent ont, en effet, permis de s’interroger sur les rapports entre l’apparition d’un marché des actes royaux imprimés et le processus législatif. Cette étude en appelle donc de nouvelles, en particulier pour comprendre l’évolution du phénomène jusqu’à la fin de l’Ancien Régime.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Pièces justificatives</head>
+          <p>Exemples d’actes royaux incunables et post-incunables. –– Exemples d’actes royaux imprimés après 1530. — Exemples d’originaux imprimés. — Exemples de copies imprimées sur parchemin avec mentions manuscrites.</p>
+      </div>
           </div>
       </body>
   </text>

@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Les chasses royales sous Louis XVI et leur sort durant la Révolution : splendeur et ruine du monde des plaisirs de Sa Majesté (1774-1799)</title>
         <title type="sub"></title>
-        <author key="Pinoteau, Henri" ref="@TODO@">Henri Pinoteau</author>
+        <author key="Pinoteau, Henri" ref="https://www.idref.fr/@TODO@">Henri Pinoteau</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -63,13 +62,7 @@
           <p>Les recherches menées dans le cadre de ce travail ont conduit à exploiter des sources variées, provenant d’institutions tant centrales que locales. La période d’Ancien Régime peut être documentée d’abord par les fonds conservés aux Archives nationales. La sous-série O<hi rend="sup">1</hi> déjà bien connue des chercheurs livre une masse d’informations sur la composition des services de chasse, dans sa partie généralement appelée par commodité « Papiers du grand veneur » ; mais cet ensemble de documents reçus par le secrétaire d’État de la Maison du roi reste assez décevant pour la compréhension du fonctionnement interne des services. La sous-série O<hi rend="sup">1</hi> contient en outre de nombreux plans issus de la direction des Bâtiments, ainsi que les instructifs bons du roi. Les fonds de la Cour des aides (Z<hi rend="sup">1A</hi>), des Eaux et Forêts (Z<hi rend="sup">1E</hi>) et de la Varenne du Louvre (Z<hi rend="sup">1Q</hi>), ont été riches en renseignements sur le personnel, les routes de chasse et les permissions de chasse. La série E en est un complément intéressant, notamment du point de vue forestier, par les minutes des arrêts du Conseil du roi. Les fonds des archives départementales de Seine-et-Marne et des Yvelines ont été des apports décisifs, complétant utilement la période de l’Ancien Régime. La série A de ces deux services a surtout apporté des cartes et des plans, tandis que les séries B et C renseignent sur les maîtrises, les capitaineries, ou encore les élections. Quelques documents complémentaires peuvent se trouver dans les papiers de familles (série E) et dans les archives privées (séries Fi et J). Le département des Cartes et Plans de la Bibliothèque nationale fournit quelques documents cartographiques à même de compléter ceux conservés dans les archives départementales et aux Archives nationales, en particulier la fameuse carte des chasses. Enfin, des almanachs de la vénerie ont été consultés au département des Manuscrits et à la Bibliothèque de l’Arsenal. Pour ce qui est de la période révolutionnaire, les fonds conservés aux Archives nationales sont bien plus pauvres : seuls quelques documents dans la sous-série F<hi rend="sup">10</hi> ont pu être exploités. En revanche, les fonds des archives départementales de Seine-et-Marne et des Yvelines ont fourni presque l’intégralité des sources pour la période révolutionnaire, surtout à partir de la chute de la monarchie. La série L tant en Seine-et-Marne qu’aux Yvelines ainsi que la série Q aux archives départementales des Yvelines ont ainsi documenté tous les propos de cette étude, que ce soit sur les forêts, les bâtiments, ou encore la législation. Quant aux sources imprimées, elles comprennent à la fois des traités cynégétiques emblématiques, des biographies, des récits et des mémoires, mais aussi des almanachs, des textes législatifs et réglementaires, tant isolés que sous forme de recueils parfois commentés. Des ouvrages de généalogie ainsi que des écrits relevant de l’opinion publique les complètent.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Le roi et la chasse, passion et enjeux</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le roi et la chasse, passion et enjeux</head>
           <div>
             <head n="Chapitre premier">Passion du roi, plaisirs de roi</head>
               <p>L’importance de la place de la chasse à la cour de France est une constante depuis le Moyen Âge. L’éclat des laisser-courre de Fontainebleau<term rend="index" key="Fontainebleau"/>, de la vallée de la Loire, de Saint-Germain<term rend="index" key="Saint-Germain"/>, et bientôt de Versailles<term rend="index" key="Versailles"/>, Compiègne<term rend="index" key="CompiËgne"/>, Rambouillet<term rend="index" key="Rambouillet"/>, ont marqué les mémorialistes et les chroniqueurs du temps. Le roi chassait beaucoup, chassait bien, et chassait fastueusement. Il s’agit de décrire plus précisément le lien étroit entre le souverain et une activité violente, exigeante et technique, et pourtant non dénuée d’une élégance et de rituels que les rois pousseront jusqu’au raffinement. Le roi ne chassait pas uniquement pour son loisir, bien que peu d’activités eussent autant plu à Louis XVI<term rend="index" key="Louis XVI"/> que celle-ci. C’était aussi pour lui une manière parmi d’autres d’exercer un devoir de représentation vis-à-vis de ses sujets. Ce n’est pas pour rien que le roi chasseur est un lieu commun dans l’imaginaire collectif, curial comme populaire. Le roi y consacrait son temps, son argent, il en réglait les détails et les cérémonies, et il en fit parfois l’instrument de sa politique curiale. Ce lien tout particulier entre un personnage et une activité fait de ses chasses un modèle du genre.</p>
@@ -126,13 +119,17 @@
               <p>Que faire des domaines réservés aux chasses du roi une fois la monarchie abolie ? C’est la question qui se posa à la République dès son avènement. Il est certain que leur aspect cynégétique tombait de lui-même, puisqu’aux chasses royales ne succédait aucune chasse de la République. Les forêts concernées n’étant plus soumises aux contraintes de conservation du gibier, seul leur composante proprement forestière demeurait. Redevenues de simples réserves de bois, les forêts n’en connurent pas moins des dégradations très graves durant la Révolution, dans la continuité des troubles des années 1790 et 1791 mais aussi de tous les délits forestiers d’Ancien Régime qui se multiplièrent alors avec une déconcertante facilité. Différentes tentatives pour organiser l’administration des Eaux et Forêts ne donnèrent pas de résultats probants, ce qui empêcha la constitution d’un cadre stable et solide pour lutter contre les déprédations dont les forêts furent atteintes. Bien au contraire, ces masses de bois déjà éprouvées par les dévastations furent encore plus mises à mal par l’administration qui ordonna des coupes extraordinaires, bouleversant ainsi les révolutions respectées tant bien que mal par les maîtrises sous l’Ancien Régime. Les gardes-bois furent les derniers témoins de la surveillance des anciens domaines de chasse, mais leur inefficacité face aux délits, dont même les autorités locales étaient complices, imposait le recours à d’autres forces armées telles que la gendarmerie ou l’armée. Au fond, le seul avantage que tirèrent les forêts de cette période fut la disparition presque totale du gibier qui en avait abîmé les jeunes plants impunément des siècles durant. L’augmentation du nombre de loups fut quant à elle très difficile à contrer, quels que fussent les moyens tentés pour lutter contre ce fléau. Pour toutes ces raisons, les grandes forêts de chasse traversèrent dans les années révolutionnaires une période particulièrement agitée, faute notamment d’une organisation centrale solide et cohérente du fait des bouleversements politiques. Aujourd’hui, seuls quelques pavillons et le réseau des routes tracées pour les plaisirs des rois peuvent témoigner de ce que fut ce monde condamné avec son maître.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Après le règne de Louis XV qui avait porté ses chasses au sommet de leur éclat vint un règne marqué par la nécessité de réduire les dépenses des chasses. Louis XVI, fervent chasseur, réduisit tout au long de son règne le nombre de ses équipages. Cet univers qu’il avait choyé, que ce soit à travers le personnel, l’édification de nouveaux bâtiments, l’ouverture de routes à travers ses forêts, fut d’abord ébranlé en 1787 par les coupes budgétaires et les réformes, avant d’être confronté aux événements révolutionnaires : le roi cessa presque complètement de chasser dès son départ pour Paris. C’est Louis XVI<term rend="index" key="Louis XVI"/> qui décida seul de cesser de chasser, car si l’abolition des capitaineries répondit aux vœux de tous, jamais personne ne réclama la fin des chasses royales, au contraire. Voilà peut-être le signe le plus éclatant que la chasse était indissociable de la personne du roi dans l’esprit de tous, et il est remarquable que ce signe se fût manifesté sous la Révolution. La lente naissance d’un nouveau droit de chasse accompagna la disparition des capitaineries, les graves troubles ruraux, et la mise en sommeil des derniers grands services de chasse. La chute de la monarchie porta le dernier coup à ce monde, dont seuls les gardes-chasse, les routes et quelques bâtiments de garde pouvaient encore témoigner ; mais de ces ruines subsista surtout l’esprit qui en avait été l’âme des siècles durant et qui liait si étroitement pouvoir politique et chasse.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Chronologie des services de chasse royaux au <num>xviii<hi rend="sup">e</hi></num> siècle. — Chronologie des chasses à courre, chasses aux toiles et tirés de Louis XVI. — Extrait du règlement du roi du 9 août 1787, sur quelques dépenses de sa Maison et de celle de la reine. — Exemple de procès-verbal d’un garde-chasse. — Décret de l’Assemblée nationale sur la chasse, 22 avril 1790. — Personnel de surveillance des parcs de Versailles et Marly avant et après 1792. — Description de l’intérieur d’une écurie et de plusieurs chenils du Grand Chenil à Versailles le 17 juillet 1794.</p>
+      </div>
           </div>
       </body>
   </text>

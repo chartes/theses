@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Maximilien Rube</title>
         <title type="sub"></title>
-        <author key="Le Moullec-Rieu, Aude" ref="@TODO@">Aude Le Moullec-Rieu</author>
+        <author key="Le Moullec-Rieu, Aude" ref="https://www.idref.fr/@TODO@">Aude Le Moullec-Rieu</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -68,13 +67,7 @@
           <p>Plusieurs entretiens ont complété l'apport des sources manuscrites et imprimées. Un premier avec Jacques Cotin, qui a travaillé sous la direction de Pierre Buge, directeur littéraire de la Bibliothèque de la Pléiade de 1966 à 1987, avant de lui succéder jusqu'en 1997, a apporté des informations utiles sur le point de vue de la maison Gallimard et le fonctionnement interne de la Bibliothèque de la Pléiade. Un point de vue de la maison d'édition du Parti communiste français, les Éditions sociales, qui est le principal éditeur de Marx en français, méritait d'être entendu. Lucien Sève (né en 1926) les a dirigées de 1970 à 1982. Sous sa direction, elles ont repris la publication des œuvres complètes de Marx, en mettant l'accent sur leur caractère scientifique et en s'autorisant de nouvelles traductions, comme celle de Jean-Pierre Lefebvre (né en 1943) pour le livre I du <emph>Capital</emph>, qu'il nous a semblé pertinent de consulter pour son expérience de traducteur de Marx.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Genèse du projet éditorial</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Genèse du projet éditorial</head>
          <div>
            <head n="Chapitre premier">Pourquoi éditer Marx en France à la fin des années 1950 ?</head>
              <p>Il est essentiel d'inscrire l'édition proposée par Rubel dans l'histoire de la publication des œuvres de Marx. Les écrits de Marx posent plusieurs problèmes d'édition : non seulement Marx a laissé nombre de manuscrits inachevés, mais il existe parfois plusieurs états différents de textes publiés par Marx, et donc validés par l'auteur. Dès les premières éditions posthumes, les questions d'édition et les difficultés matérielles se sont mêlées à des enjeux politiques, comme l'illustre la première tentative d'édition des œuvres complètes de Marx et Engels, <emph>Marx-Engels-Gesamtausgabe</emph>, entreprise en URSS dans les années 1920 par David Riazanov, victime en 1935 des premières purges staliniennes.</p>
@@ -130,13 +123,20 @@
               <p>L'érudition de l'édition proposée par Rubel est volontiers célébrée. La question de la qualité des traductions reste secondaire. Le point clé de la réception de l'édition des <emph>Œuvres</emph> de Marx dans la Bibliothèque de la Pléiade est la discussion de son caractère scientifique. Si la révision de l'édition d'Engels des livres II et III du <emph>Capital</emph> à partir des manuscrits de Marx conservés à Amsterdam interroge, cette question apparaît dès le premier tome, à cause notamment du choix fait par Rubel d'inverser les deux derniers chapitres du livre I. Les éditeurs de Marx et Engels pour les Éditions sociales, et au premier chef Gilbert Badia, sont sans surprise les premiers à contester l'édition proposée par Rubel, alors qu'elles-mêmes s'engagent dans le projet d'une édition des œuvres complètes de Marx et Engels en français. Sans contester l'antagonisme politique qui anime les protagonistes, il faut souligner qu'ils s'appliquent à placer leur critique sur le plan scientifique, où ils rejoignent souvent des critiques pourtant séduits par le projet de Rubel, comme Raymond Aron. Les réponses, que Rubel ou ses collaborateurs s'attachent à donner en son nom, permettent de comprendre qu'à leurs yeux le caractère scientifique de l'édition réside dans l'appareil critique, là où les critiques se concentrent sur l'établissement d'un texte fiable.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Depuis ses premiers travaux sur Marx, Maximilien Rubel n'a eu de cesse d'affirmer la nécessité d'une édition historique et critique des écrits de Marx, dans la lignée de la première MEGA entreprise en URSS dans les années 1920 par Riazanov. L'insistance de Rubel l'impose auprès de Gallimard comme l'éditeur de Marx, dans la Bibliothèque de la Pléiade. Il ne cache pas vouloir réaliser l'édition française de référence, voire même une référence dans les éditions de Marx.</p>
+          <p>La Bibliothèque de la Pléiade peut-elle porter cette ambition ? Si elle est aujourd'hui associée à la critique génétique des textes, la collection avait à l'origine vocation à rassembler un maximum d'écrits d'un auteur en un même volume, sans autre souci du texte. Mais à la parution du premier tome en 1963, la Bibliothèque de la Pléiade semble déjà posséder le pouvoir de légitimation qu'on lui connaît, car de nombreux observateurs y voient la confirmation que Marx est bien devenu un auteur classique. Il reste que les intérêts de la maison Gallimard sont commerciaux. Ses réticences à accueillir Marx dans la Bibliothèque de la Pléiade lors des premières tentatives de Rubel, en 1955 puis en 1957, le montrent très clairement. Ce n'est qu'en 1960 que Michel puis Robert Gallimard cèdent, alors que, le PCF perdant de son influence, l'intérêt pour les textes de Marx et Engels grandit et que leur étude investit pleinement le champ universitaire, pour devenir une référence intellectuelle et non plus simplement politique. D'ailleurs, l'édition des <emph>Œuvres</emph> de Marx dans la Bibliothèque de la Pléiade est un succès, ce qui explique sans doute l'indulgence dont jouit Rubel, en particulier celle de Robert Gallimard, malgré l'accumulation de ses retards – quatre volumes en trente ans, pour une édition laissée inachevée – et les sévères critiques qu'il s'attire.</p>
+          <p>Rubel, dont l'anticommunisme et l'antimarxisme se réclament de Marx, a beau jeu de souligner que ces critiques émanent bien souvent d'adversaires politiques, au premier rang desquels les éditeurs de Marx et Engels pour les éditions du PCF. Pourtant, c'est bien le caractère scientifique de l'édition que ceux-ci contestent, en prenant garde d'éviter le terrain de l'affrontement politique. Si l'aspect théorique de certains points, comme le rôle d'Engels, ne doit pas dissimuler leur portée politique, il faut relever que se fait jour une divergence dans la définition du ou des critères pour juger du caractère scientifique d'une édition. Aux yeux de Rubel, le très érudit « appareil historico-critique » qu'il propose et qui fait, comme il ne se lasse pas de le répéter, l'originalité de son édition, prime sur la fidélité à l'original – si jamais il existe, dans la mesure où Marx a écrit et réécrit les mêmes textes, même après les avoir publiés. Celui qui soupçonne systématiquement les éditeurs liés aux partis communistes de parti‑pris idéologiques, n'hésite pas à se servir de l'appareil critique pour exposer sa propre conception de l'œuvre marxienne.</p>
+          <p>L'édition Rubel est finalement une manière originale d'entrer dans l'histoire des éditions françaises de Marx et Engels, qui reste à écrire. Pourquoi ne pas commencer par l'édition Costes, dont on a souligné de fait l'importance ? Il faudrait ensuite s'intéresser en détail aux tentatives d'édition d'œuvres complètes par le PCF et rassembler les archives des générations successives d'éditeurs et traducteurs de Marx et Engels. Une telle étude ne saurait négliger les tentatives isolées d'édition et de traduction, ni les réutilisations de traductions anciennes. En somme, il s'agirait de tenter de comprendre comment il n'existe pas à ce jour, malgré l'importance de la figure de Marx dans la vie intellectuelle et politique française, d'édition francophone de référence des écrits de Marx (et Engels).</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Pièces justificatives</head>
+          <p>Plan remis à Dionys Mascolo en novembre 1955. — Lettre de Maximilien Rubel à Brice Parain, 24 mars 1957 et réponse de Brice Parain, 27 mars 1957. — [Note pour une édition des œuvres de Marx], Lucien Goldmann. — Avertissement de Maximilien Rubel à <emph>Économie I.</emph> — Avis au lecteur, Karl Marx, <emph>Le Capital</emph>, Paris, 1872-1875. — Notice et notes du livre I du <emph>Capital</emph> de Maximilien Rubel pour <emph>Économie I.</emph> — Notice et notes des livres II et III du <emph>Capital</emph> de Maximilien Rubel pour <emph>Économie II.</emph> — Lettres de Louis Évrard à Maximilien Rubel, 28 novembre 1963, 8 avril 1969, 5 juillet 1975.</p>
+      </div>
           </div>
       </body>
   </text>

@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Le ballet de l’Opéra de Paris sous le Second Empire</title>
         <title type="sub"></title>
-        <author key="Fissier, Émilie" ref="@TODO@">Émilie Fissier</author>
+        <author key="Fissier, Émilie" ref="https://www.idref.fr/@TODO@">Émilie Fissier</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -65,13 +64,7 @@
           <p>La grande majorité des sources utilisées pour cette étude est constituée par les très riches archives de l’Opéra conservées dans la sous‑série AJ/13 des Archives nationales. Elles regroupent des documents très nombreux et divers : traités et contrats, documents officiels, mais aussi notes de services, rapports internes, correspondance très abondante, listes de matériel, parfois croquis et photographies, etc. L’autre partie des sources est constituée d’écrits et de témoignages d’époque, publiés ou manuscrits, notamment des personnages importants comme le maître de ballet Arthur Saint‑Léon ou le professeur Léopold Adice. Ces ouvrages sont conservés dans plusieurs départements de la Bibliothèque nationale de France, tout comme l’iconographie illustrant ces travaux, accessible grâce aux ressources numérisées de la BNF.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">La gestion administrative du ballet de l’Opéra de Paris</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La gestion administrative du ballet de l’Opéra de Paris</head>
           <div>
             <head n="Chapitre premier">L’administration du Théâtre impérial de l’Opéra sous le Second Empire</head>
               <p>Le Second Empire est une période de remaniements permanents de l’administration des théâtres au niveau étatique. Pourtant, excepté le rétablissement de la censure en 1850, ces bouleversements demeurent très superficiels et ne changent en réalité pas grand-chose à la gestion des théâtres des décennies précédentes. Dans l’organisation du Second Empire, l’Opéra fait partie des théâtres subventionnés par le pouvoir impérial, auquel il sert d’ailleurs de vitrine. À ce titre, la gestion de l’Opéra est très encadrée par son ministre de tutelle, qui garde un œil attentif sur tout ce qui se passe au Théâtre impérial et revêt de son autorisation toutes les décisions de son directeur.</p>
@@ -123,13 +116,18 @@
               <p>Les créations chorégraphiques du Second Empire usent dans leurs thèmes de certains motifs récurrents. Les intrigues amoureuses, les jalousies et le mariage sont ainsi au cœur de tous les ballets, qui emploient aussi régulièrement la mise en abyme de danseuses ou de troupes théâtrales. Ainsi, la figure si importante de la femme évolue dans le ballet : de l’héroïne romantique, surnaturelle et virginale, on passe, sous le Second Empire, à une héroïne séductrice voire érotisée. On utilise également abondamment la « danseuse en travestie », qui plaît tant au public masculin de l’Opéra. </p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Cette étude a pu mettre en évidence l’absence de politique pour le ballet de la part de l’administration de l’Opéra sous le Second Empire, et pourtant, un passage, dans les années 1860, d’un <emph>star system</emph> subi par le théâtre à une volonté de former ses propres étoiles, enjeu majeur de l’époque, que l’Opéra peine à relever. Le <emph>star system</emph> lui‑même change, sous le Second Empire, en même temps que la gestion de leur carrière par les artistes les plus en vue : ces derniers semblent s’attacher davantage à un ou deux théâtres où ils jouent par saisons, et faire de moins en moins de tournées telles que les pratiquaient les artistes romantiques des décennies précédentes.</p>
+          <p>La veine du ballet romantique est elle‑même de moins en moins utilisée dans les créations, qui investissent plutôt les goûts du temps. Par sa forme, ses thèmes et son esthétique, le ballet de l’Opéra tend vers les nouveaux types de spectacles dansés qui émergent à l’époque dans les nouveaux lieux de divertissements : plus courts et visant surtout la distraction et l’agrément visuel, ils plaisent au nouveau public bourgeois de la seconde moitié du <num>xix<hi rend="sup">e</hi></num> siècle. </p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Douze tableaux. — Sept documents édités. — Dix-neuf illustrations. —  Un index.</p>
+      </div>
           </div>
       </body>
   </text>

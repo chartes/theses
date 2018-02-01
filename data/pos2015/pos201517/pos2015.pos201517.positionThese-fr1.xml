@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Quand un prélat monte à la capitale</title>
         <title type="sub">Tristan de Salazar et l’hôtel parisien des archevêques de Sens</title>
-        <author key="Morel, Thomas" ref="@TODO@">Thomas Morel</author>
+        <author key="Morel, Thomas" ref="https://www.idref.fr/@TODO@">Thomas Morel</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -65,13 +64,7 @@
             <p>Les anciennes archives de l’archevêché de Sens (consultables aux archives départementales de l’Yonne) sont exceptionnellement bien conservées et renferment des documents très complets sur Tristan de Salazar lui-même, ainsi que deux liasses très riches renfermant des documents de gestion de l’hôtel de Sens du <num>xvii<hi rend="sup">e</hi></num> et du <num>xviii<hi rend="sup">e</hi></num> siècle. Un dépouillement systématique des instruments de recherche des Archives nationales a permis d’utiliser de nombreux documents du Minutier central des notaires de Paris, source précieuse pour l’histoire de l’hôtel à l’époque moderne. Les archives de la Commission municipale du Vieux Paris (cvp), les procès-verbaux des séances de cette même Commission et le dossier de restauration de l’hôtel de Sens, conservé à la Médiathèque de l’architecture et du patrimoine, ont permis quant à eux de retracer l’histoire de l’édifice à l’époque contemporaine. Enfin, les fonds iconographiques de plusieurs institutions ont livré un grand nombre de vues anciennes de l’hôtel (dessins, estampes et photographies), grâce auxquelles on a pu restituer beaucoup de détails formels de l’édifice (Musée Carnavalet, cvp, <emph>Topographie de la France</emph> de la Bibliothèque nationale, Bibliothèque historique de la Ville de Paris, fonds Albert Lenoir à l’Institut national d’histoire de l’art, Médiathèque de l’architecture et du patrimoine).</p>
         </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><p/>
+          <div n="2" type="section"><div n="1" type="part"><p/>
         <div>
           <head n="Chapitre liminaire">Portrait d’un bâtisseur : quarante ans au service de l’Église et du roi</head>
             <p>Tristan de Salazar est le fils d’un routier espagnol, Jean de Salazar, venu tenter sa chance en France à la tête d’une compagnie de mercenaires dans le cadre des affrontements de la guerre de Cent Ans. En 1428, il entre au service de Charles VII, qui lui accorde plusieurs faveurs. Louis XI, par la suite, use semble-t-il des Salazar comme il le fait d’autres familles de petite extraction dont il souhaite s’assurer la fidélité : il favorise leur implantation territoriale ciblée aux confins de l’Île-de-France et de la Champagne en accordant des terres à Jean de Salazar, et leur confie des postes importants afin de s’en faire des agents loyaux. C’est ainsi que le roi fait nommer Tristan de Salazar à l’évêché de Meaux en 1473, puis à l’archevêché de Sens en 1474, toujours dans le cadre de cette stratégie d’implantation territoriale (ce traitement fait penser à celui de François Hallé à Narbonne ou de la famille des Croismare à Rouen).</p>
@@ -116,13 +109,17 @@
               <p>Le décor sculpté de l’hôtel de Sens se caractérise d’abord par le raffinement de l’encadrement de ses baies. La plupart des fenêtres de l’hôtel présentent un encadrement semblable à celui d’origine, avec de savants effets de variation d’un groupe de baies à l’autre selon le statut du bâtiment qu’elles éclairent. Quant aux portes, elles ont gardé dans leur encadrement une mouluration complexe et très expressive. Les élégantes nervures moulurées qui scandent les murs extérieurs des tourelles du châtelet d’entrée sont également d’origine. Outre le raffinement de ces éléments moulurés, les murs extérieurs de l’hôtel de Sens étaient animés par des éléments de décor figuré de qualité. Deux dessins effectués sous les instructions de François-Roger de Gaignières (début du <num>xviii<hi rend="sup">e</hi></num> siècle) rendent compte de la grande qualité du décor à la fois figuré, abstrait et héraldique qui ornait les tympans de la porte cochère et de la porte piétonne du porche d’entrée, ainsi que de la porte donnant sur la rue de la Mortellerie. Mais le décor sculpté de l’hôtel de Sens se caractérisait aussi par l’emploi récurrent d’un motif de cordons d’arcs trilobés. Ces cordons enserraient entre autres le contour des culs-de-lampe supportant les tourelles de l’hôtel, les retombés des arcs trilobés étant suspendus au-dessus du vide : un tel emploi de ce motif est assez original – on le trouve habituellement plaqué sur un mur ou logé dans l’archivolte d’un arc.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>La restitution des dispositions d’origine de l’hôtel de Sens permet de saisir plus finement la place de cet édifice dans le contexte architectural de l’époque, ainsi que les intentions de son commanditaire. L’emploi caractéristique des cordons d’arcs trilobés corrobore l’attribution de la paternité de l’hôtel à Gillet Grain, dont les interventions aux églises de Nogent-sur-Marne et de Saint-Germain-de-Charonne se caractérisent par un emploi semblable du même motif. L’hôtel de Sens présente plusieurs traits de raffinement et de virtuosité qui en font une œuvre de qualité, mais la principale réussite de son architecture est sans doute son style très expressif, soutenu par des emprunts appuyés à l’architecture militaire (tourelles, bretèche) et palatiale (le grand escalier, avec sa tourelle en surplomb conduisant à une chambre haute, rappelle la grande vis du Louvre). Ce parti architectural, très évocateur et de ce fait très lourd de sens, trouve sans doute son explication dans l’intention de Tristan de Salazar de s’approprier le symbole traditionnel de l’aristocratie que constitue l’architecture castrale – loin des nouveautés italiennes, qui sont pratiquement absentes de l’architecture de l’hôtel –, afin d’améliorer l’image de sa famille.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Pièces justificatives</head>
+          <p>Marché de maçonnerie pour la construction du logis sud de l’hôtel de Sens, 14 février 1498. — Marché de maçonnerie passé par la reine Marguerite de France pour des travaux à l’hôtel de Sens, 16 décembre 1605. — Bail d’un appartement à dame Élisabeth de Myr par l’archevêque Languet de Gergy, 9 janvier 1745. — État des lieux de l’hôtel dressé à l’occasion du bail conclu entre l’État et le sieur Mangin, 2 mars 1793.</p>
+      </div>
           </div>
       </body>
   </text>

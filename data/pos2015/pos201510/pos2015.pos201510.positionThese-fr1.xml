@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Vivre hors du cloître</title>
         <title type="sub">L'habitat canonial à Metz au Bas Moyen Âge (1200-1530)</title>
-        <author key="Frantzwa, Guillaume" ref="@TODO@">Guillaume Frantzwa</author>
+        <author key="Frantzwa, Guillaume" ref="https://www.idref.fr/@TODO@">Guillaume Frantzwa</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -68,13 +67,7 @@
         <p>On peut compléter notre examen du patrimoine capitulaire au moyen de quelques documents conservés à la Bibliothèque nationale de France, notamment le cartulaire-censier du chapitre élaboré en 1330.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">« Metz la riche » : apogée urbain et rayonnement canonial</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">« Metz la riche » : apogée urbain et rayonnement canonial</head>
             <div>
               <head n="Chapitre premier">Une ville en plein essor</head>
                 <p>L'histoire de la ville de Metz au Moyen Âge est remarquable, bien plus que ne le laisse penser sa place actuelle très secondaire dans le panorama français. Au début du Haut Moyen Âge, la ville voit son importance économique rehaussée d'un intérêt politique nouveau. Après avoir définitivement intégré le futur Saint Empire romain, Metz s'affirme comme une puissance locale autonome et redoutable, jusqu'à sa chute entre les mains d'Henri II en 1552. L’Église de Metz revêt un rôle de grande importance dès l'époque de Charles Martel, ses évêques s'arrogent ou se voient accorder les pouvoirs temporels, et arrivent à l'apogée de leur puissance au <num>xi<hi rend="sup">e</hi></num> siècle.</p>
@@ -124,13 +117,17 @@
               <p>Le mobilier des maisons canoniales n'est pas connu au-delà des mentions textuelles des dossiers de succession ; il convient donc de se documenter auprès des institutions disposant de meubles médiévaux pour avoir une idée de ce qui garnissait les salles et les chambres des maisons canoniales. Il faut faire une mention particulière des bibliothèques canoniales, dont une partie des manuscrits et incunables fait partie des collections publiques et renseigne non seulement sur les centres d'intérêt des chanoines et leur pouvoir de commande, mais encore sur les producteurs des ouvrages. Des relations nettes avec les enlumineurs et les imprimeurs italiens sont ainsi perceptibles à la veille de la Renaissance.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p><emph>In fine</emph>, il apparaît que les chanoines de la cathédrale de Metz forment un milieu complexe, aux origines diverses, mais dont le statut social est solidement appuyé sur une fortune foncière constituée vraisemblablement dès le Moyen Âge central. Les maisons canoniales issues de ce patrimoine accompagnent en conséquence les mutations à l’œuvre dans la cité à la jonction des époques romane et gothique, sans que l'on puisse forcément en déterminer les jalons. Cependant, l'étude de ces résidences a montré que certains prédicats de l'historiographie locale devaient être revus et corrigés. En particulier, si la vieille idée selon laquelle l'architecture locale aurait calqué ses usages sur l'architecture italienne reste vraie pour certains aspects techniques, il est clair aujourd'hui qu'elle ne tient pas compte de témoins plus proches de la cité, dans des régions avec qui Metz avait certainement des contacts réguliers, comme la Bourgogne et la Rhénanie. De surcroît, les travers de l'historiographie et de l'histoire locale contemporaine font oublier souvent encore l'appartenance de la ville à l'Empire à l'époque médiévale, ce qui fausse nécessairement l'étude des bâtiments messins dans la mesure où l'Empire a connu des évolutions sensiblement différentes de ce qui a pu être observé dans la France capétienne. On peut ajouter que le monde des chanoines semble empreint d'une culture assez homogène, qui s'ouvre à la créativité des laïcs en affirmation au Bas Moyen Âge puis à la modernité de la Renaissance. Si les émotions de la réforme puis les troubles de l'installation des Français en 1552 ont quelque peu étouffé la création artistique à Metz, il est remarquable qu'une bonne portion des quelques exemples d'art de la Renaissance conservés sont imputables aux membres du chapitre cathédral et se trouvent en partie au sein des maisons canoniales subsistantes, preuve encore une fois des capacités d'adaptation et de l'attention de ce milieu aisé aux mutations du temps.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Les statuts du chapitre de 1408. — Deux statuts du chapitre de 1454 et 1455. — Statut du chapitre de 1469. — Le dossier de succession de Jean Chardalle (1501-1507). — Extrait du dossier de succession de Jean Herbillon (1517). — Extrait du compte-rendu de la vente des meubles du coutre Hermann (1509). — Bourgeois et ruraux de Lorraine au chapitre de Metz. — Étrangers et inconnus au chapitre de Metz.</p>
+      </div>
           </div>
       </body>
   </text>

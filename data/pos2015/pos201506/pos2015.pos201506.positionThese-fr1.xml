@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Les activités à caractère culturel dans les établissements pénitentiaires français (de la Libération aux années 1980)</title>
         <title type="sub"></title>
-        <author key="Delalande, Flora" ref="@TODO@">Flora Delalande</author>
+        <author key="Delalande, Flora" ref="https://www.idref.fr/@TODO@">Flora Delalande</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -65,13 +64,7 @@
           <p>Jusqu'alors, aucun état des sources, même sommaire, ne concernait les activités culturelles en détention. Sur la première période, notre principale source réside dans les fonds de l'administration pénitentiaire conservés aux Archives nationales et à l'École nationale d'administration pénitentiaire (ENAP). Notes de service, circulaires, textes réglementaires, rapports d'inspection, revues, correspondances sont autant de documents permettant de comprendre la mise en place des activités culturelles et le rôle de chacun des acteurs. Les mémoires des élèves-éducateurs de l'administration pénitentiaire constituent une source incontournable. Témoins de la mise en œuvre pratique des activités culturelles et des missions qui leur sont assignées, ils révèlent à quel point la politique d'intervention culturelle n'est pas sans poser des problèmes d'identité. Pour la seconde période, les archives du ministère de la Culture deviennent une source indispensable. Les échanges de notes témoignent des relations qui se tissent, des dispositifs qui se mettent en place mais aussi de certaines tensions. Les artistes et les associations, nouveaux acteurs en détention, apparaissent derrière la présentation de leurs projets, leurs demandes de subvention, leurs rapports d'activité et leurs correspondances avec l'administration centrale. Par ailleurs, la présence de documents iconographiques est assez rare dans le champ des études pénitentiaires pour être signalée. Enfin, des archives privées ont été utilisées de manière plus ponctuelle pour éclairer des points particuliers. Il en est ainsi du fonds Étienne Bloch ou des fonds d'associations tels que le GENEPI ou Peuple et Culture.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Les premiers pas des activités à caractère culturel au sein de l'administration pénitentiaire (1945-début des années 1980)</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les premiers pas des activités à caractère culturel au sein de l'administration pénitentiaire (1945-début des années 1980)</head>
           <div>
             <head n="Chapitre premier">De la Libération à la crise pénitentiaire : de rares activités pour assister et éduquer le détenu ?</head>
               <p>Paradoxalement, c'est la seconde guerre mondiale qui permet aux premiers acteurs culturels d'investir le milieu carcéral : les assistantes sociales sont autorisées à entrer en détention. Dans un élan caritatif et du fait de leur culture professionnelle, elles tentent de proposer aux détenus quelques séances à caractère culturel avec les moyens du bord.</p>
@@ -103,13 +96,20 @@
               <p>Devant la multiplication des interactions, il convient de repenser les structures pénitentiaires. Annoncée en 1985, la structuration des services socio-éducatifs se met en place au cours de l'année 1986, tant au niveau local que régional. Leurs règles de fonctionnement sont quant à elles clairement définies en 1987. Ainsi, le rapport de service socio-éducatif fait une place de plus en plus large à la question culturelle tandis que le délégué régional à l'action socio-éducative (DRASE) devient un maillon fondamental. Si cette réforme a pour but de rendre l'organisation des activités plus efficace, elle témoigne de la difficulté pour l'administration pénitentiaire de penser les activités culturelles pour elles-mêmes. En effet, celles-ci sont souvent comprises dans le domaine plus vaste du « socio-éducatif » ou assimilées au « socioculturel ». La structure spatiale des établissements pénitentiaires est également interrogée. La contrainte architecturale est particulièrement prégnante dans l'espace clos de la prison et conditionne la possibilité de multiplier les activités. Il faut cependant attendre le protocole de 1986 pour que la nécessité de consacrer des espaces à la culture au sein des bâtiments carcéraux soit affirmée. Enfin, le rôle croissant joué par les associations internes est déterminant. Officialisées en 1983, elles sont dotées de nouveaux statuts-types en 1985. Ces derniers témoignent d'un certain changement de mentalité. Alors que ceux de 1981 étaient très contraignants, ceux de 1985 se caractérisent par une plus grande souplesse et laissent davantage de place à l'initiative des détenus. Simultanément, la nouvelle possibilité pour les détenus de disposer de postes de télévision individuels dans les cellules permet aux associations de s'enrichir. Elles perçoivent désormais les recettes dégagées par la location de ces téléviseurs et peuvent les réinvestir dans le développement des activités culturelles à destination des détenus.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>La politique impulsée par le ministère de Jack Lang au début des années 1980 constitue donc un bouleversement majeur pour les activités culturelles en détention. Tout en mettant en exergue cette nouvelle dynamique, il convient cependant de réhabiliter la quarantaine d'années qui la précède. Le terreau dans lequel se développent les activités impulsées par le ministère de la Culture est en effet loin d'être vierge de tout germe culturel. Seulement, il ne s'agit alors pas de la même conception de la culture. Outils à la disposition de l'administration, ces activités ne sont d'abord pas encouragées pour elles-mêmes mais pour leurs vertus éducatives et moralisatrices. Avec la réforme de 1975, elles s'intègrent dans les nouvelles missions assignées à l'administration pénitentiaire : décloisonnement et réinsertion. La notion de « droit à la culture » n'apparaît en prison qu'au début des années 1980. L'espoir que l'introduction d'un nouveau droit en détention participe au changement de l'institution carcérale est alors formulé. De 1945 à l'arrivée de Jack Lang, ce sont les assistantes sociales et les éducateurs qui mènent ces activités. Personnels travaillant en prison, ils sont très peu formés et font feu de tout bois selon leurs inclinations et leurs possibilités. Les activités constituent notamment pour eux un outil efficace d'observation. Cette instrumentalisation et cet amateurisme sont critiqués et vigoureusement écartés à partir des années 1980. Parce que de nombreux hommes de culture participent désormais à définir les orientations, ce sont dès lors des professionnels de la culture compétents et spécialisés qui sont encouragés à proposer des activités tout aussi variées mais de nature différente. </p>
+          <p>L'intervention du ministère de la Culture vient également inverser la philosophie selon laquelle les personnes incarcérées les plus démunies doivent être écartées des activités culturelles. À l'époque des établissements réformés, seuls les détenus considérés comme amendables peuvent bénéficier de ces dernières. La réforme de 1975, si elle est l'occasion d'affirmer le souhait que tous les établissements soient touchés par les activités, continue de privilégier les détenus dont la réinsertion est la plus probable. Dès 1981, la commission Culture/Justice refuse de favoriser ceux qui l'ont toujours été. Le public jusqu'alors éloigné de la culture au sein même de la détention devient une cible prioritaire. La plupart des artistes et des associations, influencés par cette ligne de conduite, s'attachent à proposer des activités aux femmes, étrangers, homosexuels et prévenus. </p>
+          <p>Enfin, avec la mise en place d'une politique d'intervention culturelle, le rôle joué par les deux ministères devient particulièrement important. Jusque-là, l'initiative était quasiment exclusivement laissée aux acteurs locaux. Désormais, c'est le ministère de la Culture qui est le principal initiateur, tandis que l'administration pénitentiaire coopère en repensant ses structures et en tentant de faciliter l'entrée des intervenants extérieurs. Derrière une action qui apparaît <emph>a priori</emph> comme commune apparaissent cependant des clivages. Les deux ministères ratent à plusieurs reprises des occasions de s'afficher ensemble, n'emploient pas les mêmes mots et ne soutiennent pas toujours le même type d'action. L'exemple du GENEPI, subventionné exclusivement par le ministère de la Justice, en témoigne.</p>
+          <p>Si ce travail défriche et jette les premières fondations d'un sujet jusqu'alors ignoré par les historiens, il est cependant bien loin de répondre à toutes les questions qui peuvent être posées. Une analyse plus fine des liens entretenus avec l'architecture carcérale, l'étude de la période qui s'ouvre ensuite avec la signature du deuxième protocole Culture/Justice en 1990, ou encore la mise en place des bibliothèques pénitentiaires, sont quelques-unes des nombreuses pistes qu'il reste encore à explorer.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Repères. — Textes législatifs et réglementaires, actes et documents administratifs (éditions). — Associations internes aux établissements pénitentiaires (statuts et liste). — Supports d'études de cas (éditions de lettres de détenus et reproductions d’œuvres issues des activités notamment).— Entretien avec Yves Perrier, ancien éducateur pénitentiaire. </p>
+      </div>
           </div>
       </body>
   </text>

@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Les Mémoires de Philippe de Vigneulles (1471-1522)</title>
         <title type="sub">Édition critique du manuscrit BN</title>
-        <author key="Faltot, Fanny" ref="@TODO@">Fanny Faltot</author>
+        <author key="Faltot, Fanny" ref="https://www.idref.fr/@TODO@">Fanny Faltot</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -65,13 +64,7 @@
          <p>Le peu de littérature existant au sujet des <emph>Mémoires</emph> eux-mêmes explique que les principaux outils de travail à disposition de qui aborde ce texte tendent à concerner davantage la <emph>Chronique</emph>, voire les <emph>Cent nouvelles nouvelles</emph> ou la <emph>Geste des Loherains.</emph> De fait, quatre auteurs méritent tout particulièrement d'être cités. L'édition de la <emph>Chronique</emph> par Charles Bruneau, certes datée (1927-1933), est essentielle non seulement pour son introduction, mais aussi en raison des liens étroits existant entre le contenu de cette immense œuvre historique et celui des <emph>Mémoires.</emph> Bruneau n'ayant pas eu le temps d'adjoindre un index à son travail, celui composé par Monique Paulmier-Foucart et conservé, sous forme dactylographiée, parmi les usuels de la Bibliothèque lorraine de la Bibliothèque Verlaine de Metz, est indispensable au chercheur. Quant à l'absence de glossaire, elle est en partie compensée par la thèse de doctorat de Maryse Hasselmann sur <emph>Le Vocabulaire des réalités messines dans la Chronique de Philippe de Vigneulles</emph> (1982), même si cette étude ne concerne que les domaines de la société laïque et du gouvernement, du droit et de la vie quotidienne. Enfin, les divers articles de Pierre Demarolle et son ouvrage intitulé <emph>La Chronique de Philippe de Vigneulles et la mémoire de Metz</emph> (1993) sont de précieuses sources de réflexion sur l'œuvre du marchand messin.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Présentation et étude du texte</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation et étude du texte</head>
           <div>
             <head n="Chapitre premier">« Je, l'acripvain... » : Philippe de Vigneulles, bourgeois messin</head>
               <p>Philippe de Vigneulles, né en juin 1471 à Vigneulles, dans le pays messin, est issu d'une famille paysanne relativement prospère et dont le statut social s'est amélioré au fil des héritages et des alliances. En une époque troublée par les assauts incessants du duc de Lorraine sur la République messine, ville libre d'Empire, le jeune homme reçoit une formation scolaire plutôt chaotique, changeant d'école et de maître au gré des aléas du temps. Ces épreuves contribuent sans doute à lui forger un caractère solide et aventureux, au point qu'il fugue de chez lui pour aller parcourir les routes de Suisse et d'Italie avec son ami Collin.</p>
@@ -89,13 +82,18 @@
       </div><div n="2" type="part"><head n="Deuxième partie">Édition du manuscrit BNF, nouv. acq. fr. 6720</head>
 			<p/>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Témoin privilégié non seulement de l'histoire de Metz et de la Lorraine, mais surtout de la langue et de la vie quotidienne dans la cité à la fin du Moyen Âge et au commencement de la Renaissance, le texte des <emph>Mémoires</emph> de Philippe de Vigneulles méritait de recevoir une édition de type semi-diplomatique qui le mît davantage en lumière.</p>
+          <p>Ce travail pourrait être poursuivi par l'enrichissement des notes concernant l'histoire locale aussi bien que par une confrontation exhaustive avec les tomes III et IV de la <emph>Chronique</emph> éditée par Charles Bruneau, qui correspondent à la période couverte dans les <emph>Mémoires.</emph> En outre, il y aurait lieu d'étendre l'étude de la <emph>scripta</emph> de Philippe de Vigneulles et de ses techniques de composition à l'ensemble de ses manuscrits autographes.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexe</head>
+          <p>Transcription des pages 335-338 (supprimées par Philippe de Vigneulles dans le manuscrit). — Glossaire. — Index des noms propres. </p>
+      </div>
           </div>
       </body>
   </text>

@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Verre et verriers à Paris dans la seconde moitié du &lt;abbr&gt;xvi&lt;/abbr&gt;&lt;sup&gt;e&lt;/sup&gt; siècle (1547-1610)</title>
         <title type="sub"></title>
-        <author key="Vanriest, Élise" ref="@TODO@">Élise Vanriest</author>
+        <author key="Vanriest, Élise" ref="https://www.idref.fr/@TODO@">Élise Vanriest</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -63,13 +62,7 @@
           <p>Les documents issus du Minutier central des notaires de Paris (contrats d'achat et de vente, baux, contrats de mariage, inventaires après décès) constituent la source principale de cette étude et ont notamment été utilisés pour traiter la question des métiers du verre à Paris, de même que les archives du Parlement (série X des Archives nationales de France) qui contenaient les statuts des communautés de métier aussi bien que les privilèges octroyés aux verreries de Saint-Germain-en-Laye et de Saint-Germain-des-Prés. De façon plus marginale, les archives du Châtelet (série Y), de la Chambre des comptes (série P), du Conseil du roi (série E) et la série des Monuments Historiques (série K) ont révélé quelques documents utiles pour cette étude. Des documents dignes d'intérêt concernant les métiers du verre ont en outre été trouvés dans le <emph>Traité de la police</emph> de Nicolas Delamare, conservé à la Bibliothèque nationale de France. Les rapports des fouilles de la cour Napoléon (1984-1986) et de la rue des Lombards (1997) ont pu être consultés. Le matériel archéologique issu des fouilles du Luxembourg, et plus particulièrement du chantier des Boulingrins – où a été excavé en 1974 un four de verrier du début du <num>xvii<hi rend="sup">e</hi></num> siècle –, a pu être analysé et exploité pour cette étude. Divers traités techniques de l'époque ont également été utilisés : traités sur l'art de la verrerie, mais aussi traités sur la fabrication des cosmétiques, sur la parfumerie et traités de civilité. Les témoignages littéraires de l'époque ont aussi été mis à profit. Les pièces de musée étudiées proviennent pour la plupart du musée national de la Renaissance, du musée du Louvre, de la Wallace Collection (Londres).</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Les métiers de la verrerie à Paris</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les métiers de la verrerie à Paris</head>
           <div>
             <head n="Chapitre premier">Le cadre juridique</head>
               <p>Il convenait de s'intéresser aux différents métiers du verre existant à Paris dans la seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle. Au début de la période, il n'y a pas de verrerie dans Paris. Le terme verrier, que l'on rencontre pourtant dans les archives, ne renvoie presque jamais au souffleur de verre. Il désigne plus couramment les vitriers ou les marchands « verriers » qui ne fabriquaient pas le verre mais revendaient à Paris des produits déjà élaborés. Deux métiers dont l'activité est dévolue à l'artisanat ou la vente du verre furent créés au cours de la seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle. Le premier, la communauté des patenôtriers et boutonniers d'émail, reçut des statuts en 1566. Leur rôle était de façonner et de dorer et émailler des perles de verre pour en faire de petits bijoux (patenôtres mais aussi ceintures, bracelets, chaînes, pendants d'oreilles…) sans grande valeur. Le second, la communauté des « marchands verriers couvreurs de bouteilles en osier », reçut des statuts en 1583. Les marchands verriers vendaient aux Parisiens divers types de verres importés de régions voisines. Ils pouvaient également recouvrir les bouteilles d'osier.</p>
@@ -116,13 +109,18 @@
               <p>On observe par ailleurs pour les verres de la seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle une augmentation des verres sodiques, alors qu'ils étaient plutôt à dominante potassique pour les périodes antérieures. Cela pourrait indiquer une influence des techniques italiennes. En revanche, peu de verres attribuables à Venise ont été retrouvés. On suppose que ces verres plus précieux étaient soigneusement conservés par leurs propriétaires et non jetés dans les fosses et latrines comme la plupart des verres trouvés en fouilles.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Le développement de l'industrie du verre en région parisienne est en partie lié à l'intervention royale. Les derniers Valois puis Henri IV favorisèrent de diverses façons l'art du verre, tout d'abord en octroyant des statuts aux métiers du verre parisiens, patenôtriers et boutonniers d'émail et marchands verriers couvreurs de bouteilles en osier, puis en accordant des privilèges aux verreries dites primaires (à Saint-Germain-en-Laye puis à Saint-Germain-des-Prés).</p>
+          <p>La période est également marquée par une forte influence de l'art du verre italien, et plus particulièrement vénitien : la composition et le décor des verres produits et commercialisés à Paris et en région parisienne attestent de l'influence des techniques italiennes. Des typologies d'objets ont également été élaborées d'abord en Italie avant d'être reprises à Paris, telle la bouteille couverte d'osier, grand enjeu commercial de la seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Pièces justificatives : vingt-six documents. — Iconographie : soixante-neuf illustrations classées par thème : marchands verriers et verreries de Paris ; verrerie de Saint-Germain-en-Laye ; la bouteille couverte d'osier ; le verre et ses usages ; Le travail du verre et de l'émail ; l'archéologie du verre. — Index des noms de personnes.</p>
+      </div>
           </div>
       </body>
   </text>

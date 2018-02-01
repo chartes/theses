@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Les Elle « Ferdinand</title>
         <title type="sub"></title>
-        <author key="Vaysse, Élodie" ref="@TODO@">Élodie Vaysse</author>
+        <author key="Vaysse, Élodie" ref="https://www.idref.fr/@TODO@">Élodie Vaysse</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -68,13 +67,7 @@
           <p>Le catalogue des gravures a été établi à partir des collections du département des Estampes et de la Photographie de la Bibliothèque nationale de France, et de celles de Jacques Doucet à la bibliothèque de l’Institut national d’histoire de l’art. Enfin, la documentation du département des peintures du musée du Louvre, de la Witt Library à Londres, des châteaux de Versailles et de Trianon, du musée des Beaux-Arts de Rennes et du musée Condé à Chantilly ont été exploitées pour réaliser le catalogue des peintures certaines des Elle. </p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">L’établissement d’un atelier parisien (1601-1648)</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’établissement d’un atelier parisien (1601-1648)</head>
             <div>
               <head n="Chapitre premier">Le choix de Saint-Germain-des-Prés, un quartier spécifique, ouvert aux protestants</head>
                 <p>Originaire de Malines selon André Félibien, Roger de Piles et Pierre-Jean Mariette, Ferdinand Elle est mentionné pour la première fois à Avon, la paroisse de Fontainebleau, le 25 février 1601. Il doit donc avoir passé quelques semaines, ou mois, sur le chantier d’embellissement du château. Il se trouve toutefois à Paris dès le 24 novembre suivant. Comme de nombreux étrangers à la ville, il s’installe hors des murs, dans le faubourg de Saint-Germain-des-Prés, où se reconstitue une petite communauté protestante. Mais, malgré la présence d’une grande foire, les artistes flamands n’y sont pas encore prédominants. Vivre dans ce quartier permet à Ferdinand Elle de rejoindre la maîtrise de Saint-Germain-des-Prés, et non celle de la capitale. Peut-être communautaires – les protestants y sont plus nombreux qu’à Paris – les raisons de ce choix semblent en tout cas assumées et réfléchies : en 1629, Ferdinand Elle fait rentrer son gendre, Jean Cassiopin, dans la même communauté de métier que la sienne. Né à La Haye vers 1602, ce dernier illustre la persistance des liens entre la famille Elle et l’Europe du Nord. Bien que naturalisé français le 16 mars 1623, Ferdinand Elle enseigne le hollandais à ses descendants, qui entretiennent des relations épistolaires avec les Provinces-Unies et n’hésitent pas à quitter la France, temporairement ou, après 1685, définitivement.</p>
@@ -114,13 +107,17 @@
                 <p>Cette stratégie s’avère efficace puisque le peintre peint, en 1706, le plafond de la chambre des Enquêtes du Parlement de Bretagne. Sa production rennaise semble plus diversifiée que ses commandes en parisiennes : ainsi, en 1702, il exécute le tableau d’autel du couvent des Carmélites de la ville. Tout au long de ses années bretonnes, Louis Elle le Jeune entretient soigneusement ses contacts avec l’Académie royale de peinture et de sculpture, à laquelle il écrit chaque année, conformément aux statuts. Sans doute fait-il valoir son appartenance à l’institution pour remporter les plus belles commandes disponibles à Rennes. Ses dernières années sont malheureusement très mal connues, notamment à cause de grand incendie de 1720. Le peintre disparaît le 5 septembre 1717. Selon un document de 1804, produit lors de la création du musée des beaux-arts de Rennes, il aurait été enterré clandestinement, au bord d’un chemin, en raison de son protestantisme. Son nom ne figure pas, en effet, dans les registres paroissiaux rennais, contrairement à celui de son épouse. Louis Elle le Jeune ne semble avoir laissé ni enfants, ni élèves susceptibles de prolonger en Bretagne l’existence de l’atelier familial.</p>
             </div>
         </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Largement utilisés pour cette étude, les documents d’archives ont permis de redonner à chacun des Elle une identité sociale et artistique propre, tout en soulignant l’importance de la structure familiale dans leur réussite. Les fils et le petit-fils de Ferdinand Elle font carrière en s’appuyant sur son héritage. Celui-ci leur assure un certain confort matériel, notamment grâce à leur épargne et aux maisons achetées au faubourg Saint-Germain. Louis Elle le Père, Pierre Elle et Louis Elle le Jeune bénéficient également d’une excellente insertion dans le milieu des protestants parisiens, et, dans une moindre mesure, dans celui des artistes. Cet héritage, enfin, est aussi artistique et pictural : quoique formés par leurs pères, les Elle suivent au plus près l’évolution du goût, notamment en ce qui concerne les portraits. La deuxième partie de cette étude, consacrée au catalogue de leurs œuvres certaines, permet de mieux cerner les conséquences artistiques de cette formation familiale.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Catalogue des peintures et dessins certains de l’atelier des Elle Ferdinand</head>
+          <p>Catalogue des tableaux et dessins conservés des Elle. — Catalogue des tableaux des Elle connus seulement par la gravure. — Catalogue des tableaux des Elle connus seulement par des mentions écrites.</p>
+      </div>
           </div>
       </body>
   </text>

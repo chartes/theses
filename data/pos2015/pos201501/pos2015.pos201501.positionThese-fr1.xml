@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">« Je rêve à toi presque chaque nuit et je ne suis jamais en prison »</title>
         <title type="sub">Lettres clandestines de prison de Paul Nothomb à sa femme (1945-1947)</title>
-        <author key="Arnould, Laurine" ref="@TODO@">Laurine Arnould</author>
+        <author key="Arnould, Laurine" ref="https://www.idref.fr/@TODO@">Laurine Arnould</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -71,13 +70,7 @@
           <p>Enfin, d’autres sources ont été consultées en Belgique, notamment le fonds comprenant diverses interviews de contemporains des faits (AA 2268), au Centre d’Études et de Documentation Guerre et Sociétés contemporaine (CEGESOMA) ; ainsi que le dossier judiciaire de Paul Nothomb (Dossier répressif en cause de Nothomb Paul (Saint‑Gilles<term rend="index" key="SAINT-GILLES"/>, 7.12.1913) - Cour Militaire Bruxelles, 10.01.1947 (780/46)), conservé dans les archives du conseil de guerre de Bruxelles, au Collège des Procureurs généraux de Belgique.</p>
       </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Édition</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Édition</head>
           <p>L’édition est divisée en trois parties qui correspondent aux trois années que Paul Nothomb passe en prison après la guerre. L’année 1945 comprend trente‑trois lettres écrites à partir de juillet. En 1946, il adresse quarante‑six lettres à Marguerite Develer. L’année 1947 compte, quant à elle, trente‑sept lettres, rédigées entre janvier et fin août, moment où son recours en grâce aboutit à une libération anticipée. </p>
       </div><div n="2" type="part"><head n="Deuxième partie">Commentaire</head>
           <div>
@@ -95,13 +88,18 @@
               <p>La correspondance de prison de Paul Nothomb est le fruit de sa captivité et de la nécessité pour lui de s’occuper l’esprit. Se définissant lui-même comme un intellectuel, il explique dans ses lettres qu’il éprouve le besoin non seulement de s’instruire mais aussi de créer. La détention est pour lui l’occasion d’une introspection et révèle son besoin d’écrire. Paul Nothomb, par sa correspondance avec Marguerite Develer, illustre le fait d’écrire en prison mais également d’écrire la prison. Enfin, l’élaboration de son roman semi‑autobiographique <emph>Le Délire logique</emph>, en 1947, participe également de ce besoin d’écrire, de témoigner, qui anime Paul Nothomb tout au long de sa vie.</p>
           </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+         <p>L’édition de la correspondance clandestine de prison de Paul Nothomb à sa femme permet donc d’appréhender les différents aspects relatifs à l’après-guerre en Belgique, particulièrement le jugement et l’internement des collaborateurs. Ses expériences de captivité, d’abord aux mains de la Gestapo, puis dans l’attente de son procès pour collaboration, apparaissent comme un tournant décisif dans sa vie. Son parcours atypique et ses écrits mettent en lumière un homme complexe, bien conscient de l’ambiguïté de son histoire et animé du besoin d’expliquer et de témoigner. Mais Paul Nothomb sait également qu’entre la volonté de raconter et la réalité des faits l’écart peut parfois être grand, chaque individu étant soumis à des sentiments et à une mémoire qui peuvent parfois biaiser son regard sur les évènements. </p>
+         <p>C’est au sein de cette problématique de la mémoire qu’il convient de replacer un témoignage direct comme ces lettres clandestines. Alors qu’il tente à plusieurs reprises de revenir sur l’épisode de sa captivité aux mains de la Gestapo, notamment dans <emph>Le Délire logique</emph>, on constate qu’il est malaisé d’expliquer <emph>a posteriori</emph> une expérience aussi ambiguë et douloureuse. Le temps et son cortège d’oublis et d’accommodements modèlent à leur manière la mémoire des témoins. Mais c’est justement cette subjectivité du témoignage qui lui confère toute sa qualité et son intérêt historique, à l’image de la correspondance de prison de Paul Nothomb.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Annexes</head>
+          <p>Lettres diverses. — photographies. — illustrations. — articles de presse.</p>
+      </div>
           </div>
       </body>
   </text>

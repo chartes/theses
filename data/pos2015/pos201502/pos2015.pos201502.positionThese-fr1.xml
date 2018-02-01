@@ -6,7 +6,7 @@
       <titleStmt>
         <title type="main">Une science naturelle de Dieu ? Édition de la Theologia naturalis de Nicolas Bonet († 1343)</title>
         <title type="sub">Histoire et enjeux de la théologie naturelle en sa première figure</title>
-        <author key="Buffenoir, Aude" ref="@TODO@">Aude Buffenoir</author>
+        <author key="Buffenoir, Aude" ref="https://www.idref.fr/@TODO@">Aude Buffenoir</author>
       </titleStmt>
       <editionStmt>
         <edition>École des chartes</edition>
@@ -24,7 +24,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de 2015 pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
@@ -46,7 +46,6 @@
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-
         <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
@@ -65,13 +64,7 @@
           <p>Sur quarante-sept manuscrits répertoriés ont été consultés les suivants. Originaux : Rome, BAV Vat. Lat 3039 ; BAV Vat. Lat. 4847 (15°) fol. 2-8 ; BAV Vat. Lat. 3040 ; BAV Vat. Lat 3041; BAV Chigi lat. E.IV.110 – Venise, Bibl. Marc. lat. Z 303 – Venise Bibl. Marc. lat. Z 304 – Saint-Omer, BA ms. 237 – Munich, BSB, clm 18788 – Munich, BSB, clm 26867 – Prague, Klementinum VIII.F.15 – Prague, Kl. V.H.20. Copies : Oxford, Merton College 199 – Erfurt, Bibl. Amploniana F. 314 – Paris, BN 6678 – Rome, BAV 11504.</p>
         </div>
           </div>
-          <div n="2" type="section">
-              <!-- @TODO@
-              <div type="part">
-
-              </div>
-               -->
-          <div n="1" type="part"><head n="Première partie">Préhistoire : les conditions d’émergence de l’œuvre de Nicolas Bonet</head>
+          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Préhistoire : les conditions d’émergence de l’œuvre de Nicolas Bonet</head>
             <p>Cettre partie se propose de cerner les conditions historiques qui rendent possible la théologie naturelle comme discipline : quels fondements internes et externes présuppose-t-elle, au-delà de son contenu ? Sont avancés, ensuite, des axes d’interprétation de l’histoire de la métaphysique, qui rendent compte de sa séparation en deux disciplines. </p>
             <div>
               <head n="Chapitre liminaire">Histoire d’un adjectif</head>
@@ -134,13 +127,17 @@
                 <p>Les interprétations proposées dans ce chapitre convergent vers une double conclusion : l’insertion de la pensée dans un univers logique orthonormé et homogène, caractérisé par la notion d’univocité, et sa dépendance vis-à-vis d’une épistémè de la représentation, consacrant le primat d’une rationalité visuelle abstractive, rendent raison non seulement de la rupture radicale des équilibres et autres paradoxes aristotéliciens dans la pensée de Bonet, mais encore de la fracture profonde qui sépare la rationalité propre à la « théologie naturelle » de la « logique du Verbe » qui se déploie dans le corpus biblique. Ce double caractère supprime enfin toute possibilité d’une « métaphysique de la présence » telle qu’elle se lit sous les symboles de la religiosité naturelle du paganisme, et instaure un univers de rationalité naturelle proprement a-thée, puisque le divin est devenu l’apanage exclusif d’un étant parmi d’autres – et encore : le champ lexical « dieu, divin, divinité » brille par son absence dans la <emph>Théologie naturelle</emph> de Bonet. Ces déterminations conceptuelles sont précisément celles que destitue la pensée heideggérienne, qui renoue avec certaines dimensions fondamentales de la pensée archaïque de l’être, et de la pensée hébraïque. </p>
             </div>
       </div></div>
-          <div n="3" type="textpart" subtype="section">
+          <div n="3" type="section">
               <div type="conclusion">
                   <!-- @TODO@ -->
-              </div>
+              <head>Conclusion</head>
+          <p>Ramenée à ses origines, la théologie naturelle s’enracine dans une métaphysique non seulement de la forme (consacrant le primat de la vision intellectuelle), mais de la représentation, de l’objet, de l’univocité réelle. Elle est étroitement conditionnée par l’institution : car sans l’université médiévale, point de cloisonnement des savoirs ; sans les artiens et sans Tempier, point de science naturelle, autonome et relativement vraie – point de théologie naturelle, donc. La théologie naturelle telle qu’elle est née dans l’histoire de l’Occident n’a que peu à voir avec la connaissance naturelle de Dieu des écrits pauliniens et de la littérature sapientielle : dans sa figure originaire – c’est-à-dire en tant qu’elle est une science quidditative et univoque, qui n’entretient plus de rapport qu’extrinsèque avec la théologie de la révélation – elle peut être opposée terme à terme aux déterminations bibliques fondamentales. Fondée sur l’ontologie neutre, transcendantale et profane (au sens de Mircea Eliade) qu’elle présuppose comme sa matière, cette théologie naturelle fait époque dans le cheminement intellectuel de l’Occident : elle consacre en théologie – naturelle, certes, mais théologie tout de même, et de théologien – une véritable révolution silencieuse. Elle n’est possible que par l’ouverture d’un domaine de rationalité et donc de réalité neutre, intégralement conceptualisable parce que dépourvu de sacralité, et par conséquent a-thée au sens premier de ce terme. Dieu n’y est plus immanent à l’être autant qu’il le transcende : à la place d’une ontologie de la présence, nous sommes en présence d’une théologie représentative, abstraite, objective au sens précis où le <num>xiv<hi rend="sup">e</hi></num> siècle entend ce terme – une théologie de l’absence.</p>
+      </div>
               <div type="appendix">
                   <!-- @TODO@ -->
-              </div>
+              <head>Édition</head>
+          <p>Édition intégrale (livres I-VII, 336 p.) de la <emph>Theologia naturalis</emph> de Nicolas Bonet. Texte de base transcrit sur le ms. lat. 314 de la Bibl. Amploniana d’Erfurt (<num>xiv<hi rend="sup">e</hi></num> siècle), noté E dans l’apparat. Manuscrits de contrôle : ms. lat. Z 303 de la Bibl. Marciana de Venise (<num>xv<hi rend="sup">e</hi></num> siècle, écriture humanistique, même famille que le ms. E), noté V ; ms. Vat. lat. 11504 de la Bibl. Vaticane, noté R.</p>
+      </div>
           </div>
       </body>
   </text>
