@@ -1,0 +1,108 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>De son vivant comme par la suite, le personnage de Frantz Jourdain, dont la formation première était celle d’architecte, a été connu
+          également pour ses autres activités, en particulier à la tête du Salon d’automne depuis la fondation de celui-ci. Pourtant, les deux
+          principales études dont il a déjà fait l’objet ont insisté plus spécialement sur ses deux œuvres majeures que furent ce Salon d’automne,
+          dont la vitalité dut beaucoup à celui qui fut son président plus de trente ans, et la Samaritaine, dont il fut l’architecte.</p>
+        <p>L’idée que ces deux œuvres n’occupèrent malgré tout qu’une partie de son énergie, et surtout que le dernier tiers de sa vie, incite à
+          rééquilibrer le regard porté sur le personnage en insistant au contraire sur la pluralité de ses centres d’intérêts. En effet, loin de
+          constituer des investissements annexes et secondaires, ceux-ci représentent une œuvre à part entière, par leur nombre et leur diversité
+          mêmes, ainsi que par la place qu’ils occupent dans la vie de Frantz Jourdain.</p>
+        <p>Chacun des aspects de cette œuvre couvrant quant à lui la totalité d’une vie, il a été choisi de les présenter de façon thématique : dans
+          un premier temps le métier d’architecte, formation initiale, pour lequel sont délibérément mis de côté les travaux de la Samaritaine ; puis
+          l’activité de militant associatif dans les diverses sociétés dont Frantz Jourdain fut membre actif, et souvent à des postes importants, à
+          l’exception, également délibérée, du Salon d’automne ; enfin, l’œuvre écrite de Frantz Jourdain, consistant tant en textes critiques qu’en
+          textes littéraires, élaborée en relation avec sa fréquentation des cercles artistiques et littéraires.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Un fonds spécifiquement consacré à Frantz Jourdain, ainsi qu’à ses fils et petit-fils, est conservé à la Bibliothèque nationale de France,
+          où le département des Estampes a acheté, en 1992, une partie des papiers de la famille Jourdain. Concernant Frantz Jourdain, l’essentiel de
+          ce fonds, qui n’était ni classé ni coté au moment de la recherche, est constitué de revues dans lesquelles ont paru des articles de Frantz
+          Jourdain et de recueils où ont été rassemblées des coupures de presse relatives au personnage ; s’y ajoutent un certain nombre d’exemplaires
+          de ses ouvrages. Parmi les papiers manuscrits, une correspondance relativement abondante, mais peu variée, consistant surtout en
+          remerciements divers et autres condoléances, est à ce titre peu exploitable. Les textes manuscrits de Frantz Jourdain, dont certains se sont
+          avérés inédits, présentent plus d’intérêt. Enfin, la partie iconographique apparaît fort réduite pour un fonds d’architecte et, outre
+          quelques photographies du personnage lui-même, ne comporte que de rares plans, coupes, élévations et détails d’architecture de constructions
+          parfois difficilement identifiables.</p>
+        <p>Par ailleurs, on a consulté au département des manuscrits de la Bibliothèque nationale de France la correspondance envoyée par Frantz
+          Jourdain à diverses personnalités, notamment Emile Zola et Edmond de Concourt. La série AJ<hi rend="sup">52</hi> des Archives nationales a
+          fourni divers documents relatifs au passage de l’architecte à l’Ecole des beaux-arts, et la série F<hi rend="sup">12</hi> son dossier de
+          Légion d’honneur, ainsi que plusieurs dossiers attestant de ses activités aux Expositions universelles. Les archives de Paris conservent les
+          dossiers de voirie concernant une petite dizaine de bâtiments sur lesquels l’architecte Frantz Jourdain dirigea des travaux. D’autre part,
+          l’Institut français d’architecture a permis la consultation du fond de l’Union syndicale des architectes français, à laquelle avait
+          appartenu Frantz Jourdain, et quelques pièces le concernant à la Société centrale des architectes français ont pu être obtenues à l’Académie
+          d’architecture. La fondation Le Corbusier possède un certain nombre de lettres envoyées par Frantz Jourdain à Le Corbusier, alors que le
+          musée d’art et d’histoire de Saint-Denis détient des lettres de son fils Francis Jourdain, évoquant parfois sa personne.</p>
+        <p>Enfin, les écrits publiés par Frantz Jourdain lui-même sont une source indispensable non seulement pour le connaître comme critique et
+          écrivain, mais également pour éclairer ses autres activités.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

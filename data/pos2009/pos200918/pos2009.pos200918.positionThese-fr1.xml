@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La Diète est l’institution centrale de la République polonaise tout au long de l’époque moderne. Scène de représentation par excellence de
+          la noblesse polonaise, actrice unique de la vie politique du pays, elle rassemble tous les pouvoirs et devient, au fil des ans, le seul
+          organe apte à prendre des décisions, aux dépens du roi. Malgré sa place essentielle dans la République, force est de constater que son étude
+          a été négligée. Les travaux historiques du <num>xix</num>
+<hi rend="sup">e</hi> siècle se contentaient d’indiquer son rôle dans la chute de la Pologne en 1795. Les études plus récentes se sont
+          surtout intéressées à la genèse de cette institution et à sa mutation aux <num>xvi</num>
+<hi rend="sup">e</hi> et <num>xvii</num>
+<hi rend="sup">e</hi> siècles, qui provoque l’anarchie dans le pays et la paralysie de la vie politique. Hormis les travaux sur le
+            <num>xviii</num>
+<hi rend="sup">e</hi> siècle, notamment sur le règne des rois saxons Auguste II et Auguste III (de 1696 à 1763), de Władysław Konopczyński,
+          la Diète polonaise de ce siècle est largement méconnue, tant par les historiens polonais qu’étrangers. La Diète de convocation de 1764,
+          tenue lors de l’interrègne suivant la mort d’Auguste III et chargée de préparer l’élection de son successeur, représente un premier tournant
+          dans l’histoire de la Pologne au <num>xviii</num>
+<hi rend="sup">e</hi> siècle et fait écho aux désirs de réformes de la partie la plus éclairée de la noblesse.</p>
+        <p>En étudiant les journaux de cette Diète, c’est-à-dire les comptes rendus, séance par séance, de la tenue de l’assemblée, ce n’est pas
+          seulement le déroulement de la Diète qui est analysé, mais également les positions de ses membres, leur tiraillement entre réformes et
+          traditions. Enfin, c’est la manière dont la Diète est mise en ordre, par sa réglementation mais aussi par la volonté du parti en puissance
+          que les journaux de Diète permettent de comprendre.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La source principale de cette étude est constituée par les journaux de Diète polonais. Elle est multiple, car il n’existe pas de journal
+          officiel. Les différents journaux réalisés sont issus de la volonté d’un noble particulier. Devant la dispersion de ces textes dans les
+          bibliothèques et centres d’archives, six journaux ont été choisis comme fondement de ce travail. Cinq sont manuscrits et sont conservés pour
+          trois d’entre eux à la bibliothèque des princes Czartoryski de Cracovie ; les deux derniers sont issus de la bibliothèque Kórnik, située
+          près de Poznań, et de la bibliothèque Ossolińskich de Wrocław. Le dernier journal étudié est imprimé et a pu être consulté dans plusieurs
+          bibliothèques polonaises.</p>
+        <p>Les archives de l’ambassade de France à Varsovie, conservées aux archives du ministère des Affaires étrangères, ont permis d’étayer les
+          informations contenues dans les journaux de Diète cités. La correspondance de l’ambassadeur français, le marquis de Paulmy, et de son chargé
+          d’affaires, Hennin, a révélé l’existence d’un journal de Diète, rédigé en français, qui a été pris en compte dans l’étude du journal de
+          Diète proprement dite.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

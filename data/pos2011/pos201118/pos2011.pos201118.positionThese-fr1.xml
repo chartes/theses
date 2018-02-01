@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Dans les <hi rend="i">Nuits attiques</hi>, Aulu-Gelle se propose d’offrir à ses lecteurs le matériel brut de ses fiches de lecture ou notes prises au gré de conférences et d’entretiens avec certains de ses amis philosophes, philologues ou juristes. Les sujets qu’il y aborde sont nombreux et embrassent tous les champs de la connaissance : philologie, littérature, histoire, philosophie, sciences… C’est cette diversité qui a sans doute assuré le succès de son œuvre dès l’Antiquité, comme en témoignent Apulée, Lactance, Nonius, Ammien Marcellin, Macrobe, Servius, saint Augustin et l’<hi rend="i">Historia</hi> <hi rend="i">Augusta</hi>.  </p>
+        <p>Le désintérêt relatif, du <num>vi</num><hi rend="sup">e</hi> au <num>viii</num><hi rend="sup">e</hi> siècle, pour les <hi rend="i">Nuits attiques</hi> est illustré par le destin du témoin le plus ancien que nous en ayons conservé, le manuscrit A (Vatican, Biblioteca apostolica Vaticana, 24), copié au <num>iv</num><hi rend="sup">e</hi> ou au <num>v</num><hi rend="sup">e</hi> siècle : le texte a été gratté entre le <num>vi</num><hi rend="sup">e</hi> et le <num>viii</num><hi rend="sup">e</hi> siècle pour accueillir une partie d’une version latine de la Bible (les livres de Judith, Tobie et Esther). Ce manuscrit contenait à l’origine les livres I à VII des <hi rend="i">Nuits attiques.</hi> Cela ne constitue pas une originalité puisque tous les manuscrits médiévaux conservés renferment soit les sept premiers livres de l’œuvre d’Aulu-Gelle, soit les livres IX à XX, tandis que le livre VIII s’est perdu entre l’Antiquité et le Moyen Âge. Cette perte, ainsi que cette division de la tradition manuscrite en deux parties, est vraisemblablement la conséquence du passage du rouleau au codex, qui s’est terminé à peu près à l’époque où a été copié le manuscrit A. Il faut attendre le <num>ix</num><hi rend="sup">e</hi> siècle pour débusquer les premiers indices de la circulation du texte au cœur de l’Europe médiévale et c’est donc à partir de la Renaissance carolingienne que commence cette histoire de la transmission des <hi rend="i">Nuits attiques</hi>. </p>
+        <p>Aucune synthèse n’avait encore été réalisée sur la transmission des <hi rend="i">Nuits attiques</hi> au Moyen Âge et à la Renaissance. Le sujet est apparu intéressant à plusieurs titres. L’œuvre d’Aulu-Gelle a connu une fortune importante à la Renaissance, inspirant notamment à Ange Politien ses <hi rend="i">Miscellanées</hi>. Avant toute réflexion sur la réception littéraire des <hi rend="i">Nuits attiques</hi> chez les auteurs humanistes, il semblait important d’étudier la façon dont avait circulé matériellement le texte : sur quels supports ? dans quelles régions ? entre quelles mains ? Procéder à cette étude uniquement pour la Renaissance paraissait insuffisant. La comparaison avec la période médiévale ne pouvait que permettre de mettre en perspective la situation à la Renaissance. Dresser un panorama de la circulation du texte des <hi rend="i">Nuits attiques</hi> dans l’Europe médiévale offrait, en effet, la possibilité de mieux repérer les ruptures et les continuités entre le Moyen Âge et la Renaissance. Le texte était-il déjà connu au Moyen Âge ? Avait-il été redécouvert par les humanistes ? Quels étaient les liens entre la tradition manuscrite médiévale et celle de la Renaissance ? Autant de questions qui permettaient de poser des fondements solides à une analyse de l’influence des <hi rend="i">Nuits attiques</hi> dans les œuvres de la Renaissance.  </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Outre la quinzaine d’exemplaires médiévaux des <hi rend="i">Nuits attiques</hi>, cent vingt témoins de ce texte, datés des <num>xv</num><hi rend="sup">e</hi> et <num>xvi</num><hi rend="sup">e</hi> siècles, sont encore conservés aujourd’hui. Il faut y ajouter les manuscrits contenant des extraits de l’œuvre d’Aulu-Gelle soit dans le cadre de florilèges, soit de manière isolée. Les éditions incunables des <hi rend="i">Nuits attiques</hi>, au nombre de dix, datées de 1469 à 1500, constituent, enfin, une dernière source de l’étude de la transmission de cette œuvre au <num>xv</num><hi rend="sup">e</hi> siècle. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

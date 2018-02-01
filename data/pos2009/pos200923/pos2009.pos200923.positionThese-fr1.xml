@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Andrée Viollis (1870-1950) fut une grande journaliste, saluée en son temps pour son talent et connue pour ses nombreux engagements. L’un
+          d’eux concernait l’Indochine et les Indochinois, et plus généralement la question coloniale. L’étude du soutien qu’elle manifesta aux
+          peuples colonisés, dès ses débuts dans le journalisme au tournant du siècle jusqu’à ses derniers articles et prises de position pendant la
+          guerre d’Indochine, permet de questionner la notion d’anticolonialisme, à la fois comme courant de pensée et comme engagement, et son
+          évolution au cours de la première moitié du <num>xx</num>
+<hi rend="sup">e</hi> siècle. Cette étude porte, d’une part, sur les motivations et sur les formes concrètes de l’engagement de Viollis en
+          faveur des colonisés et, d’autre part, sur l’ensemble polyphonique de contestations du système colonial dans lequel celle de Viollis
+          s’insère. Le problème indochinois étant au cœur de l’engagement de Viollis sur cette question, il a servi de fil conducteur à cette
+          recherche et en a fourni le cadre et la chronologie.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Archives publiques et privées ont été croisées pour mener à bien cette enquête. Les papiers d’Andrée Viollis, conservés en partie en main
+          privée et en partie aux archives du Parti communiste français, contiennent de la correspondance, des photographies, des carnets de notes,
+          des manuscrits et de la documentation relatifs aux questions coloniales, au problème indochinois en particulier. Ces documents ont été mis
+          en regard des écrits publiés par Viollis (ouvrages et articles), d’articles parus dans la presse de métropole et d’Indochine à l’époque, de
+          publications diverses sur les questions coloniales et de nombreux autres documents d’archives provenant des autorités (ministère des
+          Colonies, ministère de l’Intérieur, gouvernement de l’Indochine), conservées aux Archives nationales et à la préfecture de police de Paris,
+          et d’autres acteurs des affaires coloniales, contemporains de Viollis, comme Léon Blum, Daniel Guérin, ou la Ligue des droits de
+          l’homme.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

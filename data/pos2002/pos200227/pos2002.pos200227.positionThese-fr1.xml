@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les ingénieurs géographes des camps et armées du roi, apparus pendant le règne de Louis XIV, étaient des militaires spécialisés dans les
+          levers topographiques en temps de guerre. Ils s’étaient peu à peu distingués des ingénieurs ordinaires, davantage occupés pour leur part aux
+          travaux de fortification et de poliorcétique. Ce qui n’était au départ qu’une spécialisation de quelques-uns, dictée par les circonstances,
+          fit bientôt naître un atelier regroupant des experts reconnus pour leur adresse et leur dextérité à dresser des cartes très utiles aux
+          généraux dans l’élaboration de leur stratégie. Cependant, ces officiers ne constituèrent véritablement un corps à part entière que dans la
+          seconde moitié du <num>xviii<hi rend="sup">e</hi></num>  siècle. <lb/>Il est apparu intéressant de suivre la constitution et les vicissitudes
+          institutionnelles de ce corps d’officiers à talents, de la guerre de Sept Ans (1756-1763) à la suppression du groupe en 1791, d’en saisir
+          les spécificités par rapport à d’autres ingénieurs, tels ceux du Génie ou des Ponts et Chaussées, et aussi de comprendre les raisons de sa
+          suppression par l’Assemblée constituante. <lb/>En outre, cette période donnait l’occasion de mettre en lumière différents aspects du métier
+          des topographes militaires. S’il fallait en effet bien sûr étudier leurs travaux en temps de guerre, il était tout aussi important de voir
+          comment ces ingénieurs avaient adapté leurs méthodes aux cartes levées en temps de paix : comment la période sans conflit majeur qui
+          s’ouvrit en 1763 et dura presque trente années influa-t-elle sur la pratique d’un métier exercé par des officiers et essentiellement utile à
+          la guerre <lb/>L’étude du contexte institutionnel dans lequel évoluaient ces ingénieurs, de même que la description de leurs travaux, ne
+          permettent cependant pas de rendre entièrement compte de l’histoire des topographes militaires. D’autres aspects méritent d’être abordés
+          comme les conditions nécessaires à la naissance d’un esprit de corps ou encore la formation de ces ingénieurs et leurs profils de carrière.
+          Enfin, il semblait important de mener une étude sociale de ce groupe d’officiers, de connaître leurs origines géographiques tout autant que
+          sociales, ainsi que les milieux avec lesquels ils étaient liés.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les principales sources permettant de suivre l’histoire institutionnelle du groupe des ingénieurs géographes militaires, ainsi que leurs
+          carrières, sont aujourd’hui conservées au Service historique de l’Armée de terre (SHAT), à Vincennes. Il s’agit de documents émanant du
+          bureau des ingénieurs géographes et du Dépôt de la guerre (séries A1 et 3M). Le SHAT conserve également leurs travaux cartographiques
+          (séries LIC, LID et J10C principalement) ainsi que les mémoires descriptifs (série 1M) qu’ils rédigeaient pour accompagner et expliciter
+          leurs cartes. Ces matériaux avaient déjà été utilisés et en partie publiés par le colonel Berthaut dans l’étude qu’il avait consacrée aux
+          ingénieurs géographes militaires en 1902. <lb/>Cependant, si les archives militaires sont indispensables pour connaître avec précision
+          l’activité et la vie du groupe, elles demeurent par essence muettes sur tout un aspect de l’histoire de ces hommes. Pour parer à ces
+          lacunes, nous avons interrogé d’autres types de sources. L’organisation du travail des ingénieurs pendant la guerre de Sept Ans, ainsi que
+          les relations entre Jean Baptiste Berthier, chef du groupe de 1758 à 1772, et ses hommes, ont été en partie éclairées par la consultation de
+          l’inventaire des archives de la famille Berthier. Cet instrument de recherche, établi en 1895-1896 par Albert Dufourcq et aujourd’hui
+          conservé à la section des archives privées des Archives nationales, est en effet particulièrement précieux puisque, malgré son caractère
+          laconique, il est le seul vestige d’un fonds aujourd’hui dispersé et qui contenait de nombreux documents administratifs concernant les
+          ingénieurs géographes. <lb/>En outre, pour tenter de mieux cerner les milieux dont faisaient partie les ingénieurs géographes, nous avons
+          consulté avec profit le minutier central des notaires parisiens, aux Archives nationales, ainsi que les fonds notariaux (3E) et l’état civil
+          de la ville de Versailles, aux Archives départementales des Yvelines. <lb/>À côté des sources manuscrites précédemment citées, il convient
+          de mentionner les ouvrages de Dupain de Montesson, lui-même ingénieur géographe des camps et armées du roi dans la seconde moitié du XVIII
+<hi rend="sup">e</hi>  siècle, qui exposent de manière claire et détaillée les méthodes de la topographie à cette époque et permettent de
+          mieux comprendre le métier des ingénieurs.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

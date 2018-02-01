@@ -1,0 +1,122 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Pratiquée dès le paléolithique supérieur, la pêche fluviale constitue une activité de prédation traditionnelle chez l’homme. Elle prit
+          toutefois une importance particulière au cours des périodes médiévale et moderne. En effet, l’Église conditionnait alors une large part de
+          la vie quotidienne des hommes, aussi bien sur le plan spirituel que sur le plan politique, économique et social. Elle imposa notamment cent
+          quarante-six jours “ maigres ”, qui étaient répartis sur l’année religieuse, la période d’abstinence la plus importante et la plus longue
+          étant le carême. Tenues de respecter ces règles alimentaires, les populations furent obligées de développer des compétences techniques afin
+          d’assurer des captures régulières et suffisamment importantes pour satisfaire leurs besoins en poissons.</p>
+        <p>Or, que ce soit pour les périodes préhistoriques, protohistoriques mais aussi historiques, les recherches sur ce mode d’acquisition de
+          nourriture demeurent marginales et les divers types de sources disponibles sont très souvent ignorés ou sous-exploités. Il est donc apparu
+          nécessaire d’appréhender au mieux les différentes pratiques halieutiques fluviales et leur évolution sur le temps long du Moyen Age et de
+          l’époque moderne, en confrontant sources archéologiques, écrites et iconographiques dans une approche délibérément pluridisciplinaire et en
+          élaborant des méthodes de recherche adaptables à différents bassins fluviaux. A cette fin, il convenait de sélectionner un observatoire dont
+          les limites permettaient de réunir en un temps limité une documentation riche et variée, à défaut d’être exhaustive. Le choix se porta sur
+          le bassin fluvial de la Somme, entre Noyelles-sur-Mer et Péronne, du début du <num>xii<hi rend="sup">e</hi></num> siècle à la fin du XVIII <hi rend="sup">e</hi> siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources archéologiques témoignant des pratiques halieutiques fluviales sont le plus souvent limitées aux éléments osseux de poissons,
+          rejetés sur les sites d’habitat lors de la préparation et de la consommation. Leur collecte implique un tamisage systématique des couches
+          archéologiques dans les zones de dépotoirs et de latrines et leur étude nécessite l’intervention d’un archéozoologue spécialisé puisque le
+          squelette d’un poisson est constitué de plusieurs centaines d’os. Ce matériel offre divers renseignements sur les espèces capturées, leurs
+          dimensions, les saisons de capture, les modes de préparation ou de conservation et le niveau social des populations résidant sur le site
+          concerné. Des engins de pêche, généralement constitués de bois, d’osier et de cordages, ne subsistent que les lests en pierre qui furent
+          perdus dans les cours d’eau et qui sont retrouvés lors d’opérations archéologiques subaquatiques. Ces opérations aboutissent quelquefois à
+          la découverte de pêcheries fixes, constituées de pieux en bois ou de pierres. Bien évidemment, ces interventions impliquent la maîtrise des
+          techniques de travail en milieu hyperbare.</p>
+        <p>Les sources écrites relatives à la pêche ne sauraient s’identifier à des catégories archivistique ou documentaire spécifiques. Il a donc
+          fallu mener des dépouillements dans plusieurs fonds du Centre historique des Archives nationales, de la Bibliothèque nationale de France,
+          des Archives départementales de l’Aisne, de l’Oise, du Pas-de-Calais et de la Somme, des Archives municipales d’Amiens et des bibliothèques
+          municipales d’Abbeville, d’Amiens et de la Société des antiquaires de Picardie. Ce grand nombre d’établissements de conservation s’explique
+          bien évidemment par la dispersion de certains fonds documentaires, en particulier ecclésiastiques, mais également par l’étendue de la zone
+          d’étude retenue qui a connu des changements de limites administratives, politiques et religieuses au fil des siècles.</p>
+        <p>Plus de cinq cent soixante documents ont été exploités pour la partie du bassin de la Somme étudiée. Du fait de l’amplitude de la période
+          chronologique envisagée, l’éventail typologique est important : aux actes de donations, ponctuellement cités dans les publications anciennes
+          du <num>xix<hi rend="sup">e</hi></num> siècle et du début du <num>xx<hi rend="sup">e</hi></num> siècle, s’ajoutent les transactions ultérieures découlant de ces
+          donations, les ventes, les pièces produites à l’occasion de litiges et de procès, les baux de droits de pêche et de pêcheries, les
+          inventaires après décès de poissonniers, les procès-verbaux de visites et les plans terriers. Le nombre des documents varie considérablement
+          d’un lieu à un autre : entrent en jeu non seulement l’importance économique et politique des seigneuries concernées, mais également leur
+          localisation dans le bassin fluvial ; par ailleurs, plusieurs fonds ont été détruits, en totalité ou partiellement, au cours du XX <hi rend="sup">e</hi> siècle. Leur répartition chronologique doit également être prise en considération : si globalement le nombre de
+          documents, peu important avant le début du <num>xiii<hi rend="sup">e</hi></num> siècle, augmente de manière régulière jusqu’à la fin du XVIII <hi rend="sup">e</hi> siècle, la distribution des différents types d’actes est inégale selon les périodes : les donations remontent quasiment
+          toutes aux <num>xii<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles, les sentences arbitrales et les transactions sont
+          majoritairement datées des <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles, alors que les inventaires après décès et les baux
+          à ferme sont tous postérieurs au début du <num>xvi<hi rend="sup">e</hi></num> siècle et que les plans sont très rarement antérieurs du début du XVII
+<hi rend="sup">e</hi> siècle. Une première impression de continuité, qui pourrait naître de cette documentation suivie, quoique variée,
+          tout au long de la période étudiée, ne résiste pas à l’analyse historique : aucun lieu de pêche, aucun droit, aucun matériel, aucune
+          technique n’est attesté continûment depuis le début du <num>xii<hi rend="sup">e</hi></num> siècle jusqu’à la fin du <num>xviii<hi rend="sup">e</hi></num>
+          siècle : le cas d’Amiens, ville largement pourvue en sources documentaires, est exemplaire de cette évolution des pratiques au fil du temps.</p>
+        <p>Des sources iconographiques relativement nombreuses et diversifiées complètent notre information sur les pratiques halieutiques fluviales
+          médiévales et modernes. Grâce au souci du détail et de l’exactitude qui animait leurs auteurs, enluminures, gravures et sculptures
+          permettent notamment de découvrir la nature et la forme des engins retrouvés lors de fouilles archéologiques et mentionnés dans les sources
+          écrites.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,77 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Domaine d’étude privilégié depuis quelques années, la liturgie est la porte d’entrée par excellence pour qui étudie l’influence du sacré dans la société médiévale, au sein de laquelle toute chose sacrée se rapporte à Dieu et donc au culte par lequel on l’honore. L’organisation liturgique a été transmise par les livres, multiples, et spécifiques à chaque cathédrale : est étudié et édité ici l’ordinaire de la cathédrale de Marseille. L’ordinaire, ou <hi rend="i">liber ordinarius</hi>, est un directoire perpétuel qui rassemble pour chaque jour de l’année les <hi rend="i">incipit</hi> des principales pièces qui devront être lues ou chantées, avec parfois quelques détails sur la concurrence des fêtes, et quelques notations sur l’entourage visuel, sonore, et même olfactif de la liturgie. On voit l’importance de relier la liturgie et l’environnement dans lequel prend vie le texte liturgique : est donc rappelée brièvement l’histoire de Marseille, ville qui revendique son indépendance tout au long du Moyen Âge, qui est marquée par une histoire religieuse ancrée dans la dévotion à ses saints fondateurs, saint Lazare et saint Victor, et dont les évêques s’insèrent au <num>xiv</num><hi rend="sup">e</hi> siècle dans le courant réformateur entrepris par la papauté. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>L’édition proposée repose sur le manuscrit 85 de la Bibliothèque inguimbertine de Carpentras, dont les 73 premiers feuillets constituent un ordinaire de la cathédrale de Marseille, datant de 1361. Une comparaison fructueuse a pu être effectuée avec l’ordinaire du <num>xiii</num><hi rend="sup">e</hi> siècle, édité en 1910 par Ulysse Chevalier. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

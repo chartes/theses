@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>La doctrine ecclésiastique de l’usure élaborée au cours du Moyen Âge, nourrie des nombreuses références bibliques et patristiques et de la redécouverte des réflexions aristotéliciennes sur le sujet, proclamait l’interdiction de l’usure entendue comme tout gain, qu’il fût modique ou excessif, provenant d’un prêt pur et simple nommé <hi rend="i">mutuum </hi>ou d’un prêt déguisé sous la forme d’un autre contrat. L’usure était d’abord prohibée en tant que moyen d’oppression du pauvre soumis aux contraintes de son créancier dans un rapport contractuel inégal, avant d’être justifiée par des arguments théoriques dont l’œuvre de Thomas d’Aquin offre la plus claire expression. La position de l’Église contre l’usure se heurtait cependant au développement du crédit causé par la commercialisation croissante de l’économie à partir du <num>xiii</num><hi rend="sup">e</hi> siècle. La forte expansion des pratiques de crédit au sein même de la communauté chrétienne conduisait l’Église à forger une véritable éthique économique chrétienne destinée à encadrer les comportements des laïcs.  </p>
+        <p>Si les historiens des idées et de la religion ont beaucoup étudié les évolutions doctrinales de la condamnation de l’usure, cherchant à sonder dans le sillage de Marx et Weber les rapports entre institution ecclésiale et développement économique et à mesurer l’impact de la prohibition de l’usure sur la naissance du capitalisme, la pratique de l’usure et la poursuite des usuriers par les autorités ecclésiastiques n’ont pas suscité le même intérêt. Le crédit a certes eu la faveur des historiens de l’économie, qui ont mis en avant depuis quelques années la place cruciale du crédit dans la société médiévale, au-delà des groupes sociaux traditionnellement associés au prêt que sont les juifs et les Lombards, ainsi que l’endettement généralisé à tous les niveaux de l’échelle sociale. Mais l’étude des acteurs et des pratiques de crédit s’appuie principalement sur des archives notariales, qui, sous une apparente conformité aux prescriptions religieuses, passent sous silence la part d’usure contenue dans les contrats d’obligation. Quant aux archives judiciaires mises à profit par les historiens, elles concernent surtout les procédures instiguées contre les débiteurs défaillants dont témoignent les registres de « lates » et les registres d’écrous en cas de prison pour dette.  </p>
+        <p>Il convenait donc d’appréhender d’autres sources pragmatiques pour élargir la connaissance des activités usuraires, comprendre les ressorts des poursuites entreprises par les pouvoirs ecclésiastiques contre les usuriers à la fin du Moyen Âge, et enrichir ainsi des apports des actes de la pratique le débat historiographique sur le rapport de l’Église à l’usure. Les informations tirées d’une série d’enquêtes et de procédures pontificales des <num>xiv</num><hi rend="sup">e</hi> et <num>xv</num><hi rend="sup">e</hi> siècles ont permis d’envisager sous un nouvel angle les qualifications judiciaires de l’usure, la nature des comportements usuraires et la condamnation des manquements aux normes économiques établies par l’Église. Le croisement des différentes sources judiciaires a orienté la réflexion selon deux axes, qui s’interrogent d’une part sur les moyens mis en œuvre par la papauté contre les usuriers à travers un encadrement judiciaire spécifique et l’utilisation d’une procédure inquisitoriale et sommaire efficace, et d’autre part sur la volonté pontificale de normaliser les comportements économiques par la voie du procès, aussi bien dans la définition et la publicisation de l’illicite que dans la répression ou plutôt l’administration de ces écarts de comportement. L’étude de la production documentaire conduit en effet à se demander dans quelle mesure les enquêtes et procédures pontificales contre les usuriers constituent un mode de gouvernement qui tend moins à éradiquer les pratiques usuraires qu’à maintenir les usuriers sous le joug de l’Église par le biais de restitutions salvatrices, traduisant un idéal théocratique dans lequel les papes sont maîtres des échanges économiques.  </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Les sources utilisées concernent principalement des procédures pontificales inédites contre les usuriers du <num>xiv</num><hi rend="sup">e</hi> et du début du <num>xv</num><hi rend="sup">e</hi> siècle, du fait de la pauvreté des fonds des officialités antérieurs au <num>xv</num><hi rend="sup">e</hi> siècle. Le corpus étudié comprend trois sources principales : une série de suppliques adressées au pape Urbain V, recopiées dans le registre de l’évêché d’Avignon 1 G 9 conservé aux archives départementales de Vaucluse, qui font part des pouvoirs délégués par le pape à l’official d’Avignon Béranger d’Ampiac pour enquêter sur les usuriers des diocèses du sud-est de la France et du nord de l’Italie ; un ensemble de procédures dispersées dans le fonds de la Chambre apostolique aux archives Vaticanes à l’encontre d’usuriers d’Avignon et du Comtat Venaissin sous le pontificat de Benoît XIII (ASV, <hi rend="i">Collectoriae</hi> 56, fol. 1-28, 35-45 ; <hi rend="i">Collectoriae</hi> 55, fol. 150-305 ; <hi rend="i">Instrumenta Miscellanea</hi> 3720, 4145, 4301, 5495) ; les actes d’un procès de 1389 lié à l’exécution testamentaire d’un usurier astésan conservés dans le <hi rend="i">Collectoriae </hi>502. D’autres sources ont été mises à profit pour compléter l’étude des différents procès, telles les lettres éditées d’Urbain V et de Grégoire XI relatives à l’usure ainsi que quelques lettres de Clément VII et de Benoît XIII repérées au cours de recherches aux archives Vaticanes. Des sources locales ont également été utilisées de manière ponctuelle : les archives du notaire italien Giorgio Briconi aux archives départementales de Vaucluse (3 E 8.193-197), un registre judiciaire de l’évêque d’Asti conservé dans les archives capitulaires de la ville (<hi rend="i">Acta Capituli</hi>, fald. 6, fasc. 8), et une sentence de Béranger d’Ampiac conservée aux archives municipales de Cavaillon (FF 1, n° 16). Ont été aussi exploitées dans une optique comparative des enquêtes et procès contre des usuriers diligentés par les pouvoirs laïcs, en Dauphiné, en Savoie et en Provence.  </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,118 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le Parlement de Paris est une des principales institutions du pouvoir central de la monarchie. Il représente à la fois la justice suprême
+          et la souveraineté du monarque. Françoise Autrand a montré combien il est soucieux de son prestige et combien ses membres, qui appartiennent
+          au même corps social, sont liés entre eux dans le cadre de différents réseaux. Mais la question est de savoir comment ce corps a réagi face
+          à la crise de la monarchie Valois à partir de 1413 et plus encore comment le Parlement mis en place par Jean sans Peur, duc de Bourgogne, en
+          1418 lorsque ses troupes prennent Paris, a géré cet héritage politique, social et symbolique. Ce Parlement « bourguignon » doit faire face
+          au « schisme royal », pour reprendre une expression de Philippe Contamine, qui voit le royaume déchiré entre deux systèmes politiques
+          concurrents prétendant l’un comme l’autre gouverner l’ensemble du royaume en entretenant la fiction d’un fonctionnement normal : le système
+          bourguignon puis Lancastre étant donné que, en application du traité de Troyes, le roi d’Angleterre Henri V est devenu régent de France en
+          1420 et son fils, Henri VI, roi de France et d’Angleterre en 1422, d’un côté ; la monarchie Valois représentée par le dauphin Charles,
+          devenu Charles VII en 1422, de l’autre. La « double monarchie » franco-anglaise se prolonge jusqu’à la prise de Paris par les troupes du
+          connétable Arthur de Richemont pour le compte de Charles VII, le 13 avril 1436.  </p>
+        <p>L’étude du Parlement « bourguignon » doit prendre en considération trois problématiques historiographiques.</p>
+        <p>La cour souveraine des deux derniers siècles du Moyen Âge a attiré de nombreux chercheurs depuis François Blanchard au XVII <hi rend="sup">e</hi> siècle. Les études reprirent au cours du <num>xix<hi rend="sup">e</hi></num> siècle, avec l’arrivée de ses archives au Palais Soubise en
+          1847. La fin du siècle et le début du <num>xx<hi rend="sup">e</hi></num> siècle voient la parution d’études purement institutionnelles ou politiques,
+          à l’image des travaux de Félix Aubert ou d’Edouard Maugis. Les recherches sur la cour souveraine ont été profondément renouvelées au cours
+          des deux dernières décennies du <num>xx<hi rend="sup">e</hi></num> siècle en prenant en compte les thématiques d’ordre social et symbolique, comme les
+          travaux de Françoise Autrand.</p>
+        <p>La France « anglaise » ou « lancastrienne » et les officiers du roi bourguignons furent longtemps déconsidérés dans l’historiographie
+          française. Alfred Coville s’insurge contre les « traîtres » qui ont signé le traité de Troyes « qui semblait mettre fin aux destinées de la
+          France, naguère si brillantes, et faire de notre pays une annexe de l’Angleterre ». Trois courants historiographiques, identifiés par
+          Philippe Contamine, se distinguent. Le courant « providentialiste » insiste sur les carences personnelles de Charles VII et accorde une
+          place importante à l’année 1429, au sacre et à Jeanne d’Arc, qui ont permis au roi Valois de prendre le dessus dans sa lutte contre le
+          Lancastre (Gaston du Fresne de Beaucourt, Edouard Maugis). Le courant « analytique et critique » souligne quant à lui les faiblesses
+          internes de la France « anglaise », émaillée de révoltes paysannes, marquée par la crise économique à partir de 1430 malgré la « petite
+          prospérité » de la décennie précédente, et soumise au maintien de l’alliance bourguignonne, toujours plus fragile jusqu’à la rupture du
+          traité d’Arras de 1435 (Carl A. J. Armstrong). Le courant « révisionniste », enfin, étudie la manière dont la « double monarchie » fut
+          acceptée et célébrée par une partie de la société politique et des élites économiques, à l’image des notaires et secrétaires du roi Laurent
+          Calot et Jean de Rinel.</p>
+        <p>Enfin, l’étude des structures étatiques des <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles a été renouvelée par celle de la
+          « genèse de l’Etat moderne » qui précise comment le pouvoir royal s’empare ou souhaite s’emparer du monopole de la perception fiscale puis
+          des levées militaires et enfin de l’initiative politique en s’appuyant sur les nécessités d’une période de guerre et de crise interne. Les
+          pratiques du pouvoir se modifient et une « société politique » apparaît sous leur effet.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’essentiel des sources utilisées sont les archives du Parlement conservées au Centre historique des Archives nationales. Les structures
+          archivistiques du Parlement « bourguignon » sont révélatrices. Elles ne sont guère modifiées en 1418. Le greffier du Parlement civil,
+          Clément de Fauquembergue, reste en place. Les mêmes registres continuent à être remplis, ce qui suggère que le personnel du greffe ne fut
+          que partiellement remplacé et que les nouveaux venus sont imprégnés des pratiques scripturaires et archivistiques de la cour souveraine. Le
+          pouvoir bourguignon trouve sa légitimité en se moulant dans le cadre laissé par son prédécesseur armagnac au pouvoir entre 1413 et 1418. Les
+          registres sont de trois types : les registres purement parisiens (lettres, arrêts et jugés civils, Conseil civil, plaidoiries civiles), les
+          registres où des cahiers parisiens sont reliés à la suite de cahiers poitevins (lettres, arrêts et jugés criminels) et les dossiers
+          d’accords, qui sont réunis au <num>xix<hi rend="sup">e</hi></num> siècle dans un ordre strictement chronologique.</p>
+        <p>L’étude des parlementaires a été menée également à la Bibliothèque nationale de France, grâce au dépouillement de la collection des Pièces
+          originales, des transcriptions de testaments (collection Moreau 1161 et 1162 et nouv. acq. lat. 184) ou des arrêts du Châtelet (collection
+          Clairambault 763).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

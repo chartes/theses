@@ -1,0 +1,90 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>« Eglise cathare du Carcassès » ou « catharisme en Carcassès » Les deux énoncés sont proches. Ils présentent néanmoins deux différences
+          fondamentales. La première est d’ordre géographique. L’Eglise du Carcassès telle qu’elle a été définie lors du concile cathare de
+          Saint-Félix-de-Caraman en 1167 dépasse largement le cadre des environs immédiats de Carcassonne, qui correspond au Carcassès historique,
+          héritier du <hi rend="i">pagus</hi> carolingien; elle comprend aussi les régions qui le bordent au sud et à l’est. L’aire géographique sur
+          laquelle porte la recherche diffère donc selon l’intitulé du sujet: le parti retenu pour cette étude vise à dépasser le cadre restreint du
+          Carcassès et conduit à aborder aussi la délicate question de l’hérésie en Minervois, en Narbonnais et en Biterrois. La seconde différence
+          relève d’un problème d’interprétation des sources. Choisir le terme « Eglise » n’est pas anodin. Il ne relève pas d’une conception
+          idéologique gratuite et partisane de l’hérésie, mais d’une simple constatation a posteriori: l’hérésie cathare en Languedoc est bien
+          structurée autour d’une hiérarchie composée de diacres et d’évêques; celle du Carcassès ne fait pas exception à la règle.</p>
+        <p>La période envisagée correspond aux dates extrêmes où est attestée l’Eglise cathare du Carcassès, du moins dans l’état actuel des
+          connaissances. En 1167, se tient à Saint-Félix-de-Caraman un concile cathare qui, entre autres décisions, entérine la transformation de la
+          communauté hérétique du Carcassès en une Eglise, dirigée par un évêque et dont les limites sont alors fixées au nord et à l’ouest. C’est du
+          début du <num>xiv<hi rend="sup">e</hi></num> siècle que datent les dernières enquêtes menées contre des personnes du Carcassès. Entre ces deux jalons,
+          les membres de l’Eglise cathare du Carcassès ont connu une histoire extrêmement fluctuante, depuis la vie au grand jour et en toute
+          tranquillité dans les principaux <hi rend="i">castra</hi> de la région au début du <num>xiii<hi rend="sup">e</hi></num> siècle, jusqu’à la
+          clandestinité, l’exil et la disparition dans la deuxième moitié du <num>xiii<hi rend="sup">e</hi></num> siècle et au début dusiècle suivant.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

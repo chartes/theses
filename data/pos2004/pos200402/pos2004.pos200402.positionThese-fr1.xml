@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La biographie de la fille de Louis XVI a été faite de nombreuses fois mais toujours sous la forme d’une suite d’anecdotes. Nul n’a songé à
+          examiner de façon plus approfondie le rôle politique et symbolique qu’elle avait pu jouer, certes un peu malgré elle. Née fille de France,
+          elle était destinée à tenir une place prestigieuse en France et en Europe. La Révolution a changé son sort et a ajouté au prestige du sang
+          celui du malheur : à partir de 1795, elle est la très populaire et très aimée “ Orpheline du Temple ”, nom qui ne la quittera plus. Elle
+          devient alors le meilleur agent de propagande des royalistes, instrument politique, certes, mais un instrument révéré et adoré de ses
+          partisans et ce durant toute sa vie. Il n’est pas question ici de faire à proprement parler une biographie du personnage mais de
+          reconstituer son histoire à travers le regard des contemporains puisque ce qu’elle représentait a eu bien plus d’importance que ce qu’elle
+          était. Cette étude exclut la partie antérieure à la mort de Marie-Antoinette, dans la mesure où la princesse ne s’individualise nettement
+          qu’après, et s’arrête en 1830. Marie-Thérèse-Charlotte part alors pour un exil cette fois définitif et son image est considérablement
+          modifiée par la concurrence de celle du comte de Chambord : la résonance politique et même sensible de cette image en sort très
+          amoindrie.</p>
+      </div>
+              <div type="sources"><head>sources</head>
+        <p>L’orientation même du sujet conduisait à privilégier les sources imprimées. Des brochures de nature variée, trouvées à partir des
+          catalogues de la Bibliothèque nationale de France (BNF), et des journaux de l’époque ont servi de base à notre travail. Nous avons dépouillé
+          de manière systématique une trentaine de titres de presse parus entre 1779 et 1830, en nous efforçant d’équilibrer les tendances politiques
+          pour avoir une vision représentative de l’image réelle de Marie-Thérèse-Charlotte de France. Un grand nombre de mémoires et de
+          correspondances ont complété avec des bonheurs divers cette documentation imprimée. Enfin, nous avons constitué un corpus iconographique à
+          partir des fonds du département des monnaies et médailles de la BNF et des séries Qb1 et N2 du département des estampes et de la
+          photographie.</p>
+        <p>Les sources manuscrites sont bien moins nombreuses que pour la plupart des thèses de l’Ecole des chartes. Le fonds Bourbon des archives du
+          ministère des affaires étrangères s’est révélé le plus utile pour notre travail. Aux Archives nationales, ont été particulièrement exploités
+          les fonds privés : les fonds La Fare (198 AP), Condé (34 AP) et Lenôtre (AB XIX 3205) notamment. Les archives du Temple (F <hi rend="sup">7</hi>  4391 et 4392) ainsi que les cartons concernant les voyages de la princesse, dispersés dans plusieurs séries, (F <hi rend="sup">7</hi>  6759, 6760 et O<hi rend="sup">3</hi>  122, 232, 233) ont été dépouillés avec grand profit. Les nombreux sondages effectués dans
+          les sous-séries O<hi rend="sup">3</hi> , maison du roi, et F<hi rend="sup">7</hi> , police générale, se sont avérés particulièrement
+          décevants, du moins de notre point de vue.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

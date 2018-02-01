@@ -1,0 +1,118 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Méthode d’apostolat missionnaire privilégiée, la diffusion des livres permettait de satisfaire à ces deux exigences de l’évangélisation
+          que sont le soin des fidèles et la conversion des païens. La Société des Missions-Etrangères a largement fait usage de ce vecteur de la foi
+          au <num>xix<hi rend="sup">e</hi></num>  siècle. Société importante qui envoya quelque 1 400 prêtres en Extrême-Orient pendant cette période, elle
+          était présente aussi bien en Chine et au Vietnam qu’au Japon, en Corée et au Tibet. Son œuvre, héritière de deux siècles de travaux dans
+          cette zone, permet d’avoir une vision d’ensemble des problèmes d’apostolat rencontrés et des solutions apportées.</p>
+        <p>L’étude de la diffusion des livres s’insère dans une problématique plus vaste : l’évangélisation du <num>xix<hi rend="sup">e</hi></num>  siècle en
+          Asie a été très dénigrée par l’historiographie traditionnelle. Par rapport aux Jésuites de Chine des <num>xvi<hi rend="sup">e</hi></num> -XVIII <hi rend="sup">e</hi>  siècles et au Père Lebbe, au début du <num>xx<hi rend="sup">e</hi></num>  siècle, dont les méthodes auraient été particulièrement
+          adaptées à l’esprit chinois, les prêtres du <num>xix<hi rend="sup">e</hi></num>  siècle auraient fait une œuvre médiocre, se contentant d’implanter en
+          Orient des procédés occidentaux totalement inadéquats. En mettant en valeur la part de l’adaptation à la pensée orientale et le dynamisme de
+          l’apostolat, l’analyse des livres de mission constitue un angle d’attaque idéal pour aborder le <num>xix<hi rend="sup">e</hi></num>  siècle. Suivre
+          d’amont en aval le circuit du livre ­ conception, production, diffusion ­ permet de souligner toutes les facettes et tous les enjeux de ce
+          type d’évangélisation.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p><hi rend="i">Les archives missionnaires </hi> — A partir de la seule correspondance, il est possible de retracer les différentes étapes de
+          l’apostolat par le livre. Certes, il n’existe pas de sources manuscrites spécifiques à ce sujet au Séminaire des Missions-Etrangères : ni
+          coutumier d’imprimerie, ni grand mémoire sur l’œuvre des livres. Il faut se contenter de la correspondance qui donne des renseignements
+          qualitatifs et non quantitatifs et qui, par ailleurs, ne permet pas toujours de donner l’évolution chronologique des prises de position au
+          cours du siècle. Les quelque 250 volumes de correspondance entre les missionnaires d’Extrême-Orient, les procures de Chine, le Séminaire de
+          Paris et Rome donnent cependant des informations significatives. Les archives des autres sociétés missionnaires, des Lazaristes comme des
+          Jésuites, sont beaucoup moins riches et n’apportent que de rares éléments de comparaison. Les actes des synodes et les recueils de lettres
+          des vicaires apostoliques permettent de connaître la législation dans le domaine du livre. Pour étudier la production imprimée des
+          missionnaires, il existe quelques bibliographies, notamment celle d’Adrien Launay pour l’ensemble des Missions-Etrangères, ainsi que les
+          catalogues des imprimeries jésuite et lazariste, à titre de comparaison.</p>
+        <p><hi rend="i">Les sources romaines </hi> — Alors que les archives du Séminaire des Missions-Etrangères témoignent de la manière de résoudre
+          les problèmes d’apostolat à la base, celles de la <hi rend="i">Propaganda fide</hi>, congrégation romaine chargée du gouvernement des
+          missions, font appréhender la théorie de l’apostolat selon le Saint-Siège. Ce sont les fonds des Acta, archives des congrégations mensuelles
+          ou annuelles, qui s’avèrent les plus intéressants car ils montrent les décisions de Rome sur les points litigieux soumis par les
+          missionnaires. Les <hi rend="i">Lettere</hi>, minutes des lettres écrites par la Propagande aux missionnaires pour faire exécuter ses
+          décisions, permettent d’expliciter le contenu des différentes résolutions. Quelques autres fonds ont été dépouillés, notamment celui des <hi rend="i">Sinodi</hi>, contenant les actes des synodes, et celui des <hi rend="i">Collezione d’istruzioni</hi>, rassemblant les
+          instructions générales de la Propagande. Les <hi rend="i">Collectanea</hi>, qui recueillent les décisions romaines à l’intention des
+          missions, les complètent.</p>
+        <p>L’ampleur de ces fonds interdisait tout dépouillement dans les archives du Saint-Office. Cette lacune est compensée par le fait que toutes
+          les décisions prises par cette congrégation suprême à propos des livres litigieux ou des termes chrétiens chinois ont été reprises par la
+          Propagande dans les <hi rend="i">Acta</hi> ou les <hi rend="i">Lettere</hi>. D’autres institutions romaines offrent des fonds intéressants.
+          Le Musée missionnaire et d’ethnographie du Vatican renferme des tablettes xylographiques coréennes qui témoignent des techniques
+          d’impression. La Bibliothèque vaticane conserve la traduction dans toutes les langues de la terre de la bulle <hi rend="i">Ineffabilis</hi>
+          définissant le dogme de l’Immaculée Conception ; la Société des Missions-Etrangères a beaucoup contribué à cette vaste œuvre réalisée dans
+          les années 1860 à la demande de l’abbé Sire, directeur à Saint-Sulpice.</p>
+        <p><hi rend="i">Les archives civiles </hi> — Les archives civiles se sont avérées décevantes, celles du Ministère des affaires étrangères
+          (Paris et Nantes, pour les archives du consulat de Chine), les Archives nationales (Paris et Aix-en-Provence, pour les archives des
+          colonies) ou la Bibliothèque de l’Institut : l’apostolat par le livre se déroulait essentiellement de manière interne aux vicariats
+          apostoliques. En revanche, l’Imprimerie nationale conserve encore dans son Cabinet des poinçons des différents jeux de caractères asiatiques
+          envoyés par les prêtres des Missions-Etrangères ou réalisés sous leur direction ; pour chaque collection de types existe un dossier qui en
+          donne un rapide historique.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

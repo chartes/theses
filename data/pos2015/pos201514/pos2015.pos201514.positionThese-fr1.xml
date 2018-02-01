@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+         <p>Le <emph>Trialogue Quiéret</emph> est un traité politique rédigé par un chevalier picard du nom de Quiéret au moment de la mort de Charles VII en 1461. Il s'agit d'une prosopopée qui met en scène trois allégories : France, éplorée par la mort de son « recteur », Prouesse et Bonne Renommée, qui s'emploient à la réconforter. Dans un second temps, elles lui prodiguent des conseils concernant les décisions politiques à prendre pour parachever son redressement, mis en œuvre par Charles VII avec la reconquête de la Normandie en 1449-1450, puis celle de la Guyenne en 1453 à l'occasion de la bataille de Castillon qui termine de fait la guerre de Cent Ans. L'approche militaire est privilégiée par l'auteur du <emph>Trialogue</emph>, faisant de la gestion des troupes au sein du royaume, de la question sicilienne et de la guerre des Deux Roses en Angleterre ses trois enjeux principaux.</p>
+         <p>Ce texte fait partie d'un recueil composite, appartenant à Gauvain Quiéret, seigneur de Heuchin, et qui regroupe une chronique bourguignonne, un jeu de Georges Chastellain, Hector et Achille, ainsi que l'<emph>Histoire de Griseldis</emph>, traduction de l'œuvre de Pétrarque par Philippe de Mézières. L'intérêt d'une édition critique de cette œuvre consiste avant tout dans son caractère inédit, puisque le seul manuscrit connu de ce texte, conservé à la Bibliothèque de l'Arsenal sous la cote 4655, n'avait encore jamais donné lieu à une édition complète. Découvert par Marc-René Jung, qui en livre quelques extraits, le <emph>Trialogue Quiéret</emph> a été par la suite étudié de façon plus approfondie par Nicole Pons, en particulier dans un article paru en 2010.</p>
+         <p>L'édition de ce texte fournit un exemple supplémentaire de la littérature politique du <num>xv<hi rend="sup">e</hi></num> siècle, à la croisée de différents genres littéraires que sont la complainte, le songe allégorique, l'essai historique, le miroir au prince et le traité de bon gouvernement. Cette multiplicité des approches conduit à dresser les contours d'une culture générale d'un membre de la moyenne noblesse du nord de la France au <num>xv<hi rend="sup">e</hi></num> siècle. Au-delà des conseils d'ordre politique, le <emph>Trialogue Quiéret</emph> laisse entrevoir le visage d'une noblesse d'épée lettrée, soucieuse de perpétuer des valeurs chevaleresques que l'historiographie présente comme déclinantes en cette seconde moitié du <num>xv<hi rend="sup">e</hi></num> siècle. Ces valeurs ne sont pas présentées par Quiéret comme étant d'ordre privé, mais devant constituer un modèle d'État, à travers une figure royale idéalisée.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Il n'existe qu'un seul manuscrit du <emph>Trialogue Quiéret</emph>, ce qui explique qu'il a pu rester inconnu des chercheurs aussi longtemps. Il s'agit du ms. 4655, fol. 120-180. Il a été partiellement étudié dans Marc-René Jung, « Le Trialogue de Gauvain Quiéret, Ms. Arsenal 4655 », dans <emph>Romanica vulgaria</emph>, 1989, p. 209-231, et Nicole Pons, « Un traité inédit de bon gouvernement : le <emph>Trialogue Quiéret</emph> », dans <emph>Un Moyen Âge pour aujourd'hui : mélanges offerts à Claude Gauvard</emph>, dir. J. Claustre, O. Mattéoni et N. Offenstadt, Paris, 2010, p. 160-168.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

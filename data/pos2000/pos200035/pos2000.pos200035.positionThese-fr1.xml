@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Louis II de La Trémoille (1460-1525) représente à lui seul une époque, celle d’une France conquérante, encore chevaleresque et déjà
+          moderne. Au service de Charles VIII, de Louis XII et de François I<hi rend="sup">er</hi> , pendant près de cinquante ans, il occupa sans la
+          moindre interruption ou éclipse un rôle de premier plan à la cour et aux armées. On a choisi de privilégier ici ses rapports avec l’Italie.
+          En effet, il fut l’un des personnages principaux des premières Guerres d’Italie, du Voyage de Naples (1494-1495) à la bataille de Pavie, où,
+          âgé de soixante quatre ans, il mourut d’un coup d’arquebuse. Il est intéressant de comprendre quels types de rapports il établit avec les
+          princes et les villes de la Péninsule. Etaient-ils uniquement militaires et diplomatiques, ou peut-on parler d’échanges culturels</p>
+        <p>La question d’ailleurs prend tout son sens avec le règne de Louis XII (1498-1515), que l’historiographie tend à négliger, dans la mesure
+          où l’année 1500, implicitement, sert de charnière entre le Moyen Age et la Renaissance. Or pendant les premières années du XVI <hi rend="sup">e</hi> siècle, la domination française sur une grande partie de l’Italie parut solide et durable, et cette période de
+          transition offre un intérêt particulier du point de vue des échanges entre les deux pays. On peut donc se demander quel rôle La Trémoille y
+          joua, en tenant compte des différentes facettes de sa personnalité ; proche conseiller du roi et chef de guerre, il était également un grand
+          seigneur, sensible aux plaisirs et aux modes d’une caste qui transcendait les frontières politiques (chasse, arts et lettres, etc.). A-t-il
+          été un homme exceptionnel, un héros aussi brillant que Gaston de Foix ou Bayard Ou faut-il voir dans son personnage un aristocrate
+          français parfaitement représentatif d’un milieu et d’une époque C’est à ces questions que ce travail, en présentant l’édition de plusieurs
+          centaines de lettres et de documents, cherche à répondre.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Sous la cote 1 AP, les Archives nationales conservent le chartrier des La Trémoille, aussi connu sous le nom de chartrier de Thouars. Ce
+          fonds prodigieux, mais dont le classement reste très incertain, contient à la fois des séries de correspondance, des documents fonciers,
+          financiers, judiciaires et quelques comptes de l’hôtel de Louis de La Trémoille. On arrive ainsi à reconstituer en partie l’itinéraire de La
+          Trémoille en Italie et à avoir une idée de ses correspondants. Ce chartrier, si riche soit-il, a quand même beaucoup souffert ; et les
+          archives italiennes permettent de palier une partie de ses lacunes. Comme il était impossible de visiter toutes les archives de la
+          Péninsule, on a privilégié les villes d’Italie centrale et septentrionale avec lesquelles La Trémoille entretint des rapports attestés :
+          Milan, Rome, Florence et Pisé, et enfin Mantoue et Ferrare. Les fonds les plus importants proviennent de Mantoue, car l’<hi rend="i">Archivio Gonzaga</hi> conserve à la fois les lettres reçues et les réponses, dans des registres de <hi rend="i">copialettere.</hi> Enfin,
+          quelques lettres de la correspondance de La Trémoille à Anne de Montmorency proviennent du fonds français de la Bibliothèque nationale de
+          France. Au total, ce sont trois cent quarante lettres et documents qui composent le corpus édité dans ce travail.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

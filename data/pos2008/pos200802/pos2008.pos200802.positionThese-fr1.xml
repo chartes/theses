@@ -1,0 +1,114 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Cette thèse s’inscrit au croisement de l’histoire de l’alimentation et de l’histoire des idéologies et des représentations. La première a
+          progressivement affirmé, depuis une trentaine d’années, une solide vocation à étudier un ensemble englobant d’aspects de la vie matérielle,
+          sociale et culturelle des temps anciens. En particulier, les historiens de l’alimentation s’intéressent de plus en plus à la cour. Comment
+          des images et des textes littéraires produits le plus souvent en lien avec un milieu curial construisent-ils une représentation de la cour à
+          table ? Plus généralement, la représentation du banquet participe d’un discours métonymique sur la société ; le roi, les serviteurs, les
+          jeunes, les femmes, les clercs sont mis en relief par la table à laquelle ils siègent. On s’intéresse aussi, de près, à l’iconographie «
+          religieuse » – les repas vétéro-testamentaires et eucharistiques –, non pour faire une histoire de l’eucharistie et de ses représentations,
+          déjà écrite, mais pour les réintégrer dans le cadre plus large des représentations de la commensalité. Il faut en introduction définir les
+          termes de la recherche et présenter le corpus de travail. On a retenu le terme « commensalité », car s’il ne se diffuse, simultanément en
+          français et en latin, qu’au début du <num>xv<hi rend="sup">e</hi></num> siècle, il a l’avantage de placer l’objet qu’est la table au centre de la
+          pratique conviviale. Or on peut manger ailleurs qu’à table – à l’instar d’Adam et Eve et de nombreuses allégories de la Gourmandise – et, à
+          table, on ne fait pas que manger tant il est vrai que l’espace commensal est un lieu privilégié de la parole, de la séduction, de la
+          traîtrise, de l’assassinat...</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources de cette étude sont des images et des textes. Dans le premier cas, on a retenu comme manifestation de la commensalité toute
+          présence de deux personnes ou plus autour d’une table, de préférence garnie de nourriture mais sans que ce critère soit discriminant. Ont
+          donc été exclues du corpus iconographique les images de consommation alimentaire hors la table, et, a priori, celles de repas à table
+          solitaire. Les limites chronologiques du corpus répondent à plusieurs logiques. Au plan de l’histoire des images, elles correspondent
+          grossièrement à une période cohérente de l’histoire des formes de l’enluminure : c’est vers 1150 que la masse des images narratives ornant
+          les livres s’accroît nettement ; à la moitié du <num>xiv<hi rend="sup">e</hi></num> siècle – plus tôt en Italie –, la représentation de l’espace et du
+          détail, les « realia », évolue sensiblement, rendant plus ardue une mise en série des images d’agapes situées de part et d’autres de cet
+          infléchissement. Par ailleurs, cette période est – dans la région considérée –celle d’un fort développement des cours princières et royales
+          et de leur mécénat artistique. Tandis que le banquet palatial s’organise, le processus de production des miniatures s’exporte du monastère à
+          la ville et à la cour. Enfin, au plan de l’histoire de l’alimentation, l’étude de ces images fortement idéalisées est rendue urgente par la
+          rareté des sources documentaires écrites antérieures à 1300 : livres de cuisine, récits historiographiques permettant la reconstitution de
+          plans de table. Au demeurant, l’étude tire un intérêt supplémentaire du fait qu’on peut faire l’hypothèse a priori d’une certaine
+          correspondance entre ces deux formes de représentations agissantes que sont le banquet et l’image. Les limites géographiques – moitié
+          septentrionale de la France, Angleterre, Flandres – se justifient principalement par la nécessité de restreindre le corpus de travail. À
+          coté des images, la lecture d’un grand nombre de textes littéraires et didactiques s’est révélée très intéressante pour l’étude de l’espace
+          commensal.</p>
+        <p>Le corpus iconographique comprend des images localisées – par un dépouillement tendant à l’exhaustivité des répertoires et catalogues
+          descriptifs, des bases de données en ligne, d’un grand nombre de catalogues d’exposition et de monographies, ainsi qu’une consultation de
+          l’Index of Christian Art de Princeton à la bibliothèque des lettres d’Utrecht –, ainsi que des images vues une fois, sur microfilm ou sur
+          manuscrit, et des images numérisées. Dans les deux derniers cas, les unes ont été vues en couleur, d’autres en noir et blanc. Au total, 755
+          miniatures illustrant un repas à table ont été repérées, sans compter celles contenues dans les bibles moralisées. Moins de la moitié de ces
+          images ont été vues. Par ailleurs, afin d’exploiter un autre type d’interrogation statistique, un corpus restreint a été composé à partir
+          des figurations de la commensalité dans une des premières bibles moralisées, celle d’Oxford, Paris et Londres (150 images). De façon non
+          systématique, un regard complémentaire a été porté sur des images de table appartenant à d’autres supports iconographiques, comme la
+          sculpture ou le vitrail...</p>
+        <p>De la même manière, le corpus textuel a été constitué en fonction d’une volonté de varier les types d’approche.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

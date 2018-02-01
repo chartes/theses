@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Les Chalopin sont aujourd’hui renommés pour avoir été d’importants imprimeurs de la <hi rend="i">Bibliothèque bleue. </hi>En réalité, les Chalopin ne lancent ces impressions qu’à la Révolution ; elles ne caractérisent donc la production de l’atelier qu’au <num>xix</num><hi rend="sup">e </hi>siècle. Au-delà de cette production tardive, la maison Chalopin demeure encore largement méconnue : à la Révolution, cela fait pourtant plus de cinquante ans que l’atelier fonctionne, plus d’un siècle que leur librairie est ouverte ! Six libraires et imprimeurs-libraires se succèdent en effet à la tête de cette entreprise en activité à Caen pendant deux siècles, de l’installation de Charles dans les années 1660 à la mort du dernier imprimeur, Pierre-Théodore, en 1832.  </p>
+		<p>Il convient donc de découvrir comment les Chalopin, simples libraires à la fin du <num>xvii</num><hi rend="sup">e</hi> siècle, réussissent le tour de force, au milieu du <num>xviii</num><hi rend="sup">e</hi> siècle, d’ouvrir et de faire prospérer leur atelier. Notre travail se limite à l’Ancien Régime, pour des raisons qui tiennent tant aux sources qu’à la logique de notre étude : la production de l’atelier se modifie après un changement à la tête de l’entreprise qui amène l’introduction de la <hi rend="i">Bibliothèque bleue</hi> et, de manière plus générale, l’encadrement du métier et la situation économique sont bouleversés à la Révolution. Ces travaux s’attachent ainsi à saisir la manière dont les Chalopin et plus particulièrement Pierre, le créateur de l’atelier, parviennent à surmonter un contexte <hi rend="i">a priori</hi> désavantageux pour les imprimeurs de province, en exploitant au mieux tous les atouts de la Basse-Normandie. Grâce à l’étude de leur commerce de librairie et de la production de leur atelier dans un large <num>xviii</num><hi rend="sup">e</hi> siècle, nous serons alors en mesure de mettre à jour les mécanismes qui les mènent à la <hi rend="i">Bibliothèque bleue</hi>. Réaliser la monographie d’un atelier provincial du <num>xviii</num><hi rend="sup">e</hi> siècle est rarement possible, du fait de l’absence de sources ; au-delà du cas particulier des Chalopin, cette thèse ambitionne plus largement d’enrichir notre connaissance du circuit des livres au <num>xviii</num><hi rend="sup">e </hi>siècle, dans ses aspects économique, politique, social et culturel<hi rend="i">. </hi></p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+		<p>Dans l’ensemble, peu d’archives d’imprimeurs ont été conservées. Deux documents exceptionnels, conservés en série F et série J des archives départementales du Calvados et provenant de l’atelier Chalopin, constituent donc nos sources principales pour le <num>xviii</num><hi rend="sup">e</hi> siècle. Il s’agit d’un grand livre, tenu par les Chalopin des années 1730 à 1760, et d’un livre de copie-lettres, tenu de 1776 à 1789 et à partir duquel une base de données a pu être créée. Extrêmement riches, ces documents n’en sont pas moins isolés, car il n’existe pas de « fonds » Chalopin. Des renseignements ont donc été cherchés dans un très grand nombre de séries des archives du Calvados. Pour les archives d’Ancien Régime, il convient de souligner plus particulièrement les séries B (juridictions) et D (université), qui nous ont permis de retracer les carrières des Chalopin, de même que la série C (intendance), qui constitue en outre une source essentielle pour étudier les conditions du commerce en Basse-Normandie. Les archives notariales (sous-série 8E) et cadastrales (sous-série 3P) ont été particulièrement utiles pour localiser la boutique et les loges en champs de foire des Chalopin. Les documents relevés au sein des archives révolutionnaires (série L) ou dans les séries d’archives modernes M et O (administrations départementale et communale), R (affaires militaires), T (enseignement) et U (justice) n’ont été pour l’instant que ponctuellement utilisés, puisque notre thèse se limite à l’activité des Chalopin avant la Révolution. Ces sources départementales ont été complétées par des recherches ponctuelles aux Archives nationales, notamment au sein de la série V (Grande chancellerie et Conseil), ainsi qu’à la Bibliothèque nationale de France dans les archives de la chambre syndicale de la Librairie à Paris et dans la collection Anisson-Duperron, conservées au département des manuscrits. Éparpillées mais particulièrement variées, nos sources nous renseignent sur le commerce, la production, mais aussi la vie familiale des Chalopin, de la fin du <num>xvii</num><hi rend="sup">e</hi> siècle au début du <num>xix</num><hi rend="sup">e</hi> siècle. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

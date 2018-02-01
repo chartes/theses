@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’étude du culte et de l’iconographie de l’apôtre André au Moyen Âge n’a jamais été envisagée de manière globale. Les historiens se sont le
+          plus souvent intéressés à un aspect spécifique du sujet. Or, l’Église romaine a toujours manifesté une dévotion particulière au frère de
+          Pierre, crucifié comme le Christ. Au Moyen Âge, plusieurs contrées le désignent comme leur saint patron, de la Grèce à la Russie, en passant
+          par l’Écosse et la Bourgogne. En France, l’expansion de son culte s’est accompagnée d’un développement iconographique considérable.
+          Réciproquement, les images qui mettent en scène l’apôtre ont elles-mêmes alimenté et soutenu cette expansion.</p>
+        <p>C’est pourquoi il convient, dans un premier temps, d’approfondir les principaux aspects de la dévotion à saint André, en interrogeant les
+          sources littéraires comme liturgiques et en étudiant la diffusion du toponyme et du prénom André dans l’espace français au Moyen Âge, avant
+          d’insister sur les manifestations politiques de son culte en Bourgogne, dont saint André fut le patron au <num>xv<hi rend="sup">e</hi></num> siècle.
+          Dans un second temps, les représentations de l’apôtre seront analysées à la lumière des sources écrites, afin de dévoiler la richesse de
+          cette iconographie et de déterminer la part des apports proprement artistiques ou iconographiques. Un point, en particulier, doit retenir
+          l’attention, l’attribut du saint, dont la forme originale ­ une croix en X ­ soulève bien des problèmes complexes et a fait l’objet de
+          nombreuses controverses. L’objectif de cette étude est ainsi de contribuer à mieux intégrer l’iconographie dans l’histoire religieuse et
+          artistique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont de deux natures, textuelles et iconographiques. Pour bien saisir la signification des représentations de
+          l’apôtre au Moyen Âge, les sources littéraires qui ont participé à l’élaboration de sa légende (Actes apocryphes, légendes abrégées,
+          sermons, théâtre…) ont fait l’objet d’un bilan. L’étude des manifestations du culte en France, quant à elle, a pu être menée à partir des
+          sources imprimées dont nous disposons aujourd’hui: dictionnaires généraux, dictionnaires topographiques, pouillés...</p>
+        <p>En ce qui concerne les images, les enluminures constituent la base de notre corpus pour deux raisons. L’abondance et la qualité de
+          conservation des enluminures permet de mener une enquête plus systématique sur l’iconographie de saint André à travers les siècles. Par
+          ailleurs, la proximité entre l’image et le texte qu’elle illustre facilite non seulement le déchiffrement du texte, mais encore celui de
+          l’image elle-même. D’autres formes d’art (sculptures, vitraux, peintures…) ont été citées à titre de comparaison.</p>
+        <p>Cette recherche s’inscrit dans le cadre d’une aire géographique précise, la France ­ même si des comparaisons avec les pays voisins ont été
+          nécessaires, le cas échéant ­, et dans un cadre chronologique large, l’époque médiévale, qui a été parfois dépassé, notamment pour
+          interroger les premiers témoignages de l’Antiquité chrétienne ou les écrits de l’époque moderne.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

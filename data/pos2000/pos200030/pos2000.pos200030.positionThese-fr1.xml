@@ -1,0 +1,89 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Lorsque l’on évoque les vers mesurés en français, on pense généralement à cette période riche en inventions littéraires de toutes sortes
+          que fut la Renaissance, et particulièrement au poète de la Pléiade Jean-Antoine de Baïf, qui s’y essaya dans plusieurs œuvres. S’il fut le
+          plus célèbre, Baïf ne fut néanmoins pas le seul à écrire des vers métriques français : on peut citer aussi Etienne Jodelle, autre poète de
+          la Pléiade, Etienne Pasquier, Agrippa d’Aubigné, et avant eux Jacques de la Taille (1542-1562), qui eut même le mérite de composer un petit
+          traité de métrique française. Mais Jacques de la Taille n’était pas le premier à se lancer dans l’entreprise : en effet, Michel de
+          Boteauville (v. 1435- apr. 1500) l’avait précédé sur cette voie trois quarts de siècle plus tôt. Bien qu’il fût généralement admis que les
+          syllabes avaient toutes la même quantité dans la langue française, Michel de Boteauville eut l’idée d’appliquer au français les règles de la
+          poésie antique : selon lui, certaines syllabes pouvaient en français être considérées comme longues, et d’autres, brèves, que ce fût par
+          nature ou par position.</p>
+        <p>Michel de Boteauville appliqua son idée en transposant dans notre langue un poème en vers latins qu’il avait composé auparavant sur les
+          malheurs de la guerre de Cent Ans et sur les bienfaits de la paix. De plus, il fit précéder son poème d’un traité de métrique, intitulé l’
+            <hi rend="i">Art de metrifier françois</hi>, afin d’expliquer sa poétique nouvelle et d’en faciliter la lecture. Par souci de cohérence,
+          c’est l’ensemble de ces textes qui sont présentés ici. Si le degré de réussite de ce nouvel <hi rend="i">art poétique</hi> reste à
+          l’appréciation de chacun, il n’en demeure pas moins que sa cohérence théorique et systémique en fait, plus qu’une élucubration passagère,
+          une véritable tentative de réforme poétique, qui mérite une place particulière dans l’histoire de notre littérature.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

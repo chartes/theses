@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les expositions de la Bibliothèque nationale de France sur l’histoire du livre manuscrit ou imprimé présentent parfois au public les
+          trésors d’une collection rassemblée par Auguste Lesouëf, surtout connu par l’association de son nom avec celui de ses nièces, Jeanne et
+          Madeleine Smith, qui ont légué la collection à la Bibliothèque nationale en 1913. Jusqu’en 1980, cette collection était conservée dans un
+          bâtiment spécialement construit à cet effet à Nogent-sur-Marne : la Fondation Smith-Lesouëf. Elle comprend environ 20 000 volumes, répartis
+          entre les différents départements de la Bibliothèque nationale de France.</p>
+        <p>La collection Smith-Lesouëf est sans doute mieux connue que la vie du collectionneur lui-même, personnalité discrète et effacée. Amateur
+          de manuscrits enluminés et d’ouvrages d’érudition, passionné par l’ethnographie et la géographie, Lesouëf consacra sa vie et sa fortune à
+          l’élaboration d’une collection dont la partie japonaise reflète bien les enjeux. Celle-ci pose la question de la particularité du livre
+          japonais en tant qu’objet de collection, à la fois matériel et intellectuel, qui relève de critères et de pratiques liés au japonisme et à
+          la bibliophilie occidentale. Elle possède aussi une indéniable valeur documentaire, reconnue dans les milieux des sociétés savantes qui
+          entouraient le collectionneur. A travers les thèmes représentés et les pratiques de sociabilité et d’érudition qu’elle révèle, la collection
+          japonaise Smith-Lesouëf apporte des éléments nouveaux à la connaissance du japonisme et de l’érudition japonisante au XIX <hi rend="sup">e</hi>  siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La plupart des sources de notre travail sont conservées à la Bibliothèque nationale de France. La source principale est constituée par la
+          collection de livres, de peintures et d’objets japonais cotés Smith-Lesouëf, partagée entre les différents départements de l’établissement :
+          les livres et les objets d’art décoratifs sont conservés au département des manuscrits orientaux ; le département des estampes et de la
+          photographie détient quelques estampes japonaises et des photographies du Japon ; enfin, un petit nombre de monnaies japonaises sont au
+          département des monnaies et médailles. La comparaison avec d’autres collections japonaises contemporaines de Lesouëf, comme le fonds Rosny à
+          Lille, s’est révélée fructueuse.</p>
+        <p>Les archives de la Fondation Smith-Lesouëf, conservées aux départements des manuscrits occidentaux et des estampes, ainsi que les archives
+          administratives de la Bibliothèque nationale de France précisent les circonstances de la naissance de la Fondation. Elles nous ont aussi
+          fourni des éléments sur la biographie, la sociabilité et la pratique de la collection de Lesouëf, à travers la correspondance du
+          collectionneur, ses recueils de souvenirs, les factures de ses libraires et les diplômes de sociétés savantes. Le fonds des imprimés cotés
+          Smith-Lesouëf de la Bibliothèque nationale de France contient des catalogues de ventes publiques utilisés par le collectionneur, qui, dans
+          leur majorité, ne nous ont pas fourni d’indication de provenance. Les publications relatives au Japon ont éclairé les thèmes représentés
+          dans la collection japonaise et les méthodes d’acquisition du collectionneur. Les particularités d’exemplaires donnent notamment des
+          indications sur le réseau de sociabilité dans lequel s’insérait la collection.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

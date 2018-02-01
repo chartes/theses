@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>La critique des sources d’une ethnomusicologie rétrospective de la France est un chantier grand ouvert. Son enjeu est double : il s’agit d’une part de garantir la fiabilité de la source pour une certaine utilisation, mais aussi, en pénétrant sa logique constitutive, de proposer de nouvelles approches. Ce travail permet également de mieux cerner un moment fondateur de l’ethnologie et de l’ethnomusicologie, parfois encore refoulé malgré les progrès de l’historiographie depuis les années 1980.  </p>
+        <p>Le cas d’Achille Millien, folkloriste mais surtout poète nivernais, est particulièrement intéressant dans cette optique. Il est l’auteur d’une des collectes les plus importantes en France en matière de folklore, collecte qui est ici envisagée dans son aspect chansonnier (deux mille cinq cents mélodies recueillies).  </p>
+        <p>Une première partie présente une biographie intellectuelle thématique de Millien, centrée sur son rapport avec le folklore en général et la chanson populaire en particulier. Ce rapport est entendu au sens large du thème : il s’agit de montrer que la collecte n’est qu’une modalité parmi d’autres d’un intérêt qui a pris des formes, des colorations et par conséquent des enjeux très différents au cours d’une longue carrière. La seconde partie se concentre davantage sur la collecte en elle-même, depuis le terrain jusqu’à la publication. Elle permet de dégager les grands traits d’une pensée autour de la notion de chanson populaire et de tradition jamais explicitée par Millien. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>L’historien dispose de deux fonds principaux, aux histoires bien différentes, pour aborder la vie et plus particulièrement la collecte d’Achille Millien. Tous deux sont conservés aux archives départementales de la Nièvre.  </p>
+        <p>Le fonds le plus anciennement constitué est celui des notes de folklore d’Achille Millien. Celles-ci sont versées en 1922 aux archives départementales, afin d’établir aux frais du conseil général de la Nièvre une copie lisible pour les yeux fatigués de Millien des relevés de contes, chansons, etc., transcrits sur le vif bien des années auparavant. L’histoire de ce fonds est ensuite mouvementée, puisqu’il est divisé entre les archives départementales et Paul puis Georges Delarue, où il est partiellement classé, sans doute interpolé par l’ajout de papiers étrangers au premier versement, dans des proportions qui sont inconnues. L’organisation interne de ce fonds est de fait très difficile à comprendre, relevant de plusieurs strates de productions archivistiques indistinctes.  </p>
+        <p>Le deuxième fonds est composé des autres archives produites et conservées par Millien jusqu’à la fin de sa vie. La volumineuse correspondance passive du poète (plus de 16 000 lettres en provenance de plus de 2 600 correspondants) en est le cœur, même si plusieurs ensembles iconographiques et d’autres notes sont aussi fort intéressants. Le fonds a été récupéré par la Société académique du Nivernais en 1934, qui a fait le choix de le déposer aux archives départementales (cote 82 J) en 2000. Un répertoire numérique en a été établi et publié dans la foulée. </p>
+        <p>En dehors de ces sources archivistiques, l’étude prend appui sur les publications de Millien, dont les trois tomes de <hi rend="i">Chants et chansons populaires</hi> publiés de son vivant, ainsi que sur l’ensemble des revues et monographies émanant des collecteurs et folkloristes contemporains.  </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

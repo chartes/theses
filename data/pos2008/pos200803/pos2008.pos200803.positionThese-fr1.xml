@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Comme le déplorait Steven Kaplan au début des années 1980, les historiens se sont longtemps désintéressés de la police de l’Ancien Régime.
+          On se servait éventuellement des sources policières pour étudier la justice, la criminalité, la société, la ville et ses bouleversements, la
+          librairie, le théâtre…, mais on ne s’intéressait pas à ceux qui les produisaient. Seuls les lieutenants généraux de police parisiens –
+          omniscients et omnipotents – semblaient dignes d’intérêt. Les autres « mécaniciens » de la machine policière restaient dans l’ombre. Ces
+          dernières années ont cependant vu une curiosité croissante pour l’histoire de la police, notamment celle de l’époque moderne. C’est dans ce
+          mouvement que s’inscrit ce travail.</p>
+        <p>Étudier un des quarante-huit commissaires enquêteurs examinateurs au Châtelet de Paris au <num>xviii<hi rend="sup">e</hi></num> siècle et son
+          activité paraissait un moyen de pénétrer l’institution policière par le biais d’un de ses acteurs essentiels, ceux auxquels la population
+          avait le plus souvent affaire, ceux vers lesquels procureurs du roi au Châtelet et lieutenants de police se tournaient. Qui étaient-ils ?
+          Quelle était leur formation ? À quoi ressemblait leur travail quotidien ? Comment s’organisaient-ils entre eux, y avait-il un partage des
+          tâches, une spécialisation ? Quels Parisiens faisaient appel à eux ? Comment étaient-ils perçus par la population ?</p>
+        <p>Le commissaire Pierre Chénon est un personnage clef de l’administration policière parisienne et de la Compagnie des commissaires au
+          Châtelet. En poste de 1751 à 1791 dans le même quartier, celui du Louvre-Saint-Germain-l’Auxerrois, il permet de suivre l’évolution des
+          pratiques policières pendant presqu’un demi-siècle. En outre, il fut un homme de confiance de Sartine puis de Lenoir, un commissaire
+          spécialisé, chargé de missions délicates comme la Bastille et la librairie. Ces tâches particulières font-elles de lui une figure
+          représentative des commissaires au Châtelet ? Quoi qu’il en soit, elles ont l’intérêt de nous ouvrir des pistes nouvelles de
+          questionnement : un commissaire spécialisé a-t-il encore le temps de se consacrer à des vols de draps et de mouchoirs, de recevoir les
+          plaignants de son quartier ? Ou est-ce le second commissaire du quartier qui traite ces affaires quotidiennes et « subalternes » ? Y a-t-il
+          une collaboration efficace entre commissaires et inspecteurs, les commissaires et le Guet ? Pour tenter de répondre à ces questions, il a
+          semblé indispensable d’étudier en parallèle l’activité du second commissaire du quartier du Louvre. Trois hommes ont successivement occupé
+          cette charge : Louis Cadot, Hubert Mutel, et enfin, Marie-Joseph Chénon, le fils de Pierre.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Parallèlement au fonds « Bastille » de la bibliothèque de l’Arsenal, les archives des commissaires au Châtelet sont conservées dans la
+          série Y des Archives nationales. Toutes n’ont pu être analysées. Seules quelques années – correspondant aux changements de lieutenant
+          général de police – ont été retenues afin de procéder à des comparaisons statistiques : nombre d’actes, types d’affaires et leur répartition
+          entre les deux commissaires du Louvre, origines des plaignants… Ces archives s’avèrent exceptionnellement riches dans le cas de Chénon père
+          (137 articles). On y trouve non seulement les procès-verbaux dressés par le commissaire, mais également la correspondance échangée avec les
+          lieutenants généraux de police et les procureurs du roi, parfois avec ses administrés, voire des pièces annexes, comme des lettres de
+          change. Ce magistrat avait aussi l’habitude de conserver les faire-part qu’on lui envoyait ainsi que les arrêts du Parlement concernant les
+          affaires traitées. Malheureusement, les fonds des trois autres commissaires ne sont pas aussi complets et les archives professionnelles du
+          commissaire Mutel manquent pour la période qui nous intéresse.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La production historique relative à l’histoire coloniale est caractérisée par la prédominance de certains thèmes de recherche et une
+          absence presque symptomatique d’autres. L’histoire de la médecine coloniale est de ceux-là. Le fait que l’œuvre sanitaire ait été considérée
+          comme un élément principal de la mission civilisatrice de la France explique en grande partie le retard de la recherche historique française
+          dans l’étude des faits de santé dans les colonies et l’absence presque totale de nombreux thèmes pourtant abondamment développés dans les
+          rapports et publications de l’époque coloniale et aujourd’hui présents dans la littérature anglophone récente. On note en effet dans
+          celle-ci une floraison d’études qui proposent des approches diverses des faits de santé, et qui situent l’histoire de la maladie et des
+          thérapies au cœur de l’histoire sociale africaine. Ces travaux constituent des remises en cause d’une historiographie coloniale qui
+          insistait très unilatéralement sur l’œuvre des médecins et les succès de la médecine occidentale. A la fin du <num>xix<hi rend="sup">e</hi></num>
+           siècle on constate la coïncidence du développement de la médecine et d’une nouvelle forme de colonisation. Ce qui autorise certains auteurs
+          a développer le concept d’une médecine « outil de l’impérialisme ». Dans cette perspective, il leur paraîtrait même inconcevable, qu’il
+          s’agisse d’étudier l’histoire de la médecine ou l’histoire coloniale des <num>xix<hi rend="sup">e</hi></num> et <num>xx<hi rend="sup">e</hi></num>  siècles,
+          d’aborder ces faits l’un sans l’autre.</p>
+        <p>S’interrogeant sur les interactions qui ont prévalu entre santé et colonisation, ces auteurs font intervenir la nouvelle médecine en tant
+          qu’acteur primordial de l’entreprise coloniale. Mais il faut aller plus loin et avancer que la médecine n’a pas seulement été un instrument
+          d’occupation : elle a également été un instrument de colonisation et de politique coloniale. La colonisation elle-même en tant que phénomène
+          d’occupation de l’espace, donc mouvement humain, a été un facteur de diffusion et de confrontation avec de nouvelles maladies. Certains
+          auteurs ayant abordé la question de la fièvre jaune expliquent son introduction en Afrique par le biais  du  commerce  triangulaire  des 
+          esclaves entre  l’Afrique, l’Europe et l’Amérique.</p>
+        <p>Dans la période envisagée (1850-1960), la maladie se présente à l’état presque endémique. Les épidémies se succèdent et font des milliers
+          de morts. L’avenir de la présence française au Sénégal est menacé. Les médecins représentent l’optimisme colonial au moment ou une certaine
+          presse découragée conteste les choix de l’entreprise coloniale. Ils prennent part au combat mais certains d’entre eux mettent à profit leurs
+          compétences scientifiques pour asseoir efficacement les débuts de l’organisation coloniale. Au Sénégal, la vanille, le coton et l’indigo
+          sont introduits par leurs soins. Ils s’intéressent également à la gomme qui suinte de l’acacia gommier, utile en confiserie et pharmacie,
+          dont ils ne veulent pas laisser le monopole aux Maures. Sur le plan de la recherche strictement médicale, les médecins coloniaux participent
+          à l’assainissement des colonies.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources relatives à l’histoire de la santé aux colonies sont riches et variées, mais dispersées. Il s’agit essentiellement des rapports
+          médicaux fournis par les services de santé mais également des correspondances diverses entre les différentes administrations pendant les
+          crises sanitaires : les services de police, les chambres de commerce, les correspondances diverses des populations adressées à
+          l’administration, soit pour réclamer des secours soit pour se plaindre des mesures sanitaires ; les archives des institutions médicales
+          conservées Archives nationales (Centre des archives d’outre-mer, Aix-en-Provence) dans le fonds Colonies, A.O.F., série H. On y trouve
+          également dans la sous série 2 G les rapports périodiques de l’administration sanitaire de la colonie depuis 1895. Avant cette date les
+          informations relatives à la santé sont à chercher dans la série B et la sous-série C6 (correspondance ministérielle au départ et à
+          l’arrivée). Dans les archives des instituts Pasteur de Dakar et de Paris, sont conservés les rapports de fonctionnement des services
+          spécialisés dans la lutte contre la fièvre jaune et les papiers des pastoriens eux-mêmes, dont ceux du docteur Mathis. Ont enfin été
+          exploitées au Centre des archives d’outre-mer les archives de l’Agence économique d’outre-mer (cotées Sen XI) et à Marseille les archives du
+          Pharo.</p>
+        <p>Les sources imprimées sont essentiellement constituées de relations de voyage contemporaines et de thèses de médecine soutenues par des
+          médecins coloniaux.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

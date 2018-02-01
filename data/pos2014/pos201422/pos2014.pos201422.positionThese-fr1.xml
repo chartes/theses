@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La distribution est un enjeu majeur pour l'industrie vidéoludique. Le contexte actuel – notamment la dématérialisation progressive de l'objet vidéoludique et la fragilisation des intermédiaires marchands habituels, à l'instar de la chaîne de magasins Game ayant fermé ses portes en France en janvier 2013 – voit la transformation des modalités de l'activité de distribution, qui pousse à s'interroger sur le rôle réel de celle-ci vis-à-vis du jeu vidéo.</p>
+        <p>Mathieu Triclot, dans <emph>Philosophie des jeux vidéo</emph>, définit l'objet vidéoludique non pas suivant des caractéristiques formelles, mais d'après les usages qui sont faits de celui-ci : c'est l'expérience de jeu qui fait le jeu vidéo. L'histoire de cet objet complexe n'a que peu été écrite. Si les travaux sont notables dans d'autres disciplines universitaires, la majorité des ouvrages écrits sur l'histoire du jeu vidéo se caractérisent par leur fort américano-centrisme, et sont bien souvent le fruit des recherches d'amateurs éclairés et de passionnés plus que d'universitaires. L'histoire du jeu vidéo en France est particulièrement délaissée.</p>
+        <p>Le travail ici présenté s'attache à étudier les réseaux de distribution du jeu vidéo en France, de l'arrivée de la première console sur le territoire, l'Odyssey de Magnavox, en 1974, à la fin des années 1980, correspondant tout à la fois à l'arrivée en France des consoles de troisième génération, la NES de Nintendo et la Master System de Sega, qui transforment l'état du marché, et à l'effondrement de l'une des principales sociétés de distribution de l'époque, Cable, avec sa société mère France Image Logiciel. La réflexion porte sur le jeu tel qu'acheté pour être consommé dans le cadre du domicile, excluant de la réflexion le jeu universitaire et le jeu d'arcade, mais pas le jeu éducatif. Travailler sur les logiciels de jeux amène par ailleurs à s'interroger sur la distribution des machines elles-mêmes. Se pose la question de savoir comment se forment les réseaux de distribution en France au cours des années 1970-1980, mais également de quelle manière ces mêmes réseaux, et l'activité de distribution de manière générale, transforment et modèlent l'objet vidéoludique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les fonds d'archives dédiés au jeu vidéo sont très peu nombreux. Les sociétés de distribution, d'édition et de développement n'ont guère accordé d'attention, en France, à la préservation de leurs archives, et les destructions ont été nombreuses. Seuls deux fonds d'importance notable, et à l'utilité par ailleurs assez peu importante pour l'étude des réseaux de distribution, ont pu être retrouvés : les archives de Bertrand Brocard, développeur et éditeur dans les années 1980 et 1990, conservées à la cinémathèque associative Jean Douchet à Dijon, et le fonds Édiciel, société d'édition de jeux vidéo d'Hachette, conservé à l'Institut Mémoires de l'édition contemporaine.</p>
+          <p>La principale source sur le plan quantitatif est la documentation imprimée, et en particulier la presse spécialisée qui facilite une approche chronologique de la période. Quatre titres en particulier ont été étudiés : <emph>L'ordinateur individuel</emph>, <emph>Jeux et stratégie</emph>, <emph>Tilt</emph> et <emph>Hebdogiciel</emph> ; s'y ajoutent de nombreux périodiques consultés de manière plus ou moins ponctuelle. La partialité de la presse, la faible qualité des informations qu'elle délivre, impose une grande prudence dans son utilisation comme source.</p>
+          <p>Une troisième source a été formée par des entretiens enregistrés réalisés avec quelques acteurs de l'époque. Ce travail est resté assez limité, pour des questions de temps et de difficulté à joindre les personnes concernées. Ont été réalisés en définitive plusieurs entretiens avec Bertrand Brocard, Laurant Weill, le fondateur de Loriciels, l'une des principales sociétés d'édition françaises dans les années 1980, Denis Thebaud, le fondateur d'Innelec, principal grossiste français en jeu vidéo, et Jean-Louis Le Breton, le fondateur de Froggy Software, société d'édition de jeux sur Apple II.</p>
+          <p>Plusieurs <emph>packagings</emph> de jeux des années 1980 ont été utilisés en tant que quatrième source. Ces <emph>packagings</emph> ont été sélectionnés dans les collections de l'association MO5.COM. Une méthodologie tirée des enseignements de l'École des Chartes en histoire du livre a été appliquée à leur étude, l'objectif étant de mesurer la place prise par la conception de ces <emph>packagings</emph> au sein du processus de distribution, et d'étudier les traces laissées sur eux par la distribution.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

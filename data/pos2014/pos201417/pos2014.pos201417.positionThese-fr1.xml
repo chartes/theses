@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Le village de Saint-Félix-de-Sorgues se trouve au pied d'un Avant-Causse du Larzac, dans le sud du département actuel de l'Aveyron. Contrairement à sa voisine Sainte Eulalie, cette commanderie hospitalière fondée vers le milieu du <num>xii<hi rend="sup">e</hi></num> siècle a été peu étudiée. Le village est situé dans un paysage particulier, au pied d'un vallon, dominé d'un côté par un plateau calcaire et des pentes plus légères de l'autre.</p>
+          <p>Depuis les années 1930, les historiens ont tenté d'étudier l'espace, notamment au moyen de sources planimétriques telles que les plans-terriers de la fin de l'Ancien Régime. Cependant, l'espace est mobile et en perpétuel changement ; les sources postérieures nous permettent uniquement d'entrevoir ce qu'aurait pu être un paysage. C'est pourquoi il est nécessaire de se rapprocher des périodes étudiées en faisant appel à d'autres sources qui ressemblent le plus aux documents planimétriques modernes, les compoix et les terriers.</p>
+          <p>Ces registres fiscaux ou seigneuriaux – permettant, pour l'un, d'asseoir la fiscalité méridionale sur les biens des habitants d'une communauté et, pour l'autre, de connaître les terres et les redevances d'une seigneurie – contiennent en effet un nombre important d'indications spatiales, les confronts, qui ont été peu utilisées dans l'historiographie, notamment faute de moyens techniques adéquats. Depuis les années 1950, ces sources ont souvent été abordées pour approcher l'histoire sociale d'une ville ou l'histoire d'une seigneurie pendant la guerre de Cent Ans. La modélisation des données spatiales permet d'aborder l'histoire du peuplement et de l'espace agraire d'un village au cours de la première moitié du <num>xv<hi rend="sup">e</hi></num> siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>L'étude se fonde sur un corpus de quatre registres fiscaux et seigneuriaux : trois compoix et deux terriers. Datés de 1413, 1437 et du milieu du <num>xv<hi rend="sup">e</hi></num> siècle, les trois compoix sont conservés aux archives départementales de l'Aveyron, dans le fonds de la commune de Saint-Félix-de-Sorgues. Daté de 1420, le terrier fait partie du fonds de la commanderie, conservé dans le Fonds de Malte des archives départementales de Haute-Garonne. Des documents planimétriques – une vue figurée pour un procès du <num>xvi<hi rend="sup">e</hi></num> siècle, des plans-terriers du milieu du <num>xviii<hi rend="sup">e</hi></num> siècle et le cadastre parcellaire « napoléonien » – ont pu aussi servir d’élément de comparaison, voire de complément lorsque les sources principales étaient trop peu bavardes. Par ailleurs, l'ensemble du fonds a été utilisé pour établir un rapide historique de la commanderie et remettre en contexte les sources principales. D'autres sources, plus éparses, ont aussi été utilisées, comme un arbitrage de la cour du grand prieur de Saint-Gilles daté de 1410 conservé aux archives départementales de Haute-Garonne ou l'enquête de 1373 conservée aux Archives vaticanes.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

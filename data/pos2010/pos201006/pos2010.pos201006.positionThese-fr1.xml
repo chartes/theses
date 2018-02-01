@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les textes de coutume constituent pour la ville du château de Limoges un des rares témoignages écrits du fonctionnement de l’institution
+          municipale, surtout pour le <num>xiii<hi rend="sup">e</hi></num> siècle. La conservation de ces sources, alors que l’essentiel de la
+          production écrite du consulat a été perdu, souligne assez le sentiment de leur valeur et de leur pérennité à travers les siècles ; ainsi
+          l’avocat limougeaud Étienne Guibert considérait encore les coutumes rédigées au <num>xiii<hi rend="sup">e</hi></num> siècle comme
+          d’actualité au <num>xvii<hi rend="sup">e</hi></num> siècle. L’étendue des pouvoirs que ces coutumes attribuaient à l’organisation municipale
+          explique cette pérennité, alors même qu’ils faisaient l’objet d’attaques de la part des pouvoirs en présence dans la ville : le vicomte de
+          Limoges, l’évêque, l’abbé de Saint-Martial. L’étude des coutumes, ainsi que celle d’un certain nombre de textes produits par le consulat et
+          susceptibles de les éclairer, permettra de nuancer l’idée, commune à plusieurs érudits du <num>xix<hi rend="sup">e</hi></num> siècle qui
+          travaillèrent sur l’histoire de Limoges, que la ville fut au <num>xiii<hi rend="sup">e</hi></num> siècle une « quasi république ».</p>
+        <p>Le corpus, bien que lacunaire, donne à voir l’élaboration d’un droit urbain dans toute sa complexité : la constitution d’un premier
+          ensemble de coutumes au début du <num>xiii<hi rend="sup">e</hi></num> siècle, l’application de ces règles dans les décisions de la justice
+          consulaire, celles-ci constituant également une source de droit jurisprudentiel pour les rédactions postérieures. Cette perspective
+          diachronique permet de mettre en lumière la progression du droit romain, dont l’influence, encore discrète dans la rédaction originelle, se
+          renforce tout au long du <num>xiii<hi rend="sup">e</hi></num> siècle. Un examen de la langue montrera de même l’évolution de l’occitan
+          documentaire des scribes du consulat sur trois siècles, et les facteurs historiques qui pourraient en être la cause.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’édition se fonde sur toutes les copies connues des coutumes, sous leur forme occitane ou latine, afin de déterminer plus précisément la
+          genèse des textes et les étapes de leur constitution. Le « cartulaire » du consulat, livre juratoire et recueil factice constitué de divers
+          éléments reliés ensemble lors de divers remaniements du <num>xiii<hi rend="sup">e</hi></num> au <num>xvii<hi rend="sup">e</hi></num> siècle,
+          constitue la source principale. Les éditions précédentes de ce volume, notamment celle de Camille Chabaneau, souffraient de l’absence de
+          commentaire et souvent d’outils de consultation tels que tables et index. C’est de ce « cartulaire municipal » que l’on a tiré la première
+          version des coutumes, rédigée en occitan au début du <num>xiii<hi rend="sup">e</hi></num> siècle, un certain nombre de décisions judiciaires
+          exemplaires prises par la cour consulaire tout au long de ce siècle, appelées « mémoriaux » et des « statuts et établissements » produits
+          aux <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles. Il ne s’agit donc pas d’une édition complète
+          du « cartulaire » mais d’un choix parmi les textes qu’il contient : ceux-ci éclairent l’élaboration et le devenir du corps principal des
+          coutumes de Limoges, rédigé en 1260 et entériné sous cette forme par de multiples confirmations des souverains anglais et français au
+              <num>xiv<hi rend="sup">e</hi></num> siècle.</p>
+        <p>Pour ce qui est de la seconde rédaction des coutumes en 1260, son statut de « rédaction officielle » a donné lieu à deux copies en
+          occitan : le manuscrit E 739, dans le fonds de la vicomté de Limoges, aux archives départementales des Pyrénées-Atlantiques, et le manuscrit
+          fr. 25219 à la Bibliothèque nationale de France (BNF). Les coutumes en latin ne sont connues que par des copies postérieures : le manuscrit
+          d’Étienne Guibert, <hi rend="i">Commentaires de la coutume de Limoges</hi>, coté BNF nouv. acq. lat. 1288, une copie du <num>xviii<hi rend="sup">e</hi></num> siècle dans le tome 684 de la collection Moreau à la BNF, une copie réalisée par Joseph Nadaud, curé de Teyjac,
+          au <num>xviii<hi rend="sup">e</hi></num> siècle (AD Haute-Vienne, I SEM 13), enfin une copie du <num>xix<hi rend="sup">e</hi></num> siècle
+          (Londres, The National Archives, PRO 30/41/2). Vient s’ajouter à ces quatre témoins l’édition par Charles Antoine Bourdot de Richebourg, au
+              <num>xviii<hi rend="sup">e</hi></num> siècle, dans son <hi rend="i">Nouveau coutumier général ou corps des coutumes générales et
+            particulières de France, et des provinces</hi>, à partir des coutumes rédigées dans le ressort du parlement de Bordeaux.</p>
+        <p>Afin de compléter ces sources principales, il a fallu consulter l’ensemble de la série AA aux archives municipales de Limoges pour obtenir
+          une vue d’ensemble des confirmations des coutumes qui furent concédées par les souverains jusqu’au <num>xvi<hi rend="sup">e</hi></num> siècle. Les registres consulaires, sous leur forme manuscrite (AM Limoges, BB 1 à BB 4 ) ou dans l’édition donnée par Émile
+          Ruben au <num>xix<hi rend="sup">e</hi></num> siècle, ont été mis à profit pour fournir un aperçu de l’organisation municipale sous la forme
+          qu’elle revêtait immédiatement après la période étudiée.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

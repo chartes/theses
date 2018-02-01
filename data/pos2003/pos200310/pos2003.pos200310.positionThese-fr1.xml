@@ -1,0 +1,115 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les relations entre les socialistes français et le Parti social-démocrate allemand (SPD) étaient jusqu’à présent bien connues pour la fin
+          du <num>xix<hi rend="sup">e</hi></num>  siècle et pour le début du siècle suivant. En 1997 et 1998, les thèses de Nicole In der Beeck, portant sur la
+          comparaison entre le SPD et la SFIO face aux questions internationales après la première et la seconde guerre mondiale, et de Marie-Louise
+          Goergen, consacrée aux les relations entre socialistes allemands et français à l’époque de la deuxième Internationale (1889-1914), ont
+          encore complété l’éventail des connaissances sur le sujet.</p>
+        <p>L’intérêt pour les relations anciennes entre les deux partis n’a guère donné lieu à des recherches sur les périodes plus récentes. Ainsi,
+          les années qui suivent la fin de la seconde guerre mondiale sont-elles particulièrement mal connues. Seuls le mémoire de maîtrise de Sophie
+          Bombois, ainsi que les travaux de Sylvie Guillaume, de Jean-Paul Cahn ­ sur le SPD et la fin de la <num>iv<hi rend="sup">e</hi></num>  République ­,
+          et de Dietrich Orlow permettent une première approche du problème. Il n’en reste pas moins que les rapports entre socialistes français et
+          allemands entre 1945 et 1953 n’ont toujours pas donné lieu à une étude générale. Et si la participation des uns et des autres aux réunions
+          socialistes internationales est assez bien connue, les rencontres particulières sont très rarement évoquées, de même que les liens
+          personnels qui ont pu se tisser entre certains de ces socialistes. De plus, des questions cruciales comme celle de la Rhénanie, de la Ruhr,
+          de la Sarre, ou encore de la place de l’Allemagne d’après-guerre dans la construction européenne, n’ont guère été étudiées sous l’angle des
+          propositions socialistes.</p>
+        <p>Il fallait donc montrer les différents niveaux de relations entre les deux partis en étudiant, le plus précisément possible, les divers
+          protagonistes français et allemands ­ c’est notamment le but du « dictionnaire biographique » donné en annexe ­ et en développant certains
+          aspects encore peu étudiés, comme le rôle des anciens exilés allemands ou encore celui des mouvements de la jeunesse socialiste et
+          d’organisations « européennes » comme le Mouvement démocratique et socialiste pour les Etats-Unis d’Europe (MDSEUE). Il fallait également
+          tenter de saisir le poids que la SFIO et le SPD ont pu avoir dans le renouvellement des relations entre la France et l’Allemagne. Ce travail
+          a d’abord permis d’enrichir la prosopographie des militants français et allemands et de montrer l’implication souvent importante d’un grand
+          nombre d’entre eux dans les relations avec le parti frère. Il a également fait ressortir l’importance du rôle joué par des personnalités
+          aujourd’hui quelque peu oubliées, comme Salomon Grumbach. Enfin, il a très clairement mis en lumière l’existence, dans les huit années qui
+          suivent la fin de la guerre, de trois périodes bien distinctes dans les relations entre la SFIO et le SPD. Ces phases chronologiques ­
+          1945-1947, 1948-1949 et 1950-1953 ­ correspondent au règlement, ou non, d’un problème majeur entre les deux partis et recoupent en fait, à
+          peu de choses près, celles du rapprochement politique entre la France et l’Allemagne.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sont conservées dans quatre centres d’archives : les Archives d’histoire contemporaines (AHC), le Centre d’histoire sociale du
+          <num>xx<hi rend="sup">e</hi></num>  siècle (CHS) et l’Office universitaire de recherche socialiste (OURS) en France, les Archives de la
+          social-démocratie (AdsD) en Allemagne. Aux AHC, les fonds du groupe parlementaire socialiste, de Cletta et Daniel Mayer, et d’Alain Savary
+          ont fait l’objet d’une étude. Au CHS, seul le fonds Marceau Pivert s’est avéré intéressant. L’OURS possède les collections complètes du <hi rend="i">Populaire de Paris</hi>, du <hi rend="i">Populaire-Dimanche</hi>, ainsi qu’une partie de la presse des Jeunesses socialistes et
+          de nombreux bulletins de tendances. Outre cette presse, deux types de fonds sont particulièrement intéressants : ceux du Parti socialiste
+          SFIO (rapports des congrès nationaux ; procès-verbaux des réunions du comité directeur ; rapports du Secrétariat général avec les
+          fédérations de Moselle, de Meurthe-et-Moselle, du Bas-Rhin, du Haut-Rhin, du Nord et de la Seine ; documents concernant l’Internationale
+          socialiste) et ceux des responsables et militants socialistes impliqués dans les relations avec le SPD : Michel Cépède, André Ferrat,
+          Charles Lancelle, Jacques Piette, Pierre Rimbert, Maurice Deixonne, et surtout Guy Mollet.</p>
+        <p>Les AdsD conservent la presse du SPD, les comptes rendus de congrès, les fonds propres du SPD (actes des parlementaires, comptes rendus
+          des réunions du <hi rend="i">Parteivorstand</hi>) et de son homologue sarrois, le Parti social-démocrate sarrois (SPS), ainsi que des
+          archives de militants des deux partis. Les fonds de Heinrich G. Ritzel, Karl Mommer, Günter Markscheffel, Kurt Schumacher, Erich Ollenhauer
+          et Carlo Schmid ont été plus particulièrement étudiés.</p>
+        <p>L’étude des journaux socialistes conservés à la Bibliothèque nationale de France ­ presse régionale de la SFIO, journaux du MDSEUE et
+          presse social-démocrate de la Zone française d’occupation (ZFO) ­ permet de compléter l’examen des fonds d’archives.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’économie française a connu des bouleversements importants pendant la Première Guerre mondiale. La lutte contre l’Allemagne conduisait à
+          une guerre « totale » et à orienter tout le système productif français vers la guerre. La situation rendait nécessaire le recours plus
+          important à l’État, le seul à même de financer et d’organiser l’effort de guerre. L’administration a ainsi connu pendant le conflit
+          une « exubérance », un développement jusqu’alors inconnu.</p>
+        <p>Les historiens ont privilégié l’étude des deux grandes figures de la vie économique pendant la guerre : Albert Thomas, qui a su développer
+          la production d’armement, et Etienne Clémentel, ministre du Commerce et artisan d’une véritable collaboration économique interalliée. Le
+          ministère des Travaux publics, quant à lui, se voyait cantonné dans des domaines plus restreints mais néanmoins importants : l’organisation
+          des transports et l’approvisionnement en charbon. Si les résultats obtenus ont été moins spectaculaires que dans d’autres secteurs de la vie
+          économique, il n’en reste pas moins qu’ils transformaient des pratiques commerciales jamais remises en cause jusqu’alors. Peu à peu le
+          ministre des Travaux publics fut, en effet, amené à exercer un contrôle complet sur le marché du charbon, matière première indispensable à
+          la fois à la production industrielle et au chauffage de la population.</p>
+        <p>Marcel Sembat, figure oubliée du socialisme français, a souvent été réduit au rôle de ministre de l’Union sacrée, sans qu’on s’intéresse
+          concrètement à l’action qu’il avait menée à ce poste. Depuis quelques années, il bénéficie d’un certain regain d’intérêt. Christian Phéline
+          vient ainsi d’éditer ses <hi rend="i">Cahiers noirs</hi>, tandis que les Archives nationales, qui ont reçu ses archives privées en 2003, lui
+          consacrent une exposition au printemps 2008.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds Marcel Sembat représente la plus grande partie des sources consultées. Il est constitué des papiers que le ministre des Travaux
+          publics a emportés chez lui après son départ du gouvernement. Restés longtemps dans la maison de Sembat, ceux-ci sont conservés aux Archives
+          nationales depuis 2003 (637 AP). Le fonds comprend une importante correspondance mais ce sont surtout les dossiers de travail avec le
+          cabinet et les directions du ministère qui se sont avérés intéressants pour ce travail. Le fonds des Archives nationales a été complété par
+          les cahiers tenus par Sembat et conservés à l’Office universitaire de recherche socialiste. Les archives des ministères concernés (Travaux
+          publics principalement, mais aussi Guerre et Commerce) ont apporté des informations utiles sur le travail de l’administration pendant le
+          conflit. Enfin, l’étude détaillée de plusieurs textes législatifs a rendu nécessaire la consultation des archives du Parlement, à savoir les
+          procès-verbaux des commissions parlementaires compétentes et des séances de la Chambre et du Sénat.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

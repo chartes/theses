@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+            <p>Le nom de Michel Villedo, célèbre entrepreneur en bâtiment du <num>xvii<hi rend="sup">e</hi></num> siècle, est omniprésent dans les archives parisiennes, et son œuvre encore intact témoigne de ses qualités de bâtisseur et d’homme d’affaires. On peut l'admirer aux alentours de la capitale, au petit manoir de Bâville en Essonne, au château de Vaux-le-Vicomte en Seine-et-Marne, et à Paris dans le quartier du Marais. À défaut de portrait peint, les mots de Noël d’Argonne, dit Dom Bonaventure d’Argonne, dans ses <emph>Mélanges d’histoire et de littérature</emph> donnent vie au personnage :</p>
+            <p rend="indent">Villedo avait été dans sa jeunesse l’un de ces petits Limousins qui servent les maçons à Paris, et portent l’oiseau dans les atteliers : mais comme il avait beaucoup d’esprit, et qu’il considéroit tout avec bien de l’attention, il devint un fort habile et riche architecte. Il donna sa fille en mariage au médecin La Vigne, frère de l’illustre Mademoiselle de La Vigne dont il est parlé dans ces <emph>Mélanges.</emph></p>
+            <p rend="indent">Villedo qui n’avoit point oublié sa premiere condition, avoit coutume de dire aux jeunes Limousins : Courage enfans, j’ai été pauvre comme vous, devenez riches comme moi.</p>
+            <p>C’est sans doute à partir de cet éloge, repris par Michel Félibien dans son <emph>Histoire de la ville de Paris</emph>, et par Germain Brice dans sa <emph>Description de Paris</emph>, que s’est forgée la légende de l’ascension d’un homme travailleur et débrouillard – légende que les historiens de la capitale n’ont pas manqué de rappeler dès qu’ils citaient la rue qui porte son nom, dans le quartier du Palais-Royal.</p>
+            <p>Michel Villedo ouvrit la lignée des célèbres maçons de la Creuse et fit son chemin à Paris où les noms d’architecte, de maître maçon et d’entrepreneur étaient employés en concurrence avant la clarification faite par la création de l’Académie d’architecture en 1671. Dans les dernières monographies d’architectes, l’entrepreneur a acquis une véritable personnalité, bien distincte de celle de l’artiste ou de l’ingénieur, mais rares sont les simples entrepreneurs à faire l’objet d’une étude particulière. Ces individus, dont le métier et la personnalité se prêtent sans doute moins à une étude biographique que les architectes, ont d’abord été étudiés sous l’angle juridique : histoire du droit et droit de l’urbanisme. Leur rôle essentiel dans l’économie du chantier a été souligné par les professionnels du bâtiment. De façon plus générale, la vision portée sur les artistes et leurs œuvres a été renouvelée par l’examen des conditions matérielles et juridiques dans lesquelles les artistes exerçaient leur métier, et dans la mise en valeur des réseaux et des alliances familiales et professionnelles qu’ils constituaient.</p>
+            <p>Mais qui était vraiment Michel Villedo ? Quelle était sa part de liberté, sous la pression des règles de l’art de bâtir, des délais et de la situation économique, des désirs de l’architecte et du commanditaire ?</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+            <p>Pour se faire une idée aussi juste que possible de Michel Villedo, il fallait d’abord distinguer la signature des différents membres de la famille Villedo, identifier leur écriture et reconstituer ainsi les principales étapes de leur vie. À partir de la chronologie et des arbres généalogiques fondés sur les sources de première main, la réflexion s’est construite principalement à partir du matériau fourni par les fonds conservés aux Archives nationales : actes notariés du Minutier central des notaires de Paris, registres de lettres patentes du Bureau des finances (Z<hi rend="sup">1F</hi>), procès-verbaux d’expertise des greffiers des Bâtiments (Z<hi rend="sup">1J</hi>), minutes des délibérations du Bureau de la Ville (H<hi rend="sup">2</hi>), complétés par les archives de la Maison du roi (O<hi rend="sup">1</hi>), et celles des établissements religieux (S). À la Bibliothèque nationale, les pièces isolées du cabinet des Titres, la correspondance de certains clients de Michel Villedo et quelques imprimés judiciaires ont apporté un éclairage différent et ouvert d’autres pistes de recherche. Les cartes anciennes de Paris, en particulier les plans de Gomboust et de Jouvin de Rochefort, ainsi que les estampes du <num>xvii<hi rend="sup">e</hi></num> siècle se sont révélées indispensables à la compréhension des textes. À chaque fois que c’était possible, Les informations recueillies dans les archives ont été confrontées à la visite des lieux.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

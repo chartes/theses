@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+         <p>Depuis une quinzaine d’années, de nombreuses recherches sur des bibliothèques des abbayes cisterciennes ont vu le jour et font suite aux recherches fondamentales menées auparavant sur Clairvaux et sur Cîteaux. Le fonds de l’abbaye de Vauclair, pourtant riche d’une centaine de volumes très bien conservés, n’avait jusqu’ici pas fait l’objet de recherches, l’historiographie ayant tendance à se concentrer sur les productions primitives de l’ordre cistercien. </p>
+         <p>Il est vrai que les manuscrits de Vauclair n’abritent pas de nombreux chefs-d’œuvre de l’enluminure romane ou de la forme caractéristique que prit celle-ci en contexte cistercien. D’un point de vue plus général, l’abbaye n’exerça pas non plus une influence importante au sein de l’ordre. Cependant, par l’excellente conservation de son fonds de manuscrits, qui n’a quasiment pas été dispersé, Vauclair apparaît comme un centre artistique et religieux secondaire mais dont l’examen permet de se faire une idée assez précise du fonctionnement matériel, intellectuel et artistique de la bibliothèque d’une abbaye cistercienne de moyenne importance. Ses manuscrits présentent une enluminure monochrome, majoritairement composée de motifs abstraits. </p>
+         <p>Les différents aspects de la vie de l’abbaye sont abordés dans ce travail. Du point de vue de son histoire, de sa fondation en 1134 à sa dissolution à la révolution, il convenait de retracer les différentes étapes de son évolution en tant qu’institution mais également en tant que création architecturale de qualité. Il s’agissait aussi d’identifier les différentes relations développées par l’abbaye et de distinguer celles qui relevaient du niveau local – et notamment avec Laon – de celles qui existaient avec l’ordre cistercien – et particulièrement avec son abbaye-mère, Clairvaux. Concernant la bibliothèque de l’abbaye, il était intéressant de voir quelles stratégies étaient mises en place par les moines pour sa gestion et comment ils utilisaient leurs livres. L’analyse codicologique permet ainsi de déterminer un premier noyau de manuscrits produits à Vauclair et de proposer des hypothèses pour enrichir, grâce à une analyse stylistique, ce corpus. </p>
+      </div>
+              <div type="sources"><head>Sources</head>
+         <p>Le fonds principal était bien entendu constitué par les manuscrits de Vauclair conservés à la bibliothèque de Laon à l’exception de deux d’entre eux (BNF, ms. lat. 3065 et Staats - und Universität Göttingen, Philog. 142, qui n’a pu être exploité pour ce travail). Du côté des fonds d’archives, ceux de la Bibliothèque nationale furent particulièrement mis à contribution, en particulier le fonds des « Provinces françaises ». À cela s’ajoute les documents produits par l’abbaye elle-même, deux cartulaires et un registre de comptes de l’abbaye (ms. lat. 11073-11076), des documents isolés des Archives nationales de France (série L) ainsi qu’un ensemble datant des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles provenant des archives départementales de l’Aisne (série H). </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

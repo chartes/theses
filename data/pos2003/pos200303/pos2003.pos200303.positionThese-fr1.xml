@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les migrations sont rarement le fait d’individus isolés : le migrant compte, le plus souvent, sur un ensemble de relations qui accompagnent
+          sa démarche. Une fois arrivé à destination, il conserve des liens avec sa patrie et peut en entretenir avec des compatriotes émigrés comme
+          lui ; il noue aussi de nouvelles relations dans le lieu qui l’accueille, de façon plus ou moins large.</p>
+        <p>Mais l’étude historique des réseaux ainsi tissés par des émigrés est problématique, en raison de l’éparpillement de ces individus qu’une
+          même origine unit. Un fonds original, celui des <hi rend="i">Testamenti forestieri</hi>, permet cependant de pallier cet inconvénient pour
+          ce qui est de l’émigration florentine : il rassemble à Florence des documents produits par les émigrés là où ils sont installés. Il permet
+          ainsi d’approcher et de comparer un ensemble d’individus issus de l’Etat de Florence, héritiers d’une tradition ancienne d’émigration encore
+          bien vivante au <num>xvi<hi rend="sup">e</hi></num>  siècle, de cerner non seulement certaines des caractéristiques de leur migration (durée,
+          causes...), mais aussi les systèmes de relation qui la sous-tendent.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les <hi rend="i">Testamenti forestieri</hi> passés au cours du <num>xvi<hi rend="sup">e</hi></num>  siècle par des Florentins émigrés, conservés à
+          Florence ( <hi rend="i">Archivio di Stato</hi>, <hi rend="i">Notarile moderno</hi>) sont au centre de l’étude. Le cas des testateurs
+          présents à Lyon et à Rome a été approfondi : ont été exploités pour Rome les minutes du Consulat des Florentins (Rome, <hi rend="i">Archivio
+            di Stato</hi>, <hi rend="i">Trenta notai capitolini</hi>, <hi rend="i">Ufficio</hi> 36) pour la période 1586-1591, ainsi que les <hi rend="i">Statuts de la nation florentine</hi> de la ville (Paris, Bibl. nat. de Fr., it. 741) ; pour ce qui est de Lyon, on a mis à
+          contribution les minutes des notaires François Anime, Pierre Bégulle, Claude Chappelu, Nicolas Dorlin, Benoît Dutroncy et surtout celles de
+          Pierre Delaforest, conservées aux archives départementales du Rhône, divers documents des archives municipales de Lyon (séries BB et CC),
+          ainsi que le fonds de la Charité, conservé au Service central des archives des Hospices civils de Lyon (séries B et E). Enfin, on s’est
+          appuyé sur les pièces du Cabinet des titres (Bibl. nat. de Fr., Pièces originales et Cabinet d’Hozier).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

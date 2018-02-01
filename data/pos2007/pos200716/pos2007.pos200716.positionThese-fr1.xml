@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le renouveau de l’histoire politique et diplomatique durant les vingt dernières années a considérablement renouvelé les approches et mis en
+          valeur de nouveaux enjeux. Elle a notamment entraîné la floraison d’un grand nombre de travaux, dont les moindres ne sont certainement pas
+          les biographies de ministres et de grands commis de l’État afin de « donner de nouvelles bases à l’histoire des rapports entre les
+          souverainetés » (L. Bély).</p>
+        <p>Époque où les États montent en puissance, le <num>xvii<hi rend="sup">e</hi></num> siècle constitue un tournant dans l’histoire administrative et
+          diplomatique. Les gouvernements repose sur des structures de plus en plus complexes, qui se mettent progressivement en place au cours du
+          siècle. L’approche biographique constitue une entrée pertinente pour étudier ces nouvelles structures et comprendre les modalités d’exercice
+          du pouvoir, à une époque où la personnalisation de ce dernier est encore très grande.</p>
+        <p>À cet égard, on considère traditionnellement que les premières années du règne personnel de Louis XIV sont marquées par l’opposition de
+          deux grands ministres, Colbert et Louvois. Ils ne sont pourtant pas seuls : le Conseil est peuplé d’autres personnes, qu’il est nécessaire
+          de bien connaître afin de comprendre l’origine des décisions politiques et les modalités de leur application.</p>
+        <p>La figure de Simon Arnauld de Pomponne semble donc digne d’intérêt. D’une part, lui est confiée la difficile mission d’être le secrétaire
+          d’État des Affaires étrangères, à une époque où Louis XIV est en guerre contre toute l’Europe. Alors que la France se trouve à son apogée et
+          qu’elle accumule les victoires militaires, Pomponne doit négocier la paix. D’autre part, Pomponne est un Arnauld, fils de Robert Arnauld
+          d’Andilly, neveu du chef des jansénistes Antoine Arnauld et des grandes abbesses de Port-Royal, les mères Agnès et Angélique.</p>
+        <p>Il était donc du plus sensible intérêt de s’interroger sur le parcours et l’action d’un homme qui est parvenu aux plus hautes charges en
+          étant janséniste, et de comprendre quel peut être le rôle et l’action d’un ministre-diplomate en pleine guerre de Hollande.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude des diverses facettes de Pomponne nécessite de recourir à des sources très dispersées. Ses papiers personnels sont répartis entre
+          la bibliothèque de l’Arsenal (ms 6034 à 6041 et 6626) et les archives du château du Fayel (Oise, fonds privé). Ces archives – entre autres
+          la correspondance de Pomponne – sont à la base de l’étude : elles permettent d’éclairer son parcours politique et personnel, d’étudier son
+          réseau social et d’approcher sa vie quotidienne. En plus de quelques renseignements personnels, les archives du ministère des Affaires
+          étrangères ont fourni le matériau nécessaire à l’étude du département des Affaires étrangères. L’immense masse de ces documents nous a forcé
+          à faire des choix. Nous avons choisi de consulter l’ensemble des documents de la série « Mémoires et documents » relatifs à Pomponne et
+          d’effectuer des sondages dans la série « Correspondance politique » : ont été consultées l’ensemble des sous-séries pour l’année 1679 et la
+          sous-série Suède de 1672 à 1679.</p>
+        <p>Aux Archives nationales, les documents du Minutier central des notaires parisiens (étude LXXV) a été notre principale source pour l’étude
+          des réseaux sociaux et de la fortune de Pomponne. Les séries et sous-séries O<hi rend="sup">1</hi>, G<hi rend="sup">7</hi>, Z <hi rend="sup">1J</hi>, 557 AP, etc. ont également été utilisées.</p>
+        <p>Le département des manuscrits de la Bibliothèque nationale de France a aussi été mis à contribution : les premières missions de Simon
+          Arnauld comme intendant d’armées ont pu être étudiées grâce aux papiers de Le Tellier ; nous avons par ailleurs consulté des papiers
+          d’ambassadeurs et un grand nombre de manuscrits isolés (ms fr., nouv. acq. fr., Cinq-cents Colbert, mélanges de Colbert, Clairambault,
+          collections généalogiques,…).</p>
+        <p>Les liens entre Pomponne et Louvois ont pu être mis en lumière par l’étude de la sous-série A<hi rend="sup">1</hi> du Service historique
+          de la Défense. En revanche, le recours aux Archives départementales de la Seine-et-Marne et aux Rijksarchiev Utrecht s’est révélé décevant.
+          Enfin, un grand nombre de bibliothèques et de services d’archives ont été fréquentés pour des documents isolés (bibliothèque de l’Assemblée
+          nationale, bibliothèque de l’Institut, bibliothèque Mazarine, Archives départementales de l’Essonne, archives de l’Assistance publique et
+          des Hôpitaux de Paris, etc.).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’historiographie rouergate a fait très peu de place aux ordres mendiants ruthénois, sans doute à cause de la disparition de toute trace,
+          ou presque, de la présence à Rodez des franciscains et des dominicains. Pourtant, alors que le couvent des franciscains est fondé seulement
+          six ans après la mort de saint François, celui des dominicains est situé non loin du foyer originel de l’ordre qu’est Toulouse. Si
+          l’historiographie des années 1960, et notamment l’École des Annales, a montré l’intérêt des études sur les Mendiants comme révélateurs de
+          l’urbanisation, d’autres points sont aussi importants. Les Frères mineurs et prêcheurs ruthénois sont en effet au centre de la vie
+          religieuse et politique de la ville, du comté et du diocèse de Rodez.</p>
+        <p>On voit ainsi que ces ordres constituent des révélateurs de l’emprise du comte et de l’évêque de Rodez sur leur ressort respectif.
+          L’origine sociale et géographique des frères, les soutiens laïcs et religieux apportés à la construction des couvents, mais aussi les
+          fondations, les confréries, tous ces éléments sont autant d’indices qui permettent de situer les couvents mendiants dans leur environnement
+          social, d’établir les étapes marquantes qui ont fait de ces frères des acteurs essentiels de la vie religieuse rouergate. L’étude des
+          soutiens, tant des membres de la famille comtale que de la noblesse et de la bourgeoisie, permet aussi de comprendre comment ces couvents
+          ont traversé les crises de la fin du Moyen Age, comme le passage à l’Observance des franciscains à la fin du <num>xv<hi rend="sup">e</hi></num>
+          siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La plus grande partie des sources se trouve aux Archives départementales de l’Aveyron qui ont récupéré à la Révolution les archives des
+          couvents des franciscains et des dominicains de Rodez, aujourd’hui classées dans la série H, sous les cotes 11 H (dominicains) et 14 H
+          (franciscains). Ces sources ont été très peu exploitées : après avoir été vu par un dominicain toulousain, le fonds des dominicains a servi
+          à l’élaboration d’un mémoire de maîtrise et de quelques articles, alors que celui des franciscains est resté vierge de toute recherche
+          jusqu’au récent colloque Sainte Claire en Rouergue organisé par les Archives départementales de l’Aveyron. Il est essentiel de noter la
+          différence de ces deux fonds qui révèlent une pratique archivistique divergente entre les dominicains, qui gardent tout ou presque de leurs
+          documents, et les franciscains dont seuls sont parvenus les actes solennels émanant du Saint-Siège et les testaments les plus importants
+          rédigés en faveur du couvent. Si l’inventaire du fonds des franciscains a été établi durant nos recherches, celui des dominicains reste en
+          préparation et sera certainement complété à partir des éléments contenus dans cette thèse.</p>
+        <p>Les axes de recherche de la présente étude ont bien sûr dirigé nos regards vers des documents émanant des pouvoirs civils et religieux
+          ruthénois. Ainsi, pour tenter de saisir les rapports entre la ville et les couvents, ont été dépouillés les registres des délibérations
+          consulaires de la Cité et du Bourg de Rodez, qui constituent une source inestimable sur la vie urbaine, à partir du XIV <hi rend="sup">e</hi> siècle pour le Bourg et du <num>xv<hi rend="sup">e</hi></num> pour la Cité, et qui contiennent des informations essentielles pour notre
+          objet, comme les rémunérations accordées aux prédicateurs par la ville. Les séries G (fonds de l’évêché de Rodez) et 3 G (fonds du chapitre
+          cathédral de Rodez) éclairent les rapports entretenus entre les Mendiants, l’évêque et le chapitre cathédral. Enfin quelques registres
+          notariaux, comme ceux d’Adhémar Catel (C 1381-1388), et les comptes du comté de Rodez (C 1329-1336) ont été également examinés pour voir les
+          différentes mentions qui y étaient faites des Mendiants, les testaments et pensions en faveur des frères par exemple. La série Q (domaines)
+          a permis de donner une idée de l’état des bâtiments conventuels, du mobilier qui y était contenu, en bref de donner une idée des couvents et
+          de ce qui subsistait à la Révolution des périodes médiévale et moderne.</p>
+        <p>Aussi riches qu’elles soient, ces sources locales ont été complétées par des documents conservés à Paris, à la Bibliothèque nationale de
+          France et au Centre historique des Archives nationales. La collection Doat, à la BnF, a ainsi offert des copies d’actes ayant parfois
+          disparu des couvents ruthénois. Aux Archives nationales, les documents établis pour l’enquête de la Commission des réguliers de 1768 donnent
+          un instantané des couvents à la fin de l’époque moderne ; quelques actes concernant les comtes de Rodez, comme des testaments, éclairent les
+          fondations faites par eux auprès des établissements religieux de Rodez.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

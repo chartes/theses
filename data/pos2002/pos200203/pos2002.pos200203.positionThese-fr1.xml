@@ -1,0 +1,95 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La cathédrale gothique conserve dans la pierre le souvenir des ambitions et des aspirations d’une société, dont elle reflète la culture, la
+          pensée et les pratiques liturgiques. Malgré sa taille modeste, bien éloignée du gigantisme de certaines de ses contemporaines, Notre-Dame de
+          Senlis est le fruit de l’ambition d’un prélat cultivé, désireux de doter son diocèse d’un édifice répondant aux exigences nouvelles. Située
+          dans le quart nord-est de l’enceinte du Bas-Empire, elle en occupe son point culminant et domine de sa flèche élancée cette cité picarde,
+          encore fortement marquée en son centre par la topographie médiévale. Trop souvent étudiée pour son seul portail occidental, dont la
+          nouveauté du thème ne manqua pas de frapper les historiens d’art, Notre-Dame suscita peu d’intérêt, ce que déplorait déjà Anthyme Saint-Paul
+          en 1877. Les dommages subis par la construction gothique desservirent ce monument, qui se révèle pourtant passionnant.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Plusieurs types de sources ont été utilisés pour cette étude. Les archives conservées frappent par leur pauvreté, notamment pour le haut
+          Moyen Âge. Aucune charte, ni notice épiscopale du <num>xi<hi rend="sup">e</hi></num> siècle ne subsiste. Cette pauvreté documentaire, certes fréquente
+          pour des périodes anciennes, ne permet guère de s’appuyer sur des documents pour l’étude de l’évolution du groupe épiscopal senlisien et de
+          la mise en œuvre de la construction gothique. Pour les périodes ultérieures, les archives provenant de l’évêché, du chapitre cathédral et de
+          la fabrique ont été dépouillées. Elles sont conservées, pour ce qu’il en reste, aux archives départementales de l’Oise dans la série G
+          (clergé séculier avant 1790) et la sous-série 2 Gp (fabriques). Elles ont été complétées par l’obituaire de l’église de Senlis (Paris, Bibl.
+          nat. de France, lat. 9975) et par la collection de Picardie, à la Bibliothèque nationale de France. Les <hi rend="i">Collectanea
+            Silvanectensia</hi> d’Afforty (1740-1786), dont les manuscrits se trouvent à la bibliothèque municipale de Senlis, représentent par
+          ailleurs une source indispensable à toute étude concernant le diocèse et la ville de Senlis : eux seuls gardent la trace de documents perdus
+          ou détruits lors des désordres révolutionnaires. On a recouru par ailleurs à des sources iconographiques et cartographiques, conservées aux
+          départements des estampes et des cartes et plans de la Bibliothèque nationale de France, à la Médiathèque de l’architecture et du
+          patrimoine, aux Archives nationales (série NN) et aux archives départementales de l’Oise (série Fi). Les plans cadastraux ont constitué un
+          dernier type de sources, essentiel à la compréhension de la topographie de la cité.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

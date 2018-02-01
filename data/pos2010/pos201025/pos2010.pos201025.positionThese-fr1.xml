@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La question consulaire a été abordée par l’historiographie suivant trois perspectives successives : les juristes ont étudié les consuls
+          pour légitimer leur entrée dans le corps diplomatique, les orientalistes les ont étudiés pour les écrits qu’ils ont laissés notamment sur le
+          Moyen-Orient et, plus récemment, les historiens se sont intéressés à eux pour travailler sur la diffusion des pratiques culturelles et
+          commerciales. Ces derniers sont revenus essentiellement sur les consulats du Levant dont les origines sont plus lointaines, les
+          problématiques nombreuses et la documentation abondante, et ont privilégié le <num>xviii<hi rend="sup">e</hi></num> siècle, époque à
+          laquelle l’institution consulaire atteint sa pleine maturité.</p>
+        <p>Pourtant, l’institution connaît une prise en main progressive par la royauté au <num>xvii<hi rend="sup">e</hi></num> siècle, avec, en point
+          d’orgue, la transformation de l’office en commission et sa définition par l’ordonnance de la Marine de 1681. Les consulats français
+          d’Espagne, sous tutelle royale à partir du début de ce siècle, revêtent un intérêt tout particulier par le rôle qu’ils jouent pour la
+          protection du commerce interlope vers les Indes. Ce rôle s’accroît après le changement dynastique de 1700, date à partir de laquelle Jérôme
+          de Pontchartrain, secrétaire d’État de la Marine, réorganise et réforme en profondeur les consulats français d’Espagne par l’intermédiaire
+          de son envoyé à Madrid de 1701 à 1709, François-Ambroise Daubenton de Villebois.</p>
+        <p>Parmi ces consulats français, celui de Barcelone s’inscrit dans une situation politique particulière : l’attitude des pouvoirs locaux
+          vis-à-vis de la royauté espagnole est le plus souvent conflictuelle et se manifeste dans l’opposition entre la généralité de Catalogne et le
+          vice-roi, capitaine général de la province nommé par le roi. Le consul, ne pouvant agir que par l’intermédiaire de ces institutions pour
+          régler les conflits touchant les Français et pour défendre les privilèges de la nation, doit inscrire son action dans ce rapport de force.
+          Or, s’il y parvient dans une Espagne habsbourgeoise, paradoxalement, le changement dynastique vient troubler le jeu quand la Catalogne
+          s’oppose à la politique bourbonienne et finit par choisir le camp de l’archiduc Charles face à Philippe V. Le consulat connaît une longue
+          période d’errance avant d’être complètement réorganisé, parallèlement à la publication des décrets de <hi rend="i">Nueva Planta</hi> en
+          1716.</p>
+        <p>Ainsi, le consulat français de Barcelone entre dans la modernité entre 1679 et 1716. Pour étudier cette évolution, une première partie
+          envisage l’historique de la fonction consulaire, son implantation en Espagne et son fonctionnement administratif quand entre en poste le
+          premier consul français de Catalogne, Laurent Soleil. La deuxième partie est consacrée à ce dernier, consul de 1679 à 1705, dont la
+          longévité permet d’aborder la pratique consulaire au quotidien et de suivre son évolution au gré d’événements politiques aussi importants
+          que la guerre de la Ligue d’Augsbourg et le changement dynastique. La troisième partie aborde la situation tout à fait singulière dans
+          laquelle se trouve le consulat français de Barcelone, après 1705, date du ralliement des Catalans à l’archiduc Charles : son titulaire
+          connaît l’exil jusqu’à la reconquête de la Catalogne, puis doit organiser la modernisation du consulat français de Barcelone</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont essentiellement des correspondances. La correspondance active des consuls français de Barcelone, conservée aux
+          Archives nationales sous la cote Affaires étrangères B<hi rend="sup">I</hi> 178 à 181, a constitué l’élément de base de cette recherche.
+          Elle a été complétée par les lettres envoyées par le pouvoir central, conservées en Marine B⁷ et Marine B², et par les missives expédiées
+          par les consuls à la chambre de commerce de Marseille, qui les conserve encore dans les sous-séries K 195 et K 196.</p>
+        <p>L’exploitation des archives espagnoles était indispensable à ce travail. Ont été dépouillés les documents échangés entre le consul
+          français, les autorités françaises et espagnoles au sujet de la question consulaire. Ces archives se répartissent dans différents centres
+          dont les archives de la couronne d’Aragon à Barcelone et l’Archivo histórico nacional de Madrid, qui, dans ses fonds <hi rend="i">Estado et
+            Junta de negocios de los extranjeros</hi> conserve l’essentiel de ces documents.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

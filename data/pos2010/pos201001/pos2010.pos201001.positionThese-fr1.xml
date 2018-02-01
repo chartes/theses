@@ -1,0 +1,107 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’Aunis du <num>xvii<hi rend="sup">e</hi></num> siècle est surtout étudiée et connue pour ses marchands et sa société protestante. La
+          noblesse, considérée comme très peu nombreuse et sans rôle économique majeur, ne bénéficiait jusqu’ici d’aucune recherche. Il apparaît
+          pourtant, à l’issue d’un travail prosopographique, qu’une centaine de familles nobles vivent en Aunis dans la seconde moitié du <num>xvii<hi rend="sup">e</hi></num> siècle, ce qui constitue une densité nobiliaire supérieure à celle de nombreuses autres régions déjà étudiées.
+          Dès lors, il fallait s’interroger sur la présence d’un groupe social relativement nombreux et pourtant peu actif en apparence – il est en
+          effet presque exclusivement connu grâce aux documents produits par l’intendant. L’analyse devait donc mêler une approche du groupe
+          nobiliaire et de ses caractéristiques avec une étude des relations entre le pouvoir royal et ce groupe social, dans la mesure où Louis XIV,
+          pour mieux contrôler le deuxième ordre, tente de le modifier et de le remodeler. Ce travail s’appuie sur la réalisation d’un dictionnaire
+          prosopographique, qui réunit les informations concernant cent-cinq familles et cent-quatre-vingt-neuf individus nobles qui ont vécu en Aunis
+          sous le règne de Louis XIV.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les deux sources majeures sont les recherches de noblesse de l’intendant du Poitou Barentin puis celles de l’intendant de La Rochelle,
+          Bégon. Les sentences du premier, rendues en 1667, ont été perdues, il ne reste qu’une liste de noms et de dates ; en revanche, il existe une
+          copie des jugements rendus par l’intendant Bégon entre 1698 et 1700, conservée à la Bibliothèque nationale de France (fr. 32610 et 32611) et
+          éditée dans le cadre d’un mémoire de master préparatoire à cette thèse.</p>
+        <p>Le dépouillement des actes de cinquante-six notaires d’Aunis exerçant entre 1680 et 1690 – ce qui représente environ cent trente cotes –
+          complète la prosopographie et permet l’analyse du mode de vie noble. Les dates retenues correspondent à la période charnière autour de la
+          révocation de l’édit de Nantes, ce qui permet d’obtenir un état de la noblesse avant et après ce bouleversement. Dans la mesure où ces actes
+          sont passés après la Grande Recherche de 1666, les individus qui font appel à un notaire savent ce que signifie le fait de se présenter
+          comme « écuyer » ou « chevalier » sur un tel document : ce sont des qualifications strictement réservées à la noblesse. Dès lors, ce
+          critère, déjà utilisé lors des recherches de noblesse, a été choisi pour retenir ou non un acte notarié ; cela a permis d’obtenir un corpus
+          de sept cent soixante-treize actes. Cette étude a été complétée par le dépouillement intégral des minutes du notaire Billon, parce que c’est
+          lui qui possède la plus grande clientèle noble, et d’un registre du notaire Cherbonnier, qui semble être son prédécesseur.</p>
+        <p>En l’absence complète de fonds familiaux privés pour la noblesse du <num>xvii<hi rend="sup">e</hi></num> siècle, les renseignements
+          familiaux ont été puisés en partie dans les actes de baptême, de mariage et de sépulture. Le dépouillement des sources catholiques s’est
+          limité à la paroisse Saint-Barthélemy de La Rochelle, la plus densément peuplée de nobles ; les actes protestants rochelais quant à eux –
+          série I des archives départementales de Charente-Maritime – ont déjà été traités par élisabeth Forlacroix. Enfin, un « censif » – document
+          fiscal répertoriant les propriétaires de maisons à La Rochelle dans le dernier tiers du <num>xvii<hi rend="sup">e</hi></num> siècle ,
+          conservé aux archives municipales de la ville, permet d’aborder en partie la question de la richesse des familles.</p>
+        <p>Les relations entre la noblesse et le pouvoir royal sont essentiellement connues grâce à la correspondance entre les intendants et les
+          institutions centrales. La correspondance d’Arnoul, intendant de la Marine de Rochefort de 1683 à 1688, est conservée à la Bibliothèque
+          nationale de France ; elle est surtout riche pour l’étude de la réaction des nobles face à la Révocation. Enfin, sur le comportement des
+          nobles de manière générale, les seules sources sont les mémoires des intendants rédigés par Colbert de Croissy en 1664 et par Bégon en
+          1698.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

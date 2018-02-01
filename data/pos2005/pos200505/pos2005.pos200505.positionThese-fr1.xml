@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’architecte Jean-Jacques Huvé est peu connu du public car il n’a pas construit de grand édifice qui aurait fait passer son nom à la
+          postérité. Huvé est pourtant l’un des architectes les plus intéressants de la fin du <num>xviii</num>
+<hi rend="sup">e</hi> siècle. Outre une carrière exemplaire qui l’a conduit de l’Académie de France à la cour, et même jusqu’à la mairie de
+          Versailles, il a laissé un journal de son voyage en Italie, œuvre inédite à laquelle est associée une série de dessins réalisés sur place.
+          L’ensemble des sources permet d’étudier le personnage en profondeur et, plus particulièrement, sa formation et la manière dont il s’inscrit
+          dans le renouveau classique de la fin du <num>xviii</num>
+<hi rend="sup">e</hi> siècle.</p>
+        <p/>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La biographie de Jean-Jacques Huvé s’appuie pour l’essentiel sur trois fonds d’archives conservés par les descendants de l’architecte, par
+          la Bibliothèque d’art et d’archéologie et la bibliothèque municipale de Versailles. La collection familiale se compose de plusieurs
+          manuscrits : un traité d’éducation rédigé par Huvé à l’intention de ses enfants, <hi rend="i">L’Union des Sciences, des Arts et de la
+            Morale</hi> ; le <hi rend="i">Voyage en Italie et dans les Deux-Siciles</hi>, relation de son séjour à l’Académie de France, et enfin
+          plusieurs journaux tenus durant la Révolution. Ces sources posent un questionnement particulier. Les ayant rédigées sur la fin de sa vie,
+          Huvé y développe une vision rétrospective de son parcours et juge les événements au regard de la Révolution. Ces écrits peuvent être mis en
+          rapport avec les notes du voyage d’Italie rédigées sur place et la correspondance de l’architecte. La Bibliothèque d’art et d’archéologie et
+          la bibliothèque municipale de Versailles conservent près d’une centaine de lettres échangées entre Huvé et sa famille, ses commanditaires et
+          ses confrères architectes : Jacques-Denis Antoine (1731-1801), Bernard Poyet (1742-1824), Jacques Cellerier (1743-1814), Pierre-Adrien Pâris
+          (1745-1819), Mathurin Crucy (1749-1826), Claude-Thomas de Lussault. À ces fonds s’ajoutent les archives de l’administration des Bâtiments du
+          roi, conservées aux Archives nationales.</p>
+        <p/>
+        <p/>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

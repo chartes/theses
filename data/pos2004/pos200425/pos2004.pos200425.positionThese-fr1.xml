@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Léon Pierre-Quint, directeur des éditions du Sagittaire à partir des années trente, est connu des spécialistes de la littérature et de
+          l’édition du <num>xx<hi rend="sup">e</hi></num> siècle, mais ignoré du grand public. Bien plus célèbres, en revanche, sont les auteurs qu’il a publiés
+          pendant les trois décennies où il a présidé aux destinées du Sagittaire, parmi lesquels figurent de nombreux surréalistes, au premier rang
+          desquels André Breton, mais aussi André Gide, Paul Valéry, Francis Scott Fitzgerald, Thomas Mann ou Claude Simon. Mais les talents de Léon
+          Pierre-Quint dépassent largement sa seule fonction d’éditeur. Auteur d’ouvrages critiques retentissants sur Proust, Lautréamont et Gide, il
+          signe également des dizaines de notes de lectures, comptes rendus, articles et études publiés dans les principales revues de l’époque, ainsi
+          que des romans. Défenseur de la liberté contre les oppressions de toute nature, humaniste, révolté par toutes les formes de totalitarisme,
+          renforcé dans ces convictions par ses origines juives, il est également un intellectuel engagé, surtout à partir de 1933 et de l’accession
+          au pouvoir d’Adolf Hitler. Son combat est aussi personnel, face aux conventions auxquelles il doit imposer son homosexualité, et face à
+          lui-même, qui lutte pour supporter la maladie et sortir de la dépendance à la drogue dans laquelle celle-ci l’a entraîné. Il était tentant
+          de lever le voile sur la vie et les relations d’un homme dont l’existence fut si riche de rencontres et d’événements.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cette étude prend essentiellement appui sur les documents conservés au département des manuscrits de la Bibliothèque nationale de France.
+          Une première donation des papiers de Léon Pierre-Quint a été faite en 1980 par Mme Georges Selz, née Germaine Steindecker, sa sœur. Cet
+          ensemble, composé d’articles, préfaces et conférences, ainsi que d’une abondante correspondance inédite couvrant la période 1913-1958, est
+          coté nouv. acq. fr. 13555-13556 et 18357-18363. Il y est fait fréquemment référence au cours du commentaire. Le “ fonds russe ”, qui fait
+          l’objet de la présente édition, n’est, lui, encore ni inventorié, ni coté. Ce vaste fonds regroupe les papiers raflés dans le bureau de Léon
+          Pierre-Quint en 1939 par les troupes hitlériennes, que les aléas de l’histoire ont fait échouer à Moscou, et dont la restitution à la France
+          date du mois de décembre 2001. Ces dix-huit cartons, composés d’environ neuf mille documents, sont formés principalement de lettres
+          professionnelles et privées, mais aussi de pièces de natures diverses : notes de lecture, brouillons ou textes complets d’articles, de
+          conférences ou d’émissions radiophoniques, notes préparatoires à des ouvrages ; notes administratives, circulaires et comptes rendus
+          d’administration du Sagittaire ; brochures politiques et tracts ; coupures de journaux ; photographies ; listes de noms ; factures et
+          relevés bancaires. Ces documents sont datés de 1914 à 1938, avec une écrasante prédominance des années vingt et trente. Deux cartons
+          supplémentaires, confisqués dans les locaux des Éditions du Sagittaire, et restitués quelques mois auparavant aux Éditions
+          Grasset-Fasquelle, ont également été dépouillés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

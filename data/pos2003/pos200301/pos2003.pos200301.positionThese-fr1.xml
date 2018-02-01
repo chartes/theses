@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le décorateur de théâtre est un artiste dont l’œuvre est destinée à disparaître. Au <num>xx<hi rend="sup">e</hi></num> siècle, rompant avec la tradition, les peintres non
+          spécialistes envahissent l’espace théâtral. Leur présence, fréquemment étudiée, occulte dans les ouvrages le rôle des peintres décorateurs.
+          Émile Bertin, bien que très connu à son époque, est, pour ces différentes raisons, tombé aujourd’hui dans l’oubli et n’est mentionné dans
+          les dictionnaires et dans les histoires du décor que pour quelques pièces. Son œuvre qui s’étend sur cinquante ans et touche à tous les
+          genres théâtraux mérite cependant une étude, rendue possible par la richesse de sources, rares dans le domaine des arts du spectacle, qu’il
+          a lui-même en partie constituées. Le succès pendant cinquante ans de cet homme, reconnu par tous ses contemporains comme le représentant
+          d’une tradition artisanale vilipendée dès les premières années du siècle, ne laisse pas de surprendre.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cette étude prend appui essentiellement sur les documents conservés au département des arts du spectacle de la Bibliothèque nationale de
+          France, dans la collection Émile Bertin, qui comprend des albums de correspondance et de coupures de presse touchant à l’ensemble de la vie
+          et de l’œuvre du décorateur, constitués par Émile Bertin lui-même, ainsi qu’un vaste ensemble de maquettes planes. Ces sources sont
+          complétées par des dossiers de correspondance conservés dans la collection André Antoine et la collection Gaston Baty, et par les maquettes
+          de Gaston Baty et d’Émile Bertin de la collection Baty. D’autres maquettes planes d’Émile Bertin et de nombreuses photographies de scène ont
+          été vues à la bibliothèque de la Comédie-française et à celle de l’Opéra.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

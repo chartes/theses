@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>
+          <hi rend="i">L’auteur</hi>. ­ On sait peu de choses de Fl. Merobaudes, poète et orateur latin du <num>v<hi rend="sup">e</hi></num> siècle dont
+          l’essentiel de l’œuvre fut retrouvé au début du <num>xix<hi rend="sup">e</hi></num> siècle par B.G. Niebuhr, sur des palimpsestes conservés à la
+          Stiftsbibliothek de Saint-Gall. Jusque-là, on le connaissait surtout grâce aux sources épigraphiques. On conservait notamment
+          la dédicace de la statue d’airain qui fut érigée à son effigie sur le Forum de Trajan le 30 juillet 435 (CIL, VI, 1, n° 1724). Il y est
+          présenté comme <hi rend="i">uir spectabilis</hi> et comte du Consistoire ; l’inscription mentionne à la fois ses hauts faits militaires et
+          son habileté à chanter ceux des autres. Quelques fragments de son épitaphe ont aussi survécu sans que l’on puisse en tirer d’indication sur
+          la date de sa mort (CIL, VI, 4.2, n° 31 983). C’est probablement à lui que fait rapidement allusion Sidoine Apollinaire ( <hi rend="i">carm.</hi>, 9, 296-301), nous apprenant son origine espagnole. À ce maigre dossier s’ajoutent quelques mentions dans des
+          chroniques de l’époque et chez Boèce. Dans les fragments retrouvés de son œuvre, l’auteur ne mentionne à son propre sujet qu’un voyage en
+          Orient et l’<hi rend="i">honor maximus</hi>­ probablement le titre de patrice ­ qu’il aurait reçu de Théodose II. L’homme était donc un
+          haut fonctionnaire de l’Empire et s’insérait probablement dans le réseau de clientèle d’Aétius aux louanges de qui est consacré l’essentiel
+          de son œuvre.</p>
+        <p>
+          <hi rend="i">Les œuvres.</hi>­ Grâce aux palimpsestes de Saint-Gall, on conserve quatre <hi rend="i">carmina minora</hi> et les fragments de
+          deux panégyriques d’Aétius, l’un en prose, l’autre en vers. L’ensemble de ces textes est datable des années 440. Les <hi rend="i">carmina</hi> s’apparentent à la poésie épigrammatique précieuse de l’antiquité tardive. Les deux premiers, composés en distiques
+          élégiaques (23 et 14 vers), sont des <hi rend="i">ekphraseis</hi> du palais impérial où le poète se complaît à décrire le riche décor de la
+          résidence ravennate. Il s’intéresse notamment à des œuvres d’art représentant la famille de Valentinien III, ce qui lui offre un prétexte
+          pour glorifier la <hi rend="i">domus augusta.</hi> Le <hi rend="i">Carmen III</hi>, lui aussi écrit en distiques (sept vers intelligibles),
+          est une description du jardin de Faustus, un haut fonctionnaire et ami du poète. Le <hi rend="i">Carmen IV</hi>, plus long (46 vers), pour
+          lequel Mérobaudes a adopté l’hendécasyllabe phalécien, est un chant d’anniversaire pour Gaudentius, fils cadet d’Aétius. Il est fortement
+          inspiré du <hi rend="i">Genethliacon Lucani</hi> de Stace ( <hi rend="i">Silv.</hi>, II, 7). Le <hi rend="i">Sangallensis</hi> livre ensuite
+          le <hi rend="i">Panégyrique d’Aétius en prose</hi>. Ce texte est en fait une <hi rend="i">gratiarum actio</hi>, prononcée pour remercier le
+          généralissime d’Occident qui avait obtenu pour Mérobaudes le titre de patrice. Le poète devenu orateur s’inspire ici de la tradition
+          encomiastique établie sur des règles de composition assez strictes depuis le <hi rend="i">Panégyrique de Trajan</hi> de Pline le Jeune. Il
+          se complaît dans des développements politico-philosophiques assez vagues, fait l’éloge des qualités de chef de son grand homme et livre un
+          intéressant récit de la bataille du <hi rend="i">mons Colubrarius</hi>(env. 438). Le <hi rend="i">Panégyrique d’Aétius en vers</hi> est la
+          plus longue des œuvres qui ont survécu (195 hexamètres dactyliques intelligibles). Il mêle l’éloge du chef, un récit de bataille et des
+          éléments surnaturels empruntés à l’épopée classique. Enfin, une œuvre a été transmise par une tradition parallèle. Il s’agit d’un court
+          poème chrétien (30 hexamètres) intitulé <hi rend="i">Laus Christi</hi> ou <hi rend="i">De Christo</hi> qui est en fait une profession de foi
+          rigoureusement orthodoxe, inspirée du Symbole de Nicée-Constantinople pour le fond et, pour la forme, du <hi rend="i">De Saluatore</hi> de
+          Claudien ( <hi rend="i">Carm. min.</hi>, 32).</p>
+        <p>
+          <hi rend="i">Langue et style</hi>. ­ Du point de vue du lexique, de la syntaxe et de la morphologie, la langue de Mérobaudes offre peu de
+          traits saillants. Son vocabulaire est celui de la poésie latine classique. Tout au plus remarquera-t-on un emploi assez abondant de termes
+          techniques militaires ou politico-juridique. Le style est raffiné à l’excès, faisant appel à une pléthore de figures de style apprises
+          systématiquement en contexte scolaire. L’auteur recherche souvent la périphrase, jusqu’à en devenir obscur. En cela, il est assez
+          caractéristique de la littérature précieuse de l’Antiquité tardive.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

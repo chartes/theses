@@ -1,0 +1,104 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La correspondance est une des principales sources de l’activité économique d’une compagnie. Des archives Datini au <hi rend="i">parfait
+            négociant</hi> de Savary, son apparence formalisée semble pourtant laisser peu de place à l’innovation et aux individualités. Un tel
+          constat a contribué à lui donner une réputation de simplicité aux dépens d’autres documents tels que la comptabilité. La clarté de la forme
+          et la primauté du contenu expliquent la relative indifférence envers les origines de la pratique épistolaire. Celle-ci représente pourtant
+          une part significative dans le fonctionnement quotidien des firmes. Elle est en effet le seul moyen de communication disponible pour des
+          marchands opérant sur des places différentes. La régularité de sa circulation apparaît alors comme une condition préalable à toute tentative
+          de transaction. La poste à l’époque moderne n’offrant pas une telle garantie, la perception des contraintes implique des efforts dont la
+          portée doit être mesurée. Le <num>xvi<hi rend="sup">e</hi></num> siècle est traditionnellement perçu comme une époque de transition, mais la
+          rareté des fonds conservés explique celle des études consacrées à cette période. L’essentiel des travaux porte sur la fin du Moyen Âge ou le
+              <num>xviii<hi rend="sup">e</hi></num> siècle.</p>
+        <p>La correspondance échangée entre Simón Ruiz, un marchand castillan de Medina del Campo et Valladolid, et les Bonvisi, une compagnie de
+          marchands-banquiers lucquois implantée à Lyon, est un exemple pertinent de ces pratiques. La richesse des sources donne une image assez
+          complète de leurs échanges. Les études précédentes du fonds n’ont pas abordé ces problématiques. Enfin, la période choisie, de 1580 à 1590,
+          est significative. Les crises politiques et économiques de la fin du siècle contribuent à une désorganisation progressive des échanges. Une
+          telle situation donne un relief aux rapports entre la correspondance et les transactions et à leur adaptation aux contraintes. L’origine
+          géographique des acteurs met en effet en exergue l’évolution de places de dimension européenne.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’essentiel des sources est conservé dans le fonds Simón Ruiz de l’Archivo histórico provincial de Valladolid. Ont été exploitées en
+          premier lieu les lettres échangées par Simón Ruiz et les Bonvisi entre 1580 et 1590. Le fonds conserve à la fois des copies de lettres
+          envoyées (Cajas 194-199, Caja 202) et les originaux des lettres reçues (Cajas 61-143, Caja 188). L’ensemble forme un corpus de 631 lettres,
+          431 des Bonvisi et 200 de Simón Ruiz.</p>
+        <p>Cette étude a été complétée par celle de la documentation de typologie variée qui a pu transiter par les lettres. Le fonds Simón Ruiz en
+          donne un échantillon représentatif. Les cotes désignées sous l’appellation Letras de cambio regroupent les lettres de change. Les autres
+          types sont conservés sous les cotes Cajas 203 à 257. S’y trouvent mêlés des sources de nature diverse : actes notariaux, comptes, mémoires,
+          etc.</p>
+        <p>Enfin, les archives notariales fournissent des renseignements complémentaires. Celles des notaires espagnols, prolixes, n’ont pu être
+          exploitées complètement. Plusieurs sondages effectués dans les Protocolos de Medina del Campo ont confirmé à la fois l’intérêt de ces
+          derniers et l’impossibilité d’effectuer un dépouillement exhaustif dans le cadre de cette étude. En revanche, le dépouillement des minutes
+          de notaires lyonnais, conservées aux archives départementales du Rhône (sous-série 3 E), a été possible. Les Bonvisi privilégiaient en effet
+          le recours à deux notaires, Pierre Delaforest et François Anyme.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

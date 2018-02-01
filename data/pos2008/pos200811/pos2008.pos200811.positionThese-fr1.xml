@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le parlement de Paris a fait l’objet de nombreuses études historiques, tant institutionnelles, politiques, juridiques que judiciaires.
+          L’intérêt des historiens sur tel ou tel aspect a cependant varié au cours du temps et selon les périodes étudiées. Celle de la Ligue a
+          suscité de nombreux ouvrages sur les réactions politiques du Parlement, face à la nouvelle religion et aux troubles religieux qui suivirent,
+          face aux difficultés de la monarchie, et quand, en janvier 1589, la rupture sera consommée entre le roi et une partie de la France. Le
+          Parlement se retrouve alors devant un véritable dilemme : comment continuer à être le garant de l’ordre et des lois fondamentales du
+          royaume, tel qu’il se plaît à l’affirmer, et ne pas reconnaître le roi légitime ? Cette question, déjà étudiée, ne sera pas l’objet de cette
+          thèse.</p>
+        <p>L’objectif de cette étude est de savoir comment le Parlement, dans une période de guerres civiles, sous la domination d’un des partis et
+          la pression de la population parisienne régulièrement échauffée lors des prêches, et alors qu’il est lui-même divisé de fait par la mise en
+          place d’un Parlement royaliste à Tours, a pu ou non rendre la justice normalement et selon les principes fondamentaux d’impartialité et
+          d’équité. Répondre à cette problématique impose de reconstituer la procédure civile à la fin du <num>xvi</num>
+<hi rend="sup">e</hi> siècle avant d’appréhender les bouleversements qui touchent alors non seulement le personnel du Parlement, mais aussi
+          son ressort et son calendrier. Enfin est examinée la façon dont les parlementaires rendent la justice dans certains types particuliers
+          d’affaires, afin de déterminer leur attitude devant des situations où ils doivent rendre plus un jugement en équité qu’en droit et où le
+          rôle d’arbitre et de médiateur du Parlement est mis en avant, mais soumis aux luttes d’influences et aux pressions diverses.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources manuscrites consultées viennent exclusivement de la série X des Archives nationales. Ce sont les registres de transcription
+          des minutes, de 1589 à mars 1594, présents dans la sous-série X<hi rend="sup">1A</hi>, qui ont été utilisés pour servir de base à cette
+          étude. Ils sont divisés en trois types principaux : les Jugés, le Conseil et les Plaidoiries. Dans la mesure où les minutes n’apportent que
+          peu d’informations différentes ou supplémentaires aux transcriptions des registres, le recours aux registres a été privilégié,
+          essentiellement pour des raisons pratiques. Les difficultés paléographiques n’ont pas été déterminantes : l’écriture des minutes est certes
+          moins soignée, mais reste lisible avec un peu d’habitude… La difficulté majeure tient au fait que les minutes des Plaidoiries, constituées
+          en grande partie de feuilles d’audience, nécessitent une reconstitution pour retrouver l’intégralité d’un acte ; faite à l’époque par les
+          commis du greffe, cette opération aurait pris beaucoup trop de temps dans le cadre d’une thèse. Le recueil Pithou (X <hi rend="sup">1A</hi>9324<hi rend="sup">B</hi>), composé d’actes retirés des minutes lors de leur épuration après le retour d’Henri IV à Paris en mars
+          1594, n’a pas été utilisé pour des raisons de temps, malgré son intérêt pour la période.</p>
+        <p>Les sources imprimées utilisées concernent principalement la procédure civile ou permettent de la comprendre, comme les styles du
+          Parlement, les ouvrages de juristes, les recueils d’actes royaux et les dictionnaires juridiques, ceux de Ferrière et de Guyot en
+          particulier. Pour rappeler le contexte historique, la lecture des <hi rend="i">Mémoires-journaux</hi> de Pierre de l’Estoile est un
+          préalable, ceci d’autant plus qu’il exerce une charge au sein du Parlement.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

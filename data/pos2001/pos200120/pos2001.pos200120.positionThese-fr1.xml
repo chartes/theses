@@ -1,0 +1,119 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le musée du Château de Flers (Orne) a consacré en l’an 2000 une exposition au peintre Jean-Victor Schnetz, né à Versailles en 1787 et mort
+          à Paris en 1870. Le public a pu suivre ainsi, dans l’ancienne demeure d’Antoine Schnetz, frère du peintre, le parcours d’un élève de David
+          qui, par l’originalité et la force expressive de ses œuvres, conquit la gloire en pleine “ bataille romantique ”. Schnetz avait voyagé en
+          Italie dans sa jeunesse et s’en était profondément épris ; entre les “ classiques ”, sectateurs des David, Regnault ou Gérard et les “
+          romantiques ”, dont le Salon de 1824 consacra le triomphe, le jeune peintre sut ouvrir une voie nouvelle unissant à l’idéalisation classique
+          des personnages, l’humilité des modèles pris parmi les paysans et les brigands d’Italie. La nouveauté de ces œuvres appliquant les procédés
+          de la peinture d’histoire à des thèmes contemporains et relevant du “ genre ” - ses héroïnes sont des pèlerines et des femmes de brigands ;
+          ses héros, des bandits, des moines et des <hi rend="i">contadini</hi>- fit sa réputation. Les commandes ne manquaient pas à Paris, les
+          récompenses se multipliaient, mais Schnetz brûlait de retrouver l’Italie. Il en eut l’occasion lorsque, après avoir été élu en 1837 membre
+          de l’Académie des beaux-arts, il put remplacer Ingres à la tête de l’Académie de France à Rome.</p>
+        <p>Cette prestigieuse institution, fondée sous Louis XIV, accueillait en Italie les jeunes artistes titulaires du grand prix de Rome, qui
+          venaient y parfaire leur art et leur culture au contact des vestiges de l’Empire romain et des oeuvres des maîtres de la Renaissance.
+          Schnetz y exerça un premier mandat de 1841 à 1346, mais s’y plut tant qu’il chercha à en obtenir un second. En 1853, il prit à nouveau la
+          direction de l’établissement ; son temps se terminait légalement à la fin de 1858, mais il obtint des prolongations jusqu’au mois de juin
+          1866. Il resta donc en poste pendant près de vingt ans : son directorat fut le plus long du <num>xix<hi rend="sup">e</hi></num> siècle.</p>
+        <p>Il n’était pas du propos de l’exposition de Flers de parler de son activité de directeur de la Villa Médicis, mais sa longévité
+          exceptionnelle, l’amour qu’il portait à sa tâche ainsi que certaines circonstances de ses directorats - notamment les débuts de l’unité
+          italienne, à partir de 1848, et la réforme de l’enseignement des beaux-arts en France par le décret du 13 novembre 1863 - font de cette
+          partie de sa vie un sujet digne d’étude pour qui souhaite mieux connaître Jean-Victor Schnetz, comme pour qui s’intéresse aux méthodes et
+          aux institutions de l’enseignement des beaux-arts dans la France du <num>xix<hi rend="sup">e</hi></num> siècle. Cette thèse se propose, dans la lignée
+          du programme de publication de la correspondance des directeurs entamé par Georges Brunel et Isabelle Julia à l’Académie de France à Rome en
+          1979, d’éditer la correspondance de Jean-Victor Schnetz. Les lettres sont précédées d’un commentaire destiné à les placer dans leur contexte
+          artistique, institutionnel et politique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources de cette édition se trouvent en trois lieux différents . à l’Académie de France, à Rome, aux archives de l’institut et aux
+          Archives nationales, à Paris.</p>
+        <p>Les cartons de correspondance n° 45 (1841-1847), 63 (1853-1358), 64 (1858- 1863) et 67 (1964-1866) des archives de l’Académie de France à
+          Rome, conservés à la Villa Médicis, contiennent, outre les règlements de l’Académie, la correspondance arrivée et les minutes des lettres
+          envoyées, classées dans l’ordre chronologique.</p>
+        <p>Le directeur de l’établissement dépend conjointement, jusqu’en 1863, de l’Académie des beaux-arts et du ministère chargé des beaux-arts :
+          il rend compte au secrétaire perpétuel de l’Académie des études des pensionnaires et au ministre de la gestion de l’établissement. Aussi
+          trouve-t-on une partie de sa correspondance, adressée au secrétaire perpétuel, dans les archives de l’Académie des beaux-arts (cartons 5 E
+          29-34, de 1840 à 1847 ; 5 E 37-44, de 1863 à 1863). L’autre partie, la correspondance administrative, est conservée aux Archives nationales,
+          dans la sous-série F<hi rend="sup">21</hi> ; les cartons concernant les directorats de Schnetz portent les cotes F<hi rend="sup">21</hi>
+          589-601, contenant essentiellement les comptes, F<hi rend="sup">21</hi> 607, pour les rapports sur les travaux des pensionnaires
+          (1831-1879), F<hi rend="sup">21</hi> 608-610, pour les dossiers concernant les pensionnaires (1808-1870), F<hi rend="sup">21</hi> 612, pour
+          ceux qui concernent les directeurs, et F<hi rend="sup">21</hi> 613, pour des affaires diverses intéressant l’Académie, notamment la question
+          des réformes de l’enseignement des beaux-arts. A partir de la fin de l’année 1863 et de l’abolition de la tutelle de l’Académie des
+          beaux-arts sur l’Académie de France, la correspondance du directeur se trouve uniquement aux Archives nationales.</p>
+        <p>Ces sources ont été complétées, pour la correspondance, par des lettres privées de Schnetz et de ses connaissances provenant de l’Institut
+          néerlandais (Fondation Custodia, collection Frits Lugt : dossiers Schnetz, Granet, Lebas, Baudry, Picot Ingres et Couder), ainsi que d’un
+          recueil d’autographes inédits de Jean-Victor Schnetz, conservé par la bibliothèque de la Villa Médicis (ms 19) et réunissant dix-neuf
+          lettres et billets.</p>
+        <p>Pour les activités intéressant l’Institut de France, nous avons également consulté les procès-verbaux de l’Académie des beaux-arts (2 E
+          9-13) ainsi que les registres de correspondance de l’Académie, sous les cotes 4 E 1 (1841-1860) et 4 E 2 (1861-1888).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

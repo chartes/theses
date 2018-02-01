@@ -1,0 +1,78 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Bien que le ciment ait été mis au point par Louis Vicat dès 1817, il faut attendre les lendemains de la première guerre mondiale et l’élan de la reconstruction pour que ce matériau prenne définitivement le pas sur la chaux et que se constitue progressivement un véritable marché du ciment. Trois entreprises s’imposent alors comme <hi rend="i">leaders</hi> de ce nouveau secteur : les établissements Poliet et Chausson, les Ciments français et les Ciments de Lafarge et du Teil. S’il ne reste plus aujourd’hui que le nom du groupe et les vestiges de l’ancienne cité ouvrière de l’usine de Lafarge pour se souvenir de la modeste entreprise ardéchoise qu’était à l’origine l’actuel premier cimentier mondial, les quelques décennies précédant le glas de l’ère familiale ont pourtant été, à bien des égards, fondatrices des succès futurs du groupe. Lafarge forge, à l’origine, sa renommée sur la qualité de ses chaux et parvient ainsi, tout en conservant un fort enracinement local et familial, à étendre son influence à l’ensemble du sud-est de la France, puis plus généralement en dehors des frontières nationales. Ce n’est pourtant qu’au lendemain de la première guerre mondiale que l’entreprise réalise pleinement son intégration nationale et internationale à travers un vaste programme d’expansion et de modernisation, entraînant progressivement la société dans un processus de développement au terme duquel elle est amenée à troquer définitivement son caractère familial pour le statut de multinationale.  </p>
+        <p>Au sein d’un tel marché aux tendances oligopolistiques et aux structures encore largement dispersées comme l’industrie cimentière, la monographie d’entreprise présente un double intérêt pour la recherche historique. D’une part, elle constitue une approche privilégiée pour l’étude du fonctionnement d’un secteur que ses structures rendent difficilement abordable de manière globale. D’autre part, par son approche micro-économique, elle permet de mettre à jour les démarches opérationnelles et stratégiques ayant contribué tantôt aux succès, tantôt aux échecs de l’entreprise. En permettant de prendre en compte des facteurs aussi divers que les engagements sociaux, les convictions politiques et religieuses, la recherche et développement ou les réseaux sociaux, la monographie participe pleinement, au-delà de l’approche économique, de la démarche pluridisciplinaire revendiquée depuis les années 1970 par les tenants de la micro-histoire.  </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>À l’image de cette pluridisciplinarité, les sources utilisées pour cette étude sont aussi diverses qu’éparpillées. Ce sont en premier lieu celles produites par la société elle-même et conservées au siège actuel de l’entreprise, rue des Belles-Feuilles à Paris. Bien que lacunaires, ces fonds comportent néanmoins des documents fondamentaux comme les statuts de la société, une partie des procès-verbaux des conseils de gérance et de fabrication, des rapports annuels, quelques bilans et de précieuses informations sur l’organisation et le fonctionnement des usines. Sur le plan comptable et financier, essentiel à la compréhension des mécanismes de gestion, les fonds bancaires du Crédit lyonnais ont été un précieux complément. Outre une série homogène de données comptables, ils comportent quelques analyses intéressantes sur la situation contemporaine du marché. En ce qui concerne l’étude de certains événements étroitement liés à l’histoire locale et nationale, les fonds des archives départementales de l’Ardèche, à Privas – Administration générale et économie (sous-séries 5 M, 9 M, 10 M), Cabinet du préfet (sous-série 72 W), les fonds du usée de la Résistance (sous-série 70 J) ou encore ceux du tribunal et de la chambre de commerce et d’industrie d’Aubenas –, ceux des Archives nationales à Paris (sous-séries F12 et F14), ainsi que quelques papiers collectés auprès de particuliers ont également apporté un éclairage indispensable. Enfin, de nombreuses sources imprimées sont venues enrichir cette étude, notamment les bulletins, annuaires et publications de la Fédération des chambres syndicales des fabricants de chaux et ciments de France (FCSFCCF) et, bien entendu, les publications scientifiques et techniques comme publicitaires de l’entreprise Lafarge elle-même.  </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,122 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Parler du patriotisme français des populations coloniales est un sujet qui jusqu’à aujourd’hui n’a pas été réellement abordé par les
+          historiens de l’Afrique. Sujet tabou ou à la limite du « politiquement correct », les historiens africains l’ont ignoré et ont choisi
+          d’étudier les mouvements nationaux africains, plus valorisants pour les populations du continent en quête d’identité nationale au lendemain
+          des indépendances africaines. Ils ont préféré également se consacrer à l’étude des sociétés africaines précoloniales, surtout à une époque
+          où le débat sur l’absence d’histoire du continent noir avant l’arrivée des Européens battait son plein.</p>
+        <p>Les historiens européens ont, en effet, bien souvent considéré que l’histoire ne s’écrit qu’avec des documents. Or, comme pendant longtemps
+          on a estimé que l’Afrique était dépourvue de documents, on a vite fait de conclure que le continent africain ne pouvait pas prétendre à
+          l’écriture de son histoire ; tout au plus pouvait-on parler d’ethno-histoire, ou d’anthropologie historique de l’Afrique. C’était le point
+          de vue de beaucoup d’historiens européens, notamment Henri Brunschwig et Raymond Mauny. Par ailleurs, en s’intéressant à l’histoire
+          coloniale de l’Afrique, ceux-ci ont pendant longtemps ignoré les populations africaines et n’ont envisagé que l’histoire de l’administration
+          coloniale civile et militaire, rédigeant ainsi de nombreux ouvrages sur l’histoire de la France en Afrique.</p>
+        <p>Ces études sur les mouvements nationalistes africains, sur l’histoire de l’administration coloniale, n’ont fait qu’effleurer le thème du
+          patriotisme français des populations coloniales, sans jamais essayer d’analyser et de comprendre ce phénomène pour ce qu’il était.
+          L’histoire des associations patriotiques en AOF durant la Seconde Guerre mondiale peut d’autant plus contribuer à lever ce tabou de
+          l’historiographie coloniale française qu’étudier le patriotisme français des populations coloniales européennes et africaines durant cette
+          période de guerre aide à mieux comprendre les orientations de la nouvelle politique coloniale française, définies à la Conférence de
+          Brazzaville en janvier-février 1944, et par ailleurs à mieux concevoir l’émergence des mouvements nationalistes africains au lendemain de la
+          guerre.</p>
+        <p>Une telle recherche est désormais possible, puisque les nationalismes et les patriotismes africains ont eu depuis les indépendances
+          africaines le temps de se consolider et que, par ailleurs, l’accès à des types de sources ne provenant pas nécessairement de
+          l’administration française permet de sortir du terrain exclusif de l’histoire de l’administration et des administrateurs coloniaux en
+          Afrique, pour s’ouvrir à de nouveaux champs de recherche. De ce fait, il devient désormais possible de lire l’évolution de l’histoire
+          coloniale française après 1945 à la lumière du phénomène patriotique français durant la Seconde Guerre mondiale.</p>
+        <p>De plus, l’histoire de ces différentes associations patriotiques est l’un des aspects le moins connu de l’histoire de l’AOF et le moins
+          évoqué dans les ouvrages et les articles relatifs à cette période. Jusqu’à présent, en effet, aucune étude ne leur a été consacrée
+          entièrement. Cet oubli mérite réparation, car les associations patriotiques étaient au cœur de la vie politique aofienne durant la Seconde
+          Guerre mondiale. C’est pourquoi leur histoire participe à une meilleure compréhension de la vie socio-politique de l’AOF durant cette
+          période, où deux conceptions et idéologies patriotiques s’opposaient réellement. Elle permet donc autant l’étude du régime de Vichy, de la
+          « Révolution nationale » à travers l’histoire de la Légion française des combattants, que l’étude du gouvernement du Comité français de
+          libération nationale (CFLN) et de la France combattante à travers l’histoire des différentes associations gaullistes aofiennes. Elle permet
+          enfin de saisir l’impact de ces différentes conceptions patriotiques auprès des populations aofiennes européennes et africaines.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Pour mener à bien cette étude, divers fonds d’archives ont été utilisés. La série G : <hi rend="i">Politique et Administration
+            générale</hi>(1782-1959) du fonds de l’AOF, qui est l’une des séries les plus importantes des archives de l’AOF conservées aux Archives
+          nationales du Sénégal (ANS), est une source de première importance pour le sujet : elle conserve les archives produites ou reçues par
+          l’administration coloniale, et notamment pour cette série, par la Direction des affaires politiques, administratives et sociales (DAPAS) du
+          Gouvernement général de l’AOF. A été aussi très utile le fonds du Sénégal colonial, notamment la série N (1816-1959) concernant les Affaires
+          militaires de la colonie, puisque le Cabinet militaire surveillait de très près durant la Seconde Guerre mondiale les manifestations
+          patriotiques et politiques dans cette colonie et s’est donc intéressé aux diverses associations patriotiques qui y ont eu leurs activités.</p>
+        <p>Il faut ajouter à ces séries, à Paris, au Centre historique des Archives nationales, les archives privées de René Pleven et le fonds du
+          Comité d’histoire de la Seconde Guerre mondiale, qui a livré les papiers recueillis en AOF par le Groupe de recherche des sources de
+          l’histoire de la Seconde Guerre mondiale en AOF et les archives privées du gouverneur Laurentie. Ont été consultés au Centre des archives
+          d’outremer, à Aix-en-Provence, le fonds du ministère des Colonies, notamment la série des Affaires politiques, et les papiers privés du
+          gouverneur Deschamps.</p>
+        <p>Par ailleurs, on a eu aussi recours à des sources imprimées : publications officielles de l’administration coloniale et des associations
+          patriotiques, témoignages contemporains ou postérieurs d’acteurs et de témoins des événements ; les ressources de la presse ont été
+          également exploitées, notamment la presse locale aofienne. Enfin des témoignages oraux recueillis auprès de témoins et parfois d’acteurs de
+          ces événements ont complété le corpus des sources écrites.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

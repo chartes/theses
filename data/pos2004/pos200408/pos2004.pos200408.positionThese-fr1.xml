@@ -1,0 +1,109 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La Commission nationale de la communication et des libertés (CNCL), créée en 1986, vient remplacer la Haute Autorité, première instance de
+          régulation de l’audiovisuel ; elle dispose de prérogatives très importantes, qui lui permettent notamment de choisir les présidents des
+          chaînes publiques, de décider quelle entreprise privée est la plus indiquée pour reprendre la première chaîne française ou de sélectionner
+          les dossiers les plus solides des candidats au rachat des cinquième et sixième réseaux de télévision. Les rapports que la Haute Autorité
+          avait entretenus avec le pouvoir politique avaient été complexes, et la création de la CNCL à la faveur de la première cohabitation est
+          perçue comme une décision exclusivement politique, qui vient jeter le trouble dans un paysage audiovisuel français en mutation.</p>
+        <p>C’est la loi du 30 septembre 1986 sur l’audiovisuel, dite “ Loi Léotard ”, qui donne naissance à la CNCL et impose un collège de membres
+          plus large que celui de la Haute Autorité, dont le choix semble garantir une grande fidélité, voire une sujétion à la majorité politique
+          d’alors. La suppression de la CNCL en 1989, consécutive au changement de majorité, et son relatif discrédit ont entretenu l’idée qu’elle
+          n’avait été qu’un organe inféodé au pouvoir qui n’avait su favoriser un développement harmonieux des réseaux de radiodiffusion et de
+          télévision.</p>
+        <p>Pourtant, à bien des égards, l’activité actuelle du Conseil supérieur de l’audiovisuel (CSA) est fondée sur les choix faits par la CNCL et
+          sur son rôle pionnier, par exemple dans la définition d’un vocabulaire juridique commun aux chaînes de radio et de télévision et à leur
+          instance de régulation. Il faut donc s’interroger sur la manière dont cette commission a été fragilisée dès sa naissance, sur les raisons de
+          son infortune médiatique, sur les motifs qui ont présidé aux décisions qu’elle a prises, sur les liens qu’elle a entretenus avec le pouvoir
+          exécutif et sur les raisons de sa chute.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Ce travail est fondé à la fois sur des sources écrites et orales. Malgré leur difficulté de consultation, les sources écrites furent les
+          plus aisément exploitables, qu’il s’agisse de fonds publics ou privés. Les archives de la CNCL, actuellement conservées dans les locaux du
+          CSA, sont décevantes : elles se résument pour l’essentiel aux procès-verbaux de séance de la Comission. Ont été également consultées, sur
+          dérogation, au Centre des archives contemporaines, à Fontainebleau, les archives de François Léotard, ministre de la Culture et de la
+          Communication, et de son cabinet entre 1986 et 1988, ainsi que celles de Catherine Tasca, ministre déléguée chargée de la Communication
+          après 1988. Le Service d’archives écrites et Musée de Radio-France a mis à disposition les fonds d’archives, non classés, de Jean-Noël
+          Jeanneney, président de Radio-France de 1982 à 1986, et de Roland Faure, son successeur entre 1986 et 1989. Le Service juridique et
+          technique de l’information a aussi autorisé la consultation de documents divers sur la CNCL et sur la nomination de ses membres. Enfin, il a
+          été possible de dépouiller, après autorisation préalable, les archives de TF1 après sa privatisation, et celles de M6. D’autres fonds,
+          intéressants pour le sujet, n’ont pu être consultés, notamment les archives de François Mitterrand durant la période de la cohabitation ou
+          les archives de La Cinq.</p>
+        <p>Des témoignages oraux ont été enregistrés pour confronter les différents points de vue sur les polémiques qui ont agité le paysage
+          audiovisuel français et combler les lacunes des documents écrits. Leur exploitation est plus délicate, en raison des points de vue très
+          tranchés sur la question. Ont été interrogés sur la CNCL plusieurs de ses anciens membres (Gabriel de Broglie, Daisy de Galard, Pierre Huet,
+          Bertrand Labrusse, Yves Rocca et Catherine Tasca), des anciens collaborateurs de la CNCL (Emmanuel Sartorius et Bertrand Delcros), des
+          anciens membres du cabinet de François Mitterrand (Gilles Ménage, Jean-Claude Colliard et Bruno Chetaille), le président-directeur-général
+          de Skyrock (Pierre Bellanger), le directeur des programmes de TF1 (Étienne Mougeotte), l’avocat de Francis Bouygues au moment de la
+          privatisation de la chaîne (Louis Bousquet), l’ancien directeur de l’information de La Cinq (Patrice Duhamel), ainsi que Michel Polac.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

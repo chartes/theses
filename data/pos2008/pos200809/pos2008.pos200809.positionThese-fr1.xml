@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Henri de Mondeville est un chirurgien normand qui travailla au service de Philippe le Bel et enseigna la chirurgie à Montpellier et à
+          Paris. Au tout début du <num>xiv</num>
+<hi rend="sup">e</hi> siècle, il entreprit de rédiger une somme complète sur la chirurgie, qu’il laissa inachevée. Son traité devait
+          comprendre cinq livres, traitant dans l’ordre de l’anatomie, des plaies et des ulcères, des maladies spéciales, des fractures et luxations,
+          enfin de la confection de remèdes, mais la fin du troisième livre et le quatrième sur les maladies spéciales ne furent jamais écrits. La <hi rend="i">Notomia</hi> est une version occitane du premier livre, précédée d’un prologue plus général consacré à la science chirurgicale,
+          qui n’est transmis que par le manuscrit Ashburnham 104 de la Biblioteca Medicea Laurenziana de Florence. Au cours de ce travail de
+          recherche, il est apparu que la <hi rend="i">Notomia</hi> est la traduction d’une version française de l’<hi rend="i">Anatomia</hi> de
+          Mondeville, contenue dans le manuscrit C 804 de l’Universitetsbibliotek d’Uppsala. Elle figure parmi les rares textes en occitan à nous être
+          parvenus au nombre restreint des textes scientifiques. S’agissant d’un traité d’anatomie, son objet est autant de décrire le corps humain
+          que d’en définir le vocabulaire. Elle offre donc la possibilité d’étudier de près un pan du vocabulaire scientifique occitan, encore mal
+          connu. Traduite d’un texte français lui-même traduit du latin, elle constitue également un bon point de départ pour une étude de la
+          traduction à la fin du Moyen Âge et pour une comparaison du champ lexical anatomique de trois langues distinctes.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

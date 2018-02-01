@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’iconographie de Caïn et Abel a suscité très tôt l’intérêt des historiens, mais il n’existe aucune étude de grande ampleur qui porte sur
+          le corpus français envisagé dans sa globalité, tous supports confondus. Tous les épisodes de l’histoire de Caïn et d’Abel sont pris en
+          compte dans cette thèse, de leur naissance à leur mort. Le champ chronologique couvre une période allant du <num>xi<hi rend="sup">e</hi></num> siècle au début du <num>xvi<hi rend="sup">e</hi></num> siècle. Néanmoins, les siècles antérieurs au <num>xi<hi rend="sup">e</hi></num> siècle sont évoqués, ne serait-ce que pour déterminer les évolutions et les particularités de la période traitée. L’étude
+          prend fin au début du <num>xvi<hi rend="sup">e</hi></num> siècle, pour balayer un Moyen Âge un peu élargi. Le sujet nécessite plusieurs
+          approches, iconographique et historique. La signification du conflit fraternel entre Abel et Caïn est loin d’être univoque, comme en
+          témoigne sa présence jamais démentie dans l’exégèse. Abel et Caïn représentent de multiples oppositions, entre le Christ et le diable, les
+          bons chrétiens et les Juifs, les Vertus et les Vices, la cité céleste et la cité terrestre. Il convient donc de voir en quoi cette polysémie
+          explique la fortune de l’iconographie des deux frères et d’analyser les variations chronologiques des différents thèmes à la lumière des
+          enjeux contemporains.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Deux types de sources ont été utilisés, des sources iconographiques et des sources textuelles. Le corpus d’œuvres compte deux cent
+          quarante-deux objets, qui comportent une ou plusieurs scènes tirées de l’histoire de Caïn et Abel, au total cinq cent trois. Les supports
+          sont variés : l’enluminure, le vitrail, la sculpture, la peinture murale, la peinture, l’émail, l’ivoire et la tapisserie sont en effet
+          représentés. Le corpus a été soumis à un traitement statistique.</p>
+        <p>Les sources textuelles sont de natures diverses : écrits des Pères de l’Église et des commentateurs chrétiens, <hi rend="i">exempla</hi> et
+          canons conciliaires côtoient les nombreux textes illustrés par des représentations de Caïn et Abel, comme par exemple les différentes
+          versions de la Bible (historiée, <hi rend="i">historiale</hi>, moralisée), les livres liturgiques, le <hi rend="i">Speculum Humanae
+            Salvationis</hi>, la <hi rend="i">Cité de Dieu</hi> de saint Augustin, les chroniques universelles ou encore les traités de morale.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

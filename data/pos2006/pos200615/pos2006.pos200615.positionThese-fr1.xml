@@ -1,0 +1,122 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Ces dernières années, portées par le développement de l’histoire des femmes et par une demande sociale et politique forte, les études en
+          histoire du féminisme se sont multipliées, nées de la volonté de rendre visible le rôle des femmes dans l’histoire, qu’ont manifestée les
+          féministes des années 1970, dans leur recherche d’une identité et d’une légitimité pour leur mouvement, même si on peut déplorer
+          qu’aujourd’hui encore ces études soient victimes d’une certaine méfiance des institutions et remises en cause dans leurs présupposés. De
+          fait, les fonds d’archives privées de militantes féministes sont encore nombreux à n’être pas accessibles et mis en valeur dans des
+          institutions publiques, et il arrive qu’on en redécouvre peu à peu seulement l’existence. Ce fut le cas des archives privées, revenues en
+          2000 de Russie, de Cécile Brunschvicg (1877-1946), dont l’importance au sein du mouvement féministe réformiste, qui milite, avec un grand
+          légalisme, pour l’amélioration progressive de la condition des femmes et concentre ses efforts sur les réformes juridiques, n’est plus à
+          démontrer. Les principales étapes de sa vie sont bien connues : de nombreuses notices biographiques sont parues dans différents
+          dictionnaires et la biographie de Juliette Aubrun qui date de 1992 a permis d’apporter un éclairage décisif sur ses origines. Cécile Kahn,
+          née dans une famille de riches bourgeois parisiens juifs, épouse du philosophe Léon Brunschvicg, a en effet été la secrétaire générale à
+          partir de 1909 de l’Union Française pour le Suffrage des Femmes (UFSF), puis sa présidente à partir de 1924 ; membre de la section Travail
+          du Conseil National des Femmes Françaises (CNFF), ayant pour but l’obtention pour les femmes de conditions de travail identiques à celles
+          des hommes, elle en assure à partir de 1916 et jusqu’à sa mort la présidence. Cécile Brunschvicg a aussi cherché à militer en faveur des
+          idées féministes et d’une meilleure intégration des femmes dans la Cité dans tous les milieux et par tous les moyens : dans les partis
+          politiques, en entrant au Parti radical en 1924, où elle concentre son activité auprès de la Commission sociale dont elle est la
+          vice-présidente et qui lui vaut d’être appelée en juin 1936 au sous-secrétariat à l’Éducation nationale, lorsque Léon Blum décide pour la
+          première fois d’appeler des femmes au gouvernement ; dans les institutions sociales en créant l’École des surintendantes en 1917 ; par la
+          presse en reprenant la direction à partir de 1926 de l’hebdomadaire féministe <hi rend="i">La Française</hi>.</p>
+        <p>Cette étude a pour but de donner une vision transversale et thématique des engagements de Cécile Brunschvicg, de voir comment ceux-ci se
+          sont développés à partir d’un cadre de pensée nourri du féminisme, qui lui confère une vision sexuée des problèmes de la société française
+          de son époque, qu’ils soient politiques, économiques, sociaux. En cela, Cécile Brunschvicg mérite le qualificatif d’intellectuelle, tel que
+          le définissent Michel Winock et Jacques Julliard dans leur <hi rend="i">Dictionnaire des intellectuels français</hi>, puisqu’elle a acquis
+          une notoriété dans sa lutte en faveur du suffrage des femmes et s’est servie de cette activité pour proposer « à la société toute entière
+          une analyse, une direction, une morale que ses travaux antérieurs [la] qualifient pour élaborer ». Si le féminisme est quasiment omniprésent
+          dans tous les engagements de Cécile Brunschvicg et se construit au sein de la mouvance réformiste, dans un perpétuel dialogue avec ses
+          autres membres, son action est dictée aussi par l’appartenance à un courant moralisateur, républicain, à la « nébuleuse réformatrice »
+          (Christian Topalov), dont elle intègre les propositions au sein de ses revendications féministes. Si cette étude du féminisme de Cécile
+          Brunschvicg ne se veut donc pas biographique, une approche chronologique y sera présente aussi, car elle est primordiale pour expliquer les
+          origines et l’évolution de l’engagement féministe de celle-ci, ainsi que l’influence de son milieu et de ses origines bourgeoises.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les principales sources manuscrites de cette étude sont constituées par le fonds Brunschvicg, conservé au Centre des archives du féminisme
+          d’Angers. Ces archives font partie des archives d’institutions et de particuliers français, pillées par les Allemands durant l’Occupation,
+          puis récupérées par les Russes, qui les considérèrent comme des réparations de guerre en 1945 et les conservèrent à Moscou. Ces fonds, dits
+          « fonds russes », ont été rendus à leurs ayants droit en février et novembre 2000, à la suite de négociations entre le gouvernement russe et
+          le gouvernement français. Ce fonds n’a donc pas rencontré, par son histoire particulière, les aléas habituels des archives privées : ces
+          papiers nous sont parvenus dans leur intégralité, sans que Cécile Brunschvicg ait eu le temps de les trier, et constituent ainsi une source
+          importante (10,5 ml) et unique pour l’histoire du féminisme réformiste. Ce fonds ne comprend cependant que peu de documents relatifs à sa
+          vie privée ; il s’agit essentiellement des archives qu’elle a produites dans le cadre de ses activités les plus importantes, à partir du
+          moment où elle devient une actrice majeure du mouvement féministe. Au sein de ces documents essentiellement associatifs, la correspondance
+          reste majoritaire et est intéressante en ce qu’elle nous renseigne sur le réseau de relations de Cécile Brunschvicg, qui sont les vecteurs
+          de son action et qui conditionnent aussi sa façon de militer. En outre, la lecture de cette correspondance est riche de renseignements, si
+          on la confronte avec celle des articles qu’elle écrit dans le journal <hi rend="i">La Française</hi>, de sa fondation en 1909 jusqu’en 1940,
+          puis lors de sa reparution en 1945 et 1946.</p>
+        <p>Les archives de la section Travail du CNFF, elles aussi conservées au Centre des archives du féminisme ont aussi été consultées, de même
+          que plusieurs fonds d’archives privées de féministes ayant échangé de la correspondance avec Cécile Brunschvicg : les nombreux fonds qui
+          constituent les archives Marie-Louise Bouglé à la Bibliothèque historique de la Ville de Paris, le fonds Marcelle Legrand-Falco au Musée
+          social, le fonds Jane Misme à la Bibliothèque Marguerite Durand.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

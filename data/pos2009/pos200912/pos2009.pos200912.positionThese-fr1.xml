@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le fonds du cinéaste Louis Malle, déposé en 2000 à la Bibliothèque du Film par ses héritiers, est fort riche, mais paradoxalement, a été
+          peu exploité. Sans doute cela tient-il à la place ambivalente qu’occupe Louis Malle (1932-1995) dans le cinéma français depuis ses brillants
+          débuts : il obtient avec Cousteau la Palme d’or pour Le Monde du Silence (1956) et le prix Delluc grâce à Ascenseur pour l’échafaud (1957).
+          Mais son film suivant, Les Amants, déclenche un scandale qui le classe définitivement au nombre des réalisateurs sulfureux. À cette
+          étiquette s’ajoute l’image du riche bourgeois réactionnaire, du fait de ses origines, pour lequel la réalisation ne serait qu’une activité
+          de dilettante. Ceci, combiné à son indépendance d’esprit, contribue à l’exclure de la Nouvelle Vague. Bien que ses premiers films
+          préfigurent ce mouvement et qu’il appartienne par son âge à cette génération de jeunes cinéastes, force est de constater que la postérité
+          n’a pas retenu son nom pour illustrer cette génération de nouveaux réalisateurs et qu’elle le considère très souvent comme un metteur en
+          scène marginal, voire mineur. Lacombe Lucien, film de la maturité (1974), renforce l’image de provocateur associée à Louis Malle : le
+          scandale suscité à sa sortie est intéressant parce que contrairement à son précédent film (Le Souffle au cœur, 1971), il s’agit cette
+          fois-ci d’un scandale aux résonances politiques : il heurte les représentations alors en vigueur de la Résistance et de la Collaboration. La
+          polémique déclenchée par le film le déborde bientôt et devient une mise en accusation de la « vague rétro », à laquelle le film est quasi
+          automatiquement rattaché. La question de la réception de Lacombe Lucien est donc capitale, et l’étude du film s’ordonne autour de ce point
+          précis, puisque le film ne prend toute sa portée qu’au vu des réactions qu’il suscite. Sitôt reçu par la critique, Lacombe Lucien fait
+          l’objet d’une réappropriation qui dépasse la simple critique cinématographique, et le film devient un enjeu de société bien plus qu’un
+          simple artefact de l’histoire du cinéma français. L’étude tente donc de mesurer son influence sur la perception de la Seconde guerre
+          mondiale, et en particulier sur la place de la Collaboration et de la responsabilité française dans le génocide juif, influence que révèlent
+          le scandale provoqué à la sortie du film et ses prolongements jusqu’à aujourd’hui. Étant donné les accusations portées contre le film et son
+          auteur, il est impératif de déterminer quel était le dessein exact de Louis Malle, afin de voir si les accusations d’une partie de la
+          critique étaient fondées. C’est pourquoi une place toute particulière a été accordée à la genèse de l’œuvre, qui est extrêmement complexe.
+          Elle est à séparer en deux temps : d’abord ce que l’on pourrait appeler une « archéologie » de Lacombe Lucien, où se distinguent deux
+          strates, un scénario lié au contexte politique mexicain de 1971, et une expérience algérienne de la torture en 1962, puis la genèse
+          proprement dite de Lacombe Lucien où le scénario se développe dans la France de 1944, et pour lequel Louis Malle finira par faire appel à
+          Patrick Modiano. Ce n’est qu’ensuite que la plus grande attention peut être prêtée à la réception du film en 1974, pour retracer son
+          ampleur, sa microchronologie et ses caractéristiques, avant de proposer des explications à ce phénomène et d’en envisager la réception sur
+          le long terme.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La consultation du fonds Louis Malle (BiFi) ne s’est pas limitée aux seules archives concernant Lacombe Lucien : la genèse complexe du film
+          imposait de consulter toutes les archives la concernant depuis 1962. Deux fonds annexes ont également été très profitables : celui de la
+          scripte Sylvette Baudrot-Guilbaud et celui de l’historien du cinéma Pierre Billard. Les archives, encore conservées au siège des Nouvelles
+          Éditions de Film, ont pu aussi être exploitées ainsi que les archives de Patrick Modiano. Des entretiens et une correspondance écrite
+          inédits avec certains collaborateurs du film ont également enrichi l’étude.</p>
+        <p>Une grande attention a été portée aux sources issues de la presse écrite pour la réception immédiate : plus de 300 articles ont été
+          répertoriés jusqu’à la fin de 1974 dans la presse nationale et régionale. Aucune distinction hiérarchique ni qualitative entre les
+          différents titres n’a été opérée. Quelques courriers des lecteurs ont été relevés. Enfin, un repérage des émissions radio et télédiffusées a
+          été effectué grâce aux collections de l’Institut national de l’audiovisuel.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

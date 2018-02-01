@@ -1,0 +1,130 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si la collégiale de Saint-Omer, devenue cathédrale au milieu du <num>xvi</num>
+<hi rend="sup">e</hi> siècle après la chute de Thérouanne, symbolise aujourd’hui pour beaucoup d’Audomarois le passé médiéval de la ville,
+          elle n’a pas suscité chez les historiens l’intérêt qu’elle mérite. L’existence d’un important fonds d’archives semble avoir plutôt découragé
+          les chercheurs qu’éveillé leur enthousiasme. Pourtant, les quelques travaux qui ont été récemment consacrés à l’histoire ecclésiastique du
+          nord de la France et, notamment, à celle de l’ordre canonial, ont souligné tout l’intérêt qu’il y avait à se pencher en détail sur cet
+          établissement, et particulièrement sur les premiers siècles de son existence.</p>
+        <p>La collégiale Notre-Dame de Saint-Omer est née au début du <num>ix</num>
+<hi rend="sup">e</hi> siècle d’une <hi rend="i">divisio</hi> au sein de l’abbaye de Sithiu, entre une communauté de moines et une communauté
+          de chanoines, réalisée à l’instigation de l’abbé Fridugise (820-833). Cette séparation s’inscrit dans le mouvement général de réforme de
+          l’Église, mené sous l’impulsion des rois puis des empereurs carolingiens. Elle vient également sanctionner une caractéristique intrinsèque
+          du monastère de Sithiu qui, depuis les premières années de sa fondation, est constitué de deux noyaux. Un monastère « bas », au milieu des
+          marais, dédié aux apôtres Pierre et Paul, avait été fondé en 649 par les moines Bertin, Mommelin et Ébertram, trois compatriotes de l’évêque
+          de Thérouanne Omer, auquel un certain Adroald avait donné la terre de Sithiu. En 662, une basilique « haute », dédiée à la Vierge, qu’Omer
+          avait construite non loin de là sur une colline, est confiée par celui-ci à Bertin et ses successeurs au moyen d’un privilège de « petite
+          liberté » ; l’évêque choisit de s’y faire inhumer. La séparation, vers 820, de ces deux noyaux par Fridugise marque l’apparition dans le
+          paysage audomarois de la collégiale proprement dite mais aussi, d’une certaine manière, de l’abbaye de Saint-Bertin.</p>
+        <p>L’épisode de la <hi rend="i">divisio</hi> de Fridugise ne nous est connu que par le récit qu’en donne près de cent cinquante ans plus tard
+          le moine Folcuin dans ses <hi rend="i">Gesta</hi> des abbés de Saint-Bertin. Selon lui, Fridugise brisa l’unité du monastère : au
+          « monastère d’en bas », il abaissa le nombre de moines de quatre-vingt-trois à soixante et en chassa les plus stricts ; au « monastère d’en
+          haut », où vivaient quarante moines, il établit trente chanoines. À cette réforme se greffèrent une séparation et une répartition des
+          domaines. Cependant, l’étonnante violence de ton dont use le chroniqueur intrigue et incite à une relecture critique ; Folcuin y présente en
+          effet la séparation opérée à Sithiu comme un des pires maux que l’abbaye ait jamais connu, Fridugise ayant détruit la « paix fraternelle
+          entre les deux monastères » et chacun revendiquant désormais une sorte de primauté sur l’autre.</p>
+        <p>De nombreux indices, récemment mis en lumière par l’historienne Brigitte Meijns, montrent néanmoins que cette rupture ne semble pas avoir
+          été aussi brutale que ne le laisse d’abord penser la lecture du récit de Folcuin : les deux communautés restent dirigées par des abbés
+          communs jusqu’au moins la fin du <num>ix</num>
+<hi rend="sup">e</hi> siècle, elles gardent des possessions communes jusqu’à la fin de l’Ancien Régime et continuent, dans la documentation,
+          d’être désignées comme un tout jusqu’au <num>x</num>
+<hi rend="sup">e</hi> siècle. Aux <num>xi</num>
+<hi rend="sup">e</hi> et <num>xii</num>
+<hi rend="sup">e</hi> siècles cependant, la communauté de chanoines semble avoir acquis une certaine indépendance : la dénomination n’est
+          plus la même, un prévôt apparaît à sa tête et la collégiale est désormais dotée de privilèges pontificaux. Il semble donc qu’entre le
+            <num>ix</num>
+<hi rend="sup">e</hi> et le <num>xii</num>
+<hi rend="sup">e</hi> siècle un changement se soit opéré qui ait modifié la donne entre les deux communautés de Sithiu et qui semble avoir
+          fait sortir la communauté des moines et celle des chanoines de la situation difficilement tenable qui était la leur après Fridugise. Il
+          s’agit dès lors, d’une part, de distinguer un éventuel « moment » où se serait affirmée la collégiale de Saint-Omer, de l’autre, de définir
+          la place de cette collégiale : son environnement monastique, son contexte d’apparition relativement ambigu en ont-ils fait un établissement
+          particulier ou est-elle devenue une collégiale comme les autres ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sollicitées présentent, à l’image du monastère de Sithiu, un double visage. La documentation proprement audomaroise ne remonte
+          guère au-delà du <num>xi</num>
+<hi rend="sup">e</hi> siècle. Elle est surtout constituée par l’important fonds d’archives formant la sous-série 2 G des archives
+          départementales du Pas-de-Calais, en dépôt à la bibliothèque d’agglomération de Saint-Omer. Particulièrement riche pour les derniers siècles
+          du Moyen Âge et l’époque moderne, par l’existence notamment de deux cartulaires, de quelques inventaires d’archives et de nombreux comptes
+          et titres, ce fonds n’en reste pas moins d’une importance majeure pour les siècles couverts par cette thèse. Il y a été l’objet d’une
+          attention toute particulière, ce qui a permis de découvrir des actes jusqu’alors inédits, mais aussi de retrouver de nombreux documents
+          considérés comme perdus. On a également mis à profit les manuscrits du chapitre, également conservés à la bibliothèque de Saint-Omer.</p>
+        <p>En complément des sources audomaroises, notamment pour la période antérieure au <num>xi</num>
+<hi rend="sup">e</hi> siècle, on a fait appel aux sources bertiniennes. La plupart des sources narratives, notamment les <hi rend="i">Gesta</hi> de Folcuin, continués aux <num>xi</num>
+<hi rend="sup">e</hi> et <num>xii</num>
+<hi rend="sup">e</hi> siècles par Simon, ont eu les faveurs de l’édition. Les chartes de l’abbaye n’ont pas eu le même sort que celles de la
+          collégiale ; en grande partie détruites à la Révolution, on les connaît néanmoins grâce à de nombreux cartulaires, en particulier l’imposant
+            <hi rend="i">Grand cartulaire</hi> du moine Charles-Joseph Dewitte réalisé à la fin du <num>xviii</num>
+<hi rend="sup">e</hi> siècle (Saint-Omer, bibliothèque d’agglomération, ms. 803) ; elles ont été pour la plupart éditées.</p>
+        <p>On dispose enfin, pour toute la période, d’une série importante de textes hagiographiques, eux aussi bien repérés et édités.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

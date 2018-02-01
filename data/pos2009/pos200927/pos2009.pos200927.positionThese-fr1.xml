@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Durant les dernières années d’une vie consacrée aux voyages et à la géographie, André Thevet (1516-1592) chercha à rétablir une autorité
+          intellectuelle mise à mal par les éditions successives, à partir de 1578, de l’Histoire d’un voyage fait en terre du Brésil de Jean de Léry.
+          À cette fin, il entreprit la réalisation d’un ouvrage de grande ampleur, le Grand Insulaire et Pilotage, véritable tableau cartographique et
+          descriptif du monde, notamment du Nouveau monde, riche d’indications pour la navigation. Il mena ce travail de front avec l’écriture de
+          l’Histoire des deux voyages, récit d’un voyage réel augmenté d’un voyage imaginaire. Si Thevet parvint à terminer la rédaction de l’Histoire
+          des deux voyages, le Grand Insulaire resta incomplet. Les troubles politiques et religieux qui avaient lieu alors en France et leurs
+          conséquences dans le domaine éditorial ont souvent été avancés pour expliquer l’échec de ce projet. Mais l’inachèvement du Grand Insulaire
+          n’est-il pas plutôt tributaire de la méthode même de travail de Thevet, comme des procédés de composition retenus ? Seule une étude critique
+          des témoins manuscrits conservés permettait de répondre à ces questions et de saisir toute la singularité d’une œuvre si importante pour la
+          connaissance des Indiens du Brésil au <num>xvi</num>
+<hi rend="sup">e</hi> siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’édition partielle proposée s’appuie sur le manuscrit de la Bibliothèque nationale de France, fr. 15452-15453 : Le Grand Insulaire et
+          Pilotage d’André Thevet, Angoumoisin, Cosmographe du Roy. Dans lequel sont contenus plusieurs plants d’isles habitées et deshabitées, et
+          description d’icelles, dont il existe une mise au net, le manuscrit BNF, fr. 17174 : Description de plusieurs isles par M. André Thevet.</p>
+        <p>Ces deux manuscrits ont été confrontés à l’œuvre rédigée parallèlement par Thevet : l’Histoire d’André Thevet Angoumoisin, Cosmographe du
+          Roy, de deux voyages par luy faicts aux Indes Australes, et Occidentales, conservé sous la cote BNF, fr. 15454, dont on connaît aussi une
+          mise au net : Second voyage d’André Thevet dans les Terres Australes et Occidentales, manuscrit BNF, fr. 17175.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

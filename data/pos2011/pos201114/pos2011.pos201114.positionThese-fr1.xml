@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Dès le 20 octobre 1792, la vente du mobilier garnissant les résidences royales, dit « de la liste civile », est officiellement entérinée ; elle ne fait toutefois l’objet d’un véritable décret d’application que le 10 juin 1793. Tout s’organise alors très vite. Quinze jours plus tard, les députés chargés d’encadrer l’aliénation sont élus. Le mois de juillet est occupé à ajuster le dispositif législatif, puis les membres de cette « Commission des Dix » quittent Paris pour la Seine-et-Oise où ils se répartissent dans trois résidences royales, Rambouillet, Versailles et Marly. Les huissiers choisis, le mobilier récolé, certaines pièces distraites et les ventes publiées, elles sont respectivement lancées les 20, 25 août et 6 octobre 1793. Au printemps 1794 puis 1795, c’est au tour de l’ameublement de Saint-Cloud et de Bellevue d’être dispersé. Ce sont, de Versailles à Bellevue, plusieurs dizaines de milliers de lots qui passent alors sous le feu des enchères.  </p>
+        <p>L’apparente banalité de cet événement, considéré rétrospectivement comme un dysfonctionnement administratif majeur, resté dans les esprits comme une erreur manifeste – pour ne pas dire un traumatisme patrimonial – a totalement occulté la réalité de sa préparation et de son déroulement. La possibilité d’un écart entre l’ordinaire d’un « encan pur et simple » dont le modèle a émaillé l’histoire des confiscations révolutionnaires et les options adoptées pour vendre le mobilier royal méritait d’être questionnée, comme d’ailleurs le <hi rend="i">topos</hi> de la participation des amateurs étrangers à la liquidation qui, <hi rend="i">a posteriori</hi>, n’avait fait qu’amplifier le sentiment de perte. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Le premier impératif a été d’élargir la focale, donc de renoncer à n’étudier qu’une dispersion. Cet élargissement était d’autant plus nécessaire que les sources sont très disparates et qu’il faut bien souvent se résoudre à ce que certains points essentiels ne soient documentés que pour une seule vente. Les ventes versaillaises étant strictement contemporaines de celles de Marly, cette dernière étant considérée par l’administration comme un préambule à la dispersion des meubles de Saint-Cloud puis de Bellevue, nous tenions là un corpus cohérent. Bien qu’irrégulières, les sources sont abondantes. Les archives départementales des Yvelines, à Saint-Quentin, en conservent la majorité, répartie dans une quinzaine de sous-séries révolutionnaires regroupant des extraits du corpus législatif, la correspondance des administrations pour l’organisation des ventes, les comptes rendus des représentants du peuple en mission et de leurs successeurs et, bien entendu, les registres de vente (2Q70 à 2Q75). Les possibilités offertes par ces imposants cahiers avaient jusqu’ici étaient largement sous-estimées. </p>
+        <p>Quelques sous-séries des Archives nationales, rassemblant des documents produits par l’administration du Garde-meuble maintenue dans ses attributions sous la Révolution (O<hi rend="sup">2</hi>), complètent efficacement les fonds du département. </p>
+        <p>Enfin, les registres paroissiaux puis d’état-civil des grandes localités de Seine-et-Oise pour la période 1770-1850, entièrement numérisés et mis en ligne, permettent l’identification des adjudicataires de mobilier royal. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

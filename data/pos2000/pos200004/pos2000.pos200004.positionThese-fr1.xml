@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Résidence urbaine et centre du pouvoir religieux dans le diocèse, le palais épiscopal du <num>xix<hi rend="sup">e</hi></num>  siècle symbolise la
+          place que l’évêque continue d’occuper au sein de la société. Lors du rétablissement du culte catholique en 1802, l’Etat met à la disposition
+          des évêques les anciens palais confisqués sons la révolution et se charge de leur entretien. Aussi l’étude de ces résidences à l’époque
+          concordataire met-elle en jeu plusieurs éléments : l’histoire des relations entre les prélats et le pouvoir politique ; le rôle de la
+          fonction épiscopale dans la hiérarchie ecclésiastique ; la place du pouvoir religieux dans la ville.</p>
+        <p>Il convient de s’intéresser tant aux anciens palais épiscopaux restitués qu’aux édifices affectés en remplacement, et aux nouvelles
+          constructions du <num>xix<hi rend="sup">e</hi></num>  siècle. C’est pourquoi l’analyse s’appuie sur divers exemples pris dans les provinces
+          ecclésiastiques de Paris, Tours et Rouen, parmi lesquels les palais d’Angers, Beauvais, Chartres, Le Mans, Orléans, Paris, Rouen, Sées et
+          Tours retiennent particulièrement l’attention.</p>
+        <p>L’unité de la période concordataire impose les limites chronologiques du sujet : du lendemain de la signature du Concordat en 1802 jusqu’au
+          vote de la loi de Séparation en 1905 et à l’évacuation des palais épiscopaux.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Une partie des sources est conservée aux Archives nationales dans la sous-série F19 qui rassemble, dans les papiers du ministère des
+          Cultes, les comptes rendus de travaux réalisés aux palais épiscopaux au <num>xix<hi rend="sup">e</hi></num>  siècle, les circulaires et les
+          instructions du service des édifices diocésains, les inventaires de mobilier des résidences épiscopales, la correspondance entre les prélats
+          et le ministre des Cultes au sujet de leur résidence.</p>
+        <p>Les archives départementales apportent des informations complémentaires sur les relations entre les évêques et les autorités civiles,
+          particulièrement pour la période consulaire et impériale. Les séries N et Q concernent plus spécifiquement la question de la propriété des
+          bâtiments, tandis que la série M renseigne sur le rôle du prélat dans sa ville de résidence et l’accueil que lui réservent les populations.
+          Les archives diocésaines permettent de mieux comprendre le fonctionnement interne d’un palais épiscopal. Outre l’énorme correspondance des
+          prélats, elles conservent parfois des registres de comptes du secrétariat ou de la maison de l’évêque, des inventaires de biens mobiliers de
+          la mense épiscopale ou de biens personnels de l’évêque. Les inventaires après décès des prélats, bien que difficiles à retrouver, complètent
+          avantageusement cette dernière source.</p>
+        <p>Ont été utilisés avec profit les plans des édifices conservés de cette période aux Archives nationales, dans les archives départementales,
+          et au Centre de recherche des monuments historiques.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

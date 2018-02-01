@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le monastère Saint Jean Prodrome, établi dans la montagne du Ménoikion, se situe près de Serrès, au nord de Thessalonique. Devenu de nos
+          jours un couvent de jeunes filles, il abritait jusqu’au début du <num>xx<hi rend="sup">e</hi></num> siècle une communauté de moines et une importante
+          bibliothèque, pillée par les Bulgares pendant les guerres balkaniques. Les <hi rend="i">codices A et B</hi>, mémoire vivante du Prodrome sur
+          lesquels étaient enregistrés une grande partie de ses biens, disparurent ainsi et plongèrent dans l’oubli les fondements de l’histoire du
+          monastère. Longtemps, la tradition fit foi sans qu’aucun document ne permît de la contredire ; les études stagnaient et devaient se
+          contenter de quelques copies imparfaites des documents réalisées au <num>xix<hi rend="sup">e</hi></num> siècle par des voyageurs admis au monastère du
+          Prodrome. En 1955, André Guillou réalisa l’effort louable de réunir ces copies d’actes du Prodrome et d’en extraire ce qu’il pensait être
+          l’histoire de l’établissement. En 1972, l’édition en <hi rend="i">fac-similé</hi> du <hi rend="i">codex A</hi> par Ivan Dujcev permit une
+          première fois de revenir aux sources de l’histoire sans l’intermédiaire de ces copies parfois fautives ; si elle n’apportait pas de
+          connaissances nouvelles - les quatorze actes et le Règlement, <hi rend="i">Typikon</hi>, de l’abbé du Prodrome étaient tous connus par
+          l’édition d’André Guillou -, cette édition révéla que les <hi rend="i">codices</hi> n’étaient pas perdus et laissait un espoir de voir un
+          jour reparaître le <hi rend="i">codex B</hi>. En 1998 d’ailleurs, ce dernier fut retrouvé dans le Centre Ivan Dujcev de Sofia et édité par
+          Lisa Bénou, dernière étape de la mise à disposition des chercheurs des actes du Prodrome et peut-être la possibilité d’éclaircir l’histoire
+          du monastère. <lb/>Ce cartulaire contient 218 actes médiévaux, de 1253 à 1421, dont 177 étaient jusqu’à présent inédits. Il regroupe
+          également 95 actes d’époque moderne, de 1498 à 1809. Parmi les premiers, on compte une série remarquable de 120 actes privés jetant une vive
+          lumière sur Serrès et sa région dans la première moitié du <num>xiv<hi rend="sup">e</hi></num> siècle. <lb/>L’édition de Lisa Bénou, si elle avait
+          l’intérêt de mettre au jour de nombreux actes inédits, péchait par l’absence de mise en ordre chronologique des documents et par le peu
+          d’attention prêté à la lexicographique. Plus encore, les informations fournies par ces actes n’ont même pas servi à revoir l’histoire du
+          monastère ; l’éditeur reste très dépendant des recherches précédentes, notamment celles d’André Guillou de quarante ans antérieures, alors
+          que ce dernier disposait alors d’une documentation largement moindre, tant en quantité qu’en qualité. Malgré l’abondance des pièces
+          nouvelles, la tradition gardait la prépondérance, même pour la datation de ces dernières, et aucune critique ne se faisait jour. <lb/>Il
+          fallait donc revoir l’ensemble des actes médiévaux du Prodrome conservés dans les <hi rend="i">codices A et B</hi>, confronter leurs
+          enseignements, prosopographiques, topographiques, historiques, les critiquer et les mettre en relation avec les actes des monastères du mont
+          Athos. A été exclue d’emblée, faute de temps et de compétence, l’étude codicologique du <hi rend="i">codex B</hi>, qui se trouve à Sofia. Il
+          fut possible néanmoins d’en obtenir des photographies, qui ont permis d’effectuer des relectures quand cela s’avérait nécessaire. De ce
+          travail, il est ressorti plusieurs informations majeures d’ordre chronologique sur l’histoire du Prodrome et sur celle de ses fondateurs,
+          qui ont permis par ailleurs d’enrichir la prosopographie de la Macédoine orientale à l’époque des Paléologues.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

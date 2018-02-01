@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Exercices de dévotion comprenant des chants en présence du Saint-Sacrement exposé, les saluts du Saint-Sacrement n’apparaissent pas en
+          France sous leur forme moderne avant le début du <num>xvii<hi rend="sup">e</hi></num> siècle. Emblématiques du grand essor de la piété eucharistique
+          qui fait suite au concile de Trente, ils rencontrent un succès et une diffusion considérable qui en font une des cérémonies les plus
+          importantes de la vie religieuse des Français sous l’Ancien Régime. Desservis par le discrédit dont souffre la liturgie post-tridentine
+          auprès des historiens, les saluts du Saint-Sacrement n’ont jamais fait l’objet d’études spécifiques. L’intérêt pour la cérémonie se borne à
+          la question de ses origines médiévales, sujet abondamment traité à partir de la fin du <num>xix<hi rend="sup">e</hi></num> siècle. Dans les années
+          1920, les travaux du P. Browe en Allemagne et d’Édouard Dumoutet en France apportent des réponses définitives à cette question. L’étude
+          entreprise ici envisage les saluts du Saint-Sacrement, du début du <num>xvii<hi rend="sup">e</hi></num> siècle à la mort de Louis XV, dans le cadre de
+          la France actuelle. Le cas des paroisses et des couvents parisiens ainsi que de la Chapelle royale font cependant l’objet de la majeure
+          partie du travail. Celui-ci aborde tout particulièrement trois points principaux. Il s’agit de reconstituer le déroulement de la cérémonie,
+          de délimiter son répertoire et de la replacer dans le paysage dévotionnel de l’époque moderne. Il devient ainsi possible d’expliquer les
+          raisons du succès durable des saluts du Saint-Sacrement.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Pour une étude historique, religieuse et musicale des saluts du Saint-Sacrement, il convient de multiplier et de confronter des types de
+          sources très différents. Les sources manuscrites consultées sont issues pour la plupart de fonds d’archives et de bibliothèques parisiennes.
+          Au Centre historique des Archives nationales, le dépouillement des registres de la série LL (monuments ecclésiastiques) a été
+          particulièrement fructueux pour l’étude des paroisses et des couvents parisiens. Les collections musicales manuscrites du département de la
+          musique de la Bibliothèque nationale de France, ainsi que de la bibliothèque municipale de Versailles, ont également été exploitées. Les
+          sources imprimées sont d’une grande diversité. On peut distinguer les sources liturgiques et normatives, constituées essentiellement de
+          cérémonials, de rituels, de processionnaux, de statuts synodaux ou de mandements épiscopaux, et les sources musicales, composées des
+          partitions des motets des différents compositeurs. Enfin, de nombreuses autres sources imprimées ont été exploitées, aussi bien traités
+          d’érudition ecclésiastique, mémoires et journaux que biographies de dévots célèbres, almanachs, récits de voyages ou martyrologes de
+          paroisses.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

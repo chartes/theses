@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>En étudiant l’expansion de la royauté capétienne au <num>xiii</num><hi rend="sup">e</hi> siècle, on est tenté de voir dans ce phénomène une conséquence inhérente au concept même de royauté. Mais qu’est-ce qui, dans les faits, explique concrètement cette expansion ? Et quels en sont les moyens ? L’école méthodique de la fin du <num>xix</num><hi rend="sup">e </hi>siècle a déjà contribué à répondre à ces questions en établissant les faits, en dressant les listes des officiers du roi… Les études actuelles, parmi lesquelles on retiendra en particulier la synthèse de Jacques Krynen (<hi rend="i">L’empire du roi</hi>, 1993), se sont intéressées à l’idéologie politique et à son rôle au <num>xiii</num><hi rend="sup">e</hi> siècle comme moteur de la propagation du pouvoir royal. Mais qu’en est-il des rapports entre la doctrine juridique et le travail quotidien des officiers royaux, entre les conceptions politiques et la réalité des droits des seigneurs qui sont confrontés à ce nouveau pouvoir ?  </p>
+        <p>Le procès qui s’ouvre en novembre 1269 entre l’évêque de Mende et le roi de France permet d’étudier cette problématique selon une approche microhistorique. Son objet peut se résumer simplement : il résulte des conflits entre la juridiction du roi, installé en Gévaudan à la suite de la croisade des Albigeois et de la campagne de Louis VIII en 1226, et celle de l’évêque de Mende, prélat du sud de la France jouissant d’une indépendance et d’une puissance temporelle importante. Il a livré un bel ensemble documentaire, encore conservé, probablement du fait du statut qu’obtient l’évêque de Mende en février 1307 à l’issue de ce litige. Un traité de paréage est alors conclu entre le prélat et Philippe le Bel, qui reconnaît l’autorité de l’évêque sur ses domaines et partage la juridiction en deux sur une autre portion du territoire gévaudanais.  </p>
+      </div>
+              <div type="sources"><head>Source </head>
+        <p>Par un mandement de Philippe le Bel daté du 22 mars 1314<hi rend="sup">, </hi>la documentation du procès est entièrement restituée à l’évêque de Mende pour être conservée dans le trésor du chapitre de Mende, y compris les documents relatifs à la partie du roi. Par conséquent, l’essentiel des sources se trouve aux archives départementales de la Lozère dans les archives anciennes de l’évêché (série G). Quelques sources complémentaires, dont une copie du procès-verbal de l’enquête réalisée au cours du procès (AN J 894, n° 9), se trouvent aux Archives nationales. Les reliques de la documentation du procès ne forment pas aujourd’hui un nombre important d’articles, mais constituent un ensemble tout de même volumineux : la pièce la plus remarquable en est le mémoire juridique épiscopal, partiellement édité en 1896 sous le titre de <hi rend="i">Mémoire relatif au paréage de 1307</hi> (<hi rend="i">Mémoire</hi>) et conservé aux archives départementales de Lozère sous la cote G 730. En outre, le déroulement de la procédure est éclairé par des résumés argumentatifs et des vidimus produits comme preuves écrites. </p>
+        <p>Au-delà de la documentation propre au déroulement du procès de 1269, la problématique de cette étude nécessitait de rechercher tous les documents qui permettraient d’éclairer les relations entre le roi, les officiers royaux, l’évêque de Mende et le pape, sous les règnes de Louis IX, Philippe le Hardi et Philippe le Bel et d’établir des comparaisons avec les affaires voisines de Viviers et du Puy dans les années 1300. Pour ce faire, ont été consultés des inventaires modernes des archives de l’évêché de Mende, ainsi qu’aux Archives nationales, les layettes et les registres du Trésor des chartes des rois de France, la série K des monuments historiques ou encore les registres du parlement de Paris conservés sous les cotes X<hi rend="sup">1A</hi> et X<hi rend="sup">2A</hi>. La disparition des archives médiévales de la sénéchaussée de Beaucaire ne laissait pas espérer beaucoup de découvertes mais, grâce à l’étude d’Eugène Martin-Chabot, le dépouillement d’inventaires et de registres conservés à la Bibliothèque nationale de France a permis de retrouver des mandements royaux intéressant le Gévaudan. Des investigations ont également été menées au sein des collections du département des Manuscrits occidentaux de cette même bibliothèque. Les éditions analytiques des registres pontificaux ont offert pour la période 1243-1314 un éclairage particulier sur l’affaire. Enfin, la consultation dans les locaux de l’Institut de recherche et d’histoire des textes à Orléans des notes de travail de Robert Fawtier, dans le cadre de l’établissement du <hi rend="i">Corpus Philippicum</hi>, a permis la découverte d’actes éclairant le contexte de la fin du procès. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

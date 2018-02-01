@@ -1,0 +1,95 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La qualité et le foisonnement des arts à Paris et à Versailles à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle ont retenu longtemps
+          l’attention presque exclusive des historiens de l’art de cette époque. Pourtant dans l’ombre de la capitale s’affirmaient des écoles
+          provinciales dont les artistes talentueux avaient choisi de demeurer dans leur ville natale. Aujourd’hui, les recherches se tournent
+          progressivement vers ces foyers artistiques, au nombre desquels la ville de Toulouse tenait un rôle particulièrement important. Cité
+          commerçante, siège d’un parlement dont le vaste ressort regroupait près de trente diocèses, Toulouse représentait en effet un marché sans
+          égal dans le midi de la France. Cette situation favorable permit à Antoine Rivalz, peintre de l’hôtel de ville de 1703 à 1735, d’imposer son
+          talent. Des recherches biographiques devaient permettre de préciser le contexte de la création artistique de cet artiste, illustrée par le
+          catalogue de son œuvre peint, gravé et dessiné. Restait à démontrer dans quelle mesure Antoine Rivalz, par la synthèse personnelle qu’il fit
+          de diverses influences artistiques, fonda une école originale, en marge de l’évolution de la peinture à Paris.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’essentiel des sources concernant la vie d’Antoine Rivalz demeure dans des dépôts toulousains. Ont été notamment consultées, aux archives
+          municipales de Toulouse, les séries des délibérations de l’hôtel de ville et les pièces fournies à l’appui des comptes de la ville et, aux
+          archives départementales de la Haute-Garonne, les registres des notaires toulousains (sous-série 3 E). Il convient de signaler en outre deux
+          manuscrits du <num>xviii<hi rend="sup">e</hi></num> siècle : <hi rend="i">Recherches historiques sur les antiquités</hi>, <hi rend="i">les curiosités,
+            les etablissemens, les principaux endroits, certains usages de Toulouse, et sur la vie de quelques artistes dont les ouvrages firent
+            l’ornement de cette ville</hi>, de Joseph Malliot, conservé à la bibliothèque municipale de Toulouse (ms. 998), ainsi que le <hi rend="i">Mémoire pour servir à l’histoire de l’Académie de peinture, sculpture et architecture de la ville de Toulouse</hi>, de Louis de Mondran,
+          conservé à la bibliothèque de l’Ecole des beaux-arts de Toulouse, tous deux fort bien documentés. Enfin, la connaissance de l’œuvre peint et
+          dessiné d’Antoine Rivalz fut enrichie des informations contenues dans le <hi rend="i">Catalogue</hi> du chevalier Rivalz, son fils, détenu
+          par les archives municipales de Toulouse, qui détaille notamment les œuvres originales d’Antoine Rivalz figurant dans la collection de son
+          fils. Les documents relatifs au séjour de Rivalz à Rome et à sa participation au concours de l’académie de Saint-Luc sont conservés à
+          l’Archivio générale del Vicariato, à l’Archivio di Stato de Rome, ainsi que dans les archives de l’académie de Saint-Luc.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

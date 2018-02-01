@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p> La réflexion historique portée sur les moyens de normalisation de la société médiévale fait encore aujourd’hui trop souvent l’économie de la doctrine. La question de savoir dans quelle mesure les textes savants des juristes peuvent connaître à la fin du Moyen Âge une répercussion concrète dans les règlements des conflits et dans la contraction des obligations continue à faire l’objet de nombreux débats. Mais on ne pourra apprécier l’importance de la doctrine comme source du droit sans approfondir notre connaissance de ses acteurs et de leur production intellectuelle. Le présent travail a pour but d’apporter une modeste contribution à l’histoire de l’emphytéose d’une part, et de l’école de droit de Toulouse au <num>xiv</num><hi rend="sup">e</hi> siècle d’autre part. Pour cela, on s’est penché sur la figure d’un <hi rend="i">doctor tholosanus</hi> du milieu du <num>xiv</num><hi rend="sup">e</hi> siècle, Pierre Hélie, et plus particulièrement sur ce qui constitue son texte majeur, le <hi rend="i">Tractatus de jure emphiteotico</hi>.  </p>
+		<p>Contrairement à ce qui a pu se faire dans le reste de l’Europe, l’édition critique des textes juridiques médiévaux s’est trop longtemps cantonnée en France aux seuls actes de la pratique. Si on s’intéresse à la doctrine, le travail d’établissement du texte se heurte à un certain nombre de difficultés : constructions composites, gloses marginales, questions traitées en plus ou moins grand nombre et dans un ordre différent suivant les manuscrits. Le <num>xiv</num><hi rend="sup">e </hi>siècle, moment où Pierre Hélie a exercé en tant que professeur, correspond de surcroît à une période où les variantes textuelles se multiplient. Les écarts importants qu’accusent les témoins de la tradition obligent alors l’historien à renoncer à un schéma linéaire de constitution de l’œuvre. Les efforts déployés pour restituer la teneur du traité sur l’emphytéose se trouvent cependant justifiés en raison de l’importance historique qu’il revêt, essentiellement pour deux raisons : d’une part, ce traité a été élaboré dans la période où la faculté de droit de Toulouse connaît son rayonnement le plus important ; d’autre part, il s’agit d’un des textes les plus anciens consacrés au bail emphytéotique produit dans le Midi.  </p>
+		<p>Pierre Hélie semble avoir joui d’une certaine renommée jusqu’à la fin du <num>xv</num><hi rend="sup">e</hi> siècle. N’ayant pas connu les faveurs de l’impression, il disparaît ensuite de la mémoire des juristes. Redécouvert par Louis Chabrand puis Henri Gilles, il apparaît aujourd’hui comme une figure majeure du <hi rend="i">studium </hi>juridique de Toulouse de la fin du Moyen Âge. Son enseignement est le reflet d’une réflexion intellectuelle toulousaine qui connaît autour de 1350 un rayonnement sans précédent, et qui ne fait que décliner à partir de la seconde moitié du <num>xiv</num><hi rend="sup">e</hi> siècle. à ce titre, il paraît primordial d’étudier plus en avant l’activité de l’université de Toulouse à cette époque, alors que les recherches se sont jusqu’ici davantage concentrées sur les années 1280-1320, suite à l’édition pionnière des <hi rend="i">Responsa doctorum Tholosanorum</hi> dirigée par Eduard Maurits Meijers. En ce qui concerne l’histoire de l’emphytéose proprement dite, le traité de Pierre Hélie s’inscrit dans la lignée d’une réflexion doctrinale déjà riche au milieu du <num>xiv</num><hi rend="sup">e</hi> siècle, aussi bien chez les civilistes que les canonistes. Redécouverte au <num>xii</num><hi rend="sup">e</hi> siècle après sept siècles d’abandon, l’emphytéose permet aux romanistes de réfléchir sur les questions touchant aux transferts de fonds ruraux en faisant abstraction du concept de propriété, confondu dès le <num>v</num><hi rend="sup">e</hi> siècle avec la possession. Dans cette histoire doctrinale, le traité de Pierre Hélie est remarquable par plusieurs aspects. Il s’attache par exemple à comparer de manière systématique le fief et l’emphytéose, en consacrant dans son traité un appendice à ce qu’il nomme le « contrat vassalique ». Si son opuscule n’est pas le premier texte contenant une réflexion sur le bail emphytéotique à circuler de manière autonome, c’est-à-dire en dehors d’une <hi rend="i">lectura</hi>, il s’agit en revanche du plus ancien composé par un juriste français à être qualifié par la tradition de « traité ». </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>On a consulté, essentiellement à l’aide de reproductions, pratiquement tous les manuscrits contenant au moins un texte attribué à Pierre Hélie dans les catalogues. Ces recherches ont révélé une production intellectuelle qui surprend par son abondance, au regard de la notoriété relativement faible de Pierre Hélie parmi les historiens du droit contemporains. Trente manuscrits ont été recensés contenant une ou plusieurs œuvres (le terme comprend ici les gloses) dont on peut attribuer la paternité à Pierre Hélie. Ces témoins sont conservés dans treize villes différentes, réparties dans cinq pays. Les manuscrits dans lesquels on peut lire le <hi rend="i">Tractatus de jure emphiteotico</hi> sont les suivants : Grottaferrata, Abbazia Greca, Z. Gamma. I (f. 131-141v) ; Paris, BNF, lat. 4442 (f. 223-231v) ; Paris, BNF, lat. 4499 (f. 143-160v) ; Paris, BNF, lat. 4591 (f. 76-83v) ; Salamanque, bibliothèque universitaire, 2550 ; Turin, Bibliothèque nationale, 0949 G. I. 13 (f. 83-89v) ; Urgell, bibliothèque capitulaire, lat. 2075. Un manuscrit ne présente que l’appendice consacré au « contrat vassalique », sans le traité sur l’emphytéose qui le précède dans tous les autres témoins : il s’agit de Vatican, Biblioteca Apostolica Vaticana, lat. 2642 (f. 483-483v). Enfin, dans Urgell, bibliothèque capitulaire, lat. 2098 (f. 9v-10) ne figurent que les titres des questions contenues dans le <hi rend="i">Tractatus de jure emphiteotico</hi>. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Depuis le milieu des années 1980, des études et des états des lieux sur les activités culturelles organisées en détention sont publiées. Si des sociologues, tels que Florine Siganos et Jean-Louis Fabiani, ainsi que des professionnels du monde de la culture se sont penchés sur la question, ce n'est pas le cas des historiens. Il semblait donc indispensable d'investir ce champ de recherche.</p>
+          <p>Le premier protocole d'accord Culture/Justice est cosigné le 25 janvier 1986 par Jack Lang et Robert Badinter. Faisant suite au premier colloque international sur la culture en prison, ce texte vient officialiser la politique interministérielle d'intervention culturelle en détention menée pendant la première moitié des années 1980. Pour comprendre en quoi l'action du ministère de Jack Lang constitue une étape majeure, il est essentiel de bien cerner les caractéristiques de la période précédente. Il existe en effet des activités à caractère culturel dès la Libération. Certaines sont organisées sous forme d'ateliers et de cercles auxquels les détenus prennent une part active : ciné-clubs, télé-clubs, cercles de lecture, de musique, de photographie, arts plastiques, théâtre, chorale, jeux d'échecs, confection de journaux de prison… D'autres sont des prestations auxquelles les détenus assistent en direct ou en différé : concerts, représentations théâtrales, conférences, projections cinématographiques, rediffusions radiophoniques… Quelles sont les principales évolutions de ces activités tant au niveau des acteurs que des contenus, des missions et des structures que des publics visés ? Les acteurs tiennent ici un rôle essentiel puisque c'est d'eux que dépend la nature des séances proposées, d'un point de vue théorique autant que pratique. Les cultures professionnelles des assistantes sociales, des éducateurs pénitentiaires et des artistes sont interrogées au regard des missions dans lesquelles s'insèrent les activités. Le vocabulaire fait également l'objet d'une attention particulière : tour à tour qualifiées d'éducatives, de socio-éducatives, de socioculturelles, de récréatives ou de culturelles, ces animations sont considérées différemment selon les époques et les locuteurs.</p>
+          <p>Afin de bien mettre en valeur la rupture provoquée par l'intervention du ministère de la Culture, cette étude est divisée en deux temps. La première partie est consacrée à la période allant de la Libération au début des années 1980. Elle s'attache à comprendre l'action des deux premiers acteurs culturels : les assistantes sociales et les éducateurs. Elle est également l'occasion de s'interroger sur l'impact de la crise pénitentiaire. La deuxième partie analyse la mise en place de la politique d'intervention culturelle en détention au début des années 1980. Elle étudie tant la mise en place des dispositifs que la définition des objectifs, tout en interrogeant la notion d'interministérialité. Elle aborde également la question de la multiplication d'activités désormais proposées par des intervenants extérieurs issus du milieu de la création. Enfin, elle permet de comprendre comment l'administration pénitentiaire doit s'adapter à ces activités culturelles d'un genre nouveau.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Jusqu'alors, aucun état des sources, même sommaire, ne concernait les activités culturelles en détention. Sur la première période, notre principale source réside dans les fonds de l'administration pénitentiaire conservés aux Archives nationales et à l'École nationale d'administration pénitentiaire (ENAP). Notes de service, circulaires, textes réglementaires, rapports d'inspection, revues, correspondances sont autant de documents permettant de comprendre la mise en place des activités culturelles et le rôle de chacun des acteurs. Les mémoires des élèves-éducateurs de l'administration pénitentiaire constituent une source incontournable. Témoins de la mise en œuvre pratique des activités culturelles et des missions qui leur sont assignées, ils révèlent à quel point la politique d'intervention culturelle n'est pas sans poser des problèmes d'identité. Pour la seconde période, les archives du ministère de la Culture deviennent une source indispensable. Les échanges de notes témoignent des relations qui se tissent, des dispositifs qui se mettent en place mais aussi de certaines tensions. Les artistes et les associations, nouveaux acteurs en détention, apparaissent derrière la présentation de leurs projets, leurs demandes de subvention, leurs rapports d'activité et leurs correspondances avec l'administration centrale. Par ailleurs, la présence de documents iconographiques est assez rare dans le champ des études pénitentiaires pour être signalée. Enfin, des archives privées ont été utilisées de manière plus ponctuelle pour éclairer des points particuliers. Il en est ainsi du fonds Étienne Bloch ou des fonds d'associations tels que le GENEPI ou Peuple et Culture.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

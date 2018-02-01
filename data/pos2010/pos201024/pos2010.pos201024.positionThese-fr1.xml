@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La défaite de Waterloo a symbolisé la fin de l’espoir que certains avaient associé à Napoléon, la bataille de Leipzig a représenté
+          l’écroulement de sa puissance et de son aura. Défaite majeure subie par l’empereur, elle a marqué la fin de la domination française en
+          Allemagne. Cette étude cherche à montrer comment ce revers a été employé pour dénigrer l’image de Napoléon ou au contraire pour servir sa
+          légende dorée. L’enjeu a été de permettre d’entrevoir comment l’une des plus importantes confrontations de cette époque a été interprétée et
+          comment elle a été récupérée par les discours politiques français ou allemands. Cette comparaison est l’un des axes majeurs de ce travail
+          qui met en exergue les mécanismes allant de la réception de la nouvelle de la défaite à la reconstruction d’une image de cette
+          confrontation. L’élaboration de cette représentation de la bataille s’est effectuée par divers supports tels que les mémoires de soldats,
+          les ouvrages des historiens, les gravures ou les caricatures. En France, la lecture de la bataille s’est construite progressivement jusqu’à
+          la chute d’un autre Bonaparte. En Allemagne, le récit de la confrontation a de plus en plus été soumis aux ambitions politiques du royaume
+          de Prusse qui a contribué à générer l’image mythique des guerres de Libération et n’a pas hésité à faire évoluer la perception de ces
+          journées dans un sens plus favorable à sa cause. Malgré cette opposition apparente entre une défaite dont il importait de défendre le
+          caractère glorieux et une victoire considérée comme équivalente à un triomphe sans précédent, les deux interprétations de la bataille qui se
+          sont développées de part et d’autre du Rhin entre 1813 et 1871 ont été liées. En fonction du contexte politique, les tensions concernant cet
+          événement ont été plus ou moins fortes. Événement complexe par son déroulement, la bataille de Leipzig l’a aussi été par ses lectures.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources de cette étude sont le reflet des multiples vecteurs qui ont contribué à la formation progressive d’une représentation de la
+          bataille de Leipzig. Les sources manuscrites ont permis d’appréhender la manière dont les résultats de cette bataille furent abordés dès les
+          jours qui l’ont suivi. Il s’agit notamment des instructions transmises par Napoléon à ses ministres sur la conduite à tenir ou des
+          observations des représentants diplomatiques français auprès des cours allemandes. Ces sources proviennent de fonds conservés en France,
+          essentiellement dans les dépôts des administrations centrales de l’État dont les acteurs ont été les premiers à réagir face à l’annonce de
+          cet échec. Aux Archives nationales, le fonds de la Secrétairie impériale (AF IV) et les versements des ministères (F<hi rend="sup">1c</hi>,
+            F<hi rend="sup">18</hi> et F¹⁹) ont été exploités. Les fonds du Service historique de la Défense concernant le Premier Empire (C) et le
+          dépôt de la Guerre (3 M) ont été consultés. Aux archives du ministère des Affaires étrangères, les fonds concernant les affaires politiques
+          et notamment la correspondance politique des ministres plénipotentiaires français qui se trouvaient auprès des princes allemands ont été
+          utiles pour comprendre le regard porté par les Français sur la manière dont les Allemands célébraient la bataille. Mais le premier écho de
+          la bataille a aussi été perceptible dans des documents plus personnels comme les lettres du général Marchand conservées aux Archives
+          nationales (275 AP). En outre, les premiers éléments qui ont contribué à construire l’image de Leipzig ont été propagés par la presse en
+          France ou par les multiples périodiques nationalistes qui sont parus en Allemagne avant la fin des années 1810.</p>
+        <p>Parmi les sources de cette étude, il faut aussi distinguer celles qui ont été soumises au contrôle des autorités et qui ont correspondu à
+          des tentatives de représenter l’événement de manière à servir des intérêts particuliers et les sources qui se sont davantage éloignées de
+          ces considérations politiques comme les mémoires de soldats ou les récits de témoins de la confrontation. La représentation des combats
+          s’est aussi appuyée sur les récits des historiens, mémorialistes ou publicistes français et allemands conservés à la Bibliothèque nationale
+          de France (BNF) ou la Sächsische Staats-, Landes- und Universitätsbibliothek de Dresde.</p>
+        <p>Enfin, la bataille de Leipzig a été une source d’inspiration pour les caricaturistes, les auteurs ou les peintres qui se sont emparés de
+          ces combats afin de dénoncer « l’ogre corse » mais aussi pour glorifier l’attitude des soldats des deux camps ou le caractère supposé
+          surnaturel de Napoléon. Les œuvres de ces artistes ont contribué à la représentation de cet affrontement et sont notamment présentes dans
+          les collections Hennin et de Vinck de la BNF ou dans les collections iconographiques du musée historique de la ville de Leipzig.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

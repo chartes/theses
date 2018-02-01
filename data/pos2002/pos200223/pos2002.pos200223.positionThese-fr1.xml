@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Issue d’une famille dont la notoriété remonte à Philippe-Victoire (1746-1804), le fameux grainetier, Louise de Vilmorin (4 avril 1902 ­ 26
+          décembre 1969) est un auteur encore méconnu, dont l’œuvre a été aujourd’hui un peu oubliée et dont on a surtout retenu le caractère frivole,
+          les frasques sentimentales et les bons mots. Pourtant, elle fut une épistolière de grand talent. Les lettres qu’elle a écrites et qu’elle a
+          reçues, très abondantes et remarquables, sont pratiquement toutes inédites. L’édition d’une correspondance, surtout lorsqu’elle est récente,
+          ne manque pas de poser un problème moral à celui qui en prend la responsabilité. L’auteur aurait-il approuvé une telle entreprise Les
+          témoignages que l’on a récoltés sont venus conforter notre souhait de corriger l’image d’écrivain mondain que la postérité a retenue de
+          Louise de Vilmorin, de préciser les éléments biographiques encore mal connus de sa vie, et surtout d’éditer la correspondance de cette
+          “ formidable épistolière ”. Il faut dire que, depuis une vingtaine d’années, les correspondances ont suscité un regain d’intérêt et sont
+          devenues un genre particulièrement prisé : études et éditions se sont multipliées, permettant de “ nouvelles approches de l’épistolaire ”,
+          pour reprendre le titre d’un colloque tenu en Sorbonne les 3 et 4 décembre 1993. Cependant, les correspondances posent de nombreux problèmes
+          d’édition. Il faut, dans un premier temps, délimiter avec précision un corpus et, dans un deuxième temps, définir des principes de
+          transcription. En effet, ceux-ci varient d’une publication à l’autre et sont rarement, ou trop sommairement, exposés. Il appartient enfin à
+          l’éditeur d’articuler l’ensemble, de créer un sens global, car la lettre authentique ne se sépare pas du réel dont elle est issue. On touche
+          ici au problème de l’annotation. Une fois éditée, comment analyser la correspondance Il convient de s’intéresser à la forme et au contenu
+          des lettres.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La correspondance passive et une partie de la correspondance active de Louise de Vilmorin sont conservées à la Bibliothèque littéraire
+          Jacques-Doucet. D’autres lettres de Louise de Vilmorin se trouvent à la Bibliothèque nationale de France, au département des manuscrits,
+          dans les fonds Porto-Riche et Valéry ; à la Bibliothèque historique de la Ville de Paris, dans le fonds Jean Cocteau ; à la Villa I Tati à
+          Florence, dans le fonds Bernard Berenson et dans des collections particulières. Il faut tenir compte aussi des sources complémentaires : les
+          documents iconographiques (quelques-uns sont conservés à la Bibliothèque Doucet, les autres chez des particuliers), les manuscrits de Louise
+          de Vilmorin et les témoignages oraux que l’on a pu recueillir auprès de personnes qui l’ont connue ou qui ont fréquenté ses
+          correspondants.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,125 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>De nombreuses communautés de métier ont fait l’objet de la curiosité des historiens, d’abord à travers des études générales, puis métier
+          par métier. Tous les métiers ne sont pas organisés en corps, même à Paris, où l’organisation des métiers en communautés jurées est ancienne.
+          Les parcheminiers de Paris, quant à eux, sont organisés en communauté de métier, mais ce n’est pas là leur seule particularité : ils se
+          distinguent de leurs collègues provinciaux par une histoire bien particulière qui les rattache à l’université de Paris, mais aussi par un
+          rôle bien spécifique dans la transformation et la vente du parchemin. Leurs liens anciens à l’université de Paris les distinguent également
+          parmi les autres corps de métiers parisiens, tout en les rapprochant de ceux du livre, avec lesquels ils sont réunis en une seule et même
+          confrérie.</p>
+        <p>De sa dépendance à l’université de Paris depuis le <num>xiii<hi rend="sup">e</hi></num> siècle, la communauté a hérité au <num>xviii<hi rend="sup">e</hi></num> siècle d’un certain nombre de contraintes, qui en réalité lui ont assuré une protection et une longévité. De ce
+          fait, l’étude de l’histoire des parcheminiers de Paris contribue à compléter celle de l’université. Aucune étude d’envergure n’a été
+          réalisée sur la communauté pour la période médiévale, en dépit de quelques articles qui ne font qu’effleurer le sujet. Aucune limite
+          chronologique précise ne borne donc l’étude, car, si son cœur porte sur le <num>xviii<hi rend="sup">e</hi></num> siècle, elle fait souvent
+          appel à des sources bien plus anciennes afin de replacer la communauté dans son contexte et d’éclairer l’origine de certaines de ses
+          particularités.</p>
+        <p>Il est légitime de s’étonner de la longévité des parcheminiers jusqu’au <num>xviii<hi rend="sup">e</hi></num> siècle, alors que le marché
+          du parchemin aurait dû s’effondrer après la généralisation de l’usage du papier pour l’écriture et l’imprimerie. Or cette étude démontre que
+          le marché du parchemin existe bel et bien jusqu’au <num>xviii<hi rend="sup">e</hi></num> siècle, en dépit de certains aléas, et expose les
+          conditions dans lesquelles ce marché perdure. Deux acteurs majeurs interviennent : l’Université dans un premier temps, du fait d’un droit
+          que le recteur perçoit sur le parchemin, et qui le pousse à protéger ce commerce afin de continuer à s’assurer ces revenus, et la monarchie
+          d’autre part, qui, en instaurant l’obligation d’utiliser du parchemin timbré pour certains types d’actes, a assuré un débouché en grande
+          quantité pour la production et le commerce du parchemin. Cette étude a aussi pour ambition de replacer ces derniers dans leur contexte
+          économique et social : elle détaille les conditions d’exercice du métier de parcheminier ainsi que celles du commerce du parchemin ; elle
+          redonne également à celui-ci une dimension sociale, en analysant l’organisation interne de la communauté des parcheminiers et en insistant
+          sur les relations entre la communauté et les autres acteurs de ce commerce.</p>
+        <p>Un bref épilogue aborde le devenir de la communauté au moment de la Révolution, qui met un terme tant à son organisation en corps qu’au
+          commerce du parchemin lui-même.</p>
+        <p>Enfin, cette étude avance en conclusion un certain nombre d’explications possibles à la quasi-disparition de cette profession au cours de
+          la Révolution. En définitive, ce sont l’ensemble des conditions qui lui avaient permis se maintenir jusque-là qui ont fini par lui être
+          fatales, une fois celles-ci remises en cause par la Révolution.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>En l’absence d’études portant sur les parcheminiers, qu’ils soient de Paris ou de province, il a été nécessaire de bâtir entièrement les
+          bases de l’étude de l’histoire des parcheminiers. Si la bibliographie de l’histoire des communautés de métiers est importante, très peu
+          d’ouvrages concernent directement l’histoire des parcheminiers. Les sources pour l’histoire des parcheminiers de Paris sont variées. Si les
+          archives des communautés de métier ont pour la plupart disparu, les Archives nationales conservent encore bien des documents permettant de
+          faire l’histoire de celles-ci. On est confronté parfois à des lacunes, comme l’absence de dossier sur les parcheminiers dans les archives de
+          la commission de la liquidation des comptes des communautés dans la série V7. Par bien des aspects, les parcheminiers sont difficiles à
+          cerner à travers les archives et ce se sont pas toujours les sources les plus évidentes qui donnent les meilleurs résultats. Les archives du
+          Minutier central des notaires de Paris sont une source de première importance pour la connaissance de la vie de la communauté, mais une
+          recherche prolongée dans différentes études ne s’est avérée que peu fructueuse. Un grand nombre de séries des Archives nationales permettent
+          une approche de l’histoire de la communauté, notamment par les fonds produits par le Châtelet de Paris, l’Université ou le Parlement. La
+          Bibliothèque nationale de France est une institution incontournable pour toute recherche sur l’histoire des communautés de métier puisqu’on
+          y trouve des sources particulièrement importantes, aussi bien manuscrites qu’imprimées, notamment dans les collections et recueils d’actes
+          et arrêts divers qui mettent en scène la vie de la communauté. La bibliothèque de la Sorbonne conserve un certain nombre d’archives de
+          l’Université parmi lesquelles on trouve certains documents touchant ses relations avec les parcheminiers, mais ce sont des documents que
+          l’on retrouve ailleurs aussi. Il faut diversifier les points de vue pour trouver les sources de l’histoire des parcheminiers. Il y a peu de
+          sources iconographiques à notre disposition pour illustrer ce métier ; certaines sont cependant reproduites en annexe. La collecte des
+          sources n’est pas aisée, leur traitement a également parfois posé problème, notamment lorsqu’elles se contredisent, ce qui nécessite de
+          réaliser un véritable travail de critique des sources.</p>
+        <p>Par ailleurs, les recherches entreprises pour éclairer les relations entre les parcheminiers de Paris et leurs homologues provinciaux se
+          sont avérées délicates dans la mesure où les traces des communautés de parcheminiers sont maigres ; la tâche est d’autant plus ardue que, si
+          le métier de parcheminier est plutôt bien défini à Paris, il n’en va pas de même en province, où les parcheminiers occupent également
+          d’autres activités, ce qui les rend plus difficiles à cerner.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

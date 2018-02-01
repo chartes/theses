@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le nom de Georges Ribemont-Dessaignes demeure, trente ans après sa mort, largement ignoré. De ce relatif oubli, l’attitude de l’écrivain
+          et peintre est sans doute la première responsable. Son rejet des « grands hommes », son mépris du statut de l’intellectuel professionnel,
+          maintes fois manifesté à l’encontre d’André Breton notamment, ou encore une indifférence toute dadaïste à l’égard de sa propre production
+          littéraire ou picturale, comme à l’idée même d’une construction artistique, le poussent à se démarquer par un refus délibéré de faire
+          carrière, de promouvoir ou simplement défendre la valeur et la place réelles de son œuvre, plastique et littéraire, dans son temps. La
+          singularité de son parcours, son indépendance par rapport aux grands mouvements intellectuels du <num>xx<hi rend="sup">e</hi></num> siècle sont
+          également une cause de cette méconnaissance. Seule une histoire en marge des histoires officielles, c’est-à-dire en marge de l’histoire des
+          avant-gardes, pouvait trouver de l’intérêt dans ce personnage à part.</p>
+        <p>Au vu des antécédents bibliographiques, à la fois très peu nombreux et incomplets, nous avons pu déterminer les lacunes que nous nous
+          proposons de combler. Le premier objectif part de la constatation qu’aucune des recherches précédemment menées n’a cherché à fixer, de façon
+          précise, l’arrière-plan biographique pour l’ensemble de sa vie, de 1884 à 1974. Il est pourtant indispensable à nos yeux de cerner
+          l’évolution du personnage, et notamment ses différentes pérégrinations, pour comprendre l’évolution d’une œuvre qui les répercute de façon
+          directe. En outre, cette approche permettra de mettre en lumière le personnage de Georges Ribemont-Dessaignes dans sa singularité, avec
+          l’idée que seule une étude particulière de son parcours peut donner les clefs de ses processus créatifs et de ses choix artistiques, qui ne
+          cadrent pas toujours, on l’a dit, avec les histoires officielles de l’art au <num>xx<hi rend="sup">e</hi></num> siècle. Nos recherches se donnent pour
+          second objectif de nuancer l’image de Ribemont-Dessaignes écrivain, en rappelant que l’homme était profondément, mais sans dimension
+          négative, un dilettante, aux talents divers, sans que cette diversité nuise à la qualité de son œuvre ; et que l’on ne peut donc prétendre
+          avoir une image exacte de lui sans avoir envisagé cet aspect. Dans ce domaine tout était à faire – car peu de choses, et peu de choses
+          pertinentes, ont été écrites sur ses travaux de peintre, dessinateur, illustrateur, de critique d’art, de musicien et critique musical, et
+          en somme sur sa relation au monde de l’art, par laquelle Georges Ribemont-Dessaignes a pourtant débuté.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La grande difficulté du sujet réside dans l’extrême dispersion de tous les types de sources (archives, iconographie) qui le concernent.</p>
+        <p>C’est à la bibliothèque littéraire Jacques Doucet qu’a été versé l’essentiel des archives que Ribemont-Dessaignes conservait à la fin de sa
+          vie. Le fonds attend encore d’être traité intégralement. L’ensemble se rapporte presque exclusivement à la période d’après 1945 ; les
+          documents les plus anciens datent des années 1930. De l’aveu de Ribemont-Dessaignes lui-même, toutes les archives dada ont été perdues.
+          D’autre part, la plus grande partie du fond concerne ses activités littéraires : poèmes inédits, pièces pour la radio,…, et ne sont donc pas
+          de notre ressort.</p>
+        <p>Il s’avère qu’une partie des archives, ouvrages et œuvres plastiques que possédait Georges Ribemont-Dessaignes a été dispersée par des dons
+          à des amis avant sa mort, puis par sa femme Suzanne, enfin à la mort de celle-ci en 1991, si bien que l’on ne peut pas se contenter du fonds
+          de la bibliothèque littéraire Jacques Doucet, représentatif mais incomplet, pour appréhender le sujet. Le fonds Jacques-Élie Moreau,
+          lui-même mis en vente récemment à la librairie Les Argonautes, à Paris, est le plus important ensemble issu de ce démembrement.</p>
+        <p>D’autre part, étant donné le caractère lacunaire des archives conservées par Ribemont-Dessaignes, il nous a également fallu procéder de
+          façon inverse, en consultant les archives de tous ses interlocuteurs : à la bibliothèque littéraire Jacques Doucet, celles de ses amis
+          dadaïstes et surréalistes ; à la Bibliothèque nationale de France, celles des époux Autant-Lara ; à la bibliothèque municipale de Marseille,
+          celles de Jean Ballard.</p>
+        <p>D’autres trouvailles sont venues enrichir ponctuellement nos recherches, par exemple la consultation des archives des expositions qui ont
+          été consacrées à Georges Ribemont-Dessaignes à la galerie Chave à Vence et à la Villa Arson à Nice.</p>
+        <p>La dispersion des sources iconographiques (dessins, tableaux) soutient aisément la comparaison avec celle des archives, et a été tout aussi
+          problématique pour la constitution du corpus d’œuvres cohérent et propre au commentaire que nous évoquons en troisième partie.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

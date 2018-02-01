@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Durant plus de dix ans, de 1641 à 1652, la Catalogne fut sous la coupe française, depuis la soumission de la province à Louis XIII par la délibération des <emph>Braços</emph> (représentants des trois états de la société catalane) en pleine guerre franco-espagnole. Cette soumission était la suite immédiate de la révolte de 1640, dite des <emph>Segadors</emph>, au cours de laquelle les principales institutions catalanes (Generalitat de Catalunya et Conseil des Cent de Barcelone, appelés « Consistoires ») avaient secoué le joug espagnol. Les années 1640 et 1641 ont été abondamment traitées par l’historiographie et constituent aujourd’hui des points importants de la <emph>doxa</emph> nationaliste, habituée à récupérer et à récrire les événements historiques. En revanche, les dix ans de présence française en Catalogne, tant militaire qu’administrative, qui s’étendent entre 1642 (date d’entrée du premier vice-roi) et 1652 (chute de Barcelone aux mains des Espagnols de Don Juan d’Autriche), ont été peu étudiés, car leur lecture catalaniste est plus difficile. Une partie des Catalans avait certes déserté la province et rejoint l’Espagne après la révolte – mouvement qui continuera durant la période –, mais une autre avait décidé de suivre le fil des événements, et finalement apporté un soutien à la France. Le parcours de cette élite demeure encore à ce jour assez obscur.</p>
+          <p>Il est un fait avéré que les biens des Catalans qui avaient décidé de quitter la province pour aller servir Philippe IV (les « philippistes ») furent confisqués. Les quelques historiens qui se sont intéressés à la période – le prêtre Josep Sanabre en 1956, ou, plus récemment, des chercheurs comme Òscar Jané – ont pu résumer la question à une affirmation assez simple : ils furent redistribués aux partisans de la France afin de renforcer et/ou de récompenser leur fidélité. En 1659, le traité des Pyrénées qui mit fin à la guerre entre la France et l’Espagne ordonna la restitution de tous ces biens confisqués à leurs anciens propriétaires. Point à la ligne. Cette vision binaire semble devoir être revue aujourd’hui, compte tenu des nombreuses sources directement liées aux confiscations et encore inédites. Les archives françaises conservent de nombreuses suppliques des Catalans profrançais, mais aussi des pamphlets et divers écrits politiques qui montrent clairement l’importance capitale de la question des confiscations dans les relations sensibles entre les deux nations. Elle prend un relief particulier dans le contexte de la régence d’Anne d’Autriche, où le roi Louis XIV est un enfant, où la distance entre la Cour et la Catalogne est la principale difficulté, la faveur royale étant médiatisée par les ministres : c’est là qu’apparaît toute la finesse des rapports humains, d’homme à homme, qui se jouent sous une période caractérisée par le clientélisme. Les interférences observées sont décuplées par la Fronde. L’aspect diplomatique de la question – place de la Catalogne sur l’échiquier international comme monnaie d’échange ou comme coin enfoncé dans le flanc de l’Espagne – s’y lie également, et il importe de retracer l’origine exacte de la clause de restitution au cours des négociations de paix, redoutée par une élite catalane nécessaire à la France mais impossible à contenter. Les confiscations sont-elles un moyen de pouvoir ? Les posséder est-il synonyme de puissance ? Sont-elles l’instrument d’une politique de conquête ou d’assimilation de la Catalogne ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les archives du ministère des Affaires étrangères, particulièrement la série « Correspondance politique Espagne » constituent une source vivante et significative. Elles conservent notamment de nombreuses suppliques envoyées par les Catalans profrançais à différents personnages de la Cour – la régente et le roi, Gaston d’Orléans, Mazarin, Le Tellier et autres ministres. Analyser ces documents en fonction de leur auteur, c’est-à-dire de son milieu et de sa position politique, offre un nouvel éclairage sur ces élites, leur culture politique et leurs modes de représentation. Ces suppliques sont soit de simples demandes de gratification, soit de véritables pamphlets politiques, tous liés à leur contexte précis. On trouve également des minutes de lettres de Mazarin, tracées par le cardinal lui-même ou son proche collaborateur Hugues de Lionne, dont le rôle est précieusement informé. Un autre personnage, dont le rôle était en grande partie inédit, apparaît également dans toute son ampleur : Isidoro de Pujolar. Agent mandé par les Consistoires à Paris, il fut un relais de l’information entre la France et la Catalogne, utilisé par Lionne, mais fut aussi un obstacle en fonction des clientèles qu’il favorisait – jusqu’à son désaveu final.</p>
+          <p>La correspondance des principaux personnages directement chargés du gouvernement de la Catalogne, Michel Le Tellier, secrétaire d’État, et Pierre de Marca, <emph>visiteur général</emph> dans la province entre 1644 et 1651, est conservée sous forme de copie à la Bibliothèque nationale de France (Fonds français). Cette source est la plus complète du point de vue événementiel, mais la prose de Pierre de Marca doit être interprétée avec prudence. On trouve également à la Bibliothèque nationale de France certaines sources isolées comme le Fonds Baluze, conservant une partie des papiers originaux de Marca, dont certains sont inédits, ou encore le volume Espagnol 337, membre de l’ancienne collection du chancelier Séguier, à qui avaient été envoyés plusieurs intéressants <emph>factums</emph> venant de Catalogne. Trois autres dépôts français ont été utilisés : au Service historique de la défense, la série A1, très connue après 1661 mais totalement inédite avant cette date, contient une importante collection de minutes de lettres patentes de donation des biens confisqués de Catalogne, dont l’analyse diplomatique fait sens. Aux Archives nationales sont conservés des brouillons liés aux négociations diplomatiques de Münster que nous avons pu identifier de la main de Denis Godefroy (1615-1681). Enfin, les archives départementales des Pyrénées-Orientales fournissent quelques dossiers, tirés d’archives notariales, utiles pour des études de cas en Roussillon.</p>
+          <p>Dans la série « Intrusos » de l’Arxiu de la Corona d’Aragó (Barcelone) figurent les registres de la chancellerie de Catalogne sous le gouvernement des vice-rois français. Les difficultés d’interprétation sont nombreuses : il s’agit d’enregistrements d’actes expédiés, et des paramètres diplomatiques comme la date d’inscription (estimée par rapport aux autres actes) ou les mentions marginales « de chancellerie », là encore, font sens. C’est la source indispensable pour illustrer l’important décrochement entre la Cour et les élites locales. Des acteurs de premier plan, totalement absents des sources françaises, y apparaissent de façon récurrente.</p>
+          <p>L’historien Philippe Lazerme de Règnes a également mis à disposition ses notes personnelles et inédites, soit cinq cent soixante-cinq notices généalogiques sur les familles nobles catalanes, qui ont été le premier instrument d’identification des protagonistes. L’identification et la datation des documents, objectifs importants de ce travail, ont pu permettre la réalisation d’un état des sources qui se lit finalement comme un inventaire complémentaire, avec quelque utilité pour le chercheur.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

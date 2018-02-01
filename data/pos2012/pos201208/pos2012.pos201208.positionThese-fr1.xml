@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>On se propose de voir dans quelle mesure la guerre, entre 1792 et 1794 contribue à transformer le Paris révolutionnaire en un véritable camp retranché, en une capitale de guerre. C’est-à-dire comprendre comment son rôle de capitale influe sur le rôle que la ville joue dans la guerre et dans la transformation de ses espaces. On peut voir dans l’explosion de la poudrerie de Grenelle, le 14 fructidor an II (31 août 1794), un événement représentatif de la participation de la guerre à une forme de bouleversement des espaces urbains. Il convient alors de voir comment cet aspect s’insère dans une transformation plus large de la ville, en commençant par l’étude du quartier où est implanté cette poudrerie. Constatant qu’elle se situe à proximité du quartier militaire du Gros-Caillou, il faut se demander comment s’organisent ces espaces et étudier la façon dont ils évoluent sous l’effet des politiques qu’implique la conduite de la guerre : casernement d’hommes, présence du fait militaire dans la ville, industrialisation des espaces. Cela doit conduire à penser la place du militaire dans la ville et voir si les évolutions urbaines constatées à l’échelle d’un quartier correspondent réellement à l’instauration, par des acteurs politiques qui sont à déterminer, d’une ville de guerre, tenue par l’institution militaire et mise en défense contre une invasion ennemie. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>L’étude est construite à partir de sources diverses et dispersées. Au Service historique de la défense à Vincennes, les archives du génie renseignent sur le dispositif défensif mis en place en 1792. Les archives de l’armée de terre contiennent trois cartons sur le camp sous Paris et ont été utilisées pour l’étude du mouvement et de la répartition des troupes en 1792. On y a consulté les séries B (Révolution-Empire), J (justice), X (administration) pour l’étude des états-majors et de la présence militaire dans Paris. </p>
+    <p>Ont été utilisées, aux archives de la préfecture de police, les procès-verbaux du commissaire de police de la section des Invalides, ainsi que ceux des autres sections concernées par l’explosion de Grenelle. </p>
+    <p>Aux Archives nationales, on a consulté dans les archives des comités de l’Assemblée (série D) ainsi que du pouvoir exécutif (AF II) les dossiers se rapportant aux affaires militaires, aux armes et poudres. On a utilisé les registres de délibération et les enregistrements de cartes de sûreté de la section des Invalides de la sous série F<hi rend="sup">7</hi> (police générale). La sous-série F<hi rend="sup">9</hi> (affaires militaires) a été dépouillée et l’on y trouve divers renseignements sur les affaires militaires dans les sous séries F<hi rend="sup">10</hi> et F<hi rend="sup">11</hi>. Plusieurs articles de F<hi rend="sup">13</hi> (bâtiments publics) contiennent des informations sur les dégâts causés par l’explosion de Grenelle, ainsi que sur les ateliers d’armes dans la capitale et les aménagements effectués pour le casernement dans Paris. Ont été parcourus les dossiers individuels de l’explosion de la poudrerie de Grenelle (F<hi rend="sup">15</hi> 3276 à 3293). </p>
+    <p>Aux archives de Paris, on a utilisé des papiers des sections. Des pièces isolées des séries 1 à 4 AZ renseignent sur les affaires militaires et quelques-unes sur l’explosion de la poudrerie de Grenelle.  </p>
+    <p>On s’est appuyé également sur des sources plus classiques de l’histoire urbaine, notamment des cartes et plans à la bibliothèque historique de la ville de Paris, la Bibliothèque nationale de France et aux Archives nationales. Le musée Carnavalet et le département des estampes de la BNF ont fourni l’iconographie. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Avec l’invention de Gutenberg, les pratiques scripturales et les usages de l’écrit se modifient en profondeur. L’imprimerie ne remet cependant pas immédiatement en cause l’ensemble des mécanismes médiévaux. Le changement de paradigme ne s’opère pas sans résistance. Le fonctionnement institutionnel de la monarchie, fondé sur la tradition de pratiques séculaires, constitue l’un de ces points de tension. Les intérêts de l’imprimé se confrontent aux usages monarchiques sur lesquels reposent partiellement la légitimité et l’efficacité de l’intervention royale. La production normative ne recourt pas uniquement au manuscrit pour ses vertus utilitaires de transmission et de conservation de l’information, mais incorpore aussi au document des valeurs symboliques et surtout juridiques attachées à sa forme. Par conséquent, le bouleversement formel opéré par l’imprimerie frappe de plein fouet la pratique législative. Au cours du siècle qui suit cette invention, la loi connaît d’importantes évolutions, qui résultent pour partie des effets de l’imprimerie.</p>
+          <p>Du point de vue institutionnel, le début des Temps modernes se caractérise par de profondes transformations du pouvoir législatif. Le pouvoir de faire loi bénéficie désormais d’une forte assise théorique, qui légitime l’intervention croissante du monarque. Ainsi, la législation du roi de France tend à se faire plus prégnante. Le phénomène se traduit par une production accrue de textes concernant des sujets qui échappaient auparavant à la compétence royale. Pour ce faire, le roi dispose d’une grande variété d’instruments, qui rend difficile l’appréhension de la pratique législative.</p>
+          <p>Définir la loi au début des Temps modernes relève en effet de la gageure. Non seulement le terme ne vise pas uniquement l’activité normative du monarque, mais il est complexe à circonscrire au sein des seules décisions royales. L’absence de correspondance exacte entre les caractères diplomatiques et juridiques empêche de donner à la loi des contours très précis. Il est par conséquent nécessaire de déterminer de manière claire et constante des critères de choix des actes royaux susceptibles d’être qualifiés de loi. Il faut avant tout souligner que l’ensemble des décisions du pouvoir souverain n’entre pas dans la catégorie des actes royaux. Cette nébuleuse apparaît en elle-même difficile à définir. L’historiographie contourne généralement le problème, car la monarchie n’a pas classé ses actes au sein de catégories strictes. Au regard de la diplomatique, le genre acte royal se divise en deux espèces : les lettres patentes et les actes expédiés sans l’intervention de la Chancellerie. En premier lieu, les lettres patentes se définissent comme des actes ouverts avec un sceau pendant, qui comprennent une suscription, une adresse, un préambule, un dispositif, une formule exécutoire et enfin la signature du roi et des contreseings. En fonction des variations subies par ces éléments, il est possible de distinguer deux types de lettre patente. Les grandes lettres patentes sont scellées sur double queue et s’adressent « à tous présents et à venir ». Les petites lettres patentes sont, quant à elles, scellées sur simple ou double queue et disposent d’une adresse particulière ou collective. En second lieu, les actes expédiés sans l’intervention de la Chancellerie renferment aussi une large variété de décisions royales. Face à la lourdeur procédurale des lettres patentes, des actes aux cadres moins rigides font leur apparition au cours du Moyen Âge et de l’Ancien Régime. C’est en particulier le cas des ordonnances sans adresse ni sceau et des lettres closes. Enfin, il faut noter que les arrêts du Conseil du roi ne sont pas compris dans la catégorie des actes royaux, bien qu’il s’agisse d’un mode à part entière (et fondamental) d’intervention royale dans l’ordre juridique. Plus précisément, seuls sont classés parmi les actes royaux les arrêts du Conseil revêtus de lettres patentes.</p>
+          <p>La catégorie des actes royaux est donc particulièrement étendue. Un dépouillement exhaustif des actes royaux imprimés encore conservés demanderait des moyens considérables. Outre la masse des documents, même pour une période de moins d’un siècle, les lacunes des instruments de recherche et la faiblesse de l’historiographie compliquent la tâche du chercheur. Tout d’abord, il n’existe aucun outil permettant de connaître l’ensemble de la législation de l’Ancien Régime. En l’absence d’une procédure centralisée de conservation des actes royaux, ces derniers figurent actuellement de manière dispersée dans une multitude d’institutions. Des entreprises ont bien été menées pour tenter de résoudre cette difficulté, mais elles demeurent lacunaires, qu’il s’agisse de la collection des <emph>Ordonnances des rois de France</emph> ou du <emph>Recueil des anciennes lois françaises</emph> d’Isambert. Il faut ensuite relever que si l’évolution générale du pouvoir législatif au début des Temps modernes est désormais assez bien connue, les effets induits par l’invention de Gutenberg n’ont en revanche été que très peu étudiés en eux-mêmes.</p>
+          <p>Par conséquent, l’étude des premières lois imprimées cherche à envisager la question dans sa globalité, en ne privilégiant ni les aspects d’histoire du livre ni ceux d’histoire du droit. Les deux éléments sont étroitement liés : alors que la monarchie exerce dès l’origine une surveillance des imprimés en circulation, la parution de ses décisions par des éditeurs privés entraîne une transformation de ses propres pratiques. Le choix consiste à analyser la genèse du phénomène et ses premiers développements. Il s’agit donc de s’interroger sur les rapports entre l’apparition d’un marché des actes royaux imprimés et le processus législatif. L’impression de la législation a en effet produit une véritable impression sur la législation, et ce dès le début de l’époque moderne.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Face à la masse des décisions monarchiques, l’étude s’est centrée sur les seules « lois » imprimées. Pour cela, une série de critères a permis d’établir un corpus de sources homogène, susceptible de faire l’objet d’une analyse cohérente, de comparaisons et de projections raisonnées. C’est à partir du dépouillement des actes royaux imprimés conservés à la Bibliothèque nationale de France (BNF) qu’a été constituée la base de données de cette étude. Au total, neuf cent trente-huit pièces imprimées ont été dépouillées, regroupant mille trois cent cinquante-cinq actes royaux dont certains en de nombreux exemplaires. Le corpus définitif contient, quant à lui, trois cent quatre-vingt-six entrées, extraites de trois cent sept pièces imprimées et reproduisant deux cent soixante-sept actes royaux différents. Ces entrées ont été dégagées à l’aide d’une série de critères relatifs à la date, à la forme et au contenu des documents.</p>
+          <p>Tout d’abord, le cadre temporel de l’étude correspond à celui de l’apparition et des premiers développements de l’impression des actes royaux. Le dépouillement des catalogues d’incunables a permis de découvrir que le plus ancien acte royal imprimé conservé – notamment à la BNF – a été mis sous presse à Lyon en 1491. Il s’agit de l’ordonnance sur la justice en Languedoc promulguée le 28 décembre 1490 par Charles VIII. L’analyse débute donc logiquement avec le règne de Charles VIII, qui marque les prémices de l’impression de la législation. Cette dernière subit de profondes modifications jusqu’au milieu du <num>xvi<hi rend="sup">e</hi></num> siècle, et le règne d’Henri II semble constituer un <emph>terminus ad quem</emph> pertinent. Outre les données dégagées du corpus de l’étude, au moins deux éléments justifient cette césure. En premier lieu, sous Charles IX, la croissance des actes royaux imprimés devient exponentielle. En second lieu, le roi centralise alors la mise sous presse de la législation en accordant, le 8 octobre 1561, le premier privilège général d’impression des actes royaux à Robert II Estienne. Dès lors, seuls les actes royaux imprimés entre 1483 et 1559 ont été retenus. Cela a conduit à l’exclusion de quatre cent trente-deux pièces impossibles à dater. En outre, les décisions promulguées par les quatre monarques de la période mais mises sous presse après 1559 ont logiquement été exclues. De la même manière, seuls les actes royaux de Charles VIII, Louis XII, François I<hi rend="sup">er</hi> et Henri II figurent dans le corpus. Les lettres patentes antérieures à 1483 imprimées avant 1559 n’entrent pas dans le champ de l’étude.</p>
+          <p>Ensuite, la deuxième série de critères de sélection repose sur la forme de l’impression. Seules les impressions d’un acte royal à la pièce ont été retenues. Il faut en effet distinguer les actes royaux imprimés à l’unité des recueils d’ordonnances, lesquels obéissent à une logique éditoriale différente. Pour la même raison, les impressions commentées ne figurent pas dans le corpus, même lorsqu’elles ne portent que sur un acte royal isolé. Toutefois, si l’on peut parler d’impression à l’acte, ce dernier est régulièrement accompagné de textes complémentaires nécessaires à sa compréhension. Ainsi, les éditeurs ajoutent parfois l’arrêt d’enregistrement des lettres patentes. Sans former de véritables recueils, ils publient quelques fois ensemble deux ou trois actes royaux connexes. Lorsqu’ils sont privilégiés, les imprimeurs-libraires reproduisent parfois l’intégralité du privilège octroyé par la monarchie, qui est en lui-même un acte royal. Par conséquent, si elles se limitent le plus souvent à la mise sous presse d’un unique acte royal, les impressions à la pièce peuvent également en contenir plusieurs. Les recueils factices ont évidemment été dépouillés en ce qu’ils ne constituent qu’un regroupement artificiel, sous une même reliure, d’actes royaux imprimés à la pièce.</p>
+          <p>Enfin, la troisième série de critères de sélection dépend du contenu des pièces imprimées. Parmi les actes royaux imprimés, seules les lettres patentes en commandement ont été retenues. Ce choix s’explique par le fait que la catégorie diplomatique est celle qui s’apparente le plus à la notion de loi, au sens matériel du terme. Si les lettres patentes en commandement ne sauraient être assimilées aux lois contemporaines sans commettre un grave anachronisme, elles correspondent néanmoins aux actes les plus solennels d’expression du pouvoir normatif du roi de France. Par conséquent, tous les actes expédiés sans l’intervention de la Chancellerie ont été écartés du corpus. Le critère formel assure finalement la cohérence du corpus de l’étude. S’il ne résout pas complètement les discussions relatives à la notion de loi sous l’Ancien Régime, il semble en constituer une approximation acceptable. La loi apparaît en effet comme un concept opératoire, afin de progresser dans la compréhension des mécanismes institutionnels du début des Temps modernes.</p>
+          <p>À l’ensemble de ces éléments, il faut ajouter que le corpus se réduit aux actes royaux imprimés conservés dans les collections de la BNF. Un tel dépouillement peut, de prime abord, paraître limité. Pourtant, le millier de pièces consultées pour l’établissement du corpus de l’étude tend à prouver le contraire. En effet, les dépouillements ne portent pas exclusivement sur les imprimés conservés dans les rayonnages du site de Tolbiac, mais sur l’ensemble des fonds de la BNF susceptibles de renfermer des actes royaux. Le choix de la BNF s’explique par le fait qu’elle renferme le plus grand ensemble d’actes royaux imprimés.</p>
+          <p>Par conséquent, c’est sous toutes ces réserves qu’est menée l’étude des premières lois imprimées.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

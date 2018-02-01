@@ -1,0 +1,87 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Edité une première fois en 1646 par Jacques Sirmond, sous le titre <hi rend="i">De Spiritu Sancto</hi>, l’ouvrage de Théodulfe d’Orléans
+          est en fait intitulé dans les manuscrits <hi rend="i">De processione Spiritus Sancti</hi>, titre qui mérite d’être rétabli. Ce recueil de
+          textes patristiques fut composé à la demande de Charlemagne pour  réparer le concile d’Aix de 809, qui devait introduire la formule du <hi rend="i">Filioque</hi> dans le <hi rend="i">Credo</hi> pour exprimer la double procession du Saint-Esprit. Contrairement aux théologiens
+          orthodoxes, les théologiens catholiques affirment en effet que le Saint-Esprit procède du Père et du Fils, <hi rend="i">Spiritus Sanctus a
+            Patre Filioque procedit</hi>, et non pas du Père par le Fils, <hi rend="i">Spiritus Sanctus a Patre per Filium procedit.</hi> La controverse
+          était importante à l’époque et se greffait sur l’opposition politique des deux empires d’Orient et d’Occident.</p>
+        <p>Le florilège composé par Théodulfe révèle l’étendue de sa culture et témoigne de ses méthodes de travail. Une nouvelle édition du texte,
+          fondée sur un manuscrit contemporain de l’auteur, permet ensuite d’étudier ses sources : les manuscrits qu’il a vraisemblablement utilisés,
+          ou du moins les bibliothèques avec lesquelles il devait être en relation. Enfin sont envisagés les procédés de composition mis en œuvre par
+          Théodulfe.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cinq manuscrits transmettent l’ensemble du florilège, un sixième ne contient que la préface en vers. Quatre manuscrits dont s’est
+          vraisemblablement servi Théodulfe d’Orléans ont été retrouvés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

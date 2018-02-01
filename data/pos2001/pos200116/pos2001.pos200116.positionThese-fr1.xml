@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Vichy attire beaucoup les historiens, comme le reste de la société. De fait, la vie des beaux-arts et la politique culturelle pendant les
+          années 1940 sont désormais éclairées par plusieurs études, mais celles-ci insistent sur le contexte de la guerre et du régime de Vichy plus
+          que sur l’histoire artistique. Revenir sur ces années sombres par le biais d’une monographie biographique offre un point de vue nouveau, en
+          conjuguant deux approches : l’analyse des idées politiques, intellectuelles et artistiques permet de dégager le climat des beaux-arts de
+          l’époque, alors que l’observation d’un homme et d’une carrière particulière renseigne sur les sources et les mécanismes du pouvoir à
+          Vichy.</p>
+        <p>Louis Hautecœur était déjà accaparé par la mémoire, divergente selon les témoignages, lorsque des historiens, notamment deux, se sont
+          intéressés à lui. La première est française. Laurence Bertrand Dorléac ; elle a rencontré Hautecœur à l’occasion de ses études générales sur
+          les beaux-arts dans les années 1940 et son point de vue porte essentiellement sur sa conception de l’art contemporain, quelle juge
+          rétrograde. Laurence Bertrand Dorléac souligne les ruptures nées du régime de Vichy, position qu’explique son statut de pionnière qui met
+          d’abord en avant les éléments les plus manquants. Pourtant, il existe des continuités avec l’avant et l’après-guerre, notamment dans la part
+          législative de l’œuvre de Hautecœur. Une seconde historienne, américaine, Hilary Ballon, s’est penchée spécifiquement sur Hautecœur, en
+          étudiant les rapports qui existeraient entre ses écrits architecturaux et ses idées politiques, mais cet essai se révèle un peu trop
+          subjectif.</p>
+        <p>Maintenant que les travaux historiques relatifs à Vichy se sont bien développés, il semble possible de traiter la période de façon plus
+          globale, en acceptant notamment l’idée que le contexte de réaction n’ait pas influencé tous les actes de l’administration. Cela étant dit,
+          une part importante de cette thèse est consacrée à l’action de Hautecœur face au régime de collaboration. Chaque partie suit une optique
+          particulière : administrative et législative pour la première, artistique pour la deuxième et politique pour la dernière.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La première des sources est constituée par le livre de souvenirs publié par Louis Hautecoeur en 1948 - <hi rend="i">Les beaux-arts en
+            France : passé et avenir</hi>. Evidemment partial et apologétique, cet ouvrage doit être nuancé, mais il a l’avantage d’être de la main
+          même de l’intéressé.</p>
+        <p>Deux fonds dédiés à Hautecœur existent. L’un, improprement intitulé “fonds Hautecoeur”, correspond aux archives du secrétariat aux
+          beaux-arts, conservées aux Archives nationales dans la sous-série F<hi rend="sup">21</hi> . Plus stimulant car exclusivement consacré à
+          lui, le second fonds provient du dépôt par Hautecœur  de ses papiers aux archives de l’Institut de France. Du fait de leur caractère très
+          personnel, ces papiers permettent de combler des lacunes dans notre connaissance de ses activités, de noter ses centres d’intérêt, de suivre
+          l’élaboration de sa pensée. Malheureusement, la correspondance et les mémoires sont incommunicables jusque 2023.</p>
+        <p>En complément, des informations intéressantes pour le sujet ont pu être trouvées dans les sous-séries 2 AG, F<hi rend="sup">17</hi> , F
+<hi rend="sup">21</hi> et 3 W des Archives nationales, ainsi que dans un fonds en cours de classement, la série R des archives des Musées
+          nationaux, très précieuse pour l’étude des vols d’œuvres d’art et des projets d’échanges voulus par les nazis. Enfin, la documentation
+          offerte par la Médiathèque du patrimoine et par la bibliothèque du Conseil d’État s’est révélée très utile dans le domaine juridique.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

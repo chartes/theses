@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La Société des auteurs de films (SAF) est une association de gens de cinéma fondée en 1917 par le cinéaste Camille de Morlhon, dans le but
+          d’obtenir l’instauration du droit d’auteur au cinéma dans sa double dimension : droit moral, c’est-à-dire la propriété intellectuelle ;
+          droit patrimonial, c’est-à-dire la perception d’un pourcentage sur les recettes des salles de cinéma. Ces deux aspects, distincts, sont
+          pourtant inextricablement liés : la figure de l’auteur se confond avec la figure de l’artiste et du créateur ; ne peut donc prétendre
+          toucher des droits d’auteur que celui qui pratique un art ou une activité intellectuelle. Or, malgré le poids qu’exerce la notion
+          d’« auteur » sur les études cinématographiques françaises, la SAF n’a fait l’objet d’aucune étude globale, étant considéré acquis le
+          caractère artistique du cinéma, et les revendications de la SAF, par conséquent, d’emblée légitimes. L’objet de cette thèse est précisément
+          de montrer que la notion d’« auteur » n’est ni naturelle, ni évidente, mais qu’elle relève au contraire d’une construction intellectuelle,
+          politique, d’une fabrication à des fins bien précises, et que celui qui l’utilise le fait dans un contexte particulier qui lui donne sa
+          propre définition. Il s’agit donc de montrer pourquoi les fondateurs de la SAF introduisent la notion d’« auteur » au cinéma, ce que le mot
+          signifie dans leur bouche et comment ils sont parvenus à rendre légitime en 1929 une notion inédite en 1917.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude se fonde sur les archives administratives de la SAF, conservées à la bibliothèque de la Société des auteurs et compositeurs
+          dramatiques (SACD). Ces documents sont très lacunaires : seul subsiste un registre (1919-1922) des comptes rendus des assemblées générales
+          de la SAF, les suivants ayant été perdus dans des circonstances obscures. Il convient donc de les compléter par le dépouillement des
+          archives administratives de la SACD, avec laquelle la SAF entretient d’étroits rapports : registres des procès-verbaux des séances de la
+          commission de la SACD, registres des comptes rendus des assemblées générales, qui fournissent de précieux renseignements sur l’évolution de
+          la SACD vis-à-vis du cinéma et de la SAF. Les archives de certains membres de la SAF, conservées au département des arts du spectacle de la
+          Bibliothèque nationale de France et au département des archives de la Cinémathèque française, constituent des sources à ne pas négliger.
+          Enfin, presse, témoignages et récits permettent de reconstituer de nombreux événements occultés par les lacunes archivistiques.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

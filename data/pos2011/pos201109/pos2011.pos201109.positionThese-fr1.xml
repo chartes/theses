@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>INTRODUCTION </head>
+        <p>Les lois qui gouvernent les chocs entre les corps constituent l’un des problèmes centraux de la physique du <num>xvii</num><hi rend="sup">e</hi> siècle. La question sembla suffisamment importante pour inciter la Royal Society de Londres à organiser en 1668 un concours, auquel participèrent Christopher Wren, John Wallis et Christian Huygens. D’autres publications suivirent, celles de Mariotte puis de Malebranche en 1675. </p>
+        <p>C’est dans ce contexte que naît et se développe la réflexion de Leibniz sur les lois du mouvement, contribution fondamentale au débat philosophique et scientifique du <num>xvii</num><hi rend="sup">e</hi> siècle et clé d’accès essentielle pour comprendre la métaphysique du philosophe. Après le tournant opéré dans le <hi rend="i">De corporum concursu</hi> de 1678, où Leibniz inaugure la « réforme de la mécanique », la <hi rend="i">Dynamica de potentia et legibus naturae corporeae</hi> de 1689 représente la systématisation la plus aboutie des principes de sa physique. Les différentes versions du texte reflètent la complexité du processus d’élaboration : alors que la première naît sous l’influence des <hi rend="i">Principia</hi> newtoniens, les versions postérieures et leurs annotations reflètent, dans une certaine mesure, les intenses discussions que Leibniz a eues avec les savants italiens lors de son voyage de plus d’un an (1689-1690) dans la péninsule. </p>
+        <p>La seule édition imprimée à ce jour de ce texte capital (au tome VI des <hi rend="i">Mathematische Schriften</hi> publiés de 1849 à 1863 par Karl Immanuel Gerhardt) est partielle et fort lacunaire, car elle repose sur la simple transcription d’une copie que Leibniz avait fait préparer par le baron Rudolph Christian Bodenhausen, en vue d’une impression à laquelle il renonça.  </p>
+        <p>La présente étude comprend notamment l’analyse codicologique, préalable nécessaire à l’établissement du texte, et la transcription de ce volumineux manuscrit, complète dans toutes ses parties et conforme aux critères actuels de l’ecdotique. Elle réunit ainsi les matériaux sur lesquels pourra se fonder enfin l’édition critique de la <hi rend="i">Dynamica</hi>. Les critères retenus se prêteront notamment à une élaboration électronique. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Le manuscrit qui constitue le corpus de la <hi rend="i">Dynamica</hi>, conservé aujourd’hui à la division Handschriften und Sonderbestände de la Gottfried Wilhelm Leibniz Bibliothek (GWLB) de Hanovre, compte 898 feuillets. Cet ensemble a été divisé par la bibliothèque en trois parties, identifiées par les cotes suivantes : LH XXXV, 11, 18 A (440 fol.) ; LH XXXV, 11, 18 B (242 fol.) ; et LH XXXV, 11, 18 C (216 fol.). La division ne coïncide cependant ni par l’écriture ni par la chronologie avec la stratification des phases de rédaction qui déterminent la formation du corpus. </p>
+        <p>En effet, il faut distinguer :  </p>
+        <p>1<hi rend="sup">o</hi> le brouillon proprement dit, écrit par Leibniz : section A, fol. 1-284 et 353-440 ; section B, fol. 235-242 ; section C, fol. 1-26 ;  </p>
+        <p>2<hi rend="sup">o</hi> la première copie, confiée par Leibniz à un copiste, ensuite abondamment corrigée et complétée de la main de l’auteur : section A, fol. 287-350 ; section B, fol. 5-206 ; </p>
+        <p>3<hi rend="sup">o</hi> la dernière version, transcrite par Bodenhausen à partir des deux précédentes : section C, fol. 27-222 ; c’est l’état du texte qui a servi à l’édition de Gerhardt. </p>
+        <p>Les sections A et B et 26 feuillets de la section C ne sont pas en cahiers : il s’agit majoritairement de feuillets isolés au format in-4<hi rend="sup">o</hi>. Le reste de la section C (transcription de Bodenhausen) est réuni en deux cahiers : le premier de 123 feuillets, le second de 71 feuillets.  </p>
+        <p>La correspondance entre Leibniz et Bodenhausen, disponible dans l’édition dite « Akademie Ausgabe » du corpus leibnizien (3<hi rend="sup">e</hi> série, t. IV), est d’une importance fondamentale pour comprendre l’histoire du manuscrit. Les nombreuses références à celle-ci qui jalonnent la <hi rend="i">Dynamica</hi> permettent en effet de reconstruire avec précision la chronologie et les circonstances qui ont présidé à la genèse du texte. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

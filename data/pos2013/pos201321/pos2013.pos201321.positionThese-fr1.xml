@@ -1,0 +1,87 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>La troupe unique dérivée des trois troupes de Molière, du Marais et de l’hôtel de Bourgogne arrive au faîte de sa gloire politique et artistique quand elle se voit octroyer le monopole sur la comédie francophone.  </p>
+		<p>Cette ère de la première Comédie-Française n’est pas le moins du monde inconnue de la science historique, d’autant que ces années avaient déjà leurs chroniqueurs contemporains : Traslage, Dangeau dans son <hi rend="i">Journal</hi>, ou encore Grimarest, biographe de Molière et contemporain de la fin de la période couverte par les feuillets d’assemblée. Ce n’est pas non plus une nouvelle troupe ; tous ses développements précédents sont bien connus, passage incontournable de toutes les histoires de la Comédie-Française, notamment pour la période d’occupation de l’hôtel de Guénégaud. Les protagonistes de cette première période suivent des parcours pour certains très bien étudiés : les premiers compagnons de Molière, Charles La Grange, Raisin cadet, François du Périer, Michel Baron et d’autres comédiens – auteurs comme Poisson père ou Dancourt –, ainsi que les auteurs bien repérés dans l’histoire littéraire. Mais à strictement parler, les feuillets d’assemblée n’ont pas suscité d’étude spécifique, ni d’édition. Le fonds n’a été, pour la plus grande part, utilisé que ponctuellement. Des assemblées ont été plus particulièrement examinées pour les détails qu’elles contenaient : disposition de rôles à la sortie de comédiens, résolution marquante pour l’organisation de la troupe. Les assemblées sont autant d’entrées ponctuelles, examinées dans un but global dans ce projet d’édition.  </p>
+		<p>L’introduction revient sur les modes d’utilisation des informations contenus dans les feuillets, toujours dans l’ombre d’autres questions posées à l’histoire du théâtre. Questions posées dès le <num>xviii</num><hi rend="sup">e</hi> siècle par les généticiens de l’histoire du théâtre, qui s’intéressent de près à la prestigieuse Comédie-Française. Au siècle suivant, avec la constitution de l’histoire littéraire et la sélection des classiques, la figure de Molière en alimente l’intérêt, et les conservateurs de la bibliothèque-musée de la Comédie-Française s’en affirment les principaux experts. La génération de la revue littéraire du <hi rend="i">Moliériste </hi>donne ses bases à l’exploration des feuillets d’assemblée. La reproduction du fonds au <num>xx</num><hi rend="sup">e</hi> siècle a fourni la matière première à ce travail, ainsi qu’une série d’instruments pour comprendre le fonds : listes récapitulatives des dates d’assemblées par années civiles en introduction des dossiers dans les boîtes sorties des archives générales, analyses diverses des lacunes en annexes. D’où il ressort que les feuillets d’assemblée ont été abordés soit d’un point de vue très panoramique, soit à la manière de l’aiguille dans la botte de foin. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Le fonds en question, conservé à la bibliothèque-musée de la Comédie-Française, se présente sous la forme de feuillets manuscrits. Cet aspect disparaît presque entièrement dans une édition par traitement de texte. La suite de l’introduction s’arrête sur les aspects manuscrits : la forme même d’un feuillet, sa constitution d’après ce qu’il a été possible d’en reconstituer après analyse d’une assemblée plus tardive. On s’intéresse aussi aux rédacteurs qui ont été identifiés : par une main récurrente, par une particularité graphique, à l’identification de signatures – ce qui permet de différencier des acteurs homonymes, rappelant l’importance des cercles familiaux dans la Compagnie, lisible également dans les biographies et parcours des acteurs. L’identification demeure toutefois complexe, en certaines occasions.  </p>
+		<p>Autre aspect manquant évoqué également : la question des lacunes et l’analyse du fonctionnement propre des feuillets. Les lacunes repérées en annexes des dossiers par plusieurs générations de conservateurs n’ont pas été examinées plus avant et demeurent sans reconstitution. Des blancs laissés à l’intérieur même des feuillets conservés viennent constater que les dits feuillets sont avant tout un outil de mémoire interne, dressé sur le vif, adressé aux comédiens qui demeurent conscients du contexte d’écriture, contrairement au lecteur d’aujourd’hui, qui doit se replonger dans l’histoire du temps présent du rédacteur – soit les années 1680-1700. De quoi se poser la question de l’utilité de l’édition… </p>
+		<p>Les feuillets d’assemblée abordent toutes sortes de sujets, mais dans une approche de détail ponctuel, fonctionnant essentiellement par dates et non par périodes. Les sujets couvrent les représentations, les costumes, les frais, les gagistes, les procès, etc., tout le quotidien de la troupe, mais les informations ne sont ni exhaustives, ni suivies. Ce projet, qui tente de cumuler approche spécifique et approche globale, trouve alors son meilleur instrument dans le catalogue chronologique, réalisé à la suite de l’établissement du texte, qui joint la date à un chapeau thématique, permettant de reconstituer l’intérêt d’une assemblée spécifique.  </p>
+		<p>Pour concrétiser ce projet, basé principalement sur l’étude d’une source majoritaire, il a néanmoins été fait appel à d’autres documents, localisés tant dans la bibliothèque-musée même qu’aux Archives nationales. L’effort a été principalement porté sur les documents les plus proches du fonds ; on ne peut néanmoins nier l’apport évident de ces sources autres. Ainsi, quelques registres tenus par les comédiens, tant avant que pendant la période, ont permis d’éclairer l’ensemble, notamment celui de La Grange sur les dépenses du premier établissement, qui rentre dans le détail de l’investissement gigantesque suite au Déménagement.  </p>
+		<p>En termes de bibliographie, quelques références ont été utilisées fréquemment et ont servi de modèle à l’élaboration de l’ensemble. L’histoire générale du théâtre du <num>xvii</num><hi rend="sup">e</hi> siècle, l’histoire de la Comédie-Française, des biographies de comédiens et d’auteurs, ainsi que d’artistes, ont constitué les thèmes principaux de repérage des outils de références à utiliser. Plusieurs encyclopédies et dictionnaires sont venus soutenir l’effort général. Ont été laissées de côté des références spécialisées sur des angles abordés au cours de la recherche, sur des sujets tels que l’histoire des notaires de Paris, l’expédition de Carthagène des Indes (1697), l’histoire de la Marine, les relations du clergé et du spectacle, etc. Autant de sujets intéressants mais qui, faute d’approfondissement, n’ont pas trouvé place dans ce travail.  </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

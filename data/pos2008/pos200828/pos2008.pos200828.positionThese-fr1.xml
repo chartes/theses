@@ -1,0 +1,134 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Édouard Reuss est aujourd’hui un personnage bien ancré dans l’histoire de la théologie. Son nom est en particulier associé aux travaux
+          d’exégèse du Pentateuque et à l’hypothèse « Reuss-Graf-Kuenen-Wellhausen » sur la composition du Pentateuque. Édouard Reuss développe en
+          effet la thèse que le Pentateuque a eu pour source trois ou quatre documents et est postérieur aux prophètes, que le rédacteur du
+          Pentateuque n’a rien à voir avec Moïse et que les Psaumes sont postérieurs aux prêtres et aux prophètes, thèse à laquelle son élève
+          Charles-Henri Graf donne une expression systématique.</p>
+        <p>Des travaux ont été très tôt consacrés à Édouard Reuss. Son élève Charles Théodore Gérold (1837-1928) publie une biographie d’Édouard
+          Reuss en 1892, un an après sa mort, qui reste la seule à retracer sa vie dans son ensemble. Pour cette publication, l’auteur avait eu accès
+          aux <hi rend="i">Erinnerungen aus meinem Leben</hi>, qui en sont la source principale. Des extraits des <hi rend="i">Erinnerungen aus meinem
+            Leben</hi> sont également publiés par le fils d’Édouard Reuss, Rodolphe, dans la <hi rend="i">Revue d’histoire et de philosophie
+            religieuses</hi> et par Charles Théodore Gérold dans son ouvrage paru en 1923 sur la faculté de théologie et le séminaire protestant de
+          Strasbourg. Des travaux d’historiens citent des passages des <hi rend="i">Erinnerungen aus meinem Leben</hi>.</p>
+        <p>De nombreux articles sont consacrés à Édouard Reuss, évoquant des aspects de sa vie ou de son œuvre. Le travail le plus important sur
+          Édouard Reuss est la monographie <hi rend="i">Leben und Werk des frühen Eduard Reuss</hi>, publiée en 1990 par Jean-Marcel Vincent à partir
+          de sa thèse de doctorat en théologie soutenue à l’université de Bochum. Il s’intéresse à la jeunesse et à la formation d’Édouard Reuss
+          jusqu’en 1842, année de la publication de son premier ouvrage important, <hi rend="i">Geschichte der heiligen Schriften Neuen
+            Testaments</hi>. Jean-Marcel Vincent s’attache à montrer quelles influences philosophiques, politiques et théologiques ont façonné sa
+          pensée et ont fait en même temps son originalité.</p>
+        <p>Les sept tomes des <hi rend="i">Erinnerungen aus meinem Leben</hi>, soit près de 2300 pages rédigées en allemand d’une fine écriture
+          gothique manuscrite par Édouard Reuss à partir de 1850 et continués tout au long de sa vie, constituent en effet la source principale pour
+          les travaux sur Édouard Reuss, mais aussi une source de premier plan pour l’histoire du protestantisme alsacien ou encore l’histoire de la
+          théologie au <num>xix</num>
+<hi rend="sup">e</hi> siècle. L’édition intégrale de ce texte, dont les manuscrits sont conservés à la médiathèque protestante de Strasbourg,
+          n’étant pas possible dans le temps imparti à une thèse d’École des chartes, c’est à la période de 1846 à 1872 que nous nous sommes intéressé
+          dans ce travail, c’est-à-dire aux tomes cinq et six. La période de 1804 à 1842 est en effet traitée de façon très complète dans l’ouvrage de
+          Jean-Marcel Vincent, <hi rend="i">Leben und Werk des frühen Eduard Reuss</hi>, qui s’appuie également sur le texte des <hi rend="i">Erinnerungen aus meinem Leben</hi>.</p>
+        <p>Le choix de cette période, qui correspond matériellement à l’intégralité des tomes cinq et six, est proche de deux dates classiques de
+          l’histoire du <num>xix</num>
+<hi rend="sup">e</hi> siècle que sont la Révolution de 1848 et la guerre de 1870. Par ailleurs, elle correspond dans l’existence d’Édouard
+          Reuss à une période où ses travaux sont davantage tournés vers la France.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources relatives à Édouard Reuss sont abondantes et variées. La plume d’Édouard Reuss a en effet été féconde, en particulier durant
+          la seconde partie de sa vie, alors qu’il se plaint de manière paradoxale que ses forces l’abandonnent. Ces sources sont cependant dispersées
+          dans différents lieux de conservation, parmi lesquels les deux principaux sont la médiathèque protestante de Strasbourg, où est conservé
+          notamment le manuscrit des <hi rend="i">Erinnerungen aus meinem Leben</hi>, et les archives municipales de Strasbourg, où sont conservés la
+          correspondance reçue par Édouard Reuss et les registres de correspondance tenus par lui.</p>
+        <p>Les mémoires inédites d’Édouard Reuss, intitulées par lui <hi rend="i">Erinnerungen aus meinem Leben</hi>, ont été conservées par la
+          famille de Rodolphe Reuss, son fils, jusqu’à ce que l’une des petites-filles de ce dernier les confie à la bibliothèque du séminaire
+          protestant, aujourd’hui médiathèque protestante, à Strasbourg. Édouard Reuss avait lui-même émis le souhait qu’il soit fait don de ses
+          mémoires à la bibliothèque du séminaire protestant. À la demande de Reuss, ses mémoires ne devaient être rendues accessibles au public qu’en
+          1930, après la mort des personnes mentionnées, pas toujours en termes élogieux, dans son récit. Néanmoins, quelques personnes ont pu y avoir
+          accès avant l’expiration de ce délai. La médiathèque protestante possède en outre 220 feuillets sur lesquels sont copiées certaines lettres
+          envoyées par Édouard Reuss, ainsi que les quatre volumes du manuscrit d’un roman autobiographique, <hi rend="i">Die Reise nach Berlin</hi>,
+          qui relate un voyage fait du 15 au 23 août 1826 de Halle à Berlin. Quatre volumes d’écrits d’Édouard Reuss, notamment des discours qu’il a
+          prononcés, et trois volumes de recensions sur ses écrits collectées par lui, s’y trouvent également.</p>
+        <p>La correspondance reçue par Reuss se trouve aux archives municipales de Strasbourg, dans le fonds de la Fondation Saint-Thomas, sous la
+          cote 1 AST 1660. Elle comporte trois cartons de lettres et trois volumes de registres tenus par Édouard Reuss. Les deux premiers registres
+          contiennent une table alphabétique des correspondants, avec les lettres reçues et envoyées à chaque correspondant, le troisième registre
+          répertorie les lettres reçues en fonction de l’ordre de réception. Ces registres livrent le nom de 1418 correspondants de Reuss, pour la
+          plupart des collègues et savants, témoignant ainsi de son rayonnement scientifique, et nous apprennent qu’il avait reçu 8633 lettres et en
+          avait envoyé 7714. Cependant, un grand nombre de ces lettres ont disparues, brûlées par Édouard Reuss lui-même, qui n’en a conservé que
+          1890. Un second tri a été fait par sa femme Julie et son fils Rodolphe, qui ont retiré de la correspondance conservée les lettres jugées
+          trop personnelles.</p>
+        <p>Deux autres bibliothèques strasbourgeoises abritent des manuscrits d’Édouard Reuss : la bibliothèque nationale et universitaire et la
+          bibliothèque municipale. Il s’agit surtout de manuscrits de ses publications, en particulier les manuscrits de sa traduction commentée de la
+          Bible conservés dans le fonds patrimonial de la bibliothèque municipale de Strasbourg. Ses cours en revanche ne nous sont connus que par les
+          notes prises par les étudiants, Édouard Reuss ayant lui-même détruit les manuscrits de ceux-ci.</p>
+        <p>Des lettres issues de la correspondance envoyée par Reuss sont dispersées dans des fonds d’archives et de bibliothèques en France et en
+          Allemagne. Des extraits de la correspondance d’Édouard Reuss ont également été publiés, l’édition la plus connue étant celle de la
+          correspondance avec son élève Charles Henri Graf par Karl Budde et Julius Heinrich Holtzmann publiée à l’occasion du centenaire de la
+          naissance de Reuss en 1904.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

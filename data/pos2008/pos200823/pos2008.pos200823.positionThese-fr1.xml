@@ -1,0 +1,119 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>À la différence des livres d’heures français et flamands, les livres d’heures italiens ont été peu étudiés. Cette lacune tient
+          probablement à leur moindre diffusion en Italie. En effet, le livre d’heures, c’est-à-dire un livre de prières à l’usage des fidèles
+          laïques, a été un objet dévotionnel très répandu dans les pays de l’Europe septentrionale à partir du <num>xiii</num>
+<hi rend="sup">e</hi> siècle et jusqu’à l’époque moderne, mais plus rare dans les pays de l’Europe méridionale.</p>
+        <p>Jusqu’à présent, les livres d’heures confectionnés en Italie et actuellement conservés dans les bibliothèques italiennes et étrangères
+          n’ont fait l’objet d’aucun recensement précis, seulement d’études monographiques dédiées à leur aspect stylistique. Si on peut admettre que
+          le livre d’heures n’a pas dominé le marché italien de la librairie à la fin de l’époque médiévale, l’absence d’un recensement systématique
+          et d’une analyse exhaustive fausse la perspective et empêche d’avoir une connaissance quantitative précise de l’utilisation que les fidèles
+          italiens firent de ce type de manuscrit.</p>
+        <p>Notre recherche se propose d’étudier, d’une part, le rôle et la fonction dévotionnelle que le livre d’heures avait dans les pratiques
+          religieuses et spirituelles des laïcs italiens à la fin du Moyen Âge et, d’autre part, de donner une description générale de la structure
+          textuelle et iconographique adoptée traditionnellement par les livres d’heures italiens. Cette dernière étude s’appuie sur l’analyse et la
+          description de l’organisation d’une quinzaine de manuscrits conservés à la Bibliothèque nationale de France et à la British Library de
+          Londres. Le corpus des exemplaires examinés a été dressé à partir d’un répertoire de quelques deux cent vingt livres d’heures d’origine
+          italienne, lui-même nourri par le dépouillement des catalogues imprimés et informatiques des bibliothèques italiennes, françaises et
+          anglaises. Cet inventaire réunit les manuscrits réalisés dans les ateliers d’enluminure de l’Italie septentrionale – Lombardie, Vénétie,
+          Emilie et Toscane – entre les <num>xiii</num>
+<hi rend="sup">e</hi> et <num>xvi</num>
+<hi rend="sup">e</hi> siècles. Sa compilation a été essentielle pour connaître les témoins parvenus jusqu’à aujourd’hui et pour bénéficier
+          d’un aperçu général sur la commande de livres d’heures de la part des fidèles italiens.</p>
+        <p>Les principaux commanditaires semblent avoir été les membres des grandes familles princières – les Visconti-Sforza, les Gonzague, les
+          Médicis et les familles patriciennes de Venise – qui commencèrent à les faire confectionner à partir de la deuxième moitié du <num>xiv</num>
+<hi rend="sup">e</hi> siècle. Sauf quelques exemplaires émanant des milieux franciscains, toute production antérieure semble avoir été
+          absente ; en effet, l’usage des livres d’heures se diffusa en Italie, à l’instar des modes courtoises françaises, à partir de la moitié du
+            <num>xiv</num>
+<hi rend="sup">e</hi> siècle, d’abord chez les membres de la cour des Visconti, grâce à l’arrivée de Blanche de Savoie, femme de Galéas II. À
+          la différence des traditions religieuses de l’Europe septentrionale où le livre d’heures fut un support de la dévotion communément répandu
+          parmi les fidèles, en Italie, il fut presque totalement réservé aux membres des classes sociales les plus favorisées. Le livre d’heures
+          semble avoir été un objet rare parmi les autres instruments dévotionnels – retables, crucifix, poupons ayant la forme de l’enfant Jésus,
+          estampes à sujet religieux – que les fidèles italiens utilisèrent pour l’exercice quotidien de leurs pratiques religieuses.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Une connaissance globale de l’utilisation et de la diffusion du livre d’heures en Italie impliquait au préalable de recenser les
+          exemplaires italiens actuellement conservés dans les bibliothèques italiennes et étrangères, à partir des catalogues imprimés et
+          électroniques. Parmi les catalogues informatiques, on notera l’intérêt du répertoire électronique compilé par l’Institut de recherche et
+          d’histoire des textes, à Paris, qui a permis une approche complète des manuscrits enluminés conservés dans les bibliothèques municipales et
+          universitaires de France. Les catalogues des bibliothèques italiennes n’offrent malheureusement pas un dépouillement complet et exhaustif de
+          leurs manuscrits enluminés et cette lacune a constitué une limite importante à la recherche. Notre dépouillement a pris en compte sept
+          critères : le lieu de conservation du manuscrit (ville et bibliothèque) ; sa cote ; l’époque de sa réalisation ; l’atelier d’enluminure ; le
+          propriétaire-commanditaire ; le type de décoration et le titre sous lequel il est aujourd’hui communément connu.</p>
+        <p>Parmi ce corpus, ont été sélectionnés seize manuscrits italiens conservés à la Bibliothèque nationale de France (mss. lat. 757, 1342 et
+          1352 ; ms. Smith-Lesouëf 22) et à la British Library de Londres (mss. Additional 15625, 22567, 22569, 31836, 33997, 34294, 35316, 35317 et
+          38124 ; mss. Yates-Thompson 7, 23 et 30). Leur description textuelle et iconographique a mis en regard, d’une part, les éléments essentiels,
+          secondaires et accessoires qui, conformément à la définition de l’abbé Victor Leroquais, composent la structure traditionnelle des livres
+          d’heures, et, d’autre part, l’ordre des textes figurant dans les manuscrits et les images qui les illustrent. Cette confrontation a permis
+          de dégager une structure d’organisation propre aux livres d’heures italiens.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

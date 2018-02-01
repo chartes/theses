@@ -1,0 +1,77 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Les verres français de la Renaissance ont longtemps été ignorés des historiens. Ce n'est qu'au <num>xix<hi rend="sup">e</hi></num> siècle qu'ils furent redécouverts, après le prêt d'un verre émaillé français par Félix Slade au South Kensington Museum (actuel Victoria &amp; Albert Museum) en 1862. Plusieurs synthèses ont par la suite été consacrées au verre français de la Renaissance mais aucune ne concernait spécifiquement Paris et sa région. Pourtant, les fouilles archéologiques menées dans la capitale, telles que les impressionnantes fouilles de la cour Napoléon, ont révélé de très importants ensembles de verres des <num>xvi<hi rend="sup">e</hi></num> et <num>xvii<hi rend="sup">e</hi></num> siècles. Par ailleurs, un certain nombre de pièces de musée ont été attribuées à la verrerie de Saint-Germain-en-Laye, qui reçut un privilège royal en 1551. Cette célèbre verrerie reste paradoxalement fort mal connue. Il y avait donc beaucoup à dire sur le verre à Paris dans la seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle. Le point de départ de cette étude correspond à l'avènement de Henri II, en 1547, qui favorisa l'art du verre, soutenu en cela par son épouse Catherine de Médicis. La mort de Henri IV, en 1610, a été prise pour terme chronologique. C'est en effet sous le règne de Henri IV que l'on passe de la suprématie italienne dans l'art du verre en région parisienne à l'émergence d'une concurrence française.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les documents issus du Minutier central des notaires de Paris (contrats d'achat et de vente, baux, contrats de mariage, inventaires après décès) constituent la source principale de cette étude et ont notamment été utilisés pour traiter la question des métiers du verre à Paris, de même que les archives du Parlement (série X des Archives nationales de France) qui contenaient les statuts des communautés de métier aussi bien que les privilèges octroyés aux verreries de Saint-Germain-en-Laye et de Saint-Germain-des-Prés. De façon plus marginale, les archives du Châtelet (série Y), de la Chambre des comptes (série P), du Conseil du roi (série E) et la série des Monuments Historiques (série K) ont révélé quelques documents utiles pour cette étude. Des documents dignes d'intérêt concernant les métiers du verre ont en outre été trouvés dans le <emph>Traité de la police</emph> de Nicolas Delamare, conservé à la Bibliothèque nationale de France. Les rapports des fouilles de la cour Napoléon (1984-1986) et de la rue des Lombards (1997) ont pu être consultés. Le matériel archéologique issu des fouilles du Luxembourg, et plus particulièrement du chantier des Boulingrins – où a été excavé en 1974 un four de verrier du début du <num>xvii<hi rend="sup">e</hi></num> siècle –, a pu être analysé et exploité pour cette étude. Divers traités techniques de l'époque ont également été utilisés : traités sur l'art de la verrerie, mais aussi traités sur la fabrication des cosmétiques, sur la parfumerie et traités de civilité. Les témoignages littéraires de l'époque ont aussi été mis à profit. Les pièces de musée étudiées proviennent pour la plupart du musée national de la Renaissance, du musée du Louvre, de la Wallace Collection (Londres).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En 1947, alors que les institutions de la <num>iv<hi rend="sup">e</hi></num> République se mettent en place, le Parti communiste français (PCF) est
+          le premier parti de France. Cinq mois plus tard, les ministres communistes sont renvoyés du gouvernement et le parti entre peu à peu dans
+          une phase d’opposition qui va être très longue, marquée par des attaques violentes contre la politique gouvernementale française et un
+          soutien sans faille à l’URSS.</p>
+        <p>Malgré toutes les études dont il est l’objet, le Parti communiste reste mystérieux à bien des égards, en particulier en ce qui concerne son
+          organisation. Or, Maurice Thorez, son secrétaire général pendant plus de trente ans (de 1930 à sa mort, en 1964), a pris scrupuleusement des
+          notes pendant presque toutes les réunions d’une des instances majeures de direction du Parti : le Bureau politique. Ces notes, inédites,
+          sont particulièrement importantes et riches entre 1947 et 1964 ; elles forment un corpus diversifié et volumineux, représentant environ 1200
+          pages dactylographiées. Ce corpus est singulier à plus d’un titre : le type de texte, constitué de bribes de phrases, les informations qu’il
+          contient et surtout son caractère inédit en font une source extrêmement originale pour l’étude du travail d’un dirigeant communiste et du
+          fonctionnement interne du PCF.</p>
+        <p>L’édition de l’intégralité de ce corpus, dont seuls quatre fragments ont fait l’objet d’un apparat critique – il s’agit des notes des
+          années 1947, 1948, 1956 et 1958 – s’accompagne donc d’une analyse qui vise à définir précisément le rôle que tint dans le processus
+          décisionnel interne le Bureau politique, instance souvent considérée par l’historiographie du communisme français comme un organe de second
+          plan dépourvu de tout réel pouvoir.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La source principale de ce travail se compose de trois cahiers d’écolier et de six cartons de feuilles volantes de format A4, sur lesquels
+          Maurice Thorez écrivait ses notes. Mais la recherche s’est également fondée sur d’autres ensembles de sources : les archives de la direction
+          du PCF tout d’abord, comprenant les décisions du secrétariat et du Bureau politique ; les témoignages écrits ou oraux, lorsque ce fut
+          possible, des acteurs de cette histoire. Il a aussi été nécessaire de consulter des sources d’information de l’époque, notamment la presse
+          écrite, qui permettent de replacer systématiquement les propos des membres du Bureau politique dans le contexte politique, social et
+          économique de la période : une attention particulière a été apportée à l’<hi rend="i">Humanité</hi> bien évidemment, mais surtout à l’<hi rend="i">Année politique</hi>, plus objective et plus complète.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

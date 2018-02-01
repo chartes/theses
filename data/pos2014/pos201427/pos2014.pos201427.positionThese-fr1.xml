@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Loin d'être absente du champ des études universitaires, la figure de Jacques-Guillaume Legrand y est à la fois discrète et omniprésente. Cet architecte, dont l'histoire de l'art n'a guère retenu le nom – lui préférant ceux de ses illustres contemporains Percier et Fontaine ou Ledoux –, n'avait jusqu'à présent pas fait l'objet d'une monographie. La présente étude se veut une réponse à l'invitation de Michel Gallet, qui conclut la notice biographique qu'il lui consacre dans son dictionnaire des architectes du <num>xviii<hi rend="sup">e</hi></num> siècle par ces mots : « Nous voudrions mieux connaître Legrand, qui fut audacieux dans ses créations architecturales, généreux dans ses écrits ». </p>
+          <p>Quoique la majorité de ses réalisations ait disparu et que ses écrits soient tombés dans l'oubli, Legrand n'en demeure pas moins une figure digne d'intérêt. Il contribua en effet à la réflexion théorique sur l'architecture de son époque et entretint des liens avec de nombreux personnages importants de la vie artistique et intellectuelle parisienne. De plus, sa carrière connut une évolution singulière, de ses premières réalisations architecturales à ses écrits plus tardifs relevant de l'histoire et de la critique d'architecture. On souhaite donner, dans cette étude, une biographie approfondie de cette personnalité méconnue en évoquant ses différentes facettes : celles de l'architecte, du théoricien et de l'historien. On s'attachera à montrer que, plus que ses réalisations architecturales, ce sont ses écrits et ses activités intellectuelles qui sont les plus révélateurs de la personnalité de Legrand.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les sources de ce travail sont, dans une large mesure, concentrées à Paris, mais dispersées dans un grand nombre d'institutions. Il n'y a pas de fonds d'archives connu de cet architecte. Ce sont les Archives nationales qui constituent le principal réservoir de sources, avec les sous-séries F<hi rend="sup">1</hi> (ministère de l'Intérieur), F<hi rend="sup">13</hi> (Bâtiments civils), F<hi rend="sup">17</hi> (Instruction publique), F<hi rend="sup">21</hi> (Beaux-Arts), Q<hi rend="sup">1</hi> (Titres domaniaux) et H<hi rend="sup">2</hi> (Bureau de la ville de Paris), le fonds ancien de la Marine et celui de la Maison du roi (sous-série O<hi rend="sup">1</hi>) ainsi que la sous-série Z<hi rend="sup">1J</hi> (procès-verbaux d'expertise des greffiers du parlement de Paris) et les archives du Minutier central des notaires parisiens. Quelques fonds d'archives privées se sont également avérés précieux, comme ceux de Choiseul-Gouffier (T153 158) et de Léon Dufourny (138AP 212). D'autres fonds d'institutions parisiennes ont été consultés avec profit : les Archives de Paris, celles de la Réunion des musées nationaux, la Bibliothèque historique de la ville de Paris, l'École nationale des beaux-arts, l'École nationale des ponts et chaussées, l'Institut national d'histoire de l'art, les archives de l'armée de terre à Vincennes. Le cabinet des arts graphiques du musée Carnavalet a été particulièrement utile pour les documents iconographiques, de même que le département des estampes de la Bibliothèque nationale de France. </p>
+          <p>En dehors de Paris, quelques documents inédits se trouvent dans les archives de l'Académie des sciences, belles-lettres et arts de Lyon, aux Archives départementales du Rhône, aux Archives départementales de Haute-Garonne, au Centre canadien d'architecture de Montréal, à la New York Historical Society Library et à la Bibliothèque vaticane. </p>
+          <p>Enfin, ce sont les publications de Legrand, une dizaine environ, qui constituent les sources principales de l'étude de sa carrière de théoricien et d'historien de l'architecture. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

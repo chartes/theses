@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Lors de la première représentation publique donnée à l’Opéra Bastille, le 17 mars 1990, les journalistes ne manquèrent pas de souligner le caractère historique de l’événement, rappelant qu’on ne construisait pas plus d’un Opéra par siècle à Paris. Ce qui était vrai pour le <num>xx</num><hi rend="sup">e</hi> siècle ne l’était pas pour le siècle précédent, qui avait vu l’érection de deux salles d’Opéra parisiennes. Le Palais Garnier, inauguré en 1875, est celui qui reste dans toutes les mémoires et qui est, depuis sa construction, un des symboles de Paris. Son prédécesseur, l’Opéra de la rue Le Peletier, reste obscur et mal connu du grand public comme des historiens, malgré les innombrables succès qu’il accueillit dans ses murs depuis son inauguration en 1821 jusqu’à sa destruction en 1873. L’objectif de cette thèse est triple : livrer une biographie approfondie de François Debret, architecte mal connu, retracer précisément la genèse de la salle d’Opéra et ses modalités de construction, et enfin étudier le programme de l’édifice et son évolution dans le temps. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>L’étude de l’Opéra Le Peletier et de son architecte François Debret passe à la fois par l’analyse de sources écrites et de documents graphiques. Les documents d’archives touchant à l’Opéra et à sa construction sont très nombreux, et se concentrent essentiellement dans les sous-séries AJ<hi rend="sup">13</hi> (Théâtre de l’Opéra), F<hi rend="sup">13</hi> (Bâtiments civils), et F<hi rend="sup">21</hi> (Beaux-Arts) des Archives nationales (AN). Dans cette même institution, les sous-séries F<hi rend="sup">4</hi> (Comptabilité générale) et O<hi rend="sup">3</hi> (Maisons des rois Louis XVIII et Charles X) ont été utiles pour compléter certaines informations puisées dans les sous-séries précédentes. Pour retracer la biographie de François Debret, il a fallu chercher dans la sous-série AJ<hi rend="sup">52</hi> (École des beaux-art) des AN et dans d’autres centres d’archives : l’état-civil reconstitué des Archives de Paris, et les registres de successions du bureau de Sèvres aux archives départementales des Hauts-de-Seine. Les documents graphiques ont été plus difficiles à trouver car ils sont dispersés, et finalement peu nombreux pour l’Opéra lui-même. Le fonds François Debret (568AP) des AN et le dossier Debret (SNR – 3) de la Bibliothèque nationale de France, ainsi que les carnets de voyages (PC 77832 – 1 à 13) de l’École nationale supérieure des beaux-arts ont permis de saisir l’ampleur de la formation et des réalisations artistiques de l’architecte. Quelques plans de l’Opéra Le Peletier et de nombreuses illustrations sont conservés à la Bibliothèque historique de la Ville de Paris (BHVP) et surtout au Cabinet des arts graphiques du Musée Carnavalet. Enfin, des plans de Paris et de l’évolution de ses quartiers nord ont été utiles pour étudier l’Opéra Le Peletier dans son contexte urbain : cadastre Vasserot des Archives de Paris, documents NIII Seine des AN, plans et atlas de la BHVP. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

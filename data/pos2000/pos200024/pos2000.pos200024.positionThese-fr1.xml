@@ -1,0 +1,90 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le fermier général Claude Dupin n’est guère connu aujourd’hui que par les trois grandes figures de la littérature auxquelles son nom est
+          fréquemment associé : Montesquieu, dont il a dénoncé avec véhémence les attaques contre la Ferme générale formulées dans l’ <hi rend="i">Esprit des lois</hi>; Jean-Jacques Rousseau, qu’il employa pendant six ans comme secrétaire dans les années qui précédèrent la
+          publication du <hi rend="i">Discours sur les sciences et les arts</hi>(1751) ; George Sand, enfin, dont il est l’arrière-grand-père
+          paternel.</p>
+        <p>Si les travaux consacrés à Claude Dupin traduisent bien l’intérêt essentiellement littéraire qu’il a suscité, ils demeurent très succincts
+          sur son parcours personnel et sur son œuvre économique et intellectuelle. Ce sont ces aspects du personnage qu’il convenait d’étudier.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources mises en œuvre dans une étude biographique sont par nature très dispersées et, dans le cas présent, parfois fragmentaires. La
+          série E des archives départementales de l’Indre, les archives notariales et les dossiers généalogiques du Cabinet des titres conservés à la
+          Bibliothèque nationale de France fournissent l’essentiel des informations concernant les origines familiales de Claude Dupin et ses années
+          de jeunesse à Châteauroux. Le Minutier central des notaires de Paris et la sous-série G<hi rend="sup">1</hi> (Ferme générale) aux Archives
+          nationales renseignent sur les grandes étapes de sa vie et de sa carrière après son installation à Paris en 1722. Les archives privées de
+          Chenonceaux, ainsi que le fonds George Sand de la Bibliothèque historique de la Ville de Paris, complètent ces sources.</p>
+        <p>L’activité intellectuelle du fermier général a été essentiellement analysée à partir de sources imprimées, en particulier ses trois
+          ouvrages, et du manuscrit préparatoire à la réfutation de l’ <hi rend="i">Esprit</hi>
+          <hi rend="i">des lois</hi>, qui est conservé par la bibliothèque municipale de Bordeaux.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,102 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le quartier de l’hôtel Saint-Paul correspond à une partie de l’actuel <num>iv<hi rend="sup">e</hi></num> arrondissement de Paris. Il était limité au
+          sud par la Seine, à l’ouest par l’enceinte de PhilippeAuguste, à l’est par celle de CharlesV et au nord par la rue Saint-Antoine. Les bornes
+          chronologiques de l’étude sont fournies par l’histoire de l’hôtel Saint-Paul, créé par CharlesV dans les années 1360 et définitivement
+          démembré vers 1540-1550.</p>
+        <p>L’hôtel Saint-Paul, qui fut la résidence parisienne de CharlesV et de CharlesVI, a fait l’objet de plusieurs recherches. En revanche les
+          historiens n’ont jamais fait grand cas de l’espace qui l’environnait. Pourtant son étude soulève des questions originales et parfois même
+          très importantes. En effet, au-delà de la connaissance topographique et sociale du quartier pour lui-même, il convient de mettre ces données
+          en relation avec les particularités que présente ce quartier, c’est-à-dire sa situation géographique, qui fait de lui un espace d’extension
+          de la ville entre les deux enceintes, et la présence en son sein d’une résidence royale. Il convient donc, d’une part, de saisir le
+          développement de la ville et, d’autre part, de mesurer l’influence que la présence de l’hôtel Saint-Paul et du roi a exercée sur
+          l’organisation du quartier, l’implantation des habitants et leurs activités. L’étude de l’exploitation immobilière pose enfin la question de
+          l’impact de la crise économique du <num>xv<hi rend="sup">e</hi></num> siècle sur ce quartier de Paris.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources manuscrites utilisées pour cette étude sont conservées presque exclusivement aux Archives nationales. Les registres sont peu
+          nombreux: il subsiste seulement un cartulaire et un censier-cartulaire de la paroisse Saint-Paul copiés au <num>xvi<hi rend="sup">e</hi></num> siècle.
+          Le reste de la documentation appartient pour l’essentiel aux séries S (biens des établissements religieux supprimés) et Q (domaines). Il
+          s’agit d’actes notariés concernant des titres de propriétés: baux à cens, à rente, à loyer, à ferme, contrats de vente, d’échange, procès au
+          Châtelet, exécutions testamentaires ou simples reconnaissances d’obligation. On trouve aussi des documents plus particuliers et plus rares
+          comme les procès-verbaux de criées qui se révèlent très utiles pour l’étude de la conjoncture économique, dans la mesure où ils témoignent
+          des effets de la crise de la première moitié du <num>xv<hi rend="sup">e</hi></num> siècle. Enfin quelques procès-verbaux de visite de maçons et
+          charpentiers jurés fournissent des indications précieuses pour l’étude de la construction et de l’aménagement de l’habitat.</p>
+        <p>La documentation iconographique se révèle, quant à elle, relativement pauvre. On ne conserve aucune représentation de l’hôtel Saint-Paul,
+          ni de plans de Paris pour le Moyen Age, mais seulement des vues cavalières de la ville au <num>xvi<hi rend="sup">e</hi></num> siècle, parmi lesquelles
+          le plan de la Tapisserie et celui de Bâle. Quoique ces plans ne se veuillent pas exacts, il est intéressant de les comparer avec les
+          informations fournies par les actes.</p>
+        <p>Il faut enfin prendre en compte les sources archéologiques. Si le quartier Saint-Paul n’a jamais fait l’objet d’une campagne de fouilles
+          extensives, de nombreux sondages ou fouilles ponctuelles ont été effectués depuis les années 1898-1899. Les résultats obtenus permettent de
+          poser des jalons solides, surtout en ce qui concerne les enceintes de PhilippeAuguste et de CharlesV.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

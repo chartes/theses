@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Louis Delaporte, fondateur du premier musée d’art khmer en France, est un personnage méconnu de l’histoire de l’exploration archéologique de la péninsule indochinoise. Les ouvrages consacrés à cette question développent assez peu la période s’étendant de la « redécouverte » des sites d’Angkor par Henri Mouhot, en 1860, à l’inventaire systématique des monuments khmers mené par Étienne Lunet de Lajonquière, entre 1900 et 1909.  </p>
+        <p>Deux raisons contribuent à ce manque d’informations. La première a trait au caractère inédit des archives personnelles de Louis Delaporte. La seconde intéresse l’absence de reconnaissance portée, depuis ses débuts en 1873-1874, à l’œuvre entreprise par Louis Delaporte. Formé à l’École navale, c’est un autodidacte dans les domaines de l’archéologie, de l’histoire de l’art et de l’architecture. Ses travaux apparaissent donc très confus en comparaison de ceux menés, plus tard, par les membres de l’École française d’Extrême-Orient. Par ailleurs, les méthodes souvent illégales employées par Louis Delaporte pour importer en France les spécimens destinés à former puis enrichir ses collections ont sans doute contribué à ce silence. </p>
+        <p>L’étude de l’œuvre de Louis Delaporte s’avère pourtant particulièrement importante. Elle permet en effet d’éclairer un aspect généralement méconnu de l’histoire de la colonisation française en Indochine : l’exploration scientifique des territoires progressivement soumis à l’influence de la France. Elle éclaire également les circonstances de la fondation de la première collection française d’objets d’art khmers, noyau du département d’art de l’Asie du Sud-Est du musée Guimet. </p>
+        <p>Louis Delaporte a contribué à l’étude et à la diffusion de l’art khmer en France pendant une cinquantaine d’années, entre 1873 et 1924. Le présent travail porte sur les trois premières décennies de cette période, entre la première mission aux ruines khmères dont Delaporte prit la tête, en 1873-1874, et la préparation de l’Exposition universelle de 1900, considérée par Louis Delaporte comme l’apogée de son œuvre. Il se concentre principalement sur les mécanismes ayant présidé à la collecte, à l’organisation et à la diffusion de l’image des collections rassemblées par Louis Delaporte. </p>
+        <p>Il a été jugé important de revenir, dans une première partie, sur le contexte politique, scientifique et culturel dans lequel Louis Delaporte a évolué.  </p>
+        <p>Ensuite, pendant la période séparant les deux missions archéologiques dirigées par Louis Delaporte, entre 1873 et 1882, se mettent en place des mécanismes que Louis Delaporte développera et perfectionnera plus tard : engagement de sa famille et ses amis proches, et création d’importants réseaux officieux au sein de l’administration française pour servir à l’avancement de ses projets. Cette dizaine d’années correspond à la durée d’existence du musée de Compiègne, première vitrine de l’art khmer en France. </p>
+        <p>Enfin, lors des deux dernières décennies du <num>xix</num><hi rend="sup">e</hi>siècle, l’installation définitive à Paris des collections rassemblées par Louis Delaporte, au sein du Musée indochinois, marque la reconnaissance publique de l’art khmer. Louis Delaporte abandonne alors tout projet de réflexion théorique et se concentre sur l’organisation et l’enrichissement de son musée, pour en faire un ensemble cohérent, destiné à devenir le point de départ de toutes les recherches à venir. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Cette thèse s’appuie dans un premier temps sur des sources publiques. Les deux principales ont été les dossiers individuels concernant les missions organisées par Louis Delaporte et l’ensemble de ses collaborateurs, conservés dans la sous-série F<hi rend="sup">17</hi> des Archives nationales, ainsi que les archives des deux institutions fondées par Delaporte, le Musée khmer et le Musée indochinois (sous-série F<hi rend="sup">21</hi> aux Archives nationales). Des documents complémentaires ont été mis à profit, provenant des archives du Service historique de la Marine, et de celles des Musées nationaux. Un éclairage particulièrement intéressant a été conféré par la consultation des archives personnelles de Louis Delaporte. Divisées en deux ensembles (correspondance et documents de travail), elles sont aujourd’hui conservées par deux branches de la famille Delaporte. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

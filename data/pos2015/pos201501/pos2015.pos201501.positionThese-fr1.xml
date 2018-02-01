@@ -1,0 +1,85 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Les lettres de prison de Paul Nothomb renvoient à la douloureuse question de l’épuration dans l’après-guerre. Souvent cité, notamment chez les communistes belges, comme l’exemple même du traître, Paul Nothomb est une figure controversée de l’histoire de la Seconde Guerre mondiale en Belgique. </p>
+          <p>Qu’il se fasse appeler Paul Bernier, Paul Nothomb ou Julien Segnaire, cet homme évoque, selon les personnes et les époques, un héros de la guerre civile espagnole, un militant communiste engagé, un membre de la Résistance belge, un traître au service de la Gestapo, un écrivain, ou bien encore un intellectuel spécialiste de l’exégèse et de l’hébreu. La palette d’évènements auxquels il a participé ou assisté et les différents témoignages le concernant peinent à offrir toutes les couleurs nécessaires pour dresser le portrait d’un homme aussi nuancé que Paul Nothomb. Personne ne s’est encore attelé à sa biographie malgré le potentiel d’une telle étude. Si ce travail entreprend de présenter une étape décisive de la vie de Paul Nothomb, il n’a pas pour objet d’offrir une vision détaillée de son parcours. Il s’agit plutôt de se concentrer sur sa captivité au moment où il est jugé pour collaboration, après la Seconde Guerre mondiale, épisode illustré par les lettres clandestines qu’il écrit alors à sa femme. Cette édition a pour ambition d’apporter un éclairage nouveau sur les phénomènes de collaboration et de répression. Ces lettres permettent aussi et surtout d’entrevoir le portrait en creux de leur destinataire, Marguerite Develer, ainsi que celui d’un homme au parcours atypique.</p>
+          <p>Fils d’un aristocrate, membre de la droite catholique et sénatoriale, Paul Nothomb se tourne vers le communisme en 1932, à la fois par conviction intellectuelle mais aussi dans un esprit de rébellion face à la présence paternelle. Après avoir adhéré au Parti communiste de Belgique (PCB) et collaboré à différents journaux communistes, il s’engage dans le camp des Républicains lors de la guerre d’Espagne en 1936. Il y rencontre André Malraux, dont il conserve l’amitié tout au long de sa vie et qui lui apporte un soutien fidèle dans les moments difficiles. Membre de l’escadrille Malraux en tant qu’aviateur bombardier, il est blessé lors d’un combat au-dessus de la Méditerranée en 1937 et est alors rapatrié en Belgique. À son retour, il est porté sur le devant de la scène politique comme héros de l’Espagne et entame sa carrière politique lors des élections municipales de 1939, tout en poursuivant ses activités journalistiques. La semi-légalité dans laquelle est plongé le PCB mène à l’arrestation de nombreux militants communistes et Paul Nothomb est déporté dans un convoi de prisonniers politiques dans le sud de la France, en avril 1940. Il parvient à s’échapper quelques mois plus tard et revient dans une Belgique occupée depuis mai 1940.</p>
+          <p>Durant la guerre, il est membre des Partisans Armés, mouvement de Résistance fondé par les communistes, avant d’être appelé par le PCB pour monter une organisation militaire destinée à appuyer l’action des Alliés en cas de débarquement. C’est au cours d’un rendez‑vous avec son adjoint pour la région flamande qu’il est arrêté par la <emph>Geheime Feldpolizei</emph> (GFP), le 13 mai 1943. Il est alors conduit dans leurs locaux où il subit une séance de torture qui prend fin au moment où il est sur le point de se trahir. Durant la nuit qu’il passe en cellule, épuise et brisé physiquement, il se rend compte qu’il ne pourra supporter à nouveau la torture et qu’il risque, le lendemain, de trahir ses camarades mais également de livrer sa femme, alors enceinte de cinq mois, habitant dans son logement illégal. Il pense à se suicider mais ses geôliers ont veillé à ne pas lui en laisser la possibilité. Au cours de sa recherche désespérée d’une solution, il aboutit finalement à ce qu’il appelle le « délire logique ». Son plan est de faire croire à une conversion spontanée et volontaire au national‑socialisme. Le pari est très risqué mais il parvient néanmoins à convaincre les agents de la GFP. Interrogé ensuite à plusieurs reprises, il réussit à ne pas dévoiler d’informations capitales sur l’organisation et à gagner du temps pour qu’on puisse prendre les mesures de sécurité préconisées en cas d’arrestation d’un des membres de la Résistance. Mais, progressivement, il est pris dans l’engrenage d’une ruse qu’il a montée lui-même et qui le contraint à jouer la comédie d’une collaboration volontaire, aux dépens de son intégrité intellectuelle et de sa réputation. Il passe ensuite aux mains de la Gestapo, bien plus renseignée sur son parcours et son rôle au sein de la Résistance, qui le force à donner des informations plus importantes. Pris au piège du rôle qu’il joue depuis plusieurs semaines et persuadé que ses camarades ont pris les mesures nécessaires à la suite de son arrestation, Paul Nothomb parle. Ses révélations conduisent alors à l’arrestation de nombreux résistants qui porteront plainte contre lui après la guerre.</p>
+          <p>Après son évasion en janvier 1944, il tente de contacter la direction du PCB afin de justifier son attitude durant sa captivité mais, exclu de manière définitive, il n’est écouté par personne et menacé de représailles. Acculé dans son rôle de traître, il se cache dans le maquis avant de rejoindre les rangs de l’Armée Secrète, participant alors au combat contre les troupes allemandes. Ce n’est que fin juin 1945 qu’il est mis sous mandat d’arrêt suite aux plaintes de résistants revenus des camps de concentration et que l’instruction de son procès pour collaboration commence.</p>
+          <p>Si Paul Nothomb entreprend ensuite de revenir sur cette douloureuse expérience à plusieurs reprises, principalement dans son roman semi-autobiographique <emph>Le Délire logique</emph>, paru chez Gallimard en 1948, il n’en reste pas moins un personnage équivoque. Ainsi l’édition de cette correspondance inédite, dans laquelle il détaille l’évolution de sa défense et aborde le déroulement de ses procès pour collaboration, permet d’appréhender sa vision contemporaine de son expérience de collaboration et de répression. </p>
+          <p>Le choix a été fait d’éditer de manière exhaustive les lettres clandestines de prison de Paul Nothomb à sa femme, entre juillet 1945 et août 1947. Néanmoins ce corpus de cent‑seize lettres n’est pas exempt de la possibilité d’être augmenté d’autres lettres qui pourraient être retrouvées lors de l’achèvement du versement du fonds et de son inventaire – en cours au moment de cette édition – à la Bibliothèque de documentation internationale contemporaine. La lettre clandestine de Marguerite Develer à Paul Nothomb ainsi que les lettres officielles échangées par le couple, n’ont pas été intégrées à l’édition, dans un souci de cohérence du corpus. Seule la correspondance clandestine reçue par Marguerite Develer a pu être conservée à l’exemption d’une lettre ayant échappé au contrôle carcéral qui obligeait Paul Nothomb à détruire les lettres clandestines de sa femme. Au décès de ce dernier, ses filles ont hérité d’un riche fonds d’archives qu’elles ont désiré verser à la Bibliothèque de documentation internationale contemporaine, tout en étant animées d’un désir de voir cette correspondance clandestine de prison éditée.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>L’édition est composée des cent-seize lettres clandestines écrites en prison par Paul Nothomb à sa femme entre 1945 et 1947. Ces lettres se trouvent dans le fonds Nothomb (ARCH0024) – en cours de classement – à la Bibliothèque de documentation internationale contemporaine.</p>
+          <p>Afin de documenter l’édition et le commentaire, diverses sources ont été utilisées : le fonds Nothomb de la Bibliothèque de documentation internationale contemporaine ; les archives privées – en cours de versement à la bibliothèque susdite – des filles de Paul Nothomb, M<hi rend="sup">mes</hi> Nothomb-Volle et Nothomb-Dispersyn ; la partie du fonds André Malraux (MLX) contenant sa correspondance avec Paul Nothomb et Margot Develer (MLX C 1469), conservée à la Bibliothèque littéraire Jacques Doucet ; différents journaux de l’époque, disponibles à la Bibliothèque de documentation internationale contemporaine ou à la Bibliothèque nationale de France.</p>
+          <p>Enfin, d’autres sources ont été consultées en Belgique, notamment le fonds comprenant diverses interviews de contemporains des faits (AA 2268), au Centre d’Études et de Documentation Guerre et Sociétés contemporaine (CEGESOMA) ; ainsi que le dossier judiciaire de Paul Nothomb (Dossier répressif en cause de Nothomb Paul (Saint‑Gilles<term rend="index" key="SAINT-GILLES"/>, 7.12.1913) - Cour Militaire Bruxelles, 10.01.1947 (780/46)), conservé dans les archives du conseil de guerre de Bruxelles, au Collège des Procureurs généraux de Belgique.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

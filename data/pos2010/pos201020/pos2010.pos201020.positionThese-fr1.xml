@@ -1,0 +1,106 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Matthieu d’Aquasparta (v. 1240-1302) peut être considéré pour plusieurs raisons comme une figure emblématique de la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. Maître en théologie de l’université de Paris, son œuvre est abondante ; franciscain, il est ministre
+          général de l’Ordre ; nommé cardinal par Nicolas IV, il est un des plus fidèles alliés du pape Boniface VIII. Pourtant, malgré ses écrits et
+          son parcours politique, Matthieu d’Aquasparta ne connaîtra aucune postérité avant d’être redécouvert au début du <num>xx<hi rend="sup">e</hi></num> siècle. Son œuvre de théologien acquiert une place croissante dans les analyses des historiens et des philosophes
+          médiévistes grâce aux éditions de ses questions disputées, publiées par les frères de Quaracchi ; les interprétations s’affinent
+          progressivement : après l’avoir longtemps considéré comme un « néo-augustinien » convaincu, les historiens s’interrogent sur sa place parmi
+          les franciscains de sa génération, son lien avec Thomas d’Aquin et ses rapports avec la tradition aristotélicienne.</p>
+        <p>Le travail s’articule autour de l’édition de ses trois premiers <hi rend="i">Quodlibets.</hi> Ce genre universitaire est un témoignage
+          précieux pour comprendre la pensée d’un maître en théologie. Déterminé lors de séances solennelles qui se déroulent deux fois par an pendant
+          l’Avent et le Carême, le <hi rend="i">quodlibet</hi> est un genre affilié à la question disputée qui se pare d’une certaine cérémonie et
+          manifeste avec éclat la réputation d’un maître. Ce dernier, devant un auditoire élargi à l’ensemble de la faculté de théologie, doit
+          s’attendre à être interrogé par n’importe qui sur n’importe quel sujet, d’où le nom de cet exercice <hi rend="i">quolibet de quodlibet.</hi>
+          La diversité des questions posées permet ainsi de découvrir différents aspects de la pensée du maître sur des sujets aussi divers et précis
+          que la forme substantielle unique ou la licéité des rentes à vie.</p>
+        <p>L’édition de ces <hi rend="i">Quodlibets</hi> est complétée par des études et des commentaires qui éclairent le parcours de Matthieu
+          d’Aquasparta et différents aspects de son œuvre. Une biographie de Matthieu permet de comprendre davantage son importance historique et de
+          préciser son rôle dans le contexte intellectuel et politique de la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. Une étude sur le
+          processus de rédaction des <hi rend="i">Quodlibets</hi> souligne l’aspect technique de l’écriture. Les <hi rend="i">Quodlibets</hi> du
+          maître sont en effet conservés dans un recueil autographe et une copie corrigée par lui ; ces manuscrits sont des témoinages précieux pour
+          étudier le travail d’un maître en théologie. Grâce à des logiciels de comparaison de textes, on a pu également comparer le lexique de
+          Matthieu d’Aquasparta à celui d’autres maîtres contemporains. Enfin, un commentaire historique met en évidence l’importance du contenu des
+          questions quodlibétiques de Matthieu d’Aquasparta, notamment au regard de la censure de 1277, date de la rédaction du premier <hi rend="i">Quodlibet</hi>.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’édition des trois premiers <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta s’appuie sur quatre manuscrits. Le premier, Assise 134,
+          est un recueil autographe du maître où se trouvent les questions quodlibétiques réparties parmi les questions disputées du maître organisées
+          de façon chronologique. Todi 44 est l’exacte reproduction du manuscrit Assise 134 de la main d’un copiste employé par Matthieu
+          d’Aquasparta ; le maître a ajouté un certain nombre de corrections dans les marges de ce manuscrit. Le manuscrit Arsenal 457 (Bibliothèque
+          nationale de France) contient le premier <hi rend="i">Quodlibet</hi> de Matthieu et quelques autres travaux du maître dans un recueil
+          disparate de textes d’auteurs le plus souvent franciscains de la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. Le manuscrit Burney 358
+          (British Library) présente quelques questions du premier <hi rend="i">Quodlibet</hi> dans une version partielle.</p>
+        <p>D’autres sources ont aussi été utilisées à des fins de comparaison : certains <hi rend="i">Quodlibets</hi> inédits d’auteurs contemporains,
+          conservés dans des manuscrits de la BNF ; quelques autographes d’auteurs contemporains conservés dans différentes bibliothèques européennes,
+          dont on a pu consulter des reproductions à l’Institut de recherche et d’histoire des textes.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

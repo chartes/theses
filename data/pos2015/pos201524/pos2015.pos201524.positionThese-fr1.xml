@@ -1,0 +1,77 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>En 1604, Velius, chroniqueur de la ville de Horn, rappelait que des navires appelés <emph>fluyt</emph>  y avaient été construits pour la première fois en 1595. Avec une longueur quatre à cinq fois supérieure à leur largeur, ces navires de charge tiraient leur nom de leur coque inhabituellement allongée. Le nouveau modèle lancé à Horn, promis à un grand avenir, fut d'abord critiqué et reproduit avec méfiance dans les chantiers voisins. Puis, lorsqu'il devint clair que les flûtes synthétisaient les besoins des armateurs flamands à la recherche de carènes rentables, elles furent adoptées avec un enthousiasme tel que l'on parla de « révolution » dans le domaine de la construction navale. Symbole de la réussite commerciale des Provinces-Unies au <num>xvii<hi rend="sup">e</hi></num> siècle, les flûtes ont souvent fait l'objet d'études de la part des historiens néerlandais. On peut citer parmi d'autres ouvrages la synthèse d'Anne Weneger Sleeswijk sur l'âge d'or des flûtes, <emph>De gouden eeuw van het fluitschip</emph>, parue en 2003. Le point qui attira plus particulièrement notre attention fut ce moment charnière où la marine française s'empara de ce modèle de navire, sous l'impulsion de Colbert, désireux d'égaler la puissance maritime des pays voisins. C'est ainsi que des « flûtes hollandaises » furent d'abord achetées par la France, copiées dans les arsenaux du royaume et enfin améliorées, afin de mieux correspondre à des besoins économiques et des contraintes géographiques spécifiques à la France, jusqu'à devenir un type maîtrisé et largement exploité durant tout le <num>xviii<hi rend="sup">e</hi></num> siècle. Au-delà de l'étude exhaustive d'un type de navire, ce travail sur les flûtes fut l'occasion de comprendre comment l'ambition politique et commerciale de l’État avait pu influer sur le domaine technique de la construction navale, comment les charpentiers français « assimilèrent » ce modèle étranger en se pliant – ou en refusant de se plier – à des instructions strictes émanant de Versailles. Les flûtes françaises de la fin du <num>xviii<hi rend="sup">e</hi></num> siècle n'ayant plus que de vagues points communs avec leurs ancêtres hollandaises, il convenait d'identifier les mutations survenues durant cette période et d'en définir les causes. L'objet de cette thèse fut ainsi de comprendre l'origine de l'enthousiasme dont les flûtes firent l'objet pendant deux siècles, cerner les spécificités qui les faisaient préférer à d'autres navires et savoir dans quelle mesure elles répondirent à ces attentes.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>L'étude s’est fondée sur des documents de natures très diverses, en raison de la grande lacune des archives au début de la période étudiée. En ce qui concerne l'origine néerlandaise des flûtes, les recherches se sont appuyées sur un corpus iconographique rassemblé au Scheepvaartmuseum et au Rijkmuseum à Amsterdam. Quelques maquettes sont comprises dans cet ensemble. Pour la partie française de l'étude, à partir de Colbert, les séries B5 et B7 des archives de la Marine ont fourni des indications sur l'imitation du savoir-faire hollandais tandis que la série D1 sur le matériel a permis de saisir l'application concrète des directives de l’État dans les arsenaux du royaume. Des recherches plus ponctuelles menées à Rochefort, Lorient, Toulon et Brest ainsi que l'étude de précieux plans de flûtes conservés au Service historique de la défense à Vincennes et au musée national de la Marine soutiennent le propos en apportant des détails sur telle ou telle spécificité des flûtes à un moment donné. Les archives du Département des recherches archéologiques subaquatiques et sous-marines (DRASSM) à Marseille furent exploitées pour apporter à ce travail des éléments archéologiques glanés autour de trois épaves de flûtes. Des traités de construction navale des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles furent un auxiliaire indispensable afin de comprendre les enjeux de la construction navale à l'époque moderne.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

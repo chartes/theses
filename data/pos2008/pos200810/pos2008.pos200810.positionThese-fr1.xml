@@ -1,0 +1,114 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’étude des écrits du for privé connaît un regain d’intérêt depuis quelques années comme en témoigne la création par le CNRS du GDR « Les
+          écrits du for privé en France, de la fin du Moyen Âge à 1914 » en 2003. Parmi eux, le livre de raison occupe une place spécifique : s’il
+          s’agit bien, comme pour les autres écrits du for privé, d’une écriture intime, c’est un « nous » collectif, celui de la famille, qui tend
+          toujours à l’emporter sur l’expression de l’individualité du scripteur. Au départ simple livre de comptes dans lequel les auteurs ont
+          progressivement ajouté des informations relatives à la vie de leur famille, il joue un rôle dans la construction et la conservation de la
+          mémoire familiale, dans la défense d’un certain statut social, et a donc vocation à être montré et transmis. En outre, il peut être exhibé
+          comme élément de preuve lors de procès ou d’enquêtes de noblesse. L’exemple du livre de raison écrit de 1655 à 1687 par le gentilhomme
+          arlésien Honoré de Quiqueran de Beaujeu illustre l’ambiguïté qui résulte de la réunion sur un même support de plusieurs genres, et donc de
+          différents objectifs et de différentes techniques d’écriture.</p>
+        <p>Le livre est tout d’abord un moyen pour l’auteur de garder intacte la mémoire de la famille et de sa noblesse, qu’il doit justement
+          prouver pour permettre à deux de ses fils d’être reçus chevaliers de l’Ordre de Malte. Une fois le rappel des ancêtres effectués, le livre
+          change de genre : il ne s’agit plus seulement alors de conserver la mémoire des générations précédentes, mais aussi de noter mois après mois
+          tous les événements survenus dans la famille des Quiqueran, et jugés par Honoré de Quiqueran de Beaujeu dignes d’être transmis à la
+          postérité. Cette relation des événements dans cette chronique d’une famille noble arlésienne transforme une nouvelle fois, insidieusement,
+          le genre du livre. De « compte de l’état de la famille » , il se fait aussi livre de comptes, fonction qui est d’ailleurs aux origines de
+          l’apparition du genre du livre de raison. L’auteur ajoute en effet à ces informations la mention des dépenses qu’elles entraînent. Le livre
+          de raison édité dans cette thèse présente enfin une caractéristique peu commune. Les Quiqueran de Beaujeu ont l’habitude d’écrire depuis
+          plusieurs générations et Pierre de Quiqueran, frère aîné de l’auteur, a lui-même rédigé un livre de raison en 1643, aujourd’hui perdu.
+          Honoré de Quiqueran de Beaujeu ne cache pas qu’il s’en est très largement inspiré ; c’est donc l’occasion, à partir des quelques extraits
+          subsistants du livre de Pierre et grâce à d’autres indices dans l’écriture d’Honoré, de tenter de comprendre comment ce livre plus ancien a
+          été utilisé, parfois même recopié, et comment le cadet s’affranchit du modèle de son aîné grâce à une lecture critique. Enfin, l’édition du
+          livre de raison d’Honoré de Quiqueran de Beaujeu permet de se confronter à un type de noblesse encore trop peu étudié, moyenne, urbaine et
+          provençale, à une époque – la deuxième moitié du <num>xvii</num>
+<hi rend="sup">e</hi> siècle – problématique pour cette noblesse moyenne et provinciale qui peine à s’intégrer dans les nouveaux rouages de
+          l’absolutisme.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le point de départ de cette étude est bien évidemment le manuscrit du livre de raison d’Honoré de Quiqueran de Beaujeu conservé au centre
+          historique des Archives nationales. Le département des manuscrits de la Bibliothèque nationale de France possède également un cahier faisant
+          partie d’une collection d’autographes qui contient onze feuillets manquants. Les dossiers relatifs à la famille des Quiqueran conservés au
+          Cabinet des Titres ont aussi apporté une source de renseignements appréciable.</p>
+        <p>La médiathèque d’Arles conserve également plusieurs archives de la famille, ainsi qu’un fonds précieux d’érudits locaux sur l’histoire
+          d’Arles. Aux Archives départementales des Bouches-du-Rhône, les sources privilégiées ont été celles du fonds de l’Ordre de Malte (Langue de
+          Provence), ainsi que les minutiers de notaires et les inventaires après décès. Les archives municipales d’Arles ont fourni de très précieux
+          registres paroissiaux. En revanche, les registres de délibérations municipales n’ont pas pu être exploités autant qu’ils l’auraient
+          mérité.</p>
+        <p>Quant aux sources imprimées, elles sont essentiellement constituées des nombreux nobiliaires français et provençaux publiés à partir du
+            <num>xvii</num>
+<hi rend="sup">e</hi> siècle et des œuvres publiées à partir du <num>xvi</num>
+<hi rend="sup">e</hi> siècle par des membres de la famille des Quiqueran.</p>
+        <p/>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

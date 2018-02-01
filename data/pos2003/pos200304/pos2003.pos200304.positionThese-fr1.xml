@@ -1,0 +1,90 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Au cours de leurs règnes, Louis le Germanique et Charles le Chauve donnèrent un grand nombre de diplômes qui comptent au nombre des
+          sources les plus précieuses pour notre connaissance de leur royauté. Ces actes ont fait l’objet de plusieurs études scientifiques depuis le
+          milieu du <num>xix<hi rend="sup">e</hi></num>  siècle ; ils ont en outre été publiés dans les grandes collections nationales d’édition critique. Les
+          historiens disposent donc, depuis plus d’un siècle et demi, d’un matériau diplomatique édité qui leur permet d’utiliser le contenu des
+          actes. Toutefois, les travaux récents d’histoire carolingienne se sont peu intéressés à la diplomatique des rois et empereurs carolingiens ;
+          les diplômes étant édités, la cause semblait entendue. Pourtant, ces parchemins qui sont, aux côtés des manuscrits et des sources
+          archéologiques, les derniers vestiges matériels qui nous unissent à cette civilisation passée, ont encore beaucoup à nous dire. C’est
+          pourquoi il a été entrepris d’étudier de manière comparée les diplômes royaux de Charles le Chauve et de Louis le Germanique sous trois
+          angles différents : historique, historiographique et diplomatique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées au cours de ce travail comprennent d’une part les diplômes de Louis le Germanique et de Charles le Chauve, et
+          d’autre part des archives d’histoire de la diplomatique des <num>xix<hi rend="sup">e</hi></num> -XX<hi rend="sup">e</hi>  siècles. L’objectif de ce
+          travail étant précisément d’étudier les diplômes des deux rois, il a paru inutile de détailler ici la composition des différents corpus
+          d’actes aux <num>ix<hi rend="sup">e</hi></num> et <num>x<hi rend="sup">e</hi></num>  siècles. Quant au dépouillement des archives contemporaines, il se limite
+          au fonds de la Commission des chartes et diplômes conservé à l’Institut de France et aux papiers d’Arthur Giry, qui sont conservés à Paris,
+          à l’Ecole pratique des hautes études (E.P.H.E.), et à Vienne, pour une partie de la correspondance.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si, du fait de l’engouement scientifique pour la Résistance française, la question des institutions clandestines a été étudiée par
+          plusieurs historiens et si la figure de Jean Moulin a alimenté une abondante littérature, force est de constater que son successeur à la
+          tête de la Délégation générale de la France combattante sur le sol métropolitain, Alexandre Parodi, demeure un personnage relativement peu
+          connu. Les rares articles qu’il écrivit au sujet de la Libération de Paris, le dépôt de ses archives personnelles à la Fondation nationale
+          des sciences politiques et la publication d’une brochure commémorative n’y firent rien. Ecrire une étude objective au sujet de son
+          engagement sous l’Occupation présente d’ailleurs certaines difficultés. Cet homme réservé n’a légué que peu de sources susceptibles de nous
+          éclairer avec précision sur ses opinions de tel ou tel moment et les témoins de cette époque, par la force des choses, se font de plus en
+          plus rares ; en définitive, s’impose surtout au chercheur une très vaste bibliographie. Les différentes étapes de la carrière d’Alexandre
+          Parodi lui ont valu beaucoup d’éloges, d’où la difficulté de porter sur lui un regard critique : comment juger objectivement un homme qui
+          avait su gagner le respect de ses adversaires eux-mêmes ? Enfin, l’existence d’Alexandre Parodi semble bien présenter une remarquable
+          unité : on ne pourra nier, en tout état de cause, l’existence de constantes dans les choix effectués par Alexandre Parodi, des choix qui
+          firent toute la singularité de son parcours.</p>
+        <p>Nombre de fonctionnaires formés à l’école républicaine ont servi un Etat autoritaire qui foulait aux pieds les principes de la démocratie
+          libérale, certains d’entre eux sont devenus les complices de la politique répressive menée par l’occupant. Faute d’entrer dans la résistance
+          active, d’autres ont préféré pratiquer, avant 1942 du moins, ce que l’historiographie allemande a dénommé <hi rend="i">Resistenz</hi>, terme
+          que l’on traduit de façon approximative par « résistance civile », un mélange d’inertie et d’obstruction ; même par la suite, il convient de
+          souligner le rôle de « passerelle vers la France libre » joué par le giraudisme pour de hauts fonctionnaires souvent plus hostiles à la
+          collaboration qu’à la « Révolution nationale ». Or, il y a loin de l’attitude d’Alexandre Parodi à celle de la majorité de ses pairs.
+          Définir avec précision l’entrée de Parodi en Résistance demeure une gageure : si l’état de « rébellion intime » dans lequel il se trouvait
+          ne fait guère de doutes, sa fréquentation des milieux résistants, qui fit de lui le représentant d’une certaine résistance
+          « intellectuelle », reste plus difficile à mettre en évidence et les premières actions qu’il entreprit le situent dans une problématique
+          quelque peu particulière, entre <hi rend="i">Resistenz</hi> et <hi rend="i">Widerstand</hi> pour reprendre la terminologie allemande.
+          D’ailleurs, le simple fait de s’engager à cette époque, dans un camp ou dans l’autre, est déjà en soit une sorte de mystère digne d’être
+          éclairci ; il l’est d’autant plus dans le cas d’un homme comme Parodi qui devait l’essentiel de sa formation juridique au Conseil d’Etat,
+          gardien de la légalité : or cet homme se fit gaulliste, c’est-à-dire, selon le point de vue qui prévalait alors dans la France occupée,
+          qu’il embrassa une dissidence ! Une fois le pas franchi, son action le porta au faîte des responsabilités, toujours au service de la
+          fraction de la Résistance métropolitaine la plus proche de la France combattante ; ses actes, surtout une fois qu’il fut désigné comme
+          Délégué général, furent parfois lourd de conséquences, et c’est pourquoi ils méritent d’être étudiés dans le détail.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’essentiel du présent travail repose sur le dépouillement d’une source presque inédite, le fonds Alexandre Parodi, déposé à sa mort en
+          1979, par les soins de son fils, au Centre d’histoire de l’Europe du vingtième siècle (C.H.E.V.S.) dépendant de la Fondation nationale des
+          sciences politiques. Les lacunes de ce fonds ont été comblées par des recherches complémentaires au Centre historique des Archives
+          nationales ­ où l’on a consulté les fonds du Comité d’histoire de la seconde guerre mondiale, du Commissariat à l’Intérieur du Comité
+          français de libération nationale, et quelques autres de moindre importance ­, au Centre des archives contemporaines de Fontainebleau, à la
+          Bibliothèque historique de la Ville de Paris et au service des archives du Bureau international du travail. La très vaste bibliographie
+          consacrée aux « années noires » en général et à la Résistance en particulier a été dépouillée avec soin ; non seulement ont été étudiés les
+          précédents travaux sur des sujets avoisinants, mais une attention particulière a été donnée aux souvenirs et aux mémoires des proches
+          d’Alexandre Parodi. Parmi ceux de ces derniers qui sont toujours en vie, seuls ont répondu à nos sollicitations des membres de sa famille,
+          en l’occurrence son fils, M. Jean-Luc Parodi, et sa sœur, Mme Jacqueline Chatenet, qui ont accepté de livrer leur témoignage.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

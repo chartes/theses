@@ -1,0 +1,91 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le nom de Michel Liénard n’évoque aujourd’hui que peu de choses. L’historiographie de cette période et le peu d’intérêt longtemps porté
+          aux arts décoratifs du <num>xix</num>
+<hi rend="sup">e</hi> siècle sont sans doute en partie responsables de cet oubli. Sa carrière, extrêmement riche, a pourtant marqué de façon
+          importante le monde du décor et de l’ornement, de la Monarchie de Juillet jusqu’à la chute du Second Empire, et il convient, dans le
+          renouveau historiographique actuel de cette période, de lui rendre la place qui lui revient.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources qui éclairent la vie et l’œuvre de Michel Liénard sont dispersées et de natures très différentes. Des documents archivistiques
+          nous renseignent sur son état-civil et celui de sa famille (Archives nationales, Archives de Paris, Archives départementales
+          d’Indre-et-Loire et de Seine-Maritime), et nous offrent des mémoires de travaux et d’autres documents de comptabilité précieux : sous-séries
+          F<hi rend="sup">19</hi>(administration des cultes), F<hi rend="sup">21</hi>(administration des Beaux-arts) des Archives nationales,
+          Archives de Paris, Archives départementales d’Indre-et-Loire et médiathèque du Patrimoine (pour le château de Blois). Ces archives sont à
+          compléter avec des sources imprimées, consistant surtout en des articles de presse, mais comptant également la littérature touchant aux
+          grandes Expositions, nationales puis internationales, qui a joué un rôle primordial dans nos recherches. Dans ces sources se trouvent bien
+          des manques que l’iconographie permet de combler partiellement, faisant des images une nécessité pour traiter le sujet : gravures de presse,
+          photographies d’époque ou actuelles, recueils de gravures conservés à la Bibliothèque nationale, à la bibliothèque des Arts décoratifs ou à
+          l’Académie d’architecture. Les recherches ont été étayées par le fonds de dessins du département des Arts graphiques du musée des Arts
+          décoratifs (MAD). Ces dessins sont constamment à mettre en rapport avec les éléments biographiques découverts.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

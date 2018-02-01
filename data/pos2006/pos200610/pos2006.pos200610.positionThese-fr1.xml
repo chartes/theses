@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’on parle souvent de l’ère de l’information. Le monde vit dans un réseau planétaire et dans une période où l’information est devenue
+          omniprésente et omnipotente. Le degré de démocratie des sociétés, la nature des régimes, la qualité des personnes, la possession du pouvoir
+          se mesurent à l’aune de l’information. Toute organisation, quelles que soient sa taille, sa mission, sa sphère d’activité, a besoin
+          d’information pour exister, pour fonctionner et pour se développer. Sa gestion est donc l’un des enjeux les mieux partagés par les
+          différents secteurs de l’activité humaine.</p>
+        <p>La mécanographie est née pour répondre à ce besoin croissant de traitements automatisés de masses énormes d’information. Le principe des
+          cartes perforées est appliqué pour la première fois par le Français Joseph-Marie Jacquard, en 1805, à la commande de sa machine à tisser. En
+          1833, le mathématicien Charles Babbage invente une machine capable d’effectuer une suite de calculs sans intervention humaine. La première
+          machine statistique à cartes perforées est inventée par Hermann Hollerith en 1884. Elle est l’ancêtre de toutes les machines
+          mécanographiques, qui se développent très vite aux États-Unis et connaissent un véritable succès, en conquérant de nouveaux domaines et en
+          envahissant plusieurs secteurs. La mécanographie est à l’origine de l’apparition et du développement de plusieurs entreprises.</p>
+        <p>La présente recherche porte sur l’introduction de la mécanographie dans l’administration française au travers de l’exemple du ministère des
+          Finances. Tant l’histoire de la technique que celle du ministère des Finances ont fait déjà l’objet de nombreux travaux, mais aucun n’a
+          envisagé l’impact qu’a eu cette technique sur le fonctionnement de cette administration. L’objectif de cette étude est d’analyser
+          l’introduction des procédés mécanographiques, leur généralisation et les traces qu’ils ont laissées dans une institution et de mesurer les
+          mutations administratives qu’ils ont impliquées.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p/>
+        <p>La présente étude s’appuie, pour l’essentiel, sur les archives de l’administration centrale du ministère des Finances, des services et des
+          établissements centraux qui y sont rattachés. Les archives sont gérées par le Service des archives économiques et financières qui est
+          localisé sur deux sites : une antenne parisienne, à Bercy, collecte les documents, qui sont conservés et communiqués à Savigny-le-Temple.
+          Les dix-huit fonds existants reflètent la diversité des activités du ministère des Finances depuis la fin du <num>xix<hi rend="sup">e</hi></num>
+          siècle : environ un tiers concerne le fonctionnement du ministère, alors que les deux autres tiers proviennent du travail des différents
+          services. Cette source a été complétée par le recours à des documents imprimés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

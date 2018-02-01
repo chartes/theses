@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Si le nom de Pierre Louvet n’évoque rien à personne aujourd’hui, sinon aux usagers des archives municipales de Montpellier et à quelques habitants de Villefranche-sur-Saône, ce n’est pas parce qu’il a sombré dans l’oubli, mais bien plutôt parce qu’il n’en est jamais sorti : auteur d’ouvrages peu estimés, P. Louvet fut, dès son vivant, tenu pour un historien des plus médiocres. L’étude de sa carrière n’est pourtant pas dénuée d’intérêt, bien au contraire même. P. Louvet, en effet, s’est illustré par un parcours et des pratiques peu ordinaires, qui l’individualisent assez nettement des autres historiens de son temps. Pendant plus de vingt ans, il a circulé dans le sud de la France, de province en province et de ville en ville, laissant ici un inventaire d’archives, là un livre d’histoire, généralement une Histoire locale, tantôt sous la forme d’un abrégé, tantôt sous celle d’un grand volume accompagné de preuves ; ce faisant, il fut tout à la fois l’un des rares historiens du <num>xvii</num><hi rend="sup">e</hi> siècle à avoir travaillé comme archiviste et le seul à s’être spécialisé dans l’histoire locale. Autrement dit, s’intéresser à ce personnage obscur permet de mettre en lumière des activités inusitées chez ses pairs et, partant, fort peu documentées de nos jours. Surtout, s’intéresser à ce personnage permet de faire apparaître un modèle de carrière à nul autre pareil et pas seulement parce que celle-ci fut entièrement provinciale : P. Louvet ne fut ni clerc ni domestique d’un Grand, sinon éphémèrement ; à la place, il sollicita de manière récurrente et systématique les institutions locales, leur demandant emploi ou gratification pour ses livres. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Il n’existe aucun fonds d’archives constitué sur Pierre Louvet. Du reste, le sort de ses papiers est totalement inconnu, passées les premières années du <num>xviii</num><hi rend="sup">e</hi> siècle. Il a fallu, de ce fait, un patient travail de recherche pour rassembler les sources le concernant, travail d’autant plus difficile que leur éclatement géographique était grand, conséquence de son extrême mobilité, et que les documents se rapportant à lui n’étaient que rarement signalés par les catalogues de bibliothèques et les inventaires d’archives, en raison même de son obscurité.  </p>
+        <p>Afin de restituer au mieux ce qu’a été son parcours, nous avons utilisé prioritairement les archives (registres des délibérations et livres de comptes) des institutions qui l’ont employé ou qu’il a sollicitées pour obtenir emploi ou gratification. En complément, on a recouru également – entre autres choses – aux archives des notaires de certaines des villes dans lesquelles il a séjourné (Montpellier, Toulouse et Villefranche-sur-Saône), ce qui a permis parfois d’heureuses découvertes – ainsi d’un contrat d’édition à Toulouse. Pour tenter de rendre compte de sa situation à Sisteron, où il s’était établi en 1643, nous avons dépouillé de manière exhaustive les registres des notaires de la ville – nous y avons retrouvé son contrat de mariage mais pas son testament – et utilisé les cadastres de la commune ; nous nous sommes aussi servi des registres des délibérations de cette dernière et de ceux de diverses autres institutions pour essayer de mesurer son degré de participation à la vie locale. Enfin, pour tenter de déterminer quelle position il a occupé au sein du « champ historien », nous avons recherché ses lettres et consulté les correspondances et mémoires publiés de ses pairs mais, cette fois, avec un succès très limité, sauf à considérer le silence des sources comme étant significatif en soi.  </p>
+        <p>À cela, bien évidemment, s’est ajoutée l’étude de ses œuvres, soit trois inventaires (ceux des archives communales de Montpellier, Bordeaux et Villefranche-sur-Saône, tous trois conservés par les services d’archives municipales de ces villes – celui de Montpellier a fait l’objet d’une édition à la fin du <num>xix</num><hi rend="sup">e</hi> siècle), une table des matières (conservée aux archives municipales de Toulouse) et quinze Histoires, dont trois restées manuscrites (l’une d’entre elle – celle du Beaujolais – a été éditée au début du <num>xx</num><hi rend="sup">e</hi> siècle ; précisons que nous n’avons pas retrouvé ses Histoires des gouverneurs de Languedoc, de Montpellier et de Sisteron).  </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,123 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le roi doit gouverner par conseil : la théorie féodale de l’<hi rend="i">auxilium et consilium</hi> se conjugue au modèle du droit romain
+          pour faire du conseil un élément indispensable au gouvernement. De cette obligation de prendre conseil naît progressivement une véritable
+          institution, le Conseil du roi. Il n’est à l’origine qu’un organe consultatif, mais devient de plus en plus une assemblée de gouvernement.
+          En une période d’organisation de la monarchie, et plus particulièrement du Conseil, il convient de définir ses modes de fonctionnement. Mais
+          au-delà, il faut cerner les hommes qui lui donnent vie, leur position dans la machine gouvernementale et leur action à la tête du royaume, à
+          la jonction de deux pratiques du pouvoir, celle des Capétiens et celle des Valois.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p><hi rend="i">Les actes de Philippe V </hi> — Les registres de chancellerie conservés au Trésor des chartes constituent, avec quelques 3 300
+          articles, le plus vaste ensemble subsistant d’actes de Philippe V ; leur valeur documentaire est encore accrue par leur diversité. En effet,
+          trois séries distinctes de registres coexistent. La première consigne, comme de coutume, des chartes, enregistrées le plus souvent à la
+          demande de leur bénéficiaire : il s’agit donc essentiellement d’actes gracieux accordés par le roi, mais aussi de lettres touchant aux
+          intérêts du roi, notamment à son domaine, transcrites spontanément par la chancellerie, conformément à la tradition des registres de
+          Philippe IV. La seconde série relève d’un mode de composition similaire, si ce n’est qu’elle enregistre, le plus souvent sous forme
+          d’analyse, des lettres scellées de cire jaune. En revanche, la série des <hi rend="i">quaterni commissionum</hi> contient exclusivement des
+          actes relatifs au gouvernement du royaume : mandements de convocation à l’ost ou aux assemblées, lettres closes, etc. ; il s’agit là de
+          volumes composés, non pas au Conseil, mais bien en chancellerie, afin de garder mémoire des affaires politiques. Quoique riches, les
+          registres de chancellerie ne sont pas exhaustifs : au-delà de la sélection des pièces qu’opèrent les bénéficiaires ou la chancellerie,
+          l’enregistrement est tributaire du soin apporté à sa gestion par les différents chanceliers. Seul Pierre de Chappes y prête attention,
+          créant même en janvier 1317 les deux séries destinées aux lettres scellées de cire jaune ; mais avant même son départ, celles-ci
+          périclitent. Les registres de chancellerie n’en demeurent pas moins représentatifs de l’activité gouvernementale : ils mettent ainsi en
+          lumière son faible niveau en 1316, durant la régence du comte de Poitiers, puis de nouveau en 1321, tant en raison d’un voyage du roi durant
+          plusieurs mois, que de la longue maladie qui l’affecte à son retour.</p>
+        <p>L’enregistrement effectué dans les autres institutions de la monarchie complète utilement cette source. De nombreux actes transitent par la
+          Chambre des comptes en raison de ses vastes compétences ; certains y sont enregistrés officiellement, telles les chartes consignées dans le
+          Livre rouge, ou les abondantes lettres analysées ou reproduites à partir d’août 1321 dans le second Journal de la Chambre, qui pallie
+          heureusement la faiblesse de la documentation pour les derniers mois du règne. D’autres sont recopiés pour les maîtres des Comptes, sans
+          doute à titre personnel : les mémoriaux <hi rend="i">Noster</hi>
+<hi rend="sup">1</hi> et /Voster<hi rend="sup">2</hi> , <hi rend="i">Pater, Croix, Qui es in ccelis</hi>, mais aussi le registre JJ 57
+          conservé aux Archives nationales, peut-être possession de Martin des Essarts, contiennent ainsi nombre d’actes importants, notamment des
+          ordonnances sur l’Hôtel et le gouvernement du royaume. Les actes enregistrés au Parlement constituent en revanche, dès cette époque, une
+          catégorie quelque peu particulière de lettres royaux : ils ne transitent guère à la chancellerie que pour y être scellés. Les sept registres
+          du Parlement concernant le règne de Philippe V n’en constituent pas moins une source de première importance contenant plus de 2 000 actes.
+          Diverses expéditions, copies et éditions complètent ce tableau, constituant un répertoire des actes de Philippe V.</p>
+        <p>Sont ainsi signalés plus de 4 000 actes différents, sans compter ceux conservés dans les registres du Parlement. Mais est-il possible
+          d’évaluer la production totale de la chancellerie ? En déterminant le taux d’enregistrement des différents types de lettres pour l’année
+          1317, la seule où l’enregistrement en chancellerie soit continu, on peut aboutir à un total approximatif de 550 chartes et plus de 8 000
+          actes scellés de cire jaune produits chaque année, la production du Parlement étant toujours exclue ; mais ce ne sont là que des hypothèses,
+          qu’il est délicat d’infirmer ou de confirmer à l’aide des diverses données connues sur les poids de cire utilisés par la chancellerie ou de
+          la valeur de l’émolument du sceau aux XIV et XV siècles.</p>
+        <p><hi rend="i">Les mentions hors teneur </hi> — Tout au long de l’élaboration des actes royaux, sont portées hors la teneur des indications à
+          l’intention des notaires ou du chancelier. Ces mentions permettent de suivre avec exactitude les filières de commandement des actes et de
+          mieux comprendre les rouages gouvernementaux. En effet, sous le règne de Philippe V, l’habitude d’inscrire le nom du commanditaire de l’acte
+          ­ roi, officier ou Cour ­ devient quasiment systématique ; dans le même temps, le notaire appose sa propre signature et précise
+          éventuellement s’il n’est que responsable de l’acte ou s’il l’a rédigé en personne. Une mention peut signaler également une vérification
+          supplémentaire, effectuée par un officier ou par le roi lui-même, qui veille ainsi à l’application de mesures importantes ou contestées ; ce
+          contrôle politique se double d’un contrôle plus technique, œuvre de la Chambre des comptes. Diverses mentions à usage interne de la
+          chancellerie complètent enfin ce tableau : mentions de collation, indications de duplicata, demandes de correction, autant de précisions
+          relatives à des processus, certes ordinaires, mais parfois complexes et capables d’influer sur la compréhension d’un acte et de sa
+          portée.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

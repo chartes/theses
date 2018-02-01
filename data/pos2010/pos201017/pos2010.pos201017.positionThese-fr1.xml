@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>« Nature n’a créé l’homme que pour prester et emprunter », dit Panurge à Pantagruel, dans un passage du <hi rend="i">Tiers Livre</hi> de
+          Rabelais où il fait l’éloge du prêt et de l’emprunt. S’il n’y a pas de synthèse d’ensemble sur la question, de nombreuses études l’ont en
+          effet montré depuis longtemps : à l’époque moderne, le crédit irrigue la société tout entière et « la dette est partout dans les dépôts
+          d’archives, comme la poussière » (Pierre Goubert). Néanmoins, l’historiographie traditionnelle et les grandes thèses d’histoire rurale se
+          sont longtemps bornées à souligner la rareté de la monnaie dans les campagnes françaises de l’époque moderne et l’endettement des paysans.
+          Depuis une dizaine d’années, plusieurs études ont remis en cause ces <hi rend="i">topoï</hi> et ont replacé le crédit dans un système plus
+          large de circulation de l’argent.</p>
+        <p>En parallèle, un engouement pour l’histoire du notariat a renouvelé l’utilisation de ce type de sources écrites et a été au fondement d’une
+          réflexion sur la place de l’écrit notarié dans le marché de l’acte privé. Il s’agit, dès lors, de s’inscrire dans ces deux courants
+          historiographiques pour mener un travail sur l’épargne et le crédit à partir d’un ensemble de sources notariales jusqu’ici largement
+          sous-exploitées, dans une région et à une époque où les bouleversements économiques et religieux sont nombreux.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les précieuses archives des notaires royaux de Saint-Maixent pour le <num>xvi<hi rend="sup">e</hi></num> siècle constituent les principales
+          sources de cette étude. Ce corpus documentaire, exceptionnellement bien conservé pour l’époque et pour la région, représente environ 250
+          registres de minutes, répartis entre la série E et la sous-série 3 E des archives départementales des Deux-Sèvres et, pour quelques
+          registres, la sous-série 4 E des archives départementales de la Vienne. Les plus anciennes minutes remontent à 1507 ; les minutes des vingt
+          premières années sont cependant mal conservées et il n’est pas certain que l’on dispose, pour cette période, de toutes les minutes passées
+          dans l’année pour un notaire étudié. C’est au final la deuxième moitié du siècle qui est la mieux couverte (environ 215 registres) ; elle
+          offre de belles séries continues : sur onze notaires en exercice à la fin du siècle, nous avons conservé l’intégralité des minutes de quatre
+          d’entre eux en moyenne, ce qui offre la possibilité de suivre au plus près l’évolution de la production notariale.</p>
+        <p>Un dépouillement par échantillonnage a été mené sur ce corpus : une année tous les dix ans de 1528 à 1558, une année tous les cinq ans à
+          partir de 1563. Parallèlement, les séries continues de tables en tête des registres de certains notaires ont été exploitées de manière
+          systématique de 1559 à 1600 pour mesurer les variations de l’activité notariale et du marché du crédit sur cette période. Une base de
+          données, dont l’élaboration est développée en appendice, a été mise au point pour dépouiller ces sources et traiter statistiquement ces
+          informations sérielles.</p>
+        <p>En complément de ces sources notariales ont été mis à profit les registres de baptême de la paroisse Saint-Saturnin de Saint-Maixent, qui
+          couvrent surtout les vingt dernières années du siècle, et le journal de Michel Le Riche, avocat du roi à Saint-Maixent, témoin prolixe sur
+          la vie locale, surtout pour les années 1572 à 1586. Les papiers des érudits Louis Merle et Octave Hipault (archives départementales des
+          Deux-Sèvres) et la collection d’Alfred Richard (archives départementales de la Vienne) ont également livré des renseignements intéressants.
+          Enfin, un recensement des trouvailles monétaires du <num>xvi<hi rend="sup">e</hi></num> et du début du <num>xvii<hi rend="sup">e</hi></num> siècle dans un rayon de cent cinquante kilomètres autour de Saint-Maixent, établi à partir d’un dépouillement de publications
+          numismatiques, a permis d’enrichir les éléments obtenus à partir de ces archives écrites.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

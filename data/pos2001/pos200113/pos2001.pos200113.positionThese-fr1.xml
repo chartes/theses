@@ -1,0 +1,109 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si le nom de Tristan Tzara (1889-1963) est indéfectiblement lié au mouvement Dada, dont il a été l’un des principaux animateurs à Zurich
+          dès 1916, puis à Paris à partir de 1920, le poète demeure étonnamment méconnu, alors même que son activité a continué après la fin de Dada.
+          Certes de nombreuses monographies consacrées au surréalisme évoquent Tristan Tzara; des articles s’intéressent à sa poésie dadaïste et
+          surréaliste, marquée notamment par le modèle nègre, à son théâtre, à son influence sur la poésie moderne. Mais il manque encore une
+          biographie complète de Tristan Tzara, qui ne s’arrête pas à ses débuts roumains, zurichois et parisiens, ou à ses relations complexes avec
+          les Surréalistes. L’édition de ses œuvres complètes par Henri Béhar, entre 1975 et 1991, a permis de mettre enfin à la disposition des
+          lecteurs l’intégralité de ses textes.</p>
+        <p>Mais en attendant que les travaux biographiques en cours mettent un terme aux mythes qui entourent la personnalité de Tristan Tzara et
+          rétablissent la vérité sur ce que fut réellement sa vie, il semblait intéressant de se pencher sur une partie de l’activité du poète: le
+          livre. Cette étude est d’autant plus prometteuse que Tristan Tzara a publié quelques cinquante quatre livres durant sa vie, dont certains
+          sont unanimement reconnus comme des réussites bibliophiliques: L’Antitête, Parler seul ou De mémoire d’homme; mais l’intérêt d’une tel
+          recherche réside aussi dans le fait que certains ne présentent aucune des caractéristiques des «livres de peintre».</p>
+        <p>L’étude des livres de Tristan Tzara suit l’ordre chronologique du processus de publication. Il a paru tout d’abord intéressant de présenter
+          globalement les ouvrages, en examinant notamment le rythme d’écriture, la nature du texte, la présence d’une illustration, le format des
+          volumes, l’utilisation préalable des textes, l’attitude du poète vis-à-vis du livre, de la typographie et de l’art. En effet, l’un des
+          traits caractéristiques des recueils de Tristan Tzara est la présence très importante de l’illustration. Cette réalité implique des
+          relations entre le poète et les peintres; trois exemples détaillés, Hans Arp, Joan Miró et Pablo Picasso, complètent le tableau général.
+          Enfin, puisqu’il s’agit de livres illustrés, il était indispensable d’envisager les rapports entretenus entre le texte et les illustrations:
+          le recueil Terre sur terre sert de base à cette étude. Les modes de collaboration entre le poète et ses nombreux éditeurs sont plus
+          particulièrement étudiés à partir de deux cas, les relations de travail entretenues par Tristan Tzara avec Pierre Bordas et avec
+          Pierre-André Benoit. Le livre est alors achevé; il reste à le diffuser et à le vendre. La dernière partie de l’enquête porte donc sur la
+          diffusion des livres de Tristan Tzara: un examen des données disponibles sur les ventes, les critiques et les réactions de certains lecteurs
+          peuvent autoriser quelques hypothèses sur les succès et les échecs des livres du poète; mais le succès se mesure aussi au nombre de
+          rééditions, d’anthologies et de traductions.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La correspondance reçue par Tristan Tzara constitue la principale sourcede cette étude ; elle est intégralement conservée, avec les
+          manuscrits du poète, à Paris, à la Bibliothèque littéraire Jacques Doucet, et compte plus de quatre mille lettres. Elle a été complétée par
+          la consultation des lettres adressées par Tristan Tzara à Pablo Picasso (Paris, Musée Picasso), à Joan Miró (Barcelone, Fondation Miró), à
+          Francis Picabia (Bibliothèque littéraire Jacques Doucet), à Robert et Sonia Delaunay, ainsi qu’à Léon Pierre-Quint (Bibliothèque nationale
+          de France, département des manuscrits). Des rencontres avec Pierre Bordas et avec le fils du poète, Christophe Tzara, ont permis d’enrichir
+          ces sources.</p>
+        <p>Les livres de Tristan Tzara sont, quant à eux, présents à la Bibliothèque littéraire Jacques Doucet et à la Bibliothèque nationale de
+          France (Réserve des livres rares); nous avons pu aussi examiner les volumes conservés à la Fondation Miró à Barcelone. Enfin, le catalogue
+          de la vente De la bibliothèque Tristan Tzara: Importante partie de la bibliothèque de Tristan Tzara (1989) est aussi une source importante
+          d’information sur les livres du poète.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

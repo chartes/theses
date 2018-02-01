@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Cette thèse a l’ambition de s’insérer dans le mouvement de redécouverte et de réhabilitation de la période artistique, partagée entre Moyen
+          Âge et Renaissance, que constituent la fin du <num>xv</num><hi rend="sup">e</hi> siècle et le tout début du <num>xvi</num><hi rend="sup">e</hi> siècle : plus qu’une phase de transition, il s’agit d’un moment artistique à part entière, dans lequel de grands commanditaires, à
+          l’instar de l’amiral de Graville, jouèrent un rôle non négligeable. </p>
+        <p>Si l’artiste de l’époque et sa production sortent progressivement de l’ombre, le second acteur essentiel dans la genèse de l’œuvre d’art,
+          le commanditaire, est encore mal cerné, notamment dans ses motivations, ses intérêts, ses partenaires, ses goûts et son rôle dans cette
+          phase d’épanouissement artistique. L’étude de la commande artistique de l’amiral de Graville semblait ainsi tout indiquée. </p>
+        <p>Issu d’une famille de noblesse militaire, Louis Malet de Graville fit partie de ces hommes auxquels la disparition progressive des grands
+          féodaux ouvrit les portes du pouvoir et de la fortune. Conseiller de Louis XI, Charles VIII et Louis XII, amiral de France de 1487 à sa mort
+          en 1516, il demeure une figure un peu oubliée, connue cependant par quelques œuvres qu’il commanda, telles que la <hi rend="i">Mise au
+            Tombeau</hi> sculptée de Malesherbes ou ses riches manuscrits enluminés, qui auguraient d’un mécénat autrement plus développé. </p>
+        <p>Il s’agit donc d’exhumer des pans entiers de la commande artistique de l’amiral demeurés dans l’ombre. Toutes les formes de l’activité
+          artistique ont été étudiées : architecture, sculpture, enluminure, vitraux, menuiserie, tapisserie. Surtout, la commande artistique du
+          personnage a été appréhendée dans sa totalité : en plus des œuvres et des édifices qui font l’originalité du mécénat de Louis Malet de
+          Graville et témoignent de ses goûts personnels, a été prise en compte la commande qualifiée d’« ordinaire », ou de convenance sociale,
+          souvent négligée par la recherche, que tout seigneur se devait d’assurer pour tenir son rang, mettre en valeur ses seigneuries, soutenir la
+          vie religieuse des territoires qui étaient sous son contrôle, préparer sa mort et illustrer son lignage. Enfin, ce mécénat s’inscrivait dans
+          un milieu et dans un réseau d’échanges entre commanditaires, ce qui permet de le mettre en perspective, d’en dégager les originalités et de
+          poser la question de sa modernité. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>À l’étude des édifices et des œuvres conservés s’est ajouté un travail de dépouillement d’archives. En plus des nombreuses minutes
+          conservées dans le Minutier central des notaires parisiens des Archives nationales, sources les plus explicites pour ce travail, quelques
+          documents tirés des séries J, KK, L, LL, MM, P, Q<hi rend="sup">1</hi>, S et T ont été mis à contribution. Le chartrier de Malesherbes,
+          aujourd’hui aux Archives nationales (399 AP), comprend plusieurs comptes de seigneuries ayant appartenu à l’amiral qui ont été exploités,
+          tout comme le fonds de la seigneurie de Marcoussis conservé aux archives départementales de l’Essonne (13 J) et celui du marquisat de
+          Graville aux archives départementales de la Seine-Maritime (série A). Des documents conservés aux archives départementales d’Eure-et-Loir
+          (testaments de l’amiral et de son épouse), à la médiathèque de l’architecture et du patrimoine, au département des Manuscrits et à celui des
+          Estampes et de la Photographie de la Bibliothèque nationale de France complètent ce panorama. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

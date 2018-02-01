@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Rares sont les hommes à avoir été autant adulés et admirés que le général Lafayette, dont la gloire repose sur ses jeunes années, lorsqu’il était le « héros » de la guerre d’indépendance américaine. En France, mais surtout aux États-Unis, il a joui de son vivant d’une popularité et d’une renommée considérables, qui font de lui l’emblème de la lutte libérale et révolutionnaire.</p>
+          <p>En France, durant ses dix dernières années, loin d’être aimé de tous, son image est pourtant régulièrement ternie par de virulentes critiques qui émanent tout d’abord des ultraroyalistes, avant de provenir des républicains de gauche qui le trouvent trop modéré. Aux États-Unis, à l’inverse, son image reste intacte jusqu’à sa mort et au-delà jusqu’à nos jours. Malgré une propagande active en sa faveur, manifeste grâce à une immense production littéraire, journalistique et artistique qui traduit et entretient sa popularité, c’est en définitive une image plus nuancée et complexe qui se construit.</p>
+          <p>Aux yeux de l’opinion américaine, Lafayette reste l’emblème de la liberté républicaine, grâce aux souvenirs de ses actions dans la guerre d’indépendance, tandis qu’en France il n’est placé qu’au rang d’homme politique soumis aux aléas conjoncturels. S’il est souvent évoqué par rapport à l’Amérique et à George Washington, son « père adoptif », les Français considèrent ces liens comme positifs tant que les relations avec les États-Unis restent bonnes. Mais lorsque l’image du modèle américain se dégrade dans l’opinion française, la valeur symbolique et les actions de Lafayette sont davantage soumises aux critiques des contemporains.</p>
+          <p>Depuis son dernier voyage triomphal aux États-Unis en 1824-1825 jusqu’à sa mort en 1834, la popularité de Lafayette, bien qu’à son apogée, connaît des hauts et des bas. La tournée américaine est suivie en 1829 par un périple à succès en France, ainsi que par la révolution de 1830, où le vieux général s’illustre comme l’homme le plus influent du pays. Même si durant cette période quelques critiques continuent à ternir son image, ce n’est qu’après 1830 que sa popularité s’amoindrit, en dépit des nombreux témoignages d’affection populaire qui perdurent jusqu’à sa mort.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les deux grands fonds Lafayette aux Archives nationales sont les séries 217Mi et 729Mi. Sur les cinquante-cinq cartons microfilmés de la série 217Mi, dont les documents originaux sont conservés à la bibliothèque de l’université Cornell (Ithaca, N.Y.), quinze cotes de correspondances actives et passives de Lafayette ont été utiles à notre étude. Nous faisons partie des rares chercheurs à avoir obtenu une autorisation de consultation et de reproduction de documents de la série 729Mi, dont les archives originales sont conservées au château de Lagrange-Bléneau (Seine-et-Marne) et sont gérées par la Fondation Josée-et-René-de-Chambrun. Nous avons aussi eu recours à d’autres sources conservées aux Archives nationales, à commencer par des rapports de police, de préfets et de procureurs (séries BB<hi rend="sup">18</hi>, BB<hi rend="sup">30</hi> et surtout F<hi rend="sup">7</hi>). Nous avons complété ces archives manuscrites par de nombreux documents inédits des archives du ministère des Affaires étrangères et du Centre des archives diplomatiques de Nantes.</p>
+          <p>Pour les sources imprimées, il est désormais possible de consulter en ligne un grand nombre de publications de l’époque de Lafayette. Les bibliothèques numériques Gallica, Europeana, celle de la Bibliothèque du Congrès, mais aussi Internet Archive et Google Livres, ou encore la Bibliothèque numérique publique d’Amérique, ainsi que plus récemment Numistral, ont ainsi mis en ligne beaucoup de journaux, de livres, de brochures, de poèmes et d’images dédiés à Lafayette, ou qui le mentionnent simplement. Ces corpus en ligne étant sélectifs, nous avons poursuivi nos recherches par la consultation de cent cinquante publications physiques à la Bibliothèque nationale de France, dont une grande partie n’a jamais été exploitée, les historiens se concentrant souvent sur une sélection restreinte de titres.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

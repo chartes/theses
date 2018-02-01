@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le tracé des jardins aménagés aux abords du palais des papes d’Avignon, matérialisé à l’origine par d’imposantes murailles dont il reste
+          aujourd’hui quelques pans, se lit encore dans la topographie de la ville. En revanche, les jardins des résidences pontificales de
+          Pont-de-Sorgues et de Villeneuve ont entièrement disparu. La médiocrité, sinon l’absence des vestiges expliquent que ces espaces ne furent
+          pas considérés avec autant d’attention que le bâti par les historiens. Ils firent pourtant l’objet d’importants travaux d’aménagement et de
+          soins intensifs pendant tout le séjour des papes à Avignon, comme en témoigne la comptabilité produite par la Chambre apostolique.
+          Exceptionnelle par sa richesse et son volume, cette documentation constitue un extraordinaire matériau pour tenter une restitution des
+          “ vergers ” de la papauté d’Avignon, permettant de préciser et d’affiner l’image uniforme et stéréotypée de ces espaces transmise par
+          l’iconographie et la littérature de la fin du Moyen Âge.</p>
+      </div>
+              <div type="sources"><head>Historiographie</head>
+        <p>
+          <hi rend="i">L’histoire des jardins en France. ­</hi> L’histoire des jardins naquit en France dans les dernières décennies du xix <hi rend="sup">e</hi>  siècle. Les premières synthèses historiques furent alors l’œuvre de praticiens, architectes et paysagistes, avant de
+          devenir, dans la première moitié du <num>xx<hi rend="sup">e</hi></num>  siècle, celle des historiens de l’art. À l’horizon des années 1960, l’histoire
+          des jardins connut un essoufflement. Il fallut attendre le dernier quart du <num>xx<hi rend="sup">e</hi></num>  siècle et l’action conjuguée des
+          conservateurs, soucieux d’attirer l’attention sur la dimension patrimoniale des jardins, et des archéologues, dont les méthodes furent mises
+          au service de la restauration de cette architecture végétale, pour donner un nouvel élan aux recherches.</p>
+        <p>
+          <hi rend="i">L’histoire des jardins médiévaux.</hi>­ Depuis les années 1980, les jardins médiévaux sont placés au cœur d’une mode paysagiste
+          et d’une mode éditoriale. Ce thème ne fait pourtant l’objet de recherches de la part des historiens français que depuis une dizaine
+          d’années, malgré les travaux précurseurs de Noël Coulet et d’Henri Bresc à la fin des années 1960. À l’heure actuelle, les recherches
+          semblent s’être organisées autour d’au moins deux grandes problématiques : l’une, aux confins de l’histoire de l’environnement et de
+          l’archéologie du sol, conçoit le jardin comme un élément ancré dans le paysage, l’autre, aux confins de l’histoire de l’art et de
+          l’archéologie, l’envisage comme une partie intégrante de l’architecture.</p>
+        <p>
+          <hi rend="i">Les jardins dans l’histoire de la papauté d’Avignon.</hi>­ Les études menées sur les résidences de la papauté d’Avignon
+          privilégièrent le bâti, n’accordant qu’une place mineure aux jardins qui leur étaient associés. Bien qu’abordés à travers quelques articles
+          et travaux universitaires récents, ces jardins n’ont ainsi jamais fait l’objet d’une étude spécifique. Une plus grande attention a néanmoins
+          été accordée à ceux du palais d’Avignon où des sondages archéologiques ont été réalisés en 1994 sous la direction de Dominique Carru.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

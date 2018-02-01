@@ -1,0 +1,108 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La trajectoire sociale et politique d’Antoine Ruzé, marquis d’Effiat, est originale : fils d’un petit gentilhomme auvergnat, Gilbert
+          Coiffier, mort endetté et de façon prématurée, fut recueilli dans des circonstances opportunes par son grand-oncle Martin Ruzé, secrétaire
+          d’État depuis 1588, qui en fit son héritier et lui transmit son nom par le biais d’une substitution. Héritier des traditions militaires de
+          sa famille paternelle, il fut choisi en 1626 par Louis XIII pour exercer la surintendance des finances, charge technique dont les
+          responsabilités lourdes et complexes touchaient au cœur du fonctionnement de la monarchie. Sa carrière, marquée par une réussite sociale et
+          politique indéniable, n’a cependant pas attiré jusqu’ici les faveurs des historiens. L’intérêt renouvelé de l’historiographie pour
+          l’histoire des institutions de l’État a restitué ces dernières années une place de choix à la biographie ministérielle parmi les travaux
+          scientifiques : elle constitue une approche privilégiée pour étudier les rouages d’une institution tout en permettant d’apporter un
+          éclairage complémentaire sur une période historique donnée, sous l’angle de vue de ceux qui la firent. Il a donc paru intéressant de se
+          pencher sur l’étude de la vie d’un homme dont l’action ministérielle, pour être souvent citée par les historiens des finances du premier
+            <num>xvii</num>
+<hi rend="sup">e</hi> siècle, n’en restait pas moins fort obscure.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources d’archives utilisées dans le cadre de ce travail se divisent en deux ensembles. Le premier regroupe les sources qui ont livré
+          des informations personnelles sur le marquis d’Effiat et sa famille. Les archives du Minutier central des notaires parisiens (études XIV,
+          XIX, XC et XCVI) ont permis de retrouver plusieurs actes, tels que des contrats de mariage ou des partages successoraux, essentiels pour
+          retracer les principaux événements familiaux de la vie du marquis. Elles ont également fourni de nombreuses informations sur ses affaires
+          privées, capitales pour l’étude de son patrimoine. Le dépouillement d’un fonds d’archives privées, celui de la famille de Champflour,
+          conservé aux archives départementales du Puy-de-Dôme (sous-série 9 F), s’est révélé particulièrement utile. Géraud de Champflour, l’un des
+          membres de cette famille, fut en effet l’intendant de la maison du fils du marquis d’Effiat, Henri Ruzé de Cinq-Mars, premier écuyer du roi,
+          entre 1638 et 1642. Les papiers qui servirent à son administration, composés d’inventaires de biens, de baux et de comptes, ont offert de
+          nombreuses données sur l’évolution des possessions auvergnates des d’Effiat. Enfin, les hasards lignagers ayant fait des Ruzé d’Effiat des
+          ascendants des Grimaldi, les Archives du palais princier de Monaco (série S, fonds Mazarin) ont permis de rassembler d’autres informations
+          précieuses sur leur famille.</p>
+        <p>L’état de la documentation financière relative à la surintendance du marquis, fragmentaire et dispersée, a entraîné le recours à plusieurs
+          sources d’archives afin d’étudier son activité politique et administrative. En dépit de sa faiblesse numérique, la correspondance de
+          d’Effiat, notamment celle qu’il échangea avec Richelieu, s’est révélée une source de premier ordre par la richesse des éléments apportés sur
+          ses fonctions. Les archives du cabinet de Richelieu, conservées aux archives du ministère des Affaires étrangères dans la sous-série
+          « Mémoires et documents, France », abondent en documents sur les finances et contiennent plusieurs mémoires rédigés par d’Effiat à
+          l’attention du cardinal. L’exploitation des originaux-minutes des arrêts rendus par le Conseil des finances de juin 1626 à juillet 1632,
+          conservés aux Archives nationales dans la série E, ont permis la collecte de nombreuses informations sur l’état des finances pendant la
+          surintendance du marquis. Enfin, les archives anciennes de Clermont-Ferrand (séries AA et BB), déposées aux archives départementales du
+          Puy-de-Dôme, ont été mises à profit afin d’examiner la nature de son intervention dans l’union des villes de Clermont et de Montferrand,
+          décidée par un édit d’avril 1630.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

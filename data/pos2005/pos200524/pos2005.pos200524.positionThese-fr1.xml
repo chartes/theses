@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les émissions de jeux sont une composante essentielle de l’offre audiovisuelle. Que ce soit à la radio ou à la télévision, elles occupent à
+          l’heure actuelle une place importante dans les programmes. Mais cette situation n’est pas apparue récemment, loin s’en faut. Dès la
+          naissance de la radio dans l’Entre-deux-guerres, les stations s’appuient en effet sur les jeux pour étoffer leurs grilles de programmes et
+          satisfaire des auditeurs à la recherche de divertissement. Au sortir de la Seconde Guerre mondiale, les principales radios émettant en
+          France continuent de profiter de l’attrait exercé par ces émissions distrayantes : qu’il s’agisse des stations publiques ou de postes privés
+          commerciaux tels que Radio-Luxembourg et Europe N° 1, tous s’en servent pour accroître leur audience et fidéliser le public. Des années 1940
+          aux années 1960, les jeux occupent ainsi une place de choix sur les ondes francophones, avant de décliner peu à peu. Bien qu’ils relèvent a
+          priori d’un genre léger et mineur, leur étude est essentielle pour appréhender l’évolution des programmes radiophoniques de l’époque et les
+          nombreux enjeux d’ordre institutionnel, économique ou socio-culturel qui s’y rapportent.</p>
+        <p>Comprendre pourquoi et comment des stations de radio utilisent un genre d’émission bien précis est une question importante. Pourtant, les
+          recherches sur l’histoire de la radio s’intéressent en général davantage au fonctionnement des postes qu’à leur programmation, notamment par
+          manque de sources sur le sujet. Il convenait donc de s’intéresser aux émissions diffusées : le choix d’une étude des jeux permet d’approcher
+          le domaine du divertissement, populaire auprès d’un grand nombre d’auditeurs.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’aspect institutionnel de l’étude s’appuie en grande partie sur les archives de la Radiodiffusion-télévision française (RTF) puis de
+          l’Office de radio-télévision française (ORTF), l’organisme chargé de la gestion de la radio publique. Ce fonds est actuellement conservé au
+          Centre des archives contemporaines de Fontainebleau. Il ne reste en revanche pratiquement pas de traces de l’activité des stations privées.
+          Plusieurs types de sources ont donc été mis à contribution pour pallier ce manque : la presse écrite a été abondamment utilisée (presse
+          généraliste, presse spécialisée dans la radio, périodiques destinés aux professionnels de la publicité) grâce aux collections de la
+          Bibliothèque nationale de France. Des archives sonores ont également pu être écoutées (phonothèque de l’Institut national de l’audiovisuel
+          pour les stations publiques, fonds privé Paul Robert conservé à l’INA pour Radio-Luxembourg et Europe N° 1). Enfin, le recueil de
+          témoignages oraux auprès de six personnes (producteurs, animateurs ou responsables de radios) a permis de compléter les recherches.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Fondée en 1774, l’entreprise Baron devint la société Lanfry après son rachat en 1921 par Georges Lanfry. Cette personnalité hors du commun
+          ­ à la fois catholique engagé, archéologue, chef d’entreprise ­ fit de cette société de bâtiment et de travaux publics spécialisée dans la
+          restauration des monuments historiques (taille de pierre et charpente), l’une des plus importantes dans ce domaine au niveau national. Basée
+          à Déville-lès-Rouen (Seine-Maritime), elle fut chargée après la seconde guerre mondiale de la restauration des principaux monuments
+          historiques rouennais atteints par la guerre : la cathédrale, le Palais de justice, l’église Saint-Maclou furent ses principaux chantiers.
+          Société familiale à la très forte identité, fière d’une ancienneté et d’un savoir-faire rares, elle apparaît comme un exemple
+          particulièrement instructif du rôle et de la place des entreprises dans le monde de la restauration des monuments historiques.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La monographie de l’entreprise Lanfry a été réalisée à partir des archives de l’entreprise, conservées au siège social à
+          Déville-lès-Rouen. Remontant pour les plus anciennes à 1823, elles présentent pour le <num>xx<hi rend="sup">e</hi></num>  siècle un caractère de
+          complétude assez intéressant même si certaines lacunes ont été constatées, notamment dans le domaine de la comptabilité. L’exploitation du
+          fonds, de taille conséquente, a nécessité au préalable un gros travail de repérage, d’inventaire et de classement sommaire, pour compléter
+          les rares instruments de recherche existants, principalement les registres d’inscription des dossiers de chantier.</p>
+        <p>Les archives personnelles de Georges Lanfry, qu’il organisa lui-même, ont été préservées par ses héritiers. Conservées dans ce qui fut sa
+          maison d’habitation, ces archives représentent un volume important (plus de cinquante cartons) et couvrent l’ensemble des activités du
+          personnage, tant archéologiques que professionnelles. Elles s’enrichissent d’un très vaste corpus de photographies, principalement des
+          monuments normands vers lesquels Georges Lanfry a porté son attention. Certains documents retrouvés au sein des archives personnelles
+          concernent l’activité de Georges Lanfry à la tête de l’entreprise, établissant des relations étroites entre les deux fonds.</p>
+        <p>Il a été nécessaire de compléter ce matériau principal par des dépouillements ponctuels aux archives départementales de Seine-Maritime
+          (notamment le fonds Pierre Chirol), à la Médiathèque de l’architecture et du patrimoine (principalement les dossiers de restauration de la
+          collégiale Notre-Dame d’Auffay), ainsi que, de manière plus limitée, à la Direction régionale des affaires culturelles de Haute-Normandie
+          (conservation régionale des monuments historiques), aux archives municipales de Rouen, aux archives de la Chambre de commerce et d’industrie
+          de Rouen et à l’Institut Marc Sangnier, qui a vocation à recevoir à terme une partie des archives personnelles de Georges Lanfry.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

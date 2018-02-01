@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>A la Chine des missionnaires succéda progressivement une Chine des négociants dont l’histoire longue et mouvementée débuta en 1698 avec le
+          voyage de la frégate <hi rend="i">L’Amphitrite</hi>. Ce n’est cependant qu’au terme de nombreuses péripéties que le commerce français en
+          Chine s’organisa, la deuxième Compagnie des Indes, créée le 23 mai 1719, lui apportant un cadre institutionnel stable propice à son plein
+          développement. A partir de 1720, les expéditions françaises gagnèrent ainsi en régularité ; elles connurent une croissance exceptionnelle
+          sous le régime de la liberté commerciale institué en 1769, puis s’éteignirent en 1793 avec la cessation d’activité de la troisième Compagnie
+          des Indes.</p>
+        <p>Eléments indispensables aux pérégrinations maritimes, le vaisseau et son équipage se situaient au <num>xviii<hi rend="sup">e</hi></num> siècle au
+          cœur de toutes les préoccupations des compagnies comme des armateurs ; la réussite d’une expédition dépendait en grande partie de leur choix
+          et de leur préparation. Les voyages à la Chine n’échappaient pas à la règle et requéraient même un peu plus d’attention, comptant parmi les
+          traversées les plus longues, les plus délicates et par conséquent les plus périlleuses qu’il soit donné d’accomplir.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Parmi les trois principaux fonds consultés, celui du Service historique de la marine à Lorient constitue sans aucun doute l’une des
+          principales sources documentaires puisque y sont conservées non seulement les archives de la deuxième Compagnie des Indes (sous-série 1 P)
+          mais aussi la majeure partie des rôles à l’armement et au désarmement dressés tout au long du <num>xviii<hi rend="sup">e</hi></num> siècle par le
+          bureau des classes du département du Port-Louis, puis de Lorient (sous-série 2 P). Le Centre des archives d’outre-mer offre, pour sa part,
+          deux fonds essentiels : celui des Colonies et plus particulièrement la sous-série C2 réunissant une série de documents très divers relatifs
+          à l’histoire des compagnies des Indes et au commerce, et celui de la troisième Compagnie des Indes conservé dans la sous-série 8 AQ. Enfin,
+          la consultation du fonds Marine du Centre historique des Archives nationales reste indispensable, avec notamment les sous-séries B <hi rend="sup">3</hi> pour la correspondance reçue par le secrétaire d’Etat de la marine, C<hi rend="sup">6</hi> pour les rôles d’équipages
+          complétant ceux de Lorient, C<hi rend="sup">7</hi> pour les dossiers individuels des officiers de vaisseau et 4 JJ pour les journaux de
+          bord.</p>
+        <p>Un certain nombre de services d’archives départementales ont par ailleurs très avantageusement complété ces trois premiers fonds, tels ceux
+          du Morbihan ou d’Ille-et-Vilaine où sont respectivement conservées les archives des amirautés de Vannes et de Lorient et celles de
+          Saint-Malo, ou encore ceux de la Gironde et de la Loire-Atlantique qui conservent des documents fondamentaux pour la compréhension des deux
+          expéditions en Chine de 1783-1784 et de 1784-1785.</p>
+        <p>Enfin, les collections de nombreuses bibliothèques françaises offrent des documents inédits, comme des journaux de bord.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

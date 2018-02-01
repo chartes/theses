@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Au cours des dernières décennies du <num>xix<hi rend="sup">e</hi></num> siècle et de la première moitié du <num>xx<hi rend="sup">e</hi></num>, on voit se mettre en place de nombreux « instituts », tant au sein de l’université de Paris que des universités de province. Un décret du 31 décembre 1920 vient réglementer leur existence, en autorisant la création d’instituts de faculté et d’université qui permettent le développement de disciplines au croisement des enseignements universitaires traditionnels, tant dans le domaine des sciences naturelles que dans celui des sciences sociales. Derrière une appellation commune d’institut, les réalités sont cependant bien disparates, aussi bien du point de vue des statuts de ces divers établissements que de leurs objectifs – recherche, enseignement – et des diplômes qu’ils délivrent.</p>
+          <p>L’Institut de psychologie, premier institut d’université créé au sein de l’université de Paris en 1920 à l’initiative d’Henri Piéron, est un cas particulièrement intéressant et emblématique. La psychologie, en effet, discipline nouvelle au carrefour de la philosophie, de la biologie et de la médecine, est un exemple typique de discipline que les cadres universitaires traditionnels sont incapables de circonscrire. Au début de notre période, en 1920, il n’existe encore aucun cursus d’études suivi ni aucun diplôme qui soit consacré à la psychologie scientifique. Unifiant plusieurs enseignements déjà existants et dispersés au sein de divers établissements d’enseignement supérieur, l’Institut de psychologie en crée également de nouveaux et suscite la création de plusieurs diplômes d’études de psychologie. Dès le départ, sa caractéristique est de donner une grande place aux enseignements pratiques, s’assurant pour cela le concours de plusieurs laboratoires de l’École pratique des hautes études.</p>
+          <p>Cette étude porte sur la période d’une cinquantaine d’années qui va de la fondation de l’institut jusqu’à la réforme Faure de 1968, qui entraîne la disparition des anciennes facultés et l’éclatement de l’université de Paris en plusieurs universités : l’institut est alors érigé en unité d'enseignement et de recherche puis intégré à l’université Paris V-René-Descartes. Cette période est marquée par le développement important de la psychologie au sein des universités, avec comme jalons importants, d’une part, la création en 1947 de la licence ès lettres mention psychologie, œuvre de plusieurs professeurs de l’institut, et d’autre part, en 1966, la réforme des études littéraires entraînant l’apparition d’un cycle complet d’études psychologiques, couronné par la licence et la maîtrise, dans les facultés des lettres et sciences humaines. Ces évolutions successives entraînent par contrecoup des changements importants dans les objectifs et le recrutement de l’Institut de psychologie qui, d’un établissement consacré à une formation psychologique générale, devient peu à peu un établissement de professionnalisation délivrant des diplômes spécialisés à des étudiants recrutés après la licence, et mettant l’accent sur les applications pratiques de la psychologie.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les sources principales sont les procès-verbaux des séances du conseil directeur de l’Institut de psychologie et les rapports de fonctionnement annuels de son directeur : ces deux sources figurent dans un cahier conservé provisoirement au service des archives du rectorat de Paris, dans un fonds en cours de classement. Elles fournissent l’essentiel des informations portant sur le fonctionnement interne de l’institut : budget, statistiques relatives aux élèves, discussions relatives tant à l’organisation des enseignements et diplômes qu’aux moyens matériels de l’institut, et <emph>desiderata</emph> adressés au recteur de l’université de Paris.</p>
+          <p>Une autre source importante est constituée par la correspondance entre le recteur de l’université de Paris et la direction de l’Institut de psychologie, conservée au Centre des archives contemporaines (cotes 20010498/189 et 20010498/190), et portant sur tous les aspects du fonctionnement de l’institut, avec néanmoins de nombreuses lacunes temporelles. S’y ajoutent plus accessoirement les archives du conseil de l'université et du conseil de la faculté des lettres de Paris, dans la sous-série AJ<hi rend="sup">16</hi> des Archives nationales, ainsi que les archives personnelles d’Henri Piéron, dans la sous-série 520 AP.</p>
+          <p>De nombreuses informations chronologiques sont tirées de la chronique annuelle publiée par Henri Piéron dans l’<emph>Année psychologique</emph> dont il fut directeur. Le <emph>Bulletin du groupe d’études de psychologie</emph> fournit enfin des indications précieuses sur l’organisation des enseignements et sur la vie de l’institut du point de vue des étudiants</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

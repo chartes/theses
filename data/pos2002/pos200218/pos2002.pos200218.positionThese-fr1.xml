@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’histoire de l’élevage et en particulier de celui du cheval en France au <num>xix<hi rend="sup">e</hi></num> siècle, période de mutations
+          constantes et profondes, est encore mal connue ; elle permet pourtant d’aborder l’étude de la société rurale sous un angle nouveau. Le
+          département de l’Orne, marqué par une grande diversité de situations, offre un terrain d’observation propice à saisir cette question dans
+          toute sa complexité. Cette étude concerne l’élevage des chevaux, et non leur utilisation ; mais elle exclut ceux de luxe, dont la production
+          ressortait de conditions spéciales et n’était qu’en rapport assez éloigné avec le monde rural. L’expression “ chevaux de travail ” peut
+          servir à désigner les autres animaux, tous élevés dans le cadre d’une exploitation agricole, qui forment une catégorie moins bien connue et
+          plus significative. L’organisation pratique et l’évolution de l’élevage, mais aussi les caractéristiques du groupe formé par les individus
+          qui exerçaient cette activité, et enfin le soutien actif apporté par divers organismes et administrations à cette production, qui apparaît
+          comme un enjeu de pouvoir, sont des éléments structurants de la société rurale.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources proviennent essentiellement des Archives départementales de l’Orne, notamment de la série M, qui renferme tous les documents de
+          la préfecture relatifs à l’agriculture et à l’élevage du cheval : les plus intéressants sont les palmarès de concours et la correspondance
+          portant sur la politique de l’élevage. Les sources habituelles de l’histoire sociale ont aussi été utilisées pour étudier les éleveurs comme
+          individus ; les archives communales déposées renferment également beaucoup de questionnaires d’enquêtes agricoles. Une grande partie des
+          documents provient par ailleurs des services spécialisés de l’Etat : au haras national du Pin, il est possible de consulter les rapports des
+          directeurs et divers registres de saillies ou d’étalons, une documentation que complètent quelques rapports d’inspecteurs généraux et des
+          états de juments saillies conservés aux Archives nationales. Au Service historique de l’armée de terre, à Vincennes, sont regroupés des
+          cartons de papiers produits ou rassemblés par des agents du service des remontes militaires, voire par le comité de l’artillerie ;
+          malheureusement peu nombreux, ils forment l’unique source de renseignements sur l’activité de ces services. La dernière grande catégorie de
+          sources mises à contribution, très abondante et utile, est constituée par la documentation imprimée, qui comprend de multiples ouvrages
+          décrivant l’élevage ou traitant de la “ question chevaline ” sous divers angles, des livrets de comptes-rendus et de débats publiés par les
+          comices agricoles, mais aussi la presse locale, qui faisait une large part aux événements ayant trait aux chevaux et à l’élevage.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

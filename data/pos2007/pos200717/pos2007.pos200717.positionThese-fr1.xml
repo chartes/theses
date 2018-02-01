@@ -1,0 +1,121 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Au Panthéon des figures les plus marquantes de la France médiévale, saint Louis occupe évidemment une place de choix. L’impression d’une
+          grande proximité avec son règne est confortée par la reconstitution assez bien assurée de la trame chronologique de sa vie et par tout un
+          ensemble d’anecdotes célèbres, transmises par les hagiographes. Pourtant, l’éclat de cette figure auréolée n’est pas sans laisser des ombres
+          sur certains paradoxes : ainsi le gouvernement royal de cette période reste relativement méconnu, principalement en raison de l’absence
+          d’édition des actes royaux, qui demeurent le fait de clercs dévoués encore maîtres des mots et des nombres. Par ailleurs, dans
+          l’historiographie politique, le règne suscite toujours un certain embarras, pris en étau entre la période de la royauté féodale puis
+          suzeraine et celle de la royauté souveraine. Enfin, le noyau qui englobe le roi et dans lequel se structurent les organismes de pouvoir, la
+          cour, semble se complexifier.</p>
+        <p>L’un des moyens que l’on a retenu pour aborder ces questions est de partir de l’étude de l’Hôtel du roi, dont saint Louis a donné les
+          toutes premières ordonnances, et qui a prouvé dans l’historiographie récente combien il pouvait mener à des voies d’étude prometteuses.
+          Ensemble des serviteurs chargés à l’origine de veiller à l’approvisionnement et au déroulement de la vie quotidienne du roi et de la cour,
+          l’Hôtel conduit toutefois à s’interroger sur les distinctions et les liens entre service domestique et service plus politique,
+          principalement à travers le suivi de la carrière des officiers ; sur l’itinérance d’une royauté qui rayonne dans une sphère géographique
+          précise, révélatrice aussi bien de son emprise sur le territoire qu’elle prétend diriger que des limites des déplacements et des habitudes
+          du Capétien ; enfin sur la manière dont la figure du prince se distingue du reste de la cour au sein des palais, que ce soit dans
+          l’instauration de son service personnel ou la symbolique inhérente à chaque section de la résidence. La proximité avec le maître de
+          certaines catégories de serviteurs, passés à la postérité, aide à affiner cette gradation qui conduit de la figure d’un roi public à celle
+          plus inaccessible d’un prince qui tient en certaines circonstances à s’isoler.</p>
+        <p>Néanmoins, parvenir à scruter la réalité d’un pouvoir dans son quotidien, à expliciter sa nature à l’aune de ses hommes, de son cadre de
+          vie et de ses itinéraires, suppose que l’on ait une documentation suffisamment abondante et surtout qu’elle puisse tenir un tel pari. Une
+          étude critique de la documentation, en particulier diplomatique, s’imposait donc, d’autant plus que ce questionnement donne en fin de compte
+          quelques aperçus sur l’évolution des structures internes de la cour.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’établissement du corpus diplomatique a été la principale réalisation de cette thèse. Il n’aurait pas été possible sans la mise à
+          disposition du fonds d’archives de l’historien Louis Carolus-Barré, décédé en 1993, dont l’œuvre érudite accorde une place particulière à
+          Louis IX, dont il préparait l’édition critique des actes. Lui-même avait hérité des travaux de ses prédécesseurs chartistes qui avaient
+          accompli un travail considérable de transcription et d’analyse des actes royaux : on retrouve ainsi les figures de Léopold Delisle, de
+          Georges Daumet qui, avec L. Carolus-Barré, est sans doute celui qui aura fourni l’effort le plus conséquent, de Maurice Prou et d’Henri
+          Stein. La tâche a donc consisté à compiler un ensemble assez imposant de fiches et de notes de travail, conservées à l’Académie des
+          inscriptions et belles-lettres, en les reclassant dans l’ordre chronologique. L’ampleur de cette réalisation, qui n’avait pour premier but
+          que de livrer une synthèse des recherches précédemment menées et jusque-là inédites, a empêché la vérification et l’actualisation de
+          références qui pour un grand nombre d’entre elles, il ne faut pas le cacher, restent imprécises voire parfois douteuses. Néanmoins, le
+          travail a aussi porté sur les registres de chancellerie JJ 26 et JJ 30A des Archives nationales et le ms. lat. 9778 du département des
+          manuscrits de la Bibliothèque nationale de France. N’étant pas encore l’outil d’enregistrement systématique des actes qu’ils deviendront à
+          partir du <num>xiv<hi rend="sup">e</hi></num> siècle, ces registres fournissent des informations fort utiles pour l’étude de l’Hôtel : listes
+          d’hommages et listes de gîtes dans lesquels le roi a séjourné. Les archives de l’Assistance publique et des Hôpitaux de Paris, peu explorées
+          par L. Carolus-Barré, ont livré quelques références supplémentaires. Au total, 2382 actes ont été inventoriés à travers l’ensemble des
+          institutions de conservation en France. Le travail demeure bien entendu incomplet et perfectible.</p>
+        <p>Les autres sources exploitées ont été les comptabilités royales, en particulier celles de l’Hôtel, qui, bien que peu nombreuses,
+          renseignent abondamment une multitude de champs. Certaines ont été récemment éditées, notamment les comptes sur tablettes de cire de Jean
+          Sarrazin, chambellan de saint Louis, par Élisabeth Lalou. Les autres comptes ont été consultés dans le <hi rend="i">Recueil des historiens
+            des Gaules et de la France</hi>(t. XXI et XXII), ainsi que, pour quelques fragments, dans des recueils érudits du département des
+          manuscrits de la BnF. Ce service conserve également d’autres compilations intéressantes pour cette étude : fragments de comptabilité, listes
+          de manteaux donnés aux chevaliers et aux clercs du roi, liste des gîtes dans le royaume…</p>
+        <p>Enfin, les chroniques et les récits biographiques et hagiographiques, principalement de Geoffroy de Beaulieu, Guillaume de Chartres,
+          Guillaume de Nangis, Guillaume de Saint-Pathus, Jean de Joinville, du Ménestrel de Reims ou encore du Moine anonyme de Saint-Denis, ont été
+          mis en relation, autant que possible, avec les sources précédemment citées et les problématiques définies en introduction.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

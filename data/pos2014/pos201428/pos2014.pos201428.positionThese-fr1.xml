@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Formant une institution de chanoines réguliers depuis 1031, les chanoines de Saint-Thomas étaient au nombre de vingt-six à l'époque où commence cette étude. Recrutés dans des milieux proches du patriciat urbain, ils ne vivaient plus en communauté. Le rayonnement du chapitre s'appuyait sur le patronage de plusieurs paroisses et un riche patrimoine foncier. Les derniers siècles du Moyen Âge avaient aussi été l'occasion pour lui de s'émanciper de la tutelle de l'évêque de Strasbourg, qui du reste ne résidait plus sur place depuis 1262.</p>
+          <p>Les idées de Luther trouvèrent à Strasbourg un terrain propice à leur développement, et ce dès le début des années 1520. Les écrits du réformateur de Wittemberg y sont imprimés dès 1519 ; et, malgré l'édit de Worms de 1521, ils continuèrent d'y être publiés grâce à la tolérance du magistrat. L'année 1523 vit la venue des trois principaux réformateurs de Strasbourg, Martin Bucer, Wolfgang Capiton et Caspar Hédion, ainsi que les premières manifestations de la doctrine luthérienne au sein de la ville et du chapitre. Saint-Thomas se trouva alors au centre des négociations concernant l'adoption des nouvelles réformes qui remettaient en cause un grand nombre de ses privilèges. L'échec des négociations conduisit une partie du chapitre, à la fin de l'année 1524, sur le chemin de l'exil. L'éclatement du chapitre ne se résolut qu'en 1529, année durant laquelle fut adoptée la réforme de la suppression de la messe, marquant ainsi officiellement le passage de Strasbourg à la Réforme. Vint ensuite le temps de l'implantation des idées nouvelles et de leur réalisation sur le terrain, durant les décennies 1529-1549. Le chapitre, devenu majoritairement protestant, fut au centre des réformes mises en place par la municipalité, notamment dans le processus de réforme de l'enseignement strasbourgeois. </p>
+          <p>Cette thèse aborde l'étude de la « communauté » qu'était Saint-Thomas sous l'angle institutionnel, en se penchant sur la question du passage d'une institution catholique à un établissement protestant et consacré à l'enseignement. Elle étudie également les relations et les interactions du chapitre avec les autres acteurs de la Réforme strasbourgeoise : le magistrat, les bourgeois, ainsi que l'évêque et les deux autres collégiales strasbourgeoises. </p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les fondations protestantes consacrées à l'enseignement furent exemptées de la vente des biens nationaux en 1790, grâce à l'action du juriste Gustave Koch. En 1802 fut créé un Séminaire protestant ou Fondation Saint-Thomas, regroupant des anciens établissements et bourses d'enseignement, dont le chapitre demeurait le coordinateur. L'ensemble de ses archives anciennes fut déposé en 1901 aux archives municipales de Strasbourg, aujourd'hui archives de la ville et de la communauté urbaine de Strasbourg. Elles comprennent les archives du chapitre à proprement parler, mais aussi des différentes fondations en faveur de l'enseignement, de l'ancienne université, des scolarques, et des couvents dont le magistrat, à la Réforme, s'appropria les revenus pour les redistribuer.</p>
+          <p>La source la plus précieuse pour étudier le début de la Réforme au sein du chapitre de Saint-Thomas est sans nul doute le journal du doyen Nicolas Wurmser, appelé également <emph>Protokoll.</emph> À l'origine d'usage purement personnel et d'ordre administratif, il lui permettait d'y consigner les délibérations capitulaires, les lettres et messages reçus ou émis, et bien d'autres événements rythmant la vie du chapitre. C'est néanmoins avec l'avancée de la Réforme à Strasbourg que ce journal prendra une autre dimension, celle du témoignage personnel d'un clerc opposé aux idées et aux mesures nouvelles. Les chapitres des années 1523 et 1524 se font en effet l'écho d'une aggravation du conflit entre Saint-Thomas et la ville, jusqu'à la rupture que constituera la fuite hors de la ville d'une partie des chanoines, au premier rang desquels Nicolas Wurmser. Symboliquement, Wurmser arrêta son journal au moment où il quitta la ville. On trouve donc dans son récit à la fois le témoignage d'un membre du second chapitre de la ville – et à ce titre un acteur au cœur des événements –, et le point de vue plus personnel d'un défenseur convaincu de l’Église romaine. </p>
+          <p>Pour la période débutant après 1524, d'autres séries du fonds Saint-Thomas offrent des documents permettant de retracer les événements. Celles-ci ont été créées selon un classement thématique, à partir de documents de producteurs et de typologie différents. Elles contiennent essentiellement de la correspondance, des copies de traités ou de déclarations publiques, des inventaires des biens du chapitre. </p>
+          <p>Strasbourg et le chapitre Saint-Thomas au début du <num>xvi<hi rend="sup">e</hi></num> siècle</p>
+          <p>Patriciens et bourgeois se partageaient au début du <num>xvi<hi rend="sup">e</hi></num> siècle l'administration de la cité, ville libre d'Empire qui comprenait alors 20 000 à 25 000 habitants. « Chef de la ville », l'<emph>Ammeister</emph> était élu par les représentants des corporations, tandis que la charge de <emph>Stettmeister</emph>, devenue honorifique, revenait au patriciat. L'assemblée souveraine de la ville, le Conseil, était composée de trente membres, dont un tiers de patriciens. Elle était assistée de deux commissions qui préparaient et discutaient les mesures qui lui étaient soumises : les XIII, qui se préoccupaient des questions diplomatiques et militaires, et les XV, qui se penchaient sur celles de politique intérieure. Ces droits politiques étaient réservés aux bourgeois. Le clergé de la ville, nombreux, constituait une catégorie à part. Outre les nombreuses communautés monastiques, l'élite du clergé strasbourgeois était constituée du grand chapitre de la cathédrale et des trois chapitres secondaires de la ville, Saint-Pierre-le-Jeune, Saint-Pierre-le-Vieux et Saint-Thomas. Ces derniers avaient gagné leur indépendance vis-à-vis de l'évêque, résidant à Saverne. Les récentes tentatives de réforme du clergé entreprises par les évêques strasbourgeois avaient rencontré l'opposition du clergé et de son esprit de corps.</p>
+          <p>À la suite des dotations des évêques successifs et des privilèges et des immunités gagnés auprès des empereurs, Saint-Thomas était devenu un riche propriétaire terrien. Le contrôle de trois paroisses urbaines, Saint-Thomas, Sainte-Aurélie et Saint-Nicolas, lui assurait une influence réelle à Strasbourg. Ses revenus entretenaient pas moins de vingt-cinq canonicats, quatorze vicariats et vingt-trois chapellenies. On constate, en étudiant l'origine géographique des chanoines, que ce clergé était encore bien implanté localement, puisque, en 1523, pas moins de treize chanoines étaient originaires de la ville de Strasbourg. Leur origine sociale est toutefois plus floue, car elle n'est souvent connue que pour les membres du chapitre issus de familles importantes. Traditionnellement, une partie du recrutement se faisait en effet au sein du patriciat strasbourgeois. On rencontre ainsi des membres d'anciennes familles strasbourgeoises dont les parents étaient à la direction de la ville. On retrouve la très grande majorité de ces chanoines inscrits dans des matricules universitaires. Plus de la moitié avaient poussé jusqu'à la maîtrise, huit étaient docteurs. Par ailleurs, plusieurs membres de la collégiale pouvaient être rattachés au mouvement d'humanisme chrétien. </p>
+          <p>L'accès aux bénéfices se faisait en théorie sur le principe de la libre élection par le chapitre. Le privilèges des « premières prières » de l'empereur, ainsi que les grâces apostoliques délivrées par le pape allaient cependant à l'encontre de cette liberté. Cela ne signifiait toutefois pas l'arrivée massive de bénéficiaires étrangers au sein du chapitre. On retrouve en effet de nombreux exemples de familles strasbourgeoises anciennes dont les membres intégrèrent le chapitre sur plusieurs générations successives. </p>
+          <p>Saint-Thomas n'était pas épargné par les problèmes de discipline. Le plus récurrent, pendant tout le Moyen Âge, était l'absentéisme, qui allait souvent de paire avec le cumul de bénéfices, et que différents statuts successifs peinèrent à combattre. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

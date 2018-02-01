@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+    <p>La notion d’« inaliénabilité » appliquée aux collections publiques d’œuvres d’art est aujourd’hui admise comme un précepte incontestable du droit français. Inscrite « au cœur même du patrimoine », elle a une origine très ancienne dans le royaume de France, puisqu’elle est déjà mise en application sous l’Ancien Régime. Pourtant, on excepte la période de la Révolution française qui aurait dérogé à ce principe en permettant l’aliénation des biens du domaine de la Nation, le terme même d’« inaliénabilité » appliqué aux biens artistiques disparaissant dans le tumulte révolutionnaire et ne réapparaissant qu’avec le sénatus-consulte du 30 janvier 1810. Ces travaux s’attachent donc à l’étude de la période révolutionnaire et consulaire, du « Code d’aliénation », décrété les 22 novembre-1<hi rend="sup">er</hi> décembre 1790, qui abolit le principe d’inaliénabilité du domaine, à la publication du Code civil en avril 1804. Si la maxime de l’inaliénabilité est devenue sans motif pour les révolutionnaires, car trop liée à l’ancienne monarchie, ils doivent penser une nouvelle forme de protection pour préserver cet héritage artistique, conférant finalement aux objets d’art qu’ils ont sélectionnés une portée juridique quasi exceptionnelle et unique pour l’époque. Il convenait donc d’aborder le statut de l’œuvre d’art à la fois à travers la création de ce régime de propriété à part, et de définir les enjeux et critères de sélection choisis par les commissaires révolutionnaires pour former le nouvel ensemble national, en se consacrant à la question de l’œuvre d’art, bien meuble.  </p>
+    
+     </div>
+              <div type="sources"><head>Sources</head>
+    <p>L’approche juridique supposait de se plonger dans de multiples codes, coutumes et jurisprudences diverses : sous la Révolution, l’une des références indispensables reste les archives parlementaires, exploitées comme des sources à part entière et qui permettent d’appréhender les grands débats législatifs de la période. Il fallait ajouter également tous les rapports, discours et mémoires des députés ou artistes révolutionnaires, orateurs prolixes dans une France où l’art devient un réel enjeu juridique. De plus, pour prendre conscience de la réalité des dispersions et de la politique de conservation mis en place, on s’est tourné vers la correspondance et les rapports des commissions artistiques révolutionnaires, conservés dans la série F<hi rend="sup">17</hi> des Archives nationales qui contient une grande partie des inventaires d’œuvres établis durant la Révolution. Le meilleur aperçu des critères de sélection a été rendu possible par le dépouillement du registre d’œuvres d’art du dépôt de Nesle (F<hi rend="sup">17</hi>* 372-373) tenu du 28 pluviôse an II (16 février 1794) au 1<hi rend="sup">er</hi> prairial an V (20 mai 1797). </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

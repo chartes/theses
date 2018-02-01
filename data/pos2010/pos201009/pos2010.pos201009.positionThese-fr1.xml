@@ -1,0 +1,112 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En 1979, Philippe Wolff proposait de stimuler la réflexion des historiens du catharisme en leur soumettant la question suivante : « Y
+          eut-il une optique propre des histoires régionales (<num>xvi<hi rend="sup">e</hi></num>-<num>xviii<hi rend="sup">e</hi></num> siècle) ? »
+            (<hi rend="i">Cahiers de Fanjeaux</hi>, 14, p. 71-84). Trois décennies plus tard, cette interrogation, quoique légitime, n’a toujours pas
+          reçu de réponse argumentée, et les quelques éléments préliminaires avancés par l’auteur n’ont pas été étoffés.</p>
+        <p>Pourtant, ce ne sont pas les sources qui manquent, bien au contraire. Car au-delà de l’histoire du catharisme, c’est la situation
+          religieuse du Languedoc et la question du rattachement de cette province à la Couronne à la suite de la Croisade albigeoise qui mériteraient
+          d’être envisagées dans leur dimension historiographique. La difficulté majeure d’un tel sujet réside probablement dans l’éclatement des
+          passages pertinents, car les matières religieuses sont un des nombreux aspects évoqués par les historiographes méridionaux vivant à l’époque
+          moderne. Il conviendrait donc de lire l’intégralité de leurs ouvrages pour y repérer les chapitres ou les paragraphes relatifs au sujet qui
+          nous occupe.</p>
+        <p>Dans cette production échelonnée sur trois siècles, un auteur en particulier mérite une attention spéciale : Nicolas Bertrand.
+          Contrairement à ses successeurs qui ont laissé des ouvrages essentiellement historiques, ce magistrat contemporain de Louis xii a composé en
+          outre un traité juridique, aujourd’hui fort méconnu, consacré à la procédure inquisitoriale de son temps. Cette œuvre aborde l’hérésie et sa
+          répression sous un angle résolument juridique et complète avantageusement la vision de l’histoire religieuse du Midi tel que ce même auteur
+          la manifeste dans ses travaux historiques mieux connus.</p>
+        <p>L’enjeu de cette thèse est double. Il s’agit dans un premier temps de relancer, en l’élargissant grâce au recours à des sources
+          inexploitées, l’examen de la question posée par Philippe Wolff et demeurée sans réponse : quel fut le point de vue de Nicolas Bertrand,
+          historien méridional des premières années de l’époque moderne, sur l’histoire religieuse de sa province ? Ce point de vue fut-il original ?
+          Comment la mémoire de l’Inquisition toulousaine fut-elle consignée et transmise pendant et après sa période d’activité ? Dans un second
+          temps, il s’agit de présenter une édition critique, complète, moderne et fonctionnelle, des écrits de Nicolas Bertrand relatifs à la
+          répression de l’hérésie, tant d’un point de vue historique que juridique et théologique.</p>
+        <p/>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La méconnaissance du traité de Nicolas Bertrand relatif à la procédure inquisitoriale du début du <num>xvi<hi rend="sup">e</hi></num> siècle tient principalement à sa rareté. Ce post-incunable produit à Toulouse par l’atelier de Jean Grandjean au cours de
+          l’été 1512 ne subsiste plus qu’à un seul exemplaire identifié, conservé à la Réserve des livres rares et précieux de la Bibliothèque
+          nationale de France sous la cote Res. H-2276. Aucune édition postérieure de cette <hi rend="i">Repetitio de inquisitione hereticorum</hi> ne
+          semble avoir été donnée.</p>
+        <p>Cette plaquette gothique étant le commentaire d’une décrétale, l’auteur y envisage la répression de l’hérésie au prisme du droit canonique.
+          C’est pourquoi, afin de donner une image plus fidèle de la répression de l’hérésie sous la plume de Nicolas Bertrand, le choix a été fait
+          d’éditer les extraits de son histoire toulousaine, <hi rend="i">Opus de Tholosanorum gestis ab urbe condita</hi> (Toulouse : Grandjean,
+          1515) relatifs aux questions d’hérésie. Ce dernier ouvrage demeure aujourd’hui dans une vingtaine de bibliothèques publiques à travers le
+          monde ; une trentaine d’exemplaires y sont catalogués.</p>
+        <p>Naturellement, les sources archivistiques n’ont pas été négligées, mais ce matériau est intervenu au second plan, dans la mesure où il
+          complétait ou éclairait les données historiographiques. La connaissance du personnage de Nicolas Bertrand et l’éclaircissement d’une affaire
+          d’hérésie particulièrement épineuse survenue à Toulouse en 1510-1511 ont nécessité le dépouillement de plusieurs fonds, tant aux archives
+          départementales de Haute-Garonne, où se trouvent les registres du Parlement dans la série B, qu’aux archives municipales de Toulouse, où les
+          actes constitutifs de la commune, les délibérations des magistrats municipaux et les rôles d’impôts occupent respectivement les séries AA,
+          BB et CC.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

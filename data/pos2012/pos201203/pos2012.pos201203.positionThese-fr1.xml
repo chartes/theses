@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Malgré l’importance de la guerre au sein de la société médiévale et le rôle clef que sont censés jouer les professionnels de l’armement, armuriers et fourbisseurs d’épées parisiens demeurent méconnus, d’abord parce que le centre armurier de la capitale est longtemps resté dans l’ombre de concurrents plus notoires, à l’instar de la Lombardie, et ensuite parce que les chercheurs n’ont accordé à ces artisans qu’une place mineure dans leurs travaux. Pourtant, l’intérêt d’une telle étude se justifie pleinement, d’autant plus que, comme l’a souligné Philippe Contamine, la question de l’armure n’intéresse pas le seul art de la guerre. Ainsi, tout en s’inscrivant dans la lignée de l’histoire des métiers dont elle est l’héritière directe, la présente thèse souhaite également apporter sa contribution à l’histoire urbaine et sociale. Par ailleurs, à l’heure où l’armurerie parisienne de la Renaissance est à l’honneur, dynamisée par la recherche en histoire de l’art, un retour sur sa genèse médiévale a semblé constituer une approche intéressante.  </p>
+    <p>Afin d’appréhender au mieux le groupe socio-professionnel des armuriers et des fourbisseurs d’épées, le propos a été divisé en quatre parties. Il a, dans un premier temps, paru légitime de s’arrêter sur les sources et sur la définition du corpus avant de se lancer dans l’examen des principaux traits caractérisant ces artisans ; une fois ce premier portrait brossé, il a été jugé bon de s’intéresser à la production des armuriers et des fourbisseurs, avant de conclure par une réflexion portant sur leur poids social et leur place au sein du monde parisien. À n’en pas douter, le rôle et l’action de ces artisans sont, non seulement à évaluer, mais également à découvrir.  </p>
+    
+    
+    
+    </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

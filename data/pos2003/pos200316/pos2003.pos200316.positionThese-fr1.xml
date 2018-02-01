@@ -1,0 +1,104 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p><hi rend="i">La deuxième ville du royaume, de la Harelle à la conquête anglaise</hi> — L’histoire urbaine en France à la fin du Moyen Age,
+          bien qu’abondamment étudiée, souffre de l’absence d’étude d’ensemble sur les deux principales villes du royaume, Paris et Rouen. La place de
+          la capitale normande dans le contexte politique et économique général de la fin du <num>xiv<hi rend="sup">e</hi></num>  siècle et du début du XV <hi rend="sup">e</hi>  siècle est telle qu’il semble impossible de faire l’impasse sur son étude : deuxième ville de France, premier port du
+          royaume, elle contrôle, depuis l’époque ducale semble-t-il, le commerce sur la Basse-Seine, et notamment celui des vins de Bourgogne et de
+          Laonnois ; sa rivalité avec Paris est constante sur ce plan. En 1382, une révolte populaire, la Harelle, conduit la royauté à supprimer la
+          commune anciennement régie par un patriciat marchand ; une nouvelle municipalité se reconstruit sous l’autorité du bailli. Les marchands
+          rouennais sont-ils toujours présents ? Quelle est leur influence exacte dans la cité ? De nombreuses sources, municipales pour la plupart,
+          et une méthode, la prosopographie, peuvent contribuer à améliorer notre connaissance de cette ville marchande.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources principales utilisées pour cette étude sont avant tout d’origine municipale : registres de délibérations (1389-1398 et
+          1404-1412), d’où sont issues les listes de marchands rouennais sur lesquelles porte le travail ; chartrier de Rouen, riche mais très mal
+          inventorié ; divers registres-cartulaires du début du <num>xvi<hi rend="sup">e</hi></num>  siècle offrant l’analyse de documents aujourd’hui absents
+          du chartrier. De nombreuses sources complémentaires ont été mises à contribution : fonds de l’archevêché, de confréries et de paroisses
+          rouennaises ; fonds de juridictions (Echiquier de Normandie, Parlement de Paris, Chambre des Comptes, Cour des Aides) ; ordonnances royales
+          sur les métiers ; comptes divers et toujours exceptionnels en l’absence de comptabilité municipale (treizième des vins de 1361, prêts à la
+          Couronne en 1370, comptes du péage de Mantes-la-Jolie de 1402 à 1415) ; fonds notariaux, dont l’abondance a nécessité des sondages
+          drastiques.</p>
+        <p>Une chronique rouennaise contemporaine des événements, celle de Pierre Cochon, fournit à l’historien des informations sur l’atmosphère
+          rouennaise à cette époque tout en mettant l’accent sur la défense des intérêts de l’Eglise. Cette ligne de conduite est reprise dans les
+          siècles suivants, jusqu’à la somme historique de François Farin à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle qui commence à faire l’éloge
+          de la bourgeoisie municipale. C’est cependant avec les érudits rouennais du <num>xix<hi rend="sup">e</hi></num>  siècle (Adophe Chéruel, Charles de
+          Beaurepaire, Ernest de Fréville) que les premières éditions de sources utilisables sont mises au service d’une véritable recherche
+          scientifique. Leurs travaux sont employés et étendus par les chercheurs du <num>xx<hi rend="sup">e</hi></num>  siècle, au premier rang desquels Michel
+          Mollat.</p>
+        <p>La méthode de traitement et d’exploitation des données la plus commode pour l’étude de la bourgeoisie marchande s’avère être la
+          constitution d’une base de données prosopographique. Cet exercice ne va pas sans poser de nombreuses interrogations, ne serait-ce que dans
+          la définition de la population étudiée : qu’est-ce qu’un bourgeois, qu’est-ce qu’un marchand de Rouen ? Des études récentes sur la « genèse
+          de l’Etat moderne » et l’emploi de l’informatique appliquée à des sujets médiévaux permettent de déterminer des cadres précis d’évaluation.
+          La prise en compte de ces éléments conduit à établir un corpus de référence de 143 marchands appartenant à 88 familles, qui précise leur
+          éventuelle carrière municipale, leurs occupations, le contenu de leur négoce et apporte des renseignements personnels.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

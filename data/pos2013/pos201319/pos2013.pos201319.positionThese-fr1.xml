@@ -1,0 +1,89 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Si le nom de Gaumont est aujourd’hui universellement connu, et qu’on lui associe sans hésitation l’image de la marguerite, l’histoire de cette société, <hi rend="i">a fortiori</hi> celle de son fondateur, et la position qu’elle a occupée dans l’industrie cinématographique française et mondiale sont aujourd’hui largement méconnues.  </p>
+		<p>En effet la maison Gaumont est la plus ancienne, et une des plus importantes maisons françaises avec Pathé, présente dans tous les domaines de l’industrie cinématographique, que ce soit la construction, la production, la distribution ou l’exploitation. Elle fut particulièrement novatrice dans le domaine des recherches techniques : les établissements Gaumont, avec le « Chronophone » pour les films parlants et le « Chronochrome » ou « Gaumontcolor » pour ceux en couleurs naturelles, sont bien, sur ce plan, des pionniers. </p>
+		<p>Avec Pathé, les établissements Gaumont dominèrent en outre, et ce jusqu’au début des années 1910, le marché des vues animées, tant en France qu’à l’étranger. C’est pourquoi l’étude de cette société se révèle particulièrement importante pour quiconque s’intéresse à l’histoire des débuts du cinéma. Or malgré la place qui fut celle de la société Gaumont dans l’industrie cinématographique, nous disposons de peu de travaux sur celle-ci : une étude approfondie de la firme fait encore défaut, et aucune biographie de Léon Gaumont n’a été établie à ce jour.  </p>
+		<p>Par ailleurs, l’histoire de la maison Gaumont et celle de son fondateur s’avèrent être indissociables, tant les goûts, idées et valeurs de celui-ci ont orienté la politique de sa société. De ce fait, il faut passer par l’étude du personnage de Léon Gaumont, dont le parcours est en bien des points semblable à celui de nombreux grands industriels de la fin du <num>xix</num><hi rend="sup">e</hi> siècle, pour comprendre les choix qui ont fait le succès de sa société, en particulier lors de ce qu’on pourrait appeler l’apogée de la maison Gaumont – entre 1900 et 1910 –, mais aussi ceux qui ont pu conduire à son échec final, ou qui du moins n’ont pas permis de l’enrayer, à la fin des années 1920. </p>
+		<p>Notre travail vise donc à situer ce personnage capital mais méconnu de l’histoire de l’industrie cinématographique française, et ambitionne, autant que le permettent les sources à notre disposition, d’établir l’influence exacte de Léon Gaumont sur les destinées de sa société. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Si la maison Gaumont a jusqu’ici été quelque peu oubliée par les historiens, c’est en partie en raison de la difficulté d’accès à ses archives. Nous disposons de peu de documents susceptibles de nous renseigner sur Léon Gaumont lui-même. La plupart de ses archives personnelles ont aujourd’hui disparu. Une partie d’entre elles, rassemblées par son fils cadet Louis Gaumont et confiées à la Cinémathèque française, sont aujourd’hui conservées dans le fonds Louis Gaumont de la Bibliothèque du film (BIFI). Ce fonds très important, tant en termes numériques qu’en termes de richesse documentaire, constitue l’essentiel du corpus utilisé dans le cadre de notre travail. </p>
+		<p>Le musée Gaumont, à Neuilly-sur-Seine, où est en particulier conservée la biographie de Léon Gaumont écrite par son fils Louis, restée inédite, ainsi que quelques autres institutions possèdent également des archives pouvant compléter les informations fournies par le fonds Louis Gaumont. Outre les registres d’état civil de diverses archives départementales auxquels nous avons eu recours pour les différents membres de la famille Gaumont, nous avons pu trouver des renseignements sur les établissements scolaires et d’instruction fréquentés par Léon Gaumont auprès des archives lasalliennes de Lyon, des archives de Paris ou encore à la Bibliothèque nationale de France. Nous avons également consulté quelques documents aux Archives nationales. Néanmoins, parmi tous les documents trouvés au sujet de Léon Gaumont, rares sont ceux qui nous renseignent sur sa vie privée, et plus encore sur ses goûts et opinions personnels : de ce fait, tout ce qui touche à la vie strictement privée de Gaumont nous échappe en grande partie.  </p>
+		<p>Le personnage étant difficile à atteindre par les sources à notre disposition, nous avons dû tenter d’y accéder par le biais de l’étude de sa société et des sources afférentes. En effet, Léon Gaumont a consacré à son travail une part immense de son temps et de son énergie ; ses décisions, fruit de ses propres expériences et inclinaisons, ont déterminé les destinées de sa société. C’est pourquoi nous pouvons tenter de faire le portrait de l’homme à travers son œuvre. Afin d’étudier celle-ci, nous avons là encore eu essentiellement recours au fonds Louis Gaumont de la BIFI, dont nous avons complété les informations par des dépouillements des archives du tribunal de commerce de la Seine, aux archives de Paris. Malheureusement, une partie des archives des établissements Gaumont ont également été perdues au fil des années, que ce soit par l’incurie des successeurs de Léon Gaumont, où lors de la destruction du Gaumont-Palace en 1973.  </p>
+		<p>Nous avons également recouru à un grand nombre de sources publiées : éditions de correspondances et de témoignages, comptes rendus de réunions scientifiques, documents iconographiques, articles de presse, catalogues d’appareils ou de vues animées des établissements Gaumont, etc. </p>
+		<p>Enfin, plusieurs bases de données, comme la base Léonore pour les titulaires de la Légion d’honneur ou encore celle des anciens membres de l’Académie des sciences nous ont fourni de nombreux renseignements sur les collaborateurs et les proches de Gaumont. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

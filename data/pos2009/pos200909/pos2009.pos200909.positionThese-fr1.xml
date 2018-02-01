@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les révolutions de la fin du <num>xviii</num>
+<hi rend="sup">e</hi> siècle, en France et à Haïti, n’ont pas seulement eu des conséquences politiques, à une échelle régionale. Leurs
+          répercussions sont également d’ordre social et économique. Les milieux d’affaires ont particulièrement été concernés par les mutations de
+          l’époque.</p>
+        <p>Cependant, l’histoire économique sous la Révolution, au sens large, est encore assez mal connue. Elle reste surtout envisagée à travers un
+          petit nombre de travaux de synthèse, parfois anciens. Quant aux historiens des négociants, ils délaissent souvent ces années et ne se
+          préoccupent que rarement de la place réservée, en période révolutionnaire, au négoce – entendu aussi bien comme activité économique que
+          comme groupe social et professionnel.</p>
+        <p>Le cas des sociétés Chauvet, fortement impliquées dans le commerce colonial avec les Antilles, permet de poser très directement le problème
+          du rapport entre négoce et révolutions, envisagé sous l’angle de l’histoire des entreprises. Plus spécifiquement, le sujet renvoie aussi à
+          la question de la mobilité sociale et à la redéfinition du milieu négociant, dans la France révolutionnaire.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds Chauvet et Lafaye, conservé par le service des archives de la Chambre du commerce et de l’industrie de Marseille-Provence,
+          constitue l’essentiel des sources utilisées. Ce fonds, acquis dans les années 2000, rassemble la correspondance active et une partie de la
+          comptabilité de plusieurs sociétés successives, placées sous la responsabilité de Jean-Jacques Chauvet. Seuls quelques travaux récents ont
+          donc pu y avoir recours, sans jamais prendre pour objet d’étude direct l’entreprise Chauvet en elle-même. Auparavant, celle-ci restait
+          d’autant plus méconnue qu’elle n’appartenait pas aux plus grandes maisons de négoce marseillaises et que les sources faisaient grandement
+          défaut. Quelques documents épars aux Archives nationales et aux archives départementales des Bouches-du-Rhône mentionnent son existence.
+          Enfin, une partie des fonds des séries E (archives notariales, paroissiales), L (archives fiscales de l’époque révolutionnaire) et Q
+          (confiscation des biens des émigrés), conservés par les archives départementales des Hautes-Alpes, de l’Isère et des Bouches-du-Rhône,
+          fournissent de précieux renseignements sur l’environnement social et familial qui entourait l’entreprise. Les documents analysés concernent
+          donc presque exclusivement les sociétés Chauvet et leur propre réseau commercial. Mais au-delà de leur particularité, ces sources permettent
+          d’éclairer le domaine, encore relativement délaissé des franges inférieures ou intermédiaires du négoce, et renvoient par conséquent à des
+          problématiques plus générales.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>À partir du milieu du <num>xvii</num><hi rend="sup">e</hi> siècle, les évolutions du répertoire religieux poussent certains couvents et abbayes à engager des chanteurs et chanteuses professionnelles pour se produire durant les cérémonies extraordinaires. Cette pratique, qui va de pair avec la théâtralisation des offices, fait l’objet de vives critiques, et est ensuite réglementée par des décisions royales et épiscopales. Des couvents féminins continuent cependant d’employer des chanteuses extérieures durant le <num>xviii</num><hi rend="sup">e</hi> siècle, notamment à l’occasion des offices de Ténèbres. À partir de 1725, avec la création du Concert spirituel, cette pratique s’institutionnalise en dehors des églises. Le privilège accordé à l’institution interdit en effet d’y faire chanter de la musique de paroles françaises. Durant les jours de fermeture des autres spectacles, de nombreuses chanteuses sont entendues du public sur un répertoire de petits et grands motets. </p>
+		<p>Il convient de s’interroger sur les tensions entre sacrée et profane que crée l’emploi de femmes laïques pour chanter de la musique religieuse : les voix de femmes, notamment dans un contexte religieux, font traditionnellement l’objet de méfiance. À cela s’ajoute le profit financier que peuvent en faire les couvents. Cette méfiance est renforcée par la réputation des actrices de l’Opéra, dont le mode de vie fait parfois scandale et qui semble incompatible avec le caractère sacré de la musique chantée. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+		<p>Pour ce qui est des établissements religieux, les registres de délibération (conservés notamment dans la série LL des Archives nationales) et les archives comptables (sous-série H5 des Archives nationales) ont été fréquemment utilisés. Les archives de la police, et notamment les dossiers constitués par l’inspecteur Meunier (Bibliothèque de l’Arsenal, Archives de la Bastille, manuscrits 10235 à 10237) permettent d’en savoir plus sur certaines des actrices qui chantent au Concert spirituel. </p>
+		<p>La presse constitue également une source précieuse sur la vie musicale au <num>xviii</num><hi rend="sup">e</hi> siècle, notamment pour le Concert spirituel, en l’absence des archives de l’institution. Le <hi rend="i">Mercure de France</hi> a le mérite d’exister pour toute la période, mais son caractère généraliste et privilégié rend ses comptes rendus des concerts souvent brefs et imprécis. <hi rend="i">L’Avant-Coureur</hi>, hebdomadaire paraissant de 1760 à 1773, n’est pas à privilège et permet donc d’avoir une vision plus critique des interprètes du Concert spirituel. Deux périodiques plus spécialisés, le <hi rend="i">Journal de musique </hi>(1770-1777) et l’<hi rend="i">Almanach musical</hi> (1775-1783) connaissent des parutions plus chaotiques, mais développent une critique spécifiquement musicale qui peut s’avérer précieuse pour avoir une idée plus précise des talents d’une chanteuse. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

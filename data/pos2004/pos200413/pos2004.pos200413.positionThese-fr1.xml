@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Parmi les grands noms de l’épiscopat que véhicule la mémoire nationale, les prélats du règne de Louis XIV occupent la meilleure place.
+          Assez curieusement, le cardinal de Noailles n’en fait pas partie. Aucun travail de fond n’a été mené sur Louis-Antoine de Noailles, qui
+          occupa successivement trois sièges épiscopaux. Au total, cinquante années passées au service de l’Église semblaient appeler une biographie,
+          ou tout au moins une étude sérieuse sur son action pastorale, que tous les contemporains du règne s’accordaient à louer, Saint-Simon le
+          premier.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La multitude et l’ampleur des sources ont rendu le sujet impossible à saisir dans son ensemble. L’analyse du milieu familial s’appuie sur
+          l’exploitation de documents conservés au Minutier central des notaires parisiens, au Centre historique des Archives nationales, et au
+          département des manuscrits de la Bibliothèque nationale de France (cabinet des titres). Le rôle pastoral exercé par Noailles au sein de son
+          diocèse de Châlons est observé grâce aux procès-verbaux de visites conservés aux Archives départementales de la Marne. Son épiscopat
+          parisien a nécessité un travail de reconstitution des fonds grâce aux registres conservés aux Archives nationales et aux mentions éparses
+          extraites de la volumineuse correspondance du prélat. La dernière partie, consacrée à Noailles politique, engagé dans les querelles
+          religieuses, a été traitée à partir des fonds consultés aux Archives du ministère des Affaires étrangères, aux Archives vaticanes et à la
+          Bibliothèque de l’Arsenal.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

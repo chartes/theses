@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Émile-Antoine Bourdelle est l’un des plus grands sculpteurs français du début du vingtième siècle. Pourtant, en dépit de l’existence d’un
+          musée parisien consacré à sa seule mémoire, de nombreuses facettes de son travail sont largement mésestimées voire ignorées, au premier rang
+          desquelles son activité d’enseignant. Or l’enseignement ne tarde pas à devenir le moteur et l’aboutissement de son épanouissement d’homme et
+          d’artiste. Bourdelle passe ainsi vingt années de sa vie, de 1909 à 1929, à prodiguer des conseils pratiques et à ouvrir l’esprit de
+          plusieurs centaines de jeunes artistes qui se pressent, chaque semaine, dans les locaux de l’Académie de la Grande Chaumière, à
+          Montparnasse. Les séances qu’il y accorde sont divisées en deux parties <hi rend="i">a priori</hi> bien distinctes : les corrections
+          pratiques des travaux ébauchés par ses élèves, dites <hi rend="i">cours</hi>, et la lecture de ses réflexions personnelles sur tel ou tel
+          sujet, dites <hi rend="i">leçons.</hi> Cet ensemble revêt aux yeux de l’artiste une importance telle qu’il l’envisage, à la fin de sa vie,
+          comme l’un des piliers de son héritage au monde de l’art. Il s’agit du point de départ d’une étude consacrée à la réflexion théorique de
+          Bourdelle, à la façon dont il la forge et la transmet, et à la place éminente qu’elle lui confère dans le paysage artistique parisien de son
+          temps.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La majeure partie des sources consultées dans le cadre de ce travail est conservée à Paris, au sein des archives du musée Bourdelle. Le
+          fonds principal est constitué par les leçons et les cours de l’artiste à l’Académie de la Grande Chaumière. Cet ensemble non inventorié
+          comprend soixante-quinze leçons (1909-1922), ainsi que vingt-six cours (1909-1910). Il a également été nécessaire d’utiliser d’autres
+          dossiers d’archives afin d’éclairer tant la jeunesse de Bourdelle que ses positions esthétiques : un dossier intitulé « Ensemble
+          biographique », constitué par l’artiste lui-même, ainsi que ses « Écrits sur l’art » et autres « Écrits divers ». Le dossier « Élèves »,
+          ainsi que de la correspondance active et passive de Bourdelle, ont aussi fait l’objet d’une analyse approfondie.</p>
+        <p>D’autres dépôts d’archives ont été fréquentés plus ponctuellement. Les Archives nationales, en particulier, conservent tous les documents
+          existants concernant la scolarité de Bourdelle à l’École nationale des beaux-arts, ainsi que la carrière de son maître, Alexandre Falguière.
+          Certains dossiers renseignent également sur la vie quotidienne au sein de l’institution à la fin du dix-neuvième siècle et ont été consultés
+          (AJ<hi rend="sup">52</hi>51, 322, 461, 909-910, 944, 970-971). Les archives du musée Rodin ont fourni de précieuses informations concernant
+          l’Institut Rodin, établissement ouvert très brièvement par Rodin, Bourdelle et Jules Desbois en 1901, tandis que les archives de Jacques
+          Doucet, conservées à l’Institut national d’histoire de l’art, ont apporté des précisions sur les projets de Bourdelle en matière de
+          conservation des leçons de la Grande Chaumière (Fonds Jacques Doucet, carton 36, mf BXXI, 17838–17903). Si l’École des beaux-arts de
+          Toulouse ne conserve aucune trace du passage de Bourdelle dans ses murs, elle fournit en revanche des renseignements sur les professeurs
+          qu’il y a fréquentés et sur l’histoire de l’institution en général (Dossiers personnels de professeurs n° 102 et n° 137, et dossier B11 :
+          Histoire de l’École des beaux-arts de Toulouse, 1800-1990). Enfin, le musée Ingres de Montauban conserve, au sein de ses archives, un grand
+          nombre de dessins et quelques manuscrits de Bourdelle qui portent essentiellement sur ses jeunes années.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,122 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La chambre du roi, ou chambre de Louis XIV, est l’un des principaux espaces du château de Versailles avec la galerie des Glaces et la
+          chapelle. Pourtant elle n’a encore jamais fait l’objet d’étude spécifique. Seuls quelques articles font état de l’évolution de son
+          aménagement et de sa décoration, mais aucune analyse ne lui a été entièrement consacrée. La chambre de Louis XIV attire l’attention, mais ce
+          n’est que l’une des chambres royales de Versailles, où Louis XIV ne loge que quatorze ans. Aucune grande étude ne s’attache non plus aux
+          différentes chambres du roi à Versailles et n’appréhende ensemble la pièce, l’institution et le cérémonial, c’est-à-dire les trois aspects
+          indissociables de cet espace.</p>
+        <p>Son rôle est souligné dans la vie de cour par le cérémonial monarchique. Elle participe à l’exercice du pouvoir royal et semble apparaître
+          comme le point focal d’un pouvoir qui met en scène sa propre sacralité. La chambre du roi est donc un lieu double où se mêlent étroitement
+          vie privée et vie publique du souverain. Sa centralité a pu faire croire à une volonté impérieuse de mise en scène et de soumission. La
+          distribution des pièces n’apparaît plus comme le reflet mais comme l’émanation de l’ordre instauré. Derrière le mythe solaire et
+          louis-quatorzien, il convient de voir comment s’esquisse un mythe de la chambre du roi, alors que chambre du roi et centre du château ne se
+          conjuguent en un heureux hasard qu’après bien des errements de la chambre à coucher de Louis XIV.</p>
+        <p>La chambre est tout d’abord un espace dont l’éclat du décor souligne la majesté du souverain. L’étude des distributions, la distinction ou
+          non entre chambre de parade et chambre à coucher permet de mieux comprendre la place de la majesté royale dans les usages de la cour, sa
+          manifestation et sa représentation. Décor et cérémonial se nourrissent et ne se comprennent bien qu’étudiés ensemble. Le service du roi
+          permet l’étude des gestes et rites du quotidien. Les conflits de préséance et de hiérarchie renvoient une image de la société de cour. De
+          cet « espace de majesté » émergent trois grands axes de réflexion : l’art du décor, l’institution de la Chambre et la vie de cour. Ces
+          champs thématiques sont à traiter ensemble pour dégager toute la complexité et tout l’intérêt de la chambre du roi. À partir de 1684, la
+          superposition entre l’institution, la vie de cour et le château est quasi parfaite. Ce n’est bien sûr pas le cas auparavant. Parler d’espace
+          de majesté pour le Versailles de Louis XIII est un abus, mais il convient d’étudier la chambre du roi avant les travaux de Louis XIV, tout
+          comme l’institution de la Chambre, même en dehors du contexte versaillais. Avec Louis XIV, le château devient une véritable résidence de
+          cour, déployant des distributions intérieures propres à accueillir cérémonies et vie de la famille royale. La chambre est au cœur de ce
+          système, et l’est même spatialement à partir de 1701. Les successeurs de Louis XIV conservent ce parti non sans quelques évolutions et
+          projets. Ainsi, fort de cette approche transversale, il est possible de voir à quoi ressemblaient ces espaces, comment l’on y vivait et
+          quelles étaient leurs fonctions dans l’exercice de la majesté.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude de la chambre du roi à Versailles nécessite d’abord de prendre en compte l’espace et la décoration de la pièce : cette approche
+          architecturale mobilise des sources variées que l’on peut regrouper en trois grandes catégories : les sources figurées, les sources offertes
+          par le Garde-Meuble de la Couronne et les inventaires de Versailles, ainsi que les éléments livrés par les mémorialistes. Les sources
+          figurées sont celles de la surintendance puis direction des Bâtiments du roi (AN O¹ 1045-2805), dont celles de l’agence du premier
+          architecte du roi. Ces sources se trouvent utilement complétées par d’autres documents du département des estampes et de la photographie de
+          la Bibliothèque nationale de France et du Cabinet des dessins du musée du Louvre. Un second pan archivistique est celui constitué par le
+          Garde-Meuble de la Couronne (AN O¹ 3277 à 3671), avec les livraisons et mouvements de meubles consignés dans le journal du Garde-Meuble (AN
+          O¹ 3304-3323) et les différents inventaires des meubles de la Couronne (AN O¹ 3330-3378) et du château de Versailles (AN O¹ 3445-3491).
+          Enfin, la troisième source essentielle est à nouveau celle transmise par les mémorialistes qui décrivent le château et relatent la vie de la
+          cour au jour le jour.</p>
+        <p>Mais étudier la chambre du roi à Versailles, c’est aussi s’intéresser au lieu de vie du roi et analyser comment la monarchie a mis en place
+          des institutions et un cérémonial au service du souverain et de mise en valeur de la majesté dans son espace quotidien. Il ne s’agit pas
+          d’élaborer une étude institutionnelle ou prosopographique du personnel, mais de souligner qu’un certain nombre de services domestiques sont
+          intrinsèquement liés à la chambre du roi. Il s’agit bien sûr de l’institution éponyme dirigée par le grand chambellan et les premiers
+          gentilshommes de la Chambre, mais aussi de la Garde-Robe, créée par Louis XIV, pour ce qui concerne l’habillement du roi, du département de
+          l’Argenterie, Menus-Plaisirs et Affaires de la Chambre pour les nombreuses fournitures (AN O¹ 2806-3276) et enfin de la Musique de la
+          Chambre, bien que sa fonction de musique de chambre soit très élargie. Les archives des grands officiers ont pour la plupart disparu, mais
+          les archives de la Maison du roi ont subsisté et sont conservées aux Archives nationales (AN O¹ 750-1044), dont celles du grand-maître (AN
+          O¹ 751-819), du grand chambellan (AN O¹ 820-854), du grand maître des cérémonies (AN O¹ 1042-1044). Leurs mémoires et documents de gestion
+          brossent le tableau du fonctionnement quotidien de la Chambre du roi et des services qui s’y rattachent. Enfin, les mémorialistes
+          permettent, grâce à leur expérience du temps et des lieux et leur connaissance de la cour et de son cérémonial, de compléter l’image que
+          l’on se faisait de l’espace de la chambre du roi.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

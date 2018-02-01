@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>La première guerre mondiale représente une rupture en termes géopolitiques autant que culturels. L’époque est celle des évolutions radicales, dans tous les domaines. Les hommes de l’entre-deux-guerres, conscients que plus rien ne sera comme avant, vivent dans la crainte qu’une nouvelle hécatombe ait lieu. La Société des nations (SDN) voit le jour dans ces temps difficiles. Cette organisation internationale a pour ambition de rétablir un équilibre dans le jeu international, sur des bases diplomatiques, économiques, juridiques, mais également culturelles. Les musées apparaissent alors comme un des moyens d’ancrer le pacifisme dans les esprits. Quoi de plus cosmopolite en effet que les collections d’un musée ? Le visiteur, en passant d’une salle à une autre, explore les cultures à travers les œuvres d’art. L’émotion esthétique que suscite la contemplation d’un chef-d’œuvre doit amener à une prise de conscience de l’universalité du génie humain, et à une meilleure appréhension des autres cultures. Selon ce raisonnement, l’art deviendrait dès lors le meilleur rempart contre la guerre.  </p>
+        <p>C’est dans cette optique qu’est fondé en 1926, sous les auspices de la SDN, l’Office international des musées (OIM) ou <hi rend="i">International Museums Office</hi>. Ancêtre de l’actuel <hi rend="i">International Council of Museums</hi> (ICOM), l’OIM a pour ambition de susciter la coopération internationale entre les musées, par le biais d’expositions transnationales, d’échanges d’œuvres d’art et, surtout, par la diffusion des techniques muséales. La revue <hi rend="i">Mouseion</hi>, fondée en 1927, répond à ces trois exigences. Diffusée d’abord dans les musées européens, puis dans le reste du monde, le bulletin de l’OIM publie des articles muséologiques de qualité, en faisant appel aux principales personnalités scientifiques de l’époque. </p>
+        <p>L’existence de cette revue conduit à s’interroger sur cette phase pré-historique de la muséologie, discipline qui n’acquiert ses lettres de noblesse qu’après 1945, mais qui porte les prémices de son développement ultérieur durant ces années d’entre-deux-guerres. La rédaction de la revue <hi rend="i">Mouseion</hi>, sise au Palais-Royal, dans les locaux de la Commission internationale de coopération intellectuelle (CICI) – <hi rend="i">International Committee on Intellectual Cooperation </hi>(IICI) –, est un véritable laboratoire d’expérimentation muséal. Les destructions de musées opérées pendant la guerre laissent le champ libre à toutes les audaces. Autour de <hi rend="i">Mouseion</hi>, les muséologues renouvellent la conception du musée et, plus largement, de la place de la culture dans la société.  </p>
+        <p>Dans un premier temps, ce travail analyse la mise en place de cette revue internationale, en la situant dans le contexte de l’entre-deux-guerres. La deuxième étape de ce travail consiste à présenter les différents musées et conceptions muséologiques exposés dans la revue. Une remise en perspective historique et scientifique des articles de la revue est proposée. Enfin, est étudié l’impact des tensions internationales en œuvre dès les années 1930 sur le monde des musées et du patrimoine.  </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Les sources utilisées sont conservées au centre des archives de l’Unesco. Le sujet impliquait de s’intéresser d’abord à l’organisation de la coopération culturelle par la SDN. A donc été dépouillée une partie des archives de l’IICI, portant sur la commission des Lettres et des Arts de la SDN et sur l’OIM (Unesco-IICI-boîtes 245, 465-466, 529, 642-643). Les archives de l’OIM ont ensuite fourni de précieux renseignements sur le fonctionnement de l’organisation ainsi que sur la rédaction de <hi rend="i">Mouseion</hi>. Le réseau professionnel et amical tissé par les membres de l’OIM – qui sont souvent des rédacteurs de la revue – a ainsi pu être reconstitué, grâce aux archives du fonds de l’OIM (Unesco-IICI-OIM-boîtes 347, 350, 353-360 et 373). Les comptes rendus des premières séances de l’Unesco ont permis de retracer la transition entre l’OIM, d’une part, et l’Unesco et l’ICOM, d’autre part. La revue <hi rend="i">Mouseion</hi> elle-même, enfin, constitue une source de premier ordre. Ses cinquante-six numéros représentent plusieurs milliers de pages et des centaines de planches sur les musées, les monuments, les techniques de conservation et de restauration.  </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

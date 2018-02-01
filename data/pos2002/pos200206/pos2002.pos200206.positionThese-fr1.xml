@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+      <p>Les nécropoles et les tombeaux monumentaux  légués par le Moyen Âge n'ont souvent été étudiés que dans des perspectives  d'histoire de l'art et des formes. Par ailleurs, les connaissances  actuelles sur la mort des nobles demeurent influencées par un courant  historique centré sur l'étude des rituels politiques, et notamment des  cérémonies, et n'ont pas été encore modifiées largement par les travaux  plus récents sur la mémoire. Aussi de nombreuses questions méritent-elles  d'être approfondies : quelles sont les attitudes des nobles devant la mort  et les morts ? Comment leur mémoire s'organise-t-elle ? Comment se  répartissent leurs suffrages en vue de leur salut ? En amont des commandes  d'art funéraire et de l'organisation des obsèques, l'élection de sépulture  est une décision importante : elle fixe le cadre principal de la  commémoration du défunt dans l'attente de la résurrection de la chair. Chez  des seigneurs du sang de France comme les ducs de Bourbon, ce choix peut  faire s'entremêler des préoccupations politiques et dynastiques avec des  motivations religieuses. Aussi, partagés entre dévotions personnelles,  fidélité à leurs prédécesseurs, considérations de politique locale ou  nationale et modèle des autres seigneurs des lys, les ducs de Bourbon  changèrent-ils souvent de parti, hésitant entre Paris et Bourbonnais, entre  des églises déjà existantes et celles fondées par eux-mêmes, entre une  séparation superbe et novatrice d'avec leur famille et la proximité de  leurs parents. Enfin, à l'intérieur même de l'église choisie, l'emplacement  exact du tombeau par rapport aux reliques, à la clôture, aux autels et aux  tombeaux déjà en place pouvait lui-même revêtir de multiples  significations, qui rendent du reste indispensable une connaissance  détaillée des aménagements liturgiques de ces édifices pour comprendre  toute la portée des volontés des ducs. Les hésitations des Bourbons se  prolongèrent pendant toute l'histoire de la lignée et entraînèrent la  multiplication des nécropoles ducales, au nombre de cinq, sans compter  divers projets abandonnés.</p>
+      
+    </div>
+              <div type="sources"><head>Sources</head>
+      <p>
+        Les testaments constituent la première  source d'une étude des élections de sépulture puisque celles-ci y font  généralement l'objet d'un article après la confession de foi et  l'institution des héritiers. Ceux des ducs et des duchesses de Bourbon sont  rassemblés pour la plupart dans les fonds des anciennes chambres des  comptes de Moulins, de Villefranche-sur-Saône et de Montbrison, conservés  aux Archives nationales. Etant donné l'importance de la question dans la  préparation à la mort, le choix de la dernière demeure pouvait être  antérieur à la rédaction des dernières volontés et se trouve parfois  exprimé au détour des actes de fondations pieuses. Ceux-ci se retrouvent  également dans les archives des anciennes chambres des comptes des ducs de  Bourbon, mais aussi aux Archives départementales de l'Allier, dans les  fonds des bénéficiaires : le chapitre de Notre-Dame de Moulins, le prieuré  de Souvigny, ainsi que les couvents de Champaigue et de Vichy.
+        <lb/>Ces derniers fonds ont permis de restituer l'histoire et les aménagements  liturgiques des nécropoles du Bourbonnais. Le
+        <hi rend="i">Thesaurus Silviniacensis</hi>,  cartulaire du prieuré de Souvigny, qui a accueilli les principales  fondations de chapelles faites à la fin du Moyen Âge, a fourni les plus  précieux renseignements pour ces reconstitutions. L'étude des églises des  Bénédictins et des Franciscains de Souvigny a aussi été largement complétée  par deux documents conservés au département des manuscrits de la  Bibliothèque nationale de France : une description anonyme du début du XVIII
+        <hi rend="sup">e</hi>
+         siècle  et le
+        <hi rend="i">Mémoire pour servir à l'histoire du prieuré de Souvigny</hi>, de  dom Hilaire Tripperet. L'analyse de la naissance et du développement des  nécropoles parisiennes des couvents des Jacobins et des Cordeliers repose  principalement sur les
+        <hi rend="i">Mémoires nécrologiques</hi>des pères dominicains  Texte et Faitot, au département des manuscrits de la Bibliothèque nationale  de France, sur des chroniques du XIV
+        <hi rend="sup">e</hi>
+         siècle,  ainsi que sur des généalogies et des descriptions, manuscrites ou  imprimées, de l'époque moderne.
+        <lb/>Les notes du père André de Saint-Nicolas, prieur du couvent des Carmes de  Moulins, conservées à la bibliothèque municipale de Besançon, exemptes pour  la période ducale des légitimes accusations de faux qui pèsent sur certains  actes antérieurs au XII
+        <hi rend="sup">e</hi>
+         siècle qu'il prétendit  avoir découverts, ont fourni d'utiles compléments sur tous ces sujets.
+      </p>
+      
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’histoire de <hi rend="i">Guy de Warewyk</hi>, aujourd’hui méconnue en France, a cependant joui en Angleterre  d’une vogue extraordinaire
+          jusqu’au <num>xix<hi rend="sup">e</hi></num>  siècle. Ce succès repose en partie sur la mise en prose réalisée au <num>xv<hi rend="sup">e</hi></num>  siècle
+          d’un roman en vers du <num>xiii<hi rend="sup">e</hi></num>  siècle, qui a remis au goût du jour, sous la forme de la chanson de geste, une vieille
+          légende anglo-saxonne.</p>
+        <p>Guy, fils du comte d’Oxford, est envoyé dès son plus jeune âge à la cour du comte Roalt de Warwick, pour y apprendre l’art de la
+          chevalerie. Il s’éprend de Felice, fille du comte Roalt, qui consent à l’épouser à condition qu’il acquière la réputation d’un preux. Alors
+          commence pour Guy, accompagné de son mentor Herolt d’Ardenne, une longue suite d’aventures qui sont autant d’épreuves initiatiques. Parvenu
+          en Allemagne, il défait les chevaliers les plus illustres, si bien que l’empereur envisage de lui donner sa fille en mariage. Fidèle à
+          Felice, il repart soutenir d’autres combats acharnés en Lombardie contre le duc Othes, qui est de toutes les traîtrises. A Constantinople,
+          il soutient l’empereur contre les Sarrasins dirigés par un géant. De retour en Angleterre, il parvient à anéantir un dragon qui terrorisait
+          le Northumberland. La main de Felice lui est enfin acquise. Mais ayant pris conscience de la vanité de ses précédents exploits, il décide de
+          se rendre en Terre Sainte. Ce pèlerinage est prétexte à d’autres nombreux combats où il défend le droit des chrétiens. De retour en
+          Angleterre, il apprend que le roi est engagé dans une guerre sans merci contre les Danois. Guy parvient à tuer le géant africain, Colebrand,
+          qui combattait au service des Danois. Après cette ultime prouesse, le héros se retire dans un bois pour y vivre en ascète. Sentant sa fin
+          prochaine, il fait remettre son alliance à Felice qui, venue recueillir son dernier souffle, ne lui survit pas.</p>
+        <p>L’édition fournie par Conlon (1971) du roman en prose n’étant pas satisfaisante, il est apparu nécessaire de reprendre l’ensemble des
+          manuscrits et d’en donner une nouvelle édition. Ce travail préalable devrait contribuer à enrichir l’étude des adaptations apportées au
+          texte de base lors de sa mise en prose et, ainsi, de mieux cerner l’évolution du goût littéraire.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

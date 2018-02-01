@@ -1,0 +1,87 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Pierre-Fidèle Bretonneau (1778-1862) fut l’un des acteurs du tournant médical que constitue le <num>xix</num><hi rend="sup">e</hi> siècle, par les découvertes qu’on lui reconnaît, mais aussi par la méthode scientifique qu’il a contribué à diffuser par l’intermédiaire de son école. S’il est surtout célèbre pour avoir identifié la diphtérie et la fièvre typhoïde, il n’est presque jamais oublié lorsque sont évoquées les questions de contagion et surtout de spécificité, doctrines dont il a été un très grand et fervent promoteur. Proche de l’école anatomo-clinique, il a défendu toute sa vie l’idée que la médecine doit découler de l’observation, des faits, et non des écoles de pensée et des opinions établies.  </p>
+		<p>Objet historique à multiples facettes, la correspondance de Bretonneau entre dans le champ varié des correspondances de savants qui, au-delà des perspectives biographiques évidentes, touchent à l’histoire dans tous ses aspects. Témoignage de son époque, elle permet en effet de saisir un arrière-plan politique, social, culturel, et, par la personnalité originale de Bretonneau, elle laisse une large place à des sujets techniques ou encore botaniques. </p>
+		<p>De nombreux travaux – éditions ou biographies – ont déjà valorisé cette abondante correspondance et l’ont rendue publique très tôt (P. Triaire, 1892 ; J. Lorenzi 1960-1966 ; É. Aron, 1979). Il était toutefois nécessaire de reprendre ces travaux, en tentant de pallier leurs défauts, en portant un nouveau regard sur cette correspondance, et en y ajoutant davantage de matériaux. Améliorer l’étude historique du personnage de Pierre-Fidèle Bretonneau passait nécessairement par la réalisation d’une nouvelle édition, la plus complète et la plus scientifique possible, de la correspondance du médecin de Tours. Celle-ci, parfois éclairée par des sources complémentaires, ouvre un champ de perspectives des plus vastes.  </p>
+		<p>À travers les anecdotes et les récits qu’elle réunit, la correspondance livre un témoignage du monde médical de l’époque, qu’il soit parisien ou tourangeau, de son évolution, ses recherches et ses débats, de l’organisation de l’enseignement et des hôpitaux au <num>xix</num><hi rend="sup">e</hi> siècle. Elle est aussi un moyen de comprendre le fonctionnement des réseaux et des écoles de pensée au cœur de la capitale, notamment par le biais du réseau tourangeau formé autour de ses deux illustres représentants, Velpeau et Trousseau, et dont certains membres sont encore mal identifiés. Les lettres de Bretonneau sont enfin un point d’accès pour étudier ses influences médicales, les auteurs dont il a pu lire voire posséder les œuvres, ceux auxquels il s’est référé pour revenir aux sources des affections qu’il étudiait. Elles permettent de saisir par là même le cheminement de la pensée d’un médecin-chercheur au début du <num>xix</num><hi rend="sup">e</hi> siècle. La correspondance est enfin une clé majeure pour comprendre comment un médecin de province, qui a peu écrit et très peu publié, a pu se construire une telle renommée.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>L’essentiel des originaux de la correspondance de Bretonneau se trouve conservé à la bibliothèque universitaire de médecine de Tours (fonds Bretonneau). Un autre fonds important se trouve à la bibliothèque municipale de Tours (manuscrit 1444). Le reste des originaux est dispersé dans divers lieux de conservation (bibliothèque inter-universitaire de santé de Paris, bibliothèque de l’Académie de médecine, bibliothèque universitaire d’Uppsala, archives départementales d’Indre-et-Loire, collections en mains privées).  </p>
+		<p>La particularité de la correspondance de Bretonneau est qu’une partie des originaux n’est aujourd’hui plus consultable. Les lettres concernées ne subsistent que sous la forme d’éditions publiées, principalement dans l’ouvrage de Paul Triaire, ou de copies manuscrites.  </p>
+		<p>D’autres sources ne concernant pas la correspondance ont permis d’éclairer certains points peu traités dans celle-ci ou d’en préciser d’autres. Les gisements les plus importants se trouvent aux Archives nationales, aux archives départementales d’Indre-et-Loire (fonds Lorenzi, 10 F), ainsi qu’à la bibliothèque universitaire de médecine de Tours (fonds Boutineau, fonds émile Aron). </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

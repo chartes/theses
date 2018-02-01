@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’École de cavalerie de Saumur a été fondée en 1814 à Saumur, pour servir d’école d’application aux officiers de la cavalerie française.
+          Elle sert également de laboratoire et de banc d’essai pour toutes les innovations introduites dans la cavalerie. L’étude de l’École permet
+          donc d’appréhender tous les problèmes rencontrés par la cavalerie au <num>xix<hi rend="sup">e</hi></num> siècle, et plus généralement la manière dont les institutions
+          militaires se développent et progressent au cours du temps. C’est le temps, c’est-à-dire la dimension dans laquelle la connaissance humaine
+          modifie la manière dont évoluent les institutions, qui a été choisi comme angle d’approche principal de l’École de cavalerie. Le but est
+          notamment d’examiner les manières dont la tradition collective intégrée par les individus devient un référent obligé des décisions
+          individuelles comme collectives.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cette étude prend essentiellement appui sur les documents conservés au Service historique de l’Armée de terre à Vincennes, dépositaire des
+          archives militaires, et à la bibliothèque de l’actuelle École d’application de l’arme blindée cavalerie à Saumur, qui conserve de nombreux
+          registres de l’École de cavalerie du <num>xix<hi rend="sup">e</hi></num> siècle. Au-delà de ces sources directement produites par l’École ou par son administration de
+          tutelle, le ministère de la Guerre, la multiplicité des domaines concernés par les activités de l’École de cavalerie a nécessité une
+          utilisation extensive de documents conservés aux Archives départementales de Maine-et-Loire, aux Archives municipales de Saumur et à la
+          bibliothèque du château-musée de Saumur.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

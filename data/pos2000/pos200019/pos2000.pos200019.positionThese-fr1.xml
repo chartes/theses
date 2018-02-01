@@ -1,0 +1,91 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’histoire de la cathédrale de Coutances et de son clergé au Moyen Age n’a guère été explorée depuis les travaux érudits du XIX <hi rend="sup">e</hi> siècle. Cette situation s’explique moins par le désintérêt des chercheurs que par l’absence de sources facilement
+          exploitables après la destruction d’une grande partie du chartrier lors du bombardement des archives départementales de la Manche, à
+          Saint-Lô, le 6 juin 1944.</p>
+        <p>Cependant, de nombreuses copies et inventaires sont encore conservés dans les archives diocésaines. Parmi les documents les plus précieux
+          du fonds capitulaire, l’un des trois cartulaires médiévaux du chapitre, coté B au <num>xviii<hi rend="sup">e</hi></num> siècle, pouvait faire l’objet
+          d’une édition complète à partir de copies du <num>xix<hi rend="sup">e</hi></num> siècle. Cette édition, enrichie d’autres documents provenant de la
+          cathédrale, a permis de restituer une partie du chartrier et d’apporter des renseignements utiles sur l’histoire de la cathédrale et sur le
+          patrimoine du chapitre. Cette étude, portant non seulement sur la ville cathédrale, mais aussi sur tout le diocèse de Coutances, s’étend du
+          <num>xi<hi rend="sup">e</hi></num> siècle, date du retour des chanoines à Coutances sous le règne du duc Guillaume, jusqu’à la fin du XIV <hi rend="sup">e</hi> siècle, durant les années troublées de la guerre de Cent Ans.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Seuls trois actes originaux sont encore conservés aux archives diocésaines de Coutances et aux archives départementales du Calvados. Les
+          actes manquants ont pu être reconstitués grâce aux copies du <num>xix<hi rend="sup">e</hi></num> siècle du cartulaire B. Ces copies se trouvent aux
+          archives diocésaines, sous les cotes M 27, M 28 et M 40, ainsi que dans le fonds Mancel du musée des Beaux-Arts de Caen (ms 300) et à la
+          Bibliothèque nationale de France (nouv. acq. lat. 1018 et 1019) ; seul le recueil M 40 des archives diocésaines est complet. C’est donc
+          cette copie, réalisée par Fleury, qui a servi de référence pour établir le texte. Les autres documents les plus précieux du chartrier de la
+          cathédrale, les pouillés épiscopaux, ont fait l’objet d’éditions, en particulier par Auguste Longnon (1903). Enfin, ces sources ont été
+          complétées par l’inventaire de 1781 des archives diocésaines, par plusieurs copies prises sur des pièces du chartrier avant le XX <hi rend="sup">e</hi> siècle, par des manuscrits d’érudits et par les autres cartulaires du diocèse de Coutances, édités ou non.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le phénomène de l’évangélisation est à la fois ancien et contemporain : il remonte bien sûr à l’origine même du christianisme et reste
+          toujours vivant à notre époque. Le <num>xix</num>
+<hi rend="sup">e</hi> siècle marque toutefois un moment particulier dans son histoire : la mission catholique prend alors une forme tout à
+          fait structurée et régulière partout dans le monde et ce sont des Français qui jouent le rôle prééminent.</p>
+        <p>La mission lointaine génère la production d’écrits, dont la correspondance représente la majeure partie. Entre 1831, année de la création
+          du vicariat apostolique de Corée confié à la Société des missions étrangères de Paris (MEP), et 1886, année de la conclusion du premier
+          traité entre la Corée et la France, les missionnaires français présents en Corée rédigent à un rythme presque continu des lettres ou des
+          relations qui reflètent naturellement leur mode de vie. Durant sa mission, un prêtre catholique français en Corée vit trois moments
+          distincts : pénétrer discrètement dans le pays par les voies terrestres, puis maritimes depuis la Chine, enfin depuis le Japon ; exercer
+          clandestinement des activités missionnaires auprès des chrétiens coréens ; mourir en Corée ou quitter le pays. Ces trois situations peuvent
+          donner lieu à autant de types particuliers de texte que sont la relation de voyage, le récit édifiant et la narration du martyre.</p>
+        <p>Ce sont ces trois types d’écrit missionnaire que cette étude analyse dans une approche rhétorique. En ce sens, la thèse ne vise pas à
+          écrire ou à réécrire une histoire de l’Église catholique de Corée, ni une histoire de la mission catholique française.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le corpus de la thèse se compose donc des écrits produits par les trente-deux missionnaires français en poste en Corée de 1831 à 1886,
+          auxquels s’ajoutent certains martyrologes et des écrits conservés aux archives de la Société des MEP ou publiés par des périodiques
+          missionnaires comme les <hi rend="i">Annales de la Propagation de la Foi</hi>(quatre numéros, puis six par an, de 1825 à 1933) et les <hi rend="i">Missions catholiques</hi>(un numéro, puis deux par semaine, de 1868 à 1939).</p>
+        <p>Ces sources peuvent être complétées par d’autres écrits de missionnaires produits en dehors de la période concernée ou en dehors de la
+          Corée, conservés aux archives des MEP, et par la correspondance et les rapports concernant la mission de Corée dans le fonds <hi rend="i">Scritture riferite nei Congressi</hi>, aux archives de la Congrégation <hi rend="i">de Propaganda Fide</hi>à Rome. La situation de la
+          Corée à l’époque est éclairée par des documents dispersés dans des volumes Asie et Chine des archives du ministère des Affaires étrangères,
+          comme dans la série BB4 des archives centrales de la Marine, au service historique de la Défense, à Vincennes.</p>
+        <p>L’historien dispose par ailleurs de sources imprimées, au premier rang desquelles figurent les publications de la Société des MEP et les
+          deux périodiques cités de l’Œuvre de la Propagation de la Foi. Les biographies des missionnaires martyrs représentent également une partie
+          importante des sources imprimées.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

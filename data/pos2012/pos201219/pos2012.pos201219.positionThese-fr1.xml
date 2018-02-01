@@ -1,0 +1,85 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Jean Paulhan (1884-1968), directeur de 1925 à 1968 de la revue littéraire la plus renommée du <num>xx</num><hi rend="sup">e</hi> siècle, la <hi rend="i">N.R.F</hi>., et Marcel Arland (1899-1986), écrivain prolifique, intimiste, élu à l’Académie française en 1968, se sont rencontrés au tournant des années 1921 et 1922. Le premier est alors le secrétaire de Jacques Rivière à la <hi rend="i">N.R.F</hi>. tandis que le second, encore étudiant en lettres à la Sorbonne, vient d’envoyer à Gide un premier récit qui est bientôt publié chez Gallimard, maison à laquelle la <hi rend="i">N.R.F</hi>. avait donné naissance dès l’année de sa création, en 1909.  </p>
+    <p>De la fin de l’année 1924 (première lettre conservée) au début de l’année 1929, les deux écrivains s’envoient cent soixante-douze lettres, parfois assez longues, parfois réduites à des billets de quelques lignes. Cette correspondance, d’une très grande densité, où les rapports professionnels se mêlent à une amitié souvent passionnelle, s’échange au cours d’une des périodes les plus importantes pour la littérature française, et dans un milieu où se croisent des auteurs et des figures intellectuelles qui sont parmi les plus marquants du <num>xx</num><hi rend="sup">e</hi> siècle : André Gide, François Mauriac, André Malraux, Louis Aragon et André Breton, Jacques Maritain, entre autres, apparaissent souvent sous la plume de Paulhan ou d’Arland. La correspondance est encore traversée par deux des grandes interrogations qui obsèdent les écrivains de ce temps : la littérature n’est-elle qu’un jeu ? Le romancier est-il un créateur ?  </p>
+    <p>Mais cet échange est d’abord l’espace où s’opposent, en toute amitié, deux caractères antagonistes : Marcel Arland, intransigeant, de tempérament absolu, volontiers mystique, se heurte à un Jean Paulhan non pas sceptique, non pas nihiliste – il s’en défend dans cette correspondance – mais ouvert à de nombreux possibles, insatiablement curieux. Cet affrontement rejoint par bien des aspects celui qui conduit les générations littéraires qui sont arrivées à l’âge adulte pendant ou juste après la Grande Guerre, rêvant d’engagement partisan et d’action politique, à prendre le pas sur des aînés plus accaparés par la littérature pure. La correspondance entre Arland et Paulhan offre donc un point de vue saisissant sur les évolutions de son époque et les métamorphoses de la <hi rend="i">N.R.F</hi>. elle-même.  </p>
+    <p>La figure de Paulhan a déjà fait l’objet de nombreuses études. Seule une thèse non publiée s’est engagée dans une biographie d’Arland et elle le fait presque exclusivement à partir de son œuvre littéraire. Cette correspondance présente l’avantage de situer, de définir la figure aujourd’hui effacée d’Arland, sa position dans le monde littéraire, par les relations qu’il entretient avec les différents auteurs et instances de ce monde littéraire. Par prolongement, elle permet de mieux apprécier certaines prises de position des pairs du jeune auteur, surnommé, à la suite de son retentissant article de 1924 « Sur un nouveau Mal du siècle », le porte-parole de sa génération. L’accent de l’introduction a donc été mis sur Marcel Arland, qui, se tenant au carrefour d’influences contraires, fonctionne en bien des points comme un révélateur de son époque. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Les lettres de Jean Paulhan à Marcel Arland sont conservées dans le fonds Arland-Correspondance de la bibliothèque littéraire Jacques Doucet. L’autre volet de la correspondance est en dépôt dans le fonds Paulhan de l’Institut de mémoire de l’édition contemporaine (IMEC) à l’abbaye d’Ardenne, dans la banlieue de Caen. Afin d’éclairer les passages les plus obscurs de la correspondance, de nombreuses correspondances parallèles ont été consultées, que ce soit celles de Jean Paulhan avec André Gide, Valery Larbaud ou Gaston Gallimard, la correspondance de François Mauriac avec Marcel Arland, mais aussi des correspondances plus éloignées des deux épistoliers : celles qu’échangent Gide avec Jean Schlumberger, Jacques Rivière avec Valery Larbaud. Les journaux littéraires, mémoires, carnets, hommages et entretiens ont été également d’un grand secours ; quelques-uns se sont révélés particulièrement indispensables : <hi rend="i">Les mémorables</hi>, de Maurice Martin du Gard, <hi rend="i">Six entretiens sur des écrivains de son temps</hi>, d’André Malraux interrogé par Frédéric Grover, les souvenirs d’André Beucler et d’André Berge, de Jacques Baron et de Georges Gabory ; il faut y ajouter les souvenirs de Paulhan et d’Arland eux-mêmes, disséminés tout au long de son œuvre littéraire pour celui-ci, admirablement condensés dans les <hi rend="i">Entretiens à la radio avec Robert Mallet</hi> pour celui-là. La consultation systématique ou sélective de plusieurs périodiques littéraires de l’époque a également permis de lever bien des incertitudes : celle de la <hi rend="i">Nouvelle Revue française</hi>, naturellement, mais aussi celle de <hi rend="i">Commerce</hi>, d’<hi rend="i">Action</hi>, des <hi rend="i">Feuilles libres</hi>, des <hi rend="i">Annales politiques et littéraires</hi>, des <hi rend="i">Nouvelles littéraires</hi>, des <hi rend="i">Cahiers du mois</hi>, de la <hi rend="i">Revue de Paris</hi> et de la <hi rend="i">Revue hebdomadaire</hi>. Enfin, les almanachs littéraires comme <hi rend="i">L’ami du lettré</hi> ont été également très utiles.  </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

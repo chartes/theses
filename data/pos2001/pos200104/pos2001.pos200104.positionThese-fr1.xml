@@ -1,0 +1,121 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le foisonnement des beffrois et des hôtels de ville dans le nord de la France et en Belgique incite à s’interroger sur les raisons de leur
+          édification, sur leur intégration dans le paysage et dans l’histoire d’une cité, et, à plus grande échelle, d’une région, comme à
+          s’intéresser aux modalités pratiques de leur construction.</p>
+        <p>Un état préalable de la question permet de saisir le regard que les hommes ont porté au fil du temps sur les édifices étudiés, au travers
+          notamment de représentations iconographiques et de témoignages littéraires. Par ailleurs, la perception par les historiens du contexte
+          politique et économique qui a présidé à la naissance et au développement des institutions urbaines apparaît largement influencée par les
+          considérations et par l’état d’esprit de leur temps.</p>
+        <p>Le premier volet de l’enquête porte sur les motivations qui ont présidé à l’édification des beffrois et des hôtels de ville et aborde, de
+          fait, la question de la raison d’être même de ces bâtiments. Quel rôle la construction de ces bâtiments joue-t-elle dans l’équilibre des
+          pouvoirs, au sein de la cité comme envers les princes laïques et les prélats L’émergence de la bourgeoisie comme force politique se
+          caractérise plus par une imitation de la puissance seigneuriale, adaptée aux réalités économiques, que par une révolution sociale - le
+          beffroi ne rappelle-t-il pas la turris seigneuriale, signal visible de l’étendue du pouvoir féodal sur la banlieue La comparaison avec des
+          bâtiments similaires en Europe apporte quelques éléments de réponse sur ce point. La mise en perspective des beffrois et des hôtels de ville
+          avec d’autres édifices urbains permet par ailleurs d’appréhender les problèmes liés à la conception d’ensemble de la cité que souhaitent
+          donner les instances municipales. Comment ces bâtiments sont-ils devenus porteurs d’une mythologie de la commune et de l’identité urbaine,
+          et ce, spécifiquement en Flandre, de façon sans doute bien plus évocatrice que les remparts et les portes de la ville Faut-il voir dans
+          cette représentation une volonté initiale de la part de leurs concepteurs, ou plutôt le résultat d’une évolution de la littérature
+          historique à leur sujet À cet égard, la notion de ville idéale, en représentation lors des fêtes et des cérémonies publiques, s’avère
+          essentielle. Cette analyse est sous-tendue par l’idée que l’ordre urbanistique reflète non seulement l’ordre social, mais aussi le fondement
+          de l’institution urbaine.</p>
+        <p>Le second volet de l’étude s’applique à déterminer les conditions de la construction des beffrois et des hôtels de ville. La conception du
+          projet architectural varie selon l’ambition du bâtiment et reflète les projets des échevins. Ceux-ci déterminent un programme dont
+          l’objectif est de représenter la ville comme un idéal. Le projet établi, il est confié aux hommes du métier, qui se chargent de son
+          application sur le chantier. Là interviennent des notions techniques, économiques et sociales, qui font de l’espace du chantier un champ
+          d’observation privilégié de la vie médiévale. Enfin, le parti, découlant du programme, et la décoration qui s’y attache parachèvent
+          l’expression du pouvoir échevinal.</p>
+        <p>Le nombre élevé des beffrois existant en Flandre et l’importance que ces édifices occupent au sein de la cité a conduit à concentrer nos
+          recherches sur les actuels départements du Nord et du Pas-de-Calais, sans pour autant négliger de faire d’utiles comparaisons dans un cadre
+          géographique plus vaste.</p>
+      </div>
+              <div type="sources"><head>Sources écrites</head>
+        <p>La majeure partie de la documentation écrite est conservée aux archives départementales du Nord et du Pas-de-Calais : archives communales,
+          série 20 relative aux travaux des communes au XIX, siècle, dossiers de dommage de guerre qui nous renseignent sur l’état de certains
+          édifices avant leur destruction.</p>
+        <p>Il va sans dire que les archives communales constituent la principale source documentaire. Les franchises et les privilèges, classées dans
+          la série AA, mentionnent parfois, parmi les concessions octroyées par le seigneur à la commune ou à l’échevinage, l’octroi du droit de
+          cloche et d’un local destiné à la réunion des échevins ; ces documents peuvent - il est vrai, rarement - décrire les lieux en question et
+          leurs abords. Les registres de délibérations des échevins, conservés dans la série BB, contiennent de précieuses indications sur les travaux
+          envisagés et effectués dans les édifices communaux, ainsi que, parfois, des descriptions des fêtes communales. Il arrive que l’on puisse
+          confronter ces données avec une série continue de comptes communaux (série CC), qui nous livrent les noms d’artisans ou d’artistes et
+          permettent ainsi dégager des familles de monuments et d’esquisser des influences ; une exploitation quantitative de ces comptes est
+          toutefois délicate du fait de la diversité des unités de mesure et des monnaies utilisées. Les séries DD et GG concernent respectivement les
+          travaux et propriétés communales et les chapelles échevinales ; bien quelles conservent des documents datant d’ordinaire de l’époque
+          moderne, elles permettent parfois de reconstituer un état antérieur.</p>
+        <p>Les fonds des Archives nationales sont plus décevants : les archives du service des monuments historiques (sous-série FIO) ne concernent
+          que les années 1853 à 1864 ; la sous-série touchant les dossiers de dommages de guerre (F’8) n’est pas classée à ce jour. Seule la
+          sous-série F’3 (bâtiments civils) présente un certain intérêt, pour la période post-révolutionnaire, car elle contient des mentions de
+          reconversion des édifices municipaux par l’administration révolutionnaire.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

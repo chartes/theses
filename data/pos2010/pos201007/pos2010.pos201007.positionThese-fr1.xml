@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>À partir de la Première Guerre mondiale, la France s’est dotée de structures administratives pour l’organisation de manifestations
+          artistiques (représentations théâtrales, concerts et expositions) afin de servir ses intérêts diplomatiques à l’étranger. La naissance de ce
+          nouveau mode de communication officielle entre les nations, la diplomatie culturelle, a fait l’objet de recherches par les historiens dès
+          les années 1960. Mais jusqu’à présent, aucune étude – à l’exception de celle d’Alain Dubosclard axée sur l’action artistique aux
+          États-Unis – n’a exploré l’action strictement artistique, par le biais des expositions.</p>
+        <p>L’investigation concerne l’ensemble des expositions organisées par les services centraux d’action artistique, au sein des ministères des
+          Affaires étrangères et de l’Instruction publique et des Beaux-arts, et par l’association française d’expansion et d’échanges artistiques
+          (AFEEA), créée en 1922, devenue association française d’action artistique (AFAA) en 1934. Une centaine d’expositions regroupant l’art ancien
+          et l’art moderne, l’architecture et les arts décoratifs avec les arts graphiques, la sculpture et la peinture sont patronnées et
+          subventionnées par ces services. Par l’analyse de cet ensemble, il s’agit de voir si l’État français sut tirer parti de l’engouement que
+          suscitait l’art français dans le monde ou s’il donna au contraire des armes à d’autres capitales comme New York pour lui « voler l’idée
+          d’art moderne ». Ce corpus d’expositions constitue un observatoire du phénomène des expositions temporaires ou itinérantes. On voit naître
+          alors des débats sur le rôle des expositions pour le public, amateur ou spécialiste, sur leur place dans la politique des musées, notamment
+          par rapport au traitement des collections. En traversant l’histoire des institutions artistiques, en analysant quels artistes ont été
+          choisis pour figurer dans ces expositions et quels sont ceux qui en ont été exclus, le sujet choisi est l’occasion d’aborder sous un angle
+          international l’histoire du goût et des politiques artistiques de la <num>iii<hi rend="sup">e</hi></num> République.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>On a pu aborder l’étude de ces expositions par de nombreuses sources. Les archives du service des œuvres françaises à l’étranger (SOFE),
+          conservées au centre des archives diplomatiques de Nantes, ont constitué le socle de cette thèse puisqu’elles ont gardé la trace de toutes
+          les expositions organisées pendant l’entre-deux-guerres ainsi que les comptes rendus des conseils d’administration de l’AFAA. Les archives
+          du ministère de l’Instruction publique et des Beaux-arts (AN F²¹), bien qu’un peu moins riches, ont été toutefois incontournables, ainsi que
+          celles des musées nationaux.</p>
+        <p>Enfin, il était indispensable de recourir aux nombreux documents imprimés qui accompagnèrent l’action artistique ou la commentèrent :
+          catalogues d’exposition, articles de presse, essais et mémoires.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

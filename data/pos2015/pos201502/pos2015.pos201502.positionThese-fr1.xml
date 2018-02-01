@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Proposer une édition commentée de la <emph>Theologia naturalis</emph> de Nicolas Bonet († 1343), c’est s’interroger sur les origines d’une discipline longtemps considérée dans la culture catholique comme allant de soi : la théologie naturelle, qui consiste à démontrer par la raison naturelle « seule » l’existence et les principaux attributs de Dieu. Celle ci fut longtemps une pièce maîtresse de la théologie, dans la catégorie « motifs de crédibilité » de la Révélation. Or la théologie naturelle est lourde de présupposés historiquement datables. Cette étude se propose ainsi de manifester le poids historique des deux mots <emph>théologie naturelle</emph>, qui apparaissent pour la première fois dans un titre, en les replaçant dans leur contexte d’émergence. L’originalité du scotiste Bonet est double : non content d’être l’auteur de la première <emph>Théologie naturelle</emph> connue, il est également le premier à avoir constitué en un traité systématique une métaphysique transcendantale dégagée de toute dimension théologique. La relation entre métaphysique et théologie est un thème central de cette étude. Cette introduction s’attache à manifester les enjeux et la pertinence de l’objet d’étude considéré, compte tenu des actualités éditoriales, des récents débats autour de l’apophatisme, et de la destitution heideggérienne de la métaphysique. Vient ensuite l’exposé de la méthode observée, qui entend mettre à profit les intuitions foucaldiennes en replaçant l’œuvre de Bonet dans le tissu épistémique qui est le sien, ainsi qu’un résumé de la vie de l’auteur.</p>
+          <p>La préoccupation constante de ce travail est d’allier une étude détaillée (partielle) des contenus textuels à la manifestation des enjeux de la pensée qui s’y énonce, sur la longue durée de l’histoire de la philosophie. Le commentaire introductif se compose donc de deux parties : la première met au jour les conditions d’émergence de la pensée de Bonet. La seconde commente cette pensée à même le texte, selon les axes précédemment dégagés. </p>
+        </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les quatre œuvres principales de Bonet, <emph>Metaphysica</emph>, <emph>Physica</emph>, <emph>Predicamenta</emph> et <emph>Theologia naturalis</emph>, ont été imprimées à Venise en 1505. Y renvoient les références à la <emph>Métaphysique</emph>, à la <emph>Physique</emph> et aux <emph>Catégories</emph> de Bonet, données dans ce travail. </p>
+          <p>Sur quarante-sept manuscrits répertoriés ont été consultés les suivants. Originaux : Rome, BAV Vat. Lat 3039 ; BAV Vat. Lat. 4847 (15°) fol. 2-8 ; BAV Vat. Lat. 3040 ; BAV Vat. Lat 3041; BAV Chigi lat. E.IV.110 – Venise, Bibl. Marc. lat. Z 303 – Venise Bibl. Marc. lat. Z 304 – Saint-Omer, BA ms. 237 – Munich, BSB, clm 18788 – Munich, BSB, clm 26867 – Prague, Klementinum VIII.F.15 – Prague, Kl. V.H.20. Copies : Oxford, Merton College 199 – Erfurt, Bibl. Amploniana F. 314 – Paris, BN 6678 – Rome, BAV 11504.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

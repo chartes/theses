@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Fondée en 1666 à Paris par Louis XIV, l’Académie des sciences est aujourd’hui riche d’une histoire de près de trois cent cinquante ans. Cependant, ce n’est qu’assez récemment que les historiens, en particulier anglo-saxons (J. McClellan, A. Stroup et surtout R. Hahn), ont jugé bon de s’y intéresser. Les recherches historiques de ces dernières années se sont particulièrement appuyées sur des archives à caractère purement scientifique, afin d’élaborer l’histoire des disciplines représentées à l’Académie et de mesurer la participation de cet établissement à ce que l’on a appelé la « Révolution scientifique » du <num>xvii</num><hi rend="sup">e</hi> siècle. Quant aux travaux sur l’Académie en tant que corps constitué, ils se sont principalement fondés sur des documents d’origine administrative, émanant tant de cette Compagnie que du pouvoir royal. </p>
+        <p>Cependant, on observe depuis peu une réévaluation des archives personnelles des scientifiques, ainsi qu’un intérêt croissant pour l’envers du décor : la place du savant non plus seulement au service de l’État, mais également au sein de la société, et la façon dont son activité professionnelle particulière est considérée par ceux dont la place et le rang sont établis depuis longtemps. Par ailleurs, cet intérêt des historiens pour les documents personnels des savants et pour leurs comportement et situation dans la sphère « privée » de la société recoupe en partie l’enthousiasme nouveau pour les écrits produits par la démocratisation progressive de l’écriture, les « documents du for privé », qui font l’objet depuis 2003 d’un programme de recherche collectif du Centre national de la recherche scientifique (GDR n° 2649). </p>
+        <p>Le <hi rend="i">Journal de la vie privée de Jean-Dominique Cassini, dans les deux dernières années de sa vie, depuis le 1<hi rend="sup">er</hi> juin 1710 jusqu’au 11 sept. 1712. Dicté par lui-même jusqu’au moment de sa mort,</hi> est à la fois document du « for privé » et archive personnelle d’un grand astronome d’origine italienne, né en 1625, et membre de l’Académie des sciences entre 1666 et 1712, au sujet duquel l’historiographie est, somme toute, assez mince compte tenu de l’importance numérique de ses recherches académiques. Cité par certains historiens, comme sa biographe A. Cassini, ce <hi rend="i">Journal</hi> présente une mine de renseignements, non seulement sur ce que peut être la vie quotidienne d’un astronome de l’Observatoire pendant le règne de Louis XIV, mais également sur l’environnement mondain dans lequel il évolue et son rôle dans la société, ainsi que sur ses relations avec le monde scientifique, local et international, de l’époque. </p>
+        <p>Il importe toutefois de replacer cet écrit dans un contexte plus large, celui de l’ensemble de la carrière scientifique et de l’élévation sociale du savant, dont ce texte présente en quelque sorte l’aboutissement, en recréant en quelque sorte le « monde de Cassini ». </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Le manuscrit original, écrit non de la main de Cassini, aveugle à cette époque, mais par un de ses secrétaires, est conservé au département des Cartes et Plans de la Bibliothèque nationale de France, sous la cote Ge-DD-2066(2). Il s’agit du seul exemplaire connu de ce texte. </p>
+        <p>De nombreux autres documents ont été utilisés pour l’éclairer. Parmi les principaux, on notera les registres annuels des procès-verbaux de l’Académie des sciences, conservés dans les archives de l’Académie, et principalement ceux des années 1710 à 1712. </p>
+        <p>La plupart des archives des Cassini sont conservées à l’Observatoire de Paris. Parmi elles, les journaux d’observations des Cassini (D1 1-8 et D3 1-27), leurs correspondances (B4 9-12), ainsi que certains écrits personnels et autobiographiques (recueils factices D1 11 et D1 13) ont été particulièrement utiles à ce travail. </p>
+        <p>Enfin, les archives du secrétariat d’État de la Maison du roi aux Archives nationales, surtout celles de l’Observatoire (O<hi rend="sup">1</hi> 1691), ainsi que les fonds du Minutier central, en particulier ceux des études LXXVIII et CXII, ont été longuement exploités. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

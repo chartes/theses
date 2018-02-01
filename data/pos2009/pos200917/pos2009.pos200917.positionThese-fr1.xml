@@ -1,0 +1,104 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>
+          <hi rend="i">L’historiographie sanclaudienne. —</hi> Le nom de Saint-Claude est aujourd’hui peu évocateur et ne renvoie, dans le meilleur
+          des cas, que l’image d’une bourgade du Jura où l’on fabrique la plupart des pipes françaises. Néanmoins, Saint-Claude connut son heure de
+          gloire et le monastère Saint-Oyend-de-Joux jouissait d’une renommée internationale à l’époque où le Moyen Âge projetait sur le monde ses
+          derniers flamboiements. C’est le classement récent du fonds des archives de l’abbaye par Henri Hours qui a permis de révéler le patrimoine
+          prestigieux du monastère et de donner un nouvel élan aux études médiévales sur celui-ci, tant en histoire qu’en archéologie ou en histoire
+          de l’art. La présente étude s’inscrit donc dans une dynamique de recherches récentes et complémentaires, appelées à s’enrichir mutuellement.</p>
+        <p>
+          <hi rend="i">Un compte de construction singulier. — </hi> La construction de l’église abbatiale Saint-Pierre se place sous le sceau d’une
+          double originalité : d’une part, elle est pour l’instant la seule construction monastique documentée à avoir créé une fabrique pour assurer
+          la gestion de son chantier ; d’autre part, elle se singularise par la petitesse de ses moyens, qui explique la durée excessive du chantier
+          – plus de cent ans, au terme desquels l’église resta inachevée. Ce point n’est pas anodin, car les comptes de Saint-Pierre nous donnent à
+          lire le déroulement d’un chantier des plus communs, de ceux qui aujourd’hui ne sont pas documentés, en raison même de leur banalité, et qui
+          sont donc les plus mal connus.</p>
+        <p>
+          <hi rend="i">Contexte historique, des origines à la construction (vers 430-vers 1390). —</hi> Fondée au premier tiers du <num>v</num>
+<hi rend="sup">e</hi> siècle, l’abbaye se trouve rapidement à la tête d’une petite congrégation ; au <num>xii</num>
+<hi rend="sup">e</hi> siècle, la découverte du corps intact de l’un de ses abbés du haut Moyen Âge, saint Claude, doué de vertus
+          thaumaturgiques, consacre le succès bientôt grandissant de ce centre de pèlerinage. Au moment où le projet de reconstruction de l’église
+          abbatiale Saint-Pierre est porté sur les fonds baptismaux, le monastère est confronté à des difficultés conjoncturelles (la peste, la
+          guerre, le déclin économique) et structurelles (chute du nombre des vocations, sécularisation de la vie monastique) qui appellent la mise en
+          place d’une réforme rapide. Celle-ci sera menée par Jean de Vincelles, abbé contemporain des comptes de la fabrique étudiés (vers 1426-vers
+          1436). C’est donc dans ce cadre de réformes et de mutations que s’ancre le projet de reconstruction de l’église abbatiale (vers 1390-vers
+          1485). Il faut enfin préciser que si l’église abbatiale Saint-Pierre est au cœur de cette étude, il existe dans le monastère une autre
+          église située à la limite de l’enceinte monastique, dédiée aux saints Oyend et Claude et qui accueille les pèlerins venus en quête de grâce
+          et prêts à faire preuve de libéralité.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sont essentiellement constituées par la sous-série 2 H des archives départementales du Jura, consacrée au fonds de l’abbaye de
+          Saint-Claude. Ce sont surtout les deux registres comptables, 2 H 122 et 2 H 123 qui ont fait l’objet de toutes les attentions, afin de
+          fournir une édition des comptes de la fabrique du chantier.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

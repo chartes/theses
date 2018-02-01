@@ -1,0 +1,122 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Connaître l’histoire des sciences médicales a été l’une des exigences des médecins parisiens au <num>xix</num>
+<hi rend="sup">e</hi> siècle. Pour les uns, il s’agissait de connaître l’histoire de la grande famille médicale à laquelle tout médecin
+          praticien appartenait de fait ; pour les autres, il s’agissait, par la connaissance historique, de contribuer au progrès continu de la
+          science médicale. Sans conscience historicisée de la situation d’une science, il paraissait alors improbable que cette science puisse
+          avancer sur le chemin de son perfectionnement. En un sens, l’histoire devait permettre à la médecine, longtemps considérée comme un art,
+          d’entrer dans l’ère de sa pleine positivité et scientificité. Pourtant, assez tôt dans le siècle, il y eut des contradicteurs et des
+          opposants à la culture de l’histoire dans le champ médical. Au nom des avancées scientifiques et techniques les plus récentes, et sous la
+          pression des nouveaux impératifs sociaux et économiques, certains médecins rejetèrent l’histoire, et plus globalement les humanités, à la
+          marge ou en dehors de la sphère hospitalo-universitaire. L’enseignement de l’histoire de la médecine, à la faculté de médecine de Paris,
+          rend compte de ces débats incessants qui ont, tout au long du <num>xix</num>
+<hi rend="sup">e</hi> siècle, opposé « traditionnalistes » et « modernistes » de la pensée et de la pratique médicales.</p>
+        <p>Cette thèse cherche à mettre en lumière le passage d’une conception de la médecine à une autre, à travers les difficultés d’un enseignement
+          officiel : celui de l’histoire de la médecine. En étudiant les péripéties institutionnelles auxquelles fut confrontée la chaire d’histoire
+          de la médecine entre 1794 et 1914, puis les débats qu’elle a fait naître autour de son utilité et son objet d’étude, mais aussi à partir des
+          dispositifs pédagogiques mis en place dans le cadre de son enseignement, ce sont les raisons et la mesure de l’échec d’une discipline qui
+          sont questionnées ici. En centrant cette thèse sur la défaite de l’érudition dans le champ médical, c’est la fin d’une époque qu’il s’agit
+          de décrire, une époque où la critique textuelle et l’esprit philologique jouaient encore un rôle dans la constitution des connaissances
+          médicales, scientifiques et techniques.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Afin d’éclairer l’histoire de l’enseignement médico-historique à la faculté de médecine de Paris, il paraissait indispensable de fonder
+          cette histoire sur deux types de documents : tout d’abord, des documents permettant d’établir la chronologie institutionnelle d’un
+          enseignement unique en France et pionnier en Europe ; d’autre part, des sources liées à l’enseignement de l’histoire de la médecine en tant
+          que tel.</p>
+        <p>S’agissant du versant institutionnel de cette histoire, l’essentiel des sources se trouve aujourd’hui conservé aux Archives nationales,
+          dans les sous-séries AJ<hi rend="sup">16</hi>(académie de Paris) et F<hi rend="sup">17</hi>(Instruction publique). La sous série AJ <hi rend="sup">16</hi> est la plus riche et la plus instructive des deux. On y trouve notamment les dossiers nominatifs des professeurs et des
+          agrégés ayant enseigné dans la chaire d’histoire de la médecine, ainsi qu’une correspondance administrative particulièrement intéressante
+          entre le doyen de la faculté de médecine de Paris, le recteur de l’académie de Paris et le ministre de l’Instruction publique. Cette
+          correspondance aborde toutes les questions liées à l’enseignement médical et à l’organisation des cours à la faculté de médecine ; elle rend
+          aussi compte du résultat des concours pour les chaires laissées vacantes à la suite du décès ou de la mutation de l’un des professeurs. À
+          côté des dossiers conservés dans la sous série AJ<hi rend="sup">16</hi>, ceux livrés par la sous-série F<hi rend="sup">17</hi> paraissent
+          moins intéressants. La plupart font figure de doubles et d’autres apparaissent comme bien trop lacunaires pour en permettre un traitement
+          satisfaisant. C’est le cas notamment des dossiers des anciens fonctionnaires des enseignements, qui ne concernent, au total, que trois
+          professeurs d’histoire de la médecine.</p>
+        <p>En ce qui concerne l’enseignement lui-même, une importante partie des leçons d’histoire de la médecine a été publiée au <num>xix</num>
+<hi rend="sup">e</hi> siècle : soit dans les journaux médicaux de l’époque, soit de manière plus complète, sous la forme de véritables
+          manuels d’histoire de la médecine. Il faut ajouter à ces sources imprimées des sources manuscrites, inédites pour la plupart, qui permettent
+          de compléter ce corpus de base. La bibliothèque Carnegie de Reims conserve un important fonds Goulin, comprenant une trentaine de volumes
+          manuscrits au format in-4°, dont les quatre volumes de son <hi rend="i">Cours d’histoire de la médecine</hi>(1795-1799), ainsi qu’un volume
+          intitulé <hi rend="i">Chronologie pour l’histoire de la médecine</hi>. Le reste de ce fonds est particulièrement intéressant, puisqu’il nous
+          éclaire sur les travaux médico-historiques du premier titulaire de la chaire d’histoire de la médecine et sur les événements marquants de sa
+          vie. En ce qui concerne Charles-Victor Daremberg, les sources sont elles aussi abondantes. La bibliothèque de l’Académie de médecine de
+          Paris conserve une importante collection Daremberg comprenant cent-quarante volumes. Quelques volumes de ce fonds sont constitués de
+          diverses notes sur l’histoire de la médecine, des notes préparatoires à son enseignement au Collège de France et à la faculté de médecine de
+          Paris. On y trouve aussi des papiers relatifs à ses missions médico-littéraires dans plusieurs bibliothèques d’Europe, ainsi que sa
+          correspondance savante. Le reste des notes préparatoires pour son <hi rend="i">Cours d’histoire de la médecine</hi> se trouve conservé à la
+          Bibliothèque interuniversitaire de médecine de Paris. Il faut enfin signaler que la bibliothèque de l’Académie de médecine de Paris possède
+          l’ensemble du <hi rend="i">Cours d’histoire de la médecine du professeur Jules Parrot (1876-1879)</hi>, formant cinq volumes qui contiennent
+          aussi bien ses leçons que les notes préparatoires à ses leçons.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

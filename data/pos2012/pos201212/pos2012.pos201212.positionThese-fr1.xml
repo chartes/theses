@@ -1,0 +1,85 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Le port d’un couvre-chef est une constante du costume de l’époque moderne. Le cas parisien s’impose en raison de la réputation de sa production chapelière et des changements institutionnels et techniques qui frappent la chapellerie à cette époque. Les chapeliers constituent une communauté complexe et hétérogène, tant sur le plan professionnel que privé, dans un contexte religieux et politique difficile. Mais l’étude du couvre-chef à l’époque moderne ne peut se limiter au chapeau, ni à sa fabrication et à sa commercialisation. Les Parisiens ont à leur disposition d’autres couvre-chefs, tout aussi utilisés que le chapeau, comme le bonnet, le chaperon, la coiffe, le béguin, la calotte ou encore le chrémeau, qu’ils agrémentent de ces indispensables garnitures que sont les plumes et les enseignes. Il faut également prendre en compte la gestuelle et le discours symbolique et social sur ces objets, qui apparaissent alors bien moins anodins et anecdotiques dans cette société attachée aux apparences, et à la notion d’honneur. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources et historiographie </head>
+    
+    <p><hi rend="i">Retour sur une jeune discipline</hi>. — L’étude historique du costume et de la mode est souvent perçue comme divertissante, peu sérieuse. À l’origine, et pour encore de nombreux historiens, notamment historiens de l’art, le costume n’est qu’un indice de datation de l’œuvre. Depuis les années 1960, et encore plus depuis les années 1980, où apparaissent les « <hi rend="i">dress studies</hi> », l’histoire du costume ne se limite plus à une description des modes, mais prend en compte sa fabrication, son port, son utilisation et sa représentation. Dans cette histoire du costume, les couvre-chefs font partie des accessoires et ont donné lieu à peu d’études. On peut citer le mémoire de maîtrise de Sophie Jolivet sur le <hi rend="i">Couvre-chef à la fin du Moyen Âge : histoire, symboles et métiers, l’exemple bourguignon</hi> (1995), prélude à une thèse sur le costume à la cour de Philippe le Bon, ainsi que des travaux menés sur les corporations de chapeliers au <num>xviii</num><hi rend="sup">e</hi> siècle par Michael Sonenscher, Emile Isnard et Peter Arnaud entre autres. </p>
+    
+    <p><hi rend="i">Des sources multiples</hi>. — En l’absence presque complète de couvre-chefs de l’époque, les sources utilisées sont de trois sortes : archives, sources imprimées, iconographie. Aux Archives nationales, ont été largement mis à contribution les inventaires après décès, dans la lignée des travaux pionniers de Daniel Roche, mais aussi d’autres actes notariés – contrats de mariage et de vente, contrats d’apprentissage, baux de location et de rente, quittances, obligations –, les registres des jurandes et maîtrise des métiers de Paris (série Y), ceux de Saint Germain des Prés (sous-série Z²), les adjudications du parc civil (série Y), ainsi que certains actes des séries K et KK. Ont également été consultés les registres d’écrous de la Conciergerie, aux archives de la Préfecture de police de Paris, et des archives provinciales aux archives départementales du Rhône et de la Seine-Maritime. La série de manuscrits, dite « fichier Laborde », au département des Manuscrits de la Bibliothèque nationale de France, a fourni des informations sur la vie personnelle des chapeliers. Les sources imprimées comprennent des nombreux ouvrages d’époque, à portée littéraire, satirique, administrative ou historique, à quoi s’ajoutent deux ouvrages techniques du <num>xviii</num><hi rend="sup">e</hi> siècle : la série d’articles consacrée à la chapellerie dans l’<hi rend="i">Encyclopédie</hi> de Diderot et d’Alembert, et <hi rend="i">L’art du chapelier</hi> de l’abbé Nollet. En matière d’iconographie, les fonds principaux ont été celui des estampes (collection Hennin) et celui des œuvres flamandes.  </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En tant que guerre totale, la Première guerre mondiale a suscité une mobilisation économique de l’arrière d’une ampleur sans précédent en
+          France ; elle a joué de ce fait un rôle majeur dans la modernisation économique du pays et a contribué à une profonde redistribution
+          régionale des capacités de production industrielles, notamment au profit du Midi. Cet aspect des conséquences de la guerre reste
+          relativement mal connu.</p>
+        <p>Pourtant, Toulouse représente un cas de figure particulièrement intéressant dans cette perspective : l’apparente immobilité des structures
+          économiques et sociales d’une ville qui n’est pas un foyer de la grande industrie avant-guerre ne l’a pas empêchée de s’engager pleinement
+          dans l’effort de guerre, voire de parvenir à en tirer un avantage durable. La guerre a fait de Toulouse un centre de production stratégique
+          pour la défense nationale. Se pose alors une triple question : pourquoi la mobilisation industrielle a-t-elle réussi dans une ville réputée
+          en retard, selon quelles modalités s’est-elle mise en place et quelles conséquences a-t-elle eu sur la société et l’économie locales ?</p>
+        <p>Cela nous a amené à tenter, dans un premier temps, de tracer les contours du modèle de développement de Toulouse avant 1914, fondé sur des
+          industries dispersées, et à relativiser ainsi le « retard » de la ville dans l’économie nationale. Dans un deuxième temps, nous avons étudié
+          les caractéristiques de la mobilisation industrielle à Toulouse qui, tout en introduisant les ferments de la deuxième révolution
+          industrielle, s’appuie sur les spécificités de l’économie locale d’avant-guerre. Enfin, il s’agissait d’évaluer les effets de la guerre sur
+          la société toulousaine, confrontée à une augmentation exponentielle de sa population, à l’afflux de catégories nouvelles et à une
+          dégradation sensible des conditions de vie : les mouvements revendicatifs qu’a connus la ville en 1917-1918, puis en 1919-1922, d’une
+          ampleur inconnue, ont très diversement marqué les esprits.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont éparpillées et de nature très diverse. Le caractère local du sujet a d’abord impliqué de s’intéresser aux
+          délibérations de la Chambre de commerce de Toulouse et aux archives préfectorales conservées aux archives départementales de la
+          Haute-Garonne, faute de pouvoir s’appuyer sur les archives municipales, rares pour la période de la guerre, si l’on met à part le <hi rend="i">Bulletin municipal de la Ville de Toulouse</hi>. Outre le très riche fonds du Cabinet du préfet (15 Z), on a pu consulter aux
+          archives départementales les archives du Service des réfugiés et des archives de police relatives aux mouvements de grève pour la période de
+          guerre, mais aussi des archives fiscales (rôles des patentes, recensement de 1911) utiles à l’établissement du contexte économique local, le
+          volumineux fonds de la Manufacture des tabacs de Toulouse (30 J) et le fonds de la succursale de la Banque de France à Toulouse qui complète
+          les rapports d’inspection du portefeuille numérisés par les archives de la Banque à Paris. Aux archives municipales de Toulouse, nous nous
+          sommes surtout intéressés au fonds dit de l’Ingénieur (ING) qui concerne la direction des Travaux, très utile sur toutes les questions
+          touchant à l’alimentation en électricité de la ville, et à l’« album de la Poudrerie », album de 99 photographies probablement réalisées en
+          1917 à l’intérieur du gigantesque complexe industriel que constituait alors cet établissement. Enfin nous avons pu trouver aux archives de
+          la Bourse du travail une enquête corporative menée en 1913 pour le VII<hi rend="sup">e </hi> Congrès de la CGT, très riche sur le quotidien
+          des ouvriers et l’état du mouvement syndical.</p>
+        <p>Par ailleurs, les archives d’État ont nécessité de longues et parfois infructueuses recherches : il n’a pas été possible par exemple de
+          retrouver les archives de la Poudrerie et de l’Atelier de fabrication de Toulouse d’avant 1940, de sorte qu’il a fallu se reporter aux
+          archives du ministère de l’Armement – elles-mêmes divisées entre le fonds Albert Thomas aux Archives nationales (94 AP) et les fonds du
+          Service historique de la défense à Vincennes (10 N) – ainsi qu’aux archives de l’Inspection générale des poudres au Centre des archives de
+          l’armement à Châtellerault pour trouver quelques rapports relatifs à l’évolution de ces établissements d’armement. Concernant l’industrie
+          privée, les dossiers individuels de contribution extraordinaire sur les bénéfices de guerre conservés au Centre des archives économiques et
+          financières à Savigny-le-Temple (B 15281 à B 15294) représentent cependant un fonds homogène d’une très grande richesse.</p>
+        <p>Enfin, nous avons eu accès à des archives d’entreprises (les archives de la Société toulousaine du Bazacle aux archives EDF-GDF à Blois),
+          en particulier à des archives bancaires (Crédit lyonnais et Société générale), dont l’apport est essentiel pour les principales PME de la
+          place, surtout à partir de 1920.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

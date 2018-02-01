@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+           <p>En 2013, les commémorations des 850 ans de la cathédrale de Paris étaient marquées par la bénédiction de neuf nouvelles cloches, toutes accordées sur le bourdon <emph>Emmanuel</emph> qui se trouvait ainsi au cœur des festivités. Mais de son fondeur, Florentin Le Guay, on ignorait presque tout, bien que son nom fût bien connu des spécialistes et la production de sa dynastie hautement estimée. Cette lacune et l’actualité appelaient de leurs vœux que l’histoire de cette famille fût étudiée.</p>
+           <p>L’étude s’étend de 1650 à 1741, bornes chronologiques au-delà desquelles on ne trouve aucune mention des Le Guay, que ce soit dans les archives ou sur les cloches encore conservées. Elle se déroule principalement dans le cadre géographique de l’Île-de-France, à quelques exceptions près.</p>
+           <p>Cette thèse s’inscrit dans une historiographie campanologique, enrichie depuis environ un siècle et demi, mais surtout traitée par un monde non universitaire, principalement au niveau local. Une figure fondatrice émerge toutefois, celle de l’archiviste Joseph Berthelé, qui jeta les fondements de la campanographie moderne. Le sujet semble faire l’objet d’un regain d’intérêt depuis une vingtaine d’années, mais les recherches sur les cloches, à la fois objets et instruments complexes, requièrent des connaissances dans des domaines très variés, si l’on veut bien les comprendre. Malgré plusieurs travaux, l’histoire des fondeurs de cloches demeure méconnue, en tout cas en dehors du Bassigny ; aucune étude n’avait été faite sur le centre parisien. Cette thèse se propose de combler cette lacune, en offrant un éclairage sur une dynastie illustre dont une part non négligeable de la production a été conservée jusqu’à nos jours. Les recherches ont voulu montrer l’insertion de la dynastie Le Guay dans son quartier, le faubourg Saint-Médard, où elle résida pendant trois générations, et plus largement dans la ville de Paris ; quelles en étaient les dynamiques familiales et comment elle s’était organisée, notamment pour l’économie de l’atelier, à travers les différentes figures qui la composèrent. Dans un second temps, elles se sont attachées à la réalité du métier de fondeur de cloches, en suivant les étapes de la commande et de la fabrication artisanale, jusqu’à l’installation des cloches. Le choix a été fait de ne pas séparer l’histoire de la dynastie et sa production, en établissant un catalogue recensant toutes les cloches disparues ou conservées des Le Guay, classées chronologiquement par leur auteur, avec leurs descriptions et leurs dimensions quand elles étaient connues, en indiquant systématiquement les sources et la documentation existant au sujet de chacune d’entre elles.</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+            <p>Les sources se caractérisent par leur triple nature : les unes sont constituées par des archives proprement dites, d’autres par leur origine strictement bibliographique, et les dernières enfin sont les cloches elles-mêmes, par les inscriptions qu’elles portent (dix-huit clochers et campaniles différents, regroupant trente cloches, ont été visités dans quatre départements). Elles se caractérisent également par une extrême dispersion des archives, qui se double paradoxalement d’une concentration exceptionnelle : des dépouillements d’archives ont été menés dans les archives de tous les départements d’Île-de-France (excepté le Val-de-Marne), les archives de l’Assistance Publique-Hôpitaux de Paris, les archives de l’Aisne, d’Eure-et-Loir, de la Marne et de l’Oise, ainsi que dans plusieurs bibliothèques ; cependant, la majeure partie des sources consultées se trouvait aux Archives nationales, surtout dans le Minutier central des notaires parisiens. L’étude XVII, à laquelle la dynastie a de loin le plus recouru, a fait l’objet d’un dépouillement quasi intégral. Il faut remarquer que les destructions d’archives liées aux conflits ont privé la recherche de nombreuses sources. Enfin, les bases de données de la Société française de campanologie (SFC) et leurs équivalents en Belgique, en ligne sur internet, se sont révélées des plus précieuses.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

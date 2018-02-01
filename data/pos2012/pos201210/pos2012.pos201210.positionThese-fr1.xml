@@ -1,0 +1,87 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Le département des Arts du spectacle de la Bibliothèque nationale de France dispose d’un fonds encore mal exploré : celui rassemblé dans les premières décennies du <num>xx</num><hi rend="sup">e</hi> siècle par le mime Farina, Jules-Maurice Chevalier de son vrai nom. Se faisant l’archiviste de sa propre activité, Farina nous offre un ambitieux témoignage sur sa carrière, réunissant tout un ensemble de documents à son sujet : correspondance, programmes, articles, manuscrits, maquettes de décors et de costumes… À ces archives s’ajoute une vaste collection, qui met en lumière les différents enjeux se cristallisant autour de l’art du geste en ce début de siècle. </p>
+    <p>Depuis la démolition des Funambules en 1862, théâtre où le tout-Paris des années 1830 courait voir Jean-Gaspard Deburau, le fameux « Baptiste » immortalisé plus tard à l’écran par Jean-Louis Barrault dans <hi rend="i">Les enfants du Paradis</hi>, l’art du silence subissait une éclipse importante. À la fin du <num>xix</num><hi rend="sup">e</hi> siècle, le Cercle funambulesque lui avait pourtant apporté un certain renouveau, et les frères Hanlon-Lees, mimes et acrobates anglais qui émerveillaient à la fois Zola et Huysmans, avaient obtenu un succès triomphal. Mais pour ce qui est des premières décennies du <num>xx</num><hi rend="sup">e</hi> siècle, bien avant la révolution initiée par Étienne Decroux, fondateur de cette nouvelle « grammaire gestuelle » qu’est le mime corporel, et professeur du célèbre Marcel Marceau, on ne trouve aucun nom de mime qui soit passé à la postérité.  </p>
+    <p>À cette époque, en effet, cantonnée dans l’univers des music-halls où elle se compromet parfois avec les tout premiers strip-tease, la pantomime a bien du mal à défendre sa place sur la scène artistique. À l’heure où de nombreux librettistes, chorégraphes, plasticiens et danseurs s’attachent à faire de la danse un art profondément renouvelé, la pantomime classique paraît désuette. Les nouvelles réflexions théoriques qui promeuvent la libération du corps et la recherche du mouvement naturel vont aussi à l’encontre de la gestuelle codifiée et conventionnelle que pratiquent encore de nombreux mimes. D’autre part, le succès croissant du cinématographe met en péril les représentations de pantomime, et révèle combien elle peut être perçue comme un genre inabouti.  </p>
+    <p>Habité par la passion de son art, et poussé par le besoin de réagir au déclin de la pantomime en accumulant des témoignages sur sa pratique, Farina s’est employé, durant toute sa carrière, à rassembler cette très riche collection. À partir de 1928, date à laquelle il ne peut plus monter sur scène pour raisons de santé, il décide de la mettre en forme avec ses archives, et de léguer l’ensemble au patrimoine de son pays.  </p>
+    <p>Notre étude se propose de montrer de quelle façon Farina a entrepris et poursuivi cette démarche d’archiviste et de collectionneur, véritable plaidoyer en faveur de cet art du silence auquel il avait voué sa vie. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Le fonds Farina est constitué de trois ensembles. D’abord une vingtaine de boîtes qui contiennent des séries de liasses paginées, comportant ses propres archives (correspondance, articles et programmes en rapport direct avec son activité), et divers documents collectés sur la pantomime à son époque (articles, manuscrits, partitions), ainsi que de nombreux dessins, quelques encres, et des peintures à l’huile, à la gouache ou à l’aquarelle. Puis l’iconographie de grand format, classée à part : peintures, dessins, gravures, affiches, statuettes, moulages, et quelques masques et objets. Enfin, une bibliothèque de 458 volumes. </p>
+    <p>Pour mener à bien notre étude, nous avons consulté le fonds Rondel du même département de la Bibliothèque nationale de France, et le fonds Georges Wague de la bibliothèque-musée de l’Opéra de Paris. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

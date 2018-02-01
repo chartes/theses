@@ -1,0 +1,93 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La traditionnelle division de la France entre langue d’oïl et langue d’oc a été complétée en 1873 par le linguiste italien Graziadio-Isaïa
+          Ascoli, découvreur du francoprovençal, auquel il a donné à la fois un nom et une définition. Cet espace du Centre-Est de la France,
+          débordant sur la Suisse et l’Italie, a sa propre individualité qui le distingue clairement des langues d’oïl et d’oc, même s’il ne cesse de
+          régresser à la poussée séculaire du français. Mais ce particularisme est moins net du point de vue de la géographie historique, car cet
+          espace est traversé de nombreuses limites culturelles. Dans ces conditions, il a paru intéressant de vérifier comment un domaine
+          linguistique homogène pouvait s’individualiser en plusieurs aires culturelles distinctes. Le meilleur observatoire est sans conteste le
+          milieu rural, véritable conservatoire des pratiques culturelles anciennes, au travers notamment de ses productions et de l’habitat.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude du lexique implique de recourir aux enquêtes linguistiques menées depuis plus d’un siècle, et fréquemment publiées. En effet, le
+          francoprovençal n’a pas donné lieu à une littérature abondante et les textes de la pratique sont relativement rares par rapport au français
+          ou à l’occitan. Il faut donc se servir de matériaux recueillis auprès des populations mêmes qui le pratiquent encore ou le pratiquaient il y
+          a peu. L’ensemble le plus cohérent provient des atlas linguistiques, essentiellement la série des <hi rend="i">Atlas linguistiques et
+            ethnographiques de la France</hi>.</p>
+        <p>Ces différentes sources présentent toutefois le défaut majeur de ne pas couvrir de façon homogène la région francoprovençale, car elles
+          privilégient les zones où le patois est encore vivace comme la Savoie ou le Valais, au détriment du Jura ou des cantons suisses protestants
+          où le français a remplacé assez tôt le francoprovençal. De plus, les études concernant l’ensemble du francoprovençal sont rares, car les
+          linguistes leur préfèrent des enquêtes à l’échelle d’un village, voire d’une vallée.</p>
+        <p>La même remarque vaut aussi pour l’aspect ethnographique. Ainsi, dans le domaine de l’habitat, outre des études dispersées, on dispose des
+          résultats de l’enquête menée durant la dernière guerre: l’<hi rend="i">Architecture rurale française</hi>.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

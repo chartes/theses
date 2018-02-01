@@ -1,0 +1,115 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’enjeu de la décolonisation de l’Afrique noire française répond à des logiques coloniales, africaines, nationales et internationales. La
+          question de la décolonisation de l’Afrique est une des raisons essentielles de la création de la <num>v<hi rend="sup">e</hi></num> République. Le
+          caractère moins spectaculaire qu’elle a pris en Afrique noire, au regard de la guerre d’Algérie, ne doit pas masquer les enjeux et les
+          impératifs de la politique française qui s’y révèlent tout aussi polémiques. Bien que les circonstances du processus soient dictées par le
+          calendrier imposé par le nouveau pouvoir gaulliste, le travail français en amont pour accompagner, voire encadrer, la politisation
+          contemporaine de la société africaine trouve ses racines bien au-delà de la <num>v<hi rend="sup">e</hi></num> République.</p>
+        <p>Le cas du Congo-Brazzaville se présente dans cette optique comme un exemple particulièrement révélateur des ambitions et des ressources,
+          théoriques comme pratiques, de la politique française en Afrique équatoriale. Cette étude a pour vocation de resserrer le cadre
+          chronologique autour des logiques combinées entre les rythmes politiques français et congolais pour offrir une approche pragmatique et
+          démythifiée. La figure de l’abbé Fulbert Youlou se place naturellement au centre des recherches.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Eparpillées entre Paris, Brazzaville et Abidjan, les sources sont le reflet d’une mémoire partagée entre la France et l’Afrique. L’axe de
+          recherche amène à se concentrer sur les sources des différents acteurs de cette politique, personnes morales ou physiques. Au premier rang
+          des archives des institutions républicaines en charge de cette question, se trouvent les archives du Secrétariat général des affaires
+          africaines et malgaches dirigé par Jacques Foccart, organe élyséen créé par le général de Gaulle pour s’occuper spécialement de la
+          décolonisation de l’Afrique noire et de Madagascar, puis de la gestion des affaires touchant à ces aires jusqu’à la fin de la présidence
+          gaullienne. Ce sont les fonds appelés plus couramment « fonds Foccart » (« privé » et « public »), déposés par ce dernier aux Archives
+          nationales quelques années après la fermeture de son service, et conservés au Centre historique des Archives nationales, à la section du XX
+<hi rend="sup">e</hi> siècle. Ces sources publiques sont complétées par les archives plus proprement coloniales du Congo-Brazzaville
+          conservées au Centre des archives d’outre-mer (fonds ministériel : affaires politiques, et fonds du gouvernement général de Brazzaville), et
+          par les archives du Ministère des affaires étrangères pour la période postérieure à 1960 (fonds Afrique-Levant, secrétariat général et
+          l’important fonds sur les Nations unies). Viennent enfin les archives de la Direction centrale des renseignements généraux conservées au
+          Centre des archives contemporaines. La majorité de la consultation de cette importante documentation n’a pu être obtenue que sur dérogation.</p>
+        <p>Aussi riches et complètes qu’elles soient, ces sources méritent d’être confrontées aux archives privées, archives de mémoire constituées et
+          conservées, mais aussi archives de mémoire qui n’ont pas fait l’objet – par manque de temps ou de volonté – de stratégie mémorielle. Dans le
+          premier cas peuvent être inscrites les archives du Rassemblement du Peuple Français (section outre-mer), conservées par l’Institut Charles
+          de Gaulle, et celles du Rassemblement Démocratique Africain d’Houphouët-Boigny, conservées par le Centre de recherche et de documentation
+          africaine. Dans la seconde catégorie se classent les archives de Maurice Bat, officier du SDECE et conseiller de Fulbert Youlou mandaté par
+          la République française ; les archives de René Gauze, dernier Français directeur des services de police et de sûreté au Congo, et celles de
+          Philippe Lettéron, assistant de Jean Mauricheau-Beaupré au Congo et conseiller de Youlou puis de Tshombé, nommé par Jacques Foccart.</p>
+        <p>Une campagne d’entretiens oraux a été également entreprise auprès d’acteurs ou de témoins privilégiés de la politique française au Congo :
+          les principales personnalités rencontrées sont Alain Plantey, conseiller de Jacques Foccart ; le colonel Maurice Robert, directeur du
+          secteur Afrique du SDECE ; Fernand Wibaux, chargé de mission au ministère de la France d’Outre-Mer ; Martial Sinda, neveu de l’abbé Youlou.
+          Nombre d’autres témoins viennent se joindre à cette liste. Toutes ces archives ont été enfin complétées par des sources imprimées émanant de
+          l’ORSTOM, de la Documentation française et de la présidence de la République du Congo.</p>
+        <p>Il ressort de l’état des sources deux grands traits : cette mémoire de la décolonisation est plurielle et conflictuelle, objet de calculs
+          stratégiques par ses différents dépositaires. Plurielle dans sa typologie et sa nature : la question de la politique de conservation ne
+          coïncide pas nécessairement avec l’importance de l’activité des différents protagonistes. Ce qui induit son caractère conflictuel : la
+          gestion de ces sources, peut-être plus encore que leur propos, fait l’objet de calculs qui concourent à brouiller la lisibilité de la
+          politique de décolonisation. Les clivages transcendent largement la dialectique anticolonial/colonial, ou encore la dialectique noir/blanc,
+          pour s’ancrer sur des réalités bien plus politiques.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

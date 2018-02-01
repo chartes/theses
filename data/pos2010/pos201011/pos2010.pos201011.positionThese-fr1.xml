@@ -1,0 +1,109 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Lorsque Georges Pompidou parvint à la magistrature suprême, en 1969, la construction économique initiée par le Traité de Rome de 1957
+            souffrait de lacunes importantes. D’une part, l’élimination de tous les types d’entraves techniques aux échanges n’était pas terminée.
+            L’attitude de la France du général de Gaulle qui abordait le problème de la Communauté économique européenne (CEE) sous un angle politique
+            y avait contribué. D’autre part, des domaines qui nécessitaient une œuvre commune des États membres et un renforcement de leur cohésion
+            générale n’avaient pas ou peu été pris en compte jusque-là, comme il l’aurait fallu. Il en était ainsi des secteurs de l’industrie, de la
+            recherche et du développement scientifique. Or le président Pompidou, qui faisait le constat d’une faiblesse structurelle de la France
+            dans ce domaine, attachait une importance particulière aux questions industrielles.</p>
+          <p>En outre, la dynamique de la Communauté européenne s’inscrivait dans un contexte économique international qui se caractérisait par
+            l’ouverture des frontières économiques entre les pays industrialisés, incarnée depuis le début des années 1950 par le General Agreement on
+            Tarifs and Trade (GATT), et par le rapprochement et la coopération économiques des pays de la Communauté européenne.</p>
+          <p>La question était donc de savoir quelle attitude la France allait adopter pour répondre à ses besoins dans sa relation avec la CEE, d’une
+            part, et avec les États-Unis, d’autre part. La réponse à cette double problématique était traditionnellement élaborée par différents
+            acteurs institutionnels français : le Secrétariat de la Présidence dont dépendait le Secrétariat général du comité de coopération
+            intergouvernemental pour les questions de coopération économiques européennes (SGCI), le ministère des Affaires étrangères (MAE), le
+            ministère de l’Économie et des finances (MINEFI), le ministère du développement scientifique et industriel (MDIS). Au-delà de la
+            confrontation des nuances qui déterminaient les priorités respectives de ces services, nous avons cherché à déterminer les grands axes de
+            la position de la France, en mettant l’accent sur les enjeux de la continuité de la construction économique européenne. La première partie
+            a eu pour objet de situer le contexte économique de la fin des années 1960 et de présenter les objectifs d’une politique industrielle
+            européenne. La seconde de cerner précisément les raisons d’accord et de désaccord des partenaires européens par l’examen des propositions
+            de la Commission européenne relatives à la politique industrielle commune.</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+          <p>Les sources examinées sont nombreuses et diversifiées. Les archives de la Commission européenne, conservées à Bruxelles, d’une part, et
+            les archives de la Présidence de la République française, conservées aux Archives nationales à Paris, plus précisément les fonds 5AG2 pour
+            les archives de la présidence de Georges Pompidou et 86AJ pour les archives de Jean-René Bernard, ont livré des indications sur les
+            orientations économiques générales de la CEE et de l’État français.</p>
+          <p>Plusieurs fonds institutionnels sont venus les compléter et préciser la position française, en introduisant les nuances des institutions
+            concernées par les questions de coopération économique européenne : le fonds de la direction économique de coopération européenne (DECE)
+            des archives de l’administration centrale du ministère du MAE qui avait à charge de gérer les dossiers économiques ; les archives du
+            représentant français à la Commission européenne (COREPER). Les archives du SGCI, conservées au Centre des archives contemporaines à
+            Fontainebleau, regroupaient et synthétisaient les opinions de tous les services administratifs français.</p>
+          <p>Les archives de la chambre de commerce et d’industrie de Paris (CCIP), consultables à l’hôtel de l’avenue de Friedland à Paris,
+            constituaient un complément pertinent facilement exploitable pour étudier le point de vue des industriels.</p>
+          <p>L’examen d’archives orales était également essentiel pour un sujet si contemporain : celles de l’Association Georges Pompidou, ainsi que
+            celles de l’Institut universitaire européen, ont livré des témoignages d’acteurs européens d’une grande richesse qui se sont révélés
+            nécessaires pour appréhender l’histoire de la construction européenne plus concrètement et plus humainement.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Seconde fille de Clairvaux et septième abbaye de l’Ordre cistercien, l’abbaye de Fontenay (Côte-d’or) a été fondée en 1119 et a été
+          particulièrement favorisée par saint Bernard qui a surveillé sa construction et placé ses proches parents à sa tête. L’architecture, les
+          restaurations et les modifications successives des bâtiments de l’abbaye, ainsi que les activités métallurgiques de la forge, sont désormais
+          bien connues ; en revanche, la bibliothèque restait le point aveugle de toutes les recherches, alors même que la connaissance des
+          bibliothèques cisterciennes a été profondément renouvelée par des études consacrées à celles de Cîteaux, La Ferté, Clairvaux et
+          Pontigny.</p>
+        <p>Fontenay est, par le plan adopté et l’emplacement choisi, la matérialisation de la pensée de saint Bernard. L’étude de l’abbaye de Fontenay
+          et de sa bibliothèque en revêt un intérêt particulier : l’histoire de cette bibliothèque, tant par les œuvres contenues que par la forme des
+          volumes, n’est pas seulement l’histoire intellectuelle d’une communauté, mais l’un des points de mesure de la vie intellectuelle et
+          spirituelle de l’Ordre cistercien. L’abbaye de Fontenay prend donc une place importante dans le cadre des recherches menées actuellement
+          tant sur la vigueur et la rigueur des prescriptions dans le domaine artistique, que sur le fonctionnement des réseaux cisterciens, et sur
+          l’unanimité et la diversité du monde cistercien.</p>
+        <p>Le corpus retenu pour cette étude se compose de 98 manuscrits et fragments de manuscrits. Ce sont les mss. Bruxelles, Bibl. Bollandiana,
+          293 ; Montpellier, Bibl. interuniv. médecine, H 75, H 304 et H 413 ; Paris, Bibl. de l’Arsenal, 29, 59, 60, 95, 150, 171, 175, 235, 293,
+          294, 295, 297, 302, 303, 305, 308, 309, 310, 312, 317, 318, 319, 321, 322, 323, 327, 342, 347, 354, 477, 584, 585, 586, 984, 987, 989 et
+          1086 ; Paris, Bibliothèque Mazarine, 25 ; Paris, Bibl. nat. de Fr., lat. 64, 67, 85, 124, 146, 154, 284, 314, 459, 477, 493, 572, 620, 687,
+          696, 1650, 1697, 1787<hi rend="sup">A</hi> , 1835<hi rend="sup">A</hi> , 1919, 2099, 2246, 2255, 2283, 2364, 2425, 2427, 2434, 2436, 2516,
+          2649, 3085, 3092, 3119, 3162, 3244, 3415, 3424, 3570, 3871, 4236, 4391, 5112, 5118<hi rend="sup">A</hi> , 5296<hi rend="sup">C</hi> ,
+          5681, 7617, 7619, 10522 et 11339 ; Troyes, Bibl. mun., 56, 463, 595, 676, 1034 ; Vatican, Bibl. apost. vat., Vat. lat. 544. <lb/>Ont été
+          exclus de cette étude plusieurs manuscrits qui avaient été attribués à tort à Fontenay : mss. Berlin, Staatsbibl.-Preussischer Kulturbesitz,
+          Philipps 1715 ; Bruxelles, Bibl. royale Albert-I<hi rend="sup">er</hi> , IV 289 ; London, British Libr., Add. 11294 ; Paris, Bibl. de
+          l’Arsenal, 1225 ; Paris, Bibl. nat. de Fr., lat. 3925, 3953 et 11384 ; Stockholm, Kongl. Bibl., VU 16.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources pour l’histoire de la bibliothèque, en l’absence de catalogue médiéval, sont constituées par cinq catalogues de la période
+          moderne, les manuscrits retrouvés, les actes et les documents relatifs au transfert des volumes et les témoignages de visiteurs. <lb/>Les
+          catalogues sont : ms. Berlin, Staatsbibl.-Preussischer Kulturbesitz, Philipps 1866, fol. 31v (catalogue A) ; ms. Paris, Bibl. nat. de Fr.,
+          lat. 9364, fol. 3-4 (catalogue B) ; ms. Paris, Bibl. nat. de Fr., lat. 9364, fol. 1-2 (catalogue C) ; ms. Montpellier, Bibl. interuniv.
+          médecine, H 179, fol. 1-2 (catalogue D) et Dijon, Arch. dép. Côte-d’Or, Q 838 (catalogue E). <lb/>L’identification des manuscrits a été
+          précisée en introduction. <lb/>Les actes relatifs au transfert des manuscrits sont les statuts du Chapitre général de l’Ordre cistercien, la
+          correspondance entre Colbert et ses agents, les traces de la vente des manuscrits au marquis de Paulmy et les inventaires des saisies
+          révolutionnaires. <lb/>Le seul témoignage de visite concernant la bibliothèque est celui des bénédictins dom Martène et dom Durand.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le <num>xviii</num>
+<hi rend="sup">e</hi> siècle éclairé s’est ému du « grand massacre des innocents » perpétré par des matrones sans principe. À partir des
+          années 1760 et tout au long du siècle suivant, l’État s’attache, sans solution de continuité, à offrir au pays un nombre croissant de
+          sages-femmes formées selon les références de l’obstétrique contemporaine. La création en 1802 de l’Hospice de la Maternité de Paris sous
+          l’égide de Chaptal, ministre de l’Intérieur, s’insère dans le mouvement de réforme complète des études médicales entrepris par Napoléon.
+          Néanmoins cette étape primordiale de fondation d’un établissement prestigieux mais parisien ne constitue que la base d’un édifice
+          démultiplié à des échelles inférieures.</p>
+        <p>Les écoles départementales d’accouchement, qui naissent de maternités ou en déterminent la mise en place, se développent pendant le
+          premier tiers du <num>xix</num>
+<hi rend="sup">e</hi> siècle. L’exemple de l’école d’accouchement de Tulle, fondée en 1834 à une date où les créations se raréfient, permet
+          d’aborder par l’angle provincial les modalités de la formation des sages-femmes françaises à cette période. La maternité qui s’inscrit au
+          cœur même de cet établissement souligne l’imbrication forte des structures théorique et pratique dans la pédagogie obstétricale. L’étude de
+          cette institution se place à la croisée de plusieurs recherches, à mi-chemin d’une historiographie foisonnante et de champs à défricher.
+          L’histoire de la naissance, l’histoire des femmes ou l’histoire de la médicalisation ont déjà donné lieu à de multiples travaux. Il n’est
+          pas question ici d’en faire la synthèse, mais de s’appuyer sur les acquis de nos prédécesseurs pour éclairer une profession et son cadre
+          d’exercice qui dépasse largement les domaines évoqués. La Corrèze, archétype du département rural, pauvre et enclavé, se révèle, pour toutes
+          ces raisons, un espace particulièrement intéressant. Étudier un symbole de modernité en pays d’arriération constitue à ce titre un stimulant
+          paradoxe à la base de notre recherche.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le principal fonds d’archives sur lequel s’appuie cette étude se compose de deux ensembles. D’un point de vue strictement archivistique, il
+          s’agit en fait de deux fonds, l’un émanant de la préfecture de la Corrèze, l’autre de la maternité départementale de Tulle. Leur classement
+          au sein de la série X, Assistance et Prévoyance sociale, les a rapprochés, en les présentant sous l’intitulé Fonds de la Maternité
+          départementale. Ces documents mettent en lumière l’organisation de l’enseignement obstétrical, sous ses différentes modalités (envoi
+          d’élèves dans des écoles extra-départementales, cours départementaux, école départementale), et le fonctionnement de la maternité qui prend
+          officiellement forme dans les années 1840. Ces archives ont représenté la source essentielle de ce travail, grâce à leur abondance et leur
+          variété.</p>
+        <p>Néanmoins, d’autres sources ont été mises à contribution. La période antérieure à 1800 ne pouvait être mise à l’écart de cette recherche
+          et on a pour cela eu recours aux séries C des archives départementales de la Corrèze et de la Haute-Vienne pour mieux comprendre la
+          continuité entre les cours de chirurgiens-démonstrateurs du <num>xviii</num>
+<hi rend="sup">e</hi> siècle et l’enseignement du siècle suivant. De même, l’enquête sur les sages-femmes ordonnée en 1786 par le contrôle
+          général des finances, conservée à la Bibliothèque de l’Académie de médecine, fut d’une valeur inestimable pour cette étude. Pour le
+            <num>xix</num>
+<hi rend="sup">e</hi> siècle, les archives issues de la préfecture de la Corrèze, en dehors de la série X, Assistance et prévoyance sociale,
+          ont aussi été largement exploitées. Elles se présentent sous la forme de sources manuscrites (série M, Administration générale et économie
+          du département ; série N, Conseil général ; série Z, Sous-préfectures) et imprimées (Série K, Lois et ordonnances ; Série des <hi rend="i">Rapport du préfet et délibérations du conseil général</hi>). Enfin, la dimension nécessairement prosopographique de ce travail a impliqué
+          le maniement de l’état civil et des archives notariales pour mieux cerner les parcours des acteurs de la vie de l’établissement.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

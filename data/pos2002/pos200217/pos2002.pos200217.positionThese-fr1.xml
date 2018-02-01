@@ -1,0 +1,102 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le renouveau déjà ancien de l’histoire politique est tel qu’elle n’a plus à justifier la pertinence de son objet d’étude, au prix
+          cependant du déplacement de celui-ci. La restitution de la trame événementielle a cessé d’être son objectif essentiel. Elle est devenue une
+          histoire du politique, s’efforçant de décrire et d’analyser les modalités et les expressions des relations des hommes à la chose publique,
+          tout en explicitant les formes prises par cette dernière. Que cette histoire se soit plus spécialement attachée à l’observation de la montée
+          en puissance de l’Etat aux âges médiéval, moderne et contemporain découle-t-il de l’éternelle spécificité française sempiternellement
+          convoquée à la barre Contentons-nous d’observer que le mouvement fut général dans l’historiographie européenne et qu’il s’accompagna d’un
+          regain d’intérêt certain pour les justifications et les idéologies au nom desquelles les mutations étatiques s’opérèrent. Nombreux étant
+          désormais les travaux consacrés à ces questions, tant sur les aspects institutionnels et sociaux que culturels et religieux, il a paru
+          intéressant d’essayer d’entrevoir, comme en contrepoint, les attitudes que la “ société civile ” pouvait adopter face à l’étatisation
+          progressive du pouvoir et par quels moyens elle pouvait, sinon apporter sa pierre à l’édifice, du moins faire entendre sa voix. <lb/>Le
+          jansénisme du <num>xviii<hi rend="sup">e</hi></num> siècle paraissait un champ d’étude particulièrement propice puisque Catherine Maire en avait
+          éclairci le sens du parcours, religieux et politique tout à la fois. Le triple héritage de Port-Royal, du diacre Pâris et du mouvement
+          d’appel contre la bulle <hi rend="i">Unigenitus</hi>, reconstruit, refabriqué et interprété à partir du figurisme a été l’une des sources
+          capitales de “ l’idéologie parlementaire ” du siècle des Lumières, résistance à l’absolutisme au nom de la défense dudit absolutisme.
+          L’existence d’une “ caisse secrète ”, la boîte à Perrette, et d’un journal libéré de toute censure royale, les <hi rend="i">Nouvelles
+            ecclésiastiques</hi>, semblait démontrer l’existence d’un groupe structuré que l’on serait spontanément enclin à nommer “ parti
+          politique ” tant il ressemble à première vue à notre expérience d’ <hi rend="i">homo democraticus </hi> : liberté d’expression, débats au
+          Parlement, financement indépendant. Serait-ce là la réponse du berger à la bergère, un parti créé par la société civile pour défendre les
+          droits de Dieu face à l’état monarchique et administrateur</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources de cette étude se composent de trois ensembles principaux. Les archives de la Bastille, conservées à la bibliothèque de
+          l’Arsenal, ont fourni un grand nombre de pièces, de lettres et de documents de travail, saisies par les agents du lieutenant général de
+          police qui ont également rédigé quelques rapports instructifs. La même bibliothèque abrite également des fonds de correspondance d’origine
+          privée qui permettent de compléter les documents conservés à la bibliothèque de la Société de Port-Royal et aux archives provinciales
+          d’Utrecht. Ces trois ensembles offrent un grand nombre de lettres “ banales ” de gestionnaires ou de leurs amis et permettent de préciser
+          des détails sur les méthodes de gestion et le “ réseau janséniste ”. Mais la source primordiale, comme il est expliqué ci-dessous, est
+          constituée par les minutes de quelques notaires de Paris qui instrumentent pour le compte de la boîte à Perrette, ainsi que pour les
+          familles des militants.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

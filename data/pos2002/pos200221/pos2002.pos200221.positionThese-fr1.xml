@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Avant la Révolution française, le Concert spirituel a fait connaître aux Parisiens le concert public et payant. Les événements
+          révolutionnaires ont mis fin à cette institution mais l’Empire l’a remise au goût du jour. Situé entre l’époque de Rameau et les succès de
+          Berlioz, ce moment de l’histoire de la musique fait l’objet d’un intérêt récent, après avoir longtemps été perçu comme une période de
+          transition quelque peu terne. L’époque qui s’étend de 1790 à 1830 environ a désormais gagné son autonomie, en particulier grâce aux travaux
+          de Jean Mongrédien. Les concerts spirituels de la Restauration n’en demeurent pas moins discrédités et peu étudiés : quelques pages leur ont
+          cependant été consacrées dans la thèse d’École des chartes d’Yves Ozanam et ils ont eu l’honneur d’un article de Janet Ritterman dans la <hi rend="i">Revue internationale de musique française</hi> en 1985. L’étude de ces concerts, qui ont lieu jusqu’à huit fois par an, entend
+          mettre à profit les méthodes qui ont permis le renouvellement récent de l’histoire de la musique et aborder des problématiques aussi
+          diverses que l’organisation de ces manifestations, leur fréquentation, leur rôle dans la diffusion et dans la réception des œuvres et leur
+          spécificité par rapport aux autres activités musicales.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les premières sources intéressantes sont celles des organisateurs. À ce titre, les archives de l’Opéra et du Théâtre italien qui lui était
+          associé, qui constituent la sous-série AJ XIII des Archives nationales, ont donné des renseignements importants, même si ce type de concert
+          représente une part marginale de l’activité habituelle de ces théâtres. Pour les compléter, ont été consultés des registres conservés à la
+          bibliothèque-musée de l’Opéra Garnier, rattachée à la Bibliothèque nationale de France. Les archives de la Société des concerts du
+          Conservatoire ont été données, au moment de sa dissolution, à la bibliothèque du Conservatoire et se trouvent actuellement à la Bibliothèque
+          nationale de France, au département de la Musique. Ont été également mis à contribution les fonds de la Maison du Roi, conservés dans la
+          sous-série O<hi rend="sup">3</hi>  des Archives nationales. <lb/>Les périodiques de l’époque fournissent des programmes et surtout des
+          comptes rendus. Différents titres ont été consultés de manière plus ou moins approfondie ; les plus précieux sont le <hi rend="i">Camp
+            volant</hi> et ses avatars successifs, ainsi que, à partir de 1827, la <hi rend="i">Revue musicale</hi> de Fétis. Les affiches
+          typographiques conservées à la Bibliothèque-musée de l’Opéra ont permis de compléter l’information sur les programmes.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

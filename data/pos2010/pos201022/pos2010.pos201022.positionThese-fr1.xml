@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En avril 1893, l’homme d’affaires Charles Holme crée à Londres le périodique <hi rend="i">The Studio.</hi> Traduit en français à partir de
+          1898, ce magazine mensuel est l’exemple original d’une publication bilingue, alimentée par un réseau international de rédacteurs, et
+          diffusée partout en Europe, en Amérique et dans le Commonwealth. Entièrement dévolu aux arts, <hi rend="i">The Studio</hi> fut durablement
+          associé au mouvement de l’Art nouveau : l’importance du thème des arts décoratifs dans le périodique, la pertinence des choix
+          iconographiques en la matière, l’idéologie de la rédaction fortement influencée par les Arts and Crafts, ont favorisé une telle association.
+          Mais la peinture reste le sujet de prédilection de la revue, qui conserve des goûts modérés pendant la période du sommet de sa diffusion,
+          entre 1900 et 1914 – en dépit de la résilience de la revue au-delà de la Première Guerre mondiale.</p>
+        <p>En abordant l’étude du périodique à travers le prisme de l’art produit en France et publié dans la revue de 1893 à 1914, on peut interroger
+          le rapport de <hi rend="i">The Studio</hi> à la modernité française, dans les contours de l’Art nouveau et en dehors, en tentant d’élucider
+          la spécificité du discours proposé sur Paris par un périodique d’art britannique. Un dialogue se noue entre l’extranéité du point de vue
+          anglais sur la modernité française et le cosmopolitisme fondamental de la sphère artistique fin-de-siècle. <hi rend="i">The Studio</hi>,
+          dans son organisation entrepreneuriale comme dans ses idéaux intellectuels, en est une illustration.</p>
+        <p>Un examen diachronique des articles et illustrations parus dans le périodique met au jour son immobilisme entre sa date de création et
+          1914. <hi rend="i">The Studio</hi> s’attache à la défense de l’Art nouveau et d’une modernité picturale de juste milieu dès 1893, mais ne
+          parvient pas à incorporer les innovations des avant-gardes parisiennes dans les années 1910. Une présentation du développement de
+          l’entreprise de presse <hi rend="i">The Studio</hi> entre 1893 et 1914, étayée par une étude précise de son fonctionnement économique et de
+          la composition de sa rédaction, introduit l’étude de la revue : son succès est assuré par l’habileté des stratégies commerciales mises en
+          place dès sa création.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Des collections complètes de <hi rend="i">The Studio</hi> sont disponibles dans les principales bibliothèques européennes et dans nombre de
+          bibliothèques universitaires françaises. Tous les numéros parus d’avril 1893 à décembre 1914 ont été exploités.</p>
+        <p>Plusieurs titres de la presse d’art européenne, tels que <hi rend="i">The Hobby Horse</hi>, <hi rend="i">Jugend</hi>, <hi rend="i">Art et
+            décoration</hi> ou la <hi rend="i">Gazette des beaux-arts</hi>, ont été comparés à <hi rend="i">The Studio.</hi> Les tables des matières
+          de <hi rend="i">The Studio</hi>, <hi rend="i">Art et décoration</hi> et la <hi rend="i">Gazette des beaux-arts</hi>, notamment conservées à
+          la bibliothèque des Arts décoratifs, ont également servi à l’étude.</p>
+        <p>Les bureaux de <hi rend="i">The Studio</hi> ayant brûlé lors de la Seconde Guerre mondiale, seules les archives de son directeur, Charles
+          Holme, offrent des éléments de compréhension concernant le fonctionnement du magazine. Récemment versées à l’Archive of Art and Design du
+          Victoria and Albert museum (Londres), celles-ci constituent un gisement documentaire jusqu’alors inexploité (AAD/2003/10).</p>
+        <p>Enfin, plusieurs cartons conservés aux Archives nationales, les dossiers de certains collaborateurs membres de la Société des gens de
+          gettres (454 AP) ou le dossier individuel de carrière administrative de Gabriel Mourey (F²¹ 7885), principal correspondant en France de <hi rend="i">The Studio</hi> entre 1895 et 1902, ainsi que quelques documents manuscrits et sources imprimées rassemblés à la Bibliothèque
+          nationale de France, ont permis de tracer la biographie des principaux critiques français ayant collaboré à la publication.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

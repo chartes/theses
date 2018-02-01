@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Louis d’Orléans naît le 4 août 1703 au sein de la famille royale. Petit-fils de Louis XIV par sa mère Françoise-Marie de Bourbon et son
+          petit-neveu par son père Philippe d’Orléans, le Régent, il est appelé naturellement à intervenir sur la scène politique, à défaut de jouer
+          un rôle d’envergure dans la conduite des affaires. Premier prince du sang, il est héritier présomptif de la couronne à partir de 1723, en
+          vertu des renonciations du traité d’Utrecht, et devient titulaire, à cette date, de l’apanage le plus important du royaume, le duché
+          d’Orléans, qu’il restaure et enrichit. <lb/>Cependant, après avoir nourri quelques ambitions, la volonté du prince se soumet à celle de
+          Dieu, et le duc se retire à l’abbaye de Sainte-Geneviève, à Paris, pour assurer son salut. Il n’en faut pas plus pour le condamner dans
+          l’esprit de son siècle, bien prompt à oublier l’immense œuvre de bienfaisance accomplie par le prince. L’intérêt de ce destin, curieux en
+          soi, est accru par les goûts de Louis d’Orléans dans les domaines des arts et des sciences, pour la physique, la botanique, la chimie, mais
+          aussi pour les plus austères langues orientales, et par son penchant pour l’exégèse. Au contraire d’un esprit brouillon et dispersé, la
+          ligne de conduite de Louis d’Orléans est claire : il s’intéresse à ce qui peut prouver l’historicité de l’Écriture sainte, montrer la vérité
+          du christianisme contre les attaques du doute systématique, et il n’hésite pas pour cela à rassembler une bibliothèque considérable, qui
+          alimente sa propre œuvre théologique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La vie de Louis d’Orléans est éclairée par des sources abondantes, mais dispersées. Une partie importante se trouve aux Archives
+          nationales, dans la série K, la sous-série R<hi rend="sup">4</hi>  (apanage d’Orléans), le Minutier central (étude CXV) et, bien sûr, dans
+          les archives privées de la maison d’Orléans (300 AP). Le Service historique de l’armée de Terre et les Archives du ministère des Affaires
+          étrangères ont livré des documents importants, alors que les Archives municipales de Grenoble ont permis d’étudier l’activité de Louis
+          d’Orléans comme gouverneur du Dauphiné. Tous les départements spécialisés de la Bibliothèque nationale de France ont été mis à contribution,
+          en particulier le département des manuscrits qui conserve les trente-et-un volumes des œuvres de Louis d’Orléans. Outre les bibliothèques
+          parisiennes ­ la Bibliothèque historique de la Ville de Paris, où sont conservés les comptes de la maison d’Orléans de 1730 à 1770 ; la
+          Bibliothèque Sainte-Geneviève ; la Bibliothèque de l’Arsenal ; la Bibliothèque de l’Institut de France, qui détient les “ Mémoires de Louis
+          d’Orléans ” ­, celles de province ont également été sollicitées, notamment la bibliothèque universitaire de Poitiers, riche du fonds
+          d’Argenson. <lb/>Parmi les sources imprimées traditionnelles pour ce genre d’étude (Saint-Simon, Barbier, Marais, Narbonne…), les <hi rend="i">Mémoires</hi> de d’Argenson se révèlent les plus riches, le marquis comme son frère, le comte, ayant été chanceliers de Louis
+          d’Orléans. L’abbé Ladvocat est un témoin privilégié de la vie de Louis d’Orléans, comme la plupart des auteurs des nombreuses oraisons
+          funèbres imprimées.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

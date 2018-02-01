@@ -1,0 +1,124 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’histoire du marché de l’art a fait l’objet d’un renouveau d’intérêt de la part des historiens de l’art depuis la parution des ouvrages
+          fondateurs de Francis Haskell et Antoine Schnapper consacrés à l’histoire du goût et à l’histoire des « curieux » et des collectionneurs
+          dans la France du <num>xvii</num>
+<hi rend="sup">e</hi> siècle. Le terme de « marché de l’art » recouvre les ventes et les achats d’œuvres d’art à une période donnée et l’on
+          considère que le marché, dans sa définition actuelle, est né au <num>xvii</num>
+<hi rend="sup">e</hi> siècle avant de connaître un essor au <num>xviii</num>
+<hi rend="sup">e</hi> siècle, véritable « âge d’or » des ventes aux enchères. Le concept de « marché », importé de l’économie, permet de
+          s’intéresser non seulement aux collections, mais aussi aux acteurs du marché, les artistes, les collectionneurs et les marchands d’art. Les
+          études les plus récentes concernant le marché de l’art aux <num>xvii</num>
+<hi rend="sup">e</hi> et <num>xviii</num>
+<hi rend="sup">e</hi> siècles ont eu tendance à privilégier le marché de la peinture, et la sculpture, qui occupait pourtant une part
+          importante du commerce parisien de l’époque, est certes évoquée, mais rarement étudiée pour elle-même, mis à part des études portant sur
+          « l’anticomanie » et les collections de sculptures antiques constituées au <num>xviii</num>
+<hi rend="sup">e</hi> siècle. D’autre part, si le marché de l’art a été bien étudié pour les <num>xvii</num>
+<hi rend="sup">e</hi> et <num>xviii</num>
+<hi rend="sup">e</hi> siècles, ainsi que pour la seconde moitié du <num>xix</num>
+<hi rend="sup">e</hi> siècle, la période de transition que constitue l’époque révolutionnaire et impériale est nettement moins connue. Il
+          convenait alors de s’intéresser au marché de la sculpture sous la Révolution et l’Empire, les bornes chronologiques du sujet allant des
+          années 1780 – période d’apogée du commerce parisien sous sa forme d’Ancien Régime – aux années 1820 – période d’essor du commerce de l’art
+          après les mutations de la période révolutionnaire. Le cadre spatial du sujet a été restreint à celui de la capitale, Paris, même s’il a été
+          nécessaire d’évoquer les échanges avec la province et surtout l’étranger, l’importation de sculpture depuis l’Italie étant un des ressorts
+          du commerce parisien durant la période.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources pour l’étude du marché de la sculpture à Paris sous la Révolution et l’Empire peuvent se diviser en trois catégories : les
+          catalogues de vente, les inventaires après décès conservés au Minutier central des notaires de Paris aux Archives nationales, les archives
+          de la Commission temporaire des arts, conservées aux Archives nationales (série F<hi rend="sup">17</hi>). Cependant pour un sujet de cette
+          ampleur, les sources secondaires, les journaux contemporains, les mémoires et la littérature esthétique, n’ont pas non plus été négligées.</p>
+        <p>Les sources fondamentales pour l’étude du marché de l’art sont des sources imprimées : il s’agit des catalogues de vente, recensés en
+          1938, pour les ventes ayant eut lieu à Londres, Paris et Amsterdam de 1625 à 1925, par Frits Lugt dans son <hi rend="i">Répertoire des
+            catalogues de ventes publiques intéressant l’art et la curiosité</hi>. Les catalogues, qui ont été partiellement indexés depuis dans deux
+          bases de données, la base <hi rend="i">Art sale catalogues</hi>– son accès est payant et son contenu reprend celui du Répertoire de Frits
+          Lugt – et la base réalisée par l’Institut de recherche du Musée Getty de Los Angeles, sont conservés en plusieurs exemplaires dans les
+          bibliothèque européennes et américaines. À Paris, les bibliothèques qui possèdent les plus importantes collections de catalogues de vente
+          sont la Bibliothèque d’art et d’archéologie Jacques Doucet et la Bibliothèque nationale de France et c’est donc à partir du fonds de ces
+          deux institutions qu’a été effectué l’essentiel des recherches. De 1789 à 1815, le <hi rend="i">Répertoire</hi> de Frits Lugt recense 4 418
+          ventes ayant eu lieu soit à Paris, Amsterdam ou Londres. Sur ces 4 418 ventes, 130 ont eu lieu à Paris et comportent des sculptures, soit
+          environ 3 % du total des ventes au cours de la période. Les 130 catalogues n’ont pas tous été pris en compte, des dépouillements exhaustifs
+          n’ayant été effectué que pour les années 1788-1810. Pour la fin de l’Ancien Régime et les premières années du <num>xix</num>
+<hi rend="sup">e</hi> siècle, la méthode de recherche adoptée a été le sondage, en fonction du renom du propriétaire de la collection.</p>
+        <p>Les archives notariales ont été également consultées, comme complément à l’étude des catalogues de vente. L’idée qui a servi de fil
+          conducteur à cette recherche était de retrouver l’inventaire après décès de collectionneurs ayant mis en vente une collection de sculpture
+          importante au cours de la période étudiée. Dans le meilleur des cas, les inventaires après décès permettent également de connaître le
+          contenu de collections de sculpture restées à l’écart du circuit économique, des collections sans doute constituées par commande directe
+          auprès des artistes contemporains ou par des transactions privées et difficiles à aborder autrement.</p>
+        <p>Pour la période révolutionnaire et impériale, il était nécessaire de compléter ces sources par la consultation des archives du ministère
+          de l’Instruction publique, conservées dans la série F<hi rend="sup">17</hi> des Archives nationales, qui contiennent les archives de la
+          Commission des Monuments et de la Commission temporaire des Arts, chargées de l’inventaire des collections d’émigrés nationalisées à la
+          Révolution. Ces inventaires, ainsi que le registre de réception des objets d’art transférés au dépôt de Nesle de 1794 et 1797 permettent
+          d’étudier les transferts de sculpture opérés à la Révolution et de savoir quelles furent, parmi les sculptures issues des collections
+          d’Ancien Régime, celles qui furent réservées pour le Muséum et celles qui furent vendues aux enchères sur le marché de l’art parisien.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

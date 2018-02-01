@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En 1473-1474, un copiste lillois, Jean du Quesne, réalise pour Charles le Téméraire une traduction de <hi rend="i">La Guerre des
+            Gaules</hi> de César. À l’image d’autres ’’translateurs’’, comme Vasque de Lucène donnant une version française de la <hi rend="i">Cyropédie</hi> de Xénophon sous le règne de Philippe le Bon, Jean du Quesne répond ainsi aux goûts bien connus du duc de Bourgogne et de
+          sa cour pour l’histoire antique et ses héros.</p>
+        <p>L’un des enjeux majeurs de l’édition de tels textes est de situer les traductions du <num>xv<hi rend="sup">e</hi></num> siècle dans l’histoire des
+          mentalités et de la culture, en particulier de déterminer les rapports éventuels de cette appropriation vernaculaire des classiques avec la
+          « Renaissance » française du <num>xvi<hi rend="sup">e</hi></num> siècle.</p>
+        <p>En posant les premiers jalons pour l’édition de ce texte, Robert Bossuat conclut en 1943 à l’appartenance de Jean du Quesne au monde
+          médiéval, plutôt qu’à celui de la modernité humaniste. Il est vrai que la structure du texte fournit un argument important à l’appui de
+          cette affirmation : plus qu’une traduction, l’auteur a réalisé une adaptation en encadrant les huit livres « translatés » du texte de César
+          par deux livres « forains » qui relatent la vie du général romain avant et après ses campagnes en Gaule et qui sont inspirés par deux
+          compilations historiques du XIII<hi rend="sup">e </hi> siècle, respectivement les <hi rend="i">Faits des Romains</hi> et la <hi rend="i">Chronique dite de Baudouin d’Avesnes</hi>.</p>
+        <p>En outre, si l’on ne peut nier les efforts de Jean du Quesne comme traducteur pré-humaniste, il faut reconnaître que sa version du texte
+          classique est parfois nettement fautive et manque souvent d’élégance.</p>
+        <p>Néanmoins, c’est un autre élément qui permet aujourd’hui de confirmer l’ancrage médiéval de Jean du Quesne. La découverte d’un nouveau
+          manuscrit contenant non seulement la traduction de <hi rend="i">La Guerre des Gaules</hi>, mais aussi une <hi rend="i">Cronicque
+            habregie</hi> absente des autres témoins prouve désormais que le copiste lillois a bel et bien mené à terme le projet qu’il annonçait dans
+          l’un de ses prologues et que l’on pensait avorté : insérer l’œuvre de César dans une vaste compilation historique universelle, en somme
+          achever le programme des <hi rend="i">Faits des Romains</hi> et le prolonger jusqu’à la fin du <num>xv<hi rend="sup">e</hi></num> siècle, même si
+          l’ensemble, principalement consacré au récit des campagnes gauloises, est excessivement déséquilibré.</p>
+        <p>La longueur de cette œuvre, ainsi que la localisation actuelle du manuscrit contenant la <hi rend="i">Cronicque habregie</hi>, dans une
+          collection privée, ont obligé à traiter en priorité cette seconde partie et à ne donner qu’une édition partielle du premier volume contenant
+          la traduction à proprement parler.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

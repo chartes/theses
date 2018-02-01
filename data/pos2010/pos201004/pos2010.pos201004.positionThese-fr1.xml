@@ -1,0 +1,107 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Comme bien des aspects de la vie de cour d’Ancien Régime, le jeu a longtemps souffert d’une étiquette « petite histoire », restant ainsi à
+          l’écart des historiens et relégué au champ des anecdotes plaisantes. Le paradoxe est surprenant : on se représente souvent la cour de France
+          des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles comme passionnément adonnée au jeu, du soir au
+          matin – ce qui revient à reconnaître que le jeu y est un phénomène de première importance –, sans que cela puisse paraître objet d’étude
+          sérieux pour un historien.</p>
+        <p>L’essor de l’historiographie du jeu et des divertissements autant que celui de l’histoire de cour invite à reconsidérer cette situation. Il
+          n’est pas de geste anodin quand c’est le roi ou la reine qui l’accomplit : le jeu royal, figure centrale du jeu à la cour, dépasse largement
+          le cadre d’un divertissement frivole.</p>
+        <p>Étudier le jeu du roi est avant tout un sujet de définition : que recouvre vraiment cette locution si simple et si complexe, capable de
+          prendre des formes très différentes selon le moment et les circonstances, que l’on relève aussi bien dans les mémoires de courtisans que
+          dans les dossiers administratifs de la Maison du roi ? Le jeu du roi et de la reine se trouvent à la croisée de considérations tant
+          curiales, symboliques et morales que matérielles et économiques qu’il est impossible d’occulter si l’on veut considérer ce rituel de cour,
+          que constitue le jeu royal, dans toute sa richesse et sa complexité.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les fonds de la Maison du roi (sous-série O¹ des Archives nationales) constituent une grande part des sources utilisées. Les fonds de
+          l’Argenterie, des Menus-Plaisirs et des Affaires de la Chambre nous intéressent tout particulièrement. Ce service qui se développe vers 1660
+          et qui était dirigé, chaque année de façon alternative, par l’un des quatre gentilshommes de la Chambre, avait la mission de mettre en scène
+          les fêtes et les cérémonies de cour. Les archives conservées nous permettent de voir la place de plus en plus importante impartie au jeu des
+          souverains dans les fêtes royales et de jauger l’importance de la mise en scène dont il était l’objet. Enfin, les fonds du Garde-Meuble de
+          la Couronne et de la direction des Bâtiments du roi – qu’il s’agisse des ordres, des documents comptables, des inventaires de meubles ou des
+          projets architecturaux –, ajoutés aux descriptions imprimées des résidences royales, fournissent matière à comprendre le cadre dans lequel
+          se déroulait au quotidien le jeu du roi, de la reine et des autres membres de la famille royale : il faut, pour jouer, un lieu et des
+          meubles adéquats.</p>
+        <p>On ne saurait envisager un sujet d’histoire de cour sans avoir recours aux écrits du for privés : mémoires de courtisans – dont les apports
+          en matière de sociabilité du jeu, d’étiquette sont précieux –, comptabilités particulières des personnes qui partageaient la partie du roi
+          ou de la reine, comptes et papiers personnels de Louis XVI…</p>
+        <p>Ces deux ensembles principaux de sources demandent à être complétés ponctuellement par des traités de morale qui, outre les dénonciations
+          du jeu qu’ils contiennent, renseignent sur la législation royale, les traits de caractères des souverains, leur goût pour le jeu, et livrent
+          des anecdotes à des fins édifiantes.</p>
+        <p>Enfin, il semble difficile d’aborder la question du jeu sans s’intéresser aux jeux. Aux <num>xvii<hi rend="sup">e</hi></num> et
+              <num>xviii<hi rend="sup">e</hi></num> siècles, les jeux sont multiples et se déclinent en de très nombreuses variantes : les traités de
+          jeu, qui relaient le plus souvent les règles pratiquées à la cour, sont indispensables pour définir les grandes familles de jeu, établir une
+          frontière entre jeux de commerce et jeux de hasard et mettre en avant les modes ludiques et leurs évolutions.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,136 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La cartographie de la Louisiane française, déjà partiellement étudiée dans les historiographies française, canadienne et américaine, est
+          abordée au travers d’un fonds encore largement inexploité, déposé en partie à la Bibliothèque nationale de France, celui du Service
+          hydrographique de la Marine. Il s’agit de l’ancien Dépôt des cartes, plans et journaux de la Marine, qui a géré une bonne partie de la
+          production cartographique, et pas seulement hydrographique, des colonies françaises au <num>xviii</num>
+<hi rend="sup">e</hi> siècle.</p>
+        <p>
+          <hi rend="i">Définition du sujet : une remise en contexte de la carte</hi>. — Le choix d’un fonds de cartes comme point de départ de
+          l’étude, avec un découpage selon des critères géographiques, permet une approche intéressante et renouvelée, à la fois politique et
+          scientifique, de l’activité cartographique française dans un espace donné au <num>xviii</num>
+<hi rend="sup">e</hi> siècle, à une période clé où les transformations des techniques et des pratiques s’accélèrent et où la science
+          cartographique évolue de manière décisive.</p>
+        <p>
+          <hi rend="i">L’histoire de la Louisiane française, oubliée par l’historiographie ?</hi>— Cette approche générale s’inscrit dans un contexte
+          précis : celui de la Louisiane, dernière colonie française créée avant la Révolution et perdue rapidement dans les faits. L’intérêt de se
+          concentrer sur cette colonie découle de la relative négligence dont elle a fait l’objet dans l’historiographie jusqu’à une date récente,
+          mais aussi de la différence de traitement qu’il peut exister entre les approches des différentes nations concernées par cette aire
+          coloniale : américaine, canadienne, espagnole aussi. On constate cependant, depuis quelques années, un renouveau de l’intérêt de la
+          recherche pour les régions coloniales françaises en Amérique du Nord.</p>
+        <p>
+          <hi rend="i">Le dynamisme actuel de l’historiographie des nations amérindiennes.</hi>— Parmi les thèmes privilégiés abordés par
+          l’historiographie sur la Louisiane, la question amérindienne, liée de manière étroite à la cartographie notamment par le biais de
+          l’occupation de l’espace et de sa caractérisation sur les cartes à travers la toponymie, occupe une place de choix, même si elle n’échappe
+          pas à la déformation des conceptions actuelles. Le succès de l’anthropologie historique et les travaux pour dresser une carte toponymique de
+          l’Amérique du Nord ont aussi encouragé ce mouvement.</p>
+        <p>
+          <hi rend="i">Les autres tendances de l’historiographie.</hi>— Néanmoins, les tendances de la recherche sont plutôt axées aujourd’hui sur la
+          langue, les interpénétrations entre les communautés, le métissage, questions mises en perspective dans l’espace intérieur de la colonie et
+          dans son environnement extérieur, avec les influences des aires coloniales et commerciales voisines. L’appréhension de la pratique
+          cartographique est toutefois plus traditionnelle, axée sur les grandes figures qui ont marqué l’histoire scientifique et politique de la
+          Louisiane et sur les travaux d’aménagement (fortifications, villes). L’étude de la cartographie de la Louisiane est elle aussi plus
+          dynamique aux États-Unis et au Canada qu’en France, même si on observe depuis quelques années un regain d’intérêt de la part des milieux
+          scientifiques et militaires français.</p>
+        <p>
+          <hi rend="i">Notions et problématiques abordées dans cette étude.</hi>— L’étude se propose, en se concentrant sur les cartes, leurs
+          composantes, les différents niveaux d’analyse, de mieux faire le lien entre elles, les archives et les hommes, pour véritablement remettre
+          les cartes en contexte et comprendre les différentes forces et influences qui déterminent leur création, leur circulation, leur
+          conservation. L’angle adopté est avant tout politique, puisque le corpus de base de l’étude émane d’un organe du département royal de la
+          Marine et des Colonies, le Dépôt des cartes, plans et journaux de la Marine. Il va de soi que la constitution d’un tel fonds trahit la
+          vision de la politique coloniale qu’ont les dirigeants français, mais aussi ceux de Louisiane. Ce que les cartes révèlent des relations
+          entre les différents organes de pouvoir, y compris les ingénieurs, est également traité. L’intérêt d’aborder un corpus géographique est la
+          transversalité de l’approche qui permet de saisir des évolutions sur une période suffisamment large et d’appréhender les influences
+          réciproques entre cartes et colonisation progressive d’un territoire par les pouvoirs officiels.</p>
+        <p>L’autre pan de l’étude privilégie une approche du support en tant que tel, la carte, ici essentiellement manuscrite. Les aspects les plus
+          techniques, les couleurs obéissent à des codes et des pratiques qui peuvent également avoir des implications et des significations
+          particulières, au niveau politique ou scientifique. La notion de carte est elle-même remise en question, dans sa nature, mais aussi son
+          statut, et notamment sa valeur juridique.</p>
+        <p>Est donc privilégiée ici une approche politique du processus d’implantation coloniale et sa matérialisation dans tous les aspects de la
+          production et de la vie des cartes, replacées dans leur contexte politique, scientifique et humain.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sont principalement de deux natures, écrites et cartographiques. Les unes et les autres sont très éclatées et réparties dans
+          les différents établissements français qui conservent des archives anciennes des colonies.</p>
+        <p>C’est l’approche de la source cartographique qui est au centre de l’étude. Le noyau de ce corpus sont les portefeuilles 138 et 138bis
+          (« Louisiane et côtes de la Floride ») de la collection du Service hydrographique, conservés à la Bibliothèque nationale de France. Les
+          cartes issues du Service hydrographique sont actuellement réparties dans plusieurs institutions ; ainsi des cartes hydrographiques de la
+          Louisiane se trouvent aussi en nombre important dans les recueils de la Bibliothèque de la Marine à Vincennes, complétant celles de la
+          Bibliothèque nationale. Les Archives nationales (centre historique de Paris et centre des archives d’Outre-Mer) en conservent également
+          quelques-unes, de même que le Service historique de la Défense nationale, les archives du ministère des Affaires Etrangères ou l’Institut de
+          France.</p>
+        <p>Les archives sont tout aussi éclatées : les sources principales utilisées ici se trouvent dans les correspondances des archives de la
+          Marine, conservées au Centre historique des Archives nationales, et des Colonies, au Centre des Archives d’Outre-Mer.</p>
+        <p>Devant leur ampleur, les sources ont été volontairement restreintes ; un travail préliminaire d’identification et d’indexation, notamment
+          pour les cartes, a été nécessaire, avant leur traitement pour la rédaction d’une synthèse.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

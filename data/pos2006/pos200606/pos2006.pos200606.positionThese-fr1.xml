@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si des travaux récents commencent à éclairer les administrations centrales révolutionnaires, les institutions locales mises en place par
+          l’Assemblée nationale constituante restent, elles, mal connues. Or, s’appuyant sur une nouvelle classe politique élue, elles sont un moyen
+          de diffuser les idées révolutionnaires auprès des populations.</p>
+        <p>Issu d’une province – la Franche-Comté – tardivement rattachée au royaume, mais bien intégrée au système français à la fin de l’Ancien
+          Régime, le Jura ne présente pas de traits particuliers et peut donc constituer un cadre intéressant pour voir comment des gens ordinaires,
+          peu au fait des matières administratives à une échelle importante, se mettent à travailler, loin des débats de l’Assemblée, et sans montrer
+          d’opposition au nouveau système.</p>
+        <p>Le terme d’« administration » est à prendre au sens large puisque l’étude englobe aussi bien les hommes élus que le personnel des bureaux,
+          les techniques de travail, les domaines de compétence et les résultats, dans la lignée du travail de Colette Brossault sur les intendants de
+          Franche-Comté (1674-1790). Il faut entendre par « administration départementale » celle de l’organe supérieur de la hiérarchie
+          administrative locale, à compétence générale. La période 1790-1791 représente la période charnière de transition entre l’Ancien Régime et le
+          nouveau, mais aussi la période de fonctionnement de la première équipe départementale.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Dans leur grande majorité, les sources consultées sont conservées dans la sous-série 1L des Archives départementales du Jura. C’est là en
+          effet que l’on trouve les papiers produits et reçus par l’administration départementale dans le cadre de ses activités. La base de la thèse
+          repose sur les trois registres de délibérations du directoire et du conseil général du département pour la période mai 1790-novembre 1791
+          (1L69*-1L71*). Ces sources sont élargies par les documents touchant spécifiquement l’administration (documents de fonctionnement interne,
+          correspondances, papiers du procureur général syndic). Deux séries de correspondances, celle du député Vernier (5E561/21-5E561/23 et 1L327)
+          et celle d’un commissaire du département, Poupon (1L328), permettent de connaître de l’intérieur les problèmes rencontrés.</p>
+        <p>Les sources jurassiennes sont complétées par les fonds des Archives nationales (séries B<hi rend="sup">A</hi>, D, F et BB : papiers
+          concernant la création des départements ; papiers des comités de l’Assemblée nationale ; papiers du ministère de l’Intérieur) et du Service
+          historique de l’Armée de terre (sous-séries A<hi rend="sup">4</hi> et Ya) dans le mesure où la Franche-Comté puis le Jura dépendent d’abord
+          du ministre de la Guerre. Localement, le fonds de brochures de la bibliothèque-médiathèque de Dole et les fonds révolutionnaires des
+          Archives départementales du Doubs ont aussi été mis à contribution. D’une manière générale, l’essentiel des sources provient de
+          l’administration départementale et offre donc une vision partielle.</p>
+        <p>Les documents portant sur les administrateurs et les hommes des bureaux se trouvent essentiellement aux Archives départementales du Jura
+          (séries C et M), mais ils restent souvent décevants, notamment sur les revenus. Ils sont complétés par le fonds Franc-maçon de la
+          Bibliothèque nationale de France et des documents de la sous-série F<hi rend="sup">1</hi> aux Archives nationales. En revanche, les
+          autobiographies conservées, comme celle de Lameth, président du département, n’apportent rien au sujet.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

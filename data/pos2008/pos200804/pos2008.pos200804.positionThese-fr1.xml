@@ -1,0 +1,145 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La connaissance de l’abbaye de Saint-Denis, enfant gâté de l’historiographie dans le champ des études médiévales, mais enfant choyé en
+          raison du puissant attrait exercé trop exclusivement par la figure de l’abbé Suger et son legs artistique, a connu une avancée remarquable
+          au cours des années 1980 et 1990 grâce à la convergence de travaux portant sur deux domaines complémentaires : l’architecture des parties de
+          l’abbatiale qui ont été élevées dans le style gothique rayonnant entre 1231 et 1281 et la liturgie dont cette église est le cadre. Une voie
+          nouvelle s’est alors entrouverte, propre à faire sentir la relation qui existe entre expansion spatiale et inflation cultuelle en un lieu
+          aussi emblématique que l’abbaye royale. Cependant, ces recherches n’ont pas eu de postérité car les annexes adjointes à l’édifice n’ont
+          suscité aucune interrogation. De fait, entre 1320 et 1324, l’abbé Gilles de Pontoise fait élever contre le bas-côté nord de la nef un
+          ensemble de six chapelles dont la raison d’être n’a jamais été envisagée de manière satisfaisante. Or, le chantier de reconstruction de
+          l’abbatiale, qui s’est fermé quelques années auparavant, semblait avoir livré un ensemble complet et cohérent dont on perçoit mal les
+          lacunes éventuelles. Comment expliquer la résurgence tardive d’une activité constructrice à Saint-Denis ?</p>
+        <p>Ces espaces adventices se définissent par leur excentricité plus que par leurs fonctions supposées : c’est un problème spatial qu’ils
+          suggèrent d’emblée. Aux centres liturgiques de l’abbatiale que sont le sanctuaire, le chœur des moines et la nécropole de la croisée du
+          transept, s’articule le complexe des additions successives. Il constitue ce que l’on peut considérer comme une périphérie secondaire par
+          rapport à la nef et aux extrémités de la vaste structure que, par commodité, il convient d’appeler « carré du transept » en raison de sa
+          forme, et qui font figure quant à eux de périphérie intégrée. Quelle est leur destination ? Le fonds d’archives de Saint-Denis n’est pas
+          d’un grand secours à cet égard : les rares éléments qu’il délivre sont tous polarisés sur le maître-autel et l’autel des Corps-Saints. Le
+          déséquilibre documentaire qui traduit le prestige exceptionnel des reliques de saint Denis et, plus tard, de celles de saint Louis, ne
+          laisse pourtant en rien préjuger d’une pauvreté des pratiques mémorielles et dévotionnelles que les périphéries de l’abbatiale sont
+          susceptibles d’abriter. Par ailleurs, étudier le rôle de ces espaces, c’est élucider l’évolution des ressorts liturgiques et mémoriels qui
+          sous-tendent les choix de la communauté monastique à la fin du Moyen Âge, période peu représentée dans la bibliographie dionysienne.</p>
+        <p>L’augmentation des pratiques dévotionnelles à la fin du <num>xiii</num>
+<hi rend="sup">e</hi> et au début du <num>xiv</num>
+<hi rend="sup">e</hi> siècle amène à en postuler l’impact architectural ; cette approche est d’autant plus stimulante qu’elle est
+          documentée. Distincte de la commémoration institutionnelle des rois, elle soulève la question de l’accès aux suffrages des moines de ceux
+          qui ne bénéficient pas du droit d’être inhumé dans leur église. Cette perspective amène à envisager la célébration de la mémoire des morts à
+          Saint-Denis à travers toutes leurs modalités : fondations d’anniversaires, de chapellenies, de luminaires. Mais dans un lieu où la dévotion
+          laïque ne trouve pas à s’exprimer sous sa forme habituelle en raison de l’exclusivité funéraire royale, de la politique restrictive des
+          moines et du haut degré de leur sensibilité symbolique, qu’est-ce qui détermine l’ancrage spatial de ces modes commémoratifs ? Autrement
+          dit, l’objet de cette étude est d’isoler les tensions qui s’exercent entre l’expression architecturale et l’essence immatérielle de la
+          chapelle, puisqu’il semble que c’est dans ce cadre à la fois institutionnel et monumental que s’exprime la singularité liturgique des marges
+          de l’abbatiale. La disparition des décors primitifs et l’orientation administrative des archives de l’abbaye concourent à expliquer la perte
+          de mémoire dont elles pâtissent aujourd’hui.</p>
+        <p>Il s’agit de retrouver l’intelligence de ces espaces ; leur plus petit dénominateur commun est la chapellenie, unité insécable de la
+          chapelle dont elle est l’essence juridique, mais la fondation d’anniversaire, si elle n’a pas de répercussions spatiales, contribue à la
+          pression mémorielle à laquelle la construction des chapelles répond. Une chapellenie se définit par rapport à la mémoire d’un fondateur, à
+          l’office d’un desservant désigné sous l’appellation de chapelain et à un autel auquel cette mémoire est attachée. Ces trois éléments de
+          définition forment les trois axes de cette étude ; ils seront analysés au cours de la période délimitée par la première fondation
+          d’anniversaire répertoriée à Saint-Denis – celle de Dagobert par l’abbé Adam – en 1108, et 1514, date de la dernière fondation enregistrée.
+          Au-delà de ce découpage, c’est dans l’interaction de trois données matérielles et immatérielles qu’il faut trouver les équilibres et les
+          dynamiques qui ont façonné l’espace sacré dionysien : l’architecture, la mémoire et la liturgie. Ces trois termes, seuls ou associés,
+          recouvrent ou coordonnent toutes les manifestations dévotionnelles dont l’abbatiale est le théâtre. Leurs convergences et leurs
+          dissociations alimentent toute réflexion sur cet espace.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La liturgie dionysienne, transmise par une longue tradition orale, n’a pas donné lieu à l’abondante floraison de manuscrits qui est l’une
+          des manifestations du rayonnement de l’ordre clunisien, pour ne citer que lui. Paradoxalement, les moines de Saint-Denis ont peu ressenti le
+          besoin de mettre par écrit le détail du cérémonial qui structure la vie de leur communauté ; cela s’explique entre autres par le fait que
+          l’abbaye royale, fondamentalement unique, n’a pas vocation à essaimer et réformer. En revanche, les chantiers de reconstruction qui ne
+          cessent de reconfigurer les espaces cultuels et processionnels dionysiens au cours des <num>xii</num>
+<hi rend="sup">e</hi> et <num>xiii</num>
+<hi rend="sup">e</hi> siècles ont entraîné la confection et l’actualisation d’une série d’ordinaires, source de premier ordre pour l’étude
+          de la desserte des centres liturgiques de l’abbatiale. De nombreux travaux les ont mis en valeur depuis une vingtaine d’années. Rien de tel
+          n’existe cependant dans le domaine dévotionnel et mémoriel, pour des raisons similaires sans doute : à côté des obituaires et nécrologes,
+          l’abbaye n’a semble-t-il jamais produit de livre des anniversaires comparable à ce qui existe ailleurs. C’est donc vers les seules sources
+          d’archives qu’il faut se tourner. Plus particulièrement, vers les actes de fondation originaux, dont la mise en série doit faire ressortir
+          les caractères significatifs au service de l’étude de la diversité et des évolutions de la politique mémorielle de l’abbaye. Cependant,
+          l’ampleur du fonds d’archives de Saint-Denis, conservé aux Archives nationales à Paris, est de nature à décourager toute prétention à
+          l’exhaustivité, tout au moins dans un délai limité. La clef du chartrier avant 1300 est le Cartulaire blanc, principal cartulaire de
+          l’abbaye, dont le dépouillement livre l’essentiel des actes de fondation, classés selon un cadre géographique. Néanmoins, l’absence
+          d’édition et plus encore d’index en rend l’exploitation peu commode : il est nécessaire de passer l’ensemble des chapitres en revue pour
+          repérer les actes à valeur mémorielle.</p>
+        <p>L’examen des archives de l’abbaye révèle à quel point la connaissance du paysage dévotionnel qui se structure progressivement dans les
+          marges de l’abbatiale dépend de la configuration des sources disponibles. Le réseau documentaire qui permet d’appréhender les chapellenies
+          dionysiennes déroute de prime abord, car il révèle une réalité liturgique par le biais de sources avant tout domaniales et comptables. En
+          l’absence de sources spécifiques, il faut s’en tenir à des listes de bénéfices divulguées par les registres de comptes produits par les
+          officiers claustraux concernés, ainsi qu’aux actes de fondation, lorsqu’ils sont conservés. En somme, cette démarche consiste à développer
+          une approche thématique d’un ensemble conçu dans une optique juridique et administrative. Les lacunes constatées sont d’ailleurs
+          révélatrices de l’attention variable que portent les moines à ces institutions avant tout foncières que sont les fondations de messes. La
+          logique domaniale qui structure le fonds n’est pas tant géographique qu’institutionnelle : les biens de l’abbaye sont en fait répartis entre
+          un nombre variable d’officiers claustraux qui les administrent directement au moyen de cadres documentaires propres et souvent organisés
+          selon un modèle similaire. Les cadres documentaires produits par la communauté et la cour abbatiale n’en sont pas moins utiles, notamment
+          les comptes de la Commanderie et divers règlements ; les actes capitulaires, en revanche, sont inopérants dans la perspective choisie.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

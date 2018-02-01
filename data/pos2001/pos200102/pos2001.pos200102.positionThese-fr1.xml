@@ -1,0 +1,87 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Henri Ghéon est aujourd’hui inconnu ou presque du grand public. Pourtant il a participé de près ou de loin à quelques-uns des événements
+          les plus marquants de l’histoire littéraire et dramatique de la première moitié du <num>xx<hi rend="sup">e</hi></num> siècle. Père fondateur de la <hi rend="i">Nouvelle Revue française</hi>( <hi rend="i">NRF</hi>) et l’un de ses collaborateurs les plus actifs ; dramaturge
+          joué au cours de la première saison du théâtre du Vieux-Colombier en 1913, critique littéraire, dramatique et artistique de renom ;
+          insatiable défenseur d’une rénovation des lettres et surtout du théâtre, il révèle une personnalité et une oeuvre bien plus riches et
+          intéressantes que l’image, en partie injustifiée et très réductrice, transmise à la postérité, celle d’un auteur de patronage et d’un
+          pasticheur de miracles médiévaux.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cette étude est fondée en grande partie sur le dépouillement du fonds Ghéon conservé au département des manuscrits de la Bibliothèque
+          nationale de France. Ont été ainsi consultés les manuscrits de l’auteur, notamment de ses œuvres théoriques, les brouillons de conférences
+          et d’articles inédits, mais aussi les très nombreuses lettres reçues par Ghéon. Le fonds Rondel, de la Bibliothèque de l’Arsenal, fournit
+          sur Ghéon une collection d’articles tirés des journaux de l’époque, alors le fonds Brochet conservé à la Bibliothèque municipale d’Auxerre
+          livre les manuscrits d’un collaborateur fidèle de Ghéon. Enfin il ne faut pas oublier I’œuvre critique de l’auteur, qui représente la source
+          imprimée la plus importante.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

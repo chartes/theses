@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+            <p>De février 1861 au 10 octobre 1863, l’Algérie est le thème central de la correspondance échangée de part et d’autre de la Méditerranée entre Ismaÿl Urbain et Frédéric Lacroix. Le premier, Urbain, a suivi la voie du saint-simonisme. Élève du Père Enfantin, interprète auprès de militaires renommés en Algérie, conseiller-rapporteur au Conseil consultatif dès 1861, il milite sa vie durant pour une Algérie qui concilierait les intérêts des indigènes et ceux des colons, des « immigrants ». Son correspondant, Frédéric Lacroix, préfet d’Alger en 1848, est un géographe et historien empreint d’érudition classique. Différents travaux exécutés pour le ministère de la Guerre dès les années 1850 l’ont intégré à un cercle de relations proches du milieu impérial.</p>
+            <p>La correspondance étudiée s’inscrit dans un contexte particulier : le décret du 10 décembre 1860 supprime le ministère de l’Algérie et consacre le rétablissement du gouvernement général de l’Algérie. Urbain, qui a demandé son transfert en Algérie à cette occasion, débarque sur le sol algérien le 28 janvier 1861 et entame peu de temps après cet échange épistolaire, décidé auparavant à Paris avec Lacroix. En effet, les deux hommes partagent des idées communes pour l’Algérie et aspirent à la mise en place d’un programme nouveau pour une Algérie qui concilierait les droits et les mœurs des indigènes avec les intérêts de la France et des immigrants, Français comme Européens.</p>
+            <p>Leur échange consiste avant tout en l’élaboration d’un programme politique algérien : une réflexion dense, politique, sociale, et économique émerge de leurs échanges épistolaires et nourrit la seconde brochure d’Urbain, <emph>Algérie française. Indigènes et immigrants</emph>, qui reprend l’essentiel des thèses qu’il avait formulées dans sa première brochure parue au début de l’année 1861 dans l’ignorance la plus totale, <emph>L’Algérie pour les Algériens.</emph> Cette seconde brochure qui voit le jour en novembre 1862 est le fruit du travail des deux hommes et de leurs réflexions réciproques.</p>
+            <p>Leur échange hebdomadaire de lettres répond d’abord à une exigence d’information : l’Algérie n’est pas au centre des préoccupations françaises dans les premières années de la décennie 1860 et la presse, métropolitaine et algérienne, se fait un vecteur des exigences et des revendications « colonistes », au détriment des droits des indigènes. Ensuite, la fonction de conseiller-rapporteur au Conseil consultatif qu’occupe Urbain à Alger lui permet de transmettre à Lacroix des informations de premier choix, non relayées par la presse et absentes des rapports officiels envoyés par le gouverneur général Pélissier à l’empereur.</p>
+            <p>Si les idées d’Urbain sont explicitées au sein des courriers qu’il adresse au Parisien Lacroix, l’intérêt principal de ce document réside dans la complémentarité de leurs idées et de leurs connaissances : Urbain a vécu de nombreuses années sur le territoire algérien et il en tire une connaissance pratique et une maîtrise des rouages administratifs. Lacroix, lui, est un érudit ; il possède des connaissances théoriques sur l’islam et sur l’histoire des musulmans qui fournissent nombre d’arguments aux idées émises par Urbain.</p>
+            <p>Enfin, elle apporte un éclairage nouveau sur l’action du groupe « arabophile » de 1861 à 1863 ; groupe constitué en réseau piloté par Frédéric Lacroix à Paris. Ce réseau est formé de correspondances multiples : celle de Vital, docteur à Constantine, à Urbain, celle de Lapasset, commandant de la subdivision de Mostaganem, à Lacroix pour n’en citer que deux d’entre elles ; et de relations avec des personnalités influentes auprès de l’empereur. Lacroix est en lien avec le maréchal Randon, ministre de la Guerre ; Lapasset fournit des documents au maréchal Fleury, aide de camp de l’empereur ; Urbain est proche du colonel de la Franconnière, aide de camp du prince Napoléon, etc.</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+            <p>La correspondance entre Ismaÿl Urbain et Frédéric Lacroix se trouve conservée aux Archives nationales d’Outre-Mer (ANOM) d’Aix-en-Provence, dans la série X. La cote du document concerné est, plus précisément FR ANOM GGA 1 X, cartons 3 et 4. En outre, la Société des amis d'Urbain, devenue la Société des études saint-simoniennes en 2006, en a acquis les microfilms qui sont consultables à la bibliothèque de l'Arsenal (Bibliothèque nationale de France) à Paris. La correspondance Urbain-Lacroix commence avec le microfilm de la boîte n° 1, sous la cote 1 X 3 et se poursuit avec la bobine contenue dans la boîte n° 2, sous la cote 1 X 4.</p>
+            <p>D’autres correspondances entretenues par Ismaÿl Urbain ont été étudiées, notamment celle entre Urbain et Gustave d’Eichthal, contenue dans le fonds d’Eichthal à la bibliothèque de l’Arsenal, celle entre Urbain et le docteur Vital, commentée et éditée par André Nouschi, et les lettres d’Urbain à Boissonnet, disponibles à la Bibliothèque nationale d’Alger.</p>
+            <p>Les deux récits autobiographiques composés par Urbain, corrigés dans un second temps par son ami Gustave d'Eichthal, ont constitué des documents précieux afin de saisir le sens donné par Urbain lui-même aux événements importants du début de la décennie 1860. Les manuscrits sont conservés à la bibliothèque de l'Arsenal, sous les cotes ms. 13744/75 pour l'autobiographie originale d'Urbain, et ms. 13737 pour sa <emph>Notice chronologique.</emph> Ces deux textes ont été édités et commentés par Anne Levallois en 2005.</p>
+            <p>Vient ensuite l'ensemble des rapports et des comptes rendus réalisés par Urbain alors qu'il occupe la fonction de conseiller-rapporteur au Conseil consultatif du gouvernement général de l'Algérie. Ces documents se trouvent aux ANOM à Aix-en-Provence, dans la série X. Plus précisément, les rapports d'Urbain se situent dans le fonds F 80/566, 1674 et 1678 et les dossiers qui le concernent sont classés dans le fonds 1 G 2575 et F 80/375.</p>
+            <p>Enfin, afin de situer et de lire dans leur intégralité les documents cités par Urbain dans le cours de sa correspondance, il a été nécessaire de se reporter aux papiers produits par le gouvernement général. Ceux-ci se trouvent également aux ANOM à Aix-en-Provence dans le fonds consacrés au gouvernement général de l'Algérie, législation, assemblées et conseils (1832-1956) ; et plus précisément, dans la série F, sous les cotes FR ANOM GGA 2F1 et FR ANOM GGA 2F6.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

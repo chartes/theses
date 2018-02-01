@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Lorsque Sir James Hall, quatrième baronet de Dunglass, se mit en route en avril 1791 pour la France en compagnie d’un de ses beaux-frères,
+          Thomas Douglas, il participait à un mouvement général d’intérêt pour la Révolution française : en Grande-Bretagne en effet, l’évolution
+          politique française constituait un sujet de débats passionnés et la controverse prenait souvent la forme de pamphlets politiques. Les
+          journaux d’observateurs britanniques de la Révolution française ainsi que leur correspondance reflétaient également cette controverse
+          aiguë ; certains de ces textes furent publiés dès l’époque de la Révolution, d’autres le furent bien plus tard. Rares étaient les journaux
+          et les correspondances de cette période qui ne s’engageaient pas pour ou contre l’un des deux partis en présence. Pourtant, le journal écrit
+          par de Sir James Hall en 1971 est remarquable par le souci de l’auteur de prendre parti le moins possible : ce texte s’apparente en effet
+          très nettement à un journal de voyage scientifique, même si le sujet principal qui y est abordé reste la politique.</p>
+        <p>Ce texte devait donc nécessairement être mis en perspective grâce à l’étude de la vie de Sir James Hall, mais également par l’évocation
+          des diverses pratiques de voyage des Britanniques à la fin du <num>xviii<hi rend="sup">e</hi></num>  siècle et des modèles de récit de voyage de cette
+          période. Enfin, il était important d’analyser le comportement politique de Sir James Hall en France et de comprendre pourquoi et comment il
+          fréquentait divers cercles sociaux parisiens. Hormis la politique, Sir James Hall s’intéressait de près à toutes les questions touchant
+          l’agronomie et ce thème est le deuxième par ordre d’importance dans ce journal : c’est pourquoi il était également nécessaire d’étudier ces
+          notations. Ce commentaire général est conçu comme une introduction à l’édition de texte et permet ainsi d’en comprendre le contexte et la
+          portée.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La source principale sur laquelle repose ce travail est évidemment le manuscrit du journal de Sir James Hall, conservé actuellement à la
+          National Library of Scotland, à Edimbourg (ms. 6329-6332). Par ailleurs, ont été étudiés d’autres journaux de Sir James Hall, en particulier
+          ses journaux de Grand Tour conservés également à la National Library of Scotland, ainsi que tous les journaux et carnets personnels de Sir
+          James Hall et sa correspondance, conservés aux National Archives of Scotland. La correspondance familiale fut également une mine
+          d’informations biographiques et sociologiques ; les registres de comptes de Dunglass, la propriété de Sir James Hall, ainsi que ses
+          registres de comptes personnels, fournirent nombre de renseignements sur la fortune et la propriété familiales, ainsi que sur leur
+          évolution. Enfin, un registre un peu à part, recensant les ouvrages de la bibliothèque de Dunglass House, m’a permis de comprendre quelles
+          étaient les lectures de Sir James Hall et donc d’élaborer des hypothèses sur son bagage intellectuel lorsqu’il se mit en route pour la
+          France en 1791.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

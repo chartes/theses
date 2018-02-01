@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’architecture domestique parisienne au Moyen Âge reste un domaine encore peu exploré. En effet, l’étude des grands hôtels a été longtemps
+          privilégiée, aux dépens de celle des constructions, moins prestigieuses, du commun. Ce n’est que depuis une trentaine d’années que la
+          recherche historique se penche sur ce sujet, délicat à aborder pour des raisons telles que l’absence de vestiges significatifs dans les
+          limites du Paris d’alors ou la rareté et la dispersion des sources. Les années 1350-1450 représentent pourtant un moment où l’activité du
+          bâtiment, principalement tournée vers la reconstruction et la réparation, reste vive malgré les « crises » et où éclosent des phénomènes qui
+          se développeront à la fin du <num>xv<hi rend="sup">e</hi></num> siècle. La maison de la Renaissance se situe ainsi dans la continuité de la
+          reconstruction suivant la guerre de Cent ans, aboutissement d’une époque d’expérimentation et de progrès quasi constants.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources privilégiées pour ce travail ont été les visites, c’est-à-dire les rapports des diverses expertises effectuées par les jurés
+          des métiers du bâtiment. Des actes de ce type sont conservés dans la série S des Archives nationales, mais n’ont pas été recensés. La masse
+          de documents que cette série représente n’a permis que de faire quelques sondages, avant de devoir réorienter ces recherches. En effet, on a
+          surtout eu recours aux fonds de l’Hôtel-Dieu et de Saint-Jacques-aux-Pélerins, conservés aux archives de l’Assistance publique et des
+          Hôpitaux de Paris. Il a été ainsi possible de constituer un corpus de visites inédites, que l’on a associées à d’autres déjà publiées. Les
+          registres comptables de ces deux mêmes institutions hospitalières ont aussi été consultés, sur plusieurs années consécutives.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le texte de la <hi rend="i">Dissuasio Valerii</hi> de Gautier Map a circulé très largement du <num>xii<hi rend="sup">e</hi></num> siècle à la fin du
+          Moyen Ageet a suscité une riche littérature interprétative. L’objectif que se propose ce travail est d’en mettre au jour un commentaire
+          inédit, le <hi rend="i">Hec epistola</hi>, dû à John Ridewall.</p>
+        <p>En effet, si la diffusion importante de la <hi rend="i">Dissuasio Valerii</hi> est bien attestée, il n’est pas toujours facile de savoir
+          ce que les hommes du Moyen Age aimaient dans ce texte, qu’ils attribuaient à Valère Maxime ou à un auteur chrétien de l’Antiquité tardive.
+          La plupart des commentaires qui lui sont consacrés sont certes connus depuis longtemps par les historiens, mais demeurent pour beaucoup
+          encore inédits. L’étude du <hi rend="i">Hec epistola</hi> permettra donc d’approfondir la question de la diffusion et de la réception de la
+            <hi rend="i">Dissuasio Valerii</hi> au début du <num>xiv<hi rend="sup">e</hi></num> siècle.</p>
+        <p>Le choix de ce texte s’explique ensuite par la personnalité de son auteur. Ce franciscain de la première moitié du XIV <hi rend="sup">e</hi> siècle, prédicateur, théologien, est aussi l’auteur d’un traité de mythologie, le <hi rend="i">Fulgentius metaforalis</hi>.
+          Quelques contemporains, Nicolas Trevet, Robert Holkot, Thomas Ringstead entre autres, issus eux aussi des ordres mendiants et attachés comme
+          lui à l’Université, que ce soit à Oxford ou à Cambridge, ont certes partagé cette passion pour la littérature classique et l’ont intégrée
+          dans leur prédication. Mais Ridewall est le seul à avoir consacré à l’Antiquité un véritable traité, se détachant ainsi du groupe des
+          «frères classicisants». La lecture du <hi rend="i">Hec epistola</hi> doit aussi contribuer à préciser l’originalité de l’œuvre de John
+          Ridewall.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Vingt-quatre manuscrits contenant l’un des commentaires de la <hi rend="i">Dissuasio Valerii</hi> ont été étudiés. Les douze d’entre eux
+          qui contenaient le commentaire <hi rend="i">Hec epistola</hi> ont servi à l’édition: Cambrai, bibl. mun.939 (M); Cambridge, Corpus Christi
+          Coll.177 (D); Cambridge, Corpus Christi Coll.414 (C); Cambridge, Queens’Coll.22 (Q); Cambridge, Saint-John’s Coll.115E12 (J); Cambridge,
+          Univ. Libr.Ff.6.12 (F); Dublin, Trinity Coll.115 (T); Munich, Bayerische Staatsbibl.Clm3536 (B); Munich, Bayerische Staatsbibl.Clm23474
+          (Cl); Oxford, Bodl. Libr., Digby147 (O); Oxford, Bodl. Libr., Douce147 (Ox); Paris, Bibl. nat. de France, lat.6387 (P).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Les prédictions astrologiques annuelles constituent à la fin du Moyen Âge un genre tout à fait spécifique bien que leurs appellations soient diverses. Alors que les manuels d'astrologie, arabes ou latins, parlent plutôt de « révolutions des années du monde », les prédictions elles-mêmes sont désignées, dans leur texte même, par les expressions latines <emph>judicium anni</emph>, <emph>tacuinus</emph>, et de plus en plus, à la fin du siècle, <emph>practicum</emph>, <emph>pro(g)nosticatio</emph> ou <emph>pro(g)nosticon.</emph> Quel que soit leur nom, les prédictions annuelles générales, qui font l'objet de cette thèse, sont bien définies dans la quadripartition médiévale classique des écrits astrologiques – prédictions annuelles, nativités, interrogations, élections – telle que la détaille, par exemple, le <emph>Speculum astronomie</emph> attribué à Albert le Grand.</p>
+          <p>En dépit du grand nombre de prédictions de ce type conservées, le genre n'avait jamais fait l'objet d'une étude complète et méthodique. Outre l'<emph>History of Magic and Experimental Science</emph> de Lynn Thorndike (1928-1958) – qui identifie et décrit de nombreux témoins, mais sans en fournir d'étude analytique –, l'apport le plus important est dû à Albano Sorbelli, dans un article du <emph>Gutenberg Jahrbuch</emph> paru en 1938 et consacré au <emph>tacuinus</emph> traditionnellement exigé des professeurs d'astrologie de l'université de Bologne. À l'exception de cette spécificité bolonaise, les prédictions annuelles sont plus souvent évoquées dans les études littéraires sur leurs parodies, les fameuses « pronostications joyeuses » auxquelles Jean Molinet ou François Rabelais ont donné leurs lettres de noblesse. Dans les dernières décennies, des articles de Philippe Contamine et Jean-Patrice Boudet ont néanmoins rouvert ce champ d'étude. Par ailleurs, si la période étudiée ici restait méconnue des historiens, ce n'est pas le cas de celle qui suit immédiatement, à la toute fin du <num>xv<hi rend="sup">e</hi></num> siècle et au début du suivant, qui est remarquablement étudiée, en particulier dans les récents travaux de Robert Westman et Jonathan Green.</p>
+          <p>L'objet de cette thèse, en décrivant les prédictions astrologiques annuelles latines du <num>xv<hi rend="sup">e</hi></num> siècle, est de souligner leur caractère à la fois « scientifique », car conforme à une véritable méthode établie par des ouvrages de référence auxquels les textes font des renvois, et « soutenable », c'est-à-dire le plus crédible possible à moyen terme, faisant pour cela l'objet d'inflexions selon les connaissances de l'auteur de la situation socioéconomique et géopolitique au moment de la rédaction.</p>
+      </div>
+              <div type="sources"><head>Sources et bibliographie</head>
+          <p>Il est essentiellement fait usage des prédictions astrologiques annuelles elles-mêmes, qu'elles soient conservées sous forme manuscrite ou imprimée. Les premières font l'objet d'un catalogue complet, imprimé dans le deuxième volume de la thèse. Le dépouillement des secondes n'a en revanche pas été systématique. Les chiffres avancés dans l'étude se basent sur les données de l'<emph>Incunabula Short Title Catalogue</emph> ; à l'exception des éditions incunables de prédictions manuscrites signalées dans le catalogue, seul un échantillon a été étudié en détail.</p>
+          <p>Les principaux manuels d'astrologie cités dans les prédictions annuelles ont également été exploités, sauf exception dans leur édition princeps. Il est très probable que d'autres sources – livres de comptes, actes de la pratique, etc. – fassent parfois mention de prédictions annuelles, mais leur référencement étant inexistant, il n'a été possible d'en repérer qu'un très petit nombre dans le cadre de cette thèse.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

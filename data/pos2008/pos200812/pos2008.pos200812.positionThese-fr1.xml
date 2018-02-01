@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les sociologues des sciences se sont beaucoup intéressés aux stratégies de carrière des scientifiques à l’intérieur de leur communauté, à
+          l’époque contemporaine. Au sommet de la pyramide, ils plaçaient volontiers l’obtention du prix Nobel, suprême honneur couronnant l’ensemble
+          des travaux d’un chercheur. Avant la fondation du prix Nobel en 1901, il y eut bien d’autres tentatives de la part de savants, d’inventeurs
+          et de gouvernants pour tenter de stimuler la recherche, souvent dans un domaine bien précis. Celles qui nous intéressent particulièrement
+          sont deux prix scientifiques fondés l’un par Napoléon Bonaparte en 1802, l’autre par Louis-Napoléon Bonaparte en 1852, et tous deux
+          consacrés à des recherches sur l’électricité. On a voulu enquêter sur le sens de ces interventions de l’État en faveur de la communauté
+          scientifique. Ce travail relève à la fois d’une histoire de la politique menée par les Bonaparte pour assurer à la France un des tout
+          premiers rangs dans le monde, et d’une histoire sociale des sciences dans le domaine particulier de l’électricité : il se situe précisément
+          à l’intersection de ces deux questionnements. Quoiqu’ils se limitent à l’électricité – laquelle touche de très nombreux pans du savoir et
+          bientôt de nombreux savoir-faire industriels –, ces prix constituent un maillon dans l’organisation de la recherche du monde occidental,
+          entre un modèle dominé par le patronage et un modèle où le relais est pris par des institutions d’État, telles que la Caisse des recherches
+          scientifiques fondée en 1901, et surtout le Centre national de la Recherche scientifique en 1939, pour n’évoquer que le cas de la
+          France.</p>
+        <p>S’il n’étaient pas inconnus des chercheurs en histoire des sciences, le prix du galvanisme et le prix Volta étaient jusque-là considérés
+          comme des lubies des Bonaparte peu en prise avec la réalité de leur temps. Le faible nombre d’attributions faisait dire qu’ils avaient joué
+          un rôle négligeable. Or tel n’est pas l’impression qui se dégage lorsque l’on jette un regard plus approfondi sur ces récompenses, bien au
+          contraire.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources du prix du galvanisme et celles du prix Volta forment deux ensembles nettement distincts, correspondant à deux logiques
+          institutionnelles. Le prix du galvanisme étant un ancien prix de l’Institut de France, ses archives sont conservées aux Archives de
+          l’Académie des sciences, dans une pochette de prix rassemblant des participations d’années diverses. En réalité cette pochette ne contient
+          qu’une part infime des mémoires envoyés pour le prix, ce que révèle la consultation des <hi rend="i">Procès-verbaux de l’Académie des
+            sciences</hi>. Les procès-verbaux permettent de reconstituer la trame des événements liés au prix : réception des mémoires, comptes rendus
+          individuels de commissaires sur ces mémoires, constitution de la commission du galvanisme, et jugement comparatif de celle-ci sur les
+          mémoires reçus dans l’année dans un rapport annuel. Les pochettes des séances concernées recèlent parfois des documents liés au prix, que ce
+          soient des mémoires de participants, des comptes rendus individuels ou encore un document préparatoire au travail de la commission. Les
+          mémoires imprimés ont quant à eux été consultés en bibliothèques. L’ensemble, complété par de nombreux journaux scientifiques ou
+          généralistes, et des traités d’électricité, demeure très incomplet et fragmentaire. En ce qui concerne la Société galvanique, il a fallu
+          reconstituer son histoire sans disposer de ses archives propres, à partir de mentions éparses mais nombreuses dans la littérature de
+          l’époque.</p>
+        <p>Quant au prix Volta, qui dépendait directement du ministère de l’Instruction publique, on en trouvera la trace aux Archives nationales. Un
+          groupe de six cartons cotés F<hi rend="sup">17</hi> 3 100 à 3 104, le numéro 3 100 étant reconditionné en deux cartons 3 100 <hi rend="sup">1</hi> et 3 100<hi rend="sup">2</hi>, fonctionne cette fois de manière beaucoup plus autonome grâce à une bonne gestion des archives :
+          il livre à la fois de très nombreux mémoires de candidats au concours, la correspondance reçue et envoyée par la Division des sciences et
+          lettres du ministère au sujet du prix, et les procès-verbaux des séances de la commission qui se trouvent ici rassemblés, si bien qu’on peut
+          reconstituer presque toute l’histoire du prix sans convoquer d’autres sources. Cependant la presse, des dossiers de Légion d’honneur, un
+          dossier d’ingénieur des Ponts et Chaussées, un dossier de demande de secours envoyé au ministère par Achille Brachet, candidat au prix, ont
+          été consultés pour compléter le point de vue.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

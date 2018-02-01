@@ -1,0 +1,93 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’une des branches de l’histoire économique et sociale s’intéresse de près au niveau de vie des populations, en s’appuyant sur les prix et
+          les salaires. Il existe parallèlement une approche originale de la vie des Français, l’histoire anthropométrique, permettant d’évaluer à
+          partir des archives militaires l’état sanitaire des conscrits, et donc de déceler d’éventuels signes de malnutrition durant leur petite
+          enfance ou leur adolescence. Les recherches sur la population des villes, spécialement au début du <num>xix<hi rend="sup">e</hi></num> siècle,
+          demeurent lacunaires. Si les notables ont suscité des mouvements d’enquête et de recensement, il n’en va pas de même pour les catégories
+          moyennes, <hi rend="i">a fortiori</hi> pour les jeunes gens d’origine modeste, voire miséreuse. Les listes de la conscription peuvent à cet
+          égard être riches de données statistiques. Il s’agit donc ici de cerner en profondeur la société de la ville de Strasbourg, entre 1785 et
+          1830, au moyen du dépouillement de quelques 8 065 noms de conscrits. Entre le lustre des grandes fortunes établies sous l’Empire et une
+          certaine misère populaire, redoutée des préfets et des commissaires de police, se place une large palette d’individus, petits bourgeois,
+          artisans laborieux, petites gens modestes ou aux limites de la pauvreté.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds principal est constitué par les archives de la conscription (séries R des Archives départementales du Bas-Rhin et AF iv des
+          Archives nationales), en particulier les tableaux de recensement et les registres tenus par les conseils de révision. Y figurent en effet
+          les renseignements d’ordre général sur la personne du conscrit (lieu de naissance, profession), mais aussi les décisions et analyses du
+          conseil de révision. Ces sources ont été complétées par les archives de la police (série F<hi rend="sup">7</hi> des Archives nationales),
+          notamment les rapports, donnant un éclairage particulier sur la vie quotidienne de la population, les fonds ayant trait à l’économie
+          (rapports sur la situation du commerce et de l’industrie, mercuriales, papiers de la Chambre de commerce de Strasbourg) et à l’assistance
+          (séries F<hi rend="sup">15</hi> des Archives nationales, X des Archives départementales du Bas-Rhin, AH des Archives municipales de
+          Strasbourg).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

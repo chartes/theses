@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les historiens du siècle de Louis XIV n’ont pas brossé de Chamillart un portrait très flatteur. Accusé de faiblesse et de manque de
+          caractère, sinon d’incapacité, ce ministre symboliserait la “ décadence ” des dernières années du règne, l’emprise croissante de Madame de
+          Maintenon sur les affaires, les défaites qui ponctuèrent la guerre de Succession d’Espagne ou encore la crise financière que traversait
+          alors le royaume. Il s’agit là de jugements hâtifs, dont aucun n’est fondé sur une connaissance approfondie du personnage. Issu d’une
+          honorable famille de robe, Chamillart connut une brillante carrière grâce à la faveur et à l’amitié du roi : en une quinzaine d’années,
+          celui-ci transforma le jeune conseiller au Parlement en contrôleur général des finances, avant de le nommer ministre d’État, puis secrétaire
+          d’État de la guerre. Cette belle ascension s’acheva au mois de juin 1709 par une disgrâce inattendue, et le ministre déchu se retira de la
+          Cour jusqu’à sa mort. Alors que l’histoire ministérielle et institutionnelle de l’Ancien Régime est marquée par un net regain d’intérêt,
+          mais que la seconde moitié du règne de Louis XIV reste mal connue, il a paru intéressant de se pencher ­ essentiellement du point de vue du
+          département de la guerre ­ sur ce ministre étonnant, qui ne fut ni Colbert ni Louvois, mais cumula pendant près d’une décennie la plus
+          grande partie des attributions de ces deux figures exceptionnelles.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les épaves du fonds privé de la famille Chamillart sont conservées aux Archives départementales de la Sarthe (sous-séries 1 E, 18 J et,
+          pour l’essentiel, 28 J 1 à 16). Lacunaires, ces archives jusqu’ici peu connues offrent cependant de nombreuses informations sur l’ensemble
+          de la famille. Plus complètes sont les sources parisiennes : aux Archives nationales, les études CIX (1615-1682), LXV (1677-1699) et surtout
+          CV (1697-1721) donnent des renseignements indispensables pour retracer l’histoire des Chamillart et l’évolution de la fortune du ministre.
+          La sous-série G<hi rend="sup">7</hi> , même si la correspondance du contrôleur général n’a pas été examinée en détail, apporte de
+          précieuses informations, tout comme, entre autres, les séries et sous-série K et KK, O<hi rend="sup">1</hi> , V et Y. De façon parallèle,
+          la très riche sous-série A<hi rend="sup">1</hi> du Service historique de l’armée de Terre, indispensable pour comprendre l’action
+          ministérielle de Chamillart, a été exploitée avec le plus grand profit. Dans le même service, les dossiers de la sous-série Y <hi rend="sup">a</hi> permettent de connaître le personnel des bureaux de la guerre au début du <num>xviii<hi rend="sup">e</hi></num> siècle. D’autres
+          institutions, enfin, ont été mises à profit : la Bibliothèque nationale de France (Cabinet des titres, Mélanges Colbert, Papiers Noailles et
+          différents recueils de manuscrits), la Bibliothèque Mazarine (en particulier les Mss 2626, 2301 et 2451), les Archives du ministère des
+          affaires étrangères, les Archives de Paris (sous-série D.C<hi rend="sup">6</hi> ), ou encore les Archives départementales de l’Yonne et des
+          Yvelines (sous-séries 3 E).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

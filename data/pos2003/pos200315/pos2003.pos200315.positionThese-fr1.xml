@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La manufacture des Gobelins, créée sous le règne de Louis XIV, avait pour but initial de meubler le roi ; spécialisée ensuite rapidement
+          dans la production de tapisseries, elle connut un grand succès à la fin du <num>xvii<hi rend="sup">e</hi></num>  siècle et tout au long du XVIII <hi rend="sup">e</hi>  siècle, voyant sa production évoluer vers une plus grande imitation de la peinture, sous la direction du peintre Oudry
+          notamment, tout en conservant un caractère décoratif prononcé. Elle était en outre considérée par le roi comme un instrument servant à
+          magnifier sa propre image. Ce lien avec la royauté lui fut néfaste durant la Révolution, qu’elle traversa avec beaucoup de difficultés. Si
+          la manufacture des Gobelins est étudiée au cours du <num>xix<hi rend="sup">e</hi></num>  siècle, c’est donc à travers le prisme de la Révolution :
+          comment la manufacture subsista-t-elle, quels furent les changements de fonctionnement établis pour sa survie ? Garda-t-elle par ailleurs la
+          même raison d’être que sous l’Ancien Régime, quel fut son emploi par les souverains du <num>xix<hi rend="sup">e</hi></num>  siècle ?</p>
+        <p>Les changements politiques de cette période ont certes eu une incidence importante sur le fonctionnement de la manufacture ; cela est très
+          perceptible au moment du passage de l’Empire à la Restauration. Toutefois, d’autres événements eurent également un rôle dans l’évolution de
+          la manufacture, comme la réunion de la manufacture de la Savonnerie aux Gobelins en 1826. Cela explique le choix d’étudier la manufacture
+          des Gobelins selon trois grandes phases, articulées autour des dates de rupture que furent 1815 et 1826 ; au sein de ces périodes, il
+          convenait de montrer les changements d’ordre institutionnel, économique ou artistique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La majeure partie des sources utilisées appartient à la série O des Archives nationales, et plus particulièrement aux sous-séries O <hi rend="sup">2</hi> et O<hi rend="sup">3</hi> , qui correspondent respectivement à la Maison de l’empereur et à la Maison du roi sous la
+          Restauration. Les documents qu’elles contiennent peuvent être classés en plusieurs types : la correspondance donne d’utiles informations sur
+          les relations entre les différentes administrations ; elle est parfois complétée par des rapports précis sur le fonctionnement des
+          Gobelins ; des « états » renseignent, sous la forme de tableaux, sur des sujets aussi divers que le personnel, les tapisseries fabriquées,
+          ou encore sur les dépenses et les produits de la manufacture.</p>
+        <p>La sous-série O<hi rend="sup">4</hi> , rassemblant les documents relatifs à la Maison du roi de 1830 à 1848, est lacunaire ; il a alors
+          fallu recourir à un autre fonds pour étudier cette période. Les Archives du Mobilier national concernant la manufacture des Gobelins ont
+          apporté le complément nécessaire, constitué également de correspondance, de budgets, de listes de tapisseries et d’états de personnel,
+          présentés sous forme de registres.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>L’abbaye de la Trinité de Fécamp, fondée vers 658 puis rasée par les Vikings à la fin du <num>ix</num><hi rend="sup">e</hi> siècle, fut refondée dans l’enceinte même du palais ducal en 990 par le duc de Normandie Richard I<hi rend="sup">er</hi>, qui en fit la nécropole ducale. Son chartrier est l’un des plus importants de Normandie, mais il n’a été à ce jour l’objet que d’études ponctuelles – comme celles de Charles Homer Haskins sur les premières chartes ducales pour Fécamp, dans son ouvrage <hi rend="i">Norman institutions</hi>, de Lucien Musset sur les notices de l’abbé Jean de Ravenne (1028-1078), de dom Jean Laporte sur certains actes de l’abbé Henri de Sully (1140-1187), de Léopold Delisle et, plus récemment, de Fabien Paquet, sur les actes de l’abbé Raoul d’Argences (1189/1190-1219). Certes, Henri Gourdon de Genouillac avait publié en 1875, à la fin de son <hi rend="i">Histoire de l’abbaye de Fécamp et de ses abbés</hi>, un catalogue de soixante-treize actes du chartrier issus de la collection Moreau de la Bibliothèque nationale de France, mais sans prétendre à l’exhaustivité. </p>
+    <p>La présente thèse consiste donc en une étude et une édition critique du chartrier de l’abbaye de la Trinité, des origines à l’arrivée de Raoul d’Argences sur le siège abbatial en 1189-1190, période d’apogée de l’abbaye qui a l’avantage de coïncider avec la période ducale et qui présente une certaine unité du point de vue diplomatique, au regard de la rupture que marquent au début du <num>xiii</num><hi rend="sup">e</hi> siècle un usage plus systématique du millésime et le déclin des listes de témoins. Sont inclus dans cette édition les actes des prieurés et des abbayes qui sont restés dépendants de Fécamp jusqu’à la Révolution française, notamment Sainte-Berthe de Blangy-sur-Ternoise, Saint-Gabriel-Brécy, et Saint-Georges de Mantes. Ceux des abbayes qui se sont émancipées (Notre-Dame de Bernay et Saint-Taurin d’Évreux), en revanche, sont trop nombreux et donc exclus de l’étude. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>L’essentiel du chartrier est de nos jours conservé aux archives départementales de la Seine-Maritime, mais le chartrier ne s’y trouve plus dans son état originel, ayant souffert d’une certaine dispersion à la suite de la Révolution française. Ainsi, de très nombreux originaux et d’innombrables copies se trouvent de nos jours au Palais de la Bénédictine de Fécamp, institution privée, originale à plus d’un titre, fondée par Alexandre Le Grand en 1863. </p>
+    <p>Outre le Palais de la Bénédictine, plusieurs personnes privées et institutions anglaises conservent de nos jours des documents issus du chartrier de l’abbaye. Cela est dû pour partie à l’abbé Gervais de La Rue (1751-1835), qui déroba au début du <num>xix</num><hi rend="sup">e</hi> siècle de nombreuses chartes aux archives départementales du Calvados, et en donna certaines à son ami Thomas Stapleton. C’est l’origine de la collection du baron Beaumont, frère de Thomas Stapleton, dispersée de nos jours entre la John Rylands Library de Manchester, la Hull University Library, etc. Par ailleurs, de nombreuses copies modernes volées par l’abbé de La Rue se retrouvent dans la collection Mancel du musée des Beaux-Arts de Caen. En outre, les <hi rend="i">Cartae antiquae rolls</hi>, conservées aux Archives nationales du Royaume-Uni, recèlent de nombreuses copies d’actes fécampois. </p>
+    <p>Les originaux les plus anciens et les plus prestigieux sont conservés au Palais de la Bénédictine, mais ce sont les archives départementales de la Seine-Maritime qui conservent la majorité des actes postérieurs à la seconde moitié du <num>xi</num><hi rend="sup">e</hi> siècle. Sur 233 actes édités (hors annexes), couvrant deux siècles, 75 sont conservés sous forme d’original, dont 54 aux archives départementales et 19 au Palais de la Bénédictine. </p>
+    <p>Quant aux copies modernes et du <num>xix</num><hi rend="sup">e</hi> siècle, elles sont dispersées dans un grand nombre d’institutions, en France et en Angleterre, avec au premier rang la Bibliothèque nationale de France et sa collection Moreau, notamment les volumes 21 et 341. Dans ce dernier, outre de longues analyses des chartes transcrites d’après les originaux, où sont données des précisions sur les dimensions des actes, leur ponctuation, leur langue ou bien leurs sceaux, on trouve de nombreuses reproductions de <hi rend="i">rotae</hi>, de <hi rend="i">bene valete</hi> monogrammatiques, de caractères allongés des premières lignes, et d’autres caractères externes. </p>
+    <p>Enfin, deux manuscrits peu connus de cette même bibliothèque furent des plus utiles : le manuscrit nouv. acq. fr. 21819, rassemblement de centaines de notes et transcriptions de Léopold Delisle sur Fécamp, et le manuscrit lat. 14194, méconnu de très nombreux historiens et éditeurs de textes normands, qui contient pourtant des copies d’actes inédits très importants pour l’histoire de l’abbaye. Pour la présente édition, ce manuscrit est essentiel de par son <hi rend="i">Mémoire pour Fecam</hi>. Sous ce titre assez vague se cache en effet un recueil d’actes fécampois soumis à la critique diplomatique des moines de Saint-Germain-des-Prés, sans doute dans le cadre d’un procès avec l’archevêque de Rouen au sujet de l’exemption à la fin du <num>xvii</num><hi rend="sup">e</hi> siècle. Il faut noter que ce manuscrit contient les seules copies manuscrites connues à ce jour du fameux <hi rend="i">Dotalitium</hi> <hi rend="i">Judithae</hi>, femme de Richard II, et de l’<hi rend="i">Appendice de Saint-Gabriel</hi>. </p>
+    <p>En ce qui concerne les cartulaires, les religieux de Fécamp furent parmi les premiers en Normandie à compiler un cartulaire, à la fin du <num>xi</num><hi rend="sup">e</hi> ou au début du <num>xii</num><hi rend="sup">e</hi> siècle. Ce cartulaire de quatre-vingt feuillets aurait été perdu à la Révolution, mais l’on dispose de nombreuses copies d’actes réalisées avec soin par dom Lenoir et ses confrères à la fin du <num>xviii</num><hi rend="sup">e</hi> siècle d’après ce cartulaire, dans la collection Moreau, et dans les <hi rend="i">Cahiers de dom Lenoir</hi>, appartenant à la collection de M<hi rend="sup">me</hi> de Mathan au château de Saint-Pierre de Semilly, non loin de Saint-Lô. En raison de sa reliure rouge, ce cartulaire est appelé par commodité « Livre rouge » dans la présente thèse. </p>
+    <p>Les moines ont également compilé d’autres cartulaires au Moyen Âge, à commencer par le manuscrit 1207 de la bibliothèque municipale de Rouen, l’une de nos sources principales pour cette édition, qui comporte 500 actes en latin, de la première moitié du <num>xiii</num><hi rend="sup">e</hi> siècle pour la grande majorité : pour plus de commodité, à la suite de Léopold Delisle, il est désigné dans la présente thèse sous le nom de « Cartulaire A ». Il fut probablement compilé à la fin de l’abbatiat de Guillaume Vaspail (1227-1260). C’est un instrument très pratique qui donne les principaux actes concernant l’abbaye dans l’ordre méthodique des contractants : ducs de Normandie et rois d’Angleterre, comtes, rois de France, archevêques, évêques, archidiacres et doyens, abbés de Fécamp, autres abbés et prieurs, curés et autres clercs, et enfin chevaliers et simples particuliers, cette dernière catégorie représentant la grande majorité des actes, c’est-à-dire environ 335 sur 500. À l’intérieur de ces différentes catégories, on trouve souvent un classement topographique. Quant aux transcriptions, si elles sont dans l’ensemble très fidèles aux originaux, elles sont malgré tout bien souvent incomplètes, s’arrêtant la plupart du temps aux premiers témoins des listes de souscriptions. </p>
+    <p>Enfin, à la fin du <num>xiii</num><hi rend="sup">e</hi> siècle et au début du <num>xiv</num><hi rend="sup">e</hi> siècle, les moines de Fécamp confectionnèrent un autre cartulaire : le manuscrit 7 H 9 des archives départementales de la Seine-Maritime. À la suite de Léopold Delisle, il est désigné dans la présente thèse du nom de « Cartulaire B ». Il contient des titres en latin et en français, de la fin du <num>xi</num><hi rend="sup">e</hi> siècle à 1331 au moins, mais la grande majorité des actes sont du <num>xiii</num><hi rend="sup">e</hi> siècle et du début du <num>xiv</num><hi rend="sup">e</hi> siècle. Il ne livre en effet qu’une dizaine d’actes des <num>xi</num><hi rend="sup">e</hi> et <num>xii</num><hi rend="sup">e</hi> siècles, qu’on retrouve pour certains dans le Cartulaire A. </p>
+    <p>À eux trois, le Livre rouge et les Cartulaires A et B contiennent les transcriptions d’environ la moitié des actes de la présente édition. </p>
+    <p>Il convient de noter qu’il n’y a qu’une seule bulle papale dans ces trois cartulaires. Peut-être le cartulaire-bullaire de la fin du <num>xvii</num><hi rend="sup">e</hi> siècle, redécouvert récemment au Palais de la Bénédictine de Fécamp (coté A-10-89), est-il la copie d’un manuscrit médiéval, ou bien fut-il confectionné dans le cadre du procès contemporain avec l’archevêque de Rouen ? Il fallut en effet produire alors de nombreuses bulles et actes primordiaux, et il se peut que l’abbaye ait voulu en garder une trace, sachant que les productions de titres étaient souvent l’occasion de pertes. Ce manuscrit ne comporte plus que 426 pages, les 54 premières étant manquantes. Les copies qu’il contient sont des plus soignées et sont pour la plupart des copies figurées d’actes allant de 1016 à 1518. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

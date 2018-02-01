@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’étude de la construction navale maritime et fluviale suppose en premier lieu celle des chantiers, de leur approvisionnement et des
+          savoir-faire techniques mis en œuvre par les charpentiers au cours de la conception des carènes, puis de leur assemblage ; la construction
+          navale normande doit également être mise en relation avec le cadre plus vaste de la tradition de construction ibéro-atlantique à laquelle
+          elle appartient. Mais d’autres facteurs interviennent dans le processus d’édification d’un navire : il s’agit principalement des demandes
+          formulées par les acheteurs et des moyens dont ils disposent, de l’exigence de sécurité pour les équipages et les cargaisons et, enfin, de
+          l’adaptation nécessaire du navire aux conditions de navigations rencontrées en Normandie. Résultat d’un compromis entre ces différentes
+          conditions, le navire est au centre de réseaux économiques et humains qui ne se confondent que partiellement avec ceux du commerce
+          maritime.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources écrites de cette étude sont en très grande majorité des sources notariées, issues des tabellionages de Rouen et du Havre, tous
+          deux conservés aux Archives départementales de la Seine-Maritime. Les registres notariaux sont en effet pour cette époque le seul type de
+          source susceptible de contenir, outre de multiples actes relatifs au commerce et à la vie maritime, des devis de construction comportant les
+          dimensions et la description des navires et des pièces qui les composent dans le cadre de la construction navale privée. Le dépouillement
+          intégral des registres en matière mobilière compris entre 1522 et 1575 a été complété par des documents portant sur la fin du siècle
+          signalés dans un catalogue établi par les Archives nationales du Canada. D’autres sources ont été ponctuellement utilisées, comme les
+          traités de construction navale ibériques datés du <num>xvi<hi rend="sup">e</hi></num> siècle et du début du <num>xvii<hi rend="sup">e</hi></num> siècle ­
+          notamment le <hi rend="i">Livro da fabrica das naos</hi>(vers 1570-1580) du père Fernando Oliveira ­ ainsi que des sources archéologiques, à
+          travers des études d’épaves ibériques et anglaises.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

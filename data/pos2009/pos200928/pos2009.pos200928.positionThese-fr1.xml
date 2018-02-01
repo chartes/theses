@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Cadre de la politique européenne des années 1807-1812, l’alliance franco-russe ne peut se comprendre sans l’étude de l’ambassade
+          d’Armand-Louis de Caulaincourt à Saint-Pétersbourg, de décembre 1807 à mai 1811. Envoyé par Napoléon auprès du tsar Alexandre, Caulaincourt,
+          duc de Vicence, aide de camp de l’empereur, grand écuyer de la cour impériale et général de division des armées françaises, symbolise
+          l’importance accordée à l’alliance conclue à Tilsit, en juillet 1807, entre la France et la Russie. Toutes les négociations diplomatiques de
+          la période, tous les événements de politique internationale se rapportent à cette alliance qui, peu à peu, se délite et aboutit à la
+          campagne de 1812, qui provoque, à terme, la chute du Premier empire et de l’hégémonie française en Europe.</p>
+        <p>Les études sur l’alliance franco-russe, provoquées pour la plupart par la nouvelle alliance conclue à la fin du <num>xix</num>
+<hi rend="sup">e</hi> siècle, tendent toutes à ne présenter que les questions de politique extérieure et à se focaliser sur la figure des
+          deux empereurs, qui éclipsent les autres acteurs de la période, notamment les diplomates, dont l’action et la pensée ne parviennent pas à se
+          distinguer de celles de leurs maîtres. Caulaincourt, figure majeure de la fin de l’Empire, se voit ainsi réduit au rôle d’intermédiaire
+          entre les deux souverains, sans que soient jamais visibles son bilan et ses conceptions diplomatiques. Connu avant tout pour ses mémoires,
+          témoignage unique sur la campagne de 1812 et sur les dernières années de l’Empire, il n’a jamais fait l’objet d’une biographie scientifique
+          ou d’une étude consacrée à son action politique. L’ambassade à Saint-Pétersbourg, peu abordée dans ses mémoires et dans l’introduction à
+          ceux-ci par J. Hanoteau est pourtant fondatrice dans la carrière de Caulaincourt : celui-ci, tout en mettant en place une représentation
+          diplomatique unique à cette époque et en participant aux négociations de l’alliance franco-russe, développe sa pensée et son image
+          personnelles.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les <hi rend="i">Mémoires</hi> de Caulaincourt sont une des principales sources imprimées disponibles, renseignant sur la campagne de 1812
+          et sur l’action du duc de Vicence en 1813 et 1814, mais éludant en grande partie l’ambassade de Saint-Pétersbourg. Cependant, dans la mesure
+          où ils renseignent sur la pensée et sur le caractère de l’ambassadeur, les <hi rend="i">Mémoires</hi> sont un outil indispensable à toute
+          étude sur le duc de Vicence. Des mémoires de personnalités impliquées dans l’alliance, comme Savary, duc de Rovigo, ceux de Français émigrés
+          en Russie et ceux d’aristocrates russes, évoquent l’ambassade de Caulaincourt et permettent d’appréhender l’image qu’elle renvoie. La
+          correspondance de Joseph de Maistre est, dans cette optique, le meilleur témoignage d’un contemporain présent dans la capitale russe à la
+          même époque que l’ambassadeur de France.</p>
+        <p>La source principale de cette étude est le fonds 95 AP des Archives nationales, notamment les cartons 4 à 25, qui réunissent les papiers
+          d’Armand de Caulaincourt, ses notes, sa correspondance (originaux et copies) et le manuscrit de ses mémoires. Les archives de la
+          secrétairerie impériale (AF IV) conservent les rapports de l’ambassadeur et ses notes sur la société de Saint-Pétersbourg (les « nouvelles
+          et on dit »). Les archives du ministère des Affaires étrangères sont également essentielles dans le cadre d’une étude sur la diplomatie : la
+          correspondance politique, les dossiers personnels et la comptabilité du ministère permettent de comprendre le fonctionnement de l’ambassade
+          et les moyens mis à sa disposition. Les archives des postes diplomatiques, à Nantes, complètent ces sources, avec notamment les papiers des
+          consulats français en Russie.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

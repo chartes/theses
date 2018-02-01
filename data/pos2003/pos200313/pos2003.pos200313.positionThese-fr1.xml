@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si le texte espagnol de la <hi rend="i">Historia general de las Indias</hi>(1552) de Gómara est considéré comme une source de premier
+          ordre sur la conquête du Nouveau Monde, les traductions que cette œuvre a suscitées sont encore méconnues. Pourtant, elles ont rencontré un
+          véritable succès éditorial au <num>xvi<hi rend="sup">e</hi></num>  siècle et méritent une attention approfondie : de nombreux lecteurs ont découvert
+          Gómara non pas dans sa version espagnole, mais dans ses versions italiennes, françaises ou anglaises. Cette remarque soulève deux grandes
+          questions, l’une d’ordre philologique, l’autre d’ordre historique. A travers l’exemple des traductions françaises de Martin Fumée (1568 et
+          1584) et de Guillaume Le Breton (1588), on peut tout d’abord s’interroger sur les règles de l’adaptation en français : quel est le degré de
+          fidélité de ces traductions ? Comment intègre-t-on dans la langue française des réalités aussi étrangères que celles de l’Amérique du XVI
+<hi rend="sup">e</hi>  siècle ? Par ailleurs, il faut situer ces versions dans leur contexte historique : alors que la légitimité de la
+            <hi rend="i">conquista</hi> commence à faire l’objet de vives condamnations en Europe, comment traduit-on en français une œuvre aussi
+          favorable à la conquête que celle de Gómara ? Les traducteurs eux-mêmes sont-ils influencés par l’antihispanisme de la fin du XVI <hi rend="sup">e</hi>  siècle ? Cette étude permettra ainsi de voir si les traductions ont pu alimenter l’ensemble des controverses
+          géographiques et politico-religieuses sur le Nouveau Monde ou si elles sont restées en marge de ces polémiques.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les éditions espagnoles et anversoises du texte de Gómara (1552, 1553, 1554, 1555), les éditions parisiennes de la version de Fumée (1568,
+          1569, 1577, 1580, 1584, 1587, 1605), l’édition parisienne de la traduction de Le Breton (1588) et les éditions des traductions italiennes et
+          anglaises sont les principales sources utilisées. Les imprimés français du <num>xvi<hi rend="sup">e</hi></num>  siècle sur l’Amérique ont permis de
+          reconstituer le contexte historique et éditorial. Quelques sources manuscrites sur les traducteurs sont conservées à la Bibliothèque
+          nationale de France, à la bibliothèque municipale de Tours, ainsi qu’aux Archives nationales (Minutier central des notaires et série P).
+      </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

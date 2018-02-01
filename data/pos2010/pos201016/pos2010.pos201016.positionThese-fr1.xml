@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Cerner l’impôt royal dans sa complexité et dans sa singularité, au tournant du <num>xvii<hi rend="sup">e</hi></num> siècle, permet de
+          comprendre la mutation de l’État moderne à la suite des guerres de Religion. Depuis les années 1960, l’impôt royal au <num>xvii<hi rend="sup">e</hi></num> siècle, l’économie française et les révoltes dites « populaires » ont été très bien étudiés. Pourtant, l’impôt
+          royal à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle et son évolution sous le règne d’Henri IV sont très mal connus et sont d’autant
+          plus difficiles à appréhender que les sources archivistiques sont éparses. Pour saisir le passage d’un État de justice à un État de
+          finances, étudier le contentieux fiscal semble pertinent, et ce, grâce aux archives d’une cour souveraine qui juge en appel de l’impôt royal
+          (direct ou indirect), la cour des aides. Juridiction d’exception, cette cour met en application la politique royale en matière d’imposition.
+          Créée aux alentours de 1440, la cour des aides de Normandie possède un fonds archivistique très riche et très complet qui, pourtant, reste
+          encore sous-exploité. L’étude de son contentieux fiscal permet de répondre aux questions inhérentes à l’évolution de cette fiscalité royale,
+          et ce, plus particulièrement dans le contexte de reconquête progressive de la Normandie par Henri IV à partir de 1589.</p>
+        <p>En complément d’une étude institutionnelle menée pour comprendre la richesse et la complexité des procédures décrites dans les arrêts sur
+          rapport de la cour des aides de Normandie, le contentieux fiscal sera analysé afin de percevoir la mutation des impôts royaux (taille,
+          gabelle, aides, nouvelles impositions) et de déterminer le rôle joué par la cour des aides dans la reconquête de cette province. En quoi la
+          cour des aides de Normandie a-t-elle contribué à la pacification de la province et donc, par extension, à celle du royaume de France ? Ce
+          contentieux fiscal permet également d’évaluer le système de perception et de collecte des impôts, l’intégration de la Normandie au royaume
+          de France ainsi que la contestation de cette fiscalité royale à l’aube du Grand Siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds de la cour des aides de Normandie conservé aux archives départementales de Seine-Maritime représente la plus grande partie des
+          sources consultées. Plus spécifiquement pour analyser le contentieux fiscal, les registres d’arrêts sur rapport de la Chambre du conseil ont
+          tous été dépouillés pour la période entre 1585 et 1610 (3 B 233-250). L’ensemble des procédures a été traité de manière sérielle dans une
+          base de données à l’origine de l’étude présentée. Les mémoriaux de la cour des aides ainsi que les fonds du bureau des finances de Rouen (4
+          C), de la chambre des comptes (2 B) et du parlement de Normandie (1 B) ont complété les arrêts sur rapport. De plus, d’autres fonds annexes
+          sont venus enrichir les recherches : le fonds du bureau des finances de Caen (4 C) conservé aux archives départementales du Calvados, les
+          arrêts du conseil d’État conservés aux Archives nationales (E *) ainsi que les manuscrits et autres papiers écrits aux <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles par les officiers de la cour des aides et conservés à la
+          bibliothèque municipale Villon de Rouen (collection Martainville et collection Coquebert de Montbret).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

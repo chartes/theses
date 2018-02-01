@@ -1,0 +1,95 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le nom de Gabriel Marcel renvoie immédiatement, dans la pensée des lecteurs, à la philosophie chrétienne qu’il a contribué à diffuser, et à
+          la notion d’existentialisme, reprise par Sartre avec tant de succès. Pourtant, l’auteur se considère avant tout comme dramaturge, et refuse
+          l’appellation de “ philosophe existentialiste chrétien ”. Il y a, indubitablement, une scission entre la vocation de Gabriel Marcel et la
+          réception de son œuvre. C’est cette constatation qui est à l’origine de l’étude de ses pièces : qu’ont-elles apporté au théâtre français,
+          durant la longue période de création de leur auteur (1914-1960) Quel lien existe-t-il entre théâtre et philosophie, quelle influence
+          subissent-ils l’un vis-à-vis de l’autre Enfin, comment expliquer les réactions si différentes à la lecture ­ ou, plus rarement, à la
+          représentation ­ des drames marcelliens Quand des intellectuels s’enthousiasment et considèrent Gabriel Marcel comme un précurseur, les
+          directeurs de théâtre refusent d’accueillir ses pièces. Le public est aussi divisé, et la réception de cette œuvre est extrêmement diverse.
+          L’étude du théâtre de Gabriel Marcel en lui-même, en tant qu’œuvre théâtrale, et non en tant que complément de sa philosophie, s’impose donc
+          pour résoudre ces problèmes.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cette étude est essentiellement fondée sur le dépouillement du fonds Gabriel Marcel conservé au département des manuscrits de la
+          Bibliothèque nationale de France. Il contient un grand nombre de lettres reçues par l’auteur, mais aussi des articles, des brouillons de
+          conférences et de pièces. Le fonds Henry Marcel, conservé par la même institution, livre des lettres de jeunesse écrites par Gabriel Marcel,
+          ce qui donne de plus amples précisions sur la vocation de leur auteur et son parcours intellectuel. Certains fonds de l’Institut Mémoire de
+          l’édition contemporaine (notamment les fonds Jean Paulhan, Jean Follain, Jacques Audiberti et Jean Walh) ont permis de compléter ces
+          informations, ainsi que des articles et des programmes de théâtre déposés dans le fonds Claude Des Presles, à la Société des auteurs et
+          compositeurs dramatiques. Enfin, le département des arts du spectacle de la Bibliothèque nationale de France comprend plusieurs fonds
+          composés de coupures de presse, notamment le fonds Rondel, et des recueils factices pour les périodes 1964-1969 et 1970-1975. Enfin,
+          l’activité de critique littéraire exercée par Gabriel Marcel représente une grande partie des sources imprimées, ainsi que la correspondance
+          publiée.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

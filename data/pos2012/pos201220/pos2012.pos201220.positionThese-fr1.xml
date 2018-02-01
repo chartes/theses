@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>L’idée initiale de cette étude était de se pencher sur le militantisme socialiste sous la IV<hi rend="sup">e</hi> République dans son ensemble. Mais, face à l’ampleur de la question, et après une analyse approfondie du fonds des correspondances du Parti avec ses fédérations, qui constitue la principale source, il a été décidé de restreindre le champ d’étude, ce qui semblait plus raisonnable dans le temps imparti pour ce travail de thèse. Aussi faut-il lire l’optique choisie, à savoir l’étude de la critique et de la parole militante, comme un prétexte pour étudier le militantisme, ou plutôt pour tenter d’approcher un pan de l’opinion militante socialiste de l’époque.  </p>
+    <p>Le choix de la « critique » militante comme angle d’attaque est somme toute assez logique, compte tenu des caractéristiques de la période étudiée : la IV<hi rend="sup">e</hi> République représenta à bien des égards, jusqu’à aujourd’hui d’ailleurs, une plaie dans la conscience de la gauche française, car elle fut perçue comme le symbole des occasions manquées, des compromissions et des erreurs d’appréciation du socialisme de gouvernement. Il est donc normal de privilégier les critiques, la remise en cause dans les témoignages militants utilisables.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>L’état des sources est rapide, dans la mesure où ce travail s’appuie sur des sources assez restreintes, avec un seul fonds d’archives occupant une place quasi exclusive, à savoir le fonds des correspondances du Parti socialiste SFIO avec ses fédérations, tout au long de la période 1944-1958. Pour élargir un peu plus le corpus, a été également utilisé le fonds des Indisciplines parlementaires, portant sur la même période, mais seulement pour enrichir l’analyse : seules les lettres du premier fonds ont été éditées. Ces deux fonds appartiennent au même ensemble, à savoir les archives du Parti socialiste SFIO, de la Libération à la disparition du PS SFIO et à son intégration dans le nouveau Parti socialiste (1944-1969).  </p>
+    <p>Plus compliquée fut en revanche la délimitation du corpus. Le choix d’éditer le corpus rendait impossible d’embrasser un spectre trop large. Par ailleurs, une multitude d’aspects de la vie partisane est évoquée dans le fonds des correspondances fédérales : il constitue à ce titre une sorte de tableau de l’organisation interne, dans la mesure où les destinataires et les rédacteurs appartiennent à tous les « échelons » de l’organigramme du Parti, depuis le « militant de base » jusqu’au député. On peut déceler deux grands thèmes présents dans les correspondances active (du secrétariat vers les fédérations) et passive (des fédérations vers le secrétariat) : discipline interne d’un côté, propagande et organisation interne de l’autre ; il faudrait sans doute ajouter une catégorie « divers », où l’on regrouperait l’ensemble des lettres plus exceptionnelles. La difficulté principale fut donc de déterminer quelle catégorie appréhender pour obtenir un échantillon à la fois cohérent, représentatif et de taille raisonnable. Le choix a été fait de s’en tenir à une série de critères pour éliminer d’office un certain nombre de lettres. Ont été exclues : 1°. la correspondance active du secrétariat vers les fédérations, l’étude cherchant plutôt à refléter l’opinion militante qui « remonte » à la surface, et pas le processus inverse ; 2°. les lettres appartenant à la catégorie « propagande et organisation interne », qui contenaient des informations sur le fonctionnement et l’organisation administrative ; 3°. les lettres ne s’intéressant qu’à un problème purement local, par exemple un conflit intra fédéral entre un secrétaire fédéral et des adversaires – il ne s’agit pas ici de faire de l’histoire régionale, mais plutôt d’utiliser des points de vue locaux pour dresser un tableau d’ensemble de la situation nationale à un moment donné – ; 4°. les lettres présentant des difficultés d’identification – non signée, sans indication sur le rédacteur ou sur celui qui transmet sa lettre.  </p>
+    <p>À l’inverse, ont été privilégiées les lettres appartenant à la catégorie générale « discipline interne », et plus précisément celles qui reflétaient la critique militante, c’est-à-dire la remise en cause d’une décision, de la ligne politique du Parti, de l’action de ses ministres, et plus largement les lettres se faisant le reflet d’un mécontentement. Au total, ce corpus comprend 458 lettres, réparties inégalement selon les fédérations, et représente environ 5 % de l’ensemble des correspondances. Autant dire qu’en termes purement quantitatifs, il paraît difficile d’affirmer que le corpus puisse résumer ou condenser l’ensemble du fonds. En revanche, si l’on ne s’intéresse qu’à l’expression de l’opinion militante, sans prendre en compte les aspects purement administratifs de fonctionnement du Parti, la masse d’archives concernée se trouve considérablement réduite, et la part du corpus considérablement augmentée.  </p>
+    <p>L’enjeu principal de la définition du corpus consistait à créer un ensemble cohérent, où les différences nécessaires entre les divers départements ne devaient pas masquer une série de caractéristiques communes. D’où le choix de ne se pencher finalement que sur les remises en cause à contenu « politique », plus à même de créer un ensemble uniforme et exploitable dans le cadre de cette étude. De fait, le choix arbitraire d’un corpus conduit évidemment à des impasses, à des frustrations liées au choix de privilégier la cohérence à l’exhaustivité.  </p>
+    <p>Il est également important de rappeler que la prise de position est biaisée, dans la mesure où l’on ne donne à voir que les critiques négatives, et pas les approbations. D’autre part, on ne prendra que très peu en compte ici les spécificités locales. Si des éléments locaux, des particularismes apparaissent nécessairement au cours de cette étude, ils ne constituent pas pour autant le cœur de la réflexion, puisqu’on choisit les lettres donnant à voir les appréciations des décisions et actes du Parti dans son ensemble.  </p>
+    <p>Des sources imprimées diverses ont permis de replacer les lettres étudiées dans un contexte politique et partisan précis. Ce fut le cas des comptes rendus des tournées des délégués généraux, envoyés par le Parti dans les différentes fédérations, ou encore du Bulletin intérieur du Parti, sorte de Journal officiel du Parti, en théorie mensuel, où étaient récapitulées les orientations politiques du Parti. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

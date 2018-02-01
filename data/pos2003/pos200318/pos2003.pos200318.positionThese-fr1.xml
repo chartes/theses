@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Malgré une carrière honorable au service des Réformés puis d’Henri IV et de Louis XIII, Benjamin Aubery, seigneur du Maurier, reste un
+          inconnu. Pourtant, ce protestant, fils d’un paysan aisé du Maine, connut une ascension sociale remarquable qui lui permit d’acquérir la
+          noblesse, puis de devenir ambassadeur du roi aux Provinces-Unies et conseiller d’Etat. Il était donc intéressant d’étudier, par le biais de
+          la carrière politique et diplomatique de Benjamin Aubery, les mécanismes de la faveur et de la réussite à la Cour du roi, à l’aube du Grand
+          Siècle. Mais, pour comprendre les motivations des actes du courtisan et de l’ambassadeur, il était nécessaire de tracer le portrait d’un
+          homme profondément marqué par la théologie calviniste et les troubles de Religion, qui sut concilier l’obéissance à Dieu et le service du
+          Roi, puis tenta de transmettre ces valeurs capitales à ses enfants.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources concernant la vie, la carrière et la personnalité de Benjamin Aubery sont nombreuses. Sur le plan professionnel, les dépêches
+          diplomatiques de son ambassade à La Haye, de 1613 à 1624, sont conservées en quasi totalité au département des manuscrits occidentaux de la
+          Bibliothèque nationale de France (fr. 15955-15959). Sur le plan personnel, les Mémoires inédits de Benjamin Aubery, conservés à la
+          Médiathèque de Poitiers, se sont révélés une source exceptionnelle, par les informations qu’ils fournissent et en raison du sens du récit et
+          de la sensibilité de l’auteur. De nombreuses séries des Archives nationales ont été dépouillées avec profit : sous-séries R <hi rend="sup">2</hi> (papiers des ducs de Bouillon) et 120 AP (papiers de Sully), Minutier central (en particulier études XLI, XLIX et LXXIII),
+          archives du Conseil privé (V<hi rend="sup">6</hi> ) et du Parlement (X<hi rend="sup">1A</hi> ). A la Bibliothèque nationale de France, le
+          Cabinet des titres et les nombreuses correspondances littéraires et diplomatiques impliquant ou concernant Benjamin Aubery ont apporté de
+          nombreuses informations. Les archives du ministère des affaires étrangères, à Paris, et de l’Algemeen Rijksarchief, à La Haye, ont permis de
+          compléter les dépêches diplomatiques de Benjamin Aubery. Il faut enfin y ajouter les ressources des archives départementales de la Sarthe,
+          du Maine-et-Loire et de la Vienne.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

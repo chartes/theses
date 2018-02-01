@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le Comité des travaux historiques et scientifiques est créé en 1834 par François Guizot, sous le nom de Comité pour la recherche et la
+          publication des documents inédits relatifs à l’histoire de France. Initialement à forte connotation historique, le champ des recherches
+          qu’il mène grâce à ses membres et à un réseau étendu de deux cents correspondants, tous membres de sociétés savantes, s’élargit rapidement:
+          l’archéologie, les sciences, l’économie et la sociologie entrent dans ses attributions au cours du siècle. Sous le Second Empire, puis sous
+          la Troisième République, il coordonne des expéditions et des recherches au Mexique, en Tunisie et en Indochine. En outre, il a la
+          responsabilité de nombreuses publications, fruit de ce travail obstiné. En tant que Comité des société savantes, il est surtout le principal
+          organisme d’incitation à la recherche en France durant quatre-vingt années de progrès scientifiques impressionnants.</p>
+        <p>Son importance et sa pérennité, il les doit aux divers gouvernements qui se sont succédés en France. Chacun, d’une manière différente, a
+          utilisé le Comité. Tous les régimes, à des degrés différents, ont tenté de contrôler le dynamisme des sociétés savantes, qui sont autant
+          d’électrons libres échappant à l’administration centrale. En outre, ces nouveaux régimes, monarchie de Juillet, Seconde République, Second
+          Empire, Troisième République, se sont d’autant plus intéressés au Comité et à son discours historique qu’ils étaient établis depuis peu et
+          qu’ils étaient vivement contestés. Au cours du <num>xix<hi rend="sup">e</hi></num> siècle, l’intervention de l’État dans le domaine scientifique
+          oscille constamment entre contrôle et incitation. Il ne peut se résoudre à renoncer à surveiller les sociétés savantes alors qu’il
+          intervient de plus en plus dans tous les domaines, mais il n’a pas intérêt non plus à rendre stérile le zèle des chercheurs «amateurs»,
+          principaux animateurs de la science, en les accablant sous un poids trop lourd. À la fois organe administratif et porte-parole des
+          «érudits», cénacle parisien et héraut des chercheurs de province, le Comité est l’observatoire idéal pour saisir l’intervention de l’État
+          dans le domaine scientifique au <num>xix<hi rend="sup">e</hi></num> siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds du Comité des travaux historiques et scientifiques est conservé dans la sous-série F<hi rend="sup">17</hi> (ministère de
+          l’Instruction publique) des Archives nationales. Constituées surtout de dessins, d’estampages, de communications de correspondants, de
+          procès-verbaux des séances du Comité, les archives ont été versées une première fois en 1937 par la bibliothèque Mazarine, où elles se
+          trouvaient depuis 1879, avant que la direction des bibliothèques de France n’effectue un second versement de 1969 à 1972. Le dépouillement
+          de cet ensemble très important de deux cents cartons a été utilement complété par la consultation de sources imprimées, notamment des textes
+          réglementaires et surtout des publications du Comité (ses bulletins et, dans une moindre mesure, les ouvrages scientifiques dont il a
+          suscité l’édition). De manière ponctuelle, certains lacunes ont pu être compensées par le recours aux archives du Laboratoire des reptiles
+          et amphibiens du Muséum national d’histoire naturelle et aux collections iconographiques des bibliothèques de l’Institut et de l’École
+          française d’Extrême-Orient.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

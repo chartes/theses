@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Dans une perspective d’analyse typologique, le présent travail vise à caractériser et à comparer la production diplomatique de sept
+          souverains européens du <num>xii</num>
+<hi rend="sup">e</hi> siècle : le pape, l’empereur, les rois de France, d’Angleterre, de Castille-León, d’Aragon et de Bohême. S’appuyant
+          sur quelque 300 chartes conservées sous forme d’originaux, il passe au crible d’un examen rigoureux leurs caractères externes et fait
+          l’analyse des écritures, des éléments figurés (chrismon, monogramme et autres signes de validation) et de la mise en page du discours
+          diplomatique.</p>
+        <p>Puisqu’il s’agit d’écritures, il convenait d’illustrer l’étude paléographique de manière complète. Aujourd’hui, la technologie numérique
+          permet de traiter les formes graphiques de bien meilleure façon qu’autrefois : ce travail s’appuie sur les derniers développements
+          techniques en usage. Les actes ont été soigneusement documentés grâce à plus de 6 000 photographies numériques, prélevées tantôt directement
+          sur les chartes elles-mêmes, dans les services d’archives, tantôt sur des recueils de fac-similés. Plus de 150 illustrations sont intégrées
+          dans l’exposé afin d’éclairer les divers objets d’étude paléographique.</p>
+        <p>Cependant, l’étude de la structure visuelle de l’acte souverain n’aurait pas de sens sans une prise en compte du contexte de sa
+          production. Une présentation par pays offre l’état actuel des connaissances sur les chancelleries et leur personnel dans ce <num>xii</num>
+<hi rend="sup">e</hi> siècle où les états européens sont encore à l’orée de leur développement institutionnel.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le corpus est composé de 305 actes numérisés à partir de fac-similés ou d’actes originaux. La papauté est représentée par 44 bulles,
+          conservées surtout dans la série L des Archives nationales, à Paris, mais aussi aux archives départementales de l’Oise. 34 diplômes tirés
+          surtout de la collection de fac-similés <hi rend="i">Kaiserurkunden in Abbildungen</hi> de Sickel et Sybel illustrent la production de la
+          chancellerie impériale. Les diplômes au nom du roi de France sont au nombre de 68 ; la plupart proviennent de la série K des Archives
+          nationales ; d’autres ont été numérisés dans les <hi rend="i">Fac-similés à l’usage de l’École des chartes</hi> et dans le recueil <hi rend="i">Musée des archives départementales</hi>. Les 52 pièces du dossier anglais sont tirées des archives des cathédrales de Canterbury,
+          Salisbury et Exeter et de recueils de fac-similés : <hi rend="i">Facsimiles of Royal and Other Charters in the British Museum</hi>, <hi rend="i">The Palæographical Society</hi> et <hi rend="i">The New Palæographical Society</hi>, enfin le <hi rend="i">Recueil des actes de
+            Henri II</hi>. <num>L</num>a plupart des 43 actes retenus pour le royaume de Castille-León sont conservés dans trois dépôts espagnols :
+          l’Archivo histórico nacional, à Madrid (fonds <hi rend="i">Sellos</hi> et <hi rend="i">Clero</hi>), les archives de la cathédrale de León et
+          les archives de la basilique de Saint-Isidore de la même ville. Pour l’Aragon, les 29 pièces du dossier sont issues de l’Archivo histórico
+          nacional et de l’Archivo de la Corona de Aragón, à Barcelone. Enfin, le royaume de Bohême est représenté par 35 documents de provenance
+          diverse : les Archives centrales de l’Etat à Prague, le Musée des archives de Prague, les Archives régionales de Plzeň, ainsi que le recueil
+            <hi rend="i">Acta Regum Bohemiae</hi>.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

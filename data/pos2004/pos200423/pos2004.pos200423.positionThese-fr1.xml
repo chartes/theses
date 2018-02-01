@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’administration d’Alsace-Lorraine constitue un exemple significatif d’institution administrative née des besoins de la Grande Guerre. Dès
+          1914 se pose cette question centrale : comment réintroduire une culture et des usages français dans une province qui, pendant un
+          demi-siècle, a évolué dans un cadre politique et juridique différent ? L’histoire des services administratifs d’Alsace-Lorraine représente
+          une tranche d’histoire alsacienne et lorraine à un moment où le destin national de cette région d’Europe n’est pas arrêté. Elle offre un
+          observatoire privilégié pour l’étude de la question d’Alsace-Lorraine et du point de vue français sur cette question. Il convient par
+          ailleurs de retracer la genèse et l’organisation de cette administration, pour mettre en valeur les hommes et les références idéologiques
+          dans lesquelles s’inscrit leur action, mais également la perception qu’en ont ses administrés alsaciens-lorrains ainsi que l’opinion
+          française. Les institutions mises en place à partir de 1914 ont-elles réalisé la mission qui leur a été impartie : mener à bien la
+          réintégration des provinces perdues ? Déterminer la responsabilité des hommes, des structures, des événements et des idées permet
+          d’apprécier la part des erreurs administratives dans la montée du malaise alsacien au printemps 1919.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’une des particularités du sujet tient à la très grande dispersion des sources se rapportant aux différentes administrations
+          d’Alsace-Lorraine. Cette dispersion n’est elle-même que le reflet du caractère “ exubérant ” et transitoire de l’organisation administrative
+          mise en place durant la guerre et au lendemain de l’Armistice. Le fonds AJ<hi rend="sup">30</hi> (Administration de l’Alsace-Lorraine)
+          conservé au Centre historique des Archives nationales constitue le principal fonds documentaire pour cette étude. Les fonds conservés aux
+          Archives départementales du Bas-Rhin, du Haut-Rhin et de la Moselle en constituent le complément essentiel. Il s’agit des fonds des trois
+          Commissariats de la République (Strasbourg, Colmar et Metz), et en particulier de la série 121 AL des Archives du Bas-Rhin (Commissariat
+          général de la République). Les Archives du ministère des Affaires étrangères ont par ailleurs fourni d’appréciables compléments
+          d’informations, notamment la série Z (sous-série Alsace-Lorraine), tout comme le Service historique de l’Armée de Terre. Les séries
+          administratives des Archives municipales de Strasbourg, Metz, Colmar et Mulhouse ont été mises à contribution, apportant un éclairage local
+          sur la question, de même que les archives de la Société industrielle de Mulhouse conservées au Centre d’études rhénan d’archives
+          économiques. La consultation de fonds privés (fonds Millerand, Jeanneney, Wetterlé, Peirotes) a permis d’offrir le regard particulier d’un
+          acteur, un point de vue plus personnel et engagé que celui du fonctionnaire. Enfin, les publications des services d’Alsace-Lorraine, la
+          presse d’opinion contemporaine des événements, ainsi que divers ouvrages anciens à caractère de source ont été exploités.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

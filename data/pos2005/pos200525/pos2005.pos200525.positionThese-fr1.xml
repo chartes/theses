@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Au <num>xviii<hi rend="sup">e</hi></num> siècle, l’Opéra est à tous points de vue le premier des théâtres français. Érigé depuis sa création, le 28
+          juin 1669, en académie, il jouit du monopole des représentations en musique, privilège immense qui écrase tous ses rivaux. Il emploie un
+          personnel très nombreux, met en jeu des sommes considérables et bénéficie de l’immense ferveur du public. En réalité, cette apparente
+          puissance ne saurait faire illusion et l’envers du décor dissimule une institution en lutte pour surmonter d’incessantes difficultés
+          administratives et financières. Aussi apparaissait-il intéressant de retracer l’histoire de l’Académie royale de musique entre 1749 et 1790,
+          afin de comprendre notamment les raisons de la longévité d’une institution qui, en dépit de nombreux problèmes structurels, a réussi à se
+          maintenir et, mieux encore, à constituer un foyer de création musicale de premier ordre.</p>
+        <p>Dans l’histoire administrative de l’Académie royale de musique, l’année 1749 représente une véritable rupture. Pour la première fois
+          depuis la création de l’institution, le roi décide de confier son privilège non plus à un simple particulier, mais aux « sieurs prévôt des
+          marchands et échevins de la ville de Paris », c’est-à-dire à un corps public. Ce qui aurait dû être un honneur se transforme vite en une
+          charge insoutenable. Aussi, devant la situation financière catastrophique de l’Académie royale de musique, le roi décide-t-il, par arrêt de
+          son Conseil du 17 mars 1780, de la placer sous son autorité directe et de la faire diriger collégialement par un Comité composé d’un
+          directeur général et d’une partie du personnel artistique. La boucle est bouclée le 1<hi rend="sup">er</hi> avril 1790, lorsque, dans le
+          contexte politique difficile des débuts de la Révolution, la gestion de l’institution est à nouveau confiée au Bureau de la municipalité de
+          Paris.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Lacunaires et dispersées, et cependant d’une diversité et d’une richesse extraordinaires, permettant en grande partie de retracer
+          l’histoire de l’institution, telles sont les caractéristiques des archives administratives de l’Académie royale de musique. Ces dernières
+          sont scindées en deux ensembles, distincts aussi bien par leur nature que par leur lieu de conservation : les feuillets et les liasses
+          constituent la sous-série AJ<hi rend="sup">13</hi> des Archives nationales, tandis que les documents reliés et une grande partie de la
+          correspondance des artistes avec la direction de l’Opéra se trouvent à la Bibliothèque-musée de l’Opéra. Ces archives fournissent une mine
+          de renseignements sur l’histoire de l’Académie royale de musique sous les angles les plus divers. Cependant, à la différence de la
+          Comédie-Française où une gestion continue a permis la conservation remarquable de la quasi intégralité des documents relatifs au théâtre
+          depuis le <num>xvii<hi rend="sup">e</hi></num> siècle, qui constituent pour le chercheur un ensemble tout à fait exceptionnel, les archives de
+          l’Académie royale de musique ont subi les vicissitudes de l’histoire de l’institution et sont par certains aspects lacunaires et
+          insuffisantes. Fort heureusement, d’autres fonds conservés aux Archives nationales suppléent ces lacunes : il s’agit principalement de la
+          série O<hi rend="sup">1</hi>, qui concerne la Maison du roi et rassemble toutes les archives privées de la couronne, et, dans un moindre
+          mesure, de la série AJ<hi rend="sup">37</hi>, constituée par le fonds du Conservatoire, ainsi que de la sous-série H<hi rend="sup">2</hi>,
+          rassemblant une partie des documents produits par le Bureau de la ville de Paris.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

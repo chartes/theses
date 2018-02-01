@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Certaines époques ont été plus propices que d’autres aux rencontres et aux échanges entre l’Asie et l’Europe ; les XIII <hi rend="sup">e</hi> et <num>xiv<hi rend="sup">e</hi></num>  siècles en font partie. En l’espace d’environ cent cinquante ans, quelques voyageurs isolés, ou en
+          petits groupes, marchands ou missionnaires, s’élancent à la découverte de l’Est inconnu, à la recherche de ces merveilles et ces richesses
+          dont ils ont entendu parler. Jordan Catala de Sévérac fait partie de ces voyageurs-explorateurs, de ces missionnaires envoyés par une
+          papauté soucieuse de répondre à son devoir d’évangélisation du monde.</p>
+        <p>Lié à des circonstances particulières et malheureuses, le martyre de ses quatre compagnons, son séjour en Inde fait de lui le premier
+          missionnaire occidental de ce sous-continent, à une époque où ses contemporains s’intéressent plutôt à la Chine. Il devient aussi le premier
+          évêque latin de l’Inde, en obtenant la création, en sa faveur, par Jean XXII de l’évêché de Quilon. C’est lors de ce séjour auprès de la
+          cour pontificale qu’il rédige ses <hi rend="i">Mirabilia descripta</hi>, où il expose toutes les merveilles qu’il a découvertes en Orient. Ce
+          texte relativement court n’en renferme pas moins quantité de notations précises sur la faune, la flore, les mœurs des Indiens, etc. Le titre
+          donné à son récit invite à étudier plus particulièrement la question des merveilles du monde et leur vogue au Moyen Age.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La principale source de cette étude est constituée par le manuscrit du texte des <hi rend="i">Mirabilia descripta</hi>, dont il est donné
+          une édition complète et une traduction en français. Le manuscrit, aujourd’hui conservé à la British Library, à Londres (ms. Additional
+          19513), est unique. Il s’agit d’un recueil de textes présentant un intérêt géographique et dont les différentes pièces, sept au total, ont
+          été copiées dans un même environnement, le sud-est de la France, et à un même moment, vers 1330-1340.</p>
+        <p>Jordan Catala a également laissé une lettre envoyée le 12 octobre 1321 du golfe de Cambaye, en Inde, éditée en annexe d’après deux
+          manuscrits (Paris, Bibl. nat. de Fr., lat. 5006 ; Londres, Br. Libr., Cotton Nero A IX) et d’après l’édition donnée par G. Golubovich d’un
+          troisième manuscrit (Assise, ms. 431). Afin de dresser le tableau le plus complet possible de l’activité de ce missionnaire, ont été aussi
+          consultées les sources pontificales éditées. Enfin, le texte de Jordan a été confronté aux récits d’autres voyageurs contemporains, afin
+          notamment de déterminer son éventuelle originalité.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

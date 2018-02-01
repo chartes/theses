@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’éditeur Georges Charpentier est principalement connu pour son amitié avec Émile Zola et pour son rôle « d’éditeur des Naturalistes ». Il
+          passe néanmoins pour avoir été davantage passionné par les toiles de ses amis impressionnistes que par le bon fonctionnement de sa maison
+          d’édition. On connaît surtout deux moments de sa période d’activité : les débuts dans les années 1870, avec les premiers grands succès de
+          Zola et la constitution d’une « écurie naturaliste » ; le retrait des affaires en 1896, après l’introduction de Charles Marpon et d’Ernest
+          Flammarion dans le capital de la maison en 1883 et l’association avec Eugène Fasquelle en 1890. Hormis ces deux phases et l’image de doux
+          rêveur généreux mais peu doué en affaires, le personnage est relativement mal connu, de même que sa production éditoriale.</p>
+        <p>Il est donc nécessaire d’étudier plus en détails sa maison d’édition et sa personnalité, en allant au-delà du « mythe » construit par les
+          Naturalistes, dont la postérité s’est souvent contentée. Cette réflexion s’inscrit dans une démarche comparative, puisqu’il faut comprendre
+          ce qui fait la différence entre les éditeurs qui réussissent à constituer des fortunes importantes et des dynasties solides, et ceux qui se
+          contentent d’une place plus modeste. Étudier la production éditoriale de la maison et les relations de Georges Charpentier avec ses auteurs
+          signifie confronter la réalité d’un catalogue reconstitué avec les différents regards des acteurs contemporains du champ littéraire. De
+          cette façon, il s’agit de réfléchir sur le phénomène de construction d’un discours autour de la figure de l’éditeur.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Pour reconstituer le catalogue de la maison Charpentier entre 1871 et 1896, il était utile de rassembler l’ensemble des informations
+          disponibles dans une base de données permettant un traitement statistique aisé. Les données ont été collectées grâce aux catalogues
+          commerciaux conservés dans le fonds Q<hi rend="sup">10</hi> de la Bibliothèque nationale de France, à la <hi rend="i">Bibliographie de la
+            France</hi>, au <hi rend="i">Catalogue général de la librairie</hi> d’Otto Lorenz, et au Catalogue collectif de France.</p>
+        <p>De plus, pour prendre la mesure des relations entre Georges Charpentier et ses auteurs, il convenait de rassembler un large corpus de
+          correspondance, ce qui a été réalisé dans trois directions : les lettres autographes conservées par les Éditions Grasset-Fasquelle, les
+          correspondances déjà éditées (Zola, Flaubert, Goncourt, Maupassant, Huysmans, etc.), et les sources manuscrites, lettres ou contrats,
+          conservées dans plusieurs bibliothèques patrimoniales parisiennes comme celles de l’Institut, de l’Arsenal ou le département des manuscrits
+          de la Bibliothèque nationale de France. Les souvenirs des contemporains et la presse ont également été abondamment consultés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

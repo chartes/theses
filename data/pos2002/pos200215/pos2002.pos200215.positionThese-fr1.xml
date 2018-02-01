@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La mémoire collective continue d’oublier l’histoire industrielle de Paris au profit de celle de son artisanat. Mais en tant que premier
+          centre de consommation français, la ville de Paris, formidable concentration financière et bassin de main d’œuvre situé au cœur d’un réseau
+          de transport fluvial, routier et ferroviaire, a joué un rôle primordial dans l’histoire du développement de l’industrie en France. Pour
+          tenter de mieux comprendre ce rôle, les raisons pour lesquelles les usines viennent s’installer dans la capitale, puis la quittent à un
+          moment de leur développement, cette étude s’est donné pour objet la présence de l’usine dans la ville : chercher à mieux cerner les rapports
+          entre industrialisation et urbanisation dans les faubourgs de Paris rattachés à la capitale en 1860. Cet espace passe en moins d’un siècle
+          d’un état entièrement rural à un état entièrement urbanisé et intégré à la capitale. Aux marges de l’histoire industrielle de Paris, on
+          cherchera à comprendre le déséquilibre industriel de la capitale, en s’intéressant à cette partie de la ville devenue au cours du XIX <hi rend="sup">e</hi> siècle la vitrine de la ville Lumière : l’Ouest, délimité par la boucle de la Seine au sud et la butte Montmartre au
+          nord, entre les Champs-Élysées et le Bois de Boulogne. Des études de cas, replacées dans leur territoire, ont servi de base à l’étude de
+          certains quartiers : le <num>xvi<hi rend="sup">e</hi></num> arrondissement le long de la Seine, les Ternes et les Batignolles.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’histoire de l’industrie en milieu urbain requiert d’avoir recours à des sources variées. Les archives renseignant directement sur la vie
+          des entreprises rarement conservées : elles n’ont été retrouvées que pour les établissements Gouin, au Centre des archives du monde du
+          travail à Roubaix, et la maison Fichet, ainsi que pour les anciennes compagnies gazières et électriques, conservées par EDF-GDF. La seule
+          réglementation concernant l’industrie porte sur le classement des établissements insalubres et sur la surveillance des appareils à vapeur ;
+          pour Paris, ces sources précieuses ne subsistent que de façon très fragmentaire, aux archives de la Préfecture, dans la série DA. En
+          revanche, les sources imprimées sont assez abondantes : rapports du conseil et des comités de salubrité, littérature technique sur des
+          branches d’industrie, mémoires en tout genre, catalogues de sociétés ; elles sont conservées principalement à la Bibliothèque nationale de
+          France. <lb/>L’étude doit donc s’appuyer sur les sources de l’histoire urbaine, les plans et surtout sur les documents produits par
+          l’administration fiscale, en particulier les calepins de révision du cadastre, conservés dans la série D1P4 des Archives de Paris. Enfin,
+          les archives notariales au minutier central des Archives nationales, quand les actes peuvent être retrouvés, fournissent des renseignements
+          très utiles pour approfondir la connaissance des sites industriels.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,102 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le titre de <hi rend="i">procurator</hi> désigne, à la curie pontificale, l’homme qui, exceptionnellement ou régulièrement, agit auprès
+          des différents services de l’administration centrale du Saint-Siège, au nom d’un client qui lui en a donné procuration, tant à cause de
+          l’éloignement géographique que de la complexité des affaires à traiter. Même si le procureur n’est pas à proprement parler un agent de
+          l’administration pontificale, il ne s’en différencie pas de beaucoup, puisque son office est étroitement réglementé par le pape. La fonction
+          de procureur est tantôt exercée comme une charge à part entière par des professionnels, bon connaisseurs des rouages de l’administration
+          pontificale, tantôt de manière exceptionnelle et temporaire par des hommes envoyés spécialement auprès du Saint-Siège pour une mission
+          précise ou par des agents de la curie elle-même mis à contribution, plus ou moins fréquemment, pour représenter un personnage empêché.</p>
+        <p>La majorité des travaux qui concerne l’histoire des procureurs auprès du Saint-Siège s’intéresse aux procureurs <hi rend="i">ad
+            impetrandum</hi> de la Chancellerie, dont le nom apparaît au dos des bulles pontificales originales, conformément aux prescriptions
+          curiales qui enjoignent à de tels mandataires d’indiquer leur identité au verso de la lettre qu’ils sont chargés d’obtenir pour leur client,
+          mais néglige souvent le rôle que peuvent jouer de semblables intermédiaires dans d’autres institutions du gouvernement pontifical, notamment
+          à la Chambre apostolique. Les procureurs actifs dans cette dernière institution méritent pourtant d’être étudiés de près, notamment à
+          l’époque de la papauté d’Avignon, puisque l’on dispose pour cette période d’une très belle série de registres qui signale indirectement
+          leurs interventions. L’état général des sources invite alors à privilégier les pontificats d’Urbain V et de Grégoire XI.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Deux sources permettent d’étudier la fonction de procureur : d’une part, les textes normatifs émanés du Saint-Siège, édités depuis plus
+          d’un siècle, qui font connaître les devoirs attachés à la charge de procureur et les dérèglements de la profession ; d’autre part, les
+          mandats de procuration, tels qu’en renferme en assez grand nombre le fonds quelque peu disparate des <hi rend="i">Instrumenta
+            miscellanea</hi> des archives Vaticanes, qui révèlent la nature exacte des pouvoirs habituellement concédés à des procureurs et l’identité
+          des hommes qui sont délégués par un mandant auprès du Saint-Siège pour une affaire déterminée.</p>
+        <p>L’étude des procureurs à la Chambre passe par la consultation des archives très riches de cette institution, notamment les registres des
+            <hi rend="i">Obligationes-Solutiones</hi>, également conservés aux archives Vaticanes, qui consignent les actes d’obligations et de
+          quittances relatifs à l’imposition des communs et menus services ainsi qu’aux visites <hi rend="i">ad limina</hi>. Ces livres sont une
+          source de première importance pour recenser les procureurs qui reçoivent pouvoir de prendre en charge des affaires de nature fiscale.
+          D’autre part, comme ces individus peuvent par ailleurs intervenir à la Chancellerie, il convient de prendre en compte les mentions dorsales
+          de bulles pontificales originales, dispersées dans de très nombreuses institutions de conservation. Enfin, les registres de la Chancellerie
+          pontificale, facilement accessibles par les publications papier et informatique de l’École française de Rome, permettent de retrouver
+          d’autres traces d’interventions de ces individus comme mandataires à la curie, et de retracer en partie leur biographie.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

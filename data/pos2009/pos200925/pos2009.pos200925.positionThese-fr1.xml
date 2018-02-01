@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Il semble inévitable, avant d’entreprendre une étude de type biographique, de réfléchir à cette manière d’écrire l’histoire, et les
+          dangers qu’elle comporte : tentation de surestimer l’importance du personnage étudié, de céder au romanesque lorsque les sources se font
+          rares, de chercher à reconstituer à tout prix un individu cohérent au parcours linéaire, pour ne citer que les principaux risques. Pour
+          autant, la biographie historique est un exercice des plus utiles, ne serait-ce que pour fournir un éclairage, si subjectif soit-il, sur une
+          période, un lieu, une société mal connue par ailleurs. Dans le cas présent, il s’agit d’un groupe socio-professionnel qui n’existe pas
+          encore : celui des gens de théâtre, trop peu documentés en ce début de <num>xvi</num>
+<hi rend="sup">e</hi> siècle pour fournir matière à une étude prosopographique.  </p>
+        <p>Pierre Gringore, dont la connaissance par le grand public est liée aujourd’hui bien plus au poète en guenilles imaginé par V. Hugo qu’à sa
+          propre carrière, semble avoir intéressé d’avantage les littéraires que les historiens. Ses œuvres ont fait l’objet de nombreuses éditions
+          scientifiques, depuis la tentative avortée d’œuvres complètes par H. de Montaiglon et J. de Rothschild, jusqu’aux récents travaux de C. J.
+          Brown. Nulle tentative en revanche de reconstitution globale de sa carrière n’a été entreprise depuis la thèse de C. Oulmont au début du
+          siècle dernier. Bien plus, il fait figure de grand absent dans les dictionnaires et les encyclopédies, qui ne savent pas trop à quelle
+          période – Moyen Âge, Renaissance – ni à quelle discipline – histoire, littérature – le rattacher.</p>
+        <p>Il convient donc de reprendre l’ensemble de la carrière de Pierre Gringore, témoignage précieux sur les conditions matérielles d’existence
+          d’un homme de plume, à la fois poète et entrepreneur de spectacles, et sur les modalités de diffusion de ses textes, dans la civilisation du
+          livre imprimé qui vient de naître.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Comme pour toute biographie, les sources archivistiques sont nombreuses, éparpillées au fil des pérégrinations du sujet, et certainement
+          peu exhaustives. Sur les origines normandes de Gringore, ont été consultés prioritairement les papiers du duché d’Harcourt – comptes
+          seigneuriaux et registres du tabellionage de Thury –, conservés aux archives départementales du Calvados. Les sources relatives à la minière
+          de Beaumont, étudiées par M. Arnoux, documentent une juridiction minière au sein de laquelle des ancêtres de Gringore ont joué un rôle
+          important. De façon plus anecdotique, des mentions concernant la famille Gringore ou d’autres groupes familiaux aux activités comparables
+          ont pu être relevées dans les registres de matricules de l’université de Caen, le Manuel de l’Échiquier (archives départementales de
+          Seine-Maritime), les rôles de fouages (Bibliothèque nationale de France).</p>
+        <p>Pour la période parisienne, les archives du Bureau de la Ville constituent la source principale, comprenant les registres des
+          délibérations, édités par F. Bonnardot, et les comptes, pour lesquels on ne dispose plus que des copies réalisées par Sauval et Moreau.</p>
+        <p>Pour la période lorraine enfin, les archives de la chambre des Comptes de Lorraine, conservées aux archives départementales de
+          Meurthe-et-Moselle, fournissent à la fois les lettres patentes de nomination des hérauts d’armes du duc Antoine, parmi lesquels Pierre
+          Gringore, mais également les comptes du Trésor pour les années 1518-1538, dates extrêmes de son activité en Lorraine. Enfin, ultime source
+          utilisée, le tabellionage de Lorraine contient son testament.</p>
+        <p>À ces sources archivistiques s’ajoutent les sources narratives, qui constituent autant de témoignages ponctuels sur les événements auxquels
+          a participé Gringore. Pour la période parisienne, les entrées royales et princières ont laissé des traces dans les mémoires et chroniques
+          des contemporains, et, de surcroît, ont souvent fait l’objet de relations particulières, imprimées ou manuscrites. Pour la période lorraine
+          ont été consultés les chroniqueurs – Nicolas Volcyr, Edmond du Boullay –, pour leurs témoignages sur la vie à la cour du duc Antoine et les
+          récits des événements auxquels Gringore prit part.</p>
+        <p>Enfin, l’œuvre de Gringore constitue sans aucun doute la source la plus abondante. Deux cent quarante-deux exemplaires ont été localisés
+          dans les bibliothèques publiques, en France et dans le monde, répartis entre cent quarante-quatre éditions et sept manuscrits, pour les
+          vingt-cinq œuvres dont l’attribution à Gringore ne fait aucun doute. Ils offrent accès aux textes de Gringore et permettent de mesurer leur
+          diffusion.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

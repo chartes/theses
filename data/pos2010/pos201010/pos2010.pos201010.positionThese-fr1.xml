@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La ville de Tournai représente à la fin du Moyen Âge le point le plus septentrional du royaume de France. Enclavée en territoires
+          bourguignons, elle constitue au <num>xv<hi rend="sup">e</hi></num> siècle une exception et se pose en élément stratégique pour la politique
+          royale. La guerre entre les partis armagnac et bourguignon fait rage au début des années 1420. En 1423, un mouvement de révolte mené par les
+          hommes de métier éclate dans la ville. Il conduit à une réforme profonde du système gouvernemental de la cité, confirmée par les chartes de
+          Charles VII du 16 mars et de juin 1424, et ouvre les portes du conseil aux représentants des corporations. Celles-ci vont dès lors prendre
+          une part active aux affaires urbaines, rôle qu’elles joueront jusqu’en 1521 lorsque la ville passera aux mains de l’empereur Charles-Quint.
+      </p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La destruction totale des archives de la ville en 1940 représente un écueil que s’attache à surmonter cette étude par le recours
+          systématique aux copies d’érudits, aux éditions anciennes ainsi qu’à diverses pièces originales et fonds encore conservés. Les sources
+          utilisées dans ce cadre sont de plusieurs origines. On retrouve des documents municipaux, avec les listes d’élection du corps de ville
+          copiées au <num>xix<hi rend="sup">e</hi></num> siècle sur la base des registres de la loi, mais également les registres de délibérations,
+          édités en de larges extraits pour la fin du <num>xiv<hi rend="sup">e</hi></num> siècle et pour l’ensemble du <num>xv<hi rend="sup">e</hi></num> siècle. Ces ouvrages sont complétés par une copie manuscrite quasi intégrale pour les années 1500-1512. À cela, il convient
+          d’ajouter une série de testaments édités par bribes, des copies et des éditions d’éléments issus du chartrier de la ville, ainsi que
+          quelques comptes pour la fin du <num>xv<hi rend="sup">e</hi></num> siècle. On retrouve par ailleurs un grand nombre de documents d’origine
+          ecclésiastique. Cette situation découle de la préservation de nombreux fonds paroissiaux mais également de la présence des riches archives
+          de la cathédrale de Tournai qui livrent notamment des censiers, des comptes et des documents sur parchemin. Ces pièces peuvent être
+          relatives à la fabrique, aux confréries mais aussi aux tables des pauvres. On note également la présence d’obituaires paroissiaux mais aussi
+          de ceux d’institutions ecclésiastiques de la ville (abbayes, chapitre). Les cartulaires du chapitre cathédral et des hôpitaux de Notre-Dame
+          et de Saint-Jacques ont également été mis à contribution. Quelques archives de familles ont aussi été utiles. Celles des Savary et surtout
+          des Cottrel ont été préservées dans le fonds de Corroy-le-Château, conservé aux archives de l’État à Namur. La part des érudits des
+              <num>xviii<hi rend="sup">e</hi></num>, <num>xix<hi rend="sup">e</hi></num> et <num>xx<hi rend="sup">e</hi></num> siècles est plus
+          qu’appréciable avec notamment les copies de pièces qui se trouvent dans le fonds d’Esnans (intégré à la collection Moreau, de la
+          Bibliothèque nationale de France), dans les manuscrits de Ferdinand Vanden Bemden à la bibliothèque universitaire de Gand, ou dans la
+          collection dite des « archives de la ville de Tournai » aux archives de l’État à Tournai.</p>
+        <p>Le traitement de l’essentiel de ces données a été rendu sous la forme d’un répertoire prosopographique qui a pour base les éléments fournis
+          par le manuscrit de copie des listes d’élection.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

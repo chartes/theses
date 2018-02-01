@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La relative méconnaissance dont souffre l’histoire de l’enseignement agricole est surprenante au moins à deux titres dans un pays comme le
+          nôtre, où l’histoire de l’enseignement a atteint un très haut niveau de développement et où l’agriculture et le monde agricole ont joué et
+          continuent de jouer un rôle majeur dans la vie de la nation. L’enseignement de l’agriculture est pourtant l’un des éléments indispensables à
+          prendre en compte dans la compréhension de l’agriculture française et de son évolution. De plus, proposant un mode de formation qui s’écarte
+          de la forme scolaire que le <num>xix<hi rend="sup">e</hi></num>  siècle tend à imposer uniformément, l’enseignement agricole constitue au sein du
+          système éducatif français une remarquable exception, en même temps qu’un irremplaçable laboratoire. La question de la formation en
+          agriculture synthétise des enjeux essentiels dans les domaines économique, social, politique, et se trouve liée à l’état de la science ainsi
+          qu’à la vaste problématique de l’enseignement.</p>
+        <p>L’étude de l’école de Grignon, la plus ancienne des écoles d’agriculture encore existantes, permet d’aborder ces différentes questions,
+          dans les limites chronologiques que dicte son évolution propre : du fait des difficultés rencontrées et des orientations prises, les
+          cinquante années qui s’écoulent entre 1867 et 1918 constituent une période fondamentale de la vie de l’école, où Grignon n’a de cesse de
+          développer le niveau de son enseignement et de parvenir ainsi à s’agréger au niveau supérieur de l’enseignement de l’agriculture. Or,
+          paradoxalement, cette époque est demeurée jusqu’ici la moins connue de l’histoire de Grignon, la période de la fondation de l’établissement
+          ayant fait l’objet de davantage de travaux, ainsi que, dans une moindre mesure, le <num>xx<hi rend="sup">e</hi></num>  siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds d’archives de l’école de Grignon déposé aux Archives nationales (84 AJ) éclaire presque tous les aspects de la vie de l’école,
+          bien que certains ne soient représentés que de façon très partielle. Les lacunes sont considérables, en particulier en ce qui concerne les
+          élèves et l’organisation de l’enseignement. Les documents relatifs aux élèves sont peu nombreux et ne permettent que rarement un traitement
+          statistique. Par ailleurs, le fonds du ministère de l’Agriculture présente un grand intérêt à travers les articles qui traitent de
+          l’enseignement agricole en général et qui exposent la direction que son administration de tutelle souhaite lui donner. Les fonds des autres
+          ministères, et en particulier le fonds de l’administration des Beaux-Arts, documentent des aspects plus secondaires, comme l’histoire du
+          domaine ou les principaux travaux de construction. Les sources imprimées sont également essentielles, en particulier les journaux agricoles,
+          qui se font l’écho des principales questions qui agitent l’enseignement de l’agriculture et servent de tribune aux professeurs et aux élèves
+          devenus des personnages importants du monde agricole.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

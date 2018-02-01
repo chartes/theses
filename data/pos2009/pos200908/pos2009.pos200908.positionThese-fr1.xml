@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Depuis un demi-siècle, de multiples travaux se sont intéressé à la vie musicale à la cour de France au tournant du Moyen Âge et de l’époque
+          moderne, à travers l’étude des institutions musicales, du répertoire ou de rares documents d’archives concernant la carrière ou le séjour
+          d’un musicien. Mais jamais une étude globale n’a donné à voir, dans son ensemble, le fonctionnement de cette vie musicale. Cette remarque
+          s’applique également aux instrumentistes et aux chantres qui servirent le roi : si certains d’entre eux ont fait l’objet de recherches
+          importantes et souvent internationales, beaucoup sont restés dans l’ombre. L’objet de cette thèse est donc de présenter la synthèse la plus
+          complète possible sur la musique à la cour de Louis XI, Charles VIII et Louis XII, grâce au dépouillement de documents d’archives
+          susceptibles de combler les silences des études antérieures.</p>
+        <p>Envisager la musique à la cour de France conduisait tout d’abord à s’interroger sur un éventuel penchant du roi pour la chose musicale. La
+          tâche n’est pas aisée : il est en effet difficile de savoir si la place de la musique était due à un véritable goût du souverain, à l’image
+          de celui d’Anne de Bretagne, héritière de la tradition de mécénat musical des ducs de Bretagne, ou s’il s’agissait plutôt d’une nécessité
+          protocolaire indissociable des grands événements de la vie curiale, en particulier pour les pièces sacrées. De plus, l’étude des
+          institutions musicales de la cour était l’occasion d’essayer, dans la mesure où les sources le permettaient, de saisir les musiciens en tant
+          que groupe social et de suivre l’évolution de ce dernier entre la seconde moitié du <num>xv</num>
+<hi rend="sup">e</hi> siècle et les premières années du <num>xvi</num>
+<hi rend="sup">e</hi> siècle. Malheureusement, la tentative sinon de restituer, du moins d’esquisser une reconstitution du répertoire propre
+          à chaque institution, ainsi que des conditions d’exécution des œuvres, a dû s’accommoder du silence de la plupart des partitions manuscrites
+          conservées sur les auteurs et sur l’exécution des œuvres.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>D’un point de vue archivistique, les règnes de Louis XI, Charles VIII et Louis XII présentent une certaine cohérence et continuité dans le
+          volume de sources disponible pour chacun d’eux : entre 1461 et 1515, il n’existe aucune série d’archives complète pour la Chapelle, l’Écurie
+          ou la Chambre, et aucun des trois règnes n’est mieux documenté que les autres. Aucun compte de la Chapelle de musique n’a ainsi été conservé
+          pour les règnes de Charles VIII et de Louis XII, contrairement à celui de Louis XI, et la situation est exactement inverse pour les archives
+          de l’Écurie. De même, la diffusion de l’imprimé n’a pas été décisive pour la période envisagée : même si son apparition se fit à partir de
+          1470 avec l’installation d’une presse dans les locaux de la Sorbonne, elle n’a laissé aucune source exploitable et il faut, pour disposer de
+          documents musicaux imprimés, attendre les publications parisiennes de Pierre Attaignant, à la fin de la décennie 1520.</p>
+        <p>Le roi disposait néanmoins d’institutions chargées de gérer les dépenses ordinaires et extraordinaires de la couronne, et les documents
+          comptables conservés sont précieux. Ceux de l’Argenterie, par exemple, contiennent nombre de mentions de présents faits à des chantres ou à
+          des instrumentistes de la cour, car l’institution était chargée de régler certaines dépenses extraordinaires, notamment les achats de
+          joyaux, de tapisseries, de vaisselle et de menus ustensiles ainsi que la façon et l’étoffe des habits du roi et de ses serviteurs. Il faut
+          également mentionner les comptes des Menus Plaisirs, service qui s’occupait de la préparation des cérémonies, des fêtes et des spectacles de
+          la cour : on voit déjà tout l’intérêt de cette dernière documentation pour les études musicales.</p>
+        <p>Les comptes des funérailles de rois disposent d’un avantage considérable sur les autres sources : ils réunissent en un seul document les
+          noms de tous les officiers de la Chambre, de la Chapelle et de l’Écurie en service au moment de la mort du roi, y compris les enfants de
+          chœur, qui n’apparaissaient habituellement pas sur les comptes propres à chacun de ces organes. Enfin, en dehors des sources archivistiques,
+          il existe de nombreux documents qui peuvent se révéler d’une grande aide, tels que les textes littéraires (poèmes, chroniques, relations
+          d’entrée royale, correspondances), dont la conservation au fil des siècles s’est manifestement mieux faite que pour les documents
+          administratifs.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

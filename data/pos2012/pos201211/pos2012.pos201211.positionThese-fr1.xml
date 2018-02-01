@@ -1,0 +1,84 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Parfois sévèrement jugés par les historiens, qui en firent de simples exécutants, Antoine et Henri-Auguste de Loménie méritent pourtant que l’on s’intéresse à leur carrière, qui ne manque pas de singularités. Parvenu jusqu’au secrétariat d’État de la Maison du roi après une ascension rapide auprès d’Henri de Navarre, Antoine de Loménie transmit sa charge à son fils qui la garda jusqu’en 1643. Cette longue présence au service du roi s’accompagna d’une ascension sociale qui permit aux Loménie, issus d’une obscure famille limousine, de porter le titre de comtes de Brienne. Mais les Loménie ne sont pas qu’un nouvel exemple du personnel politique de Louis XIII, déjà bien étudié par de nombreuses et souvent récentes études et biographies de ministres. Ces créatures du roi de France, qu’ils servirent avec une fidélité jamais remise en cause, assumèrent avec compétence la tâche difficile d’administrer la Maison du roi à une époque où la mise en place du ministériat obligea souvent les secrétaires d’État à dépendre des principaux ministres Richelieu, puis Mazarin. Les Loménie choisirent de ne servir que le roi et constituent en cela un exemple étonnant de longévité politique dans la première moitié du <num>xvii</num><hi rend="sup">e</hi> siècle. Tout aussi originale fut leur ascension sociale, réussie à de nombreux points de vue, mais incomplète en raison de la faiblesse de leur stratégie familiale et de leur réseau, élément essentiel de la sociabilité d’Ancien Régime, ainsi que d’une fortune modeste. Tous ces éléments démontrent l’intérêt d’une étude de la trajectoire politique et sociale d’Antoine et d’Henri-Auguste de Loménie, personnages essentiels au gouvernement par la charge qu’ils occupaient et dans l’histoire de leur famille qu’ils firent entrer au nombre des grandes dynasties ministérielles, que l’on retrouve jusqu’à la fin du <num>xviii</num><hi rend="sup">e</hi> siècle.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Les sources qui ont permis la réalisation de cette étude se divisent en deux ensembles. Le premier concerne les Loménie en tant que secrétaires d’État et se compose essentiellement d’actes royaux et de correspondances retrouvés en grand nombre parmi les fonds des Archives nationales, de la Bibliothèque nationale de France et des Archives du ministère des Affaires étrangères. Les documents émanant des souverains sont essentiels pour comprendre le travail des secrétaires d’État et établir une typologie des affaires qu’ils avaient à traiter dans le cadre de leur département. Cependant, l’absence de documents préparatoires élaborés par les Loménie n’a pas permis de définir exactement l’ampleur de leur travail. Appartiennent aussi à cet ensemble les règlements et états concernant la Maison du roi. En raison de la faiblesse de la correspondance des Loménie, le recours aux papiers d’autres personnages politiques et aux documents administratifs contenus dans les « mémoires et documents » de France aux Archives du ministère des Affaires étrangères s’est avéré indispensable. Essentielle également fut la correspondance entre Antoine de Loménie et Jacques Nompar de Caumont, duc de La Force, conservée dans les fonds privés des Archives nationales (353/AP), qui a permis d’enrichir la connaissance de certains aspects concernant Antoine de Loménie. Enfin, les manuscrits composant la collection de Brienne, conservés dans les nouvelles acquisitions de manuscrits français de la Bibliothèque nationale de France, ont constitué une source privilégiée pour comprendre comment les Loménie travaillaient.  </p>
+    <p>Le second ensemble documentaire concerne la vie privée et la famille des Loménie. Le chartrier du comté de Brienne, conservé aux Archives nationales (4/AP), comprend ainsi les papiers de famille les plus importants tels que contrats de mariage, testaments et inventaires après décès. Ce fonds fut complété par des recherches dans le Minutier central des notaires parisiens, et notamment dans les études XLII et XLV, qui se sont révélées très fructueuses.  </p>
+    <p>Enfin, les mémoires rédigés par Henri-Auguste de Loménie, publiés en 1719, ont constitué une source incontournable : en plus de donner une version intéressante des événements du règne de Louis XIII, les mémoires d’Henri-Auguste permettent de mieux comprendre la façon dont leur auteur percevait la politique, les changements qui intervinrent lorsqu’il fut aux affaires et sa place parmi les acteurs du gouvernement de Louis XIII puis de la régence. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>René Kieffer (1876-1963) est un relieur d’art qui a exercé son métier pendant toute la première moitié du <num>xx<hi rend="sup">e</hi></num> siècle. D’abord disciple de
+          Marius-Michel, il adopte le style Art Déco dans les années vingt. De 1919 à 1923, il exécute les reliures que dessine Pierre Legrain pour
+          Jacques Doucet. Dans les années vingt, il est à la tête d’un atelier important, pouvant relier jusqu’à 2082 volumes par an, en 1928. De
+          l’atelier René Kieffer sortent aussi bien des reliures modestes que les reliures les plus luxueuses, aux décors d’avant-garde. <lb/>À partir
+          de 1909, René Kieffer se lance dans l’édition de livres de luxe illustrés. Il apprend le métier auprès de confrères : Auguste Blaizot qui
+          joint son nom aux premières éditions de René Kieffer, Georges Crès, Albert Messein, Le Mercure de France qui lui confient la direction de
+          quelques volumes pour leurs propres éditions. Au début des années vingt, il ouvre une librairie sur les lieux de l’atelier de reliure. Les
+          trois activités principales de René Kieffer que sont la reliure, l’édition et la librairie sont liées par leur objet commun : le livre.
+          Elles fonctionnent étroitement ensemble. <lb/>Etudier toute l’œuvre de René Kieffer était impossible dans le cadre de cette étude. Le choix
+          des éditions René Kieffer permettait de restreindre le corpus tout en abordant les trois domaines : l’édition, la reliure, par l’étude des
+          reliures d’édition, et la librairie, par la vente des éditions. Par ailleurs, ce sujet permettait d’aborder un domaine de l’histoire du
+          livre qui reste peu étudié : les éditions de luxe illustrées des années vingt et trente. René Kieffer est l’un de ces nombreux petits
+          éditeurs, qui ont profité du nouvel engouement pour la bibliophilie après la Première guerre mondiale, engouement qui s’est tari avec la
+          crise des années trente. <lb/>La première tâche était d’établir le catalogue des éditions René Kieffer. Ce catalogue est composé de deux
+          parties, l’une consacrée aux éditions, l’autre aux reliures prévues pour ces éditions. Cette séparation se justifie par les méthodes
+          utilisées, différentes dans l’un et l’autre cas. De plus, elle facilite la lecture du commentaire tiré de l’analyse du catalogue, qui traite
+          successivement des éditions en condition brochée, puis des reliures d’édition.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Deux fonds ont servi pour cette étude. Le fonds René Kieffer, conservé à la Réserve des livres rares et précieux de la Bibliothèque
+          nationale de France, contient un grand nombre de maquettes de décors de reliures. Le fonds des archives des éditions René Kieffer, fonds
+          privé, renferme des maquettes d’édition et de la correspondance. Cependant, les archives des éditions René Kieffer restent très lacunaires :
+          les archives comptables ont été perdues pendant la Seconde guerre mondiale ; les maquettes, dessins originaux d’illustrateurs,
+          correspondances relatives aux éditions ont été dispersés dans les exemplaires. Les ouvrages édités et reliés par René Kieffer ont été
+          consultés à la Bibliothèque nationale de France (Réserve des livres rares et précieux, département des estampes et de la photographie) et
+          dans des collections particulières.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

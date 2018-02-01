@@ -1,0 +1,118 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Comment copier à la fin du <num>xv<hi rend="sup">e</hi></num>  siècle un texte qui prend pour modèle un manuscrit vieux de deux siècles, dont la
+          langue n’est plus celle du copiste ni de ses lecteurs ? S’agit-il simplement de la copie d’un manuscrit au sens courant du terme, ou le
+          copiste joue-t-il un rôle plus important d’adaptateur, voire de véritable traducteur du texte ancien ? Ces questions se posent très vite à
+          la lecture de l’<hi rend="i">Estoire del saint Graal</hi> conservée dans le manuscrit 9246 de la Bibliothèque royale de Belgique. Le
+          copiste du texte, Guillaume de la Pierre, explique en effet qu’il s’appuie sur des manuscrits copiés « en langage ancien et le plus en
+          langue picarde » : la langue de rédaction de ces textes, l’ancien français, ne correspond plus au moyen français, langue du copiste en 1480,
+          date de rédaction du manuscrit. L’enjeu de l’étude de ce manuscrit est donc de déterminer si Guillaume de la Pierre modernise bien le texte
+          et ne se contente pas d’effectuer une simple copie d’une langue archaïque, mais aussi d’examiner quelles peuvent être les modalités de cette
+          modernisation.</p>
+        <p><hi rend="i">Le contexte littéraire de l’</hi> Estoire del saint Graal. — L’<hi rend="i">Estoire del saint Graal</hi>
+          forme la première partie des cinq romans composant le cycle du Lancelot-Graal, rédigé dans la première moitié du <num>xiii<hi rend="sup">e</hi></num>
+           siècle, qui comprend également le <hi rend="i">Merlin</hi> et sa suite, le <hi rend="i">Lancelot</hi> propre, la <hi rend="i">Queste del
+            Graal</hi> et la <hi rend="i">Mort Artu</hi>. L’auteur ou les auteurs de ces différents romans restent inconnus, l’ordre de rédaction même
+          des textes faisant l’objet de débats. Les sources de ce cycle sont à chercher dans l’œuvre de Chrétien de Troyes, dont le dernier texte
+          resté inachevé, le <hi rend="i">Conte du Graal</hi>, a fourni la matière de plusieurs continuations et cycles différents. Les premiers
+          romans du cycle du Lancelot-Graal (l’<hi rend="i">Estoire del saint Graal</hi> et le <hi rend="i">Merlin</hi>) s’inspirent en outre de
+          l’œuvre en vers de Robert de Boron, le Roman de l’estoire dou Graal et un <hi rend="i">Merlin</hi>, rédigés au début du XIII <hi rend="sup">e</hi>  siècle. C’est Robert de Boron qui le premier fait du Graal une relique chrétienne, instaurant ainsi le lien entre la matière de
+          Bretagne et les textes sacrés. L’<hi rend="i">Estoire del saint Graal</hi> a longtemps souffert de la comparaison avec les autres romans du
+          cycle, et a été souvent considéré simplement comme une introduction relativement médiocre au Lancelot propre et à la <hi rend="i">Queste del
+            saint Graal</hi>. C’est pourquoi ce texte n’est pas le roman le plus connu du cycle et n’a été étudié pour lui-même et réhabilité que très
+          récemment.</p>
+        <p><hi rend="i">La diffusion de l’Estoire del saint Graal. </hi> — L’<hi rend="i">Estoire del saint Graal</hi> a fait l’objet d’une
+          diffusion relativement importante, puisqu’elle est conservée actuellement dans quarante-deux manuscrits (auxquels il faut ajouter les
+          manuscrits ne contenant que des fragments de l’œuvre et les traductions dans d’autres langues vernaculaires). La plupart de ces manuscrits
+          datent du <num>xiii<hi rend="sup">e</hi></num>  siècle et le manuscrit de Bruxelles est vraisemblablement le plus tardif. Il existe trois versions de
+          ce texte : une version longue, une version courte et une version mixte, composée de passages empruntés alternativement à la version longue
+          et à la version courte. Le manuscrit de Bruxelles est un représentant de cette dernière version. L’<hi rend="i">Estoire</hi> a également
+          fait l’objet de plusieurs éditions, dont deux dès 1516 et 1523, et d’une édition critique très récente.</p>
+        <p><hi rend="i">L’histoire du manuscrit de Bruxelles. </hi> — Le manuscrit de Bruxelles est un manuscrit de luxe, qui présente notamment une
+          cinquantaine de miniatures très élaborées, peintes sur une demi-page, dues à l’atelier de Jean Colombe. Le soin apporté à la rédaction du
+          texte ainsi que la qualité du parchemin et les larges dimensions du manuscrit indiquent également qu’il s’agit d’un livre destiné à
+          personnage de haut rang. Le colophon fournit, outre la date de rédaction, des renseignements sur le copiste du manuscrit, Guillaume de la
+          Pierre, et sur son commanditaire, Jean-Louis de Savoie, évêque de Genève. Jean-Louis de Savoie, né en 1447 ou 1448, est le huitième enfant
+          du comte Louis I<hi rend="sup">er</hi> de Savoie et d’Anne de Lusignan. Il devient évêque de Genève en 1460 et le reste jusqu’à sa mort, en
+          1482. Malgré le témoignage de ce manuscrit, il ne semble pas que Jean-Louis de Savoie ait joué, à la cour de Savoie ou dans son évêché, un
+          grand rôle de mécène culturel ou artistique. Aux questions spirituelles et à l’administration de son diocèse, il préfère en outre les
+          combats politiques qui se déroulent à l’époque entre la cour de Savoie, le duché de Bourgogne et le royaume de France.</p>
+        <p>A sa mort en 1482, le manuscrit entre dans la bibliothèque du duc de Savoie Charles I<hi rend="sup">er</hi> , qui emploie alors les
+          services de Jean Colombe, et ce n’est vraisemblablement qu’à cette époque que les miniatures sont réalisées. Le manuscrit change ensuite de
+          mains, puisque le contrat de mariage passé en 1501 entre Philibert de Savoie et Marguerite d’Autriche autorise Marguerite à l’emporter avec
+          elle lorsqu’elle quitte la Savoie pour assurer la régence aux Pays-Bas en 1506. Le manuscrit figure ensuite régulièrement dans les
+          inventaires de sa bibliothèque, puis dans ceux de la bibliothèque des ducs de Bourgogne. Il est ensuite confisqué à deux reprises et rejoint
+          la Bibliothèque royale, à Paris, lors de la guerre de Succession d’Autriche en 1748 puis pendant la Révolution en 1794, avant d’être
+          définitivement restitué à la Belgique en 1814.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

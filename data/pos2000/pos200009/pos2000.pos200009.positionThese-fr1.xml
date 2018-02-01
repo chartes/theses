@@ -1,0 +1,100 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Michel Butor présente la particularité d’être à la fois très connu et mal connu. En effet, il est l’un des écrivains du Nouveau Roman les
+          plus célèbres dans le monde, et en même temps le plus mal interprété. L’étiquette de « Nouveau Romancier » qui lui fut appliquée dès ses
+          débuts est réductrice. On oublie que l’écrivain est aussi l’auteur d’essais, de poésie et de livres d’artistes, dont des livres manuscrits,
+          réalisés depuis maintenant trente ans avec une cinquantaine d’artistes contemporains. Ces livres manuscrits se trouvent dans une situation
+          paradoxale : extrêmement abondants (on en compte environ trois cents), ils sont quasiment inconnus du grand public, voire des
+          collectionneurs, ce qui contraste étrangement avec la célébrité persistante de <hi rend="i">La Modification.</hi>
+       </p>
+        <p>Or, ces livres manuscrits sont particulièrement significatifs dans la production butorienne, car ils accompagnent le retour progressif de
+          Michel Butor vers le genre littéraire qu’il avait pratiqué à ses débuts : la poésie. Sur le plan de l’histoire du livre illustré, Michel
+          Butor inaugure avec eux un type de livres plus proches des poèmes-tableaux que des livres (puisque leur tirage très restreint ne dépasse
+          généralement pas les quinze exemplaires), tout à fait originaux par la méthode de création utilisée, l’écrivain « illustrant » d’un texte
+          une image, et non l’inverse, et par le statut assigné aux textes. Malgré l’importance de ces livres, aucune étude sérieuse n’a été menée à
+          leur sujet. Il s’agit donc de combler cette lacune très regrettable pour les études butoriennes, comme pour l’histoire du livre de luxe
+          contemporain. A cette fin, il fallait établir le premier catalogue raisonné des livres manuscrits de Michel Butor.</p>
+        <p>La question du rapport entre le texte et l’image dans les livres manuscrits apparaît comme essentielle, ainsi que celle des apports que
+          représente une telle collaboration pour chacun des partenaires. Il convient également de s’interroger sur la place des livres manuscrits de
+          Michel Butor dans le paysage des livres d’artistes contemporains.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La quasi totalité des quelque trois cents livres manuscrits se trouve encore chez l’écrivain et chez les artistes. Leur étude a donc
+          nécessité l’autorisation des uns et des autres de consulter ces livres à leur domicile. Certains artistes n’ayant pas encore fait l’objet
+          d’une bibliographie abondante, un certain nombre d’entretiens avec eux ont permis de reconstituer leur parcours artistique.</p>
+        <p>Le dépouillement du fonds Michel Butor à la bibliothèque municipale de Nice et de la correspondance reçue par l’écrivain jusqu’en 1991,
+          conservée au département des manuscrits de la Bibliothèque nationale de France, éclairent sur le processus de création des livres, ainsi que
+          sur les relations de l’écrivain avec ses artistes.</p>
+        <p>Enfin, les nombreuses réflexions de Michel Butor sur le livre, publiées notamment dans la série des <hi rend="i">Répertoires</hi>, aident à
+          mieux comprendre ce qui a poussé l’écrivain à réaliser ce genre de livres.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

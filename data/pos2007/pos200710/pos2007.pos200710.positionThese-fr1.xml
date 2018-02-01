@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’intervention française dans la crise de succession de Portugal entre 1578 et 1583, si elle s’inscrit dans un processus de rivalité avec
+          l’Empire espagnol, dont participent également les invasions des Pays-Bas et l’alliance avec l’Empire ottoman, présente toutefois, tant sur
+          le plan politique que militaire, de nombreuses particularités. Initiative personnelle de Catherine de Médicis qui met tout en œuvre pour
+          parvenir à ses fins face au roi Henri III, lequel ne se laisse entraîner qu’à contrecœur, elle se développe en plusieurs temps : d’abord des
+          négociations diplomatiques, à la suite de la revendication personnelle de la couronne portugaise par Catherine, puis une première expédition
+          militaire de soutien à un autre prétendant, dom António, qui se solde par un désastre en juillet 1582, enfin une nouvelle expédition en 1583
+          qui, quoiqu’elle s’achève plus honorablement que la précédente, n’en est pas moins une défaite retentissante. Cette escalade à partir d’une
+          situation somme toute assez banale – Catherine de Médicis n’est ni la première, ni la dernière à défendre des droits douteux sur un
+          territoire – ne s’explique qu’avec une étude minutieuse de la conjoncture française et européenne au tournant des années 1580 : la lutte
+          contre une Espagne en plein essor, les relations mitigées avec Elisabeth I<hi rend="sup">ère</hi> d’Angleterre, l’attentisme des autres
+          puissances dessinent un arrière-plan cohérent aux tentatives de Catherine pour reconquérir le Portugal ; néanmoins ces raisons ne suffisent
+          pas à expliquer l’acharnement de la reine-mère dans cette affaire, dont témoignent les deux opérations militaires successives aux Açores. Là
+          où l’on s’attendrait à ce que la première défaite marque un coup d’arrêt aux ambitions de dom António et de Catherine, celle-ci persiste
+          pourtant à renvoyer un contingent de soutien aux partisans de dom António, alors que la guerre fait déjà rage aux Pays-Bas.</p>
+        <p>L’expédition de 1583 est, à bien des égards, très différente de la précédente : mieux organisée, mieux encadrée par des « professionnels »
+          de la guerre sur mer, elle annonce déjà une défaite prévisible, compte tenu du déséquilibre des forces, et mieux gérée, puisque son
+          commandant en chef réussit à obtenir de l’ennemi des conditions de reddition satisfaisantes. Ces conditions en font donc une opération
+          atypique, intéressante à étudier pour l’histoire tant militaire que maritime du <num>xvi<hi rend="sup">e</hi></num> siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La principale source utilisée pour ce travail est un document notarié conservé aux Archives départementales de Seine-Maritime sous la cote
+          2<hi rend="sup">e</hi>70 (40). Il s’agit du recueil, sous la forme d’un registre relié, des minutes des actes passés devant notaire au
+          Havre pour la préparation de l’expédition aux Açores de 1583. Ce recueil contient également, dans les dernières pages, une trentaine d’actes
+          relatifs aux travaux effectués par Corberan de Cardaillac-Sarlabous, gouverneur du Havre, sur la jetée du port. D’autres registres notariés
+          des Archives départementales de Seine-Maritime ont été utilisés pour ce travail, les cotes 2<hi rend="sup">e</hi>70 (38) à (45).</p>
+        <p>La correspondance diplomatique de Tassis, ambassadeur de Philippe II à Paris, a été consultée au Centre historique des Archives nationales,
+          dans les cartons K 1436, K 1539, K 1547, ainsi que K 1560 et K 1561 ; ces deux derniers cartons contiennent également diverses pièces
+          intéressantes concernant les relations franco-espagnoles pendant le règne de Henri III. La correspondance de Henri III, celle de Catherine
+          de Médicis et de plusieurs diplomates français ont été consultées au département des manuscrits de la Bibliothèque nationale de France, dans
+          le fonds français (mss. franç. 3291, 3306, 3310, 3392, 6164, 6631, 15565, 16107, 16108, 16121), les nouvelles acquisitions françaises (nouv.
+          acq. franç. 1245, 1249, 7225), le fonds Dupuy (ms. Dupuy 211) et le fonds espagnol (ms. esp. 466). Plusieurs récits de l’expédition de 1582
+          sont également conservés à la Bibliothèque nationale de France : dans le fonds français (mss. franç. 3959 et 17286), le fonds Dupuy (ms.
+          Dupuy 844, qui contient un récit français et le récit espagnol publié par Santa-Cruz après la victoire), et aux Cinq-Cents (Cinq-Cents,
+          Colbert, vol. 29).</p>
+        <p>Les archives espagnoles, en particulier à Simancas, présentent beaucoup plus de sources sur l’époque, montrant déjà par là une marine
+          mieux organisée qu’en France. La collection privée <hi rend="i">Navarrete</hi>, au Museo Naval de Madrid, est une compilation, qui se veut
+          exhaustive, de tous les documents d’archives concernant la Marine aux <num>xvi<hi rend="sup">e</hi></num> et <num>xvii<hi rend="sup">e</hi></num> siècles : elle
+          recèle de nombreux documents et correspondances intéressant l’expédition des Açores. En revanche, après recherche, il semble que les
+          archives portugaises sur la période, et particulièrement sur les Açores, aient subi de nombreuses pertes liées à des incendies ou à des
+          troubles politiques.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

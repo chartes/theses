@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+            <p>Écrire la biographie de Marguerite de Hongrie, c'est observer au fil des décennies la mobilité d'une princesse médiévale de haute naissance à travers l'espace géographique et les sociétés de son temps. Née vers 1176 dans un pays qui regardait à la fois vers l'Occident et l'Europe orientale, puis devenue impératrice à Byzance avant même l'âge de dix ans, Marguerite vécut tout comme les sujets de son époux le choc de la quatrième croisade détournée sur Constantinople, mais sut très vite se fondre, grâce à un astucieux remariage, dans l'élite occidentale  catholique qui s'installa à partir de 1204 sur le trône impérial et se partagea les territoires de la Romanie. Tout en étant confrontée aux aléas d'une époque tourmentée où Latins et Byzantins sont amenés à cohabiter, parfois se mêlent et souvent s'affrontent, Marguerite de Hongrie, deux fois veuve, sut prendre son destin en main et défendre les intérêts de ses enfants, trouvant jusqu'au bout un moyen de faire face à l'adversité. Cette faculté d'adaptation – qui en fait une sorte d'amphibie sachant vivre aussi bien parmi les hellénophones orthodoxes qu'au milieu d'Occidentaux de rite romain – informe son identité et se retrouve aussi en certains de ses fils. Tout en étant un personnage emblématique de son temps, à l'exemple des Villehardouin qui régnèrent au <num>xiii<hi rend="sup">e</hi></num> siècle en Morée, Marguerite se distingue par la singularité de son destin.</p>
+            <p>Compte tenu de la rareté des sources permettant de reconstituer l'itinéraire de vie de cette princesse, le chercheur doit traquer la moindre information et étendre son regard sur le contexte de la Romanie au tournant des <num>xii<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles, dans laquelle Marguerite a vécu, afin de comprendre ce dont elle a été le témoin et comment elle a pu réagir face aux événements. Aucun texte contemporain ne vient décrire sa personnalité, à l'exemple du portrait moral que l'historien Nicétas Chôniatès dresse de son premier époux. Pas le moindre sceau ne la représente. Celle qui fut impératrice n'a pas plus de visage que les premiers rois capétiens du <num>xi<hi rend="sup">e</hi></num> siècle. Néanmoins, elle prend consistance au fil de la lecture de détails fournis par les chroniques et de lettres pontificales, qui esquissent les contours d'une femme dotée d'intelligence et de volonté, attentive aux droits de ses enfants, soucieuse du sort des orthodoxes et n'hésitant pas à tenir tête à la papauté.</p>
+            <p>Corollaire de ce manque de sources, peu nombreuses sont les études qui lui ont été consacrées. Seuls trois articles de quelques dizaines de pages et désormais vieillis ont en partie retracé le cours de son existence mouvementée. Les deux premiers sont l'œuvre de l'érudit Mór Wertner, qui, à la Belle Époque, publia l'un en allemand et l'autre en hongrois. Le troisième est dû au cardinal Aloysius Tăutu, qui reprit en 1956 en langue italienne les conclusions, parfois hasardeuses, auxquelles était parvenu son devancier. Si ces travaux ont ouvert la voie à la recherche, ils n'en restent pas moins trop brefs, n'opèrent guère de remise en contexte suffisante et ne sont pas exempts d'erreurs ou d'inexactitudes. Il convient de les développer, de les amender et de les compléter.</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+            <p>Du fait des déplacements de Marguerite à travers l'Europe orientale et centrale, de ses liens avec Byzance, la Hongrie, les Latins et Rome, mais aussi de la dispersion des témoignages occidentaux portant sur la quatrième croisade, la réalisation de sa biographie implique de manipuler une multitude de sources, diverses tant par leur forme que par la langue dans laquelle elles ont été écrites.</p>
+            <p>Ces sources sont dans leur grande majorité des textes narratifs des <num>xii<hi rend="sup">e</hi></num>-<num>xvi<hi rend="sup">e</hi></num> siècles, aujourd’hui édités. Les documents diplomatiques tant latins que byzantins se rapportant à Marguerite et ses proches sont minoritaires dans la présente étude, car bien peu ont réchappé aux destructions liées à la chute de Thessalonique en 1224 aux mains du despote d'Épire, à la <emph>damnatio memoriae</emph> dont fut victime l'Empire latin après la reprise de Constantinople par Michel VIII Paléologue en 1261 et à la conquête de la capitale impériale par les Ottomans en 1453. Les quelques actes mentionnés ici sont issus d'institutions occidentales ou latines du Proche-Orient. La plupart ont fait l'objet d'une édition, quelques-uns sont cependant inédits. De rares inscriptions apportent, quant à elles, un éclairage sur la descendance de Marguerite.</p>
+            <p>Parmi les sources narratives, les chroniques, annales ou récits historiques ont la part belle, ainsi que les lettres, surtout celles des papes. Quelques compositions poétiques présentent aussi un intérêt certain. En raison de leurs provenances très diverses (Byzance, Italie, Allemagne, France, Terre sainte, etc.), ces textes sont pour certains écrits en grec ancien – langue noble des lettrés byzantins –, d'autres en grec vernaculaire. Beaucoup ont aussi été rédigés en latin, ainsi qu'en ancien français ou encore en italien ou en aragonais du Moyen Âge.</p>
+            <p>Pour ne citer que les sources les plus importantes, l'<emph>Histoire</emph> de Nicétas Chôniatès constitue la principale mine d'informations sur l'Empire byzantin de la seconde moitié du <num>xii<hi rend="sup">e</hi></num> siècle et des premières années du <num>xiiiᵉ.</num> Elle est utilement complétée par les récits de la conquête de Constantinople composés par Geoffroy de Villehardouin et Robert de Clari et par les <emph>Annales</emph> de Georges Acropolite. L'histoire d'Henri de Valenciennes fournit, elle, l'essentiel des informations conservées sur les destinées du royaume latin de Thessalonique dans les années 1208-1209. La correspondance du pape Innocent III et de son successeur Honorius III, adressée aux prélats et seigneurs latins de Grèce, est fondamentale pour combler le manque de chroniques portant sur les décennies 1210-1220 et suivre les mouvements de Marguerite, ainsi que les difficultés rencontrées par les Francs pour se maintenir sur le sol hellénique. De même, les lettres de Jean Apokaukos et les actes de Dèmètrios Chômatianos permettent de cerner la disparition progressive du royaume thessalonicien.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

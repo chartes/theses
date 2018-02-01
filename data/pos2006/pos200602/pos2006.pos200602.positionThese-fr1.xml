@@ -1,0 +1,132 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En janvier 1629, le cardinal de Richelieu, du Conseil d’En haut depuis mai 1624, formulait dans un avis fameux au roi Louis XIII son
+          dessein en politique européenne : « il faut avoir en dessein perpétuel d’arrêter le cours des progrès de l’Espagne ». Pour réussir semblable
+          objectif encore fallait-il connaître son adversaire, en estimer justement la puissance, les potentiels militaires, pénétrer les intentions
+          de ses ministres, en un mot s’informer. C’était faire de la prudence un principe gouvernemental, un principe qui s’accordait avec l’héritage
+          géopolitique du <num>xvi<hi rend="sup">e</hi></num> siècle. Encerclant une France bi-confessionnelle, fragilisée par les terribles expériences des
+          guerres de religion et de la Ligue, l’empire espagnol, gouverné depuis Madrid, alimenté par les immenses ressources de son empire, fort de
+          l’alliance impériale et de sa vocation de défenseur de la catholicité, semblait gouverner l’échiquier diplomatique.</p>
+        <p>Quels furent donc les avis qui présidèrent à la prise de décision de mai 1635 ? Quels arguments justifièrent la lourde responsabilité
+          d’une rupture avec l’Espagne, tournant capital au regard des années de paix procurées par le traité de Vervins du 13 mai 1598 ? Quels
+          discours légitimaient de renouer avec une politique étrangère comparable à celle de François I<hi rend="sup">er</hi> ou d’Henri IV qui
+          s’était abîmée dans les traités du Cateau-Cambrésis et de Vervins ? Qui mieux que les ambassadeurs, « ceux qui de près voient bien mieux les
+          choses que les plus éloignés », envoyés auprès du Roi Catholique, Philippe IV à Madrid, « cœur décisionnel de cette monarchie agrégative
+          hispanique », pouvait être apte à informer le gouvernement français de l’état des rapports de force bilatéraux ? Or sur Antoine de Jaubert,
+          comte de Barrault, ambassadeur ordinaire de Louis XIII auprès de Philippe IV à Madrid, nommé en 1629 et rappelé dès décembre 1634, nulle
+          étude historiographique, des archives très rares au ministère des Affaires étrangères, pour un personnage que Tallemant lui-même ignore dans
+          ses <hi rend="i">Historiettes</hi>.</p>
+        <p>Un silence étonnant pour une nomination dont Richelieu n’ignorait pas l’enjeu. N’affirmait-il pas qu’« un ambassadeur mal choisy pour
+          faire un traité peut, par son ignorance, porter un notable préjudice » ? Et attribuer cette charge d’ambassadeur ordinaire, résident
+          permanent auprès du Roi Catholique, était d’autant plus stratégique en cette année 1629 que la France avait entrepris par les affaires
+          valtelinaise de 1625 et mantouane de 1628 un retour manifeste sur la scène diplomatique européenne, un retour peu apprécié d’une monarchie
+          espagnole dont l’empire montrait des faiblesses : fragilité stratégique du <hi rend="i">camino</hi> espagnol <hi rend="i">via</hi> les axes
+          Milan-Graz et Milan-Suisse-Alsace, fragilité stratégique de la <hi rend="i">carrea</hi> atlantique victime d’une efficace politique de
+          course hollandaise, fragilité économique avec une chute de la valeur des flottes du Trésor et une déflation du <hi rend="i">véllon</hi>,
+          enfin fragilité militaire et confessionnelle avec la reprise de la guerre contre les Provinces-Unies en 1621. La crispation des relations
+          franco-espagnoles se greffa sur le terrible conflit de la guerre de Trente Ans et les puissances européennes eurent à tenir compte de ces
+          deux foyers de tensions pour se positionner si bien que le jeu des alliances se redistribua à partir de 1628-1629, faisant de la période
+          1630-1635 une période charnière dans la recomposition d’un équilibre diplomatique européen.</p>
+        <p>Les correspondances du comte de Barrault, ambassadeur ordinaire de 1630 à 1634, et de son secrétaire Pény, augmentées de celles des envoyés
+          extraordinaires tels le comte d’Orval et de M. de Bautru, constituèrent pour le gouvernement français une source d’informations capitale
+          pour estimer l’évolution des intérêts et des intentions espagnoles et définir en regard une stratégie diplomatique. Dans quelle mesure leurs
+          avis et correspondances ont-ils influencé les prises de décisions du Conseil d’En haut durant ces cinq années ? Quels renseignements
+          transmettaient-ils ? À qui ? Sous quelle forme ? Se firent-ils seulement le relais du discours officiel espagnol ou parvinrent-ils à percer
+          le secret des entreprises espagnoles ? De quels réseaux et filières ont-ils bénéficié ? Quelle vision de l’Espagne ont-ils brossée ?
+          Fut-elle partiale ? Confirme-t-elle le discours historiographique d’un déclin de l’empire espagnol ? Relaya-t-elle « l’antipathie
+          franco-espagnole », croissante depuis les années 1620 ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude de la nature et des modalités du renseignement français auprès du Roi Catholique fut menée à partir des correspondances des agents
+          du Roi Très Chrétien à Madrid de 1630 à 1635, conservées au centre des archives du ministère des Affaires étrangères à Paris et reliées en
+          trois volumes : les volumes 16, 17 et 18 de la série <hi rend="i">Correspondance politique</hi>, sous-série <hi rend="i">Espagne</hi>. Il
+          convient de porter un regard critique sur des volumes qui furent confectionnés tardivement, au second <num>xvii<hi rend="sup">e</hi></num> siècle, et
+          résultèrent d’une politique de collecte, tri et classement effectuée sous le ministère de Charles Colbert de Croissy, secrétaire d’État aux
+          Affaires étrangères de 1680 à 1696. Les papiers de diplomates conservés par ses prédécesseurs Lionne et Pomponne furent reliés suivant un
+          cadre de classement flexible, si bien que les minutes de dépêches se mêlèrent aux expéditions annexes des agents. Des imprimés, des comptes,
+          des procès verbaux ou encore des <hi rend="i">consulta</hi> du Conseil d’État madrilène, furent ainsi déclassés et parfois même reliés à des
+          volumes appartenant à d’autres fonds tels : « Supplément Espagne » ou « Mémoire et Documents ». Leur comparaison avec les fonds espagnols
+          constitués dès 1628 par le secrétaire d’État Andrès de Rozas, qui avait entrepris de faire verser le plus systématiquement possible les
+          papiers des ambassadeurs en fin de charge en un même dépôt, permit de faire parler le silence des sources françaises. Les fonds espagnols
+          consultés dans cette perspective comparative sont conservés à l’Archivo General à Simancas, au Centro Histórico et à la Biblioteca Nacional
+          à Madrid.</p>
+        <p>La richesse des documents conservés dans ces volumes permit de définir différents axes de recherches : si une étude des structures du
+          renseignement français s’imposait, des investigations sur la charge d’ambassadeur en cette période de tensions ne pouvaient pas plus être
+          éludées : des entorses au protocole et au cérémonial, des violations des immunités diplomatiques du comte de Barrault préludèrent à l’échec
+          du dialogue. Des seuils de tolérance furent franchis avant que la parole ne cède place aux armes et ces correspondances offrent une autre
+          lecture diplomatique, depuis le pôle madrilène, de ces cinq années. Elles reflètent également les facettes multiples des courants de pensée
+          qui animèrent le premier <num>xvii<hi rend="sup">e</hi></num> siècle français et espagnol. Le dialogue des diplomates échoua sur des quiproquos et
+          l’on eut recours à des traductions augmentées afin de rendre plus lisible la pensée de l’autre, et ce, non sans dérivations sémantiques.
+          Certains concepts et notions aux acceptions divergentes, telle celle de « foy publique » qui justifia l’arrestation du secrétaire Pény,
+          présidèrent à la prise de décision en politique étrangère. Leur étude ouvre un vaste champ d’investigation.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

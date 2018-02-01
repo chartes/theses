@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Représentant majeur de la “ Renaissance du <num>xii<hi rend="sup">e</hi></num> siècle ” en même temps que de la réforme de l’Église, Hugues de
+          Saint-Victor († 1141) est également l’auteur d’une œuvre foisonnante allant des arts libéraux jusqu’aux sommets de la vie spirituelle, en
+          passant par les subtilités de l’exégèse et de la <hi rend="i">divinitas</hi>. Entré dans les années 1115-1118 à l’abbaye de Saint-Victor de
+          Paris, jusqu’à sa mort le 11 février 1141 il y mène, comme maître, une carrière qui contribue au renom croissant de l’établissement fondé en
+          1108 par l’archidiacre et écolâtre de Notre-Dame, Guillaume de Champeaux. Dès le Moyen Âge, la personnalité d’Hugues de Saint-Victor suscite
+          l’admiration, quand il ne s’agit pas de vénération. Les lointains descendants de ces admirateurs semblent bien être les exégètes et les
+          érudits contemporains sur lesquels le charme du plus fameux des auteurs victorins s’exerce encore. Toutefois, l’intérêt qui entoure ce
+          penseur n’a pas son équivalent philologique. En effet, ses œuvres sont le plus souvent connues et citées d’après la <hi rend="i">Patrologie
+            latine</hi> de Migne qui reproduit l’édition donnée par les chanoines de Saint-Victor de Paris au <num>xvii<hi rend="sup">e</hi></num> siècle. Le
+          domaine de la recherche textuelle a réservé et réserve donc encore des découvertes capables de modifier sensiblement l’interprétation de la
+          pensée hugonienne. <lb/>Le <hi rend="i">De vanitate mundi</hi> s’inscrit dans le projet général hugonien de restaurer l’image de Dieu dans
+          l’homme blessé par le péché. La quête de l’unité intérieure par la contemplation est la but assigné par Hugues à son ouvrage. Pour en mieux
+          saisir les enjeux littéraires et doctrinaux, il convient au préalable d’en restaurer la <hi rend="i">littera</hi>, seule à même d’enrichir
+          notre connaissance de la pédagogie d’Hugues de Saint-Victor.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’Imprimerie nationale est un établissement prestigieux, figurant parmi les plus grandes imprimeries au monde, fondée en 1640 et attachée
+          au service des ministères et des administrations centrales, dont elle est, d’après la loi, l’imprimerie exclusive. Or ses détracteurs sont
+          nombreux et remettent en cause autant son fonctionnement que son monopole : entre 1870 et 1910, elle est donc soumise à de vives attaques.
+          Il convient de se demander comment fonctionne une imprimerie d’Etat à la fin du <num>xix<hi rend="sup">e</hi></num>  siècle, afin de voir de quelle
+          façon elle gère les contraintes qui pèsent sur elle et les avantages qu’elle retire de son statut d’établissement public. Cette monographie
+          montre combien « la Nationale » constitue un cas à part dans l’histoire de l’imprimerie. En outre elle permet de s’interroger sur la place
+          d’une imprimerie d’Etat dans le contexte de libéralisme économique de la fin du <num>xix<hi rend="sup">e</hi></num>  siècle : l’Imprimerie nationale
+          est en effet l’une des premières expériences de régie industrielle publique. Pourquoi l’Etat choisit-il d’intervenir directement, par le
+          biais de son imprimerie, dans l’activité industrielle, dans la vie sociale mais aussi dans la production culturelle ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La diversité des sources traduit la multiplicité des angles d’approche du sujet. Les « archives d’entreprise », manuscrites ou imprimées,
+          conservées essentiellement au Centre historique des Archives nationales (CHAN), dans la sous-série AJ<hi rend="sup">17</hi> , et à la
+          bibliothèque de l’Imprimerie nationale, concernent le statut, les finances, le personnel et l’activité de l’établissement. Deuxième type de
+          sources, les archives des ministères, administrations et institutions auxquels l’Imprimerie nationale a eu affaire, qu’il s’agisse de ses
+          ministères de tutelle (ministère de la justice, puis ministère des finances) ou de ses clients, se trouvent pour la plupart au CHAN.
+          Troisième type de sources, les archives des directeurs sont constituées de dossiers de personnel et surtout de correspondances privées, très
+          instructives, et sont essentiellement conservées dans des bibliothèques parisiennes (Bibliothèque historique de la Ville de Paris ;
+          département des manuscrits de la Bibliothèque nationale de France ; Bibliothèque de l’Institut) mais aussi à la bibliothèque municipale de
+          Rouen pour le directeur en poste pendant la Commune. Le dernier type de sources, directement lié à la bataille autour du maintien et de la
+          réorganisation de l’Imprimerie nationale, est constitué surtout de documents imprimés : presse, brochures, textes législatifs et
+          réglementaires, travaux parlementaires. Enfin, des sources iconographiques (plans et photographies) illustrent l’étude des locaux et du
+          personnel.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

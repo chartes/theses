@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>L'histoire de l’Église est un domaine vaste, qui a fait l'objet de nombreuses études dès avant la Révolution. De multiples champs d'étude ont été bel et bien explorés par les chercheurs dès la fin de l'époque moderne, et ont connu des développements croissants avec l'essor des sciences historiques au milieu du <num>xix<hi rend="sup">e</hi></num> siècle. Cet éventail s'est considérablement enrichi au <num>xx<hi rend="sup">e</hi></num> siècle sous l'influence de l'histoire économique et sociale, et par l'action de l'archéologie – plus particulièrement de sa composante qui est l'archéologie du bâti, discipline qui permet aujourd'hui de revisiter une part importante du patrimoine subsistant ou disparu et qui s'avère être un outil appréciable pour l'histoire des structures restées debout. Cette variété des angles d'approche n'a cependant pas épuisé la richesse du sujet. En particulier, la question du quotidien et du mode de vie des ecclésiastiques et des personnels gravitant autour d'eux n'a encore que rarement été posée. Si on a pu étudier l'héritage architectural et artistique de l'Église, on ne s'est que peu intéressé aux chanoines, dignitaires, chapelains, voire aux officiers laïcs, qui entretenaient les édifices, commandaient les objets, ou assuraient le bon déroulement du culte. Certes, les ouvrages sur le monde canonial et les groupes cathédraux se sont multipliés au <num>xx<hi rend="sup">e</hi></num> siècle, mais c'est omettre une chose : il s'agit rarement d'une approche concrète de la vie des hommes concernés. Ce constat renouvèle les interrogations quant à la place des clercs dans les hiérarchies sociales et à leur insertion dans un habitat local, et porte à se tourner vers un milieu bien connu en apparence, mais dont les traces archivistiques et architecturales n'ont été que partiellement exploitées : le monde des chanoines.</p>
+          <p>Ce thème comporte un avantage certain : si toutes les communautés canoniales semblent fonctionner d'après le même modèle, leur nombre écrasant est une assurance de diversité. Même sur le plan individuel, le chanoine, trop souvent réduit à son rôle de desservant plus ou moins assidu des cathédrales ou des collégiales, est en réalité un individu complexe, rattaché toujours de par ses activités à l’Église universelle, ouvert souvent par le jeu des carrières à un horizon plus large que son diocèse, imprégné même parfois d'une culture étrangère à son lieu d'exercice. Les évolutions de la règle de Chrodegang et l'apparition de nouvelles pratiques communautaires ont fini par faire des chanoines des clercs séculiers, vivant parmi les laïcs en observant toutefois un certain nombre d'obligations communes. Le cas du tout premier chapitre historique, à Metz, est prometteur, car les aléas de l'histoire l'ont placé sur un terrain intéressant, l'ancienne Lotharingie, relevant du Saint-Empire dès la fin de l'époque carolingienne, mais restant culturellement lié à l'ancien royaume franc. L'histoire et l'historiographie locales amènent à restreindre le champ d'analyse à la période médiévale, plus exactement à la période comprise entre 1200 et les années 1520. Il faut préciser dès maintenant qu'il s'agit de l'époque traditionnellement considérée comme l'apogée de la ville, ce qui ne peut que garantir la richesse de toute étude concernant ces trois siècles de Bas Moyen Âge messin.</p>
+          <p>Il est possible d'avoir un aperçu des usages quotidiens et du cadre de vie des chanoines de la cathédrale de Metz, dans la mesure où l'habitat canonial est encore relativement présent dans la topographie urbaine. Ce champ d'étude a été effleuré par le passé à travers l'étude topographique des groupes cathédraux, voire des quartiers canoniaux. Un mouvement général d'explosion des cloîtres canoniaux au <num>xii<hi rend="sup">e</hi></num> siècle a abouti à l'apparition des « maisons canoniales » au début du <num>xiii<hi rend="sup">e</hi></num> siècle. Les chanoines, renonçant alors définitivement à la vie commune, ont choisi de vivre dans des résidences particulières parmi la masse des laïcs. Les « quartiers canoniaux » marquent les secteurs urbains alors privilégiés par les chanoines, mais leur réalité est parfois aléatoire. À Metz, la topographie canoniale et son insertion dans la cité restent des sujets un peu flous, d'autant que le contexte de grande mutation des années 1200 remet en cause les équilibres anciens. Autre question afférente, personne ou presque ne s'est réellement penché sur les maisons en elles-mêmes. Un chanoine ayant l'avantage, énorme pour le Moyen Âge, de disposer de revenus stables et réguliers, il est normal que son logis reflète son aisance. La question des arts mobiliers et décoratifs se pose en conséquence au sujet des maisons canoniales, de même que celle de leur structure et des activités qu'elles pouvaient accueillir. L'enjeu est ici de déterminer si une maison canoniale se distinguait de par son style ou sa composition d'une maison bourgeoise ou patricienne, d'autant que, règle oblige, un chanoine devait se plier à certains règlements concernant sa résidence.</p>
+          <p>L'étude de cet habitat canonial actualise ainsi certains points de l'historiographie locale et en particulier la question d'un certain tropisme italien imprégnant la cité. Elle suscite aussi un renouvellement en profondeur de la connaissance de l'architecture messine par une analyse complète d'un corpus de maisons bien identifié. Le statut social des chanoines s'en trouve également éclairé d'un jour nouveau.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sont essentiellement constituées de documents manuscrits conservés aux archives départementales de la Moselle. La quasi-totalité des archives du chapitre cathédral s'y trouve. Les plus anciennes pièces remontent au Haut Moyen Âge, mais le fonds ne gagne en substance qu'à partir du <num>xiii<hi rend="sup">e</hi></num> siècle. On y trouve de nombreux papiers de gestion, des titres de propriété, des statuts capitulaires, des pièces de procès, une liste à peu près fiable des dignitaires, ainsi qu'un corpus de documents privés regroupant des testaments de chanoines, mais aussi des dossiers de succession, des inventaires après décès et quelques contrats d'anniversaire. C'est une ressource très précieuse pour mieux appréhender l'environnement quotidien des chanoines et certaines de leurs activités. Au-delà de l'aspect institutionnel et prosopographique, le fonds du chapitre comprends des documents de nature foncière, principalement le fonds de la Maisonnerie, service en charge de la gestion patrimoniale, classé par rues, mais pour lequel nous n'utilisons qu'un quart des documents subsistant, à savoir la partie concernant les maisons canoniales et leur voisinage. Ces documents permettent de mieux cerner les activités de la Maisonnerie en tant qu'institution, et d'avoir une vision plus nette du tissu urbain dans lequel s'insèrent les chanoines. Le fonds du chapitre est complété par un dépôt privé issu de l'actuel chapitre cathédral, qui a confié aux archives départementales certains documents récupérés après la Révolution, principalement les statuts médiévaux, et les registres de conclusions capitulaires conservés depuis 1344.</p>
+        <p>La bibliothèque municipale de Metz conserve un certain nombre de manuscrits et d'incunables provenant directement du trésor ou de la bibliothèque du chapitre médiéval. Parmi ces ouvrages se distinguent quelques manuscrits directement utiles, parce qu'ils portent des indications sur les possessions du chapitre au Moyen Âge ou à l'époque moderne. De nombreux autres livres nous renseignent sur les goûts et les sujets d'étude des membres du chapitre, mais cela n'est qu'un point accessoire pour la compréhension du mode de vie canonial. La bibliothèque municipale conserve en revanche un instrument important qui est le plan Belle-Isle, datant de 1738, et qui a l'avantage de nous montrer la voirie et un cadastre sommaire de la ville de Metz avant de grandes campagnes d'urbanisme lancées dans les années 1740. Il s'agit d'un témoignage unique montrant la ville de Metz dans une configuration encore à peu près médiévale. On pourra enfin y consulter les chroniques médiévales.</p>
+        <p>On peut compléter notre examen du patrimoine capitulaire au moyen de quelques documents conservés à la Bibliothèque nationale de France, notamment le cartulaire-censier du chapitre élaboré en 1330.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

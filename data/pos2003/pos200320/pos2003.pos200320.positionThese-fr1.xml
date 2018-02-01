@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p><hi rend="i">Adémar de Chabannes (989-1034). </hi> — Moine de Saint-Cybard d’Angoulême et de Saint-Martial de Limoges où il fit ses
+          études, Adémar de Chabannes est un personnage bien connu des historiens, car son œuvre la plus célèbre est une <hi rend="i">Chronique</hi>
+          en trois livres dont le livre III est très précieux pour notre connaissance de l’Aquitaine au <num>x<hi rend="sup">e</hi></num>  siècle et au début du
+          <num>xi<hi rend="sup">e</hi></num>  siècle. Il fut un inlassable copiste ­ plus de mille feuillets de sa main ont été conservés ­, pourvu d’une bonne
+          culture, et s’intéressa aussi bien à la musique qu’aux fables de Phèdre.</p>
+        <p>L’engagement de sa vie fut la défense acharnée de l’apostolicité de saint Martial, premier évêque de Limoges, envoyé selon Grégoire de
+          Tours par le pape au <num>iii<hi rend="sup">e</hi></num>  siècle pour évangéliser cette ville, et dont les moines de l’abbaye de Saint-Martial
+          décidèrent, probablement pas avant les années 1020, de faire un apôtre, contemporain du Christ, présent à la résurrection de Lazare comme à
+          la Cène, ayant reçu comme les autres apôtres l’Esprit saint au jour de la Pentecôte, cousin de saint Pierre et parent du premier martyr, le
+          diacre Etienne. Il s’agissait pour les moines de Saint-Martial de glorifier leur patron, de faire s’accroître la dévotion des fidèles à son
+          égard, afin d’attirer l’argent nécessaire à la construction d’une nouvelle église abbatiale, plus grande, et de contrer la concurrence
+          d’autres saints de cette région, comme saint Front à Périgueux. C’est ainsi que fut réélaborée une <hi rend="i">Vie</hi> de saint Martial,
+          au début des années 1020, que les moines voulurent attribuer à Aurélien, successeur supposé de Martial à la tête de l’évêché de Limoges :
+          c’est la « Légende aurélienne ». Et il semble que ce soit Adémar lui-même qui ait été à l’origine d’une nouvelle version de celle-ci, encore
+          plus apostolique, vers 1027-1028, la <hi rend="i">Vita prolixior</hi>.</p>
+        <p>Toute une nouvelle liturgie célébrant Martial comme apôtre et non plus comme confesseur fut alors préparée par Adémar et devait être
+          inaugurée le 3 août 1029. Mais l’intervention d’un moine piémontais, Benoît de Cluses, qui démontra le caractère apocryphe de cette Vie et
+          nia que Martial pût être de quelque façon apôtre du Christ, fit tout échouer : ce fut une profonde humiliation pour Adémar, un grave échec
+          qui le conduisit à élaborer entre 1029 et 1033 tout un dossier de faux, voulant prouver l’apostolicité de Martial. Ce fut pendant cette
+          période qu’il composa ses sermons, œuvre de combat contre ses détracteurs. En 1033, il partit pour la Terre sainte en laissant tous ses
+          manuscrits à l’abbaye de Saint-Martial ; il y mourut l’année suivante.</p>
+        <p><hi rend="i">Les sermons du manuscrit BnF 2469. </hi> — Quarante-six sermons sont contenus dans les ff. 1-97 du manuscrit BnF lat. 2469.
+          Le seul autre manuscrit comportant autant de sermons d’Adémar de Chabannes est le manuscrit Phillipps 1664 de la Staatsbibliothek de Berlin,
+          qui fut partiellement édité en 1999 par Bruno Bon dans le cadre d’une thèse de l’Ecole des chartes.</p>
+        <p>Les érudits ont commencé par relever dans ces sermons des détails d’archéologie et d’histoire locales ; puis les historiens du mouvement de
+          la Paix de Dieu s’y sont intéressés, car l’on peut y trouver maintes allusions à la Paix. Mais le thème de la défense de l’apostolicité de
+          saint Martial n’a en revanche été que peu étudié jusqu’à présent.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

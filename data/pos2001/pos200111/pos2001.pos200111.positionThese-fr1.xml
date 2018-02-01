@@ -1,0 +1,106 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Guy Patin (1601-1672), doyen de la Faculté de médecine de Paris, éditeur de textes anciens, collectionneur de livres et membre de la
+          République des lettres, eut de son vivant une notoriété qui suscita l’édition de sa correspondance dix ans après sa mort. Cet engouement
+          s’explique par la richesse de ses lettres, qui traitent de l’histoire politique de la France, particulièrement mouvementée alors (la guerre
+          de Trente Ans, la rébellion de Gaston d’Orléans et la révolte du Languedoc, la succession de Louis XIII, la régence et la Fronde, les
+          ministères de Richelieu et de Mazarin, celui de Colbert, les problèmes soulevés par le jansénisme…), comme des problèmes relatifs aux
+          nouveautés thérapeutiques du temps, auxquelles la Faculté de Paris résista âprement (la découverte de la circulation du sang par William
+          Harvey en 1628 et celle du réservoir du chyle par Jean Pecquet en 1647, le développement d’une médication chimique avec les remèdes
+          antimoniaux, l’introduction du quinquina en France…). Cette correspondance fournit aussi de multiples renseignements sur les cercles érudits
+          parisiens, où frayait Guy Patin, ami de Naudé, de Gassendi, de Montmort, de Bochart et de Vossius. Réunie dans deux recueils manuscrits
+          (Bibl. nat. de France, fr. 9357 et 9358), cette correspondance fut rééditée quinze fois dans les cinquante années suivantes, preuve de son
+          succès.</p>
+        <p>Dès la première édition cependant, les erreurs se multiplièrent: dates erronées, mauvaise lecture de noms propres, tableaux adoucis ou
+          censurés, lettres au contenu à peu près similaire fondues en une seule, absence totale d’apparat critique… La verdeur du langage de Guy
+          Patin fit disparaître de l’édition des pages entières. Quatre années de sa correspondance (1651-1654) disparurent presque intégralement, car
+          elles n’appartenaient pas aux mss fr. 9357 et 9358, mais au ms Bibl. nat. de France, Baluze 148, volume ignoré de tous les éditeurs.
+          Soixante-six lettres autographes de Guy Patin s’y trouvaient, pour la période du 14 juin 1651 au 5 février 1655. Adressées à son proche ami,
+          le médecin lyonnais Charles Spon, elles offraient le spectacle mouvementé des derniers mois de la Fronde, donnaient un intéressant tableau
+          de la vie médicale à Paris et de la Faculté de médecine dont Guy Patin était alors le doyen en exercice, et fournissaient de multiples
+          renseignements sur le milieu éditorial de Paris et de la province, au hasard des recherches bibliophiliques de ce médecin lettré. C’est de
+          ces trois sujets que le commentaire de la présente édition a souhaité rendre compte.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>En plus du volume 148 de la collection Baluze, les deux manuscrits fr. 9357 et 9358 ont été abondamment cités, tant dans l’apparat
+          critique des lettres que dans le commentaire introduisant l’édition. Ils ont permis de préciser l’opinion de Guy Patin sur des personnages
+          et des faits évoqués, en nuançant certaines des opinions assez vivement marquées dans la présente édition. Les comptes rendus manuscrits
+          établis par les doyens de la Faculté de la médecine ont eux aussi aidé à la compréhension de la vie médicale entre 1651 et 1655: il s’agit
+          en particulier des <hi rend="i">Commentarii Facultatis Medicinæ</hi>, registres conservés par la Bibliothèque inter-universitaire de
+          médecine de Paris (ms 12-14).</p>
+        <p>L’identification des événements et des hommes a été faite à partir d’histoires généalogiques, de prosopographies (du milieu parlementaire,
+          des intendants…), de dictionnaires (sur les financiers, les libraires et imprimeurs, les docteurs-régents de la Faculté de médecine de Paris
+          ou de Montpellier…), d’études sur la Fronde, sur la médecine et la société du premier <num>xvii<hi rend="sup">e</hi></num> siècle. La comparaison avec
+          d’autres mémoires du temps, en particulier avec les mémoires et les journaux sur la Fronde, a semblé propice à situer l’épistolier parmi ses
+          contemporains.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,100 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Chrétien-Guillaume de Lamoignon de Malesherbes est un personnage bien connu. Cette notoriété est due à son origine familiale, puisqu’il est
+          le fils du chancelier Lamoignon, et à ses fonctions : premier président de la Cour des Aides, directeur de la librairie, puis secrétaire
+          d’État à la Maison du Roi et ministre sans portefeuille et enfin avocat de Louis XVI lors de son procès. De nombreuses études lui ont été
+          consacrées, retraçant sa carrière de juriste et d’administrateur ou ses opinions sur les lettres de cachet et les protestants ; néanmoins,
+          une partie de sa vie n’a pas encore été explorée, alors même qu’elle éclaire le personnage et ses centres d’intérêt de façon nouvelle. Il
+          s’agit des voyages que Malesherbes a pu effectuer quand ses obligations officielles lui en laissaient le temps.</p>
+        <p>Ces voyages se déroulent en 1751 en Auvergne, en 1767 dans une partie des Alpes, la Provence et les Pyrénées, en 1776 dans le Bordelais et
+          les Landes, puis en Hollande, en 1778 en Franche-Comté et dans les Alpes suisses, et enfin en 1779 en Bretagne et en Normandie. D’autres
+          périples, notamment en Italie et en Amérique, ont été projetés, qui n’ont pu être réalisés, en raison de son âge et de ses obligations. Il a
+          cependant trouvé en 1791-1792 la force d’aller rendre visite à sa fille en exil en Suisse.</p>
+        <p>Lors de ses différentes pérégrinations, Malesherbes note au jour le jour sur des carnets ou dans des lettres son trajet, des observations
+          et des réflexions qui permettent de comprendre sa façon d’appréhender le voyage. Il rend ainsi compte de son intérêt pour les matières
+          scientifiques et économiques (botanique, minéralogie, agronomie, industrie, etc.) et se pose en passeur d’informations, qui se renseigne sur
+          place et transmet le fruit de ses observations au monde savant. Ce sont ces carnets qui font l’objet ici d’une édition critique
+          partielle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives de Guillaume-Chrétien de Lamoignon de Malesherbes sont réparties en trois fonds : le chartrier du château de Malesherbes,
+          conservé aux Archives nationales, et ceux du château de Rosanbo et de Tocqueville, en mains privées, mais néanmoins consultables sous la
+          forme de microfilms aux Archives nationales. Parmi ces trois fonds abondants, divers éléments concourent à la connaissance de Malesherbes
+          voyageur. On trouve ainsi les carnets de voyage proprement dits, très succincts pour le voyage de 1751, plus détaillés pour les voyage, de
+          1767, 1776, 1778 et 1779. Mais ces carnets ne peuvent être compris sans le reste des papiers. Ils sont en effet complétés par une
+          correspondance abondante, par des comptes détaillés, par des listes de livres présents dans la bibliothèque de Malesherbes et enfin par des
+          mémoires techniques. Ces mémoires sont des textes scientifiques thématiques reconstruits après le retour de voyage, à l’aide des
+          informations récoltées sur place, de lectures et de discussions ; ils se veulent une somme de connaissances sur divers éléments (à titre
+          d’exemple représentatif, on peut citer « sur les volcans », « pruniers », « procédés pour faire le fromage », etc.). Ils ont été inventoriés
+          et certains sont édités en annexe.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

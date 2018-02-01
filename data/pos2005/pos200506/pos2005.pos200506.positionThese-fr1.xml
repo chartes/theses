@@ -1,0 +1,104 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La défaite de la France et la mise en place du régime de Vichy marquent une rupture irréparable en Tunisie comme dans tout l’Empire
+          colonial français. Diminuée, la France doit pourtant continuer à offrir son visage de puissance protectrice aux populations « indigènes »
+          qui murmurent. Cette domination française trouve une expression essentielle dans les manifestations culturelles et apprécier la présence
+          française en Tunisie au travers de la vie culturelle peut être un biais pour aborder cette période dans tous ses paradoxes. Il convient dès
+          lors de se poser la question de la place et du rôle dans la vie culturelle de la Régence d’une communauté particulière, minoritaire en
+          nombre mais dominante sur le plan politique et dans une situation d’occupant. Il s’agit de voir comment la colonie a mis en place une
+          société culturelle dans un territoire qui lui est étranger, de se demander comment celle-ci a pu se raccrocher à une culture française
+          élevée au premier rang dans cette nostalgie de l’exil, pourtant volontaire, comment cette culture a pu être vécue comme une affirmation
+          identitaire, un rempart contre le métissage si diabolisé au temps des colonies, mais aussi comment a pu se développer une culture qui se
+          veut régionale, sensible donc, en apparence, au territoire où elle vit, aux habitants et à leur culture et désireuse de se faire reconnaître
+          par le juge parisien, si contesté mais dont on ne peut se passer. Il convient de s’intéresser à la place des Français dans la vie culturelle
+          tunisienne même : comment ceux-ci considèrent-ils la culture tunisienne ? Comment influent-ils sur cette vie culturelle que ce soit par le
+          contrôle, la censure, mais aussi par l’introduction de nouveaux instruments de diffusion ? Avec le développement des techniques de
+          propagande dans les années de pré-guerre, puis de guerre, se mettent en effet en place de nouveaux outils de diffusion qui, introduits à des
+          fins de pure propagande, vont pourtant avoir un impact considérable dans la vie culturelle en Tunisie. Par ailleurs ces années de guerre
+          correspondent, en dépit (à cause ?) des restrictions et des difficultés, à un bouillonnement culturel et à un appétit de culture dans toute
+          la mosaïque tunisienne. Alors que les situations politiques sont constamment mouvantes, avec la coupure des relations avec la métropole, la
+          naissance d’une nouvelle capitale à Alger, la question de la place de la Tunisie dans la vie culturelle de l’Empire durant la guerre est
+          également une clé essentielle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les fonds d’archives dépouillés se répartissent principalement entre les archives du ministère des Affaires étrangères à Nantes et à Paris,
+          les Archives nationales de Tunisie et le Centre historique des Archives nationales, à Paris. Les informations, souvent dispersées, font
+          mieux prendre la mesure de l’intérêt ou du désintérêt porté par les administrateurs pour le domaine culturel et du champ d’intervention de
+          la Résidence Générale. Ces archives restent malheureusement très lacunaires quant à la description du public des manifestations
+          culturelles.</p>
+        <p>La presse est également un élément essentiel. La presse d’information, son contenu et ses tendances politiques n’entrent pas en tant que
+          tels dans le cadre de cette étude. Les revues, par contre, ont été étudiées pour elles-mêmes : non plus seulement pour les informations
+          disséminées sur la vie culturelle tunisienne, mais en tant qu’acteurs de cette vie culturelle. Autre source mise en parallèle avec le
+          matériau livré par les revues, mais qui demande une autre méthode d’investigation, les pages littéraires hebdomadaires des quotidiens, où
+          figurent souvent des auteurs familiers des revues littéraires de la Régence.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

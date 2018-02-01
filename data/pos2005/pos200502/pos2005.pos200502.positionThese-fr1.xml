@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le <num>xii</num>
+<hi rend="sup">e</hi> siècle est une époque florissante dans bien des domaines et riche en nouveautés. Cette période charnière se
+          caractérise par des rapports nouveaux tant entre Dieu et les hommes qu’entre les pouvoirs et leurs sujets, l’Église et les chrétiens, la
+          culture et les lettrés. Les hommes sortent alors d’un monde qui tire encore des temps carolingiens ses principales références : l’importance
+          de l’Empire, même s’il est fractionné en une multitude de dominations ; la puissance temporelle des clercs, notamment des évêques ; le
+          monopole culturel du monachisme bénédictin et clunisien. Cet héritage se brise au <num>xii</num>
+<hi rend="sup">e</hi> siècle : naissent alors des états nationaux comme la France et l’Angleterre, qui font reculer l’idée d’Empire dans ces
+          parties de l’Occident ; l’Église voit son pouvoir temporel diminuer, alors que les monastères et les écoles épiscopales sont concurrencés
+          par des maîtres qui installent leurs écoles hors de la juridiction directe des évêques. Les hommes s’intéressent davantage à la scolastique,
+          à la philosophie et à une appréhension plus rationnelle de la foi qu’à la quête spirituelle faite dans la prière des cloîtres et dans
+          l’enseignement traditionnel. De nouveaux groupes religieux naissent et contestent l’Église en place ; certains, comme les Cathares, font
+          renaître des hérésies du début du christianisme. L’élan culturel et spirituel est grand, comme le montrent les premières constructions de
+          cathédrales de style ogival au milieu du siècle.</p>
+        <p>C’est dans ce bouillonnement intense que vécut Arnoul de Lisieux, évêque d’une grande complexité, aux nombreux paradoxes, dont une courte
+          biographie précède l’étude des sermons. Cet homme polyvalent, comme il en existait beaucoup jusqu’au <num>xii</num>
+<hi rend="sup">e</hi> siècle, capable d’être un homme d’Église, un homme d’État, un homme de lettres, nous a laissé deux témoignages
+          remarquables de son épiscopat : la cathédrale de Lisieux et son œuvre littéraire, qui, bien que réduite et peu connue, est d’un grand
+          intérêt. Cette œuvre comprend notamment quatre sermons, qui n’ont jamais été édités intégralement ; le texte qu’en ont donné Giles et Migne
+          est partiel et repose sur un manuscrit tardif, aux erreurs assez fréquentes. Il convenait donc de proposer une nouvelle édition de ces
+          sermons, plus proche des originaux disparus et plus complète.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude codicologique et l’édition s’appuient sur seize manuscrits : Berne, bibl. mun. 568 ; Cambridge, Corpus Christi College 273 ;
+          Cambrai, bibl. mun. 211 ; Oxford, Bodleïan auct. I, 8 ; Oxford, Saint-John College 126 ; Paris, Bibl. nat. France, lat. 491, lat. 2594, lat.
+          2595, lat. 13219, lat. 14168, lat. 14763, lat. 15166, lat. 17468 ; Turin, biblioteca nazionale D. IV. 32 ; Vatican, Regin. lat. 244 et Vat.
+          lat. 6024.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Saint Jean Baptiste, le Précurseur du Christ, est un personnage de grande importance dans la hiérarchie des saints. La Bible relate plusieurs épisodes de sa vie, que l’on peut répartir en trois ensembles. Le premier est celui de sa naissance, présentée par l’évangéliste Luc en parallèle de la naissance du Christ : l’ange Gabriel vient annoncer au vieux prêtre Zacharie, pendant qu’il officie au Temple, qu’il aura un fils de sa femme Élisabeth, qui est âgée et stérile ; le vieux prêtre refuse de le croire et devient muet. Plus tard, Élisabeth, enceinte de six mois, reçoit la visite de sa cousine Marie, qui est elle-même enceinte du Sauveur ; le petit Jean, saisi par l’Esprit saint, tressaille en entendant la Vierge Marie. À sa naissance, lorsqu’on le circoncit, Jean reçoit de sa mère un nom qui sort de la tradition familiale ; les parents étonnés demandent donc son opinion à Zacharie, toujours muet, qui confirme par écrit que le nom de l’enfant est Jean. Le vieillard retrouve alors la parole et chante un cantique d’action de grâces dans lequel il annonce le rôle prophétique de son fils. Le second ensemble d’événements de la vie de Jean Baptiste est celui de sa vie publique : conformément à la prédiction de son père, il appelle le peuple d’Israël à la conversion ; il désigne publiquement Jésus comme l’Agneau de Dieu, et il le baptise dans les eaux du Jourdain. Enfin, le troisième ensemble d’épisodes est celui qui conduit Jean Baptiste au martyre : il rencontre le roi Hérode pour lui signifier son opposition à son mariage adultérin et incestueux avec sa belle-sœur Hérodiade, ce pourquoi le roi le fait mettre en prison et la reine le prend en haine. De sa prison, Jean Baptiste envoie ses disciples demander à Jésus une confirmation du fait qu’il est bien le Messie. Ensuite, lors du banquet d’anniversaire d’Hérode, la fille d’Hérodiade le séduit par sa danse et, conseillée par sa mère, lui demande la tête de Jean Baptiste. Le roi fait alors exécuter le prophète.</p>
+          <p>Le premier et le dernier de ces groupes d’événements sont l’occasion chacun d’une fête liturgique, le 24 juin pour la Nativité et le 29 août pour la Décollation, c’est-à-dire le martyre par décapitation. L’existence de deux fêtes célébrant des moments de sa vie est une des particularités du culte de saint Jean Baptiste : sauf la Vierge, aucun autre saint ne bénéficie d’un tel honneur. Des études ont déjà été réalisées sur le culte et l’iconographie d’un saint, comme saint André ; l’aspect liturgique du culte du saint n’a alors guère été étudié. Jusqu’ici, aucune étude n’avait jamais lié l’iconographie d’une partie de la vie d’un saint à la fête liturgique qui célèbre ces événements.</p>
+          <p>Saint Jean Baptiste est un saint très honoré, et sa naissance a souvent été représentée. Le grand nombre des images disponibles a contraint à se limiter à l’espace français de la fin du Moyen Âge. L’existence de très nombreuses sources, tant textuelles qu’iconographiques, autour de 1200 a conduit à faire commencer la période étudiée à la toute fin du <num>xii<hi rend="sup">e</hi></num> siècle ; compte tenu de l’ébranlement à la fois religieux et artistique qui a lieu dans la première moitié du <num>xvi<hi rend="sup">e</hi></num> siècle, l’étude s’arrête au premier quart de ce siècle.</p>
+          <p>On cherche à mettre en regard, autant que faire se peut, les textes rédigés pour la fête de la Nativité de saint Jean Baptiste, le 24 juin, ou au sujet des faits que cette fête commémore, avec les images qui les représentent. Quelle est la part des sources qui provient de l’institution ecclésiastique et suppose sa médiation ? Et dans quelle mesure, au contraire, les laïcs se saisissent-ils des épisodes de cet événement et des images qui les représentent ? Les différentes origines des sources changent-elles la façon dont sont traités l’annonce de l’ange à Zacharie, les relations du petit Jean avec la Vierge Marie qui vient visiter sa mère Élisabeth et la place de chacun dans la famille qui accueille ce petit enfant ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Deux types de source ont été employés : des textes et des représentations iconographiques. Les premiers sont de natures diverses : hagiographies, commentaires patristiques de la Bible, homélies patristiques, traités liturgiques, encyclopédies. Les sources iconographiques sont réparties sur quatre supports : peinture murale, sculpture, vitrail et enluminure.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>L’intérêt croissant pour l’histoire du costume en a fait un objet d’étude historique à part entière. Les travaux sur l’histoire de la cour – et sur le costume de cour d’une manière plus spécifique –, s’inscrivent dans un renouveau historiographique qui prend son essor dans la seconde moitié du <num>xx</num><hi rend="sup">e</hi> siècle. L’histoire du vêtement participe désormais pleinement de la recherche historique et non plus seulement de l’histoire de l’art. Longtemps considéré comme appartenant à la « petite histoire », ce domaine d’étude a acquis ses lettres de noblesse il y a plusieurs années avec des travaux liés surtout aux cours princières du Moyen Âge, de Bourgogne, d’Anjou ou encore de Savoie. Le costume de cour au <num>xvi</num><hi rend="sup">e</hi> siècle est un sujet nouveau, qui bénéficie d’une bibliographie récente. La description des costumes portés à la cour est une particularité récurrente des relations et correspondances officielles du <num>xvi</num><hi rend="sup">e</hi> siècle et confirme l’importance de consacrer une recherche à part entière sur ce sujet. En s’intéressant à un règne long et aussi emblématique que celui de François I<hi rend="sup">er</hi>, ont pu être ainsi démontrés l’importance de la mode à la cour de France ainsi que le rôle moteur joué dans ce domaine par le roi et la reine dans la première moitié du siècle. En effet, avant même le règne d’Henri III, le vêtement et les codes qui l’accompagnent sont une des spécificités de la cour de France de la Renaissance. </p>
+		<p>Deux axes d’études ont ainsi pu être dégagés. Dans un premier temps, il convient de s’attarder sur l’étude des garde-robes de François I<hi rend="sup">er</hi> et Éléonore d’Autriche d’après ce que peuvent en apprendre les comptes de l’Argenterie (service chargé de l’approvisionnement des garde-robes royales). L’histoire des garde-robes royales est liée à l’histoire institutionnelle et économique. C’est en effet en cherchant à comprendre la part – notamment budgétaire – que prend l’Argenterie dans la maison du roi et comment elle fonctionne, qu’on peut appréhender la « politique vestimentaire » de François I<hi rend="sup">er</hi>. Pour cette première partie, on s’est attaché à une garde-robe « de tous les jours » : les recherches sur les matières premières ainsi que sur la structure même des vêtements royaux permettent de comprendre comment était fabriqué et articulé le costume de cour au début du <num>xvi</num><hi rend="sup">e</hi> siècle. L’évolution des formes, et donc de la mode, est perceptible, et nous donne un aperçu du costume de cour, mieux connu, des derniers Valois. </p>
+		<p>La seconde partie de cette thèse porte sur le vêtement à la cour d’une manière plus générale, à travers l’étude de quelques garde-robes de courtisans. L’importance du costume de cour est capitale, dans la mesure où il est un marqueur directement visible du rang et de la richesse de celui qui le porte. Cette dimension importante du costume de cour n’est pas propre au <num>xvi</num><hi rend="sup">e</hi> siècle, mais les sources permettent d’exploiter cette piste à travers l’étude des dons royaux. Ces dons vestimentaires reflètent toute l’ambiguïté du paraître à la cour. Ils sont souvent réalisés afin que leurs bénéficiaires soient plus richement vêtus et participent ainsi du rayonnement du roi ou des membres de la famille royale. Les fêtes de la cour sont également un axe important de cette étude : la cour se pare alors de ses plus beaux atours, et, pour quelque temps, le noir le cède aux autres couleurs. Les entrées royales, les tournois, les bals et autres réceptions officielles sont l’occasion de revêtir des habits chargés d’or et d’argent d’un luxe extrême. La mode est enfin un aspect important de la vie politique internationale. Les échanges entre pays sont nombreux et il est intéressant de se pencher sur la question de l’influence des modes européennes entre elles. À ce titre, rien ne vaut les mariages royaux et les rencontres internationales, qui font du costume de cour un véritable outil politique. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>La première partie s’appuie presque exclusivement sur le dépouillement des comptes de l’Argenterie, conservés dans la série KK des Archives nationales. Pour la période envisagée, il en subsiste quatre. Le premier date de 1514 et concerne François d’Angoulême, juste avant qu’il ne succède à son beau-père Louis XII. Deux autres comptes se rapportent plutôt à la fin du règne et couvrent les années 1536 et 1541. Le dernier est un compte de l’Argenterie de la reine Éléonore pour l’année 1544. En ayant conscience des limites inhérentes aux sources comptables – sécheresse du vocabulaire entre autres – et du caractère épars des présents comptes, on peut néanmoins approcher partiellement le contenu des garderobes royales. Afin de compléter certains points, on s’est reporté à quelques sources complémentaires, actes conservés aux Archives nationales ou à la Bibliothèque nationale de France. </p>
+		<p>D’autres comptes, portant sur des événements particuliers, telle la rencontre en 1538 avec Marie d’Autriche, régente des Pays-Bas et reine de Hongrie, ont servi à apporter des informations supplémentaires. Les sources imprimées, compilations d’ordonnances et édits royaux, chroniques et journaux, ont été précieuses, notamment en ce qui concerne les lois relatives au commerce des draps et aux prohibitions somptuaires. Les sources iconographiques ont permis d’effectuer des comparaisons entre les longues listes de vêtements trouvées dans les comptes et l’habit représenté dans l’art, ainsi que d’illustrer un discours rendu un peu abstrait par le vocabulaire comptable. </p>
+		<p>Pour la seconde partie, l’éventail de sources utilisées est plus large. Outre les comptes de l’Argenterie, auxquels on a pu avoir recours pour presque tous les thèmes abordés dans cette recherche, ont été aussi utilisés d’autres comptes, des inventaires après décès ainsi que de nombreuses sources imprimées. Les multiples relations d’entrée royale, les récits de tournoi ou encore les lettres des ambassadeurs italiens sont ainsi venus appuyer cette étude. À chaque fois qu’il a été possible, nous avons tenté de croiser sources manuscrites et sources narratives afin notamment de vérifier l’exactitude de ces témoignages, qui ne sont pas réellement objectifs. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

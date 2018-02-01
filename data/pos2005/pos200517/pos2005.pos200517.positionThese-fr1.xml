@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les premières batailles de la guerre de Succession d’Espagne ternirent considérablement l’éclat militaire du Grand Siècle français. À la
+          fin d’un règne ouvert par la bataille de Rocroi et marqué par une glorieuse accumulation de victoires, les cuisantes défaites de Blenheim,
+          sur le Danube, en 1704, de Ramillies, dans le Brabant, en 1706, et d’Audenarde, en Flandre, en 1708, anéantirent la réputation
+          d’invincibilité gagnée par l’armée de Louis XIV et lui firent évacuer successivement la Bavière, la majeure partie des Pays-Bas espagnols,
+          la Flandre française. L’historiographie française n’a voulu considérer ces revers que comme la conséquence des choix malencontreux du
+          Roi-Soleil vieillissant, privilégiant les généraux courtisans – Tallard, Marcin et Villeroy – aux véritables chefs de guerre – Vendôme, dont
+          le talent fut entravé lors de la bataille d’Audenarde par la présence du duc de Bourgogne, petit-fils de Louis XIV, et surtout Villars. Du
+          côté adverse, ces trois batailles furent l’occasion de célébrer la valeur des généraux alliés, le prince Eugène et surtout le duc de
+          Marlborough, dont la réputation fut magistralement réhabilitée par la biographie qu’en écrivit son descendant, Winston Churchill.</p>
+        <p>Il était pourtant nécessaire de réexaminer le contexte au sein duquel s’inscrivirent ces batailles, en étudiant aussi bien les choix
+          stratégiques de la cour et des maréchaux français que le cours des campagnes de 1704, 1706 et 1708, particulièrement l’influence des aléas
+          logistiques, de la topographie et des rivalités de commandement. Il s’agissait, en second lieu, de s’intéresser aux batailles elles-mêmes :
+          leur déroulement chronologique, le rôle du général en chef, les techniques militaires employées, les perceptions vécues sur le champ de
+          bataille, dans la lignée d’une « nouvelle histoire-bataille » désireuse de replacer l’expérience du combat au centre de l’étude. L’onde de
+          choc de ces défaites complètement inattendues révèle enfin les relations de patronage et de clientèle, les tensions et les jalousies de la
+          cour.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives les plus exploitées furent celles du Service historique de l’armée de terre, notamment, dans la série A <hi rend="sup">1</hi>, les volumes de « lettres reçues » des années 1704, 1706 et 1708. On y conserve la correspondance échangée entre, d’une part, le roi
+          et Chamillart, et d’autre part, les commandants d’armée, les intendants, les gouverneurs de place, les officiers généraux. De simples
+          officiers ou des officiers parlant au nom de leur régiment pouvaient également s’adresser à la cour, que ce soit pour vanter ou défendre
+          leur propre action dans une bataille, demander charges et gratifications, ou dénoncer la mauvaise conduite de leurs supérieurs – les lettres
+          anonymes ne sont pas rares. Les renseignements ainsi obtenus – description des opérations militaires, état physique et moral des troupes et
+          des populations locales, relations de combats – ont été croisés avec ceux issus de la « correspondance politique » des Archives du ministère
+          des Affaires étrangères, c’est-à-dire les lettres échangées entre le secrétaire d’État des Affaires étrangères, ses envoyés auprès des
+          souverains alliés et ses espions à l’étranger. D’autres institutions ont été sollicitées : Bibliothèque nationale de France (département des
+          manuscrits et Arsenal), bibliothèque Mazarine, bibliothèque de l’Institut et bibliothèque du musée Condé à Chantilly. Deux derniers types de
+          sources ont été indispensables pour étudier l’expérience de la violence de guerre : les mémoires de militaires tout d’abord,  principalement
+          celles du marquis de La Colonie et du comte de Mérode-Westerloo. La série 2X<hi rend="sup">y</hi> du SHAT, c’est-à-dire les registres
+          d’inscription des Invalides, fut d’autre part une source précieuse. Ces registres mentionnent en effet, pour chaque soldat ou officier
+          admis, le type de blessure reçue et le combat au cours duquel elle a été infligée. Ces dernières informations ont été traitées à l’aide
+          d’une base de données sous MySQL.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

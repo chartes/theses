@@ -1,0 +1,92 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La France révolutionnaire est un pays en proie à des affrontements violents, au bord de la guerre civile, où les oppositions s’exacerbent.
+          Ces tensions peuvent se traduire par l’envoi de dénonciations, phénomène connu et récurrent dans l’histoire. L’époque de la Convention
+          correspond à un des moments clefs de la Révolution, sûrement celle où les oppositions sont les plus vives au sein de la nation. De
+          nombreuses lettres de dénonciation ont été envoyées à cette Assemblée de septembre 1792 au 4 brumaire an IV : nous en avons retrouvé un peu
+          plus de cinq cent. La dénonciation n’est pas, en 1792, un phénomène nouveau : nombreux sont les penseurs qui ont essayé de valoriser la
+          dénonciation « patriotique », celle qui vise à signaler des erreurs à la nation. Ceux qui prennent la plume en l’an II et en l’an III pour
+          dénoncer des représentants sont les héritiers de cette tradition. À l’aide d’une base de donnée informatique, nous avons essayé de
+          comprendre et d’analyser ces nombreuses lettres. En effet, la dénonciation est un objet d’étude pour l’historien, en ce qu’elle offre de
+          nombreux renseignements sur la relation des Français avec les événements, tant nationaux que locaux, sur leur univers mental, sur leurs
+          expériences… La dénonciation est un témoin, non pas tant de la réalité, mais de sa perception et de son instrumentalisation.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Toutes les dénonciations étudiées se trouvent aux Archives nationales. La plupart sont classées dans le fonds du Comité de législation,
+          sous les cotes D III 343-359 essentiellement, car c’est ce Comité qui a eu en charge, à partir de prairial an III, de rassembler les
+          différentes dénonciations pour en faire des rapports. Nous avons cependant trouvé des lettres dans les cartons du Comité de sûreté générale
+          surtout sur les affaires concernant les « Quatre » (Collot d’Herbois, Vadier, Barère et Billaud-Varenne) et Joseph Le Bon, mais il se trouve
+          également quelques pièces dans le fonds du Comité de salut public. Bien sûr, manque un certain nombre de lettres comme le prouve « l’État
+          général » fait par les commissaires du Comité de législation recensant toutes les lettres conservées au Comité, mais le corpus étudié donne
+          déjà une bonne idée de la production délatrice du temps.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

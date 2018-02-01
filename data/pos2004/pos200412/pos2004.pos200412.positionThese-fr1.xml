@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les <hi rend="i">ospedali</hi> vénitiens, célèbres au <num>xviii<hi rend="sup">e</hi></num> siècle pour la qualité des concerts que donnaient les
+          orphelines qui y étaient recueillies, n’intéressèrent que tardivement les historiens. Ces institutions étant à la fois des hôpitaux, des
+          hospices, des orphelinats et des conservatoires avant la lettre, elles suscitèrent toutefois l’intérêt des chercheurs en histoire sociale et
+          des musicologues à partir des années 1970. Brian Pullan et Bernard Aikema s’y intéressèrent dans le cadre de leurs travaux sur la
+          bienfaisance à Venise, tandis que Denis Arnold, Pier-Giuseppe Gillio, Madeleine Constable et Marc Pincherle étudiaient la place des <hi rend="i">ospedali</hi> dans l’histoire de la musique religieuse vénitienne. Si les quatre <hi rend="i">ospedali</hi> vénitiens (Santa
+          Maria della Pietà, les Incurabili, les Derelitti ou Ospedaletto et San Lazzaro dei Mendicanti) ont donné lieu à des articles, l’intérêt
+          apparaît nettement plus marqué pour celui de la Pietà, en raison de la présence d’Antonio Vivaldi, qui y enseigna entre 1703 et 1738. En
+          revanche, l’ <hi rend="i">ospedale</hi> des Mendicanti n’avait fait l’objet d’aucune étude monographique, malgré la présence dans ses murs
+          de musiciens exceptionnels, tels que Baldassare Galuppi ou Ferdinando Bertoni, et le nombre important de témoignages enthousiastes de
+          contemporains, parmi lesquels Jean-Jacques Rousseau, Johann Wolfgang von Goethe, le président de Brosses ou encore Charles Burney. Tous
+          louaient la qualité des musiciennes, à la fois chanteuses et instrumentistes, qui y étaient hébergées. L’étude de la vie musicale dans cet
+            <hi rend="i">ospedale</hi> entend donc s’intéresser à l’aspect artistique du sujet, mais aussi à l’aspect institutionnel : il s’agit
+          d’étudier un groupe de personnes au sein d’une institution particulière, dédiée en partie à la musique, à une époque où “ l’affolement de la
+          nation pour cet art est inconcevable ” (Charles de Brosses).</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives de l’ <hi rend="i">ospedale</hi> des Mendicanti, conservées précieusement par les notaires de l’institution, ont été
+          dispersées lors de la chute de la République de Venise, en 1797. Les archives musicales, partitions, solfèges et autres livres de musique,
+          ont toutes été perdues, mais les registres et les papiers divers produits et reçus par l’institution durant les deux cents ans de son
+          existence ont été en grande partie préservés. Les registres, les <hi rend="i">commissarie</hi>(exécutions testamentaires) et quelques
+          documents épars sont détenus par l’Istituto di Ricovero e di Educazione (I.R.E.), à Venise, sous la côte Men ; le fonds est constitué de
+          onze cartons et cinq registres intitulés <hi rend="i">Notatori</hi>, résumés dans trois <hi rend="i">Catastici e rubriche.</hi> L’Archivio
+          di Stato de Venise conserve également des documents relatifs à l’histoire de l’ <hi rend="i">ospedale</hi> des Mendicanti, dans les fonds
+            <hi rend="i">Ospedali e Luoghi pii diversi</hi> et <hi rend="i">Provveditori sopra Ospedali e Luoghi pii diversi </hi> : on y trouve
+          principalement les <hi rend="i">parti</hi>, brouillons des délibérations de la congrégation de l’ <hi rend="i">ospedale</hi>, et divers
+          documents annexes ; ces deux fonds de l’Archivio di Stato de Venise ont également fourni des documents comptables forts précieux pour cette
+          étude, en particulier des factures de luthiers et des quittances signées par les professeurs de musique. Le fonds <hi rend="i">Atti antichi
+            ospedali</hi>, conservé à Venise, à la Biblioteca di San Marco (Ospedali Civili Reuniti) s’est également révélé fort intéressant. Enfin,
+          des sources annexes, en particulier des livrets de motets et d’oratorios, ont été consultées dans diverses bibliothèques vénitiennes, en
+          particulier celle du Musée Correr, celle de la Casa di Goldoni et bien entendu la Biblioteca Nazionale Marciana.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

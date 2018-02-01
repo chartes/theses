@@ -1,0 +1,115 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Anne de Bretagne apparaît comme l’une des figures féminines les plus étudiées de l’histoire de France. Duchesse de Bretagne, deux fois
+          reine de France, cette forte personnalité qui tint un rôle primordial dans le conflit breton n’a cessé d’interroger les historiens. Adulée
+          par les Bretons en tant que symbole de l’indépendance et du particularisme de leur région, cette reine demeure encore aujourd’hui au cœur de
+          débats historiques. Les monographies qui lui sont consacrées sont légion et un très grand nombre d’aspects de son action politique et de sa
+          vie en général ont été abondamment étudiés, à tel point que s’est créé peu à peu le « mythe d’Anne de Bretagne ».</p>
+        <p>Au-delà de l’intérêt que le personnage a suscité auprès des historiens, les historiens d’art se sont également intéressés à la duchesse
+          devenue reine. Cependant, les études sur son action artistique ont été conduites sous deux angles bien définis. Une attention toute
+          particulière fut portée d’une part sur ses rapports avec le monde du livre – les enluminures dues aux commandes de cette reine sont
+          nombreuses et de qualité exceptionnelle –, et d’autre part sur le « trésor des ducs de Bretagne », mais essentiellement pour les rares
+          objets d’art qui sont parvenus jusqu’à nous.</p>
+        <p>Une étude globale sur la constitution, l’aspect et la gestion des collections d’Anne de Bretagne n’avait donc jamais été réalisée, alors
+          même que ses inventaires, mis en rapport avec d’autres sources complémentaires, en fournissent toute la matière nécessaire. C’est ainsi qu’a
+          pu être menée pour la première fois une étude sur les collections d’Anne de Bretagne dans leur ensemble.</p>
+        <p>La source principale de cette étude est le manuscrit conservé à la Bibliothèque nationale de France fr. 22335, dit « manuscrit des
+          Blancs-Manteaux ». Si ce manuscrit a été partiellement édité par Le Roux de Lincy, dans sa <hi rend="i">Vie de la reine Anne de
+            Bretagne</hi> ainsi que dans plusieurs livraisons de la <hi rend="i">Bibliothèque de l’école des chartes</hi>, il n’avait cependant
+          jusque-là jamais été édité dans son intégralité ; les études qui en avaient été faites n’étaient que partielles, chacune d’elles ne portant
+          que sur une partie de l’inventaire. Une analyse globale et précise de ce document a permis une approche à la fois générale et approfondie de
+          l’aspect et de la gestion des collections de cette reine à la fin du Moyen Âge.</p>
+        <p>La plupart des œuvres mentionnées dans ce manuscrit ont aujourd’hui disparu, mais l’intérêt de son étude pour l’histoire de l’art n’en
+          demeure pas moins primordial. L’histoire de l’art du Moyen Âge souffre en effet souvent du manque d’œuvres conservées et les inventaires
+          apparaissent justement comme un des éléments essentiels pour combler ce vide. C’est, par exemple, en partie à eux que nous devons
+          aujourd’hui notre connaissance du faste des cours princières du royaume de France aux <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles. C’est donc dans la lignée de cette approche historique que s’inscrit ce travail.</p>
+        <p>La particularité de cette étude tient également à la nature même des inventaires d’Anne de Bretagne : ce n’est pas un inventaire exhaustif,
+          réalisé après le décès du propriétaire ou de l’officier en charge des collections, mais un rassemblement, constitué a posteriori, de
+          documents qui, s’apparentant ainsi à des minutes de gestion, ne recensent qu’une partie des collections de la reine à un moment donné. Par
+          conséquent, s’ils ne fournissent pas la description de l’ensemble de ses biens, ni même d’ailleurs d’indication sur la proportion qui y est
+          représentée, ils permettent en revanche une immersion dans le quotidien des collections et de leur gestion et en donnent à voir un aspect
+          qui, bien que partiel, s’avère assurément représentatif de l’ensemble.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La source principale de cette étude est donc constituée par les inventaires communément appelés « inventaire d’Anne de Bretagne » contenus
+          au début du manuscrit composite de la Bibliothèque nationale de France fr. 22335, dont l’édition est donnée en annexe. Une partie du travail
+          a consisté à appréhender et à comprendre l’organisation de cette compilation qui apparaît, dans le panorama des inventaires princiers de la
+          fin du Moyen Âge, comme un ensemble original.</p>
+        <p>Cette source a été complétée et mise en relation avec d’autres documents. Malgré les pertes subies par la chambre des comptes de Blois,
+          certains comptes de la Trésorerie générale d’Anne de Bretagne nous sont parvenus, comme ceux des années 1492-1493, 1493-1494 et 1495-1496,
+          aux Archives nationales, et celui de 1497-1498, à la bibliothèque municipale de Nantes. Ces comptes sont particulièrement riches en
+          informations sur les artistes et les marchands au service de la reine. Un fragment de compte de l’Extraordinaire de l’Argenterie d’Anne de
+          Bretagne, conservé aux Archives nationales, est également précieux pour obtenir des renseignements sur l’habillement de la reine. Enfin,
+          nous disposons de deux états des gages des officiers d’Anne, l’un aux Archives nationales, pour les années 1492-1493, et le second aux
+          archives départementales de Loire-Atlantique, pour les années 1498-1499.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

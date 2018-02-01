@@ -1,0 +1,109 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le versant érudit de l’œuvre de Boccace est aujourd’hui en grande partie oublié du public. Or, en son temps, Boccace était surtout réputé
+          pour ses traités savants. Parmi ce type d’écrits de Boccace, ce sont surtout la <hi rend="i">Genealogia deorum</hi>, le <hi rend="i">De
+            casibus</hi>, le <hi rend="i">De mulieribus</hi> qui ont reçu la faveur des chercheurs. Le <hi rend="i">De montibus</hi>, si apprécié des
+          contemporains de Boccace, est la moins connue et la moins étudiée de ses œuvres érudites, et les jugements hâtifs et méprisants n’ont pas
+          manqué de pleuvoir sur elle. Sa connaissance, il est vrai, était rendue difficile d’accès, faute d’édition moderne, puisqu’on ne disposait
+          que des éditions du <num>xvi<hi rend="sup">e</hi></num> siècle. En outre, comparé aux autres œuvres de Boccace, tant “ littéraires ” que
+          “ scientifiques ”, le <hi rend="i">De montibus</hi> semble plutôt terne et fastidieux à lire. <lb/>On pourrait s’interroger sur l’intérêt
+          représenté par la traduction d’un texte latin qui n’a jamais attiré ni les historiens en général, ni les spécialistes de Boccace en
+          particulier. C’est à Manlio Pastore Stocchi, professeur à l’Université de Padoue, que l’on doit les seules études véritablement consacrées
+          au <hi rend="i">De montibus</hi>, ainsi que l’unique édition moderne depuis celle de 1532, publiée en 1998 à Milan. Il est vrai que le grand
+          nombre et la dispersion des manuscrits de l’œuvre entre bibliothèques italiennes et européennes ne facilitaient pas la tâche, et surtout,
+          l’étude de la tradition, très complexe, du texte. Du point de vue de la connaissance de l’œuvre, l’étude de la traduction castillane
+          n’apporte pratiquement rien, car les travaux de Manlio Pastore Stocchi, en particulier sa thèse de doctorat en 1963, ont fait le tour de la
+          question des sources et de la tradition manuscrite latine. Pourquoi alors étudier la tradition castillane et en offrir une édition
+          critique Et surtout, comment donner le texte critique d’une traduction alors qu’il est à peu près impossible d’établir celui de
+          l’original Cette traduction est toutefois intéressante, ne serait-ce que parce que son existence est un témoignage supplémentaire de la
+          situation exceptionnelle de la péninsule ibérique où le Boccace érudit a reçu un accueil remarquable par rapport aux autres pays européens.
+          Ainsi, c’est en Castille qu’a été élaborée la première et unique traduction vernaculaire connue du <hi rend="i">De montibus</hi>, si l’on
+          excepte la traduction italienne qui lui est postérieure. <lb/>De la tradition castillane, connue par un unique manuscrit de la Bibliothèque
+          nationale de France, le ms. esp. 458, on ne sait pratiquement rien, le manuscrit n’ayant jamais fait l’objet d’une étude détaillée. Seuls
+          Alfred Morel-Fatio, conservateur du fonds des manuscrits espagnols à la Bibliothèque nationale à la fin du <num>xix<hi rend="sup">e</hi></num> siècle,
+          Mario Schiff et Arturo Farinelli, s’y sont intéressés. La traduction castillane a été réalisée à la demande d’Íñigo López de Mendoza,
+          marquis de Santillane, à la fin de la première moitié du <num>xv<hi rend="sup">e</hi></num> siècle. Le manuscrit est ensuite resté dans la
+          bibliothèque de ses descendants, les ducs d’Osuna, avant d’être acheté par la Bibliothèque nationale, suite à la dispersion de la
+          bibliothèque, après la mort sans héritier du dernier duc d’Osuna, Mariano Tellez Girón, en 1882. Depuis, le manuscrit est resté inconnu de
+          la majeure partie des chercheurs hispanistes. Même si l’étude de la tradition castillane n’est pas facile, en raison d’une tradition latine
+          qui demeure obscure, elle n’en a pas moins des implications importantes sur le plan de l’histoire linguistique, littéraire et culturelle.
+          L’analyse de la langue et des techniques de traduction mises en œuvre donne l’occasion d’étudier les rapports entre les deux langues, le
+          castillan et le latin, à une époque où commence l’affirmation d’une indépendance et d’une qualité de la langue vernaculaire, en même temps
+          qu’un début de réflexion sur ses propriétés. En outre, cette étude pose la question du degré de compréhension du latin par les élites
+          lettrées de l’époque. L’existence de cette traduction castillane soulève enfin des problèmes aussi épineux que la pénétration en Castille
+          des influences italiennes, humanistes et renaissantes, les débuts de l’humanisme castillan, les relations entre l’Italie et la péninsule
+          ibérique, et l’influence de Boccace sur la littérature de la péninsule ibérique. À terme, l’édition de la traduction castillane devrait
+          permettre de mieux cerner quelle a été la réception du traité de géographie dans la littérature espagnole, et plus généralement, quelle a
+          été son influence sur la culture géographique et mythologique espagnole.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

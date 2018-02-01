@@ -1,0 +1,114 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’histoire des acteurs du secteur privé de l’assistance, et singulièrement des philanthropes, héritiers de la philosophie des Lumières,
+          est bien connue pour la première moitié du <num>xix<hi rend="sup">e</hi></num>  siècle, notamment grâce aux travaux de Catherine Duprat. A cette
+          époque l’action des philanthropes pallie le manque d’intervention de l’Etat dans le domaine social. Par contraste, les œuvres
+          philanthropiques de la Troisième République sont beaucoup plus mal connues, tant dans leur fonctionnement que dans leurs réalisations. Le
+          progressif établissement à partir des années 1890 d’une législation de protection sociale conforme aux idéaux républicains pose en termes
+          renouvelés le problème des relations entre l’Etat et le secteur privé dans la résolution de la question sociale. Alors que les pouvoirs
+          publics s’engagent progressivement dans le champ de l’assistance, les philanthropes se voient obligés de réadapter leur action en fonction
+          de ces nouvelles conditions. Si les œuvres charitables d’inspiration catholique restent longtemps défiantes à l’égard du régime républicain,
+          certains groupements d’inspiration laïque qui naissent à cette période se donnent au contraire pour but de remédier aux inégalités sociales
+          parallèlement à l’action de l’Etat.</p>
+        <p>L’histoire de l’Association Léopold-Bellan offre à cet égard un observatoire privilégié pour l’étude d’une œuvre philanthropique
+          républicaine. Fondée par un homme aux convictions sociales avancées, elle déploie à partir de 1884 son activité dans de nombreux domaines :
+          éducation populaire, accueil de diverses catégories d’assistés et de malades, recherche médicale, encouragement à la pratique d’activités
+          culturelles. Son président, Léopold Bellan, joue un rôle majeur dans le développement de l’œuvre jusqu’à son décès en 1936 ; l’actuelle
+          Fondation Léopold-Bellan poursuit encore à l’heure actuelle l’action initiée par le fondateur. C’est donc la question de la place d’une
+          œuvre philanthropique et de son créateur sous la Troisième République que l’on entend mettre en évidence. L’étude du fonctionnement d’une
+          telle œuvre fait naître plusieurs problèmes : il convient ainsi de s’interroger sur les <hi rend="i">buts</hi> qu’elle poursuit et sur
+          l’inspiration idéologique qui sous-tend son action. La question de la <hi rend="i">nature</hi> de ses réalisations philanthropiques est
+          importante, tout comme celle de ses rapports avec l’Etat et avec d’autres œuvres voisines. On doit également s’intéresser à l’ <hi rend="i">origine sociale</hi> des philanthropes qui l’animent, mais aussi au <hi rend="i">public</hi> des assistés que ceux-ci espèrent secourir.
+          Afin de prendre en compte l’intégralité de ce questionnement, trois axes complémentaires ont été développés pour cette étude de cas, limitée
+          chronologiquement à la vie de Léopold Bellan. L’approche biographique vise à retracer la vie et la pensée du fondateur de l’association ; on
+          y a joint une étude monographique du développement de l’œuvre. Enfin, la mise en évidence des divers réseaux unissant les membres de
+          l’association permet de développer une approche sociale des collaborateurs de Bellan.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives de la Fondation Léopold-Bellan (64, rue du Rocher, 75008 Paris) constituent le principal fonds documentaire utilisé pour cette
+          étude : outre leur intérêt pour l’histoire de l’œuvre, elles sont également une source très importante pour retracer la vie du fondateur,
+          dont les papiers personnels ont été transférés au siège de l’association après sa mort. Quelques documents complémentaires collectés dans
+          certains établissements de l’actuelle Fondation ont également été utilisés. Ces archives ont été reclassées et l’inventaire en est fourni en
+          tête de l’état des sources.</p>
+        <p>Les dépôts d’archives publics ont par ailleurs fourni d’appréciables compléments d’information, notamment les sous-séries D.X <hi rend="sup">6</hi> (dossiers de demandes de subventions d’œuvres privées) et D.2T (enseignement) des Archives de Paris, ainsi que l’état
+          civil et la série microfilmée des <hi rend="i">Bottins du commerce</hi> parisiens conservés dans ce dépôt. Le Centre historique des Archives
+          nationales a fourni divers dossiers issus principalement des sous-séries F<hi rend="sup">4</hi> (ministère de l’Intérieur, comptabilité
+          générale, subventions accordées à des œuvres sur le produit des jeux) et F<hi rend="sup">7</hi> (police générale, surveillance des
+          associations), tout comme le Centre des Archives contemporaines de Fontainebleau. Les séries Ba (versements du cabinet du Préfet de police)
+          et Db (affaires diverses) des Archives de la Préfecture de police ont également été mises à profit, ainsi que le dossier de l’Association
+          Léopold-Bellan (A.L.B.) conservé à la Préfecture de Paris et les actes notariés relatifs à l’A.L.B. Les archives départementales des
+          Yvelines, de Seine-et-Marne, du Val-d’Oise, de Meurthe-et-Moselle ainsi que les archives du Grand Orient de France ont fourni divers
+          renseignements, d’ordre surtout biographique et généalogique. Enfin, les publications de l’Association Léopold-Bellan, ainsi que divers
+          ouvrages anciens à caractère de source, ont été exploités à la Bibliothèque nationale de France, à la Bibliothèque historique de la ville de
+          Paris, à la Bibliothèque administrative de la Ville de Paris et au C.E.D.I.A.S.-Musée social.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

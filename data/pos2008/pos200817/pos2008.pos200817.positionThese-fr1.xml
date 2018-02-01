@@ -1,0 +1,91 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>André Dutertre (1753-1842), passé à la postérité pour avoir croqué puis gravé les portraits des principaux membres de l’expédition d’Égypte
+          de Bonaparte, est un artiste assez mal connu quant à sa vie et à son œuvre. Le manque de documentation à son sujet ne facilite pas la tâche
+          du chercheur. Il existe cependant à l’École nationale supérieure des Beaux-arts deux recueils assez exceptionnels de dessins de sa main qui
+          permettent d’aborder le personnage au travers de deux voyages que ce dernier a effectué, un traditionnel voyage d’étude en Italie entre 1786
+          et 1793, et un voyage en Égypte, assez extraordinaire puisque Dutertre a appartenu à la Commission des Sciences et des Arts qui a accompagné
+          la conquête de Bonaparte.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La principale source utilisée est bien sûr celle constituée par les deux recueils de dessins conservés à l’École nationale supérieure des
+          Beaux-arts. Elle est assez bien complétée par les œuvres de Dutertre conservées à la Bibliothèque nationale de France, dessins et gravures,
+          essentiellement au département des estampes mais aussi au département de la musique. Le Musée du Louvre possède aussi une série de portraits
+          en pied de généraux de la main de Dutertre, ensemble déposé au Musée du Château de Versailles.</p>
+        <p>Quelques documents sont conservés aux Archives nationales, notamment le dossier de professeur de Dutertre à l’École gratuite de dessin et
+          une lettre de Dutertre datée de 1837, dans la sous-série AJ 53. Des documents de la sous-série AJ 52 viennent éclairer la manière dont les
+          dessins de Dutertre sont entrés à l’École nationale supérieure des Beaux-arts. Quelques documents de la sous-série O 2 apportent des
+          éléments sur la période pendant laquelle il fut professeur de dessin des pages de l’Empereur.</p>
+        <p>De nombreuses sources imprimées permettent aussi de retracer de manière assez complète aussi bien l’histoire du voyage en Italie que celle
+          de la découverte de l’Égypte par l’Occident.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Au début du <num>xii<hi rend="sup">e</hi></num> siècle, les rois Capétiens occupent deux types de résidences fortifiées: les unes sont issues du
+          fisc carolingien ou font partie du domaine royal depuis longtemps, les autres ont été construites il y a peu pour affirmer la domination
+          royale sur des terres récemment conquises. L’ensemble de ces châteaux sont confiés à la garde de châtelains, par ailleurs chargés de
+          l’administration des droits royaux dans les ressorts correspondants. A partir du <num>xiii<hi rend="sup">e</hi></num> siècle, une distinction s’opère
+          entre le châtelain, appelé «capitaine» unsiècle plus tard, qui conserve ses attributions militaires, et le prévôt qui reçoit
+          l’administration de la châtellenie. Sous les règnes de Louis VI et de Louis VII, apparaît par ailleurs un nouveau type de résidences, peu ou
+          pas fortifiées, dont le but premier est l’agrément du roi et qui, en l’absence de fonctions militaires, sont confiées à une catégorie
+          d’agents jusque là inconnue: les concierges.</p>
+        <p>S’appuyant sur le cas de Vincennes, qui est au nombre de ces créations, l’étude vise, tout d’abord, à préciser les fonctions du concierge
+          et à en saisir l’évolution, au gré des modifications de l’administration royale. En effet, la guerre de Cent Ans entraîne un changement de
+          statut de la résidence de Vincennes: à son retour de captivité en 1361, Jean II décide d’y construire une forteresse qui pourra lui servir
+          de refuge en cas d’invasion anglaise ou de révolte à Paris; les travaux sont achevés par son fils Charles V. Cette transformation implique
+          une redistribution des fonctions au sein des agents royaux, en faisant désormais intervenir un capitaine, dont il convient d’examiner les
+          missions et de saisir la position par rapport au concierge. Cette étude institutionnelle s’accompagnera d’une enquête prosopographique sur
+          les concierges et les capitaines en poste à Vincennes. L’évolution observée à Vincennes sera confrontée avec la situation des autres
+          résidences royales.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont conservées aux Archives nationales et à la Bibliothèque nationale de France, mais demeurent dispersées en une
+          multitude de fonds. Aux Archives nationales ont été consultées les grandes séries conservant les documents produits par l’administration
+          royale: Trésor des chartes, Monuments historiques, registres du parlement civil de Paris et surtout les archives de la Chambre des comptes,
+          si importantes pour connaître la gestion du domaine royal grâce aux aveux et dénombrements et grâce aux mémoriaux qui ont pu être
+          reconstitués. Cette documentation a été complétée par le recours à quelques pièces conservées dans les sériesS (biens des établissements
+          religieux supprimés) et AB XIX(papiers d’érudits).</p>
+        <p>Les fonds manuscrits de la Bibliothèque nationale de France ont notamment permis de parfaire la reconstitution des archives de la Chambre
+          des comptes, grâce notamment aux documents originaux, aux copies et aux notes d’érudits modernes réunis dans le Cabinet des titres. Là aussi
+          on a eu recours à titre complémentaire à diverses pièces originales (comptes, quittances, montres d’hommes d’armes…), dispersées dans la
+          collection Clairambault, dans le fonds français et dans celui des nouvelles acquisitions françaises.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>
+          <hi rend="i">Adémar de Chabannes</hi>. — La vie et l’œuvre d’Adémar de Chabannes sont désormais bien connues. Un aspect important de son
+          œuvre concerne son combat pour établir durablement l’apostolicité de saint Martial, premier évêque de Limoges et évangélisateur d’une partie
+          de l’Aquitaine. Alors que la première mention de saint Martial et de sa mission d’évangélisation se trouve chez Grégoire de Tours qui le
+          fait vivre au <num>iii<hi rend="sup">e</hi></num> siècle, Adémar de Chabannes, qui s’appuie en cela sur une Vie écrite et remaniée dans un sens très
+          favorable à la thèse de l’apostolicité au début du <num>xi<hi rend="sup">e</hi></num> siècle, veut en faire un des soixante-douze disciples du Christ,
+          parent de saint Pierre et de saint Étienne, apôtre du Christ au même titre que les Douze et évangélisateur de toute l’Aquitaine.</p>
+        <p>
+          <hi rend="i">Le manuscrit BnF lat. 2469</hi>. — Le manuscrit BnF lat.2469 avait été légué par Adémar de Chabannes, avant son départ pour
+          Jérusalem en 1033, à la bibliothèque de Saint-Martial de Limoges. Il passa ensuite, au <num>xvii<hi rend="sup">e</hi></num> siècle, dans la
+          bibliothèque de Jacques-Auguste de Thou, dans celle de Jean-Baptiste Colbert et enfin dans la Bibliothèque royale. Sa rédaction, dans les
+          années 1029-1031, est due à l’attachement d’Adémar de Chabannes à la cause de saint Martial. Il comprend quarante-six sermons, dont les
+          vingt-trois premiers ont été édités il y a deux ans par Raphaël Richter dans le cadre d’une thèse de l’École des Chartes, et se conclut par
+          le compte rendu d’un concile tenu à Limoges les 18, 19 et 20 novembre 1031 et qui comprend le texte des canons d’un concile réuni à Bourges
+          le 1<hi rend="sup">er</hi> novembre précédent. Ces deux conciles ont été le cadre de débats au sujet de l’apostolicité de saint Martial qui
+          se sont conclus en sa faveur. Sont ici édités les fol. 76 à 112v comprenant vingt-trois sermons en partie inédits, la plupart en l’honneur
+          de saint Martial et de ses épigones, et le compte rendu du concile de Limoges édité intégralement au <num>xix<hi rend="sup">e</hi></num> siècle dans
+          la <hi rend="i">Patrologie latine</hi> de Migne. Malheureusement, le compte rendu s’interrompt à la fin des débats de la deuxième journée,
+          les derniers feuillets du manuscrit ayant disparu sans doute dès le <num>xv<hi rend="sup">e</hi></num> siècle.</p>
+        <p>
+          <hi rend="i">Principes d’édition</hi>. — Le ms lat. 2469 est de la main d’Adémar lui-même. La présente édition a donc respecté autant que
+          possible les particularités de la graphie de l’auteur. Sont indiqués en notes ses corrections ainsi que ses rares erreurs. Le seul de ces
+          sermons dont il existe une copie, dans le ms BnF lat. 5347, rédigé aux <num>xii<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles, a
+          été édité avec indication des variantes.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

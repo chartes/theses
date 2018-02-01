@@ -1,0 +1,105 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Faire son testament est une étape essentielle de la vie chrétienne de la fin du Moyen Âge ; plus qu’essentiel, cet acte est indispensable
+          puisqu’il permet de mettre en ordre ses affaires, tant morales que matérielles. Dans une société qu’imprègnent l’omniprésence psychologique
+          de la mort, dans les mentalités comme dans les représentations, et la question lancinante du salut, dans une société bouleversée par les
+          troubles politiques et marquée par l’élaboration théologique du Purgatoire, mourir intestat est non seulement une erreur matérielle mais
+          surtout un grave péché. Il est alors non seulement impossible pour l’intestat d’organiser la gestion de ses affaires après sa mort, mais il
+          lui est aussi impossible de mettre en œuvre tous les moyens nécessaires au salut de son âme et au rachat de ses péchés. La motivation de
+          l’action testamentaire peut donc se définir autant en négatif qu’en positif. Le bon chrétien rédige son testament pour ne pas mourir
+          intestat, tout autant qu’il cherche, par de bonnes et saintes dispositions testamentaires, à faire activement son salut. Or, la période est
+          celle de l’élaboration du Purgatoire. Dans cette perspective nouvelle, la pratique testamentaire sert deux buts complémentaires, mais
+          distincts : échapper à l’Enfer et réduire, autant que faire se peut, le séjour de son âme au Purgatoire. C’est pourquoi chacun se prépare le
+          plus tôt possible à son passage dans l’au-delà au moyen d’un acte juridique qui permet d’avoir la conscience tranquille à tout point de vue,
+          le testament.</p>
+        <p>Le registre X<hi rend="sup">1A</hi>9807 des Archives nationales présente un ensemble cohérent de testaments enregistrés au début du XV
+<hi rend="sup">e</hi> siècle au Parlement de Paris. Dans ce registre de deux cent trente-six testaments, il convenait de choisir un corpus
+          plus restreint qui soit compatible le temps imparti pour cette étude. Or un groupe apparaît d’emblée comme passionnant et, qui plus est, le
+          testament est l’une des sources uniques pour son histoire : il s’agit des femmes.</p>
+        <p>En effet, trente et un testaments du registre se trouvent être des testaments de femmes, ce qui ne manque pas d’être surprenant au premier
+          abord, puisque l’enregistrement des testaments au Parlement était généralement une pratique des parlementaires. Or l’aspect sériel de la
+          forme testamentaire en fait une témoignage privilégié pour l’histoire des femmes, trop souvent oubliées dans les sources traditionnelles ou
+          présentées par un discours essentiellement masculin. De plus, la présence simultanée de testaments d’hommes et de femmes permet d’envisager
+          une étude ultérieure du <hi rend="i">gender</hi>. Enfin, ces testaments offrent la possibilité unique de reconstituer des réseaux de parenté
+          et d’alliance de la bourgeoisie parisienne et du milieu parlementaire du début du <num>xv<hi rend="sup">e</hi></num> siècle, leurs rapports entre eux
+          et avec d’autres groupes, et leur attitude face à la mort. Par conséquent, cette étude, qui s’appuie sur l’édition des trente et un
+          testaments concernés, est bâtie sur trois axes principaux : l’étude de la parenté et des réseaux de solidarité, celle du statut social des
+          individus concernés à travers les biens qu’ils font circuler, et enfin celle de leur attitude face à la mort dans le cadre plus précis de
+          l’organisation des funérailles.</p>
+      </div>
+              <div type="sources"><head>Historiographie</head>
+        <p>L’historiographie de ce sujet s’articule principalement autour de quatre axes : les sources testamentaires ; la vision de la mort à la fin
+          du Moyen Âge et la spiritualité ; Paris au <num>xv<hi rend="sup">e</hi></num> siècle et l’histoire du Parlement ; l’histoire des femmes et du genre,
+          mais aussi de la famille et des réseaux de parenté ou de relations. Une brève étude historiographique présente les travaux concernés par ces
+          thèmes, suivie d’une bibliographie des ouvrages sur ces différents sujets.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

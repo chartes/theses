@@ -1,0 +1,114 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Plus que toute autre institution de la France d’Ancien Régime, la justice seigneuriale a concentré sur elle les critiques les plus sévères,
+          de la part des historiens comme des juristes des deux derniers siècles. Ce type bien particulier de justice avait en effet contre lui de
+          cumuler à la fois les reproches associés en général aux institutions de la France moderne (multiplication d’institutions concurrentes, flou
+          des ressorts, impossibilité d’établir des cadres généraux ou nationaux du fait des usages locaux et des privilèges particuliers) et les
+          reproches appliqués spécifiquement à des justices privées, au caractère intrinsèquement patrimonial. De ce fait, la justice seigneuriale a
+          été associée à la condamnation d’ensemble de la féodalité. Elle a même pu en représenter l’un des aspects les plus scandaleux,
+          insupportables et surannés, en ce qu’elle était censée incarner le pouvoir de contrainte du seigneur sur ses censitaires.</p>
+        <p>Dans les faits, la situation de la justice seigneuriale à Malesherbes au <num>xvii<hi rend="sup">e</hi></num> siècle est paradoxale à plus
+          d’un titre. L’éloignement physique de tout centre urbain, même secondaire, et des cours de justice supérieures fait d’abord que le bailliage
+          de Malesherbes n’est pas concurrencé dans le traitement des affaires. De même, l’étendue de cette justice est assez faible et concerne une
+          population de moins de 2 000 personnes. Ainsi, une justice inférieure au ressort étroit et au réservoir de population modeste se trouve en
+          situation de juger toutes les affaires.</p>
+        <p>La constitution du personnel du bailliage de Malesherbes reflète cette situation, puisque quelques individus se partagent toutes les
+          fonctions d’office des environs. Par la modestie des revenus associés à ces fonctions, on parvient à observer un milieu de professionnels de
+          la justice de proximité qui a fort peu à voir avec le personnel des cours de justice royales et supérieures.</p>
+        <p>L’essentiel de l’activité de la justice seigneuriale de Malesherbes est lié au domaine de la justice civile contentieuse et plus
+          particulièrement aux affaires de dettes et de réalisations contractuelles. L’étude des archives du greffe montre ainsi un usage local et
+          abondant du prêt, manifestant la nature de la circulation de l’argent dans des sociétés rurales privées d’accès à des institutions
+          bancaires. Au-delà des questions d’argent, la justice de Malesherbes constitue également un théâtre où se manifestent les tensions d’une
+          communauté rurale dans laquelle la défense de l’honneur et de la réputation occupe une place majeure. La notion de violence se retrouve au
+          quotidien dans l’exercice de la justice et de manière très répétitive, à tel point qu’il serait possible de dire que le recours à la
+          violence, puis au traitement judiciaire adapté, sont des mécanismes normaux et habituels de résolution des conflits dans cette société
+          rurale du <num>xvii<hi rend="sup">e</hi></num> siècle. L’exercice de la justice couvre enfin deux domaines de police : la protection des
+          mineurs et de leurs biens se manifeste par le grand nombre de dations de tutelle et curatelle. Enfin, en tant que seule autorité
+          administrative de proximité, la justice seigneuriale de Malesherbes est amenée à gérer toutes les situations collectives sortant de
+          l’ordinaire : catastrophes naturelles, célébrations publiques, surveillance de la moralité sont autant de domaines qui font de cette cour de
+          justice une forme d’administration de la communauté rurale dont elle a la charge.</p>
+        <p>Dans l’ensemble, on peut dire de la justice seigneuriale de Malesherbes qu’il s’agit d’une institution complexe : devant avant tout servir
+          à garantir la perception des revenus du seigneur, elle n’en sert pas moins aux justiciables comme voie de recours légal dans tous les
+          aspects de leur existence. De même, malgré des compétences fort larges, cette justice n’en fonctionne pas moins sur la base d’une économie
+          de moyens permanente. Enfin, la période envisagée (1630-1700) permet de mettre en relief les grandes étapes de l’intégration de toutes les
+          justice du royaume par les grands codes de procédure du <num>xvii<hi rend="sup">e</hi></num> siècle et de mesurer l’impact réel de ces
+          derniers dans l’exercice quotidien de la justice.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Du fait de la destruction des archives départementales du Loiret en 1940, l’essentiel des sources utilisées pour l’étude de la justice
+          seigneuriale de Malesherbes provient du fonds Malesherbes (399 AP), entré par dation en 2000 aux Archives nationales. Parmi ce vaste fonds,
+          deux parties concernent particulièrement cette étude : d’une part, le chartrier de la seigneurie qui permet d’en étudier l’étendue, les
+          revenus et les droits et, d’autre part, les archives du greffe de la justice de Malesherbes, qui couvre avec de nombreuses lacunes une
+          période s’étendant de 1630 à 1730. Registres du greffe et pièces de procédures représentent une masse totale équivalente à cinq mètres
+          linéaires d’archives.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

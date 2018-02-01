@@ -1,0 +1,91 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les arts ont connu un développement exemplaire en Champagne au <num>xvi<hi rend="sup">e</hi></num> siècle. La bibliographie est relativement prolixe
+          sur Troyes, dont plusieurs ouvrages ont souligné l’importance des productions artistiques. Face à la richesse troyenne, la Champagne du Nord
+          fait figure de parent pauvre. Boudée par une grande partie des historiens, elle est encore peu connue. Nombre d’historiens considèrent en
+          effet qu’une œuvre de qualité située dans cette région ne peut être que troyenne ou importée, mais nullement produite par un atelier local.
+          C’est donc dans un mouvement plus général de redécouverte des productions et des structures artistiques de centres dits « secondaires » que
+          s’inscrit cette recherche, limitée à la ville de Châlons et à sa région. Ce cadre spatial présente en effet le double avantage de livrer une
+          documentation abondante et variée, mais aussi des œuvres d’art en nombre. Cette cité, dont l’évêque était comte et pair de France,
+          regroupait alors une dizaine de milliers d’habitants ; elle offre donc la possibilité d’étudier les productions artistiques, les artistes et
+          les commanditaires dans leur ensemble, ce qui n’aurait pas été possible pour des villes de plus grande importance.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées se trouvent avant tout dans les dépôts locaux d’archives ; archives départementales de la Marne et archives
+          municipales de Châlons-en-Champagne. Ont été ainsi dépouillés l’intégralité des comptes et des registres de délibérations des institutions
+          de la région, les registres et les minutes des notaires correspondant à l’aire géographique et à la période étudiées, ainsi que les
+          registres de la justice du bailliage épiscopal. Ont également été mis à contribution la Bibliothèque nationale de France, les Archives
+          nationales, la Médiathèque du patrimoine et de l’architecture, la Direction régionale des affaires culturelles de Champagne-Ardenne, les
+          archives départementales de l’Aube, les archives municipales de Reims, le musée des beaux-arts et d’archéologie de Châlons-en-Champagne, le
+          musée du Louvre, le musée national de la Renaissance à Écouen, le Service historique de l’Armée de terre, ainsi que divers fonds privés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

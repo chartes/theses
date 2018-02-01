@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Du latin mérovingien, les romanistes avaient, au cours du <num>xix<hi rend="sup">e</hi></num> siècle, fait un objet d’études où se mêlait
+          une forme de fascination et de mépris qui constituait un écho direct aux conceptions positivistes appliquées à cette période dans le domaine
+          de l’histoire politique et culturelle. Des études pionnières ont finalement, à partir de la seconde moitié du <num>xx<hi rend="sup">e</hi></num> siècle, suscité un intérêt croissant pour une approche transdisciplinaire des innombrables faits linguistiques qui, trop à
+          l’étroit dans des classifications commodes mais artificielles, s’avèrent des témoignages aussi précieux que délicats à interpréter sur
+          l’oralité des « siècles obscurs ». Le latin carolingien apparaissait inversement comme le parallèle linguistique des évolutions religieuses,
+          politiques, culturelles et institutionnelles : à l’exception notable de quelques diplomatistes, les savants voyaient dans la langue latine
+          reconfigurée le symbole d’une unité perdue depuis longtemps.</p>
+        <p>C’est l’apparition du concept d’« Antiquité tardive » qui, appliqué à une période historique dorénavant autonome, a contribué par ricochet
+          à dégager le latin tardif de la comparaison écrasante avec le latin littéraire d’époque classique, jusque-là rétrospectivement considéré
+          comme un modèle de plus en plus mal imité. En tenant compte de cette vision plus nuancée du système langagier pratiqué dans la <hi rend="i">Romania</hi> des <num>iv<hi rend="sup">e</hi></num>-<num>viii<hi rend="sup">e</hi></num> siècles, il est aussi tentant que légitime de
+          s’interroger sur le fonctionnement de l’écrit et de l’oral jusqu’au milieu du <num>ix<hi rend="sup">e</hi></num> siècle, c’est-à-dire
+          au-delà de la prise de conscience d’une séparation entre le latin et le protofrançais, que l’on appelait <hi rend="i">lingua rustica
+            romana.</hi> À cet effet, il est indispensable de dégager des niveaux de langue plus ou moins marqués par une interférence latine ou
+          romane.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

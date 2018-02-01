@@ -1,0 +1,108 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les archives notariales ont depuis longtemps conquis leurs lettres de noblesse en tant que source privilégiée dans de nombreux travaux
+          historiques. Cette étude est en quelque sorte une tentative d’intégration des trois composantes successivement redécouvertes et à la base de
+          l’histoire notariale : les notaires en tant que groupe défini dans le cadre de leur organisation corporative, les actes notariés, et enfin
+          la personne même du notaire.</p>
+        <p>Les actes notariés permettent de constater à quel point le notaire est un véritable pivot de la société quotidienne, conférant authenticité
+          et valeur juridique aussi bien aux grands événements structurant les familles et la succession des générations, qu’à la vie économique
+          locale, tout en mettant en scène des individus de tous milieux sociaux. L’exercice de sa profession ne peut manquer de conférer justement au
+          notaire lui-même une place privilégiée dans la vie sociale.</p>
+        <p>L’originalité des recherches présentées ici tient surtout aux critères de temps et de lieux retenus. Observer et comprendre les évolutions
+          caractérisant les modalités d’accession à la profession, l’activité de ses représentants, et leur place parmi leurs contemporains prend une
+          dimension nouvelle par le choix d’un intervalle chronologique allant de 1770 à 1820, particulièrement chargé au premier abord en
+          bouleversements qui affectent la société toute entière.</p>
+        <p>Les lectures et les dépouillements de sources ont peu à peu façonné un corpus bien défini des 108 notaires ayant exercé entre ces deux
+          dates dans un environnement précis : une région rurale d’où émergent de petites villes et bourgs, dans le coin nord-est du Dauphiné. Cette
+          portion du bailliage de Vienne correspond, après les diverses refontes révolutionnaires, aux quatre cantons les plus au nord de
+          l’arrondissement de la Tour-du-Pin, dans le nouveau département de l’Isère. L’examen des trois composantes doit donc se faire en tenant
+          compte du contexte et des particularités régionales et locales. Le Dauphiné, et particulièrement le Viennois, ont été marqués par les
+          événements politiques, qu’il s’agisse bien sûr de la pré-Révolution de 1788, de la Grande Peur, de l’influence du mouvement fédéraliste, ou
+          encore de l’application de la Terreur par des représentants plus que zélés. La reconstruction des carrières, celle des lignées conduisent
+          bien souvent à remonter au moins au début du siècle des Lumières et mènent jusqu’au milieu du <num>xix</num>
+<hi rend="sup">e</hi> siècle. Il importait en effet de replacer les observations dans un temps plus long.</p>
+        <p>Durant l’une des périodes parmi les plus instables de l’histoire de France, les angles d’études retenus doivent permettre d’évaluer de
+          manière globale les changements intervenus, à la fois du fait des différents gouvernements révolutionnaires, mais aussi après le retour des
+          souverains dont la Révolution avait justement renversé le régime et détruit la société.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Un éventail large de sources a pu être exploité, ces dernières différant tant par leur nature que par leur localisation. Les trois grands
+          axes de recherche ont dans l’ensemble chacun fait appel à de grandes catégories. C’est aux Archives nationales qu’ont été retrouvées les
+          lettres de provision d’offices, les dossiers de nomination, ou encore la correspondance entre les instances locales et le ministère de la
+          Justice, qui ont permis l’étude des caractéristiques professionnelles. Les minutiers et les autres répertoires conservés aux archives
+          départementales de l’Isère ont servi de source de premier choix pour l’analyse de la pratique quotidienne et de son évolution. Enfin, les
+          reconstitutions des réseaux familiaux, des influences et des responsabilités locales l’ont été grâce aux registres paroissiaux devenus
+          d’état-civil, conservés là encore aux archives départementales de l’Isère, mais aussi par les nombreuses publications relatives aux
+          événements de l’époque, ainsi que des sources, témoignages et autres procès-verbaux édités ou conservés notamment à la bibliothèque
+          municipale de Grenoble.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

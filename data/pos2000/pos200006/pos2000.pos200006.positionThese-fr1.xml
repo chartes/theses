@@ -1,0 +1,89 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La diffusion de l’imprimerie a favorisé l’apparition, pour le livre, de nouveaux publics. Les imprimeurs ont vite pris conscience de leurs
+          besoins, souvent éloignés des préoccupations humanistes du temps, et ont eu soin de diffuser des textes appropriés, parmi lesquels de
+          nombreux romans d’aventure et de chevalerie du Moyen Age. Ces textes ont connu pour certains d’entre eux une importante postérité : ils ont
+          continué d’être imprimés à Paris ou à Lyon au <num>xvi<hi rend="sup">e</hi></num>  siècle et sont passés ensuite, pour partie et progressivement, à
+          partir du <num>xvii<hi rend="sup">e</hi></num>  siècle, dans le répertoire « populaire » de la <hi rend="i">Bibliothèque bleue.</hi>
+      </p>
+        <p>Le travail accompli dans les ateliers d’imprimerie autour de l’édition des textes médiévaux est mal connu : l’étude comparative des
+          éditions successives de l’un de ces romans en permet une approche. L’<hi rend="i">Histoire de Mélusine</hi>, composée par Jean d’Arras à la
+          fin du <num>xiv<hi rend="sup">e</hi></num>  siècle, peut paraître à plusieurs titres un exemple privilégié : le roman a été l’un des tout premiers à
+          être édité et le nombre de ses éditions est une preuve de son succès. L’étude du devenir du récit de Jean d’Arras est d’autant plus
+          intéressante qu’il a par ailleurs donné lieu à de nombreuses réécritures ou adaptations, qui doivent être vues comme une autre forme de
+          survie du roman médiéval.</p>
+        <p>Cette étude prend appui sur une méthode précise d’analyse des éditions : établissement de notices bibliographiques, sélection d’extraits et
+          relevé des variantes sémantiques, morphologiques et syntaxiques se dégageant de leur comparaison, description de l’ensemble des
+          illustrations dans l’optique d’une étude du rapport entre texte et image.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

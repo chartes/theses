@@ -1,0 +1,93 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’abbaye de Saint-Antoine-des-Champs a été fondée aux portes de Paris à l’extrême fin du <num>xii<hi rend="sup">e</hi></num> siècle par le
+          prédicateur Foulques de Neuilly. Si l’abbaye acquiert rapidement une grande renommée et intègre l’ordre cistercien dès 1204, la fondation
+          elle-même est très peu documentée. Il s’agit donc de chercher quelles ont été les conditions précises de la fondation ainsi que de
+          déterminer le rôle joué par les différents acteurs : Foulques, l’évêque de Paris, le roi, les familles de donateurs, etc. Par l’étude de
+          sources économiques, on peut reconstituer partiellement les réseaux sociaux, économiques et spirituels dans lesquels Saint-Antoine était
+          insérée et voir ainsi à quels besoins l’abbaye a répondu. Au niveau du recrutement, l’abbaye a connu au <num>xiii<hi rend="sup">e</hi></num> siècle au
+          moins trois phases différentes, difficiles à dater avec certitude mais qui montrent une communauté ouverte aux diverses vocations du temps,
+          accueillant prostituées repenties, veuves de la noblesse de la région mais aussi jeunes demoiselles de la bourgeoisie parisienne émergente.
+          Voir comment un établissement nouveau se développe et s’adapte aux besoins de la société qui l’entoure, en conciliant idéal religieux et
+          gestion pragmatique, est l’objectif de cette étude.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives de Saint-Antoine sont conservées pour l’essentiel aux Archives nationales, dans les séries H<hi rend="sup">5</hi>, L et S.
+          Les sources prises en compte pour cette étude sont les actes du <num>xiii<hi rend="sup">e</hi></num> siècle, dont l’écrasante majorité est constituée
+          d’actes de gestion, à teneur économique : dons, ventes, achats, amortissements ou ratifications. Très peu d’actes permettent d’appréhender
+          la vie au sein du monastère. Les archives étudiées permettent néanmoins de situer Saint-Antoine dans différents réseaux, grâce à
+          l’identification de ses donateurs, des établissements religieux avec lesquels elle est en conflit ou en partenariat ou encore par l’étude
+          des rapports de l’abbaye avec l’évêque, grand notificateur d’actes pendant le premier tiers du siècle... De plus, la présence de deux
+          cartulaires dans le chartrier permet une étude du statut des archives de l’abbaye, des moyens de conservation et du classement de celles-ci
+          par les moniales.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

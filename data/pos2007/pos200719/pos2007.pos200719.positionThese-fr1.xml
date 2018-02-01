@@ -1,0 +1,112 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les années 1840 sont pour la Grèce celles de la recherche d’un régime politique stable pérennisant le nouvel État reconnu dix ans
+          auparavant par les puissances européennes. En 1833, le prince bavarois Othon Ier, premier roi de Grèce, débarquait à Nauplie. Il tente de
+          mettre en place une monarchie absolue, jamais acceptée par les Grecs : en septembre 1843, une révolution non sanglante le contraint à
+          promettre une constitution. Le texte de la constitution, dont la rédaction est confiée à une assemblée constituante, est promulgué quelques
+          mois plus tard. Jean Colettis (1774-1847), chef de file des profrançais en Grèce, prend une large part à la rédaction de la constitution,
+          puis s’attelle pendant trois années (1844-1847) à la tâche d’implanter en Grèce le régime constitutionnel ; or, c’est un ami du ministre
+          français des Affaires étrangères François Guizot (1787-1874). Doit-on s’étonner si le régime qui est alors adopté est, à bien des égards,
+          comparable à celui de la France de la monarchie de Juillet ? Toute la question est de savoir dans quelle mesure Guizot a-t-il pu influer sur
+          la destinée politique de la Grèce.</p>
+        <p>La relation franco-grecque de la décennie 1840 est remarquablement complexe : théoriquement régie par le fameux « concert des grandes
+          puissances », elle fait apparaître pêle-mêle calculs d’intérêts nationaux, défense des liens personnels et, dans une moindre mesure,
+          sentimentalisme se traduisant, dans le cas grec, par le philhellénisme. La question de relations internationales se mue alors en une
+          problématique plus générale interrogeant à toutes les échelles les mécanismes d’influence, de contre-influence et enfin de transfert
+          d’idées.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’histoire diplomatique traditionnelle telle qu’elle fut écrite par Éd. Driault et M. Lhéritier au début du <num>xx<hi rend="sup">e</hi></num>
+          siècle est centrée sur la problématique des intérêts contradictoires des États-nations. Placer les acteurs de la diplomatie (ministres des
+          Affaires étrangères et ambassadeurs) au cœur du raisonnement permet une autre approche. François Guizot fut particulièrement soigneux de ses
+          archives, aujourd’hui déposées aux Archives nationales. Elles forment un fonds très riche, composé d’un vaste ensemble de correspondance
+          active et passive. Dans cet ensemble, sont conservées les minutes des lettres particulières adressées à Théobald Piscatory, envoyé du roi
+          Louis-Philippe en Grèce, d’abord comme chargé de mission (1841) puis comme ministre plénipotentiaire (1843-1848), ainsi que les lettres
+          particulières du même à Guizot. On y trouve également quelques lettres de la correspondance échangée entre Guizot et Colettis. À ce versant
+          privé de la correspondance entre les trois hommes d’État que sont Guizot, Colettis et Piscatory, correspond un versant public : ce sont
+          toutes les archives de la correspondance politique conservée au Quai d’Orsay dans le dossier « Grèce » (volumes 31 à 50). Cette relation
+          triangulaire dans laquelle Piscatory joue un rôle d’intermédiaire important – nous n’avons retrouvé que 35 lettres directement échangées
+          entre Guizot et Colettis – structure fortement la relation politique franco-grecque. Certes, ces personnages ne sont pas les seuls en scène
+          : la correspondance privée de Colettis, conservée à l’Académie d’Athènes, témoigne de l’ampleur des réseaux soutenant la relation
+          franco-grecque. Mais ces réseaux fonctionnent la plupart du temps sur le modèle du clientélisme, si bien que très peu d’actions peuvent être
+          menées sans l’assentiment ou l’appui de l’un des trois hommes, même quand ces derniers ne sont pas directement impliqués.</p>
+        <p>Pour comprendre l’origine de l’importance politique prise par Guizot et Colettis, et dans une moindre mesure par Piscatory, dans la
+          relation franco-grecque, il convient de revenir au temps où Colettis était ambassadeur de Grèce à Paris (1835-1844). Si, sur ces premiers
+          temps, les archives françaises contiennent quelques renseignements (en particulier les archives privées de Guizot), les archives du
+          Ministère grec des Affaires étrangères sont très décevantes : les quelques pièces concernant l’ambassade de Grèce à Paris ne permettent
+          d’éclairer que des aspects purement fonctionnels de l’ambassade (versement des traitements aux employés de l’ambassade par exemple). Il faut
+          alors traquer les informations dans un vaste corpus de sources imprimées : pamphlets, correspondance éditée, mémoires – à commencer par les
+            <hi rend="i">Mémoires pour servir à l’histoire de mon temps</hi>, de Guizot – et rapports prononcés devant diverses assemblées (assemblées
+          parlementaires et comités philhellènes). Ces sources offrent en outre un précieux éclairage sur l’arrière plan culturel du jeu diplomatique,
+          encore dominé, au moins dans les premières années de la monarchie de Juillet, par le philhellénisme.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

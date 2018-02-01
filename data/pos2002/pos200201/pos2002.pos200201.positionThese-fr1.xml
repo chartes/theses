@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Catherine d’Amboise (1481-1550), dame de Lignières, prosatrice et poétesse de la première moitié du <num>xvi<hi rend="sup">e</hi></num> siècle,
+          reste inconnue du grand public et peu connue du public lettré : seule l’édition de ses textes poétiques a permis de sauver l’écrivain d’un
+          oubli complet. En revanche, ses écrits en prose, demeurés à l’état manuscrit, n’ont jamais fait l’objet de travaux critiques : leur première
+          édition complète, qui constitue l’objet de cette thèse, comblera donc un vide dans le monde des lettres du début du XVI <hi rend="sup">e</hi> siècle. Le récent intérêt porté aux textes féminins des siècles passés justifie aussi que l’on se penche sur une œuvre jusqu’ici
+          silencieuse et que l’on rende à Catherine d’Amboise sa voix et un espace. La connaissance de sa personnalité et de son œuvre permettra de
+          déterminer plus justement sa place dans la littérature de son temps et dans la constellation des femmes de lettres en général. L’obscurité
+          quasi complète qui enveloppe la jeunesse de Catherine d’Amboise ne se dissipe petit à petit qu’au hasard de quelques dates et apparitions
+          fugaces dans les archives. Ses œuvres éclairent cependant de larges pans de sa vie intérieure, révèlent des aspects autobiographiques
+          cachés, mais surtout nous permettent de décrypter ses préoccupations morales et religieuses, ses intérêts artistiques, littéraires et son
+          goût pour l’écriture et le manuscrit, objet rare et précieux.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Nous conservons deux œuvres en prose de Catherine d’Amboise. La première, intitulée <hi rend="i">Livre des prudens et imprudens</hi>,
+          datée de 1509, est conservée dans un manuscrit unique : Paris, Bibl. nat. de Fr., Arsenal 2037. La seconde, baptisée <hi rend="i">Complainte
+            de la dame pasmee contre Fortune</hi>,écrite vers 1525-1535, est une œuvre sans titre et anonyme ; la paternité en est attribuée à
+          Catherine d’Amboise grâce aux indices héraldiques et autobiographiques contenus dans l’œuvre. Elle est conservée dans trois manuscrits :
+          Paris, Bibl. nat. de Fr., Société des manuscrits des assureurs français, 79-7 ( <hi rend="i">A</hi>) ; Paris, Bibl. nat. de Fr., n.a.f.
+          19738 ( <hi rend="i">B</hi>); coll. privée, catalogue de vente de Sam Fogg (Londres, 1999, n° 33, p. 128-130) ( <hi rend="i">C</hi>).
+          <lb/>Est également conservé un recueil de <hi rend="i">Poésies</hi>, rédigé vers 1541-1545 : Paris, Bibl. nat. de Fr., fr. 2282 (18
+          feuillets, 3 miniatures) : ces épîtres et le <hi rend="i">Chant Royal</hi> ont fait l’objet d’une édition critique en 1861 par J.-J.
+          Bourassé. <lb/>L’étude historique s’appuie sur des documents conservés dans les collections Clairambault, Dupuy et Duchesne de la
+          Bibliothèque nationale de France et dans la série E des archives départementales du Cher, ainsi que sur des pièces recensées dans le <hi rend="i">Catalogue des actes de François I<hi rend="sup">er</hi>
+          </hi> . Parmi les sources imprimées, on citera tout particulièrement les œuvres de Michel d’Amboise, poète et traducteur, imprimées entre
+          1529 et 1547.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

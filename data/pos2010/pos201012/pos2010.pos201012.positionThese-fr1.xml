@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le livre de raison de Jean-Baptiste de Grille est un document unique, par définition : c’est un manuscrit inédit, et c’est surtout un
+          exemple de la pratique de l’écriture de soi comme elle a pu être pratiquée durant l’époque moderne. En tenant son livre de raison, le chef
+          de famille fait ses comptes et rapporte les grands événements de la vie de famille, révélant ainsi les détails de sa vie quotidienne. Ici
+          pas de hauts faits, pas de destin hors du commun.</p>
+        <p>L’auteur est issu d’une famille de la petite noblesse provençale du <num>xviii<hi rend="sup">e</hi></num> siècle, vivant à Arles, et dans
+          la période couverte par ce document (1729-1745), il est âgé de 53 à 70 ans. C’est sur un ton simple, souvent neutre mais où l’émotion
+          affleure malgré tout, qu’il fait ses comptes et parle de ses proches. C’est un homme ordinaire, témoin discret mais tellement représentatif
+          de son époque et de son milieu social.</p>
+        <p>Et c’est parce qu’il est à la fois unique et ordinaire, que son livre de raison est exemplaire. Par la richesse des informations qu’il
+          donne sur tous les aspects de la vie quotidienne, c’est une source précieuse pour l’histoire de la famille, de la noblesse, des mentalités,
+          mais aussi, dans une moindre mesure, de l’éducation, de la santé, ou de l’alimentation.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le livre de raison de Jean-Baptiste de Grille est conservé au Centre historique des Archives nationales, sous la cote AB XIX 3300 A. En
+          raison de son état, ce document n’est consultable que sur autorisation.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,115 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le regain d’intérêt qui se manifeste depuis plus de trente ans à l’égard de la période mérovingienne en France s’est étendu à de nombreux
+          domaines de recherche, parallèlement aux travaux menés sur l’Antiquité tardive. Cependant, les sources liturgiques demeurent peu exploitées,
+          alors que de grands pionniers, comme Henri-Irénée Marrou, Pierre Riché ou Jacques Fontaine, ont attiré l’attention sur leur importance
+          historique et littéraire. Dans le corpus très large des textes liturgiques, les oraisons d’ « offertoire » (on emploie par commodité ce mot
+          du <num>xvii<hi rend="sup">e</hi></num>  siècle pour désigner les rites et les prières situés entre les lectures et la prière eucharistique, et qui
+          accompagnent l’offrande du pain et du vin) sont les plus à même de témoigner de phénomènes historiques, car elles ont connu une évolution
+          constante jusqu’à la fin du Moyen Age.</p>
+        <p>L’évolution longue et complexe de l’offertoire s’explique en grande partie parce que l’hybridation a été particulièrement forte entre les
+          sources d’origine romaine et « gauloise » (cet adjectif prête moins à confusion que « gallican »). En effet, c’est à l’offertoire que les
+          deux rits se distinguent le plus profondément. A l’époque tardo-antique, l’offertoire est très sobre à Rome, où il ne comporte qu’une seule
+          prière variant à chaque messe (c’est-à-dire faisant partie du propre de la messe, par opposition au canon ou prière eucharistique
+          invariable, qui fait partie de l’ordinaire de la messe). En revanche, il est beaucoup plus complexe en Gaule, avec ses quatre oraisons
+          variables. Il est bien connu, notamment depuis les travaux de Cyrille Vogel, que Pépin le Bref puis Charlemagne ont voulu uniformiser la
+          liturgie en suivant le rit romain. Mais il paraît nécessaire de vérifier à partir des premiers sacramentaires gaulois conservés quelle a été
+          l’ampleur de cette romanisation avant 751.</p>
+        <p>Par ailleurs, l’ <hi rend="i">ordo</hi>
+          <hi rend="i">missae</hi> romain a fait l’objet, en 1948, d’une magistrale étude de Joseph-Andréas Jungmann : un nombre grandissant de
+          prières invariables, qui apparaissent à l’offertoire à partir des <num>x<hi rend="sup">e</hi></num> -XI<hi rend="sup">e</hi>  siècles, résulteraient
+          d’une « germanisation » du rit romain. Il semble donc important d’une part de situer les hypothèses du grand liturgiste sur l’origine
+          gauloise de ces prières, et d’autre part d’étudier les textes des sacramentaires tardo-mérovingiens dans la perspective de l’Antiquité
+          tardive, en tenant compte des acquis de la recherche qui a remis en cause, depuis une cinquantaine d’années, l’idée selon laquelle le
+          christianisme aurait été « barbarisé » à la suite des « grandes invasions germaniques ».</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les manuscrits liturgiques les plus anciens de la Gaule comprenant les oraisons de la messe sont au nombre de sept. On distingue d’une
+          part quatre célèbres sacramentaires de la première moitié ou du milieu du <num>viii<hi rend="sup">e</hi></num>  siècle, édités depuis la fin du XVII
+<hi rend="sup">e</hi>  siècle (en premier lieu par le cardinal Tomasi et dom Mabillon) : le <hi rend="i">Missel de
+          Bobbio</hi>(Bibliothèque nationale de France, lat. 13246), le <hi rend="i">Missale Gothicum</hi>(Biblioteca apostolica Vaticana, Reg. lat.
+          317), le <hi rend="i">Missale Francorum</hi>(Biblioteca apostolica Vaticana, Reg. lat. 257) et le <hi rend="i">Missale Gallicanum
+          vetus</hi>(Biblioteca apostolica Vaticana, Palat. lat. 493). D’autre part, s’y ajoutent trois palimpsestes du <num>vii<hi rend="sup">e</hi></num>
+           siècle : le <hi rend="i">libellus missarum</hi>édité par Franz Joseph Mone en 1850 (Karlsruhe, Badische Landesbibliothek, cod. Augiensis
+          253), et les sacramentaires conservés à Milan (Biblioteca Ambrosiana, cod. M12 sup) et à Munich (Bayerische Staatsbibliothek, lat. 14429),
+          édités par Alban Dold en 1952 et 1964.</p>
+        <p>Ces manuscrits, pour la plupart écrits en onciale, sont difficiles à dater et à localiser. Ils sont tous plus ou moins cousins et n’ont pas
+          de liens directs entre eux. Ils charrient des textes d’origines et de dates très variées, présentant une grande hétérogénéité tant sur le
+          plan rhétorique que liturgique. Ce corpus très complexe est donc un témoignage original d’une époque en pleine transition, dont les formes
+          littéraires comme la pensée religieuse sont encore très mouvantes.</p>
+        <p>La composition de ces textes a dû s’échelonner entre la deuxième moitié du <num>iii<hi rend="sup">e</hi></num>  siècle (débuts en Gaule du latin
+          comme langue liturgique et de la conversion des élites au christianisme) et la fin du <num>viii<hi rend="sup">e</hi></num>  siècle (fin de la période
+          de copie des manuscrits de ce rit tardo-antique et généralisation de la romanisation). Une répartition en trois groupes des oraisons
+          d’offertoire (environ cent cinquante pièces) apparaît comme la plus à même de rendre compte de la complexité des sources et du phénomène de
+          romanisation sur le temps long qui s’y dessine à partir du <num>vii<hi rend="sup">e</hi></num>  siècle.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

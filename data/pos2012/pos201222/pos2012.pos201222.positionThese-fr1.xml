@@ -1,0 +1,84 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction  </head>
+    <p>L’hôpital Laennec de Paris se trouve, depuis sa fermeture en 2000, au cœur d’un scandale immobilier et patrimonial, visant, notamment, le destin des deux corps de bâtiments et de la chapelle de l’hôpital, datés des <num>xvii</num><hi rend="sup">e</hi> et <num>xviii</num><hi rend="sup">e</hi> siècles. La médiatisation du litige qui en a résulté a rappelé la longue histoire de l’ancien hôpital des Incurables de Paris, premier occupant des lieux. Structures intermédiaires, souvent de petites tailles, les hôpitaux d’incurables ne s’apparentent ni aux hôtels-Dieu ni aux hôpitaux généraux et ont été jusqu’ici relativement délaissés par les historiens. La définition même d’un « hôpital d’incurables » s’avère difficile à établir, dans la mesure où chaque établissement détermine une liste différente des maladies qu’il accepte et de celles qu’il refuse.  </p>
+    <p>L’objectif de notre étude est donc double. Il s’agit, en premier lieu, d’étudier l’hôpital des Incurables de Paris, dont les caractéristiques de fonctionnement et d’accueil des malades spécifiques offrent de nouvelles approches des pratiques charitables au <num>xviii</num><hi rend="sup">e</hi> siècle. D’autre part, il est apparu nécessaire d’élargir la vision habituelle de l’hôpital à l’époque moderne, en tirant profit du renouveau actuel et de l’historiographie riche et féconde de l’histoire de l’assistance. Considéré comme un objet d’histoire ouvert, l’hôpital peut aujourd’hui être envisagé comme un prisme à travers lequel se reflète la société toute entière. Institution majeure de l’époque moderne, l’hôpital permet un maillage et un encadrement de la société, de la ville, du quartier. Après avoir été étudié et questionné dans son existence institutionnelle, son utilité médicale, l’hôpital est aujourd’hui perçu comme une ressource sociale : tous les groupes sociaux, ou presque, fréquentent l’hôpital, d’une manière ou d’une autre et l’utilisent à divers niveaux. Structure d’accueil, débouché économique, propriétaire de maisons, source de pouvoir ou de prestige, l’hôpital joue plusieurs rôles et est un instrument de la cohésion sociale.  </p>
+    <p>Il s’agit donc de faire l’histoire sociale d’une institution charitable, en utilisant d’autres domaines historiques qui participent à cette nouvelle forme d’étude de l’hôpital et l’inspirent. L’histoire de la famille, des réseaux sociaux, l’histoire des élites, mais aussi l’histoire économique et l’histoire du quartier sont autant de champs à considérer pour étudier l’hôpital dans sa globalité. En tant qu’institution, qui plus est institution charitable, l’hôpital des Incurables de Paris fait partie intégrante de la société et constitue un formidable point de contact entre de multiples groupes de population très divers. L’institution hospitalière a un impact évident sur le fonctionnement général de la société d’Ancien Régime et révèle même, selon nous, la nature profonde de celle-ci. Pour montrer combien l’hôpital est une institution ouverte et perméable au monde qui l’entoure, l’identification de la population gravitant autour de l’hôpital et du type d’utilisation qu’elle peut faire de l’institution est la première étape du travail effectué et non la moindre. Observer bourgeois, nobles, artisans et religieux non comme tels, mais en tant que fournisseurs, locataires, employés ou donateur de l’hôpital, permet d’envisager d’une nouvelle façon les pratiques sociales, familiales ou commerciales de chacun. L’hôpital des Incurables, véritable microcosme, reflète-t-il la société au sien de laquelle il évolue, en même temps qu’il façonne une société à son image ? Le clientélisme, favorisé par l’organisation en fondations de lits, confère aux Incurables une place particulière dans le paysage hospitalier de la fin d’Ancien Régime et fait de lui un « hôpital modèle ». Se pose donc la question de la place de l’hôpital dans le quartier et au niveau national, de son rayonnement et de son intégration spatiale. Les limites géographiques de ce travail s’en trouvent nécessairement très larges. Les bornes chronologiques, quant à elles, ont été définies suivant l’angle méthodologique et historiographique choisi pour aborder ce sujet. C’est au <num>xviii</num><hi rend="sup">e</hi> siècle que l’étude des Incurables semblait particulièrement prometteuse. La définition précise des limites chronologique s’est pourtant avérée difficile, la nécessité de revenir fréquemment aux origines de l’hôpital et l’abondance de sources obligeant à restreindre la période envisagée. Il a donc été choisi de privilégier la seconde moitié du <num>xviii</num><hi rend="sup">e</hi> siècle, admise de façon très élargie, depuis les années 1740, jusqu’à la veille de la Révolution française.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Cette étude s’appuie sur plusieurs fonds d’archives, le principal étant celui de l’hôpital des Incurables disponible aux archives de l’Assistance publique - Hôpitaux de Paris. D’une grande diversité, ce fonds n’a pas subi de lourdes pertes lors de l’incendie des archives de l’AP-HP en 1871, contrairement à la plupart des fonds qui y sont conservés. Il regroupe essentiellement des documents relatifs aux recettes et aux dépenses de l’hôpital et des documents administratifs. En outre, on trouve dans ce fonds un ensemble remarquable de dossiers de nomination des malades, ce qui offre à l’historien des renseignements précieux sur la population hospitalisée, car introuvables ailleurs. Le « Mémorial historique sur l’hôpital des Incurables », rédigé à la fin du <num>xviii</num><hi rend="sup">e</hi> siècle par le receveur de l’établissement, s’est révélé être une source très précieuse, offrant une vue précise, bien que souvent partiale, de l’organisation des Incurables à la fin de l’Ancien Régime. L’hôpital des Incurables dépendant de l’Hôtel-Dieu, les archives de ce dernier, également conservées à l’AP-HP, ont été utilisées de façon complémentaire, notamment les registres de délibérations, qui regroupent diverses informations concernant l’hôpital des Incurables. Le dépouillement des actes notariés du Minutier central, de la collection Joly de Fleury, conservée à la Bibliothèque nationale de France, et des archives des Filles de la Charité ont permis une approche plus précise des individus fréquentant et utilisant l’hôpital au quotidien. Enfin, de façon ponctuelle, le recours à quelques archives issues des fonds d’hôpitaux d’incurables de province a offert des points de comparaison utiles, dans la mesure où la bibliographie concernant ce type d’établissement est encore très pauvre, voire inexistante.  </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

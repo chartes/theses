@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Guillaume Millet de Jeure est un personnage méconnu, dont les <hi rend="i">Mémoires</hi> sont restés inédits. Il convenait d’en proposer une édition tout en s’appliquant à les replacer dans leur contexte historique.  </p>
+        <p>Guillaume Millet naquit vers 1620 d’une famille noble originaire de Normandie. Son père, du même nom, était commissaire ordinaire de la marine et de l’artillerie de France ; il appartenait à la clientèle de Richelieu. Au décès de son père, le jeune homme commença une carrière militaire sous le patronage du Principal ministre de Louis XIII, ne tardant pas à faire fonction de commissaire aux armées. À la mort de son premier patron, Guillaume Millet rechercha la protection du successeur de Richelieu à la tête du gouvernement, Mazarin. Celui-ci éprouva sa fidélité en diverses occasions, d’abord lors de la cabale des Importants, puis de la Fronde. Le Cardinal avait alors pris le soin de le faire nommer sous-gouverneur de Monsieur, frère du roi, une charge qui lui permettait de demeurer auprès de la reine mère sans éveiller de soupçons. </p>
+        <p>Guillaume Millet remplit par ailleurs de nombreuses fonctions, de nature militaire et diplomatique, consistant à réaliser des levées, à veiller à la discipline sur des fronts regardés comme stratégiques par le principal ministre ou à assurer la liaison entre ce dernier et l’état-major. Des négociations secrètes pour le compte du duc de Parme le conduisirent à Rome en 1658. Il prit la tête, en 1660, des troupes françaises que l’on destinait à chasser les Turcs de Candie. Mazarin trépassa tandis que son envoyé était sur le chemin du retour, de sorte que ce dernier en vint à regretter de n’avoir pas tiré tout le profit possible de son amitié, oublieux sans doute des récompenses qui lui avaient été accordées, les gouvernements de Château-Renault et de Linchamps par exemple. </p>
+        <p>Toutefois le roi renouvela sa confiance à Guillaume Millet, lui donnant de nouvelles missions, notamment en Pologne, en 1664. Il trouva également un protecteur en la personne de Monseigneur, dont il devint sous-gouverneur en 1668. Guillaume Millet reçut en 1683, ultime salaire de l’activité qu’il avait déployée au service de la monarchie, la charge de lieutenant général des pays d’Aunis, La Rochelle et Brouage, îles de Ré et d’Oléron, vacante depuis la mort du Cardinal. C’est d’ailleurs sur cette circonstance que s’achèvent les <hi rend="i">Mémoires</hi>. Il mourut le 24 février 1690 à Paris, ce qui donna l’occasion à <hi rend="i">La Gazette</hi> de faire paraître son éloge funèbre. </p>
+        <p>Les <hi rend="i">Mémoires</hi> de Guillaume Millet intéressent principalement deux champs de la recherche : d’une part, l’étude des « écrits du for privé », une dénomination apparue sous la plume de Marguerite Foisil au milieu de la décennie 1980, et qui a connu depuis une grande postérité, et d’autre part, celle des relations de patronage et de clientélisme, Guillaume Millet se définissant comme un fidèle des cardinaux de Richelieu et Mazarin, comme leur « créature ». Mais le récit que livre le mémorialiste de ses activités touche également à l’histoire du royaume tout entier, dans la mesure où il fut le témoin, et quelquefois même le protagoniste, de quelques-unes des plus importantes affaires du temps. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>La présente édition des <hi rend="i">Mémoires</hi> de Guillaume Millet s’appuie sur l’unique manuscrit subsistant, conservé sous la cote 502 (153) à la bibliothèque Méjanes d’Aix-en-Provence. Des archives notariales, issues de l’activité de plusieurs notaires de Paris et de ses environs, ainsi que des documents tirés des collections généalogiques de la Bibliothèque nationale de France, ont été utilisés pour éclairer l’existence du mémorialiste. Ces pièces intéressent tout d’abord sa famille, mais aussi son patrimoine foncier et ses revenus. </p>
+        <p>Le récit du mémorialiste a par ailleurs été confronté à la correspondance échangée par Guillaume Millet avec plusieurs interlocuteurs, au premier rang desquels Mazarin, à l’occasion de ses missions, correspondance partagée entre le ministère des Affaires étrangères et européennes, le service historique de la Défense et la Bibliothèque nationale de France. </p>
+        <p>Les sources recouvrent certes les différents pans de la vie de Guillaume Millet, mais elles laissent dans l’ombre sa prime jeunesse et ses premières années d’exercice pour se concentrer autour de certaines occasions ponctuelles. On y observe le même déséquilibre entre les éléments personnels et ceux ayant trait à ses activités que dans ses <hi rend="i">Mémoires</hi>, muets, en particulier, quant à sa famille. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

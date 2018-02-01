@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Apparu au début des années 1890, l’Art nouveau s’est diffusé dans toute l’Europe, renouvelant les arts décoratifs et l’architecture. Avant
+          1900, des expositions importantes ont déjà eu lieu dans différents pays. Mais jamais encore l’Art nouveau n’a connu une manifestation d’une
+          telle ampleur qu’à l’Exposition universelle de 1900 à Paris. En effet, c’est la première fois qu’une exposition universelle réunit un tel
+          nombre de pays, d’exposants et de visiteurs : du 14 avril au 12 novembre 1900, plus de cinquante millions de visiteurs s’y rendent pour
+          contempler les efforts de quarante et un pays participants.</p>
+        <p>Pour les partisans de l’Art nouveau, l’enjeu est important : l’Exposition universelle doit le consacrer auprès du public et de la critique,
+          alors qu’il fait l’objet de controverses. L’organisation de l’Exposition étant complexe, l’Art nouveau s’y trouve relativement dispersé, ce
+          qui explique la postérité mitigée de l’événement. Pourtant, il est très bien représenté. S’il manque quelques artistes majeurs, Horta,
+          Mackintosh, Gaudí et leurs compatriotes, un nombre considérable de Français, d’Allemands et d’Autrichiens sont au rendez-vous : Majorelle,
+          Lalique, Guimard, Gallé, Pankok, Riemerschmid, Olbrich, Hoffmann, Wagner, pour n’en citer que quelques-uns parmi une multitude. De même,
+          l’Art nouveau des Pays-Bas, de la Hongrie, la Finlande et la Russie se fait connaître, en architecture comme dans les arts décoratifs.
+          Aussi, pour avoir réuni un nombre inégalé d’artistes de nationalités variées, pour avoir produit des œuvres remarquables présentes
+          aujourd’hui dans de nombreux musées européens, pour avoir suscité une polémique artistique virulente et féconde, l’Exposition universelle
+          n’est pas un événement anodin pour l’Art nouveau.</p>
+        <p>La première partie de cette thèse cherche ainsi à étudier les raisons de la présence, ou de l’absence, de l’Art nouveau à l’Exposition
+          universelle, afin de comprendre les enjeux – artistiques certes, mais aussi politiques, commerciaux – que représente l’Art nouveau pour
+          chaque pays, tout en donnant une vue d’ensemble des artistes et des œuvres présents. La seconde partie s’intéresse au regard des
+          contemporains sur l’Art nouveau à l’Exposition, leurs réactions, méfiantes ou enthousiastes, diverses en tout cas selon les artistes, les
+          nationalités : en 1900, l’Art nouveau est alors loin d’être perçu comme un mouvement homogène. L’Exposition cristallise tout un ensemble de
+          réflexions et de polémiques qui contribuent tantôt à théoriser, tantôt à discréditer l’Art nouveau. Enfin, la troisième partie s’attache à
+          observer les conséquences à long terme de l’Exposition universelle : en analysant les répercussions financières et honorifiques pour les
+          artistes, les modalités de l’entrée de l’Art nouveau dans les musées, l’organisation des expositions suivantes, et en observant les
+          prolongements du débat artistique, elle cherche à évaluer la place de l’Exposition universelle dans l’histoire de l’Art nouveau.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La France ayant organisé l’Exposition, des centaines de cartons sont conservés aux Archives nationales sur ce sujet (série F <hi rend="sup">12</hi> ). Ces archives portent toutefois très peu sur les questions artistiques. Elles permettent de connaître les relations
+          entre le commissariat général de la France et les commissariats des différents pays.</p>
+        <p>De manière beaucoup plus anecdotique, les archives de l’Union centrale des arts décoratifs, conservées à la bibliothèque des Arts
+          décoratifs, permettent de connaître l’action de cette association en faveur des arts décoratifs au sein de l’Exposition. Celles de Roger
+          Marx, critique d’art et commissaire à l’Exposition, conservées à la bibliothèque de l’Institut national d’histoire de l’art, sont
+          intéressantes pour leur important fonds de photographies.</p>
+        <p>Les sources imprimées sont d’une importance fondamentale : rapports des jurys distribuant les récompenses, catalogues des expositions de
+          divers pays, listes des artistes, et rapports généraux sur l’Exposition universelle, constituent un apport très précieux aux recherches.</p>
+        <p>De même, les revues d’art occupent une place majeure au sein de cette étude. Ces revues, principalement <hi rend="i">Art et
+            décoration</hi> , <hi rend="i">L’Art décoratif</hi> et la <hi rend="i">Revue des arts décoratifs</hi> , ont consacré tous leurs numéros
+          entre mai et décembre 1900 à l’Exposition universelle, et constituent une mine d’informations pour la connaissance de l’Art nouveau. Divers
+          essais sont également intéressants, comme ceux de Jean Lahor, Roger Marx ou Robert de la Sizeranne, parmi d’autres : ils livrent une
+          réflexion sur l’Art nouveau tout en permettant de connaître les œuvres présentes à l’Exposition universelle.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

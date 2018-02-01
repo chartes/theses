@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Par l’édit de Sainte-Menehould du 20 septembre 1543, François I<hi rend="sup">er</hi> inaugure la Réformation des Halles en décidant le lotissement et l’aliénation des terrains vagues situés à Paris dans le domaine royal, à l’emplacement d’hôtels royaux délabrés ainsi que des Halles. Celles-ci, délaissées depuis la seconde moitié du <num>xiv</num><hi rend="sup">e</hi> siècle, n’ont en effet pas pu être redynamisées par des précédentes tentatives de réformation et se sont dégradées. La charge de la reconstruction est alors transférée aux preneurs des places aliénées selon un projet d’ensemble incluant des destructions, le percement de rues et la définition d’un style architectural pour les nouvelles maisons et échoppes. L’espace concerné est celui délimité par la rue de la Tonnellerie à l’ouest, la rue Saint-Honoré au sud, les rues de la Lingerie, du Marché aux Poirées et de la Fromagerie à l’est. Le projet est poursuivi par Henri II, François II et Charles IX jusqu’en 1572.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Les principales sources exploitées pour reconstituer le projet des souverains et l’organisation du lotissement sont les minutes des contrats d’adjudication des parcelles, conservées au Minutier central des Archives nationales (étude XX). Leur étude a été complétée essentiellement par des dépouillements au Minutier central, ainsi que dans la sous-série Z<hi rend="sup">1J</hi> des Archives nationales, qui contient des minutes de procès-verbaux des Greffiers des Bâtiments permettant d’appréhender l’apparence du quartier dans la première moitié du <num>xvii</num><hi rend="sup">e</hi> siècle. Enfin, pour réaliser une édition des nombreuses lettres patentes promulguées sur la Réformation des Halles, des archives ont été consultées dans diverses séries des Archives nationales et à la Bibliothèque nationale de France. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

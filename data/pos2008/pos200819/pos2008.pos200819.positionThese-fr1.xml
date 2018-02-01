@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’entrée britannique dans la Communauté européenne créée en 1957 devient, pour les gouvernements qui se succèdent à la tête du pays à
+          partir de 1961, un objectif majeur de la politique étrangère britannique, au nom de la préservation des intérêts du pays. À ce désir
+          britannique d’entrer dans le Marché commun s’oppose la conception gaulliste de la nouvelle Communauté, une « Europe européenne » où la
+          Grande-Bretagne, trop liée aux États-Unis, ne peut avoir sa place. Tout oppose les intérêts, et donc les politiques étrangères des deux pays
+          dans les années 1960. Ou plutôt, tout oppose la conception que se font les gouvernants français et anglais des intérêts respectifs des deux
+          pays. Pourtant, en moins de trois ans, Français et Britanniques parviennent à trouver un accord, et la Grande-Bretagne entre dans la
+          Communauté européenne le 1<hi rend="sup">er</hi> janvier 1973. Deux fils conducteurs s’entrecroisent au cours de cette étude : l’analyse des
+          changements politiques importants qui surviennent dans les deux pays au cours de ces trois années, et l’étude approfondie des
+          administrations françaises et britanniques chargées du dossier européen. Cette réouverture des négociations se fait en effet à la faveur
+          d’une accélération des événements tant en France qu’en Grande-Bretagne : démission du général De Gaulle et élection de Pompidou en France,
+          arrivée au pouvoir d’Edward Heath en Grande-Bretagne. Ces changements de gouvernements ont un impact considérable sur le succès futur des
+          négociations. Mais ces changements, si importants soient-ils, ne doivent pas masquer le travail intense fourni par les administrations
+          chargées du dossier.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>À sujet européen, sources européennes. On a donc utilisé pour cette étude des sources françaises et des sources anglaises. Les archives du
+          président Pompidou et les archives d’un de ses collaborateurs, Jean-René Bernard, conservées à la section du <num>xx</num>
+<hi rend="sup">e</hi> siècle des Archives nationales, sont les principales sources françaises. La place personnelle de Jean-René Bernard,
+          notamment lors des années de pouvoir – membre du cabinet de Pompidou à Matignon, conseiller technique puis secrétaire général adjoint à
+          l’Élysée –, ainsi que l’institution qu’il dirige, le secrétariat général au Comité interministériel (SGCI), en font l’un des personnages
+          clefs du dossier britannique en France. En Grande-Bretagne, trois fonds ont été consultés, correspondant aux trois administrations
+          impliquées dans le dossier européen. Ce sont, par ordre décroissant d’importance, les fonds du <hi rend="i">Prime Minister’s Office</hi>, du
+            <hi rend="i">Cabinet Office</hi> et du <hi rend="i">Foreign Office</hi>.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

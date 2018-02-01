@@ -1,0 +1,122 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Mener une recherche sur les arts et les gens du spectacle à la fin du Moyen Age dans une visée historique pose dès le début un problème
+          essentiel de définition. Qu’est-ce qu’un spectacle à la fin du Moyen Age et quels sont les documents d’archives susceptibles d’éclairer les
+          conditions matérielles de sa réalisation ?</p>
+        <p>Les grandes manifestations théâtrales telles qu’elles ont été étudiées au <num>xix<hi rend="sup">e</hi></num> siècle, notamment par Petit de
+          Julleville, définissent un corpus somme toute assez restreint, aujourd’hui largement remis en cause par les chercheurs du domaine
+          littéraire. D’un point de vue strictement archivistique, peu de choses au final distinguent ces manifestations d’autres types de
+          représentations publiques telles que les fêtes, profanes ou religieuses, les banquets, les grandes entrées... Les sources pertinentes pour
+          tous ces événements mobilisent les mêmes types d’intervenants, des volumes financiers parfois comparables, issus la plupart du temps d’une
+          institution publique, ville ou État, ou d’une personne physique occupant un statut quasi équivalent, comme René d’Anjou.</p>
+        <p>S’attacher au théâtre conduisait donc, soit à se limiter à une recherche essentiellement thématique et réductrice, souvent peu judicieuse
+          dans un fonds d’archives, soit à se poser des problèmes de définition sans fin, voire les deux. Il a donc été décidé de s’attacher aux
+          événements qui semblaient générer des documents proches, voire identiques, dans l’espoir de pouvoir circonscrire un fonds sur lequel
+          travailler.</p>
+        <p>
+          <hi rend="i">Les atouts d’Avignon.</hi>– Des travaux d’érudits de la fin du <num>xix<hi rend="sup">e</hi></num> siècle et du début du XX <hi rend="sup">e</hi> siècle, en tête desquels les articles de Pierre Pansier, ont permis d’obtenir un premier aperçu de la question des
+          spectacles médiévaux à Avignon. La lecture des éditions données par Pierre Pansier de quelques pièces comptables et la consultation des
+          originaux ont rapidement révélé tout l’intérêt de ces documents. Ils fournissent tout d’abord des renseignements extrêmement précis sur les
+          conditions matérielles des représentations spectaculaires avignonnaises, tant sur le coût de chaque élément que sur sa destination précise,
+          car chaque dépense est abondamment détaillée. Le fonds des archives communales est un ensemble cohérent, sans grande lacune pour la période
+          1450-1550, où la quasi-totalité des pièces administratives a été conservée. L’étude d’une ville comme entrepreneur de manifestations
+          spectaculaires a en outre paru intéressante car relativement inédite, surtout dans le Midi, et permettant de trouver un fil conducteur
+          regroupant plusieurs catégories de manifestations.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La masse des archives communales d’Avignon a conduit à concentrer l’étude sur certains types de documents et à établir des critères de
+          sélection pour les sous-fonds sélectionnés. Par les informations économiques et quantitatives qu’elles apportent et par leur précision, les
+          sources comptables sont apparues rapidement comme étant le cœur de l’étude.</p>
+        <p>La série CC (1515 articles) est la plus riche du fonds des archives communales d’Avignon. Elle concerne principalement les finances, les
+          impôts et la comptabilité ; ont été laissés de côté les cadastres et les dénombrements, inexistants pour notre période. En effet, seul  le
+          fonctionnement de la comptabilité municipale « au quotidien » intéressait le sujet.</p>
+        <p>La source première pour repérer l’organisation de la comptabilité de la ville, surtout dans le domaine de ses dépenses, est le livre des
+          comptes du trésorier général. Celui-ci se présente sous la forme d’un registre <hi rend="i">in folio</hi>écrit sur papier de la main du
+          trésorier général lui-même ou de son mandataire, élu chaque année, en juin, en même temps que les trois consuls et l’assesseur, et par
+          conséquent renouvelé tous les ans. On dénombre, pour la période 1372-1550, 79 articles. Un nouveau registre est commencé à chaque changement
+          de trésorier général, en franco provençal, parfois farci de français, jusque dans les années 1540, puis en français.</p>
+        <p>Les registres du trésorier d’Avignon sont rédigés selon le principe de comptabilité en partie double, développé en Italie à partir du XIV
+<hi rend="sup">e</hi> siècle et que les dirigeants avignonnais, issus pour une large partie du monde des marchands italiens, connaissaient
+          parfaitement.</p>
+        <p>Pièces à l’appui du registre du trésorier, les mandats de paiement constituent sans doute la source la plus riche pour la connaissance des
+          dépenses de la ville dans le détail. Les plus complets donnent en effet de nombreuses indications sur les objets ou les services qui ont
+          entraîné paiement ainsi que sur leur utilisation. Les mandats font l’objet d’un enregistrement en texte intégral dans un registre des
+          mandats, tenu sur plusieurs années par le notaire et secrétaire de la ville, et qui sert au contrôle des comptes.</p>
+        <p>Outre les sources comptables, ont été également parcourues les délibérations du Conseil de ville (BB) mais celles-ci ne fournissent que des
+          informations trop éparses et difficilement repérables pour le sujet. De plus, leur manque de précision et d’informations économiques empêche
+          la plupart du temps d’en tirer des conclusions intéressantes sans avoir recours à la comptabilité correspondante. Les délibérations ne sont
+          en effet pas aussi exhaustives que la comptabilité.</p>
+        <p>La correspondance des consuls et ses volumes de « chroniques » ont en revanche été plus utiles car plus précis et donnant des informations
+          économiques. Notre investigation repose sur le regeste des registres qu’a donné Léopold Duhamel dans l’inventaire-sommaire de la série AA
+          .</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

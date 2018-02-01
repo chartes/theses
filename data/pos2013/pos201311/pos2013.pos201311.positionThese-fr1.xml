@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Jean-Charles Augustin Clément du Tremblay est un modèle historiographique stimulant : en lui, sont réunis la querelle janséniste et le conflit religieux de la Révolution française. Sa longue vie (1717-1804) nous conduit des ruines de Port-Royal à celle de l’Église gallicane de l’abbé Grégoire. Membre d’une éminente famille janséniste qui fut une des colonnes vertébrales du mouvement au <num>xviii</num><hi rend="sup">e</hi> siècle, l’abbé Clément consacra sa vie à la cause des appelants et à l’avènement d’un catholicisme renouvelé, fidèle à la théologie de saint Augustin et aux traditions gallicanes. Au soir de sa vie, après la Terreur, il relie ainsi la seconde Église constitutionnelle, dont il devient l’un des évêques, aux combats religieux du <num>xviii</num><hi rend="sup">e </hi>siècle. La vie de l’abbé Clément n’a jusqu’à présent fait l’objet que de coups de projecteurs ponctuels dans le cadre d’études plus larges, notamment les travaux fondateurs de Rodney Dean sur l’Église constitutionnelle de la métropole de Paris ou ceux de Nicolas Lyon-Caen sur la bourgeoisie janséniste parisienne. Une étude globale de la vie de l’abbé Clément manquait, capable de mettre en perspective l’action de cette cheville ouvrière discrète mais incontournable du courant augustinien. Les travaux menés pour la thèse d’école des chartes constituent donc une première étape dans l’analyse de cet acteur de l’histoire de l’Église que la thèse doctorale viendra approfondir. Au vu de l’abondance des sources, le présent travail se consacre à l’étude de la correspondance et des voyages italiens et espagnols du chanoine Clément entre 1754 et 1771. Les trois tomes du <hi rend="i">Journal de correspondances et de voyages en Italie et en Espagne entre 1758 et 1771</hi>,<hi rend="i"> </hi>publiés par l’abbé en 1802,<hi rend="i"> </hi>soulignent le caractère central de cette double décennie et nous ouvrent une voie d’accès pour l’analyse. C’est au cours de cette période, en effet, que l’abbé entreprend la constitution d’un corps de correspondants dans les foyers jansénistes italiens et espagnols afin de soutenir un ambitieux programme de réformes ecclésiastiques, et notamment la suspension des effets de la Bulle <hi rend="i">Unigenitus</hi>. Au-delà des monographies sur les jansénismes nationaux, Pietro Stella pour l’Italie ou Joël Saugnieux pour l’Espagne, la présente étude se propose donc d’apporter quelques éclairages pour une lecture élargie du jansénisme dans le cadre d’une voie méditerranéenne. Riches de différents acteurs aux statuts sociaux variés, l’espace de circulation intellectuelle créé par la correspondance de Clément ne constituerait-il pas une République des lettres janséniste ? L’abbé Clément ne serait-il pas l’intermédiaire au centre d’un lieu de communication et d’échanges où se déploient des stratégies d’information, des négociations et autres transactions pour diffuser et convaincre, mais aussi pour discréditer et anéantir le système adversaire de la Compagnie de Jésus ? </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Les sources disponibles, en grande partie la correspondance de notre personnage, sont nombreuses et dispersées entre Paris et Rome. Pour toute la vie de l’abbé Clément, on décompte plus de trente recueils de lettres en français, italien, espagnol et latin, avec une moyenne de 250 folios par manuscrit. À Paris, la bibliothèque de l’Arsenal et la bibliothèque du séminaire Saint-Sulpice accueillent à elles seules les trois quarts du fonds Clément. Outre les lettres, on trouve à l’Arsenal le manuscrit inédit du carnet de voyage en Espagne de Claude Bonnet, domestique de l’abbé, qui fait l’objet d’une édition critique à la fin de notre mémoire. Ce document ignoré jusqu’ici donne à vivre de l’intérieur un des voyages de l’abbé et constitue un témoignage précieux d’un janséniste issu d’un milieu populaire, faisant à son tour œuvre de médiation culturelle avec le monde de la domesticité parisienne. La bibliothèque de la Société de Port-Royal conserve enfin les papiers de l’avocat janséniste Adrien Le Paige, avec qui l’abbé Clément fut en relation suivie. À Rome, le chercheur peut consulter, à la biblioteca Corsiniana<hi rend="i">,</hi> la correspondance active de l’abbé Clément avec M<hi rend="sup">gr</hi> Bottari, chef de file du jansénisme romain, pour les années 1754-1758. Enfin, dans les archives de la congrégation pour la Doctrine de la foi, le dossier d’excommunication des évêques de l’Église d’Utrecht a permis de prouver l’influence de Clément dans cette affaire.  </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,106 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les raisons militant en faveur d’une biographie de Paul-Emile Victor sont multiples. Désenchantées, les régions et les expéditions polaires
+          peuvent accéder au statut d’objet d’histoire. L’activité autobiographique incessante de Paul-Emile Victor n’est pas un obstacle: elle
+          fournit une base à la recherche et ses lacunes sont significatives: par exemple, Paul-Emile Victor n’est que rarement précis sur ses
+          activités pendant la Seconde Guerre Mondiale. Enfin le fait que Victor soit mort récemment signifie aussi que ses proches et ses
+          collaborateurs peuvent être interrogées et fournir des informations biographiques intéressantes.</p>
+        <p>Mais pourquoi faire la biographie de Paul-Emile Victor, plutôt que l’histoire des expéditions polaires françaises pendant la seconde
+          moitié du <num>xx<hi rend="sup">e</hi></num> siècle D’une part, ces deux sujets se recouvrent largement: sans tomber dans l’excès, on peut en effet
+          dire qu’objectivement, au sens où c’est son action qui a <hi rend="i">permis</hi> l’organisation de recherches scientifiques françaises dans
+          les régions polaires, et culturellement Paul-Emile Victor incarne les expéditions polaires françaises. D’autre part, la vie de Paul-Emile
+          Victor ne se résume pas à ses expéditions polaires: en témoigne la multiplicité de ses activités, au nombre desquelles on peut citer
+          l’ethnographie, le scoutisme, l’écologie, l’écriture ou le dessin. Enfin il existe aussi une raison pratique: les archives personnelles de
+          Victor sont mieux conservées, plus riches et plus facilement consultables que celles de l’institution qu’il a créée, les Expéditions
+          Polaires Françaises (Missions Paul-Emile Victor).</p>
+        <p>Trois grandes séries de questions d’ordre biographique ordonnent cette recherche. Tout d’abord, qu’a apporté l’œuvre de Paul-Emile Victor
+          Quelles sont ses grandes réalisations Dans quelle mesure étaient-elles nouvelles à l’époque où elles ont eu lieu Ensuite, puisqu’il s’agit
+          de faire une biographie, quelle a été l’évolution, professionnelle et personnelle, de Paul-Emile Victor Quels sont les points de ruptures et
+          de choix importants dans sa vie Comment a-t-il su s’adapter aux circonstances et aux situations nouvelles Enfin les questions d’«image»
+          sont essentielles pour la biographie d’un explorateur médiatisé, et non médiatique. En quoi cette image construite correspond-elle à la
+          réalité d’un caractère ou d’une œuvre Pour répondre à toutes ces questions, l’approche biographique choisie n’est réellement féconde que si
+          elle est replacée dans des problématiques plus larges concernant l’histoire des explorations, des sciences, des techniques et des
+          médias.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Parmi les différents fonds d’archives utilisés, on peut distinguer deux sources principales: le fonds Paul-Emile Victor conservé au Musée
+          de l’Hommeet le fonds Paul-Emile Victor conservé aux Expéditions Polaires Françaises, dont un classement scientifique a été établi à
+          l’occasion de cette thèse. Cette documentation a été complétée par la consultation des archives des Expéditions Polaires Françaises et des
+          archives du Groupe Paul-Emile Victor pour la défense de l’homme et de l’environnement, des papiers personnels d’Eliane Victor et de fonds du
+          Service historique de la marine.</p>
+        <p>Essayer de reconstituer la vie de Paul-Emile Victor à partir des seules sources d’archives, même si celles-ci sont très riches
+          quantitativement et qualitativement, serait une erreur. Paul-Emile Victor ayant beaucoup publié et ayant fait l’objet de beaucoup de
+          commentaires dans la presse de son époque, il ne faut pas négliger les sources imprimées, qui permettent d’étudier l’influence et la
+          popularité qu’il a pu avoir. C’est aussi le cas des sources radiophoniques, audiovisuelles ou cinématographique. Enfin l’état des sources ne
+          serait pas complet sans ce luxe qui est accordé aux seuls historiens de la période contemporaine : les sources orales.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

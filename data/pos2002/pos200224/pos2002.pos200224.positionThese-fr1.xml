@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Claude d’Annebault fut le dernier “ grand favori ” de François I<hi rend="sup">er</hi> . De 1543 à 1547, le roi lui confia la
+          responsabilité et la direction de toutes les affaires de l’État. L’amiral fut donc le plus grand personnage du royaume après son prince, et
+          pourtant, il demeure mal connu, comme enveloppé par les ténèbres historiographiques qui pèsent sur la fin du règne du roi-chevalier. En
+          effet, il est patent que la dernière décennie, moins fastueuse et peut-être moins bien documentée que les premières, n’a été que peu étudiée
+          et souffre d’une dévalorisation systématique nourrie d’ambiguïtés et d’<hi rend="i">a priori</hi>. Cette période est souvent décrite comme
+          le déclin d’un souverain devenu malade et impotent, dominé par une maîtresse autoritaire et capable d’imposer ses créatures au conseil ;
+          parmi ces prétendus hommes de paille, Claude d’Annebault incarne la probité, mais aussi la plus parfaite incompétence. <lb/>Cette vision
+          caricaturale, vieille de plusieurs siècles, doit être remise en question. Il faut d’abord reconsidérer la faveur royale non plus comme un
+          vice néfaste et délétère, mais comme un véritable système politique structurant. Le déroulement de la carrière de l’amiral permet de
+          redéfinir et d’illustrer les problématiques de la faveur, à tous les niveaux du système. L’étude de ce personnage offre aussi l’opportunité
+          de mettre à jour les mécanismes du conseil du roi et du gouvernement du royaume, et de faire revivre la cour oubliée des dernières années du
+          règne de François I<hi rend="sup">er</hi> . Pour ne pas abstraire ces réflexions et ces problématiques de leur contexte, il a semblé
+          pertinent de les insérer dans la trame chronologique de la vie de Claude d’Annebault.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La perte des papiers de la famille d’Annebault aurait pu constituer un obstacle. Mais même dans ce cas, un personnage d’une telle
+          importance est toujours bien documenté. Les vestiges de sa correspondance sont conservés dans de nombreux fonds, notamment les manuscrits
+          français de la Bibliothèque nationale de France ; ces recueils renferment également des lettres de contemporains de l’amiral, d’où ont été
+          tirés d’importants compléments d’information. Plusieurs séries des Archives nationales ont été exploitées (J, P, X<hi rend="sup">1A</hi>
+          …), ainsi que le Minutier central des notaires parisiens. D’autres renseignements, sur des négociations diplomatiques, le gouvernement des
+          provinces ou la vie privée de l’amiral, ont été glanés aux archives du Ministère des affaires étrangères, aux archives départementales de
+          l’Eure, de la Seine-Maritime, du Calvados, de la Loire-Atlantique, ou encore dans des dépôts d’archives d’Italie du Nord (Turin, Moncalieri,
+          Mantoue, Modène, Venise). Enfin, les dépêches des ambassadeurs des ducs de Mantoue et de Ferrare, rarement utilisées en dépit de leur
+          richesse, ont été compulsées avec fruit.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

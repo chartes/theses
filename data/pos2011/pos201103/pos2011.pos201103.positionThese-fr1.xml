@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Malgré le développement important de l’historiographie de l’égyptologie au cours des dernières années, la question des relations entre les collections d’antiquités et le développement scientifique de la discipline s’est encore peu posée. S’intéresser aux institutions parisiennes qui ont conservé ces monuments permet d’appréhender les relations entre les travaux d’érudition, les explorations d’amateurs et la constitution d’un solide corpus archéologique et philologique. Après les travaux entrepris dans ce sens par Michel Dewachter, qui a orienté et dirigé ce travail, l’étude s’est portée sur les collections publiques en raison de leur accessibilité qui en fait très tôt un instrument de travail scientifique. La recherche s’est concentrée sur les institutions parisiennes, pour des raisons matérielles, mais aussi parce que la capitale française rassemble dès avant la Révolution française des collections accessibles aux savants au sein du cabinet des Antiques de la Bibliothèque du roi. Rejoint d’abord par le muséum d’histoire naturelle puis par le Louvre et le musée Guimet, la Bibliothèque nationale contribue à faire de Paris le principal centre de développement de la discipline tout au long du <num>xix</num><hi rend="sup">e</hi> siècle en France jusqu’à l’apparition du centre universitaire de Lyon et de l’Institut de papyrologie de Lille à la fin du siècle. </p>
+        <p>Il s’agit, par le témoignage apporté par les archives des institutions de conservation, de retracer l’évolution du statut de l’objet archéologique en égyptologie : de simple objet de curiosité, il devient témoignage historique parlant avec le déchiffrement de l’égyptien hiéroglyphique, puis document archéologique. Ces changements de statut accompagnent les mutations de l’égyptologie et participent à la construction scientifique de cette discipline. </p>
+        <p>L’exploitation des archives a en partie été facilitée par la création d’une base de données des acquisitions du Louvre : elle a permis à la fois une évaluation statistique des modes d’enrichissement du musée et la constitution d’un index, informatique et papier, d’accès aux sources intéressant les origines des objets, accompagnant ainsi l’effort de mise en contexte des collections de musée. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>La complexité de l’histoire des sources utilisées a nécessité son exposition en détail dans une partie liminaire. L’éclatement des séries rendait utile une présentation précise de leurs contenus respectifs pour retrouver une cohérence d’ensemble. </p>
+        <p>La majeure partie de la documentation exploitée pour le musée du Louvre est issue des fonds des Archives des musées nationaux (AMN). Dans ce fonds, les séries AE consacrées spécifiquement au musée égyptien ont fourni une part importante de la documentation. Elles ont été complétées par les séries *DD et en particulier *7 DD qui rassemblent les inventaires du musée, *BB que constituent les procès-verbaux des comités consultatifs du musée et ponctuellement par la série O 30 où sont conservés les dossiers du personnel. </p>
+        <p>À la Bibliothèque nationale de France (BNF), les fonds consultés sont éclatés entre plusieurs départements. Une partie des archives de fonctionnement du cabinet des Médailles et Antiques est conservée par le département lui-même dans un fonds spécifique coté ACM ; ce fonds trouve un complément dans divers registres et fonds privés regroupés sous les cotes ACM SUP ou dans le fonds manuscrit du département. Les archives centrales de la BNF pour le <num>xix</num><hi rend="sup">e</hi> siècle sont quant à elles conservées dans la section occidentale du département des Manuscrits dans la série Archives modernes. C’est également dans ce département que se trouvent les fonds scientifiques privés de quelques égyptologues. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

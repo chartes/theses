@@ -1,0 +1,107 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La destinée historiographique de Georges Lallemant (vers 1575-1636) est singulière : celui qui passe pour avoir été l’un des peintres les
+          plus en vogue du Paris d’Henri IV et de Louis XIII fut par la suite rapidement oublié, et de façon durable. Ce ressortissant lorrain, devenu
+          sujet du roi de France en 1616, et qui effectua toute sa carrière à Paris, entre 1601 et 1636, faisait ainsi jusqu’à peu figure
+          d’inconnu.</p>
+        <p>Le peintre n’a pas jusqu’ici attiré les faveurs des historiens de l’art. Davantage, le personnage en a semble-t-il découragé plus d’un, et
+          les études entreprises sont restées partielles ou inachevées. La redécouverte – toute relative – de la période et de ses enjeux en histoire
+          de l’art en même temps que l’intérêt renouvelé de l’historiographie pour les travaux biographiques constituaient un terrain favorable pour
+          reprendre méthodiquement le « cas » Georges Lallemant. C’est en se fondant sur le constat de multiples incohérences, de l’écart entre la
+          tradition et la pauvreté des documents effectivement mis à jour, entre l’invisibilité précoce d’un artiste et la multiplicité des élèves et
+          des réalisations qu’on lui prête, et en proposant un véritable « retour aux sources », que cette thèse entend proposer la première synthèse
+          sur un sujet maintes fois écarté.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont éparpillées et de nature très diverse. On peut diviser les sources imprimées, d’abord mises à profit, en deux
+          grands ensembles. D’une part, ont été méthodiquement exploités les histoires de peintres et autres dictionnaires biographiques édités sous
+          l’Ancien Régime. Muets à bien des égards, ils donnent surtout la matière pour une histoire de la postérité critique de Lallemant. Par
+          ailleurs, les descriptions de Paris, entendues au sens large, ont été largement dépouillées : depuis les premiers avatars des <hi rend="i">Antiquités</hi> du début du <num>xvii<hi rend="sup">e</hi></num> siècle, jusqu’aux <hi rend="i">Antiquités nationales</hi> d’Aubin-Louis
+          Millin au début de la période révolutionnaire, ces ouvrages précieux pour l’historien de l’art ne mentionnent également que très
+          occasionnellement le nom de Lallemant</p>
+        <p>Ces sources dispersées et insatisfaisantes ont amené à s’appuyer davantage sur les sources manuscrites. Outre le recours essentiel au
+          fichier Laborde (Bibliothèque nationale de France et fonds Doucet de la bibliothèque de l’Institut national d’histoire de l’art) et à
+          quelques incontournables de l’histoire de l’art à l’époque moderne (les « Notes manuscrites sur les peintres et les graveurs » de Mariette,
+          au département des estampes et de la photographie de la Bibliothèque nationale de France), le relevé minutieux des documents déjà mis à
+          jour, publiés ou non, ainsi que les découvertes faites au Minutier central des notaires parisiens (études VI, VIII, XII, XIII, XIV, XVI,
+          XVIII, XXI, XXXVI, LI, LVII, LXVII, LXXXVI, XC, XCI, CV et CIX) ont permis de rassembler près de quatre-vingt actes, de nature diverse :
+          d’ordre économique – baux, constitutions de rentes – ou personnel – contrats de mariage – mais aussi directement liés à l’exercice de la
+          peinture – marchés et brevets d’apprentissage. Ce sont autant de documents essentiels pour connaître notre personnage dans ses multiples
+          dimensions : peintre au service des plus grands, chef d’atelier, bourgeois de Paris prospère et établi.</p>
+        <p>Les sources imprimées comme les archives notariales ont orienté les recherches vers des sources aussi diverses que dispersées, dans les
+          archives de la municipalité parisienne (sous-série H<hi rend="sup">2</hi> et série KK des Archives nationales), dans des fonds relatifs à la
+          Chambre des comptes (fonds français de la Bibliothèque nationale de France), dans les archives de confréries ou de communautés de métiers
+          (séries K et KK des Archives nationales) et dans celles de nombreux établissements (manuscrits de la Bibliothèque Sainte-Geneviève,
+          sous-série H<hi rend="sup">5</hi> des Archives nationales), ainsi que, de manière annexe, dans les sources de la période révolutionnaire
+          (série S des Archives nationales).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

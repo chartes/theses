@@ -1,0 +1,90 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Au sein du mouvement orientaliste, l’architecture ne suscite pas la même faveur chez les chercheurs que la peinture ou la littérature.
+          Très longtemps, elle fut totalement ignorée et les rares monuments encore visibles en France souffrirent de cette indifférence et de ce
+          mépris. Depuis une dizaine d’années, plusieurs études précises ont toutefois permis de mieux connaître quelques-uns de ses protagonistes et
+          un certaine nombre de ses manifestations les plus caractéristiques. A la suite de ces travaux, il s’agit d’apprécier l’importance de
+          l’orientalisme architectural au <num>xix<hi rend="sup">e</hi></num> siècle à Paris, ville qui tenait alors un rôle privilégié dans l’élaboration des
+          principaux mouvements architecturaux. L’orientalisme n’étant pas un phénomène nouveau en Occident, il convient de dégager une chronologie de
+          la perception de l’architecture islamique, au travers notamment de sa matérialisation monumentale.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude de l’orientalisme architectural nécessite de recourir à des sources extrêmement variées. Les séries F<hi rend="sup">12</hi> , F
+<hi rend="sup">17</hi> , F<hi rend="sup">21</hi> et AJ<hi rend="sup">52</hi> des Archives nationales nous renseignent notamment sur la
+          construction des pavillons étrangers et coloniaux des expositions universelles, sur les missions scientifiques, sur les fêtes publiques de
+          la Monarchie de Juillet et du Second Empire, sur les demandes de souscription adressées à l’administration des Beaux-arts et sur
+          l’introduction de l’orientalisme à l’École des Beaux-arts. Aux Archives de Paris, les séries D.1P<hi rend="sup">4</hi> et VO <hi rend="sup">11</hi> , les archives du service d’architecture de la Ville de Paris et les fonds privés constituent l’essentiel des sources d’archives
+          consultées. Il n’existe pas davantage de fonds iconographique homogène. Les illustrations des revues générales et spécialisées constituent
+          les principales sources, que viennent compléter les séries topographiques conservées à la Bibliothèque nationale de France (département des
+          estampes et de la photographie), à la Bibliothèque historique de la Ville de Paris et au Musée Carnavalet.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

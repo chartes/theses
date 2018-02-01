@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’ombre de Charles Haskins plane encore sur l’historiographie normande. Paru en 1916, son ouvrage <hi rend="i">Norman institutions</hi>
+          demeure aujourd’hui une référence incontournable, en particulier pour l’étude de la justice de la période anglo-normande (1066-1154). Il n’a
+          pas été remplacé : en effet, les travaux des historiens du droit normand ont eu du mal à s’arracher à l’horizon du <hi rend="i">Très ancien
+            coutumier</hi> et de la <hi rend="i">Summa legibus</hi>, ou à la quête des influences scandinaves ou franques sur les premières
+          institutions du duché, tandis que la <hi rend="i">legal history</hi> anglo-saxonne, confrontée aux débats sur les origines de la <hi rend="i">common law</hi>, n’a longtemps étudié la période normande que sous l’angle de la transition et le duché que pour son éventuelle
+          influence sur les institutions Plantagenêt.</p>
+        <p>Le renouvellement des problématiques a fait apparaître depuis plus d’une vingtaine d’années un nouveau champ d’études, celui du règlement
+          des conflits. Un de ses apports fut de nuancer la vision trop sombre que nous nous faisions de l’époque dite féodale, en invitant à mieux
+          comprendre la violence médiévale et ses limites. Appliquer ce questionnement à la Normandie peut surprendre, puisque le duché est considéré
+          comme une principauté bien ordonnée. Pourtant la vision traditionnelle de l’histoire politique normande brouille notre compréhension : elle
+          peut s’écrire en effet comme une alternance de longues périodes de pouvoir fort, qui assurent la prospérité, et de plus brèves périodes
+          d’anarchie, qui ne font que démontrer <hi rend="i">a contrario</hi> le poids du duc, puisqu’elles sont attribuées à l’absence du prince
+          (minorité de Guillaume), à sa mauvaise qualité (Robert Courteheuse) ou à sa multiplication (Étienne et Mathilde). S’interroger sur les
+          mécanismes du règlement des conflits invite donc à une meilleure prise en compte des acteurs non-ducaux, des usages qu’ils font de la norme
+          ou de l’écrit, mais éclaire aussi les fondements du pouvoir ducal.</p>
+        <p>L’étude se déroule en trois temps : étude des stratégies d’écriture des sources, analyse des moments et des formes du conflit, esquisse de
+          synthèse sur les relations entre conflit et pouvoir.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Deux types traditionnels de sources ont été étudiés. Les sources narratives sont facilement accessibles, en particulier grâce aux
+          importants efforts d’éditeurs anglo-saxons. L’essentiel des documents diplomatiques publiés a été pris en compte ; les efforts de
+          dépouillement des sources inédites se sont concentrés sur les actes et les cartulaires normands présents à la Bibliothèque nationale de
+          France, même si les archives normandes n’ont ponctuellement pas été négligées.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

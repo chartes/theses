@@ -1,0 +1,107 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Bien souvent, l’administration militaire évoque un univers très hiérarchisé, complexe, où la paperasserie règne en maître, en un mot, un
+          univers assez peu exaltant. En réalité, l’étude d’une structure comme celle du grand quartier général (GQG) permet de se retrouver au cœur
+          des mécanismes de prise de décision et des enjeux de pouvoirs, tout en s’éloignant du cadre de l’histoire-bataille, du simple récit des
+          opérations militaires. C’est au sein de ce type d’institution que s’élaborent les stratégies et que partent les ordres. L’organisation et le
+          fonctionnement de ces organes sont loin d’être rigides. L’apparence donnée par le caractère hiérarchisé et pyramidal de cette administration
+          est trompeuse et le processus décisionnel intègre une multitude de facteurs : humains, psychologiques, politiques…</p>
+        <p>Le grand quartier général des forces terrestres françaises de 1939 n’échappe pas à cette règle. L’importance des forces terrestres dans
+          l’armée le place en situation prédominante. C’est en son sein que se prend une bonne part des décisions relatives à la conduite de la guerre
+          et que l’on trouve les principaux responsables du haut commandement. L’étude de cet organe de commandement, en mêlant des aspects
+          institutionnel, militaire, politique et humain, permet d’alimenter la réflexion sur la définition des responsabilités de chacun des acteurs
+          de la conduite de la guerre, de s’intéresser aux relations entre haut commandement et gouvernement, aux contraintes qui pèsent sur les
+          responsables militaires et favorise une approche différente des événements. Cette approche institutionnelle est essentielle pour saisir les
+          raisons de la défaite française de 1940, pour comprendre pourquoi et comment une armée, considérée pourtant comme une des meilleures du
+          monde, s’est effondrée en moins de quarante jours.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude s’est principalement fondée sur les archives militaires conservées au Service historique de l’armée de terre (SHAT), à Vincennes,
+          et en premier lieu sur celles du grand quartier général, produites entre la fin du mois d’août 1939, date de la mise en place de cette
+          structure, et le 1<hi rend="sup">er</hi> juillet 1940, jour de sa dissolution. Ces archives forment la sous-série 27 N. On y trouve des
+          documents présents dans toute institution, tels que les annuaires, la correspondance reçue et expédiée ou les notes de service, qui
+          permettent de comprendre l’organisation et le mode de fonctionnement du grand quartier général, ainsi que des documents plus spécifiques,
+          comme les instructions personnelles et secrètes ou les ordres d’opérations, vecteurs de la transmission de l’information d’un bout à l’autre
+          de la chaîne de commandement et outils d’exécution, qui renseignent sur l’action exercée par le grand quartier général en 1939-1940. À ce
+          fonds principal viennent s’ajouter les archives du grand quartier général présentes dans les fonds de Moscou, fonds qui ont été rapatriés en
+          France dans les années 1990 et dont une partie est d’ores et déjà librement consultable.</p>
+        <p>Diverses sources, conservées soit au SHAT, soit au Centre historique des Archives nationales, ont également été mises à contribution pour
+          compléter ou vérifier les informations recueillies dans les archives du grand quartier général ainsi que dans les mémoires et témoignages
+          des contemporains. On citera notamment les archives des autres institutions ayant concouru à la conduite de la guerre (présidence du
+          Conseil, cabinet du ministre de la Défense nationale, état-major de l’armée, Conseil supérieur de la guerre, Conseil supérieur de la défense
+          nationale, Comité de guerre), dont la consultation permet de voir dans quelle logique s’inscrivent la création et la mise en place du grand
+          quartier général et d’intégrer cette structure dans un réseau de relations complexe mêlant responsables politiques et militaires ; les
+          archives privés des principaux acteurs de la guerre (général Gamelin, général Weygand, général Georges, Paul Reynaud, Édouard Daladier…),
+          dans lesquelles transparaissent les rivalités et les tensions entre les différentes personnalités et institutions ; enfin, les dossiers
+          personnels des responsables du grand quartier général.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

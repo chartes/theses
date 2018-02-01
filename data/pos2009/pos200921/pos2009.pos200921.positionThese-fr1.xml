@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Étudier la <hi rend="i">Terra sancti Benedicti</hi>, la seigneurie du Mont-Cassin, du <num>xi</num>
+<hi rend="sup">e</hi> au <num>xiii</num>
+<hi rend="sup">e</hi> siècle, permet de s’insérer dans une longue historiographie, tant le monastère fondé par Benoît de Nursie vers 530
+          inspire les historiens. Cette seigneurie, qui s’accroît avec les nombreuses donations du haut Moyen Âge, connaît plusieurs vicissitudes au
+          cours du Moyen Âge, du fait de sa position géographique centrale, qui en fait un acteur géopolitique incontournable. Malgré tout, le fonds
+          d’archives du Mont-Cassin est exceptionnellement riche, grâce notamment à l’œuvre de l’abbé Bernard I<hi rend="sup">er</hi> Ayglier, qui
+          organise pour la première fois leur conservation systématique et raisonnée, au <num>xiii</num>
+<hi rend="sup">e</hi> siècle. Il est donc possible de prendre appui sur ce fonds pour étudier la <hi rend="i">Terra sancti Benedicti.</hi>
+      </p>
+        <p>L’étude réalisée porte sur une région précise : le sud-ouest de la <hi rend="i">Terra</hi>, particulièrement une zone désertique appelée
+          Foresta. Cette région abrite une série de sites, une quinzaine, qui illustrent l’histoire du peuplement et de la mise en valeur de la
+          seigneurie. En effet, la période marque l’apogée de la puissance temporelle de la seigneurie du Mont-Cassin, à un moment où les seigneurs
+          fortifient la terre, dans le contexte d’<hi rend="i">incastellamento</hi> que l’on connaît en Italie. L’<hi rend="i">incastellamento</hi> intervient dans la <hi rend="i">Terra</hi> plus tardivement, et permet l’érection ou la fortification de ces centres qui
+          marquent durablement le paysage et contribuent à fixer l’habitat.</p>
+        <p>Parmi ces centres, deux monastères sont particulièrement intéressants à étudier : il s’agit de San Pietro et de San Paolo della Foresta,
+          fondés à l’extrême fin du <num>x</num>
+<hi rend="sup">e</hi> siècle et passés sous la domination cassinésienne dans le dernier quart du <num>xi</num>
+<hi rend="sup">e</hi> siècle. Ces deux monastères, d’abord indépendants, illustrent la stratégie d’expansion territoriale du Mont-Cassin dans
+          une direction précise, le Sud-Ouest, le long de la vallée du Liri. De plus, ces monastères s’insèrent dans le réseau du monachisme grec :
+          fondés par et pour des Grecs, ils sont un exemple de sa diffusion en Italie méridionale, dans une région, la Campanie, où ces questions sont
+          peu explorées, contrairement à la Calabre et à la Sicile. De ce fait, il est possible d’étudier le peuplement grec de la <hi rend="i">Terra</hi>, à travers l’exemple de San Pietro et San Paolo della Foresta.</p>
+        <p>L’étude a été menée en suivant deux axes : d’une part, la documentation écrite tirée du fonds de San Pietro della Foresta, aux archives du
+          Mont-Cassin, qui donne lieu à une édition partielle du fonds ; et d’autre part, un travail de repérage topographique, sur les sites, réalisé
+          afin de prendre connaissance des réalités du terrain. Cette double étude a permis une approche originale des questions posées : la situation
+          de la <hi rend="i">Terra</hi> au cours de la période, notamment son insertion dans le mouvement d’<hi rend="i">incastellamento</hi>; la mise
+          en valeur des territoires dans un contexte de défrichements ; la présence d’une population spécifiquement grecque dans la région.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives du Mont-Cassin ont fourni une part indispensable à l’étude : le fonds de San Pietro della Foresta, partiellement édité à la
+          fin de l’étude, y est conservé (Aula II, Capsula LI, fascicolo I, 1-11 ; fascicolo II, 12-22 ; Aula III, Capsula LI, 9 ; Capsula XII, 35).
+          D’autres sources ont été utilisées : le registre de Pierre Diacre, dont il existe un fac-similé, les A <hi rend="i">cta Sanctorum</hi>, les
+          chroniques cassinésiennes publiées dans la collection des <hi rend="i">Monumenta Germaniae Historica</hi>, les régestes d’archives
+          pontificales et cassinésiennes, la <hi rend="i">Patrologia Latina</hi> et la <hi rend="i">Patrologia Greca</hi>.</p>
+        <p>Une part importante a été réservée aux sources physiques : l’observation des sites, effectuée sur le terrain, a donné lieu à une étude
+          systématique.</p>
+        <p>Enfin, de façon plus anecdotique, le fonds de photographies aériennes du ministère des Biens culturels italien (Royal Air Force 1942-1944)
+          s’est révélé être un précieux complément pour l’appréhension générale de la région et des sites encore existants.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

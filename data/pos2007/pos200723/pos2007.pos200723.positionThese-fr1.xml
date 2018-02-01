@@ -1,0 +1,111 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Aux <num>xix<hi rend="sup">e</hi></num> et <num>xx<hi rend="sup">e</hi></num> siècles, le consul est véritablement la clé de voûte de la politique des
+          Puissances impérialistes en Chine. Les relations sino-étrangères sont alors fondées sur les traités acquis à la force des canons ; ces
+          conventions garantissent la sécurité des étrangers dans la sphère restreinte des ports ouverts, sous l’autorité du consul, seul garant de
+          leur protection. Ce dernier assume par conséquent une responsabilité sans commune mesure avec celle d’un consul ordinaire : les contraintes
+          spatiales, linguistiques, sociales et intellectuelles de la Chine créent un isolement et exigent une spécialisation qui en font un agent de
+          décision et d’exécution duquel dépendent le présent et l’avenir des Puissances dans l’empire céleste. Consciente de l’enjeu, la France met
+          l’accent sur la promotion d’agents à la fois spécialisés dans la culture chinoise et dévoués au service des républicains.</p>
+        <p>La carrière de Gaston Kahn (1864-1928) est l’illustration parfaite de cette rencontre entre une formation intellectuelle et technique,
+          d’une part, et une adhésion sans faille à l’idéologie républicaine, d’autre part. Cette combinaison lui fait embrasser et appliquer au
+          terrain chinois le credo ferriste de l’action impérialiste outre-mer : profit économique, mission civilisatrice et prestige politique. Sur
+          place cependant, les réalités du monde chinois, la férocité de la concurrence étrangère et la faiblesse des choix français viennent
+          contrarier les ambitions de la République et compliquer l’action du consul. Gaston Kahn prend alors progressivement conscience des effets
+          pervers des ambitions étrangères sur l’équilibre chinois et plus largement, international. L’examen de l’évolution de sa pensée et de sa
+          pratique mettent en lumière l’impasse à la fois concrète et morale dans laquelle le place cette prise de conscience.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude du parcours de Kahn exige de puiser à plusieurs sources. L’essentiel de son activité professionnelle est couvert par les archives
+          conservées dans les services du ministère des Affaires étrangères : au Quai d’Orsay pour l’administration centrale ; au centre des archives
+          diplomatiques de Nantes pour l’activité des postes consulaires et diplomatiques français en Chine. Ces archives sont à la fois riches et
+          lacunaires. En effet, le Quai d’Orsay renferme la presque totalité des dépêches adressées par Kahn depuis les divers postes qu’il a occupés
+          entre 1888 et 1915, quand le centre nantais ne conserve que les archives des postes de Shanghai, Tianjin et de la Légation de France à
+          Pékin. Or, si les archives de l’administration centrale sont essentielles à la compréhension des desseins politique et économique de la
+          France, celles produites par les postes à l’étranger s’avèrent indispensables à la résurrection de la vie des consulats et des concessions,
+          cellules de base de l’activité française en Chine. Elles mettent en valeur, davantage que les rapports politiques et commerciaux
+          régulièrement adressés au ministère, l’ampleur de la tâche du consul, à la fois professionnel de la diplomatie au quotidien et
+          administrateur de la communauté française expatriée, parfois même proche d’un petit gouverneur de colonie.</p>
+        <p>Ces archives sont toutefois muettes sur les premières années de la vie, de la formation et de l’évolution personnelle de Kahn. Quatre
+          types de sources viennent combler ces lacunes. En premier lieu, les descendants du consul conservent un petit fonds privé dont la richesse
+          repose essentiellement sur la correspondance échangée entre Kahn et sa femme Rachel durant la seconde révolution chinoise de l’été 1913. On
+          y voit percer, derrière l’image trop lisse véhiculée par les rapports du consul à son ministère de tutelle, une personnalité haute en
+          couleur et fermement sceptique à l’égard de la politique française et plus largement étrangère en Chine. Pour recréer le cadre de l’enfance
+          et des choix professionnels de Kahn, il faut ensuite puiser aux ouvrages parus sur le contexte politique et culturel de la Troisième
+          République naissante ainsi qu’aux études commises sur l’École des langues orientales et la naissance de la sinologie au XIX <hi rend="sup">e</hi> siècle. Par ailleurs, les archives de l’Indochine conservées à Aix-en-Provence, au Centre des archives d’outre-mer, mettent en
+          lumière les dix-huit mois passés au Tonkin avant l’entrée définitive dans la carrière consulaire de Chine. Cet épisode est déterminant car
+          il s’agit tout à la fois d’une toute première expérience professionnelle et d’un premier contact avec l’Extrême-Orient et les ambitions
+          françaises dans cette région du monde. Enfin, l’examen des ouvrages parus sur la question chinoise à l’époque de Kahn, au même titre que la
+          lecture des mémoires et des récits de voyages publiés par ses contemporains, viennent éclairer sa mission et l’évolution de sa pensée à la
+          lumière des mentalités et des problématiques de son temps.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

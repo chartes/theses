@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>La translittération, c’est-à-dire l’opération par laquelle on fait correspondre à un signe d’un système d’écriture un signe d’un autre système, n’a jamais été étudiée en tant que concept à part entière dans un travail synthétique. Ce concept récent, dont l’apparition dans le vocabulaire français et anglais peut être datée des années 1860, se distingue de la transcription en ce qu’elle désigne un passage de l’écrit à l’écrit, tandis que la transcription au sens strict désigne le passage de l’oral à l’écrit. </p>
+        <p>La translittération pose des problèmes à la fois pour le présent et pour le passé. De nos jours, elle fait l’objet de tentatives plus ou moins réussies de standardisation à l’échelle internationale ; au <num>xvi</num><hi rend="sup">e</hi> siècle, le concept de translittération ne porte pas encore de nom, mais les auteurs sont souvent conscients des problèmes spécifiques que pose le passage d’une écriture à une autre, en particulier lorsque ces écritures sont structurellement différentes et qu’elles correspondent à des phonologies distinctes. Aux débuts de l’imprimé, les langues orientales sont peu étudiées mais l’hébreu fait exception puisque, pour les besoins de la théologie, il fait l’objet d’un enseignement institutionnel et de publications à vocation didactique ; il est présent par ailleurs dans des ouvrages religieux divers. </p>
+        <p>Il importe, d’une part, de faire le bilan des enjeux théoriques de la translittération et, d’autre part, d’observer les mécanismes récurrents qui l’animent dans un contexte historique et linguistique précis, où la forme des translittérations ne peut être déliée de l’usage qu’en faisaient les auteurs et les lecteurs. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Les imprimés parisiens du <num>xvi</num><hi rend="sup">e</hi> siècle comportant des translittérations de l’hébreu sont de deux sortes. Il s’agit, d’une part, des nombreux ouvrages didactiques sur la langue hébraïque qui se multiplient à Paris à partir de la <hi rend="i">Grammatica hebraica</hi> de François Tissard (1508). On trouve, d’autre part, certaines catégories de mots hébraïques en translittération dans les bibles ou les psautiers. Ces sources ont été étudiées de manière exhaustive pour le domaine parisien jusqu’en 1550, et des échantillonnages ont été effectués dans des lieux d’impression différents ainsi que dans les décennies ultérieures. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

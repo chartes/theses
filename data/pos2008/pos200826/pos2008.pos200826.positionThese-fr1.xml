@@ -1,0 +1,89 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Lors des travaux préparatoires pour une édition des sermons <hi rend="i">De Sanctis</hi> du religieux dominicain Jacques de Voragine, M.
+          Paolo Maggioni a remarqué un manuscrit qui, tout en portant le même titre, contenait un texte sensiblement différent et plus long (deux gros
+          volumes). Il a rapproché cette découverte d’une mention portée par cet auteur dans sa <hi rend="i">Chronique de Gênes</hi> par laquelle il
+          indiquerait avoir composé deux versions du <hi rend="i">De</hi>  <hi rend="i">Sanctis</hi>, dont une « multum diffusum ». Le manuscrit en
+          question, conservé à la bibliothèque Laurenziana de Florence sous les cotes Plut. 32 sin. <num>iv</num>et <num>v</num>(F) peut-il être un
+          témoin d’une seconde tradition « plus développée » oubliée ? Est-il vraiment de Jacques de Voragine et, si oui, comment et pourquoi a-t-il
+          été composé ? Date-t-il d’avant la version principale – représentée par le manuscrit P, qui aurait alors été composé en raccourcissant notre
+          version – ou a-t-il été écrit après ? Toutes ces questions sont fondamentales pour la connaissance du <hi rend="i">De Sanctis</hi> et, plus
+          largement, de la composition des recueils de sermons au <num>xiii</num>
+<hi rend="sup">e</hi> siècle. Pour mieux y répondre, nous limitons notre étude au premier des deux volumes qui couvre la moitié de l’année
+          liturgique.</p>
+      </div>
+              <div type="sources"><head>Sources et bibliographie</head>
+        <p>Nous donnons en préambule la liste des sources qui ont servi à notre étude en commençant par les textes de Jacques de Voragine, manuscrits
+          et édités. On trouvera ensuite la liste des textes cités par l’auteur dans les sermons du Ms. Plut. 32 sin. <num>iv</num>que nous avons
+          édités.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,104 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le maréchal de Luxembourg fut l’un des plus fameux chefs d’armée du <num>xvii<hi rend="sup">e</hi></num>  siècle et le général le plus en vue de la
+          partie centrale du règne de Louis XIV. Or, si son nom reste bien connu, associé à ceux de ses victoires, l’homme et son parcours le sont
+          beaucoup moins. Fils posthume de François de Montmorency-Bouteville, duelliste exécuté sur l’ordre de Louis XIII, cousin du duc Henri II de
+          Montmorency, rebelle décapité en 1632, puis fidèle du prince de Condé, qu’il suivit en exil, celui qui devint duc de Luxembourg en 1661 fut
+          un représentant éminent d’une haute aristocratie cherchant à défendre ses libertés et ses intérêts contre les velléités de la monarchie. Sa
+          trajectoire exceptionnelle, due avant tout à ses capacités de général, permit cependant au comte de Bouteville de s’élever jusqu’au sommet
+          de l’Etat. D’autre part, son expérience sur les champs de bataille, au cours d’une carrière qui dura de 1643 à 1694, en fait un témoin
+          privilégié de la manière de combattre et de diriger les armées de la guerre de Trente ans à celle de la Ligue d’Augsbourg, période
+          d’importantes évolutions. Le rôle déterminant qu’il joua pendant les guerres de Hollande et de Neuf ans, comme ses rapports directs avec
+          Louvois puis Louis XIV, invitaient à une analyse minutieuse de son action et de sa participation à la direction des conflits. Derrière
+          l’homme de guerre, qui tend à attirer tous les regards, se cache enfin un grand seigneur, un courtisan dont la personnalité, les relations
+          et la fortune restaient à dévoiler et à mettre en perspective.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Malgré l’absence de papiers de famille, les sources disponibles ont permis une étude approfondie de la vie et de l’action de Luxembourg et
+          un renouvellement de la documentation touchant le sujet. Avec les Mémoires des contemporains, ce sont les archives du Service historique de
+          l’armée de Terre qui ont été les plus exploitées, et principalement, dans la série A<hi rend="sup">1</hi> , la correspondance qu’entretint
+          Luxembourg avec Louvois puis, après la mort de celui-ci en 1691, avec Louis XIV et Barbezieux. Il s’agit là d’une source essentielle pour la
+          connaissance du déroulement des opérations, mais surtout de l’élaboration des plans de campagne, de la vie à l’armée et de la façon dont le
+          maréchal exerçait au quotidien son commandement. Diverses séries des Archives nationales ont été mises à contribution (séries M, O <hi rend="sup">1</hi> , Y), de même que le Minutier central des notaires parisiens, dont le dépouillement a apporté nombre d’informations
+          nouvelles sur la surface économique et sociale de Luxembourg. La Bibliothèque nationale de France (BNF) s’est révélée riche de documents
+          concernant la Fronde, la période d’exil des fidèles de Condé aux Pays-Bas ou encore le procès relatif au rang de la pairie de Luxembourg ;
+          la collection des Provinces a fourni de nombreuses pièces sur les domaines du duc de Piney et leur exploitation, et notamment le comté de
+          Ligny-en-Barrois. La gestion de son patrimoine par Luxembourg a été appréhendée grâce aux fonds des archives départementales de la Meuse et
+          de l’Aube. D’autres collections de la BNF (Mélanges Colbert, Clairambault, Dupuy) ont été explorées avec profit, de même que le cabinet des
+          estampes. Les recherches menées dans les manuscrits des archives du ministère des Affaires étrangères, de la bibliothèque Mazarine et de la
+          bibliothèque de l’Arsenal ont été fructueuses, particulièrement pour ce qui concerne l’affaire des Poisons, documentée par ailleurs dans les
+          fonds de la Préfecture de police de Paris. Les archives du Musée Condé, outre les dépêches adressées à Condé par ses agents à Paris,
+          conservent la correspondance entre Luxembourg et le prince, de la Fronde à la guerre de Hollande. Enfin, les lettres échangées entre
+          Luxembourg, sa sœur la duchesse de Mecklembourg et son mari le duc Christian-Louis, conservées à Schwerin, ont constitué un apport
+          intéressant.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

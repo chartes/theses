@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’ancienne abbatiale de Lessay est aujourd’hui considérée avec celle du Mont-Saint-Michel comme l’église romane la mieux conservée de la
+          Manche. Depuis le début du <num>xix<hi rend="sup">e</hi></num> siècle où elle fut remarquée par Charles-Alexis Duhérissier de Gerville et par Henry
+          Gally Knight, elle a attiré l’attention des archéologues du fait de son excellente conservation. C’est toutefois à la fin du XIX <hi rend="sup">e</hi> siècle et au début du <num>xx<hi rend="sup">e</hi></num> siècle qu’elle a pris une place importante dans l’historiographie, dans
+          le cadre du débat sur l’origine de l’architecture gothique. À partir de cette époque, deux datations principales de l’édifice se sont
+          opposées pour les parties les plus anciennes du monument : une haute, qui fait du chœur de l’église actuelle le lieu où fut enterré le
+          fondateur, Eudes au Capel, en 1098 ; une basse qui, refusant la possibilité des voûtes sur croisées d’ogives dans cet édifice à une date
+          aussi ancienne, le rattache aux années 1120. Cependant, l’intérêt porté par les historiens de l’architecture à cet édifice ne s’est pas
+          limité à cet aspect du monument. Il est aussi connu depuis le début du <num>xx<hi rend="sup">e</hi></num> siècle, notamment à travers les travaux de
+          John Bilson, pour son décor sculpté riche en chapiteaux à godrons. Les développements ultérieurs de ce type d’ornements et leur emploi très
+          fréquent dans certains monuments du <num>xii<hi rend="sup">e</hi></num> siècle dans le domaine anglo-normand expliquent cette place dans
+          l’historiographie. Les destructions de la Seconde Guerre mondiale qui ont durement affecté l’édifice ont permis de mieux connaître les
+          étapes de sa construction et ont mis fin à la thèse qui supposait qu’il avait été édifié avec une charpente apparente. Aucune étude
+          approfondie n’a été menée sur l’édifice depuis l’article que lui a consacré en 1966 l’architecte chargé de sa restauration, Yves-Marie
+          Froidevaux. Auparavant, malgré son importance dans l’historiographie, l’abbatiale avait fait l’objet d’un nombre restreint d’études
+          d’histoire de l’art. Les recherches les plus récentes concernent certains aspects de la construction : chapiteaux, liens avec le nord-ouest
+          de l’Angleterre et voûtement, sans englober l’ensemble de l’édifice.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Malgré la destruction des archives de l’abbaye en 1944, la trace de nombreux actes médiévaux a été conservée dans des copies anciennes,
+          par exemple dans les rôles d’enregistrement de la cour anglaise, conservés au Public Record Office, de Londres. Les travaux d’érudits
+          fournissent l’essentiel de ces transcriptions : <hi rend="i">Neustria Pia</hi> et <hi rend="i">Gallia Christiana</hi>, ainsi que les notes
+          d’Urbain Poignant, curé de La Feuillie, pour les copies antérieures à la Révolution ; les plus riches sont du début du XIX <hi rend="sup">e</hi> siècle, avec Gerville et Lechaudé d’Anisy ; cet ensemble est complété par des travaux menés au début du XX <hi rend="sup">e</hi> siècle par François Dolbet, archiviste de la Manche, Gaston de Beausse et le notaire Fauvel. À partir de ces documents il est
+          possible de reconstituer une partie des archives de l’abbaye. L’agrégation de l’abbaye à la congrégation de Saint-Maur, aux archives
+          centralisées, permet de bien connaître le couvent au <num>xviii<hi rend="sup">e</hi></num> siècle. Pour l’époque contemporaine, les archives du
+          service des Monuments historiques, conservées à la médiathèque de l’architecture et du patrimoine, sont les plus utiles.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

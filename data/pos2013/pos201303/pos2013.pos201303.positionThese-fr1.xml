@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Largement étudiée pour le <num>xviii</num><hi rend="sup">e</hi> siècle par D. Bertrand-Fabre et R. Chamboredon, la famille des Fornier de Clausonne, grand lignage protestant de négociants nîmois anoblis en 1774 par lettres patentes, est certainement l’emblème du déclin fulgurant de cette bourgeoisie ancienne qui, autrefois fière et conquérante, traverse non sans difficultés les tourments qui marquent la genèse de l’époque contemporaine. Né en 1769, héritier des Lumières, destiné à une éducation excellente, Gaspard-Hilarion Fornier d’Albe en est un représentant éminent. Fils de Barthélemy Fornier, qui a repris les rênes de la société de commerce familiale, il entre aux chasseurs des Vosges comme sous-lieutenant en 1784 et termine ainsi une enfance heureuse. Le bouleversement révolutionnaire lui donne l’occasion de monter rapidement en grade en se distinguant aux armées du Nord, du Centre, du Midi et des Pyrénées jusqu’à devenir adjudant-général au 18<hi rend="sup">e</hi> régiment de dragons. Pris, comme le reste de sa famille, dans la tourmente fédéraliste, il est destitué et emprisonné pendant la Terreur. Il ne reprend un service actif qu’avec l’aide du général Menou dont il devient l’aide de camp et qu’il suit en Égypte. Rentré en France prématurément, il commande ensuite les places d’Augsbourg puis de Stuttgart à l’armée du Rhin et entame une carrière d’administrateur comme adjudant-commandant puis général de brigade en 1809. On le trouve dans la 16<hi rend="sup">e</hi> division militaire, à Lille, puis au camp de Boulogne et enfin à Custrin, place prussienne assiégée par la coalition soulevée contre Napoléon, à laquelle il résiste lors d’un blocus de 13 mois, en passant par les campagnes de la Grande Armée qui lui donnent l’occasion de s’illustrer à Dürenstein, Iéna ou encore Wagram. Le propos se termine alors qu’il est fait prisonnier de guerre en Prusse en 1814.  </p>
+		<p>Mais, la carrière militaire est loin de faire toute la richesse historique du personnage. Fornier d’Albe est un homme qui se livre. Dans sa correspondance, dans des mémoires très intimes écrits lors de l’expédition d’Égypte ou de la défense de Custrin, il décrit avec une grande acuité érudite son environnement, son <hi rend="i">spleen</hi>, ses relations tumultueuses avec ses maîtresses et ses supérieurs, se laissant même aller à des considérations politiques ou philosophiques. Janus à la fois mondain et misanthrope, il est un « homme de cabinet », excellent gestionnaire capable d’appliquer des politiques mûrement pensées, qui se distingue plus souvent par sa plume que par son sabre. Bien plus qu’une « remise en lumière » d’un personnage oublié par les grands historiographes de l’Empire, il s’agit de comprendre un parcours humain, physique et intellectuel, dans une toile de fond familiale très marquée. Des thèmes comme l’enfance bourgeoise, la notabilité, la relation entre Paris et la province nîmoise sous la Révolution, la défense et l’administration des places de Prusse et d’Allemagne, le train de vie des officiers durant l’expédition d’Égypte, la franc-maçonnerie ou même la nouvelle sensibilité romantique assortie de certaines pratiques intimes sont évoqués dans ce cadre. Hors-norme, « original » selon ses amantes, intelligent et conscient de l’hypocrisie des tenants de la « Grande Nation », Fornier d’Albe ne doit pas être étudié comme un autre de ces « grands capitaines » anoblis par l’Empire, mais comme un témoin anthropologique de cette génération pré-révolutionnaire. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Le fonds le plus exploité est sans doute le chartrier de Clausonne, fonds privé coté 73 J et déposé aux archives départementales du Gard. S’étendant du <num>xvi</num><hi rend="sup">e</hi> au <num>xix</num><hi rend="sup">e </hi>siècle, retraçant de manière extrêmement détaillée l’histoire de la famille Fornier, avec notamment d’importants livres de comptes et une correspondance familiale volumineuse, cet ensemble documentaire consacre une grande partie de ses articles spécifiquement à Fornier d’Albe. Cinquante-huit cartons lui sont dédiés. Tandis que les actes notariés, les diplômes, la correspondance personnelle active et passive, la comptabilité, les livres de raison, les inventaires, les quittances et les mémoires nous renseignent sur les aspects privés de la vie de Fornier d’Albe, l’homme public, le militaire, est bien décrit par les états de service, les nominations, les registres de gestion (correspondance, états de situation, ordres du jour, rapports…), les plans et études topographiques, les décrets et les brouillons. Surtout, le Journal de l’expédition d’Égypte et le Mémorial de la défense de Custrin, deux œuvres majeures en plusieurs cahiers écrites pendant les événements et d’une manière très intime, parfois caviardées, sont des pièces remarquables et extrêmement précieuses pour apporter des éléments historiques totalement nouveaux sur la perception de ces faits par les hommes qui les vivent, avec une approche qui confine à l’étude du « for privé ». Ce fonds, très riche, peut être complété par des investigations au Service historique de la Défense, surtout en ce qui concerne les aspects militaires de Fornier d’Albe, avec notamment les études menées par le génie sur la défense des places prussiennes (1 VN 83 et 1 VM 88). Malheureusement, la correspondance générale (séries B et C) est souvent décevante, ce qui s’explique par le faible grade du Nîmois et par ses fonctions très routinières. Elle peut cependant nous livrer une version plus « officielle » de ce que Fornier d’Albe narre dans ses écrits personnels (voir la défense des places, 2 C 168). On ajoutera les rapports au Consul puis à l’Empereur des séries AF III et AF IV aux Archives nationales, qui concernent principalement la Grande Armée, les sources iconographiques du département des estampes de la BNF, le fonds concernant la loge lilloise des Amis Réunis dans le département des manuscrits, ou encore les quelques sources imprimées, dont les indispensables recueils législatifs, les recueils de correspondance, les mémoires et les traités d’art militaire. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

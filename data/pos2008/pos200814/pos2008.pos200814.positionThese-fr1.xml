@@ -1,0 +1,95 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Retracer l’histoire de l’optique du <num>iv</num>
+<hi rend="sup">e</hi> au <num>xii</num>
+<hi rend="sup">e</hi> siècle, c’est moins mettre en évidence l’évolution d’une science que montrer la constance d’un intérêt pour une
+          branche de la physique non retenue dans le cursus normal des études parmi les disciplines scientifiques formant le <hi rend="i">quadrivium</hi>. Ni les textes grecs fondamentaux, l’<hi rend="i">Optique</hi> d’Euclide et celle de Ptolémée, ni les travaux arabes
+          ultérieurs, ceux d’al-Kindi ou d’Alhaçen, n’ont reçu de traduction latine aux hautes époques ; les premières traductions de textes
+          intéressant l’optique n’apparaissent qu’au <num>xi</num>
+<hi rend="sup">e</hi> siècle. Les auteurs occidentaux ne peuvent s’appuyer que sur le texte du <hi rend="i">Timée</hi> traduit par Calcidius
+          au <num>iv</num>
+<hi rend="sup">e</hi> siècle, vaste cosmogonie qui inscrit une théorie visuelle dans son évocation de la constitution de l’homme. L’objet de
+          ce travail est donc de faire le point sur ce que les Occidentaux ont retenu de l’optique grecque entre la traduction du <hi rend="i">Timée</hi> par Calcidius accompagnée de son commentaire et la vague de traductions gréco- et arabo-latines du <num>xii</num>
+<hi rend="sup">e</hi> siècle, c’est-à-dire d’étudier les avatars de la théorie platonicienne de la vision durant le haut Moyen Âge et
+          jusqu’au <num>xii</num>
+<hi rend="sup">e</hi> siècle. Sans être réellement remise en cause entre le <num>iv</num>
+<hi rend="sup">e</hi> et le <num>xii</num>
+<hi rend="sup">e</hi> siècle comme elle l’est par l’arrivée des théories arabes, la théorie platonicienne de la vision subit, par suite du
+          syncrétisme dont elle est l’objet, une série d’infléchissements qui lui donnent, à partir de saint Augustin, une extension inédite dans
+          l’analyse de la pensée et de toute la vie psychique. Elle redevient pourtant, au <num>xii</num>
+<hi rend="sup">e</hi> siècle, le support privilégié d’une réflexion physique renouvelée sur l’optique comprise comme science de la vision
+          et, plus encore, de la lumière. Ainsi, l’optique latine médiévale, qui culmine avec Robert Grosseteste, Witelo, Roger Bacon, John Pecham,
+          n’a pas été créée ex nihilo à partir d’un corpus d’œuvres traduites de l’arabe ; ces œuvres nouvellement découvertes ne font que se
+          surimposer à un ensemble de traditions intellectuelles de haute culture transmis avec continuité tout au long du Moyen Âge.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

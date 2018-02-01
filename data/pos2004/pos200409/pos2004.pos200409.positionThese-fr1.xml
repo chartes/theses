@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’iconographie et la théologie du Jonas antique ont fait l’objet de très nombreuses recherches. En revanche, rares sont les travaux sur le
+          Jonas médiéval. Des études très complètes ont été produites sur le commentaire <hi rend="i">In Jonam</hi> de saint Jérôme mais les autres
+          traités ou sermons médiévaux sur Jonas n’ont pas attiré l’attention des historiens. Quelques études sont parues sur l’une des
+          caractéristiques iconographiques de Jonas, comme la calvitie. Des travaux ont été publiés sur des Jonas particuliers, ornant un objet connu,
+          comme l’ambon de Klosterneuburg, ou caractérisant une région, comme la Campanie. Cependant, il n’est paru aucune publication présentant les
+          Jonas ornant les bibles ou donnant une vision d’ensemble précise de la représentation du prophète.</p>
+        <p>Il convenait donc de réunir le plus grand nombre possible de représentations de Jonas, de les classer et de voir si l’iconographie de ce
+          petit prophète était influencée par les textes théologiques. L’importance du succès de Jonas est évaluée par une comparaison avec celui
+          d’autres images proches, comme David ou les petits prophètes, dans les bibles et par la mesure de l’influence de son iconographie sur
+          d’autres images telles que celles de baleines.</p>
+        <p>Les caractéristiques du Jonas antique seront rappelées. Les causes de la disparition, puis du renouveau de Jonas seront ensuite analysées.
+          Puis seront classés les thèmes les plus fréquemment cités à propos de Jonas dans les traités théologiques, dans la Glose ordinaire et dans
+          les sermons. L’étude de l’iconographie de Jonas du <num>xii<hi rend="sup">e</hi></num> siècle au <num>xv<hi rend="sup">e</hi></num> siècle s’appuie sur un
+          classement de ses représentations en trois catégories : le “ Jonas biblique ”, le “ Jonas typologique ” et le “ Jonas des programmes ”.</p>
+        <p>Le premier, qui est l’objet principal de cette étude, se trouve essentiellement dans les bibles latines des <num>xiii<hi rend="sup">e</hi></num> et
+          <num>xiv<hi rend="sup">e</hi></num> siècles. Il orne le début du livre de Jonas ou du psaume 68 et doit permettre au lecteur d’identifier rapidement
+          ces passages. Il a aussi une valeur symbolique. Les images sont très répétitives mais elles ont des caractéristiques différentes selon leur
+          lieu de production.</p>
+        <p>Le deuxième accompagne un des épisodes de la vie du Christ. Le modèle le plus courant dérive de la typologie germano-saxonne
+          et illustre de nombreux livres, comme les <hi rend="i">Bibliae pauperum</hi> et les <hi rend="i">Specula humanae salvationis</hi>, mais
+          aussi des vitraux et des pièces d’orfèvrerie. Il existe un autre modèle dans les pays mosans et en France.</p>
+        <p>Le Jonas de la troisième catégorie fait partie d’un plus vaste programme, qu’il soit présent en tant que prophète, qu’il ait une fonction
+          liturgique ou que ce soit l’aspect merveilleux de son histoire qui ait été représenté. Les éléments qui permettent de reconnaître Jonas
+          peuvent être identifiés grâce à l’observation de ses images et à leur comparaison avec d’autres, au sujet proche. La baleine semble, au
+          Moyen Age, avoir remplacé la plante comme attribut principal, mais Ninive, la plante ou la calvitie tiennent aussi un rôle important.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Deux types de sources ont été utilisés : les sources textuelles et les sources iconographiques. Les premières contiennent la Glose
+          ordinaire, des commentaires et des sermons. Pour les trouver, en l’absence d’outils généraux, de nombreuses éditions de texte ont été
+          parcourues, mais la liste de références à Jonas reste partielle.</p>
+        <p>L’étude des Jonas s’étend à l’ensemble de la production médiévale, depuis son renouveau au <num>ix<hi rend="sup">e</hi></num> siècle, jusqu’aux
+          transformations culturelles de la fin du <num>xv<hi rend="sup">e</hi></num> siècle. Elle couvre l’ensemble de l’Europe occidentale, car de nombreux
+          phénomènes, comme l’engouement pour la typologie, ont une dimension européenne. Pour recenser les Jonas des manuscrits et des premiers
+          imprimés, ont été utilisés la base Mandragore de la Bibliothèque nationale de France (BNF), celle de l’Institut de recherche et d’histoire
+          des textes, celles des bibliothèques universitaires (le <hi rend="i">Liber Floridus</hi>) et des bibliothèques municipales ( <hi rend="i">Enluminure</hi>) françaises, celle du Groupe de recherche anthropologique en histoire de l’Occident médiéval, les disques de manuscrits
+          de la Bibliothèque Vaticane, les catalogues des manuscrits des bibliothèques et la copie de <hi rend="i">l’Index of Christian Art</hi> de
+          Princeton déposée à Utrecht. Cet outil, ainsi que <hi rend="i">l’Iconographie de l’art chrétien</hi> de Louis Réau, le <hi rend="i">Reallexikon für Antike und Christentum</hi> et <hi rend="i">le Lexikon der christlichen Ikonographie</hi>, ont été utilisés pour faire le
+          recensement des autres objets d’art. Le dépouillement de nombreux livres d’art a permis de compléter ces renseignements. Le <hi rend="i">Corpus vitrearum</hi> a fourni beaucoup d’indications sur les vitraux.</p>
+        <p>Le recensement ne peut être exhaustif mais la variété des outils utilisés permet de penser que le corpus est représentatif de la production
+          médiévale conservée jusqu’à aujourd’hui. La liste des illustrations des bibles parisiennes est la plus complète.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>A partir du <num>xix<hi rend="sup">e</hi></num>  siècle, et sous le Second Empire en particulier, les historiens ont commencé à prêter davantage
+          attention aux sceaux, aux cachets qui validaient les actes et les missives. Ces observations minutieuses et méthodiques ont abouti à la
+          rédaction d’inventaires importants, souvent richement illustrés, et la sigillographie n’a cessé depuis lors de s’affirmer comme une
+          discipline à part entière, abandonnant peu à peu son statut de « science annexe » de l’histoire. Parmi les signes de validation ou, à tout
+          le moins d’authentification, la signature n’a pas suscité autant de recherches, hormis quelques ouvrages peu documentés et désespérément
+          généraux. Il a fallu attendre en fait ces dernières décennies pour que des travaux précis et argumentés abordent le sujet.</p>
+        <p>La confrontation de l’histoire de ces deux modes de validation met en évidence une évolution fondamentale : l’abandon progressif du sceau
+          au profit de la signature. Les causes et les modalités de cette transformation sont analysées ici en rapprochant et comparant les pratiques
+          des rois, des princes, des professionnels de l’écrit, mais aussi des gens de guerre, des artisans ou des peintres. Cette évolution des
+          signes de validation débouche sur l’histoire des sensibilités et des mentalités ; à l’instar de l’avènement d’une nouvelle emblématique et
+          du portrait, la diffusion de la signature reflète la naissance de l’individu et de la personnalité.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les documents signés ou scellés sont d’une richesse et d’une diversité presque infinies. Définir un corpus d’étude est donc un préalable
+          indispensable. La méthode la plus expédiente consistait à privilégier des séries chronologiques,  souvent factices, qui permettent une étude
+          suivie. La Bibliothèque nationale de France offre ainsi de nombreux recueils intéressants, comme les lettres originales, minutes et pièces
+          réunies par Gaignières (fr. 20427 à 20482), les papiers de Jean Bourré (fr. 20483 à 20499), la série des chartes royales (fr. 25696 à 25726
+          pour la période concernée) et celle des montres des gens de guerre (fr. 25765 à 25778 en particulier), ainsi que des quittances et pièces
+          diverses (fr. 26006 à 26122). La richesse de ce dernier ensemble interdisait tout dépouillement exhaustif et obligeait à procéder par
+          sondages. Aux Archives nationales, ont été consultées les séries du Trésor des chartes et des Cartons des rois (respectivement J et K). De
+          nombreux dépouillements ponctuels dans les deux institutions ont permis de compléter ce corpus. L’étude portant sur le notariat toulousain a
+          été réalisée grâce aux registres de matricules (Toulouse, Arch. mun., 9 vol.), renfermant un corpus d’une richesse exceptionnelle : plus de
+          dix mille signatures (1271-1536).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

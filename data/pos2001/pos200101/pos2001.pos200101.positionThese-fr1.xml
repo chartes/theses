@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’ordre de la sainte Trinité et Rédemption des Captifs, créé en 1198 par Jean de Matha et Félix de Valois, se donnait pour objectif de
+          réunir d’importantes sommes d’argent afin de racheter dans les états barbaresques d’Afrique du Nord les chrétiens qui y étaient maintenus en
+          esclavage. Leur maison parisienne, le couvent Saint-Mathurin, se trouvait rue Saint-Jacques, dans un quartier où, au XVII <hi rend="sup">e</hi> siècle, les graveurs et les marchands d’estampes rejoignaient les libraires et imprimeurs qui y étaient déjà installés en raison
+          du voisinage de l’Université. La situation du couvent des Mathurins, en plein cœur du Quartier latin, contribua largement à forger sa
+          célébrité. Ses relations avec l’Université toute proche étaient intenses. De plus, les religieux possédaient une vingtaine de maisons aux
+          alentours du couvent, qu’ils mettaient en location, ce qui leur permettait d’être en contact avec les artisans et les commerçants du
+          quartier, notamment les graveurs en taille-douce. Un rappel historique concernant le couvent des Mathurins et sa place dans l’ordre
+          trinitaire, puis l’étude des estampes produites autour des Mathurins au <num>xvii<hi rend="sup">e</hi></num> siècle, débouchant sur les grandes lignes
+          d’une iconographie trinitaire, peuvent permettre de mieux connaître la vie sociale, spirituelle, intellectuelle et culturelle de ces
+          religieux.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La recherche des sources iconographiques concernant les Mathurins de Paris a été effectuée exclusivement dans les collections de la
+          Bibliothèque nationale de France. Au département des estampes et de la photographie, il faut signaler la richesse des séries de portraits
+          (N2 et N3), des séries alphabétiques de saints (Rd2) et des recueils factices de costumes religieux (Oc2). Une recherche par artistes
+          réalisée grâce à l’<hi rend="i">Inventaire du Fonds français, graveurs du <num>xvii<hi rend="sup">e</hi></num> siècle </hi> a permis de retrouver de
+          nombreuses estampes en rapport avec les Trinitaires dans les œuvres de certains artistes, notamment Léonard Gaultier (Ed12), Michel Lasne
+          (Ed27) et Sébastien Leclerc (Ed59). Plusieurs ouvrages rédigés par des Trinitaires au <num>xvii<hi rend="sup">e</hi></num> siècle et comportant des
+          illustrations sont en outre conservés au département des imprimés de la Bibliothèque nationale de France.</p>
+        <p>De rapides recherches dans les fonds d’estampes et d’imprimés de la Bibliothèque nationale d’Espagne ont laissé entrevoir l’existence de
+          sources particulièrement riches, qu’il s’agisse d’estampes ou de livres imprimés.</p>
+        <p>Enfin, la recherche des sources iconographiques a été complétée par une étude, aux Archives nationales, des minutes des notaires du
+          couvent au <num>xvii<hi rend="sup">e</hi></num> siècle, conservées dans les études XLIX et CIX, et par la consultation dans la série S (biens des
+          établissements religieux supprimés) des baux des maisons que possédaient les religieux dans le quartier Saint-Jacques.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

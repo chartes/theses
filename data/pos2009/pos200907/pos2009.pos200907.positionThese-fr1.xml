@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’abbaye du Mont-Saint-Michel, lieu illustre s’il en est et qui fête en 2008-2009 le treizième centenaire de sa fondation, a toujours eu
+          les faveurs des historiographes : parmi les plus célèbres on citera les mauristes du <num>xvii</num>
+<hi rend="sup">e</hi> siècle Dom Huynes et Dom Le Roy, les architectes des monuments historiques Édouard Corroyer et Paul Gout, les
+          historiens normands Léopold Delisle et Lucien Musset.</p>
+        <p>Cependant, le cartulaire de l’abbaye, manuscrit du milieu du <num>xii</num>
+<hi rend="sup">e</hi> siècle dont les additions se prolongent jusqu’au <num>xiv</num>
+<hi rend="sup">e</hi> siècle, est longtemps resté inédit, malgré diverses tentatives d’édition. Il doit être étudié comme un ensemble sinon
+          cohérent, du moins réalisé avec quelque raison, même quand il s’agit du matériau documentaire polymorphe ajouté après coup, et dont
+          l’édition constitue le cœur de ce travail.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le cartulaire du Mont-Saint-Michel, manuscrit 210 de la bibliothèque municipale d’Avranches, est devenu après le bombardement en 1944 des
+          archives départementales de la Manche, une source primordiale pour l’histoire de l’abbaye.</p>
+        <p>Si les chartes qui composaient le fonds du Mont-Saint-Michel ont disparu dans leur grande majorité, il subsiste toutefois, de manière
+          dispersée, dans les papiers des érudits qui, depuis le <num>xvii</num>
+<hi rend="sup">e</hi> siècle, se sont penchés sur l’histoire de l’abbaye, des transcriptions des actes originaux. La lecture et la collation
+          de ces copies modernes, conservées principalement au département des manuscrits occidentaux de la Bibliothèque nationale de France, même si
+          la plupart concernait surtout des chartes antérieures au <num>xii</num>
+<hi rend="sup">e</hi> siècle, faisaient partie du travail d’édition.</p>
+        <p>De plus, l’examen de plusieurs manuscrits montois, aujourd’hui déposés à Avranches, a révélé la présence de notes manuscrites
+          contemporaines de celles portées dans le cartulaire, qui témoignent de certains faits similaires à ceux que relate le manuscrit 210.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

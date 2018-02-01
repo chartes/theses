@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le manuscrit de <hi rend="i">Guiron le Courtois</hi> conservé à la Bibliothèque nationale de France, illustré de cent-dix dessins
+          aquarelles, est souvent considéré comme l’un des chefs-d’œuvre de l’art du <num>xiv<hi rend="sup">e</hi></num>  siècle en Europe. L’identité de son
+          commanditaire n’a été révélée que récemment : il s’agit de Bernabò Visconti, grand seigneur qui régna sur Milan et son territoire de 1354 à
+          1385. Si les historiens de l’art se sont beaucoup intéressés à la Lombardie du Trecento, et les historiens aux Visconti, aucun n’a reconnu
+          un mécène éclairé en Bernabò, qui est avant tout considéré comme un ambitieux homme de guerre et un prince brutal.</p>
+        <p>Comprendre la beauté et l’originalité du manuscrit de <hi rend="i">Guiron le Courtois</hi> implique d’envisager les différents aspects de
+          sa réalisation, en replaçant d’abord la vie et l’action de son commanditaire dans le contexte politique et culturel de la Lombardie du
+          milieu du <num>xiv<hi rend="sup">e</hi></num>  siècle, puis en analysant pourquoi et comment il a choisi de faire illustrer le texte de <hi rend="i">Guiron le Courtois.</hi> L’examen de ces points permettra notamment de réhabiliter son mécénat artistique et de rappeler l’engouement de
+          l’aristocratie italienne pour les romans de chevalerie.</p>
+        <p>Une place particulière doit être faite à l’étude du style du Maître du Guiron, auteur des peintures du manuscrit de Bernabò. La qualité de
+          sa peinture surpasse nettement toute la production contemporaine des ateliers lombards et ses particularités permettent de lui attribuer
+          deux autres manuscrits et de saisir son influence, aux générations suivantes, sur les manuscrits de luxe produits par les ateliers lombards
+          pour la cour des Visconti. L’étude détaillée des images du manuscrit de Bernabò met en évidence son originalité par rapport à la tradition
+          iconographique  du roman de <hi rend="i">Guiron le Courtois</hi>. Elle permet aussi de pénétrer dans l’univers de la vie de cour en
+          Lombardie à la fin du <num>xiv<hi rend="sup">e</hi></num>  siècle et de mieux comprendre les relations ambiguës que le manuscrit entretient avec la
+          réalité.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La connaissance et la compréhension du texte du roman de <hi rend="i">Guiron le Courtois</hi> repose sur la version du manuscrit de
+          Bernabò. Son iconographie est comparée, d’une part, à celle des autres livres enluminés réalisés en Italie du nord au XIV <hi rend="sup">e</hi>  siècle et, d’autre part, à celle des manuscrits illustrés de <hi rend="i">Guiron le Courtois</hi> qui sont antérieurs, comme les
+          manuscrits de la Biblioteca Marciana de Venise et de la British Library, datés respectivement des années 1340-1380 et 1350-1360.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

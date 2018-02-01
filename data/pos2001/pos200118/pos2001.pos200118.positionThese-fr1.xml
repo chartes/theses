@@ -1,0 +1,89 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les historiens ne se sont intéressés que récemment aux bibliothèques de collèges, dont la documentation est moins riche et plus dispersée
+          que les fonds monastiques ou de particuliers. Les travaux pionniers d’Elisabeth Pellegrin sur les bibliothèques des collèges parisiens de
+          Dormans-Beauvais, de Hubant et de Fortet, ont donné lieu à des articles très riches, mais les monographies sur le sujet restent rares.</p>
+        <p>Le collège des Cholets, étudié en 1971 par Elisabeth Rabut dans sa thèse d’Ecole des chartes, a été fondé à Paris en 1295 pour des
+          étudiants originaires des diocèses de Beauvais et d’Amiens, avec l’argent qui restait de la succession du cardinal Jean Cholet, mort en
+          1292. Sa bibliothèque n’a donc aucun lien avec celle du cardinal Cholet, et son étude ne peut reposer sur un « noyau primitif » qu’aurait
+          légué le fondateur.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Aucun catalogue médiéval de la bibliothèque des Cholets n’a été conservé. Il a fallu recourir à l’ensemble des sources disponibles pour
+          cette période, principalement des testaments et les différents obituaires du collège, conservés dans la série M des Archives nationales, aux
+          archives départementales de la Somme et de l’Oise, pour tenter d’en reconstituer le contenu au Moyen Age. Trois catalogues subsistent pour
+          l’époque moderne : le plus ancien (A) remonte à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle (Bibl. de l’Arsenal, 4630) et les deux autres
+          datent du début du <num>xviii<hi rend="sup">e</hi></num> siècle (Bibl. nat. de France, lat. 13068, désormais B ; Arch. nat., S 6183, désormais C).
+          Quarante-cinq manuscrits subsistants proviennent des Cholets : ils sont pour la plupart conservés à la bibliothèque de la Sorbonne
+          (trente-cinq manuscrits) ; six autres sont à la Bibliothèque nationale d’Autriche, à Vienne.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

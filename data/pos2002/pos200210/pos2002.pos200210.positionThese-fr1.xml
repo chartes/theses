@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La fête des fous est attestée de la fin du <num>xii<hi rend="sup">e</hi></num> siècle à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle, principalement
+          dans les villes françaises. Elle peut être définie comme une mascarade de Nouvel An, à laquelle les ecclésiastiques participent activement.
+          La confusion qui résulte de ce mélange entre les registres religieux et populaires de la fête a beaucoup contribué à sa mauvaise réputation.
+          A la fin du <num>xix<hi rend="sup">e</hi></num> siècle, les folkloristes relient la fête aux traditions populaires rurales, et les historiens voient
+          dans ces parodies liturgiques l’origine médiévale du théâtre. Récemment, l’histoire des mentalités et l’histoire sociale des fêtes urbaines
+          ont renouvelé les perspectives historiographiques, mais n’ont pas suscité d’étude approfondie. La bibliographie demeure dans l’ensemble
+          vieillie et hétérogène, tandis que certaines sources, en particulier les comptes des villes, ont été peu exploitées. <lb/>L’étude de la fête
+          des fous à Douai se fonde sur des sources ecclésiastiques et communales, à partir du <num>xiv<hi rend="sup">e</hi></num> siècle. Elle fournit un
+          tableau circonstancié des acteurs et de la chronologie de la fête dans ce contexte précis. Les différentes hypothèses sur l’origine de la
+          fête, au <num>xii<hi rend="sup">e</hi></num> siècle, sont envisagées en liaison avec l’évolution de la nouvelle culture urbaine par rapport à la
+          culture rurale qui demeure magique et archaïque. Les rituels d’inversion de la fête des fous apparaissent surtout dans l’office religieux et
+          dans les illustrations des gestes des fous ; ils expriment également une conception traditionnelle de la place des jeunes et des enfants
+          dans la société. Enfin, la disparition de la fête au moment de la Réforme correspond à une rupture brutale dans le domaine des mentalités et
+          des fêtes populaires.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sur la fête des fous sont à la fois ecclésiastiques et laïques. Pour la ville de Douai, les archives du chapitre de Saint-Amé
+          sont conservées aux archives départementales du Nord (série 1G). Les comptes de la grande recette fournissent le plus de renseignements sur
+          la fête, qui apparaît aussi dans les registres capitulaires et les inventaires du trésor liturgique. Les comptes communaux (série CC)
+          fournissent de nombreux détails sur la fête des ânes organisée par la ville. Les ordonnances de police (série BB) les complètent. Le
+          chapitre et la ville présentent deux visions différentes de la même fête. <lb/>Les comptes, malgré la richesse des détails qu’ils livrent,
+          ne sauraient offrir une vue d’ensemble de la fête des fous. Les motivations psychologiques des participants n’y apparaissent guère. Au
+          contraire, la typologie des sources montre la grande variété des ressources documentaires sur la fête, mais aussi leur grande dispersion.
+          Les sources ecclésiastiques sont d’un grand intérêt : elles permettent de connaître l’histoire de la fête dès la fin du XII <hi rend="sup">e</hi> siècle, parce que certains clercs y participent et que d’autres l’écrivent.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

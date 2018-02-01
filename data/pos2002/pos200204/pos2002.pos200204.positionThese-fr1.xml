@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Il est souvent dit que le <num>xix<hi rend="sup">e</hi></num> siècle a découvert le Moyen Âge. On sait aussi qu’il s’agit souvent d’un Moyen âge de
+          fantaisie : le genre “ troubadour ” ou le “ médiévisme ” sont l’objet de nombreux travaux et d’un intérêt récent dans le monde anglo-saxon.
+          La redécouverte des authentiques monuments littéraires médiévaux entre 1800 et 1860 est moins connue. Autant l’apport des savants de la
+          période antérieure et l’essor de la philologie romane à partir de 1870 sont-ils connus, autant la première moitié du XIX <hi rend="sup">e</hi> siècle n’est-elle souvent évoquée qu’en quelques mots sous le nom de “ période empirique ”, voire d’“ Empirie ” selon le mot de
+          Bernard Cerquiglini, dans <hi rend="i">Eloge de la Variante.</hi> Seule une étude de Dorothy Doolittle en 1933 évoque de manière précise
+          l’influence des études érudites sur la littérature romantique contemporaine, sans s’attarder sur les modalités même de la redécouverte des
+          anciens textes. Il était donc intéressant de mettre en évidence la naissance de la philologie romane en France de 1800 à 1860 à travers
+          l’émergence d’un cadre institutionnel propre, l’existence d’une activité éditoriale soutenue mais dispersée et la formation d’un groupe
+          d’érudits spécialisés dans la lecture et la transcription des anciens textes. Il ne s’agissait ni de faire une analyse détaillée de la
+          réception de cette production, ni une étude approfondie et originale des méthodes d’édition mises en œuvre.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’établissement d’un catalogue des éditions de textes littéraires du Moyen Âge de 1800 à 1870 constitue le fondement de ce travail. Il
+          comprend quatre cent vingt-cinq références pour lesquelles sont donnés, outre les informations bibliographiques classiques, les prix et
+          tirages, lorsque cela a été possible. Ce catalogue a été construit à partir des bibliographies classiques sur le <num>xix<hi rend="sup">e</hi></num>
+          siècle et de l’étude des catalogues de librairies spécialisés retrouvés, comme ceux des libraires Techener et Silvestre. <lb/>A partir de
+          cette base bibliographique, un répertoire biographique des principaux responsables d’éditions de textes littéraires du Moyen Âge de 1800 à
+          1870 a été établi, comprenant plus de soixante entrées. Il récapitule, pour chaque personnage, outre ses publications philologiques,
+          quelques données biographiques générales ainsi que des indications relatives à son activité érudite, principalement tirées des dictionnaires
+          biographiques usuels et du dépouillement des notices nécrologiques et autres hommages funéraires dans diverses revues d’érudition. <lb/>Il
+          n’existe pas de fonds d’archives homogène ni de collection complète de papiers d’érudits relatifs à cette activité philologique. De fait, il
+          a principalement été fait appel à des sources imprimées pour dessiner le cadre institutionnel de la redécouverte de la littérature médiévale
+          avant 1860, au premier rang desquels les publications émanant de ces institutions.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

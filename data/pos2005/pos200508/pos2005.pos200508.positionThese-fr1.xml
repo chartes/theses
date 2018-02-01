@@ -1,0 +1,116 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La création du Bureau des longitudes par la Convention thermidorienne le 7 messidor an III (25 juin 1795) intervient en plein cœur d’une
+          période de bouillonnement culturel et de reconstruction institutionnelle prenant pour cadre le Paris savant. Tandis que l’Académie des
+          sciences n’avait pas encore connu sa première résurrection au sein de l’Institut national, l’astronomie française se voyait dotée d’une
+          entité propre, ayant tutelle directe sur les observatoires de Paris et de l’Ecole militaire, et responsable de la publication des
+          éphémérides officielles de la <hi rend="i">Connaissance des temps</hi> et d’un <hi rend="i">Annuaire</hi>. Le Bureau devait également tenir
+          le rôle de conseiller auprès des observatoires français et de correspondant avec les astronomes étrangers et était chargé de mettre sur pied
+          un cours d’astronomie. Choisis parmi les grands noms de la science française de la fin du <num>xviii</num>
+<hi rend="sup">e</hi> siècle, deux géomètres, quatre astronomes, deux anciens navigateurs, un géographe et un artiste spécialiste des
+          instruments d’astronomie formèrent le premier noyau du Bureau, auquel furent ajoutés quatre astronomes adjoints. Le Bureau fut d’abord placé
+          sous la tutelle du Comité d’Instruction publique, puis du ministère de l’Intérieur, jusqu’en mars 1831 ; après un bref passage dans les
+          attributions du département du Commerce, il échut en octobre 1832 au ministère de l’Instruction publique.</p>
+        <p>L’étude du contexte institutionnel dans lequel évoluaient ces savants, objet premier de ce travail, ne saurait se suffire à elle-même, au
+          risque de répéter les articles centenaires et thématiques de G. Bigourdan qui s’est principalement concentré sur les évolutions de
+          l’Observatoire de Paris. Il fallait donc aussi dresser la fresque socio-culturelle d’une nébuleuse scientifique s’identifiant
+          essentiellement au cercle du Bureau.</p>
+        <p>La période qui court de la Révolution au Second Empire permet ainsi de mettre en lumière la surrection et les reconfigurations d’une
+          mosaïque élitaire très homogène, dont certains membres ont été bien étudiés ou demeurent plus superficiellement célèbres. Sans aller jusqu’à
+          une approche prosopographique qui n’aurait eu de sens qu’en étant élargie à des instances connexes comme l’Académie, il s’agit de voir
+          comment s’élaboraient les collaborations scientifiques dans un cénacle aux franges du pouvoir politico-administratif central, de saisir
+          comment le patronage savant et les jeux de pouvoir structuraient un champ scientifique. Administration d’experts et petite académie, le
+          Bureau était un centre privilégié d’élaboration des savoirs au carrefour des « sciences de l’observatoire ». Par la lorgnette d’études de
+          cas et de réseaux, cette étude vise à saisir la nature profonde du creuset parisien, de mieux connaître ses codes et ses figurants.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Ce travail s’accompagne d’une mise à disposition des chercheurs des procès-verbaux du Bureau des longitudes, aujourd’hui encore conservés
+          par cette institution, riche source jusqu’alors très largement méconnue. Les premiers temps, de 1795 à 1804, sont couverts par les notes
+          assez brouillonnes rédigées principalement par le secrétaire Lalande, réparties sur deux cahiers : première décennie très homogène dont
+          l’édition accompagne cette thèse en pièce justificative. Pour la période 1804-1853, seules demeurent les minutes des séances, dont la
+          retranscription intégrale a été également assurée. L’ensemble constitue la référence centrale de ce travail et le pivot de notre réflexion
+          historique ; il donnera lieu à une publication ultérieure. Les périodes les plus intéressantes à étudier étaient celles qui permettaient une
+          articulation entre les procès-verbaux et diverses sources connexes, notamment celles de la tutelle centrale, conservées aux Archives
+          nationales dans la série F<hi rend="sup">17</hi>(Instruction publique), qui éclairent certaines questions liées à la comptabilité et par ce
+          biais, à l’instrumentation scientifique, ainsi que la période charnière qui précède la séparation de l’Observatoire et du Bureau en 1854. En
+          revanche, d’autres époques fondamentales, et notamment celle de la Restauration, n’ont pu être traitées en tant que telles et avec
+          complétude, en raison de la maigreur des sources archivistiques rencontrées.</p>
+        <p>D’autres fonds d’archives et de correspondances ont permis des approches précises de la fabrication des savoirs ; ils sont conservés
+          principalement aux bibliothèques de l’Observatoire (correspondance de Flaugergues, papiers Delambre…), de l’Institut (correspondances de Le
+          Verrier, de Biot, d’Arago, manuscrits Delambre…), aux archives de l’Académie des sciences. Le cas de l’observatoire de Marseille, l’une des
+          questions de gestion astronomique majeures de la période, a pu être traité grâce à la riche correspondance du directeur Gambart, conservée
+          au musée de l’observatoire du site Longchamp. Enfin, des sources d’archives complémentaires ont pu être consultées à la Bibliothèque
+          nationale de France, à la bibliothèque Victor-Cousin de la Sorbonne, au Collège de France, au Service historique de la Marine.</p>
+        <p>Parmi les sources imprimées utilisées prioritairement, figurent la <hi rend="i">Connaissance des temps</hi> et l’<hi rend="i">Annuaire</hi>, dont la rédaction et la publication étaient l’une des préoccupations principales des séances du Bureau, ainsi que, plus
+          ponctuellement, les <hi rend="i">Œuvres</hi> d’Arago, Laplace et Biot et certains périodiques scientifiques ou parisiens.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

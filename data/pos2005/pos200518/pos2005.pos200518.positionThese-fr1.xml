@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Entre le temps des grandes paix catholiques de la fin du <num>xvi<hi rend="sup">e</hi></num> siècle et du début du <num>xvii<hi rend="sup">e</hi></num> siècle
+          conclues par l’entremise de Rome et les traités de Westphalie, il est aujourd’hui établi que la diplomatie romaine, sans parler de déclin,
+          dut néanmoins s’adapter aux nouvelles conditions politiques et religieuses pour ne pas sortir totalement de la « grande diplomatie ». Au
+          cours de ce demi-siècle, la question de la Valteline marque un temps fort d’affirmation, de doute et de remise en cause de la place du
+          Saint-Siège dans le concert des grandes puissances européennes.</p>
+        <p>Il a semblé intéressant à ce sujet de mettre l’accent sur la double nature de la diplomatie pontificale, qui est l’une des expressions les
+          plus visibles de la monarchie pontificale. Représentant à la fois le successeur de saint Pierre et le chef d’un État italien, les diplomates
+          romains doivent en effet sans cesse prendre la meilleure voie, à défaut une voie moyenne, parmi des intérêts parfois contradictoires. La
+          légation en France en 1625 du cardinal Francesco Barberini, qui se solda par un échec retentissant, semble l’un de ces moments privilégiés
+          où les contradictions du pouvoir romain éclatent au grand jour.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>
+          <num>é</num>parpillées entre Paris et Rome, les sources de l’histoire de la légation Barberini ne souffrent que de rares lacunes. Jusqu’ici
+          peu étudiée, la riche correspondance du légat Francesco Barberini avec le surintendant de l’État ecclésiastique Antonio Barberini <hi rend="i">senior</hi> est intégralement conservée à la biblioteca apostolica Vaticana (Barberiniani latini 7964-7968). Elle a été exploitée
+          avec le plus grand profit. Parallèlement, les relations de Cesare Magalotti (Barb. lat. 5687) et de Cassiano dal Pozzo (Barb. lat.
+          5688-5689) donnent des renseignements indispensables pour retracer l’environnement des négociations. Aussi complètes sont les
+          correspondances des autres agents du Saint-Siège que l’on retrouve à l’archivio segreto Vaticano dans les fonds de la Segreteria di Stato
+          (Nunziatura di Francia, Nunziatura di Savoia, Nunziatura di Spagna, Nunziatura di Venezia). Les fonds de l’archivio di stato di Roma
+          (Camerale II, Nunziature 6) quant à eux rendent compte des aspects financiers de la légation. L’étude de l’activité spirituelle, pastorale
+          et juridictionnelle de Francesco Barberini est également envisageable grâce aux registres de bulles et de suppliques conservés à la
+          bibliothèque de l’Institut de France (Godefroy 1 et 45). L’archivio Doria Pamphili (Archiviolo Aldobrandini 197) enrichit notre connaissance
+          de la chancellerie du légat. D’autres institutions, enfin, ont été mises à profit : les archives du Château de Chantilly, les archives du
+          Ministère des affaires étrangères, les archives municipales de Lyon, les Archives nationales et surtout la Bibliothèque nationale de France
+          (mss. français, nouvelles acquisitions françaises, Cinq-Cents de Colbert, Mélanges Colbert, italiens).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

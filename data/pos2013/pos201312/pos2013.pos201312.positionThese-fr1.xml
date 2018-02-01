@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p> Cette étude porte sur la délinquance matrimoniale aux <num>xvii</num><hi rend="sup">e</hi> et <num>xviii</num><hi rend="sup">e</hi> siècles : en analysant les multiples infractions au lien matrimonial, nous souhaitions étudier, dans un contexte où le pouvoir royal se place comme un nouvel acteur dans la législation matrimoniale, l’évolution de la compétence de l’Église sur les affaires matrimoniales. Derrière cette interrogation se dessine la progressive sécularisation du mariage, c’est-à-dire le fait que le contrôle du mariage passe des mains du juge d’Église à celles du juge séculier. Cependant, l’historiographie portant sur les juridictions d’Église à l’époque moderne ainsi que, plus généralement, sur les juridictions inférieures d’Ancien Régime, est lacunaire et nous avons senti la nécessité de fonder notre travail sur des courants historiographiques divers : nous avons donc souhaité combiner deux types d’approche que sont l’utilisation du mariage comme observatoire de la société et des mentalités d’Ancien Régime dans un premier temps, puis le mariage comme objet à part entière de l’histoire du droit, dans un second temps. Nous nous posions ainsi une autre question fondamentale pour cette étude : celle du rapport complexe qui existe entre le droit et la société à l’époque moderne. En conséquence, ce travail se divise en deux axes principaux : un premier s’intéresse aux rapports qu’entretiennent justices et justiciables sur la question du mariage dans l’Ancien Régime, et permet ainsi de donner un premier aperçu de la répartition des compétences entre les divers acteurs du droit matrimonial à l’époque moderne ; le second axe se penche plus spécifiquement sur la répartition des compétences entre juridictions ecclésiastiques et séculières au travers de deux types de contentieux matrimoniaux bien définis que sont le concubinage et la séparation des époux. </p>
+    
+    
+     </div>
+              <div type="sources"><head n="Chapitre liminaire">Contexte historiographique, juridique, historique et géographique </head>		
+		<p><hi rend="i">Des historiographies divergentes.</hi> — Dans un premier temps, trois auteurs se sont penchés sur la question du mariage en tant qu’objet d’histoire du droit. Le premier, Jules Basdevant, donne un panorama assez large de l’évolution de la législation et de la compétence de l’Église en matière de mariage, mais se fonde en grande partie sur des sources théoriques et parlementaires qui ne font que très peu référence à la pratique des juridictions inférieures. Anne Lefebvre-Teillard, en revanche, a écrit à la fois sur l’évolution générale de la législation matrimoniale et de la compétence de l’Église sur le mariage, et sur le fonctionnement des juridictions ecclésiastiques dans la pratique, notamment dans le traitement du contentieux matrimonial. La thèse d’Arnould Bethery de la Brosse est également fondamentale pour notre travail : l’auteur fait une histoire de la pensée juridique du mariage, depuis la conception médiévale qu’il appelle « classique » jusqu’aux courants du <num>xx</num><hi rend="sup">e</hi> siècle. Il isole les différents principes et le contexte historique et juridique qui ont mené à l’élaboration du décret <hi rend="i">Tametsi</hi> ainsi que des ordonnances royales, notamment l’ordonnance de Blois. </p>
+		<p>Dans un second temps, un certain nombre d’historiens se sont intéressés au mariage comme outil d’observation de la société et de ses mentalités. Alessandro Stella a étudié les archives des procès en séparation portés devant l’évêché de Cadix afin d’étudier au plus près les motifs pour lesquels les mariages se font et se défont à l’époque moderne. Un certain nombre de démographes se sont également intéressés au mariage : Jean-Marie Gouesse, par exemple, dresse une carte de l’Europe consanguine à partir des lettres de dispenses accordées par la cour pontificale aux époques modernes et contemporaines. Frédéric Schwindt, quant à lui, s’intéresse à l’efficacité de l’encadrement de la population par les congrégations religieuses en termes de réduction des naissances illégitimes. Enfin, Martine Charageat s’est plus spécifiquement intéressée à la délinquance matrimoniale et au rapport à la sexualité, dans l’Aragonais, à la fin du Moyen Âge : son étude permet, là encore, de comparer avec les pratiques matrimoniales du Beauvaisis aux <num>xvii</num><hi rend="sup">e</hi> et <num>xviii</num><hi rend="sup">e</hi> siècles. </p>
+		<p><hi rend="i">La pensée juridique du mariage à l’époque moderne.</hi> — Parce que notre étude se penchait sur la question des rapports entre le droit et la société d’Ancien Régime, nous avons senti la nécessité de fonder ce travail sur la pensée de trois juristes connus de leurs contemporains et bien diffusés. Tout d’abord, le livre V du <hi rend="i">Traité de l’abus </hi>de Charles Févret (1583-1661) évoque tour à tour les différents contentieux suscités par le mariage tout en essayant de démontrer chaque fois la compétence exclusive des juges séculiers sur ces questions, au détriment des officiaux. Ensuite, le <hi rend="i">Traité des loix ecclésiastiques</hi> de Louis d’Héricourt (1687-1752) prend son modèle sur le <hi rend="i">Traité des loix civiles</hi> de Domat : Louis d’Héricourt tâche de calquer l’ordre des lois ecclésiastiques sur l’ordre naturel des Écritures, afin de donner un ordre synthétique et organisé au droit canonique. Enfin, Durand de Maillane (1729-1814) opte pour la forme du dictionnaire : son ouvrage est résolument tourné vers la pratique et donne un bon aperçu de la pensée juridique matrimoniale qui précède la Révolution. </p>
+		<p><hi rend="i">Beauvais et le Beauvaisis.</hi> — Étant donné l’objectif de cette étude, nous ne pouvions mener notre recherche sur tout le royaume de France. Nous avons donc choisi de concentrer notre effort sur le Beauvaisis, où se trouvent un bailliage et une officialité dont les fonds produisaient une matière suffisante à ce travail. Encore fallait-il cerner le contexte historique et géographique du Beauvaisis à l’époque moderne. Pour cela, l’étude de Pierre Goubert, intitulée <hi rend="i">Beauvais et le Beauvaisis de 1700 à 1730</hi>, s’est avérée d’un grand secours : l’auteur décrit ainsi une région isolée quant à ses voies de communication mais dynamique sur le plan économique, divisée entre l’industrie du textile et l’agriculture. Il oppose également un Beauvaisis « large », dont les frontières correspondraient à celles du diocèse de Beauvais, à un Beauvaisis « étroit » du bailliage de Beauvais, juridiction récente qui a dû se tailler sa part de compétence sur les bailliages voisins, et dont l’influence est assez réduite. Enfin, Pierre Goubert évoque l’influence parisienne sur le Beauvaisis, notamment en matière économique et religieuse. </p>
+		</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

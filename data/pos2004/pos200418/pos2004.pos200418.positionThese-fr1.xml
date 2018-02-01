@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La liturgie occupe dans les sociétés d’Ancien Régime une place centrale et, pourtant, elle est un objet auquel l’historiographie a accordé
+          peu d’importance. Ce travail cherche à montrer la promesse que le dialogue entre histoire de la liturgie et histoire générale représente
+          pour la compréhension des sociétés modernes. La période étudiée est une période de bouleversements pour la prière de l’Église, qui se voit
+          corrigée par les humanistes, contestée par les protestants et réformée par la hiérarchie ecclésiale. L’expression de ces désirs de réforme
+          conduisit à un profond changement de mentalités : alors que la liturgie était, jusqu’à la Renaissance, un héritage intangible et un signe de
+          la perfection de l’histoire chrétienne, il est admis au début du XVII<hi rend="sup">e </hi> siècle qu’elle peut et qu’elle doit purifiée
+          par un processus de réforme. C’est ce changement qui a permis à la liturgie de devenir, plus tard, et dans la vie priante des catholiques,
+          une des voix du magistère : elle devint ainsi l’expression de l’autorité de l’Église. L’importance croissante de Rome dans la Réforme
+          catholique autorise également l’assimilation entre l’Église de Rome et l’Église universelle, qui se retrouve au niveau de la liturgie. C’est
+          la naissance et la systématisation de critères de réforme qui permirent cette évolution : le garant de l’apostolicité n’étant plus la
+          transmission elle-même, c’est alors l’approbation explicite par l’autorité compétente qui remplit ce rôle. Cette transformation est
+          parallèle à celle qui fit passer la coutume définie essentiellement par son caractère rationnel, garanti par le consentement <hi rend="i">tacite</hi> de l’autorité, à la coutume définie plus clairement sous un angle volitif, qui fait du consentement <hi rend="i">explicite</hi> une condition nécessaire à sa validité.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude se fonde d’abord sur les livres liturgiques eux-mêmes. Dans ce cadre, une attention particulière a été accordée au bréviaire, du
+          fait du nombre de réformes qu’il a subies au cours de la période. Pour pouvoir exploiter cette masse documentaire imposante, le choix a été
+          fait de se servir en partie des répertoires bibliographiques. L’analyse directe de ce type d’œuvres s’est limitée à quelques exemples : le
+          bréviaire de Quiñonez dans ses deux versions, le bréviaire romain réformé par Pie V, celui des chartreux avant et après la réforme qu’ils
+          menèrent et, enfin, le bréviaire parisien dans les trois états qu’il connut entre les années 1550 et la fin des années 1600. Les autres
+          sources imprimées utilisées furent des ouvrages de théologie, notamment l’ <hi rend="i">Elucidatorium ecclesiasticum</hi> de Josse Clichtove
+          auquel la plus grande attention fut accordée, et des recueils comme ceux de Mansi ou de Duranthon.</p>
+        <p>La documentation imprimée fut complétée par l’exploitation de sources d’archives romaines : le fonds ancien conservé à l’ <hi rend="i">Archivio della Congregazione per le cause dei Santi</hi>, qui concerne le travail de la Congrégation des rites entre sa création (1588)
+          et la fin des années 1610, et les recueils manuscrits des canons de conciles provinciaux que reçut la Congrégation du concile jusqu’en 1609
+          et qui sont aujourd’hui conservés à l’ <hi rend="i">Archivio segreto vaticano</hi>. Par ailleurs, ont été consultés les registres de
+          délibérations capitulaires de Notre-Dame de Paris et quelques dossiers concernant les Assemblées du clergé.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Les données factuelles de la carrière d’Alain Saint-Ogan sont connues et l’ouvrage de Thierry Groensteen, <hi rend="i">L’art d’Alain Saint-Ogan</hi>, publié en 2007, en offre une chronologie détaillée. En revanche, comme de nombreux autres dessinateurs de bande dessinée, Saint-Ogan n’a jamais été confronté à des perspectives autres que celles de l’histoire de la bande dessinée. Même dans ce domaine, il est resté pendant très longtemps pour les spécialistes le « père » de la bande dessinée française, sans qu’une réflexion critique ne le resitue clairement face à ses collègues. Dès lors, étudier la carrière de Saint-Ogan en considérant son partage entre deux publics – d’un côté, le dessin de presse pour adultes ; de l’autre, les histoires en images pour enfants – ouvre de nouvelles perspectives pour la connaissance du dessinateur, mais également pour l’histoire de la bande dessinée en général. </p>
+        <p>L’œuvre de Saint-Ogan oscille entre deux contextes qu’il est nécessaire de détailler pour étudier les images dont il est à l’origine. Le premier contexte est celui du dessin d’humour publié dans la presse, contenu traditionnel depuis le <num>xix</num><hi rend="sup">e</hi> siècle, mais qui connaît au début du <num>xx</num><hi rend="sup">e</hi> siècle une importante expansion vers la presse quotidienne, et donc vers une publication de masse. Le second contexte est celui de la culture enfantine, conçue par des adultes pour des enfants et obéissant à des normes esthétiques et éditoriales spécifiques. Elle aussi est en pleine mutation quand arrivent de « nouveaux héros », les héros de l’image. </p>
+        <p>L’année 1927 constitue une véritable rupture dans la carrière de Saint-Ogan. À cette date, le nombre de ses dessins publiés dans la presse adulte baisse progressivement tandis que son intégration à la culture enfantine est confirmée par l’exploitation des personnages de Zig, Puce et Alfred sous forme d’albums, de pièces de théâtre, de jouets. La distinction entre deux moments de sa carrière, la presse adulte et le monde de l’enfance, permet de mettre en valeur l’existence de passerelles entre ces deux espaces de la création graphique. </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>La principale source pour l’étude de la carrière d’Alain Saint-Ogan est, à ce jour, le fonds Saint-Ogan conservé au centre de documentation de la Cité internationale de la bande dessinée et de l’image à Angoulême (CIBDI). Le travail du chercheur se trouve grandement facilité par l’opération de numérisation organisée par le CIBDI en 2007, suivie d’une mise en ligne avec possibilité de télécharger les cahiers, un choix qui laisse un accès direct aux documents (http ://collections.citebd.org/saint_ogan/www/fonds.php). Le fonds Saint-Ogan (FA-m-03306 à FA-m-03387) est composé de quatre-vingt-deux « cahiers » d’Alain Saint-Ogan dans lequel l’auteur a, au cours de sa vie, conservé la quasi-totalité de sa production ainsi que de très nombreuses coupures de presse commentant son travail. À ce <hi rend="i">book</hi> personnel, s’étendant sur les quatre-vingt premiers cahiers, de 1909 à 1974, s’ajoutent deux cahiers numérotés en chiffres romains (I et II). Saint-Ogan y a tenu un agenda, encore relativement sommaire, mais permettant de retracer les rencontres et les collaborations du dessinateur presque au jour le jour, de 1895 à 1963. </p>
+        <p>Des sources d’archives complémentaires ont pu permettre d’accéder à d’autres informations que celles contenues dans les cahiers qui donnent une vision profondément subjective sur une carrière : celle de l’auteur lui-même. Plusieurs fonds conservés à la Bibliothèque nationale de France ont pu être utilisés pour compléter l’étude du Théâtre du Petit Monde (8-RF-84738 à 84756) et de la Société des humoristes (YD2-1469 -8). Mais des sources d’archives primaires dispersées, malheureusement absentes des cahiers, constituent sans doute l’apport le plus important et le plus inédit pour la réflexion sur la carrière de Saint-Ogan. Aux Archives nationales, les fonds concernant le ministère de l’Information du gouvernement de Vichy (F<hi rend="sup">41</hi>), les procès-verbaux de la commission de surveillance et de contrôle des publications destinées à l’enfance (19900208-1 et 2) ou l’administration du journal <hi rend="i">Le Petit Parisien </hi>(11 AR) ont permis de diversifier les méthodes d’analyse. </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>En 1473-1474, William Caxton imprime pour la première fois un livre en anglais : le <hi rend="i">Recuyell of the historyes of Troyes</hi>, sa traduction du <hi rend="i">Recueil des histoires de Troyes </hi>de Raoul Lefèvre. Le texte d’origine est imprimé par le marchand anglais installé à Bruges avant la fin de l’année 1475. Ce texte français, tel que Caxton l’imprime, fait l’objet, dans cette thèse, d’une édition partielle. Le choix de n’éditer que le troisième livre correspond à la volonté de compléter le travail de Marc Aeschbach, éditeur du<hi rend="i"> Recueil</hi> tel que Raoul Lefèvre l’a composé, c’est-à-dire en deux livres. L’édition du texte français est la première étape d’une étude consacrée à Caxton, traducteur et imprimeur. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p> L’édition du troisième livre du <hi rend="i">Recueil </hi>imprimé par Caxton a été établie à partir des exemplaires de la Bibliothèque nationale de France (RES- Y2- 170) et de la Pierpont Morgan Library (manuscrit 638). Afin de mettre cette édition en perspective et de montrer son rôle dans l’établissement du <hi rend="i">Recueil </hi>en trois livres, ont été consultés le manuscrit 9254 de la Bibliothèque royale de Belgique (B1) ; le manuscrit 78 D48 de la Koninklijke Bibliotheek (LH) ; le manuscrit Royal 17. E II de la British Library (L) ; le manuscrit 3692 de la Bibliothèque de l’Arsenal (P1) ; le manuscrit 312 de la Bibliothèque de l’Institut de France (P2) ; les manuscrits français 59 (P3), 252 (P4), 253 (P5), 255 (P6), 6361 (P8), et 22552 (P9) de la Bibliothèque nationale de France ; le manuscrit Palatini latini 1962 de la Bibliothèque apostolique vaticane (R) ; les manuscrits 3298 (V2) et 3439 (V3) de la Österreichische Nationalbibliothek. Les éditions antérieures au <num>xvi</num><hi rend="sup">e</hi> siècle ont également été utilisées : celle de Bellaert à Haarlem vers 1484-88 (à la Bibliothèque apostolique vaticane, Incunable Stampati Rossiano 717), de Topié à Lyon en 1490 (à la Bibliothèque nationale de France, Réserve Y2- 169), de Maillet dans la même ville en 1494-1495 (Réserve Y2- 171) et de Vérard à Paris vers 1494-1495 (Réserve Y2- 345). </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

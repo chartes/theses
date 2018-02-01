@@ -1,0 +1,99 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le château de Versailles conserve encore au <num>xx<hi rend="sup">e</hi></num> siècle l’image de symbole de la monarchie absolue qui a permis sa
+          construction et son développement aux <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles. La bibliographie qui lui est
+          consacrée ne contient que très peu de références à la période contemporaine et la vie du monument après la Révolution de 1789 n’est que peu
+          connue. Pourtant, Versailles continue de représenter l’un des lieux les plus importants non seulement de la vie culturelle française, mais
+          aussi de la vie politique et sociale, que caractérisent les images de représentation de l’édifice et les usages qu’on en fait au XX <hi rend="sup">e</hi> siècle. Cette période, entre 1914, date de l’invasion allemande qui a fait craindre, un instant, pour Versailles, et
+          1995, date de la création de l’établissement public du domaine de Versailles, qui lui confère une autonomie de décision et de gestion
+          certaine, permet de comprendre comment le château royal symbolisant le plus la monarchie d’Ancien Régime est devenu un musée national, image
+          de la France dans son entier.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Si la bibliographie concernant Versailles au <num>xx<hi rend="sup">e</hi></num> siècle est peu abondante, les archives sont en revanche très
+          nombreuses, du fait de la complexité de la situation administrative du domaine, dépendant de plusieurs institutions et ministères.
+          L’établissement public conserve lui-même ses archives, en deux entités distinctes (conservation du musée et service de l’architecture),
+          qu’il convient de compléter, afin de parfaire la compréhension du cycle décisionnel et opérationnel, par celles des institutions de tutelle,
+          notamment au niveau ministériel (série F21 au Centre historique des Archives nationales pour la première moitié du siècle, versements du
+          ministère de la Culture au Centre des archives contemporaines pour les décennies les plus récentes) et au niveau des directions des Musées
+          (Archives des Musées nationaux, notamment la série V, consacrée à Versailles) et de l’Architecture (Médiathèque du Patrimoine et de
+          l’Architecture). Les archives communales de Versailles fournissent des éléments importants relatifs aux relations entre la municipalité et
+          le château. D’autres fonds complémentaires ont été requis, comme ceux du Rockefeller Archive Center, aux États-Unis, qui conserve les
+          archives de la famille Rockefeller, les Archives départementales des Yvelines et les fonds de manuscrits conservés à la Bibliothèque des
+          Musées nationaux et à la Bibliothèque municipale de Versailles (notamment pour la correspondance de Gaston Brière).</p>
+        <p>Enfin, le recueil de témoignages de personnes ayant occupé des fonctions intéressant le domaine de Versailles a permis d’élargir le champ
+          archivistique traditionnel, en introduisant des données personnelles et mémorielles directes. Outre les mémoires et souvenirs publiés,
+          plusieurs témoignages oraux ont pu être collectés auprès de quatre anciens responsables, ainsi que de la fille d’un conservateur de
+          l’entre-deux-guerres ; ces souvenirs, souvent inédits, apparaissent fort utiles pour une approche systématique et scientifique des images et
+          des usages du château de Versailles à l’époque contemporaine.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le premier conflit mondial constitue un épisode décisif de l’histoire européenne, souvent considéré comme la matrice des violences des
+          années 1930 puis de la seconde guerre mondiale. Du côté français, son importance est perçue d’emblée : la « Grande Guerre » fait pendant les
+          combats l’objet d’un fort investissement symbolique et idéologique. Une fois la paix signée, le culte du souvenir de 1914-1918, entretenu
+          par les anciens combattants et par les familles en deuil, contribue à en faire une référence incontournable de la mémoire nationale. Du fait
+          de l’ampleur des pertes et du degré de violence atteint, son souvenir hante durablement les consciences.</p>
+        <p>Pour appréhender la place qu’occupe la Grande Guerre dans l’imaginaire collectif des Français au cours des années 1920 et 1930, les images
+          de presse fournissent un objet d’étude privilégié. Ces représentations, qui renvoient toujours à une conception de l’affrontement, laissent
+          lire les regards posés sur la guerre par leurs auteurs et par les équipes éditoriales. En outre, du fait de leur diffusion dans la presse,
+          elles interviennent dans le débat public. Elles s’insèrent ainsi dans un réseau d’images qui s’affrontent ou se confortent. Elles reflètent
+          donc l’imaginaire national tout en contribuant à le structurer, alors que s’élabore la mémoire visuelle du conflit.</p>
+        <p>Après un exposé resituant les images considérées dans le contexte de leur production et de leur publication, il convient de montrer quelles
+          sont les ruptures et les continuités entre l’iconographie de presse du temps de guerre et celle du temps de paix, et comment chaque titre
+          réinvestit ou rejette l’héritage iconographique de 1914-1918. Cette première approche, centrée autour des notions de transition et de «
+          démobilisation culturelle », cherche d’abord à expliquer les différences d’attitude envers cet héritage : quelle est l’influence des
+          sensibilités idéologiques et politiques ? Quel rôle joue l’actualité nationale et internationale dans son appréciation ? Elle s’attache
+          encore à évaluer la réaction de chaque journal face à la critique de l’attitude belliciste de la presse du temps du conflit. Alors même que
+          les images de presse de la Grande Guerre sont assimilées à un « bourrage de crâne » éhonté, leurs rapports aux thématiques et aux
+          stéréotypes bleu horizon renvoient les périodiques à leur propre attitude lors de l’affrontement. Que vont-ils donc choisir : passer le
+          sujet sous silence, camper sur leurs anciennes positions ou les rejeter ?</p>
+        <p>Il s’agit ensuite, dans un deuxième temps, d’étudier comment les images de presse mettent en scène 1914-1918, et ce que cela révèle sur les
+          représentations de la guerre dans la conscience collective. Ceci ouvre la voie à deux types de questionnements. Dans son sol (anciennes
+          zones du front, cimetières militaires), dans son architecture (ruines et monuments aux morts), dans sa population (morts, mutilés,
+          endeuillés), dans ses rituels commémoratifs (Toussaint, 11 Novembre), la France de l’entre-deux-guerres porte les stigmates d’une lutte âpre
+          et violente. Que vont montrer les différents journaux de ces traces bien visibles ? Sur quels modes dépeint-on le conflit lui-même, et à
+          quelles fonctions répondent les images qui le représentent ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont de différentes natures. Tout d’abord, dans la mesure où l’étude se base sur l’iconographie de quatre
+          périodiques : <hi rend="i">Le Journal</hi>, <hi rend="i">L’Humanité</hi>, <hi rend="i">L’Illustration</hi> et <hi rend="i">Vu</hi>, ces
+          titres, consultables dans diverses bibliothèques parisiennes telles que la bibliothèque de l’Arsenal et la Bibliothèque de documentation
+          internationale contemporaine, ont constitué la première source utilisée. Afin de mettre en contexte ce premier corpus d’images, d’autres
+          documents ont été consultés, tant des collections de presse que des monographies illustrées. Il s’agissait à la fois de mieux connaître
+          l’iconographie de presse de 1914-1918, de mieux cerner l’œuvre de certains dessinateurs en se reportant à leurs albums, et d’obtenir une
+          approche plus large des diverses représentations de la Grande Guerre au cours des années 1920 et 1930, des journaux anciens combattants aux
+          guides illustrés des champs de bataille. Des archives écrites ont également été mises à profit, tant à la Préfecture de police qu’au Centre
+          historique des Archives nationales, où est conservé le fonds du <hi rend="i">Journal</hi>. Le fonds iconographique d’un autre titre a pu
+          être consulté : celui de <hi rend="i">L’Illustration</hi>, détenu par un particulier. Enfin, le fils d’un des principaux dessinateurs de <hi rend="i">L’Humanité</hi> a aimablement consenti à fournir des renseignements sur son père.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

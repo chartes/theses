@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’hôtel-Dieu Saint-Nicolas de Troyes est un établissement de taille moyenne, situé dans une ville qui joue un grand rôle durant la période
+          médiévale. Des sources diversifiées permettent d’aborder à peu près tous les aspects de la vie de cet établissement et de dresser ainsi le
+          portrait d’un hôtel-Dieu semblable à tant d’autres pour nombre de ses aspects, mais original de par son implantation dans une ville
+          particulière et son plat pays. Loin d’être un simple lieu d’accueil pour les malades, il se révèle être au centre d’une économie propre.
+          L’accomplissement de sa mission charitable le pousse en effet à chercher les revenus qui lui sont nécessaires dans différentes directions :
+          patrimoine foncier qu’il exploite directement ou indirectement, donations faites par des particuliers… Il a donc paru judicieux d’orienter
+          la réflexion sur les moyens dont dispose l’hôtel-Dieu pour jouer son rôle d’assistance, en présentant en premier lieu la ville qui l’abrite,
+          ses liens avec le chapitre qui l’a fondé, son emplacement et ses bâtiments, son personnel et ses hôtes, pour ensuite montrer de quoi vit
+          l’établissement.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude de l’hôtel-Dieu Saint-Nicolas s’appuie principalement sur le fonds de l’établissement ainsi que sur celui du chapitre cathédral,
+          tous deux conservés aux archives départementales de l’Aube, qui renferment des documents de nature variée. On peut notamment signaler pour
+          le fonds de l’hôtel-Dieu un grand nombre de donations faites en sa faveur, des documents qui concernent des conflits avec la paroisse à
+          laquelle appartient Saint-Nicolas, des titres de propriété et des censiers, ainsi qu’un livre de comptes. Le fonds du chapitre cathédral,
+          lui, contient un nombre important de testaments et de comptes d’exécution testamentaires de chanoines, passés en faveur de Saint-Nicolas,
+          douze livres de comptes de l’hôpital, des délibérations capitulaires, essentielles pour comprendre le contrôle exercé par le chapitre sur
+          Saint-Nicolas, et des pièces diverses (inventaire de biens de l’établissement, comptes de la cathédrale…). Des documents complémentaires ont
+          été consultés dans d’autres services : les archives et la bibliothèque municipales de Troyes, la Bibliothèque nationale de France
+          (département des manuscrits) et les Archives nationales. Une typologie des sources a été réalisée et répartit les documents consultés en
+          trois grandes catégories : donner/recevoir, contrôler, gérer.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

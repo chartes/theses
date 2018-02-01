@@ -1,0 +1,87 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>La mort volontaire apparaît presque universellement comme un acte incompréhensible : elle pose un problème moral et religieux ; elle interpelle la société. Phénomène marginal, certes, à la fois par sa rareté relative et par son caractère extrême, le suicide n’en est pas moins une porte d’entrée vers la pensée et le comportement d’une société. En effet, s’il est une mort qui, par son caractère choquant et inhabituel, concentre les tabous et provoque des réactions contrastées, c’est bien le suicide. Marc Bloch, en 1931, ne qualifie-t-il pas la mort volontaire de « symptôme social » ? </p>
+		<p>Pour qui veut s’atteler à l’histoire du suicide, l’époque moderne est d’un grand intérêt, en premier lieu parce qu’elle fournit au chercheur des sources plus abondantes que pour la période médiévale. Il s’offre en particulier au moderniste une large palette d’archives judiciaires, fruit de la force nouvelle de la législation sur le suicide, qui se précise en France à cette époque. L’Ancien Régime place en effet le suicide dans un contexte de double condamnation, à la fois religieuse et civile : sous l’influence de l’Église, qui s’était dès l’Antiquité prononcée contre le suicide, le pouvoir royal poursuit le suicide comme un crime depuis le Moyen Âge ; mais c’est à l’époque moderne, à partir de l’ordonnance de 1670, que le droit royal se précise à ce sujet. </p>
+		<p>C’est également à l’époque moderne que le suicide prend un nom. Jusqu’à la fin du <num>xviii</num><hi rend="sup">e</hi> siècle, on parle en effet d’<hi rend="i">homicide de soi-même </hi>; on dit qu’Untel « s’est défait », ou l’on emploie des périphrases pour désigner la mort volontaire par son mode d’exécution (se pendre, se noyer, se casser la tête, etc.). Le néologisme « suicide », né en Angleterre sous sa forme latine en 1642, se répand dans la langue anglaise au milieu du <num>xvii</num><hi rend="sup">e</hi> siècle. C’est par le biais de l’abbé Prévost qu’il parvient en France, où il paraît pour la première fois dans <hi rend="i">Le Pour et le Contre</hi> en juillet 1734. Cet anglicisme peine cependant à s’imposer en français et ne devient pas d’usage courant avant le dernier tiers du <num>xviii</num><hi rend="sup">e</hi> siècle : le verbe « se suicider »<hi rend="i"> </hi>apparaît dans les archives au tournant des années 1780-1790. L’emploi d’un nouveau mot est le signe d’une évolution des sensibilités : au <num>xviii</num><hi rend="sup">e</hi> siècle, le suicide devient ce que l’on appellerait aujourd’hui un sujet de société. Dans un monde qui croit assister à une véritable épidémie de suicides, la mort volontaire fait l’objet de débats qui donnent lieu à une importante production littéraire : il se trouve des auteurs de plus en plus nombreux pour en parler, demander sa dépénalisation, voire approuver ce geste. </p>
+		<p>Cependant, où saisir le suicide dans ce qu’il a de plus commun que dans les campagnes, cadre de vie de la majorité de la population française jusqu’au lendemain de la première guerre mondiale ? Les actuels départements de l’Eure-et-Loir et de l’Eure, espace essentiellement rural, constituent un cadre adéquat pour une telle étude. Le territoire formé par ces deux départements constitue un exemple de milieu rural, un type d’environnement jusqu’ici laissé de côté par la plupart des historiens du suicide. Or si comme l’affirme Durkheim le suicide est un phénomène social et qu’il trouve une explication, au moins partielle, dans l’influence de facteurs sociaux, on peut s’attendre à ce que le suicide en milieu rural soit sensiblement différent de ce qu’il est dans les villes. La comparaison entre les différents travaux permettra donc de parvenir à une vision plus complète et sans doute plus contrastée du phénomène du suicide à l’époque moderne. </p>
+		<p>La période retenue couvre une centaine d’années : de 1690 à 1790, c’est un <num>xviii</num><hi rend="sup">e</hi> siècle qui mord un peu sur la fin du <num>xvii</num><hi rend="sup">e</hi> siècle et court jusqu’à la Révolution. Entre le rappel législatif de 1670 et la dépénalisation du suicide en 1791, ce siècle des Lumières nous donne à voir les permanences et les évolutions du suicide dans toutes ses dimensions. Problème complexe, le suicide se prête en effet à des approches multiples. C’est d’abord un événement, un acte individuel, qui se situe dans le temps et dans l’espace. C’est aussi, plus largement, une forme particulière de mort, qui peut être étudiée pour elle-même, à l’échelle d’une société ou d’une époque. C’est enfin un sujet sensible, voire tabou, un type de mort qui exacerbe les passions. </p>
+		<p>L’approche retenue est donc double, à la fois quantitative et qualitative. Les observations de type statistique dont les 105 actes suicidaires relevés fournissent le matériau servent de toile de fond à l’analyse des mentalités que permet une lecture attentive des sources : les éléments constitutifs de la réalité sensible du suicide sont ainsi éclairés par les regards portés sur la mort volontaire. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>La pénalisation du suicide fournit la matière première de l’observation des cas. Poursuivi comme un crime, le suicide fait l’objet d’enquêtes et de procès conservés pour l’essentiel dans les séries B – consacrées aux cours et juridictions seigneuriales et royales – des archives départementales de l’Eure et de celles d’Eure-et-Loir. Ces enquêtes, menées pour élucider une mort violente, se composent de procès-verbaux établis par le juge criminel à la demande du procureur du roi ou du procureur fiscal – pour les justices seigneuriales – du lieu où a été trouvé le cadavre, du rapport des chirurgiens, des papiers trouvés sur le cadavre le cas échéant, et d’informations menées en interrogeant les témoins ou les proches du mort ; l’enquête débouche éventuellement sur un procès criminel. Les pièces de la série B peuvent être éclairées par les registres de baptêmes et sépultures qui, lorsque le cadavre est inhumé en terre sainte, constituent le prolongement et l’achèvement de la procédure judiciaire. </p>
+		<p>Les recherches menées dans ces séries ont permis de relever 105 actes suicidaires, impliquant 101 suicidés, qui forment la matière de l’étude : mis en série dans une base de données relationnelle, ces cas forment une population statistique qu’il devient possible d’étudier de manière chiffrée. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

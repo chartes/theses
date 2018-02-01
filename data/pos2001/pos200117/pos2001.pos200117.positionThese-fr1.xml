@@ -1,0 +1,112 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si la connaissance de l’organisation et du personnel du Parlement de Paris est aujourd’hui relativement bien établie, la définition du rôle
+          de l’institution a le plus souvent été déduite par les historiens des préambules stéréotypés des sources normatives (ordonnances royales et
+          arrêts de règlement) et de quelques procès politiques fameux. Les actes de la pratique judiciaire du Parlement suggèrent quant à eux que la
+          Cour assumait avant tout un rôle de régulateur social dont l’efficacité et la légitimité étaient fondées sur la négociation, toujours
+          renouvelée, des droits et devoirs de chacun des protagonistes des procès (justiciables, magistrats et souverain). L’action des trois
+          représentants directs des intérêts du monarque au sein de la Cour, son procureur et ses deux avocats “ généraux ”, traduit la position
+          royale dans ce processus de négociation. Son étude permet en un même temps de renouveler l’histoire du Parlement, considéré non plus sous
+          l’angle de son organisation, mais de sa fonction, d’analyser les modalités de la mise en pratique dans le domaine judiciaire des théories
+          d’un courant absolutiste naissant et d’étudier l’acculturation juridique dont les cours royales ont été le principal vecteur pendant les
+          derniers siècles du Moyen Age. Ainsi, les incessantes interventions des gens du roi dans les procès des particuliers constituent autant
+          d’illustrations concrètes de la justification d’un droit royal théorique en formation.</p>
+        <p>Les années d’existence du “ royaume de Bourges ” (1418-1436) fournissent un contexte privilégié pour l’étude de l’action des gens du roi.
+          En effet, l’affrontement de deux rois faisant appel à deux légitimités opposées et le dualisme institutionnel qui résulta de l’établissement
+          d’un parlement à Poitiers par le dauphin Charles, créèrent des conditions de fragilité du pouvoir royal telles, que la légitimation des
+          droits du souverain devenait un impératif stratégique majeur et que les fondements idéologiques qui la sous-tendaient se dévoilaient plus
+          clairement. Les plaidoiries des gens du roi devant les parlements de Paris et de Poitiers constituent un volumineux corpus d’exemples d’un
+          discours rhétorique sur la souveraineté royale en une période où l’affirmation des droits du roi devait, plus que jamais, se plier aux
+          exigences d’une négociation avec des sujets et des pouvoirs, religieux et locaux, dont l’un et l’autre camp cherchaient à s’assurer le
+          soutien et la fidélité.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Naturellement, une telle étude fait un usage abondant des archives des deux cours, aujourd’hui conservées aux Archives nationales. Le fonds
+          du parlement de Poitiers a en effet rejoint celui de la cour parisienne dès décembre 1436 et se trouve donc à présent conservé au sein de la
+          série X. Les avantages que présente l’unité du lieu de conservation pour la recherche ont pour contrepartie le manque de précision des
+          inventaires consacrés aux archives du parlement de Poitiers, dont les registres ne représentent qu’une part infime de la masse de documents
+          que contient la série X. Un bref état des archives du parlement de Poitiers permet de palier les déficiences des instruments de recherches
+          actuels, ainsi que les lacunes du fonds de l’institution poitevine.</p>
+        <p>Les registres des deux cours représentent un important volume d’archives que ce travail de recherche, malgré ses limites chronologiques
+          restreintes, ne pouvait se permettre de dépouiller dans leur ensemble. Les registres de plaidoiries, qui constituent la source principale de
+          la thèse, ont été dépouillés de façon systématique au civil (cotes X<hi rend="sup">1a</hi> 4792-4794 et X<hi rend="sup">1a</hi> 8302 pour
+          Paris ; X<hi rend="sup">1a</hi> 9197-9201 pour Poitiers), alors que seul le parlement de Poitiers a pu être traité pour le criminel (X <hi rend="sup">2a</hi> 18). Les registres de conseil ont été dépouillés selon le même principe (X<hi rend="sup">1a</hi> 1480-1481 : parlement
+          civil de Paris ; X<hi rend="sup">1a</hi> 9194 : parlement civil de Poitiers ; X<hi rend="sup">2a</hi> 21 : parlement criminel de
+          Poitiers).</p>
+        <p>Les autres registres issus des fonds des deux cours (arrêts et jugés, accords, lettres patentes et ordonnances, présentations) ont été
+          utilisés de façon ponctuelle, au civil comme au criminel, pour compléter les informations sur les affaires dans lesquelles les gens du roi
+          étaient impliqués.</p>
+        <p>Divers documents généalogiques ainsi qu’une copie du premier registre de conseil civil du Parlement de Poitiers aujourd’hui disparu (Bibl.
+          nat. de France, fr. 16.397), conservés à la Bibliothèque nationale de France, se sont révélés d’une grande utilité pour remédier au peu
+          d’informations que livrent les registres conservés aux Archives nationales sur les gens du roi en tant qu’individus.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,102 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le 12 juillet 1542, François I<hi rend="sup">er</hi> déclare la guerre à Charles Quint, l’accusant d’avoir fait assassiner deux de ses
+          ambassadeurs, dont l’un partait à Venise et l’autre à Constantinople auprès de Soliman le Magnifique. En réalité, depuis quelques années,
+          les tensions autour du Milanais étaient devenues telles que la guerre semblait inévitable. Les opérations se déroulent essentiellement à la
+          frontière entre le royaume de France et les Pays-Bas gouvernés par la sœur de Charles Quint, Marie de Hongrie. Les armes sont globalement
+          peu favorables aux troupes françaises. Sur le front italien, la brillante victoire de Cérisoles la veille de Pâques, en 1544, n’a guère
+          d’impact sur l’issue de la guerre : peu après, Charles Quint envahit la Champagne et semble être en mesure de menacer Paris, tandis que les
+          Anglais, qui ont rejoint les Impériaux dans cette guerre, menacent de prendre les troupes royales à revers. C’est peu après qu’est conclue
+          la paix de Crépy, le 18 septembre 1544, qui met un terme provisoire à l’affrontement. Durant ces quelques années de conflit ouvert, il s’est
+          publié de nombreux textes qui s’y rapportent de près ou de loin. Ces publications relèvent de tous les genres ou presque : on y trouve de la
+          prose comme des vers, de grands discours rhétoriques relevant de la pure propagande, parfois très officielle, tout aussi bien que des
+          chansons d’aspect très populaire, qui se chantaient sur les airs alors à la mode. Les textes les plus nombreux consistent en de petits
+          imprimés qui prétendent donner des « nouvelles », informer sur le déroulement des opérations militaires ; mais on peut aussi évoquer des
+          pièces de poésie mondaine, des ouvrages dont l’ambition est historique, de la poésie politique ou encore des morceaux de bravoure rhétorique
+          visant à démontrer que dans cette guerre, le bon droit est du côté du roi de France. Cependant, tous les imprimés en français ou en latin ne
+          sont pas en faveur du roi : une production abondante a également existé du côté impérial, même s’il est difficile de l’évaluer. C’est
+          l’étude de cette production, dans sa diversité et sa complexité, qui fait l’objet du présent travail.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sur lesquelles s’appuient les conclusions ici avancées sont exclusivement des imprimés parus durant la guerre qui se déroule
+          entre juillet 1542 et septembre 1544. Malgré un certain nombre de témoignages montrant que de tels textes ont pu également circuler sous
+          forme manuscrite, le choix de l’imprimé a été fait en raison de sa relativement large diffusion, qui change les enjeux d’un texte. D’autre
+          part, l’accent a été mis sur des imprimés en langue française, y compris du côté impérial, à l’exclusion de toute autre langue vernaculaire.
+          Le latin a cependant trouvé une place au sein du corpus retenu, en raison de son statut de langue de culture et de langue diplomatique entre
+          autres, qui ne permettait pas de l’ignorer. Les exemplaires eux-mêmes des éditions imprimées consultées sont extrêmement dispersés.
+          Cependant, plusieurs bibliothèques en conservent d’importants fonds et ont été des lieux d’étude privilégiés : c’est bien sûr la
+          Bibliothèque nationale de France, par les collections de sa réserve des livres rares et précieux, celles du fonds Rothschild au département
+          des manuscrits occidentaux, et celles de l’Arsenal, mais aussi la bibliothèque Sainte-Geneviève, et celle du musée Condé, à Chantilly. La
+          bibliothèque Méjanes à Aix-en-Provence possède également un très riche fonds en la matière ; et un certain nombre de bibliothèques
+          anglaises, au premier rang desquelles la British Library à Londres, ont été mises à profit.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

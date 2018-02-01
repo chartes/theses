@@ -1,0 +1,98 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le Roussillon doit son nom à l’antique cité romaine de <hi rend="i">Ruscino</hi> dont les limites semblent avoir correspondu, au XII <hi rend="sup">e</hi> siècle, à celles du diocèse d’Elne, cadre de cette étude. Il présente une grande diversité de marbres et de pierres
+          marbrières dont certains ont été exploités depuis l’Antiquité jusqu’à l’arrivée des Arabes au <num>viii<hi rend="sup">e</hi></num> siècle. Dès la fin
+          du <num>ix<hi rend="sup">e</hi></num> siècle et aux <num>x<hi rend="sup">e</hi></num> et <num>xi<hi rend="sup">e</hi></num> siècles, l’exploitation reprend en lien avec
+          le domaine languedocien où des ateliers narbonnais se spécialisent dans une production mobilière marquée par l’Antiquité. À cette même
+          période, on doit les premiers emplois du marbre dans la sculpture monumentale, notamment aux portails de Saint-Génis-des-Fontaines et
+          Saint-André-de-Sorède.</p>
+        <p>Après une certaine atonie, la production marbrière connaît un épanouissement au <num>xii<hi rend="sup">e</hi></num> siècle : diversification des
+          matériaux employés, de la nature des éléments sculptés et de leur destination. Le marbre n’est plus réservé aux grandes abbayes du Vallespir
+          ou de la plaine du Roussillon, mais est utilisé en Conflent et parfois dans de simples églises paroissiales. Aux <num>xii<hi rend="sup">e</hi></num>
+          et <num>xiii<hi rend="sup">e</hi></num> siècles, on peut recenser quarante-quatre portails totalement ou partiellement en marbre. La bibliographie sur
+          l’art du Roussillon est riche, mais souvent limitée à l’étude des grands monuments. Cette recherche a voulu s’inscrire dans l’intérêt
+          récemment porté aux matériaux de construction, en particulier au marbre qui, en Roussillon, a jusqu’ici surtout été étudié dans les
+          cloîtres. Or la production de portails permet de mieux cerner le travail des marbriers et de s’interroger sur le lien qui existe entre ce
+          regain de faveur pour le matériau et l’Antiquité, dans une des régions les plus anciennement romanisées de la Gaule.</p>
+        <p>Cette renaissance se manifeste dans le choix du matériau, mais aussi dans les outils et les techniques de taille, les structures et le
+          vocabulaire ornemental. Le marbre n’est pas seulement destiné à une production en série mais, dans le contexte de la réforme grégorienne,
+          est l’objet de commandes précises dans lesquelles s’illustrent de grandes personnalités artistiques.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les portails en marbre sont l’objet essentiel de l’étude. Ont également été visitées les principales carrières de la région et consultés
+          des documents d’archives. Les cartulaires des grandes abbayes ont pour la plupart été détruits, mais leurs chartes sont connues grâce à des
+          copies réalisées par des érudits aux <num>xvii<hi rend="sup">e</hi></num>-XIX<hi rend="sup">e</hi> siècles, publiées ou conservées à la Bibliothèque
+          nationale de France, aux archives départementales des Pyrénées-Orientales et à la Médiathèque de Perpignan. Pour l’époque contemporaine, ont
+          été consultées les archives du service des Monuments historiques, du Laboratoire de recherche des Monuments historiques, du Service
+          départemental de l’architecture et du patrimoine à Perpignan et de la Direction régionale des affaires culturelles, à Montpellier</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

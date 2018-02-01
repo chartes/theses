@@ -1,0 +1,94 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La correspondance du cardinal de Granvelle avec son cousin le prieur de Bellefontaine peut être envisagée du point de vue de l’apport
+          biographique. En effet, le degré de parenté et l’amitié  permettent au cardinal d’employer dans ses lettres autographes un style direct et
+          un ton familier propices aux confidences. Le cardinal s’y présente en homme d’Etat impartial, préoccupé du seul intérêt public et du service
+          du roi. Au-delà du désir de paraître sous son meilleur aspect aux yeux de son cousin, le cardinal sait aussi que son parent relaie cette
+          image auprès des institutions dont il est membre, à savoir le chapitre cathédral de Besançon et le parlement de Dole. La franchise affichée
+          par le cardinal ne peut donc être parfaitement sincère ou, tout au moins, dénuée d’arrière-pensées politiques.</p>
+        <p>La correspondance privée du cardinal de Granvelle acquiert ainsi une dimension publique et pose une question : comment le cardinal s’est-il
+          efforcé de pallier son absence d’une province dont il est considéré comme le patron En effet, contraint de quitter les Pays-Bas sous la
+          pression d’un mouvement d’opinion hostile suscité par les nobles flamands et répercuté en Franche-Comté par Simon Renard et la famille de
+          Rye, le cardinal pouvait craindre que son absence de sa province natale ne suscite trouble et défections parmi ses fidèles. Sa mise en
+          représentation à distance par le clientélisme et le mécénat s’est donc révélée nécessaire pour conserver son influence en Franche-Comté.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La collection de lettres et de documents rassemblée par l’abbé Jean-Baptiste Boisot et conservée à la bibliothèque municipale de Besançon
+          sous le titre générique de « collection Granvelle » concerne la famille Perrenot de Granvelle en général, dont les membres les plus
+          illustres sont Nicolas Perrenot (1484-1550), garde des sceaux impérial, et son fils, Antoine, le cardinal de Granvelle (1517-1586).
+          Cependant, à travers la foule des correspondants de cette famille de diplomates, elle est à la dimension de l’empire de Charles Quint et
+          embrasse la presque totalité des sujets de politique européenne du <num>xvi<hi rend="sup">e</hi></num>  siècle ; elle est donc une source essentielle
+          pour l’histoire de ce siècle, bien qu’un peu oubliée depuis les travaux d’édition de Charles Weiss en France, d’Edmond Poullet et de Charles
+          Piot en Belgique. Reliée en une centaine de volumes, cette collection englobe quelques ensembles cohérents, dont les lettres adressées par
+          le cardinal de Granvelle à son cousin le prieur de Bellefontaine (volumes 83 et 84).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

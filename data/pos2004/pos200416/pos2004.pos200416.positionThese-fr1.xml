@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’Arbre de Jessé est un thème iconographique qui semble bien connu des historiens et des historiens d’art. Cette image est inspirée de la
+          prophétie d’Isaïe (Is. XI, 1), disant que le patriarche Jessé donnerait naissance à une tige et à une fleur, prophétie interprétée comme
+          l’annonce de la venue du Christ par la Vierge. Le <num>xii<hi rend="sup">e</hi></num> siècle constitue à ce titre une des périodes les plus riches en
+          études, car c’est le moment où l’iconographie de l’Arbre de Jessé apparaît. Ces travaux ont essayé de comprendre pourquoi la genèse de cette
+          image ne s’est faite qu’à ce moment et ont tenté de saisir sa signification, suivant des approches diverses, l’histoire de l’art et du
+          style, l’histoire de l’iconographie religieuse, la sociologie politique, ou encore l’histoire sociale et l’anthropologie. L’évolution de
+          l’Arbre de Jessé, de la fin du Moyen Âge à sa disparition à l’époque moderne, n’a suscité en revanche aucune recherche universitaire et
+          constitue donc l’objet de cette thèse. Seule l’élaboration d’un corpus précis, dans une zone géographique restreinte, envisageant
+          l’intégralité des supports, permet de cerner les évolutions importantes de l’Arbre de Jessé. Cette étude se situe donc au carrefour de
+          plusieurs disciplines : l’histoire de l’art, l’histoire religieuse, l’histoire littéraire ; toutes sont requises pour comprendre comment,
+          pourquoi et sous quelle forme l’Arbre de Jessé perdure aux siècles tardifs du Moyen Âge et au-delà.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont de deux types : sources iconographiques, c’est-à-dire les œuvres d’art comportant le thème de l’Arbre de Jessé,
+          et sources textuelles.</p>
+        <p>Les sources iconographiques englobent les enluminures, la gravure, les verrières, la sculpture, la peinture murale, la tapisserie, le
+          textile et les arts graphiques. Réunies selon une méthodologie la plus scientifique possible, exposée dans la thèse, ces œuvres d’art
+          forment un corpus d’environ 300 objets qui s’étendent sur toute la période envisagée et l’aire géographique proposée. Ces sources ont fait
+          l’objet d’un traitement bibliographique, stylistique, iconographique et statistique systématique.</p>
+        <p>Les sources textuelles se concentrent davantage sur la période chronologique envisagée, non sans faire appel aux siècles antérieurs.
+          Écrits de théologiens et d’historiens, sermons, hymnes liturgiques sont autant de sources envisagées pour comprendre le contexte textuel
+          dans lequel la prophétie d’Isaïe et le <hi rend="i">Liber Generationis</hi> de saint Matthieu se situent. Enfin, le caractère tardif des
+          périodes abordées et le problème de la disparition de l’Arbre de Jessé ont conduit à utiliser les décrets du concile de Trente, les écrits
+          des Réformés tels que Luther et Calvin, ainsi que les traités sur les images composés par des théologiens de la Contre-Réforme</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

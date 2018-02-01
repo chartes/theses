@@ -1,0 +1,103 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Marc-Antoine de Gourgue, grande figure bordelaise du début du <num>xvii<hi rend="sup">e</hi></num> siècle, doit sa renommée à l’exercice de
+          la première présidence du parlement de Bordeaux entre 1617 et 1628, mais aussi à l’ascension socio-professionnelle de son père Ogier de
+          Gourgue, couronnée par l’anoblissement. Les destinées du père et du fils sont à ce point imbriquées que l’étude des dimensions publique et
+          privée du premier président du Parlement ne pouvait se passer de celle de la carrière de son père, de son enrichissement considérable et de
+          sa conception du service de la personne royale.</p>
+        <p>Ogier et Marc-Antoine de Gourgue apparaissent tous deux comme des fidèles du roi. Se mettre à son service leur assure reconnaissance
+          professionnelle, bénéfices honorifiques et pécuniaires, ainsi que prestige social. Ogier de Gourgue choisit ainsi de gravir les échelons de
+          la société en s’engageant dans la voie des finances royales, tandis que son fils aîné poursuit l’ascension familiale en devenant un officier
+          de robe. Marc-Antoine de Gourgue est donc l’héritier principal des valeurs et de la fortune de son père, qui a vu mourir ses deux fils
+          aînés. Il lui revenait, ainsi qu’à son frère cadet Pierre, qui reprend la charge paternelle de trésorier et président du bureau des finances
+          de Bordeaux, de consolider la position nouvellement acquise par la famille.</p>
+        <p>Être un fidèle de la personne royale signifie également être un appui politique de la monarchie dans la province instable qu’est la Guyenne
+          au début du <num>xvii<hi rend="sup">e</hi></num> siècle. Le roi pouvait en effet manquer de prise sur des institutions locales éloignées du
+          centre de décision et du pouvoir. Placer à la tête du Parlement et de sa compagnie un homme de confiance, bien implanté dans sa région,
+          s’avérait essentiel pour le pouvoir, qui comptait de cette manière faciliter l’application de sa politique et renforcer son autorité. Agent
+          local du pouvoir royal, à la tête d’une institution prestigieuse, devant faire preuve de dignité aussi bien dans le cadre de sa fonction que
+          dans la sphère privée, Marc-Antoine de Gourgue est néanmoins un représentant de ses concitoyens auprès du roi ; cette position, qu’il
+          revendique et qui est lui reconnue par ses contemporains, peut alors le conduire à s’opposer à des décisions de la monarchie.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude d’une famille gagne à s’appuyer sur des archives privées qui puissent renseigner sur son patrimoine (les titres de propriété, des
+          terriers, des actes de vente et d’achat) et sa transmission (en particulier les contrats de mariage et les testaments), tout en restituant
+          la mémoire de la lignée. Malheureusement, les hasards de la conservation font qu’une infime partie des fonds privés conservés aux archives
+          départementales de la Gironde (sous série 2 E et série J) et, dans une moindre mesure, aux Archives nationales (13 AP et 19 AP) concerne les
+          Gourgue durant la période envisagée ici. Aussi, afin de tenter de combler les lacunes de la documentation, il a fallu s’intéresser à
+          d’autres sources, aussi bien manuscrites qu’imprimées. Les premières – actes notariés et registres secrets du parlement de Bordeaux –
+          permettent à la fois d’établir la constitution et la composition des fortunes d’Ogier et de Marc-Antoine de Gourgue, de dresser un tableau
+          de leur réseau social, de leur aire d’influence et de leur mode de vie, enfin d’observer l’action de Marc-Antoine à la tête du parlement de
+          Bordeaux. Les secondes – œuvres artistiques et récits historiques consacrés à Marc-Antoine de Gourgue – sont indispensables pour explorer sa
+          personnalité, mais certaines s’apparentent à des textes hagiographiques, qu’il convient de manipuler avec précaution.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

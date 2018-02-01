@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Apparu à la fin du <num>xix</num><hi rend="sup">e </hi>siècle, l’Art nouveau s’est diffusé dans toute l’Europe. Outre l’abandon des « règles apprises de l’écriture artistique », il prônait également l’abandon de la distinction entre « arts majeurs » et « arts mineurs » au nom d’un art total. De là découlent des réflexions pour un enseignement renouvelé des arts décoratifs. Créée en 1890 par une administration allemande soucieuse de fournir à Strasbourg des institutions modernes, l’École des arts décoratifs bénéficie plus tôt que les écoles françaises des résultats de ces réflexions. L’établissement est d’emblée placé sous la direction d’Anton Seder, un théoricien de l’Art nouveau allemand, et la réalisation d’objets d’art par le travail en atelier est une partie intégrante de la formation qu’il dispense. L’École des arts décoratifs de Strasbourg s’inscrit dans un réseau européen d’écoles en rupture avec l’académisme et ayant un but similaire : former des « artistes qui puissent satisfaire à toutes les exigences de l’industrie d’art ». </p>
+    <p>Avec le retour de l’Alsace à la France, l’École tente de s’intégrer au système français tout en gardant son identité régionale. Si l’année 1919 constitue un moment critique, car on dresse un bilan assez négatif de l’enseignement de l’École en lui reprochant d’avoir été un organe de « germanisation de l’art régional », l’arrivée du sculpteur François Rupert Carabin (1862-1932) à la direction de l’École marque le début d’une période de stabilité. Il donne en effet à l’établissement une organisation et une méthode qui lui survivront. Cette stabilité est néanmoins de courte durée : la deuxième guerre mondiale marque la fin de la tentative d’élaboration d’un art régional et de la volonté de former des artisans d’élite.  </p>
+    <p>L’histoire de l’École des arts décoratifs de Strasbourg durant l’entre-deux-guerres permet d’étudier les problématiques de l’Alsace de cette période, dans des domaines aussi variés que l’enseignement, les arts, ou l’industrie. L’entre-deux-guerres constituant par ailleurs la grande époque du régionalisme, qui trouve dans les arts décoratifs un terrain d’application, on ne pouvait se dispenser d’étudier la place de l’École des arts décoratifs de Strasbourg dans l’éventuelle genèse d’un art alsacien. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Les fonds de l’École des arts décoratifs, conservés aux Archives municipales de Strasbourg (séries 5MW et 34MW), ont constitué le fondement de cette thèse : composés pour l’essentiel de documents administratifs, ils comportent également des sources iconographiques abondantes sur les travaux d’élèves.  </p>
+    <p>Afin d’avoir une vision globale du sujet dépassant le cadre alsacien, ces fonds ont été complétés par ceux des Archives nationales. Quelques séries en particulier (F<hi rend="sup">12</hi>, F<hi rend="sup">17</hi> et F<hi rend="sup">21</hi>) se sont avérées utiles pour documenter des points précis de la présente étude, tels que la participation de l’École aux expositions de 1925 et 1937, ses relations avec l’administration centrale, et sa place dans le réseau des écoles d’arts décoratifs françaises.  </p>
+    <p>Les lettres de Carabin à Le Corbusier, conservées à la fondation Le Corbusier, ont permis d’éclairer son parcours et ses idées en matière de renouvellement des arts décoratifs, qu’il avait développées bien avant son arrivée à la direction de l’École des arts décoratifs de Strasbourg.  </p>
+    <p>Afin que cette étude embrasse aussi bien les aspects administratifs qu’artistiques, il était indispensable de recourir à des sources imprimées : brochures de présentation de l’École, catalogues d’expositions, chroniques artistiques de périodiques alsaciens, principalement <hi rend="i">La revue alsacienne illustrée </hi>et <hi rend="i">La vie en Alsace</hi>. Ceux-ci ont permis de mieux appréhender la vie artistique de l’Alsace durant l’entre-deux-guerres et la place qu’y a occupée l’École.  </p>
+    
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

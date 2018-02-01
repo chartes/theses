@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Un sujet sur la mission du Sichuan de 1746 à 1769 n’est pas aussi limité dans le temps et dans l’espace qu’il n’y paraît de prime abord. Il
+          permet de s’intéresser aux rapports de la Chine avec la France, aux rivalités entre missionnaires, et à l’histoire de l’empire de Qianlong.
+          Il permet aussi de sortir des sentiers battus d’une historiographie missionnaire principalement axée sur les jésuites, pour étudier un
+          nouveau point de vue, celui de la Société des Missions étrangères de Paris, à laquelle avait été attribué le Sichuan, vaste province de
+          l’ouest de la Chine.</p>
+        <p>La Société témoigna d’une originalité novatrice en faisant de l’établissement d’un clergé autochtone, meilleur garant de la protection des
+          chrétientés en temps de persécution, l’un de ses principaux objectifs. Or, l’histoire de la mission du Sichuan se distingue par la présence
+          d’un clergé indigène actif et bien formé, dont le représentant le plus remarquable fut le prêtre chinois André Li.</p>
+        <p>Les archives mettent aussi en lumière la prépondérance de la province du Sichuan dans l’action de la Société au sein de l’empire, et ce
+          depuis les véritables débuts de la mission, dans les toutes premières années du <num>xviii<hi rend="sup">e</hi></num> siècle. Malgré les persécutions
+          et les difficultés, tout au long de la période 1746-1769, les missionnaires réussirent à maintenir cette mission.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La source principale de cette étude est le <hi rend="i">Journal d’André Li</hi>, conservé aux Archives des Missions étrangères de Paris.
+          Ecrit en latin, ce document couvre la période 1747-1764. Il retrace tous les faits concernant l’apostolat des missionnaires, les conditions
+          de leur existence ainsi que la vie religieuse des chrétiens du Sichuan et les persécutions dont ils furent victimes. Bien plus, il donne
+          aussi des renseignements sur la vie économique et sociale de la Chine du <num>xviii<hi rend="sup">e</hi></num> siècle, ainsi que sur ses institutions.
+          Ce document a été édité au début du <num>xx<hi rend="sup">e</hi></num> siècle sans notes aucunes ni traduction, de sorte qu’il n’a été que très peu
+          exploité. Des extraits réédités et traduits de ce journal accompagnent cette étude de la mission du Sichuan.</p>
+        <p>Source essentielle, notamment pour la période 1746-1749, où le prêtre chinois fut le seul missionnaire présent au Sichuan, l’étude du <hi rend="i">Journal d’André Li</hi> doit être complétée par l’examen de la correspondance missionnaire. D’autres prêtres chinois et plusieurs
+          missionnaires français menèrent l’apostolat au Sichuan durant les années 1746-1769. Leurs lettres, très nombreuses, offrent des thèmes aussi
+          variés que ceux du <hi rend="i">Journal d’André Li</hi>. Elles sont elles aussi conservées aux Archives de la Société des Missions
+          étrangères de Paris, dans les volumes 433 à 437.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

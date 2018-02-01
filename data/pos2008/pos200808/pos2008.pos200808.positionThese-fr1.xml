@@ -1,0 +1,123 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Quatrième fils de Louis VIII et de Blanche de Castille, frère de saint Louis, Alphonse de Poitiers souffre du trop grand éclat de son
+          entourage familial. Ses ambitions politiques et religieuses se confondent trop souvent avec celles du roi pour paraître distinctes ou
+          originales. Résumé à ses grandes lignes, son gouvernement témoigne surtout du lien organique qui lie le comte à son aîné. En juin 1241,
+          lorsqu’il reçoit le Poitou, la Saintonge et l’Auvergne en apanage – avant la lettre –, Alphonse de Poitiers est aussitôt réduit à l’état de
+          dépendance vis-à-vis du roi, seul capable de venir à bout de la révolte des barons poitevins de 1242. Quelques années plus tard, c’est
+          encore le roi qui a l’initiative de la croisade d’Égypte, dont le comte n’est qu’un participant très mineur. Renvoyé en France comme régent
+          entre 1250 et 1254, il reste dans l’ombre d’un roi pourtant absent. En quelque sorte débordé par les événements périphériques, en Flandres
+          et en Gascogne, il est victime des chroniqueurs qui mettent en scène le retour du roi, en 1254, seul homme capable de restaurer l’ordre du
+          royaume. La croisade de Tunis enfin, à l’issue de laquelle le comte trouve finalement la mort à Savone, en août 1271, est encore et toujours
+          un projet royal avant tout.</p>
+        <p>De ce schéma directeur, les historiens ont globalement conservé l’image d’un prince effacé, soumis en tout à l’autorité de son frère.
+          Alphonse de Poitiers est pourtant à la tête du plus vaste ensemble territorial du royaume après le domaine royal. Outre son « apanage », il
+          reçoit en garde, après la mort de son beau-père, Raymond  <num>vii</num>de Toulouse en septembre 1249, le Toulousain, le Rouergue,
+          l’Albigeois, l’Agenais, le Quercy et le Venaissin. De son activité domaniale, le comte a laissé de très nombreuses preuves au Trésor des
+          chartes : actes, comptes, enquêtes et mandements. Cette masse a forcé l’intérêt des historiens, Edgard Boutaric en tête, qui a érigé le
+          personnage en un modèle d’efficacité administrative : « l’histoire d’Alphonse est celle de son administration ». La sentence a tué dans
+          l’œuf l’histoire politique propre du comte de Poitiers, pour consacrer l’étude d’une administration comme pâle copie de celle du roi.</p>
+        <p>Le résultat est une dissociation préjudiciable de l’étude de l’administration de son contexte politique, évacué pour fait de banalité. On
+          ne connaît de cette entité que les caractères généraux, livrés sans les rapports qu’elle entretient avec l’espace qu’elle organise. Les
+          enjeux politiques et économiques, y compris à l’échelon le plus local, éclairent pourtant sensiblement l’action domaniale d’Alphonse de
+          Poitiers. En focalisant l’attention sur la chronologie, actes et comptes dessinent un subtil balancement entre fermeté et souplesse au gré
+          des exigences de la croisade. Cette dernière dicte, en quelque sorte, les directives d’une gestion réactive, en perpétuelle recherche de
+          rentabilité. Loin de former un bloc de trente ans d’intégration inflexible aux domaines capétiens, l’histoire de l’administration d’Alphonse
+          de Poitiers est celle d’un laboratoire politique et domanial, s’essayant à concilier des revenus limités et le sens de la justice, à une
+          gourmande politique de grandeur. Les éléments de la croissance de l’État du <num>xiv</num>
+<hi rend="sup">e</hi> siècle sont déjà en place.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources de l’administration d’Alphonse de Poitiers sont abondantes et diverses dans leur nature. Le Trésor des chartes a conservé de
+          nombreux documents, tout particulièrement un ensemble de comptes, qui ont de ce fait échappé à la destruction des comptes royaux en 1737,
+          lors de l’incendie de la Chambre des comptes. La politique de concentration et de conservation des documents, sensible dès l’époque
+          alphonsine, a favorisé la constitution d’un corpus important et réuni en un seul lieu. À l’heure actuelle, les Archives nationales et la
+          Bibliothèque nationale conservent la très grande majorité de ces pièces, tandis que les dépouillements hors Paris s’avèrent globalement
+          décevants. Un certain nombre d’actes sont conservés dans les départements de la région Poitou-Charente, mais ils ne représentent qu’une part
+          assez marginale. Les échelons locaux de l’administration n’ont laissé que très peu de documents. Ces fonds n’ont donc pas été traités en
+          priorité – manque qu’il faudra pallier. Ils ont néanmoins très souvent fait l’objet d’édition, notamment grâce à la formidable activité de
+          la Société des Antiquaires de l’Ouest depuis le <num>xix</num>
+<hi rend="sup">e</hi> siècle. Il s’est agi d’assurer pour l’essentiel de compléter les travaux de collation dans le but de dresser un
+          catalogue provisoire des actes d’Alphonse de Poitiers, pour ce qui concerne le Poitou et la Saintonge. À ce titre, la collection Dom
+          Fonteneau, copies érudites conservées à la Bibliothèque municipale de Poitiers, représente le fonds constitué le plus important.</p>
+        <p>Les sources de l’administration alphonsine présentent par ailleurs la particularité d’être globalement éditées dans quelques volumes
+          conséquents. Outre les <hi rend="i">Layettes du Trésor des chartes</hi>, la <hi rend="i">Correspondance administrative</hi> et les <hi rend="i">Enquêtes administratives</hi>, on trouve de nombreuses pièces et comptes dans l’étude d’Edgard Boutaric, <hi rend="i">Saint Louis
+            et Alphonse de Poitiers</hi>. Le volume <num>xxiv</num>du <hi rend="i">Recueil des historiens des Gaules et de la France</hi> fournit
+          également des sources complémentaires grâce aux enquêtes réalisées en Poitou en 1248 sur l’ordre du roi Louis 
+          <num>ix</num>. Les différents volumes des <hi rend="i">Archives historiques du Poitou</hi>, ainsi que des <hi rend="i">Archives historiques
+            de la Saintonge et de l’Aunis</hi> abritent l’édition de nombreuses pièces, tout particulièrement des comptes de sénéchaussée. Enfin,
+          l’édition des <hi rend="i">Rôles gascons</hi> a permis quelques rapprochements avec les événements contemporains en Gascogne. À cette
+          relative abondance documentaire, répond la sécheresse des auteurs et chroniqueurs du temps : Rutebeuf, Guillaume de Nangis, Geoffroy de
+          Beaulieu, Guillaume de Saint-Pathus, Jean de Joinville, les Grandes chroniques de France, le Ménestrel de Reims et Mathieu Paris. Tout
+          occupés à peindre le roi, il n’ont vu le comte que du coin de l’œil.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

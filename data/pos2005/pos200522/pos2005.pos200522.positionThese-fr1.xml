@@ -1,0 +1,88 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’histoire de la guerre de Troie, considérée au Moyen Age comme une réalité historique, a inspiré de nombreuses œuvres médiévales, tant
+          historiques que littéraires, dont la plus connue est sans doute le <hi rend="i">Roman de Troie</hi> de Benoît de Sainte-Maure, composé par
+          un clerc de la cour d’Henri II Plantagenêt vers le milieu du <num>xii<hi rend="sup">e</hi></num> siècle. Ce poème, au succès considérable, a été à son
+          tour adapté et a en particulier été mis en prose à partir du milieu du <num>xiii<hi rend="sup">e</hi></num> siècle, et ceci à cinq reprises.</p>
+        <p>Ces textes, largement diffusés comme le prouve le nombre de manuscrits conservés, n’ont cependant été que peu étudiés jusqu’à présent.
+          Prose 5, la dernière prose à avoir été composée comme à avoir été identifiée par la critique moderne, se distingue des quatre précédentes
+          par deux points. Elle contient tout d’abord de nombreuses additions, à dominante mythologique, qui jalonnent son récit, et notamment une
+          traduction en prose de treize des <hi rend="i">Héroïdes</hi> d’Ovide. Elle appartient également à un ensemble plus vaste puisqu’elle
+          constitue la section consacrée à la guerre de Troie dans les deuxième et troisième rédactions de l’<hi rend="i">Histoire ancienne jusqu’à
+            César</hi>, la première compilation historique en prose française composée au tout début du <num>xiii<hi rend="sup">e</hi></num> siècle.</p>
+        <p>C’est donc en tenant compte de ces deux caractéristiques qu’on a voulu étudier Prose 5, mise en prose d’une œuvre littéraire indépendante
+          mais insérée dans un ouvrage historique plus vaste, afin de mieux la situer dans la production troyenne en ancien et en moyen français.
+          L’ampleur du texte, comparable à celle de son modèle originel, a obligé à n’en donner qu’une édition critique partielle afin de privilégier
+          l’étude des sources et notamment les relations avec les autres mises en prose.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

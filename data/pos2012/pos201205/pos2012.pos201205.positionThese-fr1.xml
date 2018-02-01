@@ -1,0 +1,83 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>La diversification des publics, le problème des horaires d’ouverture ou encore les rapports entre pouvoir central et pouvoir local dans la gestion des bibliothèques municipales sont des thèmes récurrents dans les revues professionnelles des bibliothécaires. Pourtant, l’on sait moins que leur actualité est toute relative : ces questions étaient déjà débattues au début du <num>xx</num><hi rend="sup">e</hi> siècle. C’est dans les années 1910 qu’apparaît l’expression de lecture publique, qui se popularise dans les décennies suivantes. Elle désigne alors l’activité, le service rendu par les bibliothèques publiques, entendues comme bibliothèques ouvertes à tous, qu’elles dépendent de collectivités publiques ou de groupements privés. C’est un nouveau modèle de bibliothèque que défendent les « modernistes », ces bibliothécaires appelant, à travers leurs discours, à la modernisation des bibliothèques publiques, c’est-à-dire à l’application de mesures propres à organiser la lecture publique et à ouvrir les bibliothèques au grand public. Selon eux, la lecture ne doit plus être octroyée par une classe dominante à une classe dominée mais doit être partagée par tous. Pour autant, tous les modernistes n’ont pas exactement les mêmes motivations ni les mêmes opinions : le développement de la lecture publique n’a pas été si linéaire et progressif que l’histoire des bibliothèques a pu le laisser croire. Il importait donc d’étudier comment s’était forgé cet idéal moderniste, quelles en étaient les nuances et les limites, et l’évolution qu’il avait connue de la fin de la première guerre mondiale à la création de la Direction des bibliothèques et de la lecture publique, à la Libération. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Les sources étudiées comportent à la fois des documents d’archives et des textes publiés. Parmi les premiers, on trouve les archives des deux associations principalement concernées, l’Association des bibliothécaires français (ABF) et l’Association pour le développement de la lecture publique (ADLP), respectivement conservées au siège de l’ABF et à la bibliothèque de l’École nationale supérieure des sciences de l’information et des bibliothèques (Enssib). Elles ont été confrontées aux archives du ministère de l’Éducation nationale, contenues dans la série F17 des Archives nationales ainsi que dans certains cartons du Centre des archives contemporaines, mais également à des archives de bibliothécaires : celles de Julien Cain à la Bibliothèque nationale de France, celles d’Henri et Renée Lemaître à la bibliothèque de l’Enssib, celles d’Henri Vendel (réparties entre le fonds de la bibliothèque municipale de Châlons-en-Champagne et celui de la bibliothèque départementale de prêt de la Marne), celles de Gabriel Henriot à la bibliothèque Forney. S’y ajoutent les archives de la bibliothèque de l’Heure joyeuse et celles de la bibliothèque municipale de Boulogne-Billancourt, que ces deux établissements conservent encore dans leurs locaux, celles des bibliothèques municipales de Tours et Nantes, déposées dans les archives municipales des deux villes, et celles de l’École de bibliothécaires de la rue de l’Élysée, désormais aux archives de l’Institut catholique.  </p>
+    <p>Concernant les publications, les quatre titres de la presse professionnelle de l’époque (<hi rend="i">Bulletin et chronique </hi>de l’ABF, <hi rend="i">Revue des bibliothèques</hi>,<hi rend="i"> Revue du livre</hi>, et <hi rend="i">Archives et bibliothèques</hi>) ont été dépouillés. La presse générale a fait l’objet d’un traitement particulier, à l’aide de Gallica. Enfin, l’étude des monographies consacrées à la lecture publique dans la première moitié du <num>xx</num><hi rend="sup">e</hi> siècle complète ces différentes sources.  </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

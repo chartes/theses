@@ -1,0 +1,124 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Si les historiens du livre genevois ont porté leur attention sur l’étude des années 1535-1570, qui correspondent au développement de
+          l’imprimerie en liaison étroite avec la diffusion européenne du calvinisme, ils ont longtemps négligé la période postérieure communément
+          considérée comme une phase de déclin. Rédigée dans le sillage des travaux de Georges Bonnand sur les relations entre l’imprimerie genevoise
+          et divers états européens et la thèse de doctorat d’Ingeborg Jostock consacrée à la censure genevoise de 1560 à 1625, cette étude se propose
+          d’analyser l’officine typographique de l’imprimeur genevois Jacob Stoer (1542-1610) et d’offrir quelques jalons sur l’histoire de
+          l’imprimerie genevoise au tournant du <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le livre lui-même constitue la principale source de cette étude. Son exploitation a exigé la rédaction d’une bibliographie des éditions de
+          Jacob Stoer, dont la réalisation a conditionné la suite de la recherche et en a indiqué les grandes orientations. L’objectif de l’enquête
+          heuristique a porté sur la description des trois cent soixante-huit titres de la bibliographie des éditions de Jacob Stoer (Annexe I).
+          L’éparpillement des livres dans les bibliothèques européennes a néanmoins rendu cette tâche particulièrement complexe ; seul 85% des
+          éditions a pu être décrit <hi rend="i">de visu</hi>. Cette source exceptionnelle ne dit néanmoins pas tout. Le danger d’une approche
+          strictement bibliographique réside dans la tentation de faire du livre un objet détaché du contexte au sein duquel il a été produit. C’est
+          la raison pour laquelle ont été dépouillées d’autres sources d’archives, susceptibles de donner des informations sur les conditions
+          d’exercice de l’imprimerie à Genève à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle et au début du <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
+        <p>
+          <hi rend="i">Les archives privées</hi>. — Le dépouillement des archives privées s’est révélé très décevant, dans la mesure où seul subsiste
+          un livret de famille, édité en partie à la fin du <num>xix<hi rend="sup">e</hi></num> siècle.</p>
+        <p>
+          <hi rend="i">Les archives des autorités politiques et religieuses</hi>. — À côté de cette documentation privée ont été dépouillées les
+          archives des autorités politiques, notamment le Petit Conseil de Genève, qui détient la souveraineté en matière d’édition et délivre
+          l’autorisation d’imprimer un ouvrage (Archives d’État de Genève, RC, vol. 54-107 et RC part., vol. 12-28), et les archives des autorités
+          religieuses, à savoir la Compagnie des pasteurs, chargée de veiller à l’orthodoxie des textes publiés, et le Consistoire, chargé d’en
+          vérifier la moralité (Archives d’État de Genève, Consistoire R).</p>
+        <p>
+          <hi rend="i">Les documents de la pratique</hi>. — Susceptibles de contenir des contrats d’édition des textes publiés par Jacob Stoer, des
+          contrats d’apprentissage ou des contrats d’embauche de compagnons imprimeurs ou encore des actes d’achat, de location ou de vente de
+          matériel typographique, les actes de la pratique ont fait l’objet d’un dépouillement systématique (Archives d’État de Genève, not.). Malgré
+          des recherches approfondies dans les registres des notaires, les données récoltées ont été très décevantes. Ces résultats ont dès lors
+          nécessité de recourir à d’autres sources.</p>
+        <p>
+          <hi rend="i">Autres sources</hi>. — Une partie de cette étude porte sur la diffusion des ouvrages imprimés au sein de l’officine de Jacob
+          Stoer. Celle-ci débute par le dépôt d’un exemplaire à la bibliothèque de Genève au titre du dépôt légal. C’est dans cette perspective qu’ont
+          été dépouillés les catalogues anciens de la bibliothèque de Genève (Bibliothèque publique et universitaire de Genève, Arch. BPU Dk 1 et
+          Arch. BPU Dk 2). Il a ensuite été décidé de repérer des traces de diffusion dans les correspondances des personnes avec qui Jacob Stoer
+          était en contact. C’est ainsi qu’ont été dépouillées les correspondances éditées de François Hotman, de Théodore de Bèze, du pasteur Simon
+          Goulart et du libraire anversois Christophe Plantin, la correspondance encore inédite de François Hotman conservée à la Bibliothèque de
+          l’histoire du protestantisme français à Paris (Ms 90) et celle de Théodore de Bèze conservée au Musée historique de la Réformation de Genève
+          (Papiers Aubert).</p>
+        <p>L’activité commerciale du livre se développe principalement au cours du <num>xvi<hi rend="sup">e</hi></num> siècle au rythme des foires bisannuelles
+          de Francfort. À dès lors été entrepris le dépouillement systématique des catalogues des foires de Francfort rédigés par Georg Willer pour la
+          période 1564-1600 et ceux rédigés par Johannes Saur et Sigismund Latomi pour la période 1601-1610. Ces informations ont été complétées par
+          la consultation des listes des nouveautés présentées aux foires de Francfort et compilées par le libraire anversois Jean Moretus (Anvers,
+          Musée Plantin Moretus, Archief 43 et 269 et M 269). Surtout, les archives de Christophe Plantin et de Jean Moretus ont permis de
+          reconstituer les relations commerciales entre les deux libraires anversois et Jacob Stoer, consignées dans les cahiers de Francfort (Archief
+          962 à 1009). Malgré des résultats infructueux, ont également été dépouillés les dossiers réunis par le bibliographe Philippe Renouard
+          conservés à la réserve des livres rares de la Bibliothèque nationale de France et relatifs aux imprimeurs et libraires parisiens. Faute de
+          temps, le dépouillement des archives lyonnaises n’a par contre pas pu être mené à bien.</p>
+        <p>De manière à restituer le réseau social de Jacob Stoer ont enfin été dépouillés les registres de baptêmes, de mariages et de décès des
+          paroisses de Saint-Pierre, de Saint-Gervais et de la Madeleine (Archives d’État de Genève, EC baptêmes et mariages).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

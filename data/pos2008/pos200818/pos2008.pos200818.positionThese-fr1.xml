@@ -1,0 +1,117 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La lettre de cachet pâtit grandement de sa sulfureuse réputation. Elle demeure le symbole de l’arbitraire de l’Ancien Régime et
+          l’incarnation de l’oppression exercée par une puissance royale aveugle. Sa légende noire se fonde sur son seul usage répressif et tout
+          particulièrement sur la lettre de cachet politique par laquelle le roi faisait enfermer dans ses bastilles des opposants, des gêneurs ou
+          plus simplement des gens qui lui déplaisaient. La réalité de l’institution a ainsi été déformée au profit d’un usage fort minoritaire de la
+          lettre de cachet au <num>xviii</num>
+<hi rend="sup">e</hi> siècle. Certes, dans un contexte de perfectionnement de l’appareil administratif et d’accroissement des pouvoirs de
+          l’État monarchique, la lettre de cachet répond parfaitement aux impératifs de rapidité et d’efficacité du gouvernement du royaume et connaît
+          alors une formidable croissance dans le dernier siècle de l’Ancien Régime. Si elle peut notifier n’importe quel ordre du roi dont elle est
+          l’expression de la volonté directe et souveraine, elle se limite alors presque essentiellement aux fonctions de police et de justice. Or,
+          dans ce dernier domaine, l’immense majorité des lettres de cachet au <num>xviii</num>
+<hi rend="sup">e</hi> siècle, loin d’être à l’initiative du pouvoir, sont le fruit de demandes de particuliers. Ceux-ci ont donc recours à
+          la justice retenue du roi puisque par le biais de la lettre de cachet, le monarque rend directement la justice, la première et la plus noble
+          de ses attributions. Cet usage de la puissance royale par les familles pour régler des différends d’ordre privé interpelle d’autant plus
+          qu’il a été quelque peu occulté par l’historiographie. C’est au nom du maintien de l’ordre public et de la sauvegarde de l’honneur des
+          familles que s’établit cette relation privilégiée entre le roi et ses sujets dans le cadre de la procédure des lettres de cachet.</p>
+        <p>Les dossiers de lettres de cachet pour affaires de famille conservés dans les fonds des intendances sont d’une richesse inépuisable pour
+          l’historien, que ce soit dans le domaine de l’histoire des institutions, de l’histoire sociale et familiale, de l’histoire du droit ou
+          encore de la justice et de la criminalité, en ce qu’ils reflètent les évolutions et les permanences de la société française d’Ancien Régime
+          dans sa composante la plus secrète et fondamentale, la cellule familiale. Surtout, cette source souvent encore inédite ou peu exploitée
+          éclaire d’un jour nouveau le rapport unissant l’État et la société ou plus précisément le roi et la structure sociale de base que représente
+          la famille, liés par des intérêts communs dans un subtil parallèle entre ordre familial et ordre politique où la place de l’individu pose
+          question. La procédure des lettres de cachet de famille offre la possibilité de saisir la complexité de cette relation privilégiée entre le
+          pouvoir et les sujets et son évolution.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le fonds principal sur lequel s’appuie cette étude est le fonds de l’intendance de Franche-Comté, riche d’environ 350 dossiers de lettres
+          de cachet dont 80 % de lettres de cachet pour affaires de famille. L’essentiel de ces dossiers sont conservés aux archives départementales
+          du Jura (C 107 à 120, C 132 à 136) et de la Haute-Saône (C 72 à 75) ; on constate la disparition des dossiers concernant les subdélégations
+          actuellement situées dans les limites du département du Doubs. Les archives départementales du Doubs conservent néanmoins des états de
+          détenus par lettre de cachet dressés par les subdélégués et les intendants (1 C 444) qui complètent les dossiers.</p>
+        <p>Chaque dossier correspond à l’instruction par l’administration royale d’une affaire, autrement dit à l’étude du cas d’une personne qui
+          fait l’objet d’une demande de lettre de cachet. Le dossier regroupe donc la correspondance générée par la procédure, qu’elle émane des
+          bureaux de la Guerre, de l’intendance, des subdélégués ou bien de particuliers, membres de la famille ou témoins. Par conséquent, le
+          dossier, loin de se résumer à un mémoire suivi d’une brève enquête, peut s’étendre, dans le cas de la lettre de cachet de famille, sur des
+          années et mêler demandes d’enfermement, de transfert, de libération, etc. La grande majorité des affaires comtoises datent de la seconde
+          moitié du <num>xviii</num>
+<hi rend="sup">e</hi> siècle (89 % des dossiers), la décennie 1770-1780 marquant l’apogée du phénomène (30 % des dossiers à elle seule) ;
+          les archives traduisent ainsi le caractère tardif, observable dans l’ensemble du royaume, des lettres de cachet pour affaires de famille.</p>
+        <p>Deux grands ensembles de sources complémentaires viennent compléter le dépouillement des dossiers de lettres de cachet ; il s’agit tout
+          d’abord des archives des lieux d’enfermement des prisonniers par ordre du roi où se distinguent les fonds particulièrement riches de
+          l’hôpital de Bellevaux et du Bon Pasteur de Besançon (série C des archives départementales du Doubs) ainsi que du Refuge de la capitale
+          comtoise (séries H et J des archives départementales). Les archives des tribunaux où des personnes qui font l’objet d’une procédure de
+          lettre de cachet ont été jugées constituent également une source excessivement précieuse pour l’étude des rapports unissant justice retenue
+          et justice déléguée, commissaires et officiers (séries B des trois départements).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

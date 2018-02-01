@@ -1,0 +1,124 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La Grèce antique trouve sa place naturelle dans l’œuvre d’un peintre d’histoire, tant dans son répertoire de sujets, où elle côtoie la
+          Bible, que dans son répertoire de formes. Jusqu’à la fin du <num>xix<hi rend="sup">e</hi></num> siècle, l’antique est la référence absolue
+          des artistes, placée au cœur de l’enseignement dispensé par l’école des beaux-arts, pour avoir atteint le plus haut degré de perfection dans
+          l’imitation de la nature humaine, sur laquelle se fonde la notion de beauté idéale depuis l’élaboration de la théorie de l’<hi rend="i">ut
+            pictura poesis</hi> à la Renaissance. Alors que l’« Antiquité » a longtemps réuni indifféremment Athènes et Rome, la spécificité, et même
+          la supériorité de la Grèce prennent peu à peu forme dans l’imaginaire moderne, sous l’effet des voyages en terre grecque, dès le
+              <num>xvii<hi rend="sup">e</hi></num> siècle, et des découvertes archéologiques, en Grande Grèce dès le <num>xviii<hi rend="sup">e</hi></num> siècle, en Grèce continentale et dans les îles tout au long du <num>xix<hi rend="sup">e</hi></num> siècle. Le seul nom de
+          Winckelmann suffit à évoquer le réveil de l’imaginaire grec, même si les artistes n’excluent pas pour autant l’étude de l’art romain, qui
+          fait le lien avec la patrie originelle des arts. De grands artistes, de Poussin à Chassériau, en passant par Vien, David et Ingres, ont fait
+          de la connaissance de l’art et de la littérature antiques la matrice de leur univers personnel. La redécouverte de la Grèce y est bien
+          vivace, comme en témoignent les peintures de Poussin sur le thème de l’Arcadie, et encore plus le revirement de David qui, au tournant du
+              <num>xix<hi rend="sup">e</hi></num> siècle, prend conscience de la nécessité de dépasser l’Antiquité romaine et de remonter à la source
+          grecque originelle. De nombreux artistes du <num>xix<hi rend="sup">e</hi></num> siècle refusent de s’en tenir à la connaissance théorique
+          prônée par l’Académie des beaux-arts et poussent leur démarche jusqu’à prendre le chemin de la Grèce, soucieux de la découvrir « sur
+          nature ».</p>
+        <p>Dans ce contexte artistique, les rapports qu’entretient Gustave Moreau avec la Grèce sont à la fois ordinaires et singuliers. Né en 1826,
+          exposant pour la première fois au Salon en 1852, et mort en 1898, le peintre se place résolument du côté de l’érudition classique. Il refuse
+          vivement la démarche ethnographique qui conduit les artistes contemporains à croquer sur le vif la Grèce moderne orientalisée, tout comme
+          celle des néo-grecs qui, à la même époque, créent dans leurs scènes de genre une Antiquité quotidienne. Sa vision de la Grèce est forgée par
+          une formation intellectuelle aux humanités et par une formation artistique académique. Tout au long de sa carrière, il rêve la Grèce antique
+          à travers ses lectures et un contact direct avec l’art antique, qui le maintiennent à la pointe des découvertes archéologiques. Elle est à
+          ses yeux la « belle, [la] jeune Grèce, mère des arts et de la pensée, appuyée sur sa lyre » qu’il incarne dans le chanteur Phémios, placé au
+          cœur du tableau <hi rend="i">Les Prétendants.</hi> Fécondée par l’inspiration poétique que distribuent les Muses, elle est la patrie du
+          créateur. L’œuvre de Gustave Moreau fait la part belle aux poètes grecs. Plutôt que de s’en tenir à une démarche archéologique
+          d’« historiographes », il cherche à atteindre le sens profond du poète en s’extrayant de chaque figure individuelle et en mêlant la source
+          antique originelle à l’autre source de la civilisation occidentale, la source chrétienne. La quête de l’essence universelle du poète est
+          exemplaire de la réinterprétation des sources grecques qu’il opère.</p>
+        <p>Cette thèse vise à dessiner les contours de la Grèce de Gustave Moreau. Elle s’efforce, dans une première partie, de prendre la mesure de
+          son érudition grecque, en étudiant la connaissance que lui en a donnée sa formation, intellectuelle et artistique, et sa documentation
+          grecque, nourrie tant par ses lectures que par l’observation de l’art grec dans les collections publiques. Sur cette base, elle examine,
+          dans un second temps, la manière dont le peintre assimile cette culture grecque à travers l’exemple de la figure du poète, qui habite son
+          imaginaire, puisque le sens même dont il investit la Grèce se résume en elle. La deuxième partie de cette étude s’intéresse ainsi au
+          remodelage de la signification du poète antique, connoté d’un caractère autobiographique dans la lignée de la théorie de l’<hi rend="i">ut
+            pictura poesis</hi>, à laquelle l’artiste est d’autant plus sensible qu’il est lui-même grand lecteur de poésie et mélomane. La troisième
+          partie s’attache, enfin, à observer de quelle manière il le met en scène, et par quels moyens iconographiques il représente à travers lui le
+          processus immatériel de la création et la condition ambivalente, très romantique, du créateur.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives de Gustave Moreau, conservées au musée qui lui est dédié, ont été une source fondamentale pour ce travail. Ses manuscrits
+          autographes (archives GM 1 à 557), inventoriés et en partie publiés par Peter Cooke, révèlent, mêlées à des notes de diverses natures, de
+          nombreuses notes de lectures, prises sur des ouvrages de sa bibliothèque ou sur des ouvrages, gravures ou dessins consultés à la
+          Bibliothèque impériale, à la bibliothèque de l’Institut ou à celle de l’école des beaux-arts. Sa correspondance, occupant vingt-deux
+          cartons, non inventoriée à l’exception des lettres entrées par don, constitue, avec les carnets de compte de sa mère, également conservés au
+          musée et non inventoriés, et le <hi rend="i">Nouveau catalogue de l’œuvre de Gustave Moreau remis à jour en 1915</hi> d’Alfred Baillehache,
+          conservé à la galerie Brame et Lorenceau à Paris, une source précieuse pour la datation et l’historique des œuvres vendues par le peintre.
+          Plus particulièrement, la correspondance échangée avec ses parents et ses amis lors du voyage d’Italie, intégralement publiée par Luisa
+          Capodieci, est centrale pour l’étude de sa formation artistique puisque le séjour italien en a été une étape-clé.</p>
+        <p>L’étude de la bibliothèque de l’artiste, volumineuse, constituée autour du noyau paternel et où l’on peut dégager près de cent trente
+          ouvrages et périodiques traitant de la Grèce, complétée par l’étude de son fonds de gravures et de photographies, est au cœur de
+          l’exploration de sa culture grecque. Les inscriptions portées sur les dessins conservés au musée, plus de douze mille en tout, ont également
+          été mises à profit pour retrouver les ouvrages ou pièces de musées que l’artiste a incessamment copiés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

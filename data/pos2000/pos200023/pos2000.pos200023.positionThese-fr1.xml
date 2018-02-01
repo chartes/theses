@@ -1,0 +1,112 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La fascination exercée par Port-Royal a franchi les siècles sans perdre de sa force, continuant de nourrir la réflexion, l’admiration ou
+          l’animosité de ceux qui s’en approchent. Parce qu’il a enfanté le jansénisme, Port-Royal interroge, exaspère, mais ne laisse jamais
+          indifférent. Après la Seconde guerre mondiale, l’étude du jansénisme cessa d’être l’apanage des littéraires et des théologiens pour entrer
+          dans les préoccupations des historiens. Parallèlement, la publication de textes inédits ou la réédition critique d’œuvres parues aux XVII
+<hi rend="sup">e</hi> et <num>xviii<hi rend="sup">e</hi></num>  siècles contribuent à enrichir et à renouveler la réflexion en faveur d’une vue plus
+          juste des événements. Le domaine des correspondances n’échappe pas au regard critique des éditeurs et des historiens. Si certains
+          protagonistes du mouvement janséniste avaient bénéficié d’une édition précoce de leurs lettres dès le <num>xvii<hi rend="sup">e</hi></num> ou le XVIII
+<hi rend="sup">e</hi>  siècle, tels la mère Angélique, Arnauld, Sacy ou Quesnel, d’autres correspondances ne furent mises au jour qu’au
+          <num>xix<hi rend="sup">e</hi></num> ou au <num>xx<hi rend="sup">e</hi></num>  siècle, comme celles de la mère Agnès ou de Martin de Barcos. C’est ainsi que les
+          lettres d’Antoine Singlin (1607-1664) étaient demeurées à ce jour inédites.</p>
+        <p>D’Antoine Singlin, on ne conserve aucune œuvre personnelle, manuscrite ou imprimée. Le témoignage de ses lettres n’en est que plus digne
+          d’intérêt. En effet, la figure d’Antoine Singlin a prêté le flanc à toutes les interprétations : sa proximité de l’abbé de Saint-Cyran et la
+          longueur de son ministère à Port-Royal en font un personnage aussi méconnu qu’incontournable parmi les acteurs du premier Port- Royal, celui
+          d’avant la persécution de 1664.</p>
+        <p>La correspondance du prêtre était un prolongement de sa direction spirituelle. Le genre épistolaire n’était pas cultivé à Port-Royal : on
+          n’écrivait pas pour bien raconter, encore moins pour se raconter. Si les lettres de Singlin ne sont pas centrées sur leur auteur, elles sont
+          en revanche tissées de la vie du monastère, des préoccupations quotidiennes du directeur comme des inquiétudes du supérieur de Port-Royal
+          persécuté. Surtout les avis de Singlin sont un témoignage de la spiritualité de Port-Royal, telle que la vivaient les religieuses et les
+          dirigés, et non telle qu’on se la représentait à l’extérieur du monastère. Sur un sujet aussi controversé que le jansénisme, l’édition des
+          lettres de Singlin, comme de tout autre texte contemporain, permet de porter un regard plus juste sur la réalité de la vie à Port-Royal.</p>
+        <p>La biographie de Singlin placée en introduction à ces lettres, ainsi que la présentation de la spiritualité du directeur de Port-Royal, ont
+          été élaborées à partir d’éléments fournis par les lettres, qui ont été confrontés, chaque fois que cela était possible, aux informations
+          fourmes par les historiens de Port-Royal. Il convenait également de faire dialoguer ces éléments de biographie avec les sources
+          contemporaines que sont principalement les correspondances d’autres acteurs de Port-Royal, comme la mère Angélique, la mère Agnès ou Antoine
+          Arnauld. Il est difficile de faire une biographie de Singlin sans récrire l’histoire de Port-Royal, tant l’existence du prêtre se
+          nourrissait et se consumait tout à la fois au service du monastère. A travers la vie de Singlin, c’est moins une nouvelle version qu’une
+          autre vision de l’histoire du monastère qu’il faut rechercher.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources manuscrites et imprimées des lettres d’Antoine Singlin sont présentées en détail en introduction à l’édition critique, au début
+          de la seconde partie.</p>
+        <p>Les principales sources imprimées de la biographie d’Antoine Singlin, outre ses lettres, sont les <hi rend="i">Mémoires</hi> de plusieurs
+          amis de Port-Royal et contemporains d’Antoine Singlin : Nicolas Fontaine (1625-1709), Claude Lancelot (1615-1695), Pierre Thomas du Fossé
+          (1634-1698). Deux recueils de relations et de témoignages port-royalistes édités au <num>xviii<hi rend="sup">e</hi></num>  siècle contiennent des
+          informations sur Singlin : les <hi rend="i">Mémoires pour servir à l’histoire de Port-Royal</hi>, Utrecht, 1740, et le <hi rend="i">Recueil
+            de plusieurs pièces pour servir à l’histoire de Port-Royal</hi>, Utrecht, 1740. Enfin, les correspondances de la mère Angélique, de la mère
+          Agnès, d’Antoine Arnauld et de Martin de Barcos font une grande place à Antoine Singlin.</p>
+        <p>Des actes notariés du Minutier central des notaires de Paris aux Archives nationales ont permis de vérifier ou de préciser certaines
+          affirmations des mémorialistes, en particulier sur la famille d’Antoine Singlin.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

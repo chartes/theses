@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>La France, contrairement aux pays de langues russe, allemande, anglaise et italienne, ne dispose pas d'édition de référence des écrits de Marx et Engels. Ces derniers souffrent en français d'une grande dispersion éditoriale : les textes les plus emblématiques existent dans plusieurs traductions concurrentes, quand d'autres ne sont plus disponibles. Bien qu'inachevée, c'est l'édition des <emph>Œuvres</emph> de Marx dans la Bibliothèque de la Pléiade, établie par Maximilien Rubel et publiée de 1963 à 1994, qui offre le corpus le plus riche d'écrits de Marx en français, dans une édition et une traduction unifiées.</p>
+          <p>Cette étude se concentre sur les deux premiers volumes <emph>Économie I</emph> et <emph>II</emph>, qui permettent de saisir le projet éditorial de Maximilien Rubel, de sa genèse en 1955 à sa mise en œuvre jusqu'en 1968. De la veille de l'insurrection de Budapest aux événements de Mai, le spectre de Marx hante l'actualité politique, sociale et intellectuelle française et internationale. Maximilien Rubel, fidèle à l'enseignement de Marx mais antimarxiste et anticommuniste, séduit par le communisme de conseils, souffre d'un relatif isolement sur la scène française, ce qu'explique aisément son hostilité à la forme du parti. C'est au titre de cette indépendance qu'il revendique sa légitimité à mener à bien une édition historique et critique des œuvres de Marx, à laquelle s'ajoute l'enjeu de la traduction en français, qu'il faut lire à la lumière des travaux récents sur l'histoire de la traduction.</p>
+          <p>Il s'agit de situer l'édition de Marx proposée par Rubel dans les questions éditoriales autour des écrits de Marx et Engels et leur histoire, et de saisir l'imbrication des logiques éditoriales, intellectuelles et politiques qui décident de la genèse, la mise en œuvre et la réception de l'édition Rubel.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>Le point de départ de cette étude est le fonds Maximilien Rubel, donné à la Bibliothèque de documentation internationale contemporaine à Nanterre par Maximilien Rubel lui-même en 1995. Le fonds Rubel, conservé sous la cote F∆1792, se compose en grande partie de sa correspondance ; il ne compte pas ses manuscrits de travail. Rubel a aussi fait don de sa bibliothèque ; un inventaire est conservé sous la cote F∆1792/228.</p>
+          <p>La genèse et la réalisation du projet du point de vue de la maison Gallimard sont mal renseignées. Le service historique des éditions Gallimard ne conserverait pas d'archives pour la Bibliothèque de la Pléiade du fait de l'organisation de la collection : la conservation des archives reviendrait uniquement à l'éditeur scientifique. Seul le dossier de presse des quatre volumes est conservé et librement accessible. Dans les archives de Gallimard, les dossiers des différents interlocuteurs de Rubel chez Gallimard, voire simplement liés à la maison d'édition, ne contiennent rien qui concerne l'édition des <emph>Œuvres</emph> de Marx dans la Bibliothèque de la Pléiade. Les archives de Dionys Mascolo sont déposées à l'Institut mémoires de l'édition contemporaine sous la cote MSC, mais n'abordent guère que ses activités militantes. Si une partie des archives de Brice Parain est restée chez Gallimard, une autre est conservée au département des manuscrits de la Bibliothèque nationale de France, sous la cote NAF 28367 ; l'inventaire n'est que partiel. Les archives de Lucien Goldmann sont conservées à l'IMEC, sous la cote GLD.</p>
+          <p>Si l'édition dans la Bibliothèque de la Pléiade de Marx est l'œuvre d'un seul homme dans sa conception, Rubel a su s'entourer de collaborateurs de confiance pour ses réalisations. Louis Évrard (1926-1995) est le deuxième traducteur pour le premier tome des <emph>Œuvres.</emph> Ses archives, qui ont été déposées à l'IMEC en 2001 sous la cote EVR, renseignent essentiellement son activité de traducteur. Jean Malaquais (1908-1998) a réalisé des traductions pour le second tome des <emph>Œuvres.</emph> Ses archives politiques sont déposées à l'Institut international d'histoire sociale à Amsterdam, sous le nom de Jean Malaquais Papers, et ses archives littéraires au Centre Harry Ransom au sein de l'Université du Texas à Austin, sous la cote MS-5185. Louis Janover (né en 1937) fut le plus proche collaborateur de Rubel, mais seulement à partir du second tome des <emph>Œuvres économiques.</emph> Il nous a accordé deux entretiens. François Perroux (1903-1987), directeur de l'Institut des sciences économiques appliquées du CNRS auquel Rubel est rattaché, a donné très tôt son accord pour écrire la préface ; ses archives ont été déposées à l'IMEC sous la cote PRX et leur inventaire est en cours de réalisation.</p>
+          <p>Plusieurs entretiens ont complété l'apport des sources manuscrites et imprimées. Un premier avec Jacques Cotin, qui a travaillé sous la direction de Pierre Buge, directeur littéraire de la Bibliothèque de la Pléiade de 1966 à 1987, avant de lui succéder jusqu'en 1997, a apporté des informations utiles sur le point de vue de la maison Gallimard et le fonctionnement interne de la Bibliothèque de la Pléiade. Un point de vue de la maison d'édition du Parti communiste français, les Éditions sociales, qui est le principal éditeur de Marx en français, méritait d'être entendu. Lucien Sève (né en 1926) les a dirigées de 1970 à 1982. Sous sa direction, elles ont repris la publication des œuvres complètes de Marx, en mettant l'accent sur leur caractère scientifique et en s'autorisant de nouvelles traductions, comme celle de Jean-Pierre Lefebvre (né en 1943) pour le livre I du <emph>Capital</emph>, qu'il nous a semblé pertinent de consulter pour son expérience de traducteur de Marx.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

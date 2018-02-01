@@ -1,0 +1,115 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les collections Gaignières de la Bibliothèque nationale de France sont bien connues des chercheurs ; elles comprennent des centaines de
+          manuscrits (copies d’actes et de chartriers, œuvres littéraires, recueils sur des familles, des offices ou des provinces, armoriaux,
+          généalogies) et de dessins (portraits, topographie, tombeaux). Elles ont sans cesse été utilisées pour des recherches en histoire, en
+          histoire de l’art ou en archéologie et sont parfois le seul témoignage dont nous disposons encore pour connaître un monument ou un chartrier
+          ecclésiastique. En revanche, l’érudit qui a réuni tous ces documents reste méconnu. Y aurait-il trop peu de sources pour lui consacrer une
+          biographie ? Serait-ce un personnage peu intéressant et trop « lisse » ? Cela semble peu probable. On peut voir l’homme se profiler derrière
+          la collection ; par ailleurs Gaignières n’est pas un simple honnête homme du <num>xvii<hi rend="sup">e</hi></num> siècle. Comme érudit, ses centres
+          d’intérêts sont extrêmement nouveaux : omniprésence du Moyen Âge qui est une période française, au contraire de l’Antiquité qui, selon lui,
+          ne représente que la transposition de concepts étrangers, absence de curiosités naturelles, absence de l’Antiquité classique. Tout devient
+          pour lui document historique, notamment les monuments dont il fait lever de nombreux dessins. Gaignières serait donc un « chaînon manquant »
+          entre deux générations, celle de Peiresc, des frères Dupuy, et celle d’un personnage comme Moreau. Ceux dont il est le plus proche sont sans
+          aucun doute les bénédictins mauristes.</p>
+        <p>Pendant longtemps, les études sur les collectionneurs étaient surtout de simples catalogues des œuvres les plus remarquables, des éditions,
+          plus ou moins intégrales, de descriptions ou d’inventaires après décès. Ces travaux ne prenaient bien souvent en compte qu’un seul des
+          aspects de la collection. Les travaux d’Antoine Schnapper et de Krzysztof Pomian ont apporté un renouveau dans ce domaine. En nous inspirant
+          de leur méthode et de leurs ouvrages, nous avons également voulu avoir une approche globale du sujet en étudiant à la fois l’homme qui
+          rassemble la collection ainsi que tous les objets la composant, sans en exclure aucune catégorie.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>
+          <hi rend="i">Les documents de la collection Gaignières</hi>. — Il était évident qu’il fallait repérer les documents qui constituaient cette
+          collection et qui sont dans leur très grande majorité conservés aujourd’hui à la Bibliothèque nationale de France. En revanche, les
+          documents dispersés lors de la vente aux enchères de 1717 sont beaucoup plus difficiles à retrouver. Seuls les dessins de cette collection
+          possédaient un instrument de recherche, rédigé par Henri Bouchot et publié en 1891. Pour réaliser un catalogue des manuscrits de la
+          collection Gaignières, nous avons dû dépouiller l’ensemble des catalogues et inventaires du département des manuscrits afin de repérer les
+          manuscrits qui furent autrefois entre les mains de François-Roger de Gaignières. Nous avons complété ce catalogue par une table de
+          concordance entre les anciens numéros de la collection Gaignières et les numéros actuels du département. Nous avons enfin essayé de dresser
+          une liste aussi complète que possible des tableaux possédés par Gaignières avec leur localisation actuelle.</p>
+        <p>
+          <hi rend="i">Les documents des services d’archives</hi>. — Nous avons également recherché dans différents services d’archives des sources
+          concernant le personnage et ses activités érudites. Les recherches aux Archives départementales de la Nièvre et aux Archives municipales de
+          Lyon n’ont donné que peu de résultats. En revanche, au Centre historique des Archives nationales, les séries du Châtelet (Y), des papiers
+          des princes de Lorraine-Guise (série O) ont été très utiles. Des dépouillements au Minutier Central des notaires parisiens ont livré deux
+          actes inédits pour la location d’un terrain rue de Sèvres et la construction d’un hôtel particulier en 1685 et 1686. Certains documents
+          originaux en déficit aux Archives nationales sont conservés en copies dans les recueils Clairambault de la Bibliothèque nationale de France.</p>
+        <p>
+          <hi rend="i">Histoire des fonds conservés à la Bibliothèque nationale de France</hi>. — Il fallait retracer l’histoire mouvementée de la
+          collection Gaignières pour comprendre la dispersion des documents. Cette histoire comprend trois grandes périodes : la période 1711-1740,
+          marquée par la donation au roi, la vente des documents que le roi ne souhaite pas garder en 1717 et l’installation dans divers départements
+          de la Bibliothèque royale ; la seconde moitié du <num>xviii<hi rend="sup">e</hi></num> et le <num>xix<hi rend="sup">e</hi></num> siècle, qui sont caractérisées
+          par des acquisitions ponctuelles, le vol de recueils de tombeaux dans les années 1780 et une nouvelle redistribution entre les différents
+          départements de la bibliothèque ; enfin la situation actuelle.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

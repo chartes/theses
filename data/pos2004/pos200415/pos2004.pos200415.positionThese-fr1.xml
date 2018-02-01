@@ -1,0 +1,95 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Au <num>xix<hi rend="sup">e</hi></num> siècle, la France est une terre d’asile pour des Espagnols qui fuient leur pays. Entre la fin du Premier
+          Empire et la monarchie de Juillet, ce sont des dizaines de milliers d’Espagnols qui y trouvent asile. Les vagues d’émigration espagnole sont
+          alors à la fois multiples et provisoires : se succèdent des afrancesados, partisans de Joseph Napoléon, lors de la retraite des Français en
+          1813, des absolutistes pendant le Trienio liberal, des libéraux jusqu’à la mort de Ferdinand VII en 1833, des ultraroyalistes comme les
+          agraviados en 1828 et 1829 ou des carlistes pendant la régence de Marie-Christine de Bourbon, des christinos lorsque la régente s’exile en
+          1840, laissant place au général Espartero, pour ne rentrer en Espagne qu’en 1844. La présence d’émigrés espagnols en France est donc une
+          constante dans la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle. Malgré l’existence d’études sur l’émigration espagnole, en
+          particulier sur les afrancesados et les carlistes, le phénomène a rarement été envisagé globalement, tandis que le cadre parisien n’a pas
+          suscité les faveurs des chercheurs. Trois raisons principales expliquent probablement la rareté des travaux sur Paris : des difficultés dans
+          l’exploitation de sources, tantôt abondantes, tantôt lacunaires, la situation d’exception de la capitale, ville interdite aux réfugiés,
+          enfin, des préjugés sur l’émigration politique de Paris, supposée privilégiée.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Cette étude prend essentiellement appui, en raison de l’absence d’archives locales parisiennes, détruites en 1871 lors des incendies de la
+          Commune, sur des documents d’archives conservés dans la sous-série F<hi rend="sup">7</hi> (police générale), au Centre historique des
+          Archives nationales, à Paris.</p>
+        <p>Cette source étant lacunaire à partir de la monarchie de Juillet, des dépouillements ont aussi été effectués aux Archives du ministère des
+          Affaires étrangères, au Service historique de l’Armée de terre - le ministère de la Guerre est en charge de la question des réfugiés
+          jusqu’au début de la monarchie de Juillet -, dans le fonds du cabinet préfectoral aux Archives départementales de la Seine-et-Marne, ainsi
+          que dans les dossiers de la série <hi rend="i">Francia, embajadas</hi> de la section <hi rend="i">Estado</hi> des Archives historiques
+          nationales à Madrid. Ces sources d’archives ont été complétées par des sources imprimées, conservées à la Bibliothèque nationale de France :
+          presse espagnole, brochures politiques.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,110 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La carrière du cardinal Jean du Bellay (1498-1560) sous le règne de François I<hi rend="sup">er</hi> a fait l’objet de nombreuses
+          publications. Les premiers pas de ce prélat-diplomate du <num>xvi</num>
+<hi rend="sup">e</hi> siècle, ses négociations en Angleterre, en Italie et en Allemagne, son soutien aux humanistes, son ascension
+          ecclésiastique sont bien documentés. Ce « beau <num>xvi</num>
+<hi rend="sup">e</hi> siècle », Renaissance flamboyante de la France, a attiré le regard des historiens, qui se sont avidement consacrés aux
+          protagonistes des épopées du Roi-chevalier.</p>
+        <p>Le contraste est saisissant avec le règne de son successeur, négligé par la recherche, en partie occulté par l’importance des
+          bouleversements qui précèdent et qui suivent. Ainsi, la fin de la vie de du Bellay au service de Henri II est mal connue, faute d’études
+          venues la mettre en lumière. L’éclairage porté sur sa carrière est le reflet d’une historiographie qui a ses préférences, mais c’est aussi
+          la conséquence d’une appétence des historiens pour les périodes d’activité au zénith. Les dernières années du cardinal, envoyé à la curie
+          romaine de 1547 à 1550, puis de 1553 à sa mort en 1560, vues comme le déclin d’un ministre vieillissant exilé en Italie, n’ont pas suscité
+          l’attention des chercheurs.</p>
+        <p>Pourtant, sous Henri II, l’activité de Jean du Bellay, au cœur de la scène diplomatique italienne à Rome, alors que se jouent les dernières
+          guerres d’Italie, reste soutenue. Les difficultés auxquelles il fait face comme représentant de la France témoignent des incohérences de la
+          politique royale et des dérives de la lutte de factions à la cour. Les obstacles qu’il rencontre illustrent également les faiblesses
+          inhérentes à la représentation diplomatique à Rome et les divisions qui gangrènent le parti français à la curie. Enfin, son titre
+          cardinalice, s’il lui assure une certaine prééminence auprès du pape et au Sacré Collège, l’expose également à un conflit d’intérêts entre
+          ses deux maîtres, dont il est victime, malgré ses protestations de soumission indéfectible à Henri II. Jusqu’en 1555, son influence est
+          toutefois indéniable. Et si du Bellay peine à préserver son influence comme ministre du roi, il n’en reste pas moins un des plus prestigieux
+          princes de l’Église à Rome. Le déclin est relatif.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Du Bellay passe neuf des douze années du règne de Henri II à Rome, loin du roi, du gouvernement et de la cour. À la fois pour remplir ses
+          devoirs de diplomate mais aussi pour pallier la distance qui le sépare du monarque et de ses protecteurs, pour exister aux yeux de ses
+          pairs, il exploite abondamment sa plume, alerte et brillante. Son travail a laissé une trace riche : près de mille lettres écrites et reçues
+          entre 1547 et 1560, sur les événements, les acteurs, les états d’âmes et les humeurs du temps. C’est là la principale source de la présente
+          étude.</p>
+        <p>Le corpus est dispersé mais la majeure partie des dépêches qui ont subsisté, réunies dès la fin du <num>xvi</num>
+<hi rend="sup">e</hi> siècle par de grands bibliophiles et érudits, les Dupuy, Clairambault et autre Baluze, est aujourd’hui conservée à la
+          Bibliothèque nationale, qui a recueilli beaucoup de ces collections. Imprimée pour le règne de François I<hi rend="sup">er</hi>, la
+          correspondance est en cours de publication, à l’université de Neuchâtel (Suisse), sous la direction de Rémy Scheurer et Loris Petris, pour
+          les années 1547-1560. Le présent travail s’appuie sur le matériau réuni dans le cadre de ce projet.</p>
+        <p>Cette correspondance est exceptionnelle à plus d’un titre : par leur nombre, leur longueur, leur style, ces dépêches forment un corpus à
+          part dans la production des diplomates de l’époque. Elles sont une source précieuse pour reconstituer le travail de Jean du Bellay, mais
+          aussi pour approfondir l’étude des dernières guerres d’Italie et du règne de Henri II.</p>
+        <p>La correspondance du cardinal du Bellay fait l’objet d’une étude approfondie dans la deuxième partie de cette étude, qui lui est
+          consacrée : « À la source : la lettre ».</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

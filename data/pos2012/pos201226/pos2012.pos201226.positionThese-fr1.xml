@@ -1,0 +1,84 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Longtemps resté dans l’ombre de sa célèbre rivale Gabrielle Chanel, Jean Patou fait l’objet d’un intérêt nouveau de la recherche. Les années 1920 constituent un moment fondateur de sa société, qualifié d’âge d’or, dans la mesure où elle élabore son identité, expérimente des pratiques inédites, forge son image de marque et pose ses principes esthétiques. Les années 1930 marquent l’arrêt de cette suite ininterrompue de succès, non pas que la Maison et ses créations n’aient plus d’intérêt par la suite, mais c’en est désormais fini de la dynamique novatrice.  </p>
+    <p>Il est nécessaire de sortir d’une vision schématique, attachée à certaines grandes réussites comme la naissance du sportswear ou de <hi rend="i">Joy</hi>, par trop idéalisée et souvent éloignée de ce que fut cette Maison, qui compta parmi les plus importantes de l’entre-deux-guerres. Mettre en question la modernité supposée de la Maison Jean Patou, entre construction discursive et réalité effective, en interrogeant la société, ses acteurs, son organisation, ses leitmotive et ses créations, tel est l’objet de cette thèse.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Si l’on aurait aisément pu se contenter des fonds jumeaux des dessins et modèles conservés aux archives de Paris (D12U10 276 à 296) et à la photothèque patrimoniale du musée des Arts Décoratifs (Patou, boîtes 1 à 14), tous deux complétés par le fonds de l’Institut national de la propriété industrielle, très vite le choix a été fait d’élargir les recherches à leur contexte de production. Les procès en contrefaçon conservés aux archives de Paris éclairent la lutte menée contre la copie. Les archives administratives et les archives familiales, d’une grande richesse, permettent de clarifier l’organisation et le fonctionnement de la Maison ainsi que les destinées qui l’ont gouvernée. Les archives de l’Institut français d’architecte et de l’Institut mémoires de l’édition contemporaine documentent, quant à elles, l’aménagement de la Maison de couture et des résidences privées de Jean Patou.  </p>
+    <p>Les pièces textiles conservées dans les musées français comme étrangers et la presse spécialisée offrent un angle d’approche complémentaire pour l’analyse des créations de Jean Patou, de même que les actualités cinématographiques aux archives Gaumont-Pathé et les films de fiction costumés par le couturier. À la bibliothèque Forney, les catalogues commerciaux se sont révélés d’une grande utilité pour mettre en perspective les collections étudiées. Les liens avec les maisons concurrentes, les organismes professionnels et le monde de la confection ont été envisagés par le prisme des archives de la Chambre syndicale de la couture parisienne et des Galeries Lafayette. Variées et abondantes, les sources évoquées se complètent efficacement pour donner un aperçu global de la Maison Jean Patou dans les années 1920.  </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

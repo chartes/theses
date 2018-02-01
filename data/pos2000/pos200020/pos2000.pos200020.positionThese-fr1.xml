@@ -1,0 +1,90 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Longtemps dénigrée, la florissante ébénisterie française des années 1830 à 1880 fut mal connue jusqu’à l’exposition consacrée en 1979 à
+            <hi rend="i">L’Art en France sous le Second Empire.</hi> Etudier la maison parisienne Fourdinois peut permettre de cerner le contexte et
+          les raisons du succès des néo-styles et du néo-Renaissance, qui demeure encore trop souvent incompris. Au cœur de cette aventure familiale,
+          il y a aussi deux personnalités riches et attachantes qu’il convient d’examiner : Alexandre-Georges Fourdinois et son fils Henri-Auguste.
+       </p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’étude de la production de la maison Fourdinois repose avant tout sur des sources iconographiques qui sont conservées, pour l’essentiel,
+          à la bibliothèque Forney, à Paris : croquis et dessins (Fol. Rés. 5581 à 5586), photographies regroupées dans des recueils factices (Fol.
+          Rés. 5587 à 5589). Ce corpus iconographique doit être complété par des pièces conservées dans plusieurs séries des Archives nationales, dont
+          les plus notables sont les séries AJ<hi rend="sup">19</hi> (Inventaire et administration du Garde-Meuble), AJ<hi rend="sup">64</hi>
+          (Agence d’architecture du Louvre), F<hi rend="sup">12</hi> (Commerce et industrie), LH (dossiers de la Légion d’honneur) et les sous-séries
+          O<hi rend="sup">4</hi> et O<hi rend="sup">5</hi> (Maison du roi de 1830 à 1848, puis Maison de l’empereur de 1852 à 1870). En outre, ont
+          été consultées les archives du musée des Arts décoratifs, à Paris, qui détiennent notamment les procès-verbaux des séances du conseil
+          d’administration de l’Union centrale des arts décoratifs, des archives privées dont celles du château du Sendat (correspondance de Duban
+          avec le baron et la baronne du Sendat) et, de manière plus ponctuelle, les archives municipales de Valenciennes et les Archives de la marine
+          à Toulon.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

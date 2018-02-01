@@ -1,0 +1,82 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Indéniablement passé à la postérité en raison d’un dévouement inconditionnel à la personne impériale, dont témoigne tout particulièrement son partage de la captivité de l’Empereur déchu à Sainte-Hélène, le général Bertrand n’en est pas moins demeuré dans l’ombre de son maître. Figure éminente du plus proche entourage de Napoléon durant de nombreuses années, force est de constater que Bertrand n’a pas suscité énormément d’intérêt de la part d’historiens qui, d’une manière générale, ont toujours jugé bon de réduire le personnage à une fidélité exemplaire qu’ils avaient jugé être son caractère dominant ; une approche somme toute assez déterministe qui aboutit non seulement à un grand nombre d’inexactitudes, mais parfois aussi au contresens pur et simple. Il convenait donc de revisiter la biographie du général Bertrand, par le biais d’une réflexion plus large visant à faire la part du mythe et de la réalité ; problématique d’autant plus adaptée que l’emprise de la légende sur les esprits est plus forte à mesure que l’on se rapproche de l’Empereur, et que, sous cet aspect, le cas de Bertrand ne déroge en rien à la règle. La longévité du personnage, ainsi que l’extrême richesse de son parcours, ont naturellement conduit à une focalisation de la présente étude sur les trente dernières années de sa vie, et donc sur la partie de son existence postérieure à la chute du Premier Empire. Ce qui a d’abord été l’occasion de mettre en évidence l’ampleur et les limites du service de Napoléon par Bertrand à Sainte-Hélène, ainsi que l’aspect extrêmement subtil de ce rapport maître-serviteur si particulier. L’examen de la période 1821-1844 a également permis de constater à quel point l’influence sur Bertrand de ces années passées au service de l’Empereur a perduré jusqu’à sa mort ; une mort qui pour lui fut aussi le point de départ (comme pour Napoléon) d’une véritable transfiguration, ayant fait de lui une légende, qui a beaucoup contribué à occulter la complexité du personnage. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p><hi rend="i">Sources manuscrites. </hi>— La circonscription volontaire du propos aux trente dernières années de la vie du personnage a naturellement conduit à un recentrage sur des fonds d’archives d’origine privée, majoritairement conservés aux Archives nationales, ce qui est profondément lié au fait que Bertrand n’a plus, après la chute de l’Empire (sauf exceptions notables), de fonctions officielles, et que les grands fonds d’archives publics de l’époque ne semblaient pas pertinents dans une telle logique. Le fonds le plus exploité dans le cadre de l’étude a incontestablement été le fonds Bertrand, conservé aux Archives nationales, à la Section des archives privées, sous la cote 390 AP. Or ce fonds tient toutefois plus de la collection que du fonds d’archives à proprement parler, dans la mesure où il fut progressivement constitué au cours de la seconde moitié du <num>xx</num><hi rend="sup">e</hi> siècle via une succession d’achats en ventes publiques. Ainsi, si l’existence de ce dernier, ouvert au public après son classement intervenu au début des années 2000 – ainsi que sa non-exploitation de la part des précédents biographes du personnage qui en résultait nécessairement –, constituaient en réalité la principale raison d’être de ce travail, son utilisation se trouvait en réalité fortement compliquée par sa grande hétérogénéité et son caractère largement artificiel, ce qui justifie le recours, pour pallier aux lacunes de ce dernier, à d’autres fonds d’origines privées détenus par les Archives nationales, comme par exemple le fonds Napoléon (400AP), le fonds Gourgaud (314 AP), ou le fonds Murat (31 AP), pour ne citer que les principaux, ou encore aux séries AB XIX et AB XXXVIII, souvent considérées comme les compléments naturels de la série AP. Plus ponctuellement, d’autres documents, conservés par d’autres institutions que les Archives nationales, ont également été mis à profit, comme par exemple le dossier militaire du général Bertrand, qui se trouve au Service historique de la Défense, ou encore certaines pièces issues de divers fonds conservés aux archives départementales de l’Indre.  </p>
+		<p><hi rend="i">Sources imprimées. </hi>— Les écrits, essais, discours, et autres textes de Bertrand ayant fait l’objet d’une publication du vivant de celui-ci, constituant une masse documentaire bien plus importante que ce à quoi on eût pu s’attendre pour un personnage qui ne doit pas tant sa postérité à son verbe qu’à ses actions, ont tout d’abord fait l’objet d’un recensement minutieux, avant d’être mis à profit afin d’appréhender le plus justement possible la pensée du personnage à différentes époques de son existence. Cependant, les mémoires, journaux, et autres écrits du même type forment de loin le sous-ensemble le plus important au sein des sources imprimées exploitées, ce qui n’est guère surprenant étant donné l’importance accordée, dans le cours du développement, à la captivité de Napoléon à Sainte-Hélène ; période pour la connaissance de laquelle les divers récits mémoriaux sont alors la source principale. D’autres écrits contemporains ont également été mis à profit, mais dans de moindres proportions, alors que la presse a également fait l’objet d’une utilisation extrêmement ponctuelle, dans le cadre de l’étude d’épisodes très précis de la vie de Bertrand qui l’avaient rendu susceptible de susciter un intérêt exceptionnel. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,101 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Quand la querelle de la régale a troublé les relations entre le roi de France et le Saint-Siège, elle a offert aux chantres de l’autorité
+          royale l’occasion de préciser les limites qu’ils plaçaient entre le pouvoir du pape et celui du roi. Au nom du droit de régale, le roi
+          percevait les revenus d’un évêché vacant et nommait aux bénéfices sans charge d’âmes qui en dépendaient. Grâce aux travaux des pères
+          jésuites Marc Dubruel et Pierre Blet, les étapes du conflit qui s’est joué sur le plan diplomatique sont désormais bien connues : que ce
+          soit la décision prise par Louis XIV d’étendre la régale à tous les diocèses du royaume ou les trois brefs envoyés par Innocent IX au roi,
+          ou encore les réunions de l’assemblée du clergé et la déclaration des Quatre articles de 1682, tous ces éléments disposent à présent
+          d’études minutieuses. Mais la querelle qui s’est déroulée parallèlement sur le terrain des idées n’avait pas encore fait l’objet d’un examen
+          approfondi, qui demande d’identifier les acteurs des controverses – et particulièrement les auteurs favorables à la régale, car les
+          adversaires du droit royal ont déjà bénéficié au siècle dernier du regain d’intérêt pour le courant janséniste –, d’étudier les arguments
+          employés de part et d’autre et surtout d’analyser les réactions du pape et du roi devant la production régaliste – encouragements, silences
+          ou condamnations.</p>
+        <p>L’année 1682 a été choisie comme date butoir. En effet, à partir de la déclaration des Quatre articles, la régale quitte peu à peu le
+          terrain diplomatique, et les controverses autour de la production favorable à la régale ne sont plus que des échos assez affaiblis de la
+          querelle qui a agité les années 1673-1682.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>L’histoire de la littérature régaliste peut s’appuyer sur des sources variées et abondantes. La Bibliothèque nationale de France conserve
+          plusieurs textes favorables à la régale, manuscrits et imprimés. D’autres ont été repérés aux Archives nationales, dans les sous-séries G
+<hi rend="sup">8</hi> 82 et 83 qui abritent des papiers de Charles Maurice Le Tellier, et aux archives Vaticanes (fonds de la nonciature
+          de France).</p>
+        <p>Le dépouillement de quelques correspondances a permis d’obtenir des renseignements sur l’élaboration, la diffusion et la réception de la
+          production régaliste, mais il a fallu se contenter des correspondances politiques échangées par les cours de France et de Rome avec leurs
+          diplomates (correspondance politique de Rome au ministère des Affaires étrangères et fonds de la nonciature de France aux archives
+          Vaticanes). Dans le domaine des correspondances, le reste des investigations a dû se limiter aux éditions existantes, notamment aux
+          correspondances de Colbert, de Le Camus et de Bossuet.</p>
+        <p>Enfin, les fonds de l’Index et du Saint-Office, conservés aux archives de la congrégation pour la Doctrine de la Foi, constituent un
+          ensemble de sources privilégiées pour mesurer la portée des interventions des congrégations romaines dans l’histoire de la production
+          régaliste.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

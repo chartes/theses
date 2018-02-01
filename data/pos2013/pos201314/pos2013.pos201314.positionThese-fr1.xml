@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>La France et la Suède sont deux pays dont l’éloignement géographique ainsi que les différences culturelles et religieuses, en ce début du <num>xvii</num><hi rend="sup">e</hi> siècle, ne sont plus à démontrer. C’est uniquement dans le contexte de la guerre de Trente Ans, qui déchire alors le Saint-Empire, que se justifie l’alliance conclue à Bärwald le 23 janvier 1631. L’étude de l’union paradoxale entre ces deux pays a motivé notre travail, ainsi que la volonté de comprendre les ressorts plus particuliers de cette alliance offensive fondée sur le versement de subsides ; l’édition des instructions aux ambassadeurs, reflet de la pensée politique sur la situation en Allemagne lors de la période qui nous intéresse, en a été l’outil privilégié. </p>
+		<p>L’alliance de la France avec la Suède intervient alors que la guerre de Trente Ans dure déjà depuis une douzaine d’années. Après l’échec des négociations menées en 1629 pour que le Danemark reste dans la guerre, Louis XIII cherche l’appui de la Suède. La nécessité d’intervenir contre l’empereur Ferdinand II se fait sentir après que Richelieu a refusé la ratification de la paix de Ratisbonne en 1630. Celle-ci contraignait la France à abandonner toute velléité d’intervention dans les affaires de l’Empire. En outre, la puissance des Habsbourg grandit et leur situation au sein de l’Empire est assez favorable par rapport aux princes protestants, dont le parti est fortement affaibli par la défection de Christian IV de Danemark. Pour la Suède, le soutien de l’empereur à son ennemi polonais, dans le conflit qui les oppose pour la possession de la Livonie et des différends dynastiques, ainsi que la spoliation de princes protestants, comme l’électeur palatin, sont autant d’arguments qui justifient une intervention en Allemagne. Les négociations commencent donc auprès de Gustave-Adolphe dès 1629 par la négociation d’une trêve entre la Suède et la Pologne. À ce moment-là, les intérêts du Suédois concordent avec ceux de Louis XIII dans leur inimitié contre l’empereur, mais, cependant, leurs préoccupations territoriales, religieuses, politiques et militaires divergent profondément.  </p>
+		<p>Notre travail porte ainsi sur les six premières années de l’alliance, c’est-à-dire de sa négociation – destinée à faire entrer la Suède dans la guerre –, à celle du traité de Wismar (1636), dont l’objectif est de conserver l’alliance suédoise pour la conclusion de la paix. S’appuyant sur l’édition que nous avons établie des instructions aux ambassadeurs et envoyés français pendant toute cette période, notre étude s’attache avant tout à comprendre la place que la coalition avec la Suède tient dans la politique de Richelieu, sans pour autant négliger les motivations de l’action de cette dernière.  </p>
+		<p>Ce travail d’édition donne une dynamique à notre étude, qui se trouve à la croisée entre deux niveaux de réflexion. Les instructions, expression des consignes royales pour conduire les échanges, sont en effet le premier outil de négociation pour le diplomate, puisqu’elles expriment la pensée royale. On y trouve donc la conception de la pensée de Richelieu et de Louis XIII sur les affaires d’Allemagne. Véritables actes royaux, ils sont cependant le fruit d’une projection d’idée qui doit se confronter à la réalité. Les grands événements qui marquent la période qui nous intéresse dessinent ainsi des inflexions dans les sujets de négociation et la manière de les aborder. La mort de Gustave-Adolphe, au mois de novembre 1632, en est un des plus importants. Elle change profondément l’identité de l’armée suédoise qui perd alors son roi, qui était aussi un chef de guerre charismatique. Au moment de sa conclusion, le traité de Bärwald n’est pas l’élément le plus important dans le jeu des alliances françaises, mais seulement une carte à jouer contre les Habsbourg. Cependant, les victoires remportées de manière fulgurante par le « Lion du Nord », ainsi que les contemporains surnomment le roi de Suède, dès le début de son intervention, conduisent la France à s’adapter à la puissance grandissante de son allié. Le champ de notre raisonnement se situe donc entre les objectifs que reflètent les instructions et le poids des événements sur l’évolution de la négociation. Nous avons ainsi considéré ces documents comme des témoins de l’évolution d’une alliance dont les rebondissements ont profondément marqué l’intervention de la France dans l’Empire.  </p>
+		<p>Dans les instructions, véritables consignes royales destinées aux ambassadeurs, se trouvent en effet de nombreuses informations, qui répondent à une multitude de questions, soit directement, dans les différents points de la négociation qui y sont abordés, soit indirectement, à travers les structures d’énonciation et dans la manière d’aborder les différents sujets. On peut alors s’abstraire de l’enchaînement des événements, à travers lequel sont souvent considérées les relations qui unissent ces deux pays européens, pour entrer dans l’essence de l’alliance en en détaillant les caractéristiques. Cette dernière brasse en effet toutes les problématiques de la guerre de Trente Ans : les problèmes religieux, les problèmes territoriaux, mais aussi la question de la nature des États et de leur place dans le jeu politique européen. Toutes ces interrogations concernent le contenu des instructions, mais, d’un point de vue de l’histoire diplomatique, l’étude poussée de ces dernières nous conduit aussi à nous interroger sur les fonctionnements de la négociation : quelle est la place ou le rôle de l’ambassadeur par rapport à ce document ? Jusqu’à quel point peut-on pousser la négociation ? Que peut-on abandonner ? Quelles sont les différentes manières de négocier pour arriver à ses fins : la menace ou le compromis ? La richesse des problématiques soulevées par les sources est donc indéniable. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+		<p>L’entreprise d’édition sur laquelle s’appuie notre travail a été effectuée à partir des instructions que nous avons pu trouver dans la série Correspondance politique des archives du ministère des Affaires étrangères. Le corpus est ainsi constitué de vingt-sept actes qui concernent tout autant les ambassades les plus importantes – comme les ambassades extraordinaires du marquis de Brézé, pour la conclusion de la neutralité avec les princes de la Ligue catholique, en 1632, ou celle du comte d’Avaux en 1634-1635, pour le renouvellement de la trêve entre la Suède et la Pologne –, que les instructions données à de simples envoyés pour intervenir sur des points plus particuliers de la négociation. La variété de l’importance des documents et des objectifs qu’ils visent permet d’avoir une vision approfondie des ressorts de l’alliance. L’analyse des instructions, croisée à celle de la correspondance des envoyés, dont nous avons, autant que possible, donné les références en tête de chaque instruction pour les éléments de réponse qu’elle pouvait apporter, permet d’étudier toutes les étapes de la négociation.  </p>
+		<p>Si la Suède est notre principal point d’intérêt, le contexte de la guerre de Trente Ans implique l’étude des affaires d’Allemagne. Nous avons respecté les cadres laissés par la tradition des documents en n’éditant que les instructions qui se trouvaient dans la série Suède, afin de limiter notre corpus. Pour enrichir notre travail, nous éditons cependant en annexe d’autres instructions parmi les plus importantes, qui donnaient des éléments intéressants sur certains points. De plus, certaines pièces de la correspondance se trouvaient divisées dans plusieurs sous-séries : celle de l’Allemagne, évidemment, mais aussi dans celles de la Pologne, du Danemark et de Hambourg. Les limites temporelles que nous avons fixées excluent aussi d’autres instructions plus tardives. Nous avons fait ce choix afin de ne pas empiéter plus spécifiquement sur les négociations de la paix et donc du traité de Westphalie, dont les actes ont été publiés dans la grande entreprise des <hi rend="i">Acta pacis Westphalicae</hi>. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,102 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>François Le Métel de Boisrobert (1592-1662) eut une carrière d’hommes de lettres remarquable. Après une phase d’ascension caractéristique
+          du parcours social des écrivains adeptes d’une “ stratégie du succès ” (Alain Viala), au cours de laquelle il usa des différentes
+          institutions d’un monde littéraire en devenir, il intégra la clientèle du cardinal de Richelieu, auprès duquel il occupa rapidement une
+          position de favori. Placé à l’intersection du pouvoir politique et du champ des auteurs, il fut un intermédiaire extrêmement actif,
+          procurant des plumes à son patron et des revenus à ses confrères. Ce rôle, qui dépassait le cadre strictement littéraire, lui donna un
+          pouvoir réel associé à une fortune appréciable, constituée par les importants bénéfices que lui valut sa faveur.</p>
+        <p>Cette situation confortable fut complètement remise en cause par la mort du cardinal en 1642. Le poète passa les vingt dernières années de
+          sa vie à se chercher des protecteurs de remplacement. Face au relatif échec de ces tentatives, il put s’appuyer sur une situation matérielle
+          solide et des réseaux réactivés dans la difficulté. Surtout, il envisagea différemment sa production de textes : en s’appuyant sur une mode
+          espagnole qu’il avait fortement contribué à créer, il écrivit de nombreuses pièces de théâtre pour compenser sa défaveur auprès des
+          puissants par le succès public, qu’il rencontra en effet. Son devenir historiographique, en revanche, fut un oubli rapide, doublé de la
+          réduction du personnage à quelques traits sans cesse répétés, tels que sa caractérisation en bouffon.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>En l’absence de fonds privé, c’est sur des documents dispersés et hétérogènes qu’il a fallu s’appuyer pour reconstituer la vie de
+          Boisrobert. Tout d’abord, le Minutier central des notaires de Paris, conservé au Centre historique des Archives nationales, a fourni des
+          informations précieuses sur Boisrobert et sa famille, en particulier à travers son testament, jusqu’ici inconnu. Ce dépôt a livré d’autres
+          documents intéressants extraits de fonds judiciaires (parlement de Paris, chambre des Comptes) et ecclésiastiques (censive de l’abbaye
+          Saint-Victor, où était situé l’hôtel de Boisrobert). Les archives provenant des bénéfices qu’il possédait, en particulier celles du chapitre
+          de la cathédrale de Rouen, où il détenait une prébende, permettent de comprendre la position du poète vis-à-vis de ces institutions, et
+          l’évolution de celle-ci en fonction de son état de faveur ou de défaveur. On peut également suivre ce processus dans la correspondance de
+          Boisrobert et du supérieur de l’ordre de Sainte-Geneviève, auquel appartenait son abbaye de Châtillon-sur-Seine, qui est conservée à la
+          Bibliothèque Sainte-Geneviève. Les Archives du ministère des Affaires étrangères fournissent des renseignements importants sur les voyages
+          de Boisrobert en Angleterre (1625-1626) et en Italie (1630). Le département des manuscrits de la Bibliothèque nationale de France et la
+          Bibliothèque de l’Arsenal comportent également des sources intéressant le poète, comme des listes de pensionnés où figure son nom et des
+          copies manuscrites de certains de ses textes. En tant que membre fondateur de l’Académie française, il est présent dans des établissements
+          de conservation liés à cette institution (Bibliothèque de l’Institut, Archives de l’Académie française). Enfin, les sources imprimées ont
+          été largement utilisées : œuvres de Boisrobert lui-même, correspondances imprimées, ouvrages postérieurs permettant de suivre son image
+          posthume (recueils rétrospectifs, catalogues de bibliothèques, manuels scolaires, ouvrages historiques).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

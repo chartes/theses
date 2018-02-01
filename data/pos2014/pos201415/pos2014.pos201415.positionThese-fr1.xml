@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p><emph>L'auteur.</emph> — Eustache-Antoine Hua (1759-1836) est un avocat et magistrat originaire de Mantes qui a vu se succéder l'Ancien Régime, la Révolution, le Consulat et l'Empire, les Cent-Jours et la Restauration. Il est principalement connu pour ses mémoires – dont on n'a qu'une copie et qui ont été partiellement édités en 1871 – dans lesquels il se présente à la fois comme témoin historique et comme père attentionné vis-à-vis de ses filles et lectrices désignées. Élu député à l'Assemblée législative, il s'est donné pour buts de rapporter et d'analyser les événements historiques s'étant produits durant son mandat, et de relater l'histoire de sa vie personnelle et professionnelle, de sa formation d'avocat à 1827, l'année où il écrit.</p>
+          <p><emph>L'éditeur et l'édition de 1871.</emph> — Ces mémoires ont été édités partiellement par Eustache-Maur François Saint-Maur (1825-1901), fils unique de la fille aînée d'Eustache-Antoine, en 1871. Dans le contexte d'une nouvelle insurrection parisienne, cette édition partielle s'est concentrée sur le récit des événements révolutionnaires des années 1789 à 1795. Presque tous les éléments relevant de sa vie privée en ont été censurés, ce qui représente une portion importante des premières des trois parties et la totalité de la dernière.</p>
+          <p><emph>Les écrits du for privé dans le fonds.</emph> — Dans la mesure où Eustache-Antoine Hua a aussi laissé une correspondance privée avec sa famille et des journaux de voyage, tous conservés dans le même fonds 621 AP, l'étude s'élargit dans un second temps à tous ces écrits du for privé et aux relations entre eux. Cette appellation désigne des récits écrits par un individu à propos de son existence et de sa perception des événements vécus, adoptant une grande variété de formes. Les différentes facettes du personnage d'Eustache-Antoine apparaissent de texte en texte, différentes de l'un à l'autre ou communes à certains types de texte. Il s'y dépeint tour à tour en père et en mari attentionné, en témoin historique, et en magistrat dans l'exercice de ses fonctions. Un premier aspect de la problématique générale est donc l'analyse de la distribution et des modalités d'apparition de ces aspects d'un même personnage, en fonction du type de texte considéré. Ce questionnement conduit, dans un second temps, à une étude du contenu historique et socioculturel extrêmement riche des mémoires. Enfin, une édition complète et critique accompagne ces réflexions.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p><emph>Sources principales.</emph> — La source principale est constituée par le fonds Eustache-Antoine Hua, conservé aux Archives nationales en deux cartons, cotés 621 AP 1 et 2. Ceux-ci contiennent plusieurs écrits du for privé et des papiers tant privés que ceux produits durant la vie professionnelle de Hua. Cet ensemble d'écrits du for privé a pour auteur commun Eustache-Antoine Hua, et est constitué des mémoires, des journaux de quatre voyages et d'une correspondance partielle et lacunaire faite de quatre-vingt-quatre lettres envoyées à sa fille aînée Aglaé, et, plus rarement, à d'autres membres de la famille. Les autres documents les plus utiles ont été le « Résidu » du manuscrit des mémoires, rassemblant les brouillons produits par Eustache-Maur François Saint-Maur durant son projet d'édition, et la copie du contrat de mariage d'Eustache-Antoine Hua, qu'il a conservée précieusement car le dernier feuillet a été complété de sa main au fur et à mesure de la naissance, du mariage ou du décès de ses sept enfants, dont quatre sont parvenus à l'âge adulte.</p>
+          <p><emph>Sources complémentaires.</emph> — Pour établir l'apparat critique et le commentaire de l'édition faisant l'objet de cette thèse, ont aussi été particulièrement consultés les registres paroissiaux et d'état civil de plusieurs départements français, les dossiers de légion d'honneur du grand-père et du petit-fils (Archives nationales, LH 314 5 et LH 1028 56), et le dossier de carrière d'Eustache-Maur François Saint-Maur (AN, BB6 II 164). Parmi les sources imprimées, les plus consultées ont été certains numéros de périodiques, notamment le <emph>Courrier de la Vienne</emph>, dans lequel a été fait la promotion de l'édition de 1871, et la <emph>Bibliothèque de l'École des chartes</emph>, car Eustache-Maur François Saint-Maur, comme son fils René-Eustache-Octave, y ont été formés. Les bibliographies respectives d'Eustache-Antoine Hua et d'Eustache-Maur François Saint-Maur ont été reconstituées de manière non exhaustive, ainsi que celle des ouvrages où ces personnages sont mentionnés.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

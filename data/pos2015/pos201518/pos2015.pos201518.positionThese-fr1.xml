@@ -1,0 +1,78 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Définir avec exactitude la bibliothèque populaire semble impossible à première vue. Chaque association, chaque initiative a développé son propre fonctionnement, son propre programme de lecture, et élaboré des stratégies spécifiques pour croître et se maintenir dans un paysage culturel urbain marqué par l'apparition constante de nouvelles offres. Quelques tendances se dégagent tout de même, à l'étude de ces bibliothèques, qui permettent sans en donner une définition générale et arrêtée, de s'avancer sur un certain nombre de leurs caractères.</p>
+          <p>Ces bibliothèques, principalement fondées à la fin du <num>xix<hi rend="sup">e</hi></num> siècle et au début du <num>xx<hi rend="sup">e</hi></num> siècle, sont en réalité quasiment toutes issues de la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle. Leurs fondateurs ont en effet été profondément influencés par les courants de pensée du début du <num>xix<hi rend="sup">e</hi></num> siècle, et ont parfois participé aux événements politiques et sociaux majeurs de l'époque. Pour les hommes à l'origine des premières bibliothèques laïques, 1848 signifie la formation en même temps que la mise en pratique d'idées nouvelles. Héritées d'une plus ancienne tradition, les bibliothèques paroissiales ne se développent qu'à partir des années 1820 en France, et sans doute 1840 à Paris. Seules les bibliothèques ouvrières du début du <num>xx<hi rend="sup">e</hi></num> siècle, issues de mouvements qui se structurent après la loi Waldeck-Rousseau, échappent plus ou moins à cette influence du premier <num>xix<hi rend="sup">e</hi></num> siècle.</p>
+          <p>La proximité de pensée et une connivence intellectuelle antérieure semblent à l'origine de toutes les fondations. Les hommes qui y participent se reconnaissent souvent dans des conceptions ou des idéologies très proches : leur discours programmatique fait montre, à maintes reprises, d'une belle unité, au-delà de certaines différences individuelles, lors des événements solennels qui symbolisent l'ouverture de la bibliothèque. D'emblée, la création d'une bibliothèque destinée à un public populaire constitue l'occasion de rassembler, sous sa bannière, les partisans d'une idée de la lecture et de la culture, mais surtout, bien plus largement, les sympathisants d'un camp politique. </p>
+          <p>Les catholiques se rassemblent ainsi dans les bibliothèques paroissiales, puis les Bibliothèques pour Tous, les socialistes et quelques républicains autour des Bibliothèques des Amis de l'Instruction (BAI), tandis que d'autres républicains, plus modérés, participent aux actions de la Ligue de l'enseignement, de l'Association philotechnique, ou créent de petits établissements locaux appelés parfois à une remarquable longévité. D'autres initiatives sont marquées, quant à elles, par l'esprit philanthropique et les réflexions qui l'accompagnent à partir des années 1810. S'autoproclamant souvent apolitiques, ces associations sont en réalité le fait d'une élite politique, sociale et économique qui se retrouve dans des valeurs morales jugées intangibles : dans ces rassemblements, dont la Société Franklin offre un exemple typique, les opinions s'étendent d'un conservatisme modéré à un républicanisme plus proche des opportunistes que des radicaux. Les fondations qui se greffent sur un environnement professionnel, telles que les bibliothèques d'usine, sont également proches de ces courants de pensée.</p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

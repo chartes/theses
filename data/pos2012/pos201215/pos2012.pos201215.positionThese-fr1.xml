@@ -1,0 +1,85 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>L’histoire de la rupture du lien conjugal a fait l’objet de nombreuses recherches depuis une vingtaine d’années dans le cadre d’un renouveau historiographique dans le domaine de la famille et de l’intime. Dans la majorité des enquêtes, séparation de corps et séparation de biens ont été évoquées indifféremment : les historiens les ont abordées comme des manifestations du désordre conjugal et de la violence masculine sous l’Ancien Régime. Or, les deux procédures sous-tendent des logiques différentes : la première dispense les conjoints de la vie commune à la suite de violences subies par l’épouse, tandis que la seconde intervient sur le seul plan économique, en provoquant la dissolution de la communauté de biens. Ces recherches ont d’autre part porté sur des groupes sociaux bien précis, du petit peuple parisien – étudié par Arlette Farge –, à la bourgeoise marchande de Paris – examinée par Laurence Croq –, en passant par la population de la Nouvelle-France – analysée par Sylvie Savoie. Aucune étude ne s’était encore intéressée à la séparation de biens dans la noblesse ; il a donc paru intéressant de se pencher sur le recours à cette procédure dans ce groupe. Or, le second ordre étant loin d’être socialement et économiquement homogène à l’époque moderne, il a été décidé, en partie pour des raisons documentaires, d’en privilégier l’étude de la tranche supérieure, sur une période et dans une aire géographique précises. La ville de Paris, qui héberge un grand nombre de nobles de haut rang, en raison de sa proximité avec la Cour et de son statut de capitale concentrant les grandes cours et institutions du royaume, s’est naturellement imposée. Le choix du milieu du <num>xviii</num><hi rend="sup">e</hi> siècle s’est justifié par la volonté de saisir les évolutions survenant au tournant du siècle, les années 1740-1750 ayant été présentées comme charnières dans les études précédentes. </p>
+    <p>La prise en compte d’une documentation ne se limitant pas aux seuls documents de procédure, mais incluant des actes antérieurs et postérieurs à la séparation de biens permet d’interroger la vie des couples séparés sur le long terme. Cette étude s’est donc donné pour but d’interroger les circonstances de la demande en séparation de biens et de la mise en œuvre des droits des épouses au cours de la procédure. Il a également été question d’examiner la perception que la société du siècle des Lumières a pu avoir des couples séparés et, de façon plus générale, de la séparation de biens. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Cette étude a été menée à partir du fonds du Châtelet de Paris, conservé dans la série Y des Archives nationales. Les sentences de séparation de biens se trouvent dans les archives de la chambre du Conseil du Châtelet. L’ensemble des sentences rendues entre 1730 et 1761 (Y 9021 à Y 9071) a été consulté afin de constituer un corpus d’étude. Les informations contenues dans ces documents ont permis de retrouver des pièces complémentaires fournies lors du procès. Les enquêtes en séparation, conservées dans les archives des commissaires du Châtelet de Paris, sont ainsi venues compléter ce premier ensemble. De nombreuses lacunes ont toutefois été constatées dans le fonds des commissaires, nous privant d’informations précieuses sur les raisons de la séparation de biens. </p>
+    <p>Un travail de recherche dans les fonds des Archives nationales a ensuite été nécessaire afin de retrouver des actes notariés relatifs à la vie des couples séparés de biens. Les contrats de mariage et inventaires après décès, conservés au Minutier central des notaires parisiens, ainsi que les scellés après décès, conservés dans les archives des commissaires du Châtelet, se sont ainsi imposés comme des sources essentielles pour connaître la vie des individus en amont et en aval de la séparation de biens. </p>
+    <p>Des sources imprimées ont également été précieuses. La collection des factums de la Bibliothèque nationale de France, constituée de mémoires et de pièces judiciaires appartenant à la grande série du droit civil, ainsi que de collections d’hommes de loi, comme la collection Joly de Fleury, conservées au sein des nouvelles acquisitions du département des manuscrits, a apporté quelques éclairages sur le déroulement des procédures conflictuelles. Enfin, les recueils de jurisprudence du <num>xviii</num><hi rend="sup">e </hi>siècle, tels ceux de Jean-Baptiste Denisart et de Robert-Joseph Pothier, de même que les mémoires de contemporains comme Madame d’Epinay ou Dufort de Cheverny ont été très utiles pour appréhender le regard de la société sur la procédure. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

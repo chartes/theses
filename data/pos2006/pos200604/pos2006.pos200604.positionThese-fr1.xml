@@ -1,0 +1,124 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La discipline des transferts culturels, qui a vu le jour dans le milieu des années 1980, se consacre à l’étude des phénomènes de
+          circulation, de réception et d’échange des idées entre plusieurs cultures. Dès ses débuts, la discipline a fait de l’espace franco-allemand
+          un domaine de recherche privilégié. Elle porte une attention particulière aux multiples vecteurs des échanges : universités, professeurs,
+          hommes de lettres, traducteurs, revues, etc. La revue, qui rassemble des individus autour d’un programme commun, est de ce fait un outil
+          privilégié du travail sur les transferts culturels.</p>
+        <p>L’étude de la <hi rend="i">Revue germanique</hi> s’inscrit parfaitement dans ce domaine de recherche car elle permet d’observer la
+          diffusion de la culture allemande dans les milieux savants et universitaires pendant la première moitié du <num>xx<hi rend="sup">e</hi></num> siècle.
+          La <hi rend="i">Revue germanique</hi>, fondée en 1905, se propose en effet d’être un médiateur entre la France et l’Allemagne en tenant le
+          public lettré français au courant de toutes les manifestations de l’esprit en Allemagne et en Angleterre. La <hi rend="i">Revue
+            germanique</hi> permet donc une approche des milieux intellectuels sensibles à la culture allemande des années 1900 jusqu’à la veille de
+          la seconde guerre mondiale. Elle contribue également à donner un nouvel éclairage sur l’histoire d’une discipline, les études germaniques.
+          La <hi rend="i">Revue germanique</hi> est en effet un témoin privilégié de la confrontation d’un groupe de germanistes à la réalité
+          politique brutale du national-socialisme. L’intérêt de cette revue est d’être une source pour la connaissance de cette situation unique, qui
+          n’a d’équivalent dans aucune autre discipline scientifique : les spécialistes de l’Allemagne sont en effet les spectateurs des
+          bouleversements majeurs que subit leur objet d’étude entre 1933 et 1939.</p>
+        <p>Afin d’appréhender l’atmosphère intellectuelle de cette publication consacrée aux littératures étrangères, il faut commencer par replacer
+          la fondation de la <hi rend="i">Revue germanique</hi> dans son contexte historique, culturel et institutionnel, puis acquérir une meilleure
+          connaissance des acteurs de la revue et enfin déterminer quelles sont les évolutions majeures de la revue, tant au niveau de la structure
+          que des thématiques. Pour comprendre comment les germanistes parviennent à concilier leur vision de l’Allemagne avec la réalité de la
+          dictature hitlérienne, il est nécessaire</p>
+        <p>de dresser un tableau général des attitudes des germanistes français face à la crise de Weimar et à l’arrivée du nazisme au pouvoir et
+          d’observer ces réactions dans un corpus de revues comparables à la <hi rend="i">Revue germanique</hi>.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Source à part entière, la revue est rarement étudiée pour elle-même. Issue d’un modèle anglo-saxon, elle se situe à mi-chemin entre le
+          quotidien et la monographie et « participe à la fois du caractère actuel des journaux et de la discussion grave des livres » ( <hi rend="i">Revue des deux mondes</hi>, 1832). Cette formule, qui rencontre un vif succès tout au long du <num>xix<hi rend="sup">e</hi></num> siècle avec des
+          revues de culture et d’information générale aux centres d’intérêt très vastes, se diversifie dans les années 1880. La fin du XIX <hi rend="sup">e</hi> siècle voit notamment l’émergence d’un pôle de revues qui accompagnent la segmentation croissante du savoir. Ces revues,
+          qui comptent parmi elles la <hi rend="i">Revue germanique</hi>, offrent alors de nouveaux débouchés de publication aux universitaires, qui
+          n’avaient jusqu’alors comme tribune d’expression que les grandes revues de culture générale.</p>
+        <p>La périodicité d’une revue, qui la situe dans un rapport au temps moins immédiat que la presse quotidienne ou hebdomadaire, en fait un des
+          moyens propices d’expression de la vie intellectuelle. La revue, porteuse d’un programme commun, se trouve au carrefour des trajectoires
+          individuelles, elle est un point de rencontre autour d’un discours politique ou scientifique. Tous ces aspects font de la revue un outil
+          privilégié de l’histoire des intellectuels</p>
+        <p>Une des difficultés habituelles de l’étude de revues est son aspect fini et lisse. La revue nous cache les coulisses de sa rédaction, nous
+          empêche d’accéder à l’envers de la revue, là où se négocie le sommaire, où sont débattues les orientations de la revue. Cette lacune est
+          rarement compensée par les sources écrites. La matière documentaire issue de l’activité des revues a en effet été longtemps négligée par le
+          monde des archives.</p>
+        <p>Dans le cas de la <hi rend="i">Revue germanique</hi>, la source est la plus importante est donc la revue en elle-même, conservée dans un
+          grand nombre de bibliothèques parisiennes et provinciales. La connaissance de la revue aurait été utilement complétée par des documents de
+          gestion. Malheureusement les papiers personnels de Félix Piquet, directeur de la revue pendant presque trente ans, ont été brûlés par sa
+          femme à sa mort en 1943. Quant à sa bibliothèque de travail, léguée à son décès à la bibliothèque de la Faculté des lettres de Lille, elle
+          ne peut malheureusement être repérée dans le fonds de la bibliothèque de l’UFR d’allemand de l’Université Charles de Gaulle, les ouvrages y
+          ayant été intégrés sans marque distinctive particulière. Les sources conservées dans les fonds d’institutions publiques permettent de
+          pallier l’absence cruelle de sources sur l’élaboration intellectuelle de la revue. On a en effet pu retrouver dans les archives du rectorat
+          de Lille une série de documents concernant les débuts de la <hi rend="i">Revue germanique</hi>. Les pièces d’archives, peu nombreuses, ont
+          pu être présentées dans leur intégralité dans les pièces justificatives (n°1 à 20).</p>
+        <p>La prosopographie des collaborateurs de la revue a pu être établie d’une part à l’aide des dossiers de personnel conservés aux Archives
+          départementales du Nord, dans la sous-série 2T évoquée plus haut, ou aux Archives nationales, dans la sous-série F17 (papiers de la division
+          des sciences et lettres du Ministère de l’Instruction publique), ainsi que par des lettres conservées à la Bibliothèque nationale de France
+          (nouv. acq. fr.). La démarche comparative adoptée pour ce travail a nécessité en outre la consultation de nombreuses revues, revues de
+          littératures étrangères ou revues sur l’Allemagne, conservées pour la plupart à la Bibliothèque nationale de France.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,96 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Alors que d’une part les diplomatistes s’intéressent peu à la Bretagne en raison de son bien connu manque de sources et que, d’autre part,
+          les historiens de la Bretagne ont depuis longtemps quelque peu délaissé une réflexion approfondie sur les sources diplomatiques du duché au
+          profit d’autres terrains historiographiques, il semble nécessaire aujourd’hui de relancer des études de fond sur la production documentaire
+          bretonne au Moyen Âge. Après l’étude des actes des ducs de Bretagne jusqu’en 1148 effectuée par Hubert Guillotel et qui remonte déjà à 1973,
+          il semble donc judicieux d’envisager les actes des évêques bretons en profitant du renouvellement des approches concernant ce type de
+          production diplomatique depuis une vingtaine d’années. L’étude, selon ces modalités, des actes émis par les évêques des neuf diocèses de
+          Nantes, Rennes, Saint-Malo, Dol, Saint-Brieuc, Vannes, Quimper, Tréguier et Léon doit donc permettre de situer la production de chaque
+          diocèse par rapport aux actes d’autres diocèses français et anglais, tout en faisant apparaître des traits saillants propres au duché.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p><hi rend="i">Les actes. —</hi> Environ un tiers des actes rassemblés sont encore connus en originaux. On les trouve dans les fonds des
+          abbayes destinataires aux archives départementales d’Ille-et-Vilaine, de Loire-Atlantique, du Morbihan, des Côtes-d’Armor, du Maine-et-Loire
+          et d’Indre-et-Loire, ainsi qu’aux Archives nationales pour quelques documents du fonds de Savigny (L 966 à 978). Un autre quart des actes
+          n’est connu que par une copie de cartulaire, malgré le faible nombre de ce type d’ouvrage en Bretagne ; la recherche a aussi pris en compte
+          les cartulaires des grandes abbayes du Val de Loire, de Normandie et du Maine. Enfin la collecte des actes a été complétée par des
+          recherches dans les fonds des érudits mauristes qui ont constitué de nombreux recueils d’actes aux <num>xviii<hi rend="sup">e</hi></num> et
+              <num>xviii<hi rend="sup">e</hi></num> siècles, qui sont aujourd’hui conservés au département des manuscrits de la Bibliothèque nationale
+          de France.</p>
+        <p><hi rend="i">Sources complémentaires. —</hi> Afin de comparer les actes bretons avec la production d’autres régions en contact avec le
+          duché, il convient de mettre à profit des recueils d’actes épiscopaux d’autres diocèses, situés en Normandie, en Anjou et en Angleterre. Des
+          sources non diplomatiques peuvent également être utilisées pour connaître l’activité des évêques, qu’il s’agisse de documents narratifs, de
+          chroniques, ou d’enquêtes reposant sur des témoignages.</p>
+        <p/>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>L’hydraulique est aujourd’hui un élément parmi d’autres des sciences de l’ingénieur. Cependant, l’apparition de cette science pose problème d’un point de vue historique : les travaux d’hydraulique existaient en effet avant que l’ingénieur ne vienne prendre la place qui devint la sienne, à partir du début du <num>xviii<hi rend="sup">e</hi></num> siècle. L’étude tentera donc ici de lancer une réflexion sur l’usage de l’hydraulique lors de la période précédant l’appel systématique aux ingénieurs.</p>
+          <p>Le choix de Paris s’impose à plus d’un titre : les travaux qu’a connus la ville à l’époque moderne, étant assez mal renseignés dans la littérature scientifique récente, il est utile de retracer les diverses périodes qui scandent l’aménagement du territoire urbain ; à l’inverse, les travaux d’autres historiens, comme D. Groussard et D. Massounie, sur diverses provinces françaises permettent de bien connaître la situation dans des aires géographiques différentes et donc de fournir des points de comparaison essentiels pour bien saisir et caractériser la situation parisienne. Il devient alors possible de discuter du problème plus large du rapport entre les nombreux textes théoriques de la période et la pratique constatée dans les archives manuscrites. Ce va-et-vient incessant entre théorie et pratiques permet de comprendre comment se crée une pratique qui va peu à peu se codifier pour devenir une discipline réclamant de la technologie.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+         <p>Les sources utilisées sont ici de deux types : les sources manuscrites tout d’abord, témoins de la pratique parisienne ; les sources imprimées ensuite, plus théoriques.</p>
+         <p>Les sources manuscrites sont toutes conservées aux Archives nationales : situées dans les fonds de la maison du roi ou dans ceux du bureau de la Ville de Paris, elles ne se singularisent pas particulièrement par leur forme et leur qualité. Leur situation et le fait qu’elles soient mêlées à des ensembles traitant de questions bien plus hétéroclites que la simple hydraulique est en soi digne d’analyse.</p>
+         <p>Les sources imprimées, quant à elles, sont des documents tirés d’un type de littérature technique bien connu des historiens des techniques : la littérature de « réduction en art ». Ce style, qui culmine au <num>xviii<hi rend="sup">e</hi></num> siècle avec l’ouvrage de Bélidor, <emph>L’architecture hydraulique</emph>, connaît sur la question de l’hydraulique, entre la fin du <num>xvii<hi rend="sup">e</hi></num> et le début du <num>xviii<hi rend="sup">e</hi></num> siècle, une production continue, qui sera étudiée avec attention</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

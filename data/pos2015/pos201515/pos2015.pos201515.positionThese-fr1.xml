@@ -1,0 +1,77 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+            <p>La fin du Moyen Âge voit déjà à l’œuvre les prémisses de ce que l’historien anglais Geoffrey Parker a appelé la « révolution militaire », qui s’étale sur toute la période moderne, et même au-delà. Du <num>xvi<hi rend="sup">e</hi></num> au <num>xix<hi rend="sup">e</hi></num> siècle, on voit ainsi se transformer aussi bien les technologies militaires que l’art de la guerre et la place de la guerre dans la société. Or ces changements s’amorcent dès le <num>xv<hi rend="sup">e</hi></num>, voire le <num>xiv<hi rend="sup">e</hi></num> siècle : développement de la poudre à canon, du mercenariat à grande échelle, des troupes permanentes, augmentation de la taille des armées, etc., ce qui induit de nouveaux besoins logistiques, administratifs et financiers. Dès lors, comment un acteur politique de moindre importance envisage-t-il la guerre, ses buts, et surtout ses moyens, puisque les ressources limitées dont il dispose sont de plus en plus insuffisantes dans ce contexte d’inflation des moyens militaires ? Le cas de Strasbourg est à cet égard typique : en tant que cité marchande importante sur le Rhin, ses objectifs lorsqu’elle se met en guerre ne sont pas des gains territoriaux par exemple, mais l’assurance de continuer à commercer en paix. La ville doit donc entretenir et gérer une armée qui serve ses buts, mais ne soit pas trop coûteuse, pour ne pas grever son budget.</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+            <p>Les sources primaires viennent exclusivement des archives de la ville et de la communauté urbaine de Strasbourg, particulièrement de la série AA (Correspondances politiques), ainsi que, dans une moindre mesure, des séries III à VI. Ces fonds contiennent des ordonnances et règlements militaires pour certaines campagnes ou pour la défense des murailles ; des listes de mobilisables, comportant parfois la mention de l’armement ou des chevaux dont ils disposent ; des inventaires de l’arsenal de la ville ou des châteaux qu’elle possède ; enfin, une abondante correspondance, abordant tous les sujets, en particulier le ravitaillement, la solde et la discipline des troupes, et les renseignements transmis par et pour les alliés. Une écrasante majorité des documents concerne les moments de crise, notamment les guerres de Bourgogne (1473-1477).</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

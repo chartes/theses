@@ -1,0 +1,77 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+            <p>Fort peu étudiés par l’historiographie, les quartiers d’hiver des armées sont généralement considérés comme un temps de pause entre deux campagnes, permettant surtout de préparer les prochaines échéances militaires, mais durant lequel les actions sont très limitées, cause sans doute du désintérêt dont ils sont victimes. Leur étude s’avère toutefois assez avantageuse dans le cadre d’une nouvelle « histoire campagne », dans la mesure où ils assurent une transition entre deux campagnes militaires et permettent ainsi de mieux définir les contours de ces dernières. Ils sont en fait à l’époque moderne une nécessité, née des difficultés éprouvées par les sociétés pour le ravitaillement des armées. Bien que les services d’approvisionnement aient connu de réels progrès au long du <num>xvii<hi rend="sup">e</hi></num> siècle, ils ne sont toujours pas en mesure d’assurer l’intégralité des fournitures nécessaires à la survie des troupes, et le principe selon lequel une armée doit vivre sur le pays qu’elle occupe continue dans les faits à traduire une réalité, du moins pour certaines fournitures. Si les ponctions de la soldatesque sont envisageables durant le printemps ou l’été, elles deviennent impossibles durant la morte saison où la nature est au repos. Faute de pouvoir entretenir une vaste armée en un même endroit, sur le front, on disperse alors les unités en divers lieux, et une partie des troupes est envoyée à l’arrière pour passer l’hiver. Les opérations militaires s’arrêtent donc, pour reprendre au printemps prochain, avec le retour du beau temps et le renouveau de la végétation. Les quartiers d’hiver constituent en fait une bonne partie de l’année militaire, qui semble se diviser en deux saisons bien distinctes, celle de la campagne et celle de l’hiver. Leur analyse donne l’occasion d’aborder les questions de la séparation des troupes, puis de leur rassemblement au début du printemps, mouvements qui délimitent clairement le terme et le commencement d’une campagne. On voit également apparaître pendant cette saison une continuité de la guerre sur la zone frontalière, où est restée stationner une partie des troupes, mais qui s’exprime dans une configuration différente et selon des modes qui varient des opérations pratiquées pendant la campagne. Enfin, les quartiers d’hiver servent bien, comme le dit l’idée la plus répandue à leur sujet, à préparer la prochaine campagne, et sont le théâtre d’intenses préparatifs logistiques.</p>
+        </div>
+              <div type="sources"><head>Sources</head>
+            <p>Notre étude se fonde d’abord sur le dépouillement des archives du Service historique de la défense, qui furent les sources les plus exploitées, et notamment la sous-série A<hi rend="sup">1</hi>, qui renferme la correspondance échangée entre le secrétaire d’État de la guerre, Voysin, et ses officiers et ses intendants en place sur le front durant notre hiver. Ces sources ont été croisées avec celles des Archives nationales, et particulièrement la sous-série G<hi rend="sup">7</hi>, renfermant les archives de l’Extraordinaire des guerres, et qui nous a permis d’étudier le financement des quartiers d’hiver. Les sources locales, conservées dans les archives départementales du Nord, du Pas-de-Calais et de l’Aisne, ainsi que dans un certain nombre d’archives municipales de villes situées dans ces trois départements, nous ont aussi beaucoup éclairé sur le rôle des communautés urbaines et provinciales dans la prise en charge de l’armée et le financement de la guerre. Des manuscrits de la Bibliothèque nationale de France nous ont enfin livré des renseignements complémentaires.</p>
+        </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

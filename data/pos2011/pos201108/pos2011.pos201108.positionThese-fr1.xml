@@ -1,0 +1,77 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Les monnaies qui font l’objet de cette étude sont les pièces d’époque mérovingienne au sens large, c’est-à-dire frappées entre la seconde moitié du <num>v</num><hi rend="sup">e</hi> siècle et la première moitié du <num>viii</num><hi rend="sup">e</hi> siècle, et qui ont subi à cette même époque des modifications dans le but d’en faire un usage autre que monétaire.  </p>
+        <p>De nombreuses altérations ou modifications physiques peuvent survenir lors des cycles de l’utilisation et du recyclage du métal constituant les monnaies. Ces dernières sont couramment refondues, refrappées, parfois surfrappées par les autorités émettrices. Leur circulation normale entraîne usure, traces de vérifications de leur métal, parfois même des coupures pour fractionner la valeur du numéraire. Certaines transformations, coupures ou rayures du type sont aussi liées à la démonétisation des pièces ou à leur remise en circulation. Les modifications physiques volontaires apportées aux monnaies sont cependant surtout liées à une utilisation autre que monétaire. Elles fournissent des indications précieuses sur la façon de considérer ces pièces en tant qu’objet, et pas seulement comme instrument d’échange.  </p>
+        <p>On connaît peu d’études spécifiquement consacrées à la monnaie modifiée. Elles ont en général pour argument des objets d’exception, sont cantonnées à une approche liée uniquement à la numismatique, à l’archéologie ou à l’histoire de l’art. Dans le cours de cette étude, les ressources de chacune de ces disciplines ont été mobilisées, selon une orientation générale liée aux théories anthropologiques récentes sur la culture matérielle et sa place dans l’étude des mentalités, et en particulier celle d’I. Kopytoff sur la biographie culturelle des objets. </p>
+      </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

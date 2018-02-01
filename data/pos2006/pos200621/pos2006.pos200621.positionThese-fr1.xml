@@ -1,0 +1,109 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La Bibliothèque du Film (BiFi) conserve parmi ses fonds d’auteurs-réalisateurs les archives cinématographiques de Patrice Chéreau. Le
+          metteur en scène s’est lancé dans le septième art dès 1974, parallèlement à son activité scénique, et a depuis réalisé neuf films qui lui
+          ont valu la reconnaissance progressive de la critique et du public. Le fonds, déposé en 1996, est particulièrement riche concernant <hi rend="i">La Reine Margot</hi>, sorti en France en 1994, et dont Patrice Chéreau a été à la fois le scénariste, avec Danièle Thompson, et
+          le réalisateur. Des documents variés (manuscrits, photographies, plans, dessins...) permettent de reconstituer le processus de création du
+          film, depuis l’écriture du scénario jusqu’à la sortie en salles et la promotion en France et à l’étranger.</p>
+        <p>Le roman d’Alexandre Dumas dont le film s’inspire, véritable succès de la presse, de l’édition et du théâtre au <num>xix<hi rend="sup">e</hi></num>
+          siècle, a exercé une influence considérable sur la représentation de Marguerite de Valois et de son temps, notamment au cinéma. Après deux
+          versions muettes signées Camille de Morlhon (1910) et Henri Desfontaines (1914), il faut attendre une quarantaine d’années pour visionner le
+          film de Jean Dréville plaçant Jeanne Moreau dans le rôle-titre (1954) et, si l’on excepte l’opus télévisé de René Lucot (1961), encore
+          quatre décennies avant la dernière réalisation en date : celle de Patrice Chéreau.</p>
+        <p>Retracer l’élaboration de cette <hi rend="i">Reine Margot</hi> en recourant aux archives du réalisateur constitue une démarche novatrice
+          au cinéma, à la différence de la critique génétique en littérature, active dès les années 1960. Peut-être faut-il voir là la conséquence
+          d’un paradoxe ? Les cinéphiles refusent souvent de considérer dans les documents produits par l’activité cinématographique autre chose
+          qu’une étape de la réalisation de l’objet film ; à l’opposé, les historiens jugent encore juvénile ce septième art né il n’y a guère plus
+          d’un siècle et proche à leurs yeux du divertissement. Pourtant, si les archives papier sont encore désignées négativement comme le
+          « non-film », des travaux d’envergure ont mis au jour leur importance pour comprendre les modalités de création des films et la question des
+          « genèses cinématographiques » semble au cœur de l’actualité de la recherche en histoire du cinéma.</p>
+        <p>Par ailleurs, Patrice Chéreau a présenté <hi rend="i">La Reine Margot</hi> comme l’antithèse du film historique traditionnel, quand la
+          représentation cinématographique de l’Histoire s’inscrit dans une longue tradition artistique, fondée sur l’idée de reconstitution du passé.
+          Quel sens donner au projet de réaliser, aujourd’hui, un film mettant en scène la France des guerres de Religion ? Et qu’appelle-t-on au
+          juste un film historique ?</p>
+        <p>L’étude ne se contente pas d’une narration chronologique des étapes successives de la fabrication du film : ce bloc descriptif est entouré
+          de deux parties synthétiques. Quatre étapes ont été distinguées, de l’écriture du film à sa réalisation et à son exploitation : la genèse du
+          scénario, les questions de production, le tournage et le montage, la promotion et la distribution. Une contextualisation précède l’exposé,
+          lui-même prolongé par des éléments d’analyse du film, permettant de réfléchir à la définition de <hi rend="i">La Reine Margot</hi> comme
+          film historique, ou plutôt comme <hi rend="i">Heritage film</hi>, film en costumes contemporain.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Tous les documents contenus dans les quarante-quatre cartons d’archives de la Bibliothèque du Film cotés CHÉREAU 10, B42 à 86, ont été
+          consultés. Tous ne présentaient cependant pas le même intérêt pour cette recherche : ont été écartés ceux qui livraient des informations
+          redondantes ou non vérifiables. Le champ d’investigation remonte jusqu’au milieu de l’année 1988 — date à laquelle Patrice Chéreau lit pour
+          la première fois le roman de Dumas — et s’étend jusqu’au début de l’année 1995, qui voit la réception en France et à l’étranger du film dans
+          sa nouvelle version remontée. Les papiers personnels de l’auteur-réalisateur ont été confrontés à d’autres archives disponibles, celles de
+          Danièle Thompson, également à la Bibliothèque du Film (THOMPSON 4, B2 à 4). Ils ont aussi servi de point de comparaison avec les témoignages
+          oraux inédits de sept collaborateurs essentiels de Patrice Chéreau rencontrés pour évoquer le film. Différents titres de presse généraliste
+          et spécialisée de l’époque ont été dépouillés, et visionnées quelques émissions de télévision.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,89 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>L’étude des offices de bouche de l’Hôtel du roi se trouve à la croisée de deux courants historiographiques dynamiques : l’histoire des
+          institutions royales et princières à la fin du Moyen Âge et l’histoire de l’alimentation, envisagée ici dans ses aspects culturels et
+          sociaux. <lb/>Le service de bouche de l’Hôtel du roi est doté d’une double importance symbolique : le souverain doit exalter sa puissance et
+          sa prospérité par un rite de table luxueux ; de plus, à travers les repas servis à ses officiers, il se montre en roi “ nourricier ”.
+          <lb/>Il convient d’étudier le fonctionnement des quatre offices de bouche de l’Hôtel du roi, paneterie, échansonnerie, cuisine et fruiterie,
+          au cours du <num>xiv<hi rend="sup">e</hi></num> siècle, dans une perspective à la fois institutionnelle et prosopographique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources concernant l’Hôtel du roi au <num>xiv<hi rend="sup">e</hi></num> siècle sont inégalement réparties : le règne de Charles VI présente une
+          grande abondance de documents, alors que peu d’archives nous sont parvenues pour ses prédécesseurs, notamment pour Charles V. <lb/>Les
+          documents produits par l’Hôtel ou par les institutions dont il dépend permettent d’en décrire le cadre institutionnel et d’établir des
+          listes nominatives d’officiers. Il s’agit de documents normatifs, comme les huit ordonnances de l’Hôtel conservées de Philippe VI à Charles
+          VI et les rôles de gages, et de pièces comptables élaborées par le Trésor et par les deux caisses de financement de l’Hôtel que sont la
+          Chambre aux deniers et l’Argenterie. <lb/>L’élaboration des notices biographiques des officiers qui ont permis l’étude prosopographique
+          s’appuie également sur le dépouillement de sources complémentaires, comme les registres du Parlement de Paris et des documents édités :
+          registres du Trésor des chartes, rôles d’impôts, œuvres littéraires.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,100 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le royaume de Hollande, régime à la tête duquel est placé un frère de l’empereur des Français, n’est qu’une des formes de domination de la
+          France sur l’ancienne République des Provinces-Unies, entre 1795 et 1813. Mais c’est probablement la plus ambiguë. D’une république-sœur, la
+          République batave, créée en 1795, on passe au printemps 1806 à un royaume indépendant mais confié à Louis Bonaparte. C’est cependant à
+          l’usage que cette ambiguïté prend forme, au travers des choix du roi et du mécontentement croissant de l’empereur, débouchant sur l’annexion
+          du pays après seulement quatre ans. Échec patent du régime, personnalité en demi-teinte de Louis Bonaparte, absence de grands événements
+          militaires : les raisons sont nombreuses pour expliquer le désintérêt que connaît cette période. Pourtant, l’étude du royaume de Hollande
+          permet de poser la question de la domination de l’Europe par Napoléon, de ses modalités et des résistances à cette politique, à travers
+          l’une des formes mises en œuvre par l’empereur, celle des États satellites. Mais cela nécessite de dépasser les jugements hâtifs trop
+          souvent énoncés sur les qualités personnelles, l’état mental ou l’esprit d’indépendance de Louis, ou encore sur l’imitation supposée de la
+          France par la Hollande. En outre, le lien de fraternité qui unit Louis et Napoléon, s’il apporte une richesse supplémentaire dans les
+          relations entre ces deux souverains, entraîne un risque de surinterprétation.</p>
+        <p>Le biais retenu ici pour contourner cette difficulté n’est pas purement biographique, ni purement politique. Il s’agit d’étudier
+          l’insertion du royaume de Hollande dans le système napoléonien au travers des relations entre les chefs des deux États en question. Avec en
+          ligne de mire de nombreuses interrogations que l’on peut résumer ainsi : comment Louis répond-il aux exigences de son frère ? Qu’en conclure
+          sur la nature de son pouvoir et sur la place de la Hollande dans le système européen voulu par Napoléon ?</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Pour étudier les relations entre Louis et Napoléon, il convient de donner la priorité à la correspondance qu’ils se sont échangée.
+          Celle-ci comporte peu de lacunes et a été éditée, à quelques lettres près, par Félix Rocquain dans la seconde moitié du <num>xix</num>
+<hi rend="sup">e</hi> siècle. En deuxième lieu, les archives du cabinet du roi de Hollande, rapportées en France après son abdication et
+          conservées aux Archives nationales (AN, AF IV 1719 à 1832), constituent une source de premier plan pour connaître l’action de Louis pendant
+          son règne. La correspondance entre le ministre des Relations extérieures de France et ses agents diplomatiques en Hollande, conservée au
+          ministère des Affaires étrangères, offre quant à elle un regard à la fois extérieur, intéressé et très complet sur les affaires hollandaises
+          (MAE, Correspondance politique Hollande 610 à 615). Enfin, des sources secondaires ont été utilisées ponctuellement : archives de la
+          secrétairerie d’État impériale (AN, sous-série AF IV), fonds privés (AN, série AP, et MAE, Acquisitions extraordinaires), archives
+          militaires (Service historique de la Défense, Vincennes), archives du pouvoir exécutif néerlandais (Nationaal Archief, La Haye), sans
+          oublier quelques mémoires de contemporains, dont ceux du roi de Hollande lui-même.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

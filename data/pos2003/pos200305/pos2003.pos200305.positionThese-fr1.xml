@@ -1,0 +1,104 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>En janvier 1939, Hyacinthe Chobaut, archiviste départemental de Vaucluse, débute un journal qu’il poursuit durant plus de six ans,
+          consignant méticuleusement chaque jour des notes sur ces Années noires de la guerre et de l’Occupation. Cette expérience d’écriture
+          personnelle au cœur de l’événement n’est pas unique : intellectuels, journalistes, hommes politiques ou encore simples membres de la société
+          civile ont laissé à la postérité des carnets, journaux et mémoires transmettant leur vision du présent. Le journal de Chobaut est cependant
+          singulier à plusieurs titres : sa durée et sa quotidienneté rigoureuse en font un ensemble de près de quatre milles pages manuscrites
+          remarquable ; la démarche d’écriture constitue également une caractéristique particulière : se démarquant de l’écriture intime, l’auteur
+          veut porter témoignage et se fixe comme règle de conception de son journal une juxtaposition de nouvelles et d’informations issues de
+          sources variées, en masquant le plus possible sa propre subjectivité, constituant ainsi une véritable chronique de son présent.</p>
+        <p>L’original de ce journal fut déposé par les soins de l’épouse de Chobaut aux archives départementales de Vaucluse, sous la cote 1 J 406, et
+          une copie intégrale est conservé à l’Institut d’histoire du temps présent, sous la cote ARC 083 1 à 4. Il n’a jamais été publié, mais
+          uniquement exploité pour des travaux concernant la vie quotidienne et l’opinion publique durant la guerre. Il paraissait cependant
+          indispensable de comprendre son édition dans une étude plus large et plus précise de la personnalité de son auteur et de ses principes de
+          rédaction. La lecture de ce journal et le travail d’édition s’inscrivent dans deux perspectives principales : l’étude du point de vue de
+          l’auteur sur les événements, et les moyens que possède cet auteur pour parvenir à la connaissance de ce qui se déroule autour de lui. Il
+          s’agit donc de replacer ce journal dans une optique subjective, celle de son rédacteur, et dans une optique objective, celle des sources.
+          Cette étude approfondie des sources et de la construction de ce témoignage est une façon de cerner la formation des représentations au cœur
+          de l’histoire : quels sont les outils singuliers ou communs, conscients ou inconscients, dont dispose un contemporain pour constituer une
+          image, voire un imaginaire, de son présent ? Cette réflexion, en allant au-delà du simple constat de la présence de certains renseignements
+          dans le journal et de la recherche de leurs sources possibles, est aussi une forme de réponse à une variante de la lancinante question :
+          « qui savait quoi ? », alors plutôt formulée ainsi : « qui pouvait savoir quoi ? ».</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Outre les dix-neuf cahiers manuscrits composant le journal, sous leur forme originale ou reproduite, la recherche s’est fondée sur deux
+          ensembles principaux de sources : d’une part, les fonds issus de l’activité propre de Chobaut, en tant qu’archiviste départemental de
+          Vaucluse mais également en tant que directeur du Centre départemental d’information et censeur civil au Contrôle de la presse, ainsi que les
+          documents produits par la direction des archives de France concernant la réglementation et la vie quotidienne des services départementaux ;
+          d’autre part, les sources d’information utilisées par le rédacteur lui-même pour élaborer son témoignage, consistant principalement en de
+          nombreux titres de presse locaux, nationaux ou étrangers, et les scripts des émissions de la BBC française. Il était également nécessaire de
+          consulter certains fonds ayant trait aux répercussions de la guerre et de l’Occupation en Vaucluse pour mieux replacer le journal dans son
+          contexte et vérifier certaines assertions de l’auteur. Ces différentes sources ont été enrichies par le témoignage de la fille aînée de
+          Chobaut.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

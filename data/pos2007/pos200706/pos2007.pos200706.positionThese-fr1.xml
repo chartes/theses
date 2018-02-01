@@ -1,0 +1,108 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Entre sa mort en 1783 et sa première biographie en 1887, celui qui fut l’« un des plus connus pour le bijou et la vaisselle » selon l’<hi rend="i">Almanach Dauphin</hi>(1776) ne résista à l’oubli que grâce à la signature d’un célèbre recueil de modèles, <hi rend="i">Les
+            Eléments d’orfèvrerie</hi>, publié en 1748 et copié jusqu’à la fin du <num>xix<hi rend="sup">e</hi></num> siècle. Mais on avait tout oublié de
+          Pierre Germain. Ce qui faisait son originalité, ses publications, sa correspondance retrouvée en partie en 1862 lui furent enlevées pour
+          mieux parer la figure emblématique de son homonyme et maître Thomas Germain. Confondu dès son vivant, oublié quelques décennies après sa
+          mort, Pierre Germain dit le Romain (Villeneuve-lès-Avignon, 5 avril 1703-Paris, 12 janvier 1783) eût put disparaître de l’historiographie à
+          la fin du <num>xix<hi rend="sup">e</hi></num> siècle si Germain Bapst n’avait ajouté un court chapitre à son <hi rend="i">Étude sur l’orfèvrerie
+            française au XVIII</hi>
+          <hi rend="i">
+<hi rend="sup">e</hi>
+          </hi>
+          <hi rend="i">siècle : les Germain orfèvres-sculpteurs du Roy</hi>. L’orfèvre commença dès lors à retrouver sa personnalité et son importance
+          au fur et à mesure des découvertes postérieures, que l’on doit principalement à l’érudit avignonnais Adrien Marcel qui publia en 1916 un
+          article intitulé « L’orfèvre Pierre Germain dit le Romain » dans les <hi rend="i">Mémoires de l’Académie de Vaucluse</hi>. Cette étude
+          malheureusement peu diffusée et encore trop peu connue un siècle après fut la dernière consacrée à cet orfèvre qui se cache et se laisse
+          difficilement trouver dans les archives.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources qui éclairent la vie de Pierre Germain sont dispersées entre la région avignonnaise et Paris. Les registres paroissiaux des
+          Archives municipales de Villeneuve-lès-Avignon et d’Avignon livrent l’environnement familial de l’orfèvre ; les études notariales 3 E 5, 3 E
+          6 et 3 E 7 aux Archives départementales de Vaucluse et II E<hi rend="sup">80</hi> et II E<hi rend="sup">81</hi> aux Archives
+          départementales du Gard révèlent l’assise foncière et sociale de l’orfèvre et de ses proches. Une partie de la correspondance de ce dernier
+          est conservée dans le fonds Franque à la Bibliothèque municipale d’Avignon (mss. 1298-1300) et une autre dans une collection particulière
+          inconnue, en partie publiée en 1916 par Adrien Marcel.</p>
+        <p>Les sources parisiennes retracent, quant à elles, son activité d’orfèvre. Au Centre historique des Archives nationales, les études
+          notariales XXIV et, dans une moindre mesure, LIII, XLVII, LXIV et CXV offrent quelques renseignements indispensables pour retracer sa
+          carrière, ainsi que les études de ses maîtres Nicolas Besnier et Jacques Roëttiers (LXV et CXXI). Ce sont surtout les archives du corps des
+          orfèvres de Paris, mises sous séquestre à la Révolution et divisées entre les séries T et K, qui apportent des informations sur sa richesse
+          (T 1042), sur son activité de garde puis de grand-garde des orfèvres (K 1045) et sur sa production (T*1490, 40-168). D’autres séries ont été
+          dépouillées avec profit pour la connaissance de ses maîtres et commanditaires, notamment la série O1 de la Maison du Roi pour les orfèvres
+          du roi, la sous-série R1 ou les séries conservant les scellés d’Ancien Régime, V<hi rend="sup">3</hi> et Y.</p>
+        <p>D’autres institutions ont enfin été mises à profit : le Centre des Archives d’Outre-Mer (Colonies E : personnel colonial antérieur à 1789),
+          les Archives de Paris (sous-série DC : enregistrement des actes), le département des manuscrits de la Bibliothèque nationale de France
+          (nouv. acq. fr. 21813-22060, archives du corps des libraires, qui nous renseignent sur l’édition des deux recueils que publia l’orfèvre en
+          1748 et 1751), et le département des estampes et de la photographie de la BnF qui conserve des dessins signés ou attribuables à l’orfèvre :
+          Le 39, Le Mat 2 (III) et Le Mat 2a (III).</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

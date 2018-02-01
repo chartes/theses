@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>La prison de la Conciergerie est restée presque totalement à l’écart de la recherche historique jusqu’à une période très récente, à
+          l’inverse d’autres prestigieux établissements comme la Bastille, Vincennes, Saint-Lazare et même le Châtelet. La Conciergerie du Palais
+          était pourtant au <num>xvii</num>
+<hi rend="sup">e</hi> siècle une prison très importante dans le paysage parisien, qui relevait du parlement de Paris et accueillait des
+          prisonniers de droit commun issus de tout le ressort. Pour son malheur, cependant, elle a été le théâtre d’événements révolutionnaires
+          majeurs qui ont focalisé l’attention des historiens en masquant tout le reste de son histoire. Le vaste fonds des archives criminelles du
+          Parlement, dans lequel la Conciergerie est de loin la prison la mieux représentée, permet largement de combler cette lacune sur une période
+          de soixante-dix ans, de 1570 à 1649. Étant donné le caractère généralement peu novateur de la bibliographie sur l’histoire pénitentiaire, on
+          a choisi de se démarquer de la perspective traditionnelle qui étudie la prison de l’époque moderne sous l’angle de ses faiblesses et de ses
+          abus, pour aborder celle-ci sous l’angle de la quotidienneté. La recherche a donc porté sur les relations entre les différents groupes, dans
+          la lignée de la récente discipline qu’est la sociologie pénitentiaire, ainsi que sur les parcours individuels des occupants de la
+          Conciergerie.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le contraste est frappant entre la faible quantité du matériau historique disponible pour l’étude des prisons anciennes et la quantité des
+          études qui leur sont consacrées. Dans le cas de la Conciergerie, seuls les registres d’écrous, conservés aux archives de la Préfecture de
+          Police de Paris, ressortent véritablement de la catégorie des « archives pénitentiaires ». Dans ces registres étaient consignées suivant les
+          ordonnances les principales informations relatives aux détenus pour la bonne gestion de la prison (identité, dates d’arrivée et de sortie,
+          issue du procès, etc.). Bien qu’une telle source se prête naturellement à l’exploitation statistique – on a procédé à deux sondages pour
+          dresser un tableau de la population carcérale –, elle a servi de façon privilégiée à compléter d’autres documents pour retracer le parcours
+          de quelques prisonniers. À cette fin, il a fallu faire appel aux fonds judiciaires criminels du parlement de Paris, plus vastes, et qui
+          n’apportent à première vue que des informations indirectes sur les prisons. La base de l’étude repose en effet sur le dépouillement
+          exhaustif des instructions (cartons X<hi rend="sup">2B</hi> 1174 à 1226) ouvertes à la suite des évasions, rixes ou autres incidents
+          survenus dans la prison. Elles sont constituées des procès-verbaux de visite sur les lieux, des déclarations des plaignants, des dépositions
+          des témoins, des interrogatoires des accusés et de leur confrontation aux témoins ou entre eux. Ces archives particulièrement narratives
+          rassemblent les discours souvent contradictoires des prisonniers, de leurs gardiens, de leurs visiteurs et des voisins de la prison. Pour
+          une même affaire, on a agencé ces différents éléments dans l’ordre de la procédure en y ajoutant si possible l’interrogatoire sur la
+          sellette, parfois l’arrêt de condamnation, méthode qui a permis de recomposer de véritables récits judiciaires à étudier comme un corpus de
+          textes.</p>
+        <p>L’étude s’est appuyée également sur des pièces comptables conservées dans le fonds du Parlement criminel, les ordonnances et les
+          quittances de paiement pour le pain des prisonniers ou autres fournitures, les réparations, les membres du personnel de la prison, etc., à
+          des fins de prosopographie. Quelques actes du Minutier central des notaires de Paris, inventaires après décès et constitutions de rentes,
+          ont permis de compléter cette étude sur le personnel, notamment en éclairant  son origine géographique et sociale et les liens entre membres
+          d’une même profession. Enfin, en plus de rares pièces imprimées du <num>xvii</num>
+<hi rend="sup">e</hi> siècle, on a utilisé deux manuscrits de la collection Joly de Fleury conservés à la Bibliothèque nationale de France.
+          Il s’agit de recueils composites de pièces justificatives provenant du cabinet des procureurs généraux du parlement de Paris. Bien
+          qu’élaborés au <num>xviii</num>
+<hi rend="sup">e</hi> siècle, ils comportent des pièces utiles en tant que points de comparaison, ou pour fournir des indications sur des
+          données dont nous ne disposons pas pour le siècle précédent, faute de documents administratifs de cette nature : sont ainsi envisagés la
+          nourriture des prisonniers, l’estimation de la population de la prison, le chapelain de la Conciergerie, etc.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

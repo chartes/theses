@@ -1,0 +1,113 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>S’intéresser à François Sublet de Noyers, plus d’un siècle après Charles Schmidt, qui en fit son sujet de thèse d’École des chartes à la
+          fin du <num>xix</num>
+<hi rend="sup">e</hi> siècle, c’est se pencher sur lui en bénéficiant d’un renouvellement complet de l’historiographie. En effet, il n’est
+          plus question de célébrer la geste de Richelieu à partir de l’une de ses créatures, de même qu’il n’est plus envisageable de suivre
+          l’approche de Charles Schmidt, qui raisonnait selon une problématique réductrice : « Sublet de Noyers, précurseur de Louvois et de Colbert
+          ».</p>
+        <p>Le règne de Louis XIII est bien sûr marqué par la présence au pouvoir du cardinal de Richelieu, mais depuis Orest Ranum et son ouvrage sur
+          Les créatures de Richelieu, on porte un œil nouveau sur la place de ces collaborateurs privilégiés du pouvoir que sont les secrétaires
+          d’État. Dans le contexte de la montée en puissance des États monarchiques, qui se traduit par un état de guerre quasi-permanent, à
+          l’intérieur comme à l’extérieur du royaume, et un renforcement de l’administration royale, la figure du secrétaire d’État prend un poids
+          politique réel. Il est donc nécessaire d’étudier les figures du Conseil du roi afin de pouvoir projeter une lumière sur l’origine et le
+          mécanisme des prises de décisions royales.</p>
+        <p>La figure de Sublet de Noyers est complexe et ses facettes multiples. Son histoire familiale le place dans une tradition de service du roi
+          et de fort attachement au catholicisme. Secrétaire d’État de la guerre, surintendant des Bâtiments du roi, mécène austère et protecteur des
+          Jésuites, Sublet de Noyers est plongé dans les contradictions de son siècle, qui voit le roi Très-Chrétien, allié avec des protestants,
+          mener une guerre contre le Roi Catholique d’Espagne. Mais la raison d’État l’emporte dans les consciences et Sublet de Noyers incarne la
+          génération des premiers vrais administrateurs du royaume. Le service du roi dans les plus hautes sphères du pouvoir et le service de Dieu en
+          toute circonstance, sont les clefs de lecture pour comprendre cette figure du Grand siècle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>La vie de François Sublet de Noyers ne se peut reconstituer qu’avec des sources extrêmement éclatées par leur dispersion. Pour ce qui est
+          de la vie privée et de la famille de Sublet de Noyers, il faut se tourner en premier lieu vers le minutier central des notaires parisiens
+          aux Archives nationales, en particulier les études XIX, XXIV, XXVI, LXXXIV (pour la famille de son épouse Isabelle Le Sueur), LXXXVII
+          (branche des Sublet d’Heudicourt). La reconstitution de l’histoire familiale des Sublet a été possible grâce à la consultation du Cabinet
+          des titres à la Bibliothèque nationale de France. Ont été également dépouillées les séries B, E, F et G des Archives départementales de
+          l’Eure et de la Seine- Maritime, qui abondent en documents concernant les propriétés, la fortune et les donations pieuses des Sublet aux
+            <num>xvii</num>
+<hi rend="sup">e</hi> et <num>xviii</num>
+<hi rend="sup">e</hi> siècles. L’activité de Sublet de Noyers, d’abord comme intendant des finances, puis comme secrétaire d’État et
+          surintendant des Bâtiments du roi, a été retracée en mettant à contribution de diverses sources. Un manuscrit inédit de la Biblioteka
+          Narodowa à Varsovie, dans lequel ont été compilés des ordonnances, lettres et devis, a permis de saisir son activité en tant qu’intendant
+          des armées en Picardie et en Champagne. La sous-série A<hi rend="sup">1</hi> du Service historique de la Défense a été entièrement
+          dépouillée pour les années 1636 à 1643 : a ainsi pu être reconstituée l’activité du département de la guerre sous l’égide de Sublet de
+          Noyers, au service de Richelieu et de Louis XIII. Ces milliers de lettres, actes, ordonnances, ont été complétés par des recherches au
+          département des manuscrits de la Bibliothèque nationale de France, où sont conservées de nombreuses lettres éparses dans divers volumes de
+          correspondance (Le Tellier, La Valette, Sourdis, Séguier...). On a également effectué avec profit des sondages dans les archives du
+          ministère des Affaires étrangères, séries « Mémoires et documents France » et « Correspondance politique », où l’on a retrouvé nombre de
+          lettres échangées entre Richelieu et Sublet de Noyers. Enfin, la bibliothèque de l’Institut et la bibliothèque du Musée Condé à Chantilly
+          ont complété de nombreuses zones d’ombre en livrant des compilations de correspondance sur des sujets variés : famille du secrétaire d’État,
+          gestion de l’administration des Bâtiments du roi, etc.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,108 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Une profusion d’images fixes et animées accompagnent, encadrent et illustrent la Libération. Cet événement historique se décompose lui-même
+          en une multitude de scènes, dans le temps et dans l’espace, des premiers vacillements du Reich allemand avec le débarquement en Afrique du
+          Nord en novembre 1942, jusqu’à la poursuite des combats sur le front du Pacifique en 1945. L’armée française, désireuse de redorer son
+          blason, choisit de jouer un rôle actif dans l’enregistrement par l’image des événements de la Libération et, plus justement, dans la
+          création d’une image de la Libération façonnée à sa convenance. Plutôt que de se contenter de laisser les journalistes de presse opérer
+          librement sur le champ de bataille, elle décide d’employer elle-même des opérateurs aux armées, professionnels de l’image revêtus de
+          l’uniforme militaire et entièrement dévoués à son service. Ces recrues un peu particulières, tantôt photographes, tantôt cameramen, sont
+          réunies au sein du Service cinématographique de l’armée (SCA).</p>
+        <p>Ainsi, se côtoient sur les théâtres d’opération traversés par les troupes françaises, plusieurs types de correspondants de guerre,
+          assignés à des missions différentes selon la nature de leur employeur. Les journalistes de presse doivent fournir à leurs rédactions des
+          reportages saisissants, voire sensationnalistes. Aux opérateurs de l’armée française revient la tâche de fabriquer des documents techniques,
+          des images de propagande et enfin des sources destinées aux historiens du futur. <num>à</num>la difficile conciliation entre vocation
+          journalistique et structure militaire, s’ajoutent les difficultés de réalisation d’une telle entreprise sur le plan matériel, ainsi que
+          certains paradoxes liés à la nature du SCA : recruter au sein d’une profession réputée pour son caractère individualiste tout en appliquant
+          à tous une discipline militaire, faire connaître l’action de l’armée française tout en préservant le secret des opérations militaires,
+          présenter au public une image positive de cette armée tout en constituant des documents historiques « authentiques ». Telles sont les lignes
+          de tension qui animent et agitent l’activité du service durant les mois cruciaux de la Libération pour l’armée française, c’est-à-dire
+          d’août 1944, avec le débarquement de Provence, la première véritable opération des Forces françaises de la France libre en métropole, à
+          avril 1945 et l’arrivée des chars de la 2<hi rend="sup">e</hi> DB en Autriche à Berchtesgaden. L’état-major français tente d’appréhender ces
+          lignes de tension à l’aide d’autant d’approches théoriques que la production d’« images sincères » ou l’élaboration d’une « réconfortante
+          vérité ». Dans la pratique, la production photographique qui résulte du travail des opérateurs aux armées sur le terrain connaît une
+          diffusion et un impact sur le public largement conditionnés par un cadre de travail exceptionnel, une emprise nécessaire et parfois
+          implicite de la censure, et une conception très traditionnelle des mécanismes de propagande.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les fonds photographiques de l’Établissement de communication et de production audiovisuelle de la Défense (fort d’Ivry) constituent le
+          corpus de départ de la recherche. La quasi-totalité de la production du SCA y est conservée, accompagnée des comptes rendus des opérateurs
+          aux armées. Une fois les contours géographiques et chronologiques du sujet définis, il est nécessaire de partir à la recherche de sources
+          complémentaires dispersées dans d’autres lieux de conservation. Concernant la structure du service et les cadres de production, les sources
+          se trouvent dans les centres de conservation d’archives institutionnelles, à savoir le Service historique de la Défense (Vincennes) et le
+          Centre historique des Archives nationales (Paris). Le profil des opérateurs est éclairé par les témoignages oraux recueillis par le
+          Département de l’innovation technologique et des entrées extraordinaires du SHD. Enfin, des sources imprimées apportent de précieux
+          renseignements sur l’utilisation et la diffusion des photographies produites par l’armée. Ces dernières sont dispersées dans de nombreux
+          fonds documentaires relatifs à la Seconde guerre mondiale, mais des échantillons conséquents et facilement repérables sont conservés à la
+          Bibliothèques du SHD, à la Bibliothèque de documentation internationale contemporaine (Nanterre) et au Mémorial de Caen.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

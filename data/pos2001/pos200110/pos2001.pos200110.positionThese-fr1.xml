@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Les îles Hawaii, autrefois appelées Sandwich, sont considérées aujourd’hui comme la tête de pont des Etats-Unis dans le Pacifique, comme
+          la vitrine de leur réussite et de leur influence dans cette région. Leur domination sur cet archipel distant de plus de 4 000 kilomètres de
+          leurs côtes, souvent décrite comme le résultat d’une <hi rend="i">manifest destiny</hi>, ne date pourtant que de 1898. Durant tout le XIX
+<hi rend="sup">e</hi> siècle, Hawaii est resté indépendant, d’abord sous le régime d’un monarchie indigène jusqu’en 1893, puis d’une
+          éphémère république contrôlée par les résidents blancs de Honolulu. Les puissances européennes s’y sont intéressées de près, trois d’entre
+          elles en particulier: la Russie, la Grande-Bretagne et la France.</p>
+        <p>Cette dernière ne s’y implante durablement qu’à partir de 1837 lorsque le capitaine Du Petit-Thouars nomme un agent consulaire dans la
+          capitale. Les intérêts français aux Sandwich sont variés: politiques et stratégiques d’abord, dans la mesure où ces îles apparaissent très
+          tôt comme la «clé du Pacifique nord »; religieux aussi, puisque c’est une société missionnaire française, la congrégation de Picpus, qui y
+          introduit le catholicisme; économiques enfin, les deux ports de Lahaina et surtout d’Honolulu se trouvant pendant une vingtaine d’années, de
+          1845 à 1865, au centre de la pêche baleinière française. Décrire et analyser l’action multiple de la France aux Sandwich, la comparer avec
+          celle qu’elle a pu mener dans des territoires aujourd’hui français, Tahiti notamment, peuvent permettre d’éclairer d’un jour nouveau les
+          origines de sa présence en Océanie et dans le Pacifique.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Le principal fonds utilisé, le plus riche aussi, est celui du ministère des Affaires étrangères, dans les deux dépôts de Paris et de
+          Nantes. Les archives conservées à Paris permettent de reconstituer les relations diplomatiques entre la France et les Sandwich et la manière
+          dont les événements d’Hawaii et de Polynésie sont perçus par les autorités françaises. Les archives du centre deNantes, rapatriées du
+          consulat de France à Honolulu, fournissent des informations complémentaires sur les intérêts français dans la région, et, plus généralement,
+          sur la vie quotidienne en ces mers éloignées. Parmi les autres fonds partiellement ou complètement dépouillés, il faut citer ceux du
+          ministère de la Marine, déposés aux Archives nationales et au Service historique de la Marine à Vincennes; les papiers de l’armateur Dobrée
+          à Nantes, ainsi que les remarquables journaux de bord manuscrits du chirurgien Pierre-Adolphe Lesson, venu à Honolulu en 1840, qui sont
+          conservés à la bibliothèque municipale de Rochefort. Enfin, une vingtaine de récits de voyage publiés rendent bien toute la diversité du
+          regard porté par les Français sur les transformations rapides de l’archipel hawaiien.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

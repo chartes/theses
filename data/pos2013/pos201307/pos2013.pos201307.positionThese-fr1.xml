@@ -1,0 +1,80 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Depuis les travaux d’Olivier-Martin, on a coutume d’enseigner que les arrêts de règlement édictés par les parlements d’Ancien Régime, s’ils s’apparentaient à des actes législatifs quant au fond (dans la mesure où ils concernaient les matières les plus diverses), n’étaient jamais que des mesures « provisionnelles » et « subordonnées », tant du point de vue de la royauté que de celui des parlementaires eux-mêmes.  </p>
+		<p>Des études récentes, consacrées à la production réglementaire de tel ou tel parlement à l’époque moderne, ont pourtant montré que les hauts magistrats ne partageaient pas entièrement cette vision, et qu’ils considéraient que leurs arrêts de règlement, ou en tout cas certains d’entre eux, avaient une valeur normative équivalente à celle des « lois du roi ».  </p>
+		<p>Dans la mesure où il a par ailleurs été démontré, de manière tout aussi récente, que les principaux arguments avancés par les parlementaires d’Ancien Régime pour justifier leur pouvoir de vérifier et d’interpréter les ordonnances royales avaient des racines tardo-médiévales, il est plus que jamais légitime de se demander si la tendance des grands juges à s’ériger en co-législateurs souverains n’était pas elle aussi déjà en germe à la fin du Moyen Âge. </p>
+		<p>L’examen des registres du parlement de Paris qui correspondent aux années 1380-1436, c’est-à-dire au règne de Charles VI et au pseudo-règne d’Henri VI de Lancastre, permet d’apporter un début de réponse à cette interrogation. Il en ressort que si le pouvoir normatif de la « cour souveraine et capitale du royaume » présentait à cette époque certaines particularités par rapport au pouvoir législatif royal, tant du point de vue des conditions de sa mise en œuvre que des matières dans lesquelles il intervenait, les mesures qui résultaient de l’exercice de ce pouvoir n’avaient pas une portée fondamentalement différente de celle des « lois du roi », et se situaient au même niveau que ces dernières dans la hiérarchie des normes, du moins dans l’esprit des parlementaires eux-mêmes. Ce dernier constat n’a d’ailleurs rien de particulièrement surprenant quand on sait dans quelles conditions la fonction royale fut assumée durant cette période, et quelle place le Parlement entendait occuper à l’époque au sein de l’ordonnance juridique et politique.  </p>
+    
+    
+     </div>
+              <div type="sources"/>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

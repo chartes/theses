@@ -1,0 +1,102 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Le collège de Notre-Dame-de-Bayeux a été fondé à Paris en 1371 par maître Gervais Chrétien, premier médecin du roi Charles V.
+          L’institution, située rue Boutebrie, et rapidement désignée sous le nom de son fondateur, participe du dense réseau des collèges parisiens,
+          principalement situés sur la rive gauche de la Seine, à proximité des lieux d’enseignement de l’Université de Paris. Si le <num>xiv<hi rend="sup">e</hi></num> siècle a déjà vu la création de nombre de collèges universitaires, la fondation de Gervais Chrétien a su se
+          démarquer quelque peu et obtenir la faveur de Charles V, qui se traduit par l’intrusion du pouvoir royal dans son organisation. La présente
+          étude porte sur divers aspects de la vie du collège, depuis les prémices de la fondation dans la seconde moitié du <num>xiv<hi rend="sup">e</hi></num> siècle, jusqu’aux premières années du <num>xvi<hi rend="sup">e</hi></num> siècle. Au cours de l’époque moderne, le collège
+          de Notre-Dame-de-Bayeux ne semble pas avoir eu un grand rayonnement ; on peut se demander ce qu’il en est durant l’époque médiévale, alors
+          que la multiplication même du nombre des collèges peut rendre incertain l’avenir d’une fondation, notamment à la suite du décès du
+          fondateur. C’est en cela que l’étude d’une telle institution se révèle particulièrement intéressante ; loin d’atteindre la taille et la
+          renommée des plus grands établissements parisiens, le collège de Maître-Gervais, fort de son statut de fondation royale, a su passer outre
+          les difficultés et assurer la pérennité de son existence.</p>
+        <p>La fondation présente également de fortes spécificités intrinsèques ; la principale d’entre elles est sans doute la création en son sein de
+          deux bourses destinées à l’étude des sciences du <hi rend="i">quadrivium</hi>, instituées par le roi Charles V. Mais le collège fait
+          également preuve d’une identité normande affirmée, et constitue un véritable relais parisien de ce réseau régional. Enfin, cette étude
+          permet de mettre en relief une évolution particulière aux collèges universitaires, qui les fait progressivement passer d’une fonction
+          d’hébergement des étudiants, à un rôle d’enseignement et de formation intellectuelle.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les archives médiévales du collège de Maître-Gervais sont encore actuellement en partie conservées ; très riches en ce qui concerne les
+          transactions immobilières et les biens du collège, elles sont en revanche largement lacunaires pour ce qui est des comptes. La plus grande
+          partie du chartrier se trouve conservée aux Archives nationales, au sein des séries H, M et S. Le fonds de l’Université, à la bibliothèque
+          de la Sorbonne, comprend également quelques-uns des documents médiévaux autrefois serrés dans l’<hi rend="i">archa communis.</hi> à l’image
+          des autres collèges parisiens, les archives du collège de Maître-Gervais contenaient au Moyen Âge, outre les textes fondateurs et
+          statutaires, des titres de propriétés et d’autres documents de nature foncière ou judiciaire touchant aux biens du collège, des séries de
+          comptes, et un cartulaire. La présente étude s’est largement appuyée sur les textes de type statutaire, rédigés par Gervais Chrétien en
+          personne ; très complets, ils comprennent de nombreux détails fort utiles à l’historien désireux de reconstituer la vie quotidienne au
+          collège. Cette abondante production de statuts vient en partie compenser l’absence presque totale de comptes, qui n’ont pas survécu à
+          l’époque moderne. Enfin, une analyse attentive du cartulaire médiéval ainsi que le dépouillement des séries M et S ont permis de retracer le
+          patrimoine foncier du collège, que ce soit à Paris même ou en Normandie. Par ailleurs, l’étude des documents d’archives, et notamment des
+          cotes successives, a eu pour corollaire celle des conditions de conservation et de classement des actes par les membres du collège.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

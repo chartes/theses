@@ -1,0 +1,81 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>La réouverture de la galerie des Gobelins en 2007 et les polémiques autour de la destination de l’hôtel de la Marine ont récemment attiré l’attention générale sur l’institution culturelle qu’est le Mobilier national. Son histoire, très ancienne, est intimement liée à la monarchie. Elle puise ses sources dans les fonctions de gestion du mobilier royal dévolues à un simple valet de chambre de l’Hôtel du Roi au Moyen Âge. C’est Henri IV qui en fait une institution, à laquelle Louis XIV donne une ampleur sans précédent. On trouve peu d’équivalents en Europe. La <hi rend="i">Government Art Collection</hi> britannique, par exemple, n’a qu’un siècle d’existence. Ce lien très fort qui existe avec la monarchie pose la question du devenir du Garde-Meuble lorsque celle-ci s’effondre. De même, que se passe-t-il lorsqu’une nouvelle dynastie, celle des Bonaparte, se met en place ? Ces travaux s’attachent à l’étude du fonctionnement concret du Garde-Meuble pendant ces années, sous les aspects pragmatiques que sont l’emplacement, le personnel et la gestion de l’institution. Les différents dysfonctionnements, sans arrêt pointés du doigt pour la période révolutionnaire, sont à remettre en perspective dans le contexte d’activité redoublée dont a su faire preuve le Garde-Meuble avant sa suppression en 1798. En ce qui concerne le travail accompli par le Mobilier impérial, en plus de décrire l’ampleur des efforts consentis, cette étude aborde ce qu’il en reste aujourd’hui, en prenant l’exemple de trois palais impériaux de la région parisienne. Le thème de la restitution historique, d’actualité depuis un demi-siècle, laisse aujourd’hui encore peu de conservateurs de châteaux-musées indifférents.  </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+		<p>Les archives du Garde-Meuble des périodes révolutionnaire et impériale se trouvent aux Archives nationales de France, dans la série O², où elles représentent un total de quatre cent dix-huit cartons. Un inventaire en a été dressé en 2005, favorisant ainsi les démarches d’échantillonnage. Le Mobilier national ne conserve quant à lui que deux journaux d’entrées et de sorties de meubles et quelques copies de correspondance. Ajoutons les différents recueils de loi, qui permettent de préciser les aspects institutionnels de l’existence du Garde-Meuble. Les estampes conservées à la Bibliothèque nationale de France donnent un aperçu des bâtiments successivement occupés par l’institution. Enfin, les productions écrites et iconographiques des premiers directeurs reflètent l’atmosphère de cette période mouvementée. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

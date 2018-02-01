@@ -1,0 +1,79 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+          <p>Beauvais, « bonne ville » du roi de France, était au <num>xvi<hi rend="sup">e</hi></num> siècle la capitale du Beauvaisis, pays au nord du Bassin parisien, aux marges de l’Île-de-France et de la Picardie. Ses églises étaient nombreuses et riches en mobilier. En effet, la ville était constituée de treize paroisses, dix intra-muros et trois autres situées dans les faubourgs. Les ordres religieux occupaient également une place importante. Cinq abbayes et couvents d’hommes étaient établis à Beauvais : trois fondations bénédictines auxquelles étaient venus s’ajouter deux couvents de Cordeliers<term rend="index" type="Beauvais" key="Cordeliers"/> et de Jacobins<term rend="index" type="Beauvais" key="Jacobins"/>. Le couvent du Tiers-Ordre de saint François<term rend="index" type="Beauvais" key="Tiers-Ordre de saint FranÁois"/> et celui de Penthemont<term rend="index" type="Beauvais" key="Abbatiale de Penthemont"/> étaient, quant à eux, occupés par des moniales. La ville abritait enfin six collégiales dont quatre simples et deux associées à une paroisse. Beauvais est donc un terrain d’investigation exemplaire pour l’étude de ce phénomène majeur dans l’histoire de l’art qu’est l’accumulation des objets d’art dans les églises à la Renaissance.</p>
+          <p>Les bornes chronologiques retenues sont celles du début du règne de François I<hi rend="sup">er</hi><term rend="index" key="FranÁois Ier, roi de France"/> (1515) et de la mort de Charles IX<term rend="index" key="Charles IX, roi de France"/> (1574). Le changement dynastique en 1515 coïncida avec l’apogée des premiers chantiers flamboyants engagés dans la ville à la fin du <num>xv<hi rend="sup">e</hi></num> siècle et au début du <num>xvi<hi rend="sup">e</hi></num> siècle. Pour ne citer que les principaux, la cathédrale<term rend="index" type="Beauvais" key="CathÈdrale Saint-Pierre"/> Saint-Pierre<term rend="index" type="Beauvais" key="CathÈdrale Saint-Pierre"/> vit à cette époque l’achèvement des deux portails du transept tandis que les chœurs de Saint-Sauveur<term rend="index" type="Beauvais" key="…glise paroissiale Saint-Sauveur"/> et de Saint-Étienne<term rend="index" type="Beauvais" key="CollÈgiale Saint-…tienne"/> étaient en cours d’agrandissement ; en 1522 fut dédicacée l’église Sainte-Marguerite<term rend="index" type="Beauvais" key="Eglise paroissiale Sainte-Marguerite"/>. Les finances des institutions et des particuliers furent dès lors libérées d’une partie des travaux de gros œuvre, dégageant par là même une marge pour la commande de décor. Le mobilier pouvait désormais prendre place dans des églises en partie édifiées. La fin du règne de Charles IX<term rend="index" key="Charles IX, roi de France"/> fut marquée par un essoufflement des chantiers à Beauvais alors que la vague d’embellissement et d’enrichissement du mobilier et du décor des églises se prolongeait dans les petites villes et les villages de la région. Les travaux qui se poursuivirent dans le dernier quart du <num>xvi<hi rend="sup">e</hi></num> siècle concernèrent essentiellement les clochers, comme à Saint-Étienne<term rend="index" type="Beauvais" key="CollÈgiale Saint-…tienne"/> ou à Saint-Sauveur<term rend="index" type="Beauvais" key="…glise paroissiale Saint-Sauveur"/>. Dans la cathédrale<term rend="index" type="Beauvais" key="CathÈdrale Saint-Pierre"/>, les dommages provoqués par la chute de la tour lanterne en 1573 concentraient désormais tous les efforts. 1515-1574 est donc une période clé pendant laquelle s’épanouit la commande artistique à Beauvais.</p>
+          <p>Le décor et le mobilier des églises de Beauvais et de ses environs méritaient une étude à part entière en raison de l’ampleur quantitative du renouvellement et de leur qualité stylistique. Cette étude a pour ambition de comprendre comment les sensibilités religieuse et artistique se sont exprimées dans la production documentée ou conservée. Il s’agit aussi de saisir les circonstances et les manifestations des mutations qui traversent cette production.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+          <p>L’étude des œuvres conservées et le travail de dépouillement d’archives ont constitué les axes essentiels de ce travail. Les archives communales de Beauvais ainsi que de nombreux fonds notariés ont brûlé durant la seconde guerre mondiale mais ce manque a pu être compensé par l’étude des archives départementales, notamment les séries ecclésiastiques (G, H), révolutionnaire (Q) et notariale (fonds Jouan : 2 Ep 9), et celle des archives de la bibliothèque Sainte-Geneviève. Quelques pièces conservées aux Archives nationales, notamment la confirmation des statuts des menuisiers (JJ 254, nº 311), ont été mis à contribution pour cette étude. Enfin, de nombreux manuscrits et dessins ont permis d’affiner les recherches : la collection Bucquet-Aux Cousteaux conservée à la bibliothèque municipale de Beauvais ainsi que les collections Picardie et Gaignières de la Bibliothèque nationale de France.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

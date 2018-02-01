@@ -1,0 +1,134 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Il est difficile aujourd’hui d’imaginer que Lille a été marquée par l’eau jusque dans son histoire récente. L’empreinte de l’eau apparaît
+          dans la vie quotidienne, sans que nécessairement on la reconnaisse ou qu’on s’y attache, par négligence ou ignorance. Ce paradoxe apparaît
+          d’autant plus surprenant que l’eau est invisible, ou presque, de la surface urbaine lilloise aujourd’hui. Et pourtant, la Deûle participe à
+          la fois de l’origine de la cité, de son développement au cours de l’histoire et de son quotidien encore. Plus généralement, l’eau a été
+          oubliée, semble-t-il, alors qu’elle demeure une donnée essentielle. L’eau est partout, par la pluie, les canaux, la rivière, les nappes
+          phréatiques. Elle apparaît jusque dans le nom de la ville.</p>
+        <p>En ce qui concerne la Deûle, son rejet à la périphérie de Lille et les nombreux aménagements dont elle a fait l’objet sont
+          contradictoires : d’une part, l’impression d’un dégoût et d’une inutilité s’expriment, d’autre part pourtant, son importance semble
+          reconnue. C’est ce mouvement perpétuel d’oppositions qu’il nous a paru intéressant d’étudier en même temps que de cerner la manière dont on
+          peut arriver à s’accommoder d’un espace ainsi anthropisé. Cette thèse est conçue comme une illustration pouvant prendre place au sein d’une
+          vision plus générale qui réfléchirait aux rapports entre l’homme et son milieu. À son modeste niveau, l’environnement d’un cours d’eau forme
+          une scène à l’aune de laquelle nous pouvons observer ce jeu d’emprise humaine, de conditionnement de l’espace, puis l’effet de ces lieux
+          transformés sur l’individu.</p>
+        <p>Ce travail s’inscrit dans la continuité de trois grandes directions. Tout d’abord, il était nécessaire d’approfondir l’étude de la Deûle et
+          l’histoire de l’eau à Lille. Ensuite, les recherches d’André Guillerme ont constitué un deuxième axe, car elles affichent et légitiment une
+          approche clairement transdisciplinaire du sujet, tout en ouvrant des perspectives vers une compréhension plus perceptive et sensible. Enfin,
+          le renouvellement des travaux sur ces questionnements, depuis une décennie environ, pousse à orienter vers une analyse du façonnement d’un
+          paysage urbain fluvial pour en déduire l’image mentale de l’eau dans l’esprit des individus.</p>
+        <p>1858 est un tournant important dans l’histoire de la cité : celle-ci connaît son septième agrandissement et se déploie uniquement au
+          sud-ouest. Par conséquent, le système défensif est entièrement à revoir aussi bien au niveau des inondations que des fortifications mêmes.
+          L’époque voit également se développer les thèses hygiénistes et méphitiques sur la contagion des maladies par les odeurs et l’insalubrité,
+          qui se diffusent largement dans le public.</p>
+        <p>La date de 1921 coïncide avec la décision de déclasser les fortifications. Ainsi, elle sonne la fin de l’importance militaire de la place,
+          qui formait une des raisons principales des aménagements que ville et eau avaient subis jusque-là. 1921 marque également un point de départ
+          en matière d’aménagement dans la ville. Des espaces sont libérés de l’emprise militaire, de nouveaux projets peuvent naître, le cœur de
+          l’aire urbaine dispose de surfaces à investir.</p>
+        <p>La Deûle, affluent de la Lys, coule dans le bassin hydrographique de l’Escaut. Cette région se caractérise par un réseau de rivières dense
+          dans un territoire extrêmement plat et homogène. Son tracé suit la direction générale de tous les cours d’eau de cette région, du sud-ouest
+          vers le nord-est. La Deûle s’inscrit dans une topographie atypique à Lille, au point de rencontre de terrains de nature différente. Les
+          caractéristiques de ce paysage sont bien déterminées  : le milieu est humide, mal drainé, saturé d’activités industrielles et artisanales ;
+          la nappe phréatique se trouve à fleur de terre et imprègne un sol argilo-sablonneux peu stable.</p>
+        <p>À Lille, la Deûle se divise en bras qui, avec le temps, sont devenus des canaux plus ou moins figés par les constructions et l’absence de
+          courant. Leur assimilation à des égouts les a fait exclure du champ d’étude, d’autant plus qu’ils sont considérés distinctement du cours
+          d’eau dont ils sont issus et qu’une grande partie d’entre eux est couverte. La Deûle n’est jamais décrite, dans les sources, de manière
+          uniforme et globale. Elle est composée de trois parties, la Haute, la Moyenne et la Basse Deûle. La Haute Deûle se situe en amont de Lille,
+          la Moyenne Deûle est le bief qui traverse la ville, la Basse Deûle forme la partie entre Lille et le confluent avec la Lys.</p>
+        <p>Le cours de la Deûle présente un débit très faible, surtout au début de la période, car le dénivelé est peu marqué. La Deûle s’intègre aux
+          défenses de la place dans la traversée de celle-ci. Elle joue plusieurs rôles, même encore au début du <num>xx<hi rend="sup">e</hi></num> siècle : voie de navigation, voie de dessèchement, réservoir pour les inondations. Mais elle n’a pas d’usage énergétique. La
+          Deûle est très aménagée, ce qui la fait difficilement distinguer d’un canal. Cette ambiguïté entre action humaine et éléments naturels
+          exprime le caractère de cette voie d’eau et influe sur les fonctions qu’on lui prête : canal aisément navigable et rivière au courant plus
+          irrégulier.</p>
+        <p>Dans ce contexte, Lille réunit toute la complexité des questions ayant trait à l’eau. L’enchevêtrement des divers aspects est amplifié par
+          le grand nombre d’intervenants, directs ou indirects : le Génie militaire, les ingénieurs des Ponts-et-Chaussées, la municipalité lilloise,
+          les industriels et les particuliers riverains. À cela s’ajoutent les débats sur les aménagements des berges qui dépendent de servitudes et
+          règlements souvent remis en cause. Les rives et les quais ne constituent pas de manière évidente un espace public partagé librement.</p>
+        <p>L’analyse prend en compte l’aspect historique souvent négligé de l’aménagement de l’eau et des abords d’une surface d’eau vive. Il s’agit,
+          à travers l’étude des évolutions subies par la Deûle, de créer des rapprochements entre la perception urbanistique d’un territoire et
+          l’impression mentale qu’elle laisse. Ainsi peut-on tenter de comprendre la réciprocité d’influences de l’élément fluvial sur la façon de
+          vivre et de se déplacer de la population et de l’impact humain sur l’eau. Cette réflexion s’imposait, à Lille, pour ébaucher une description
+          et une définition du mouvement profondément ambivalent qui caractérise les relations entre la ville et la Deûle.</p>
+        <p>Le projet initial, qui dépasse l’objet de la recherche, gît dans la volonté de comprendre de quelle manière on en vient à vivre dans un
+          espace et un environnement modifiés, anthropisés, sur lesquels l’individu qui en use n’a pas forcément été celui qui a présidé aux
+          modifications de ceux-ci, n’a donc pas de contrôle dessus et n’a pas nécessairement choisi ces configurations.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources sont assez disparates. Pour la plupart primaires, elles procèdent aussi bien des archives nationales que départementales et
+          municipales. Les cartes et plans y ont une place importante qui dépasse la simple illustration et a nécessité l’élaboration d’un corpus
+          d’annexes dans un second tome. Leur aspect lacunaire et non exhaustif se révèle lorsqu’il faut aller au-delà de la reconstitution
+          chronologique des aménagements urbains autour de l’eau pour déterminer la perception par les individus. C’est au détour des archives du
+          Génie militaire de Lille, du service de la navigation du Nord, ou encore du service des travaux municipaux, qu’une remarque sensitive perce
+          au travers du langage administratif.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

@@ -1,0 +1,85 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+        <p>Léon Bloy (1846-1917) s’est taillé dans la littérature de la fin du <num>xix</num><hi rend="sup">e</hi> siècle et du début du <num>xx</num><hi rend="sup">e </hi>siècle une place à part d’écrivain incompris et volontairement marginalisé. Il est l’homme de tous les paradoxes : chrétien anticlérical, homme de lettres fustigeant les impératifs de la littérature, marginal avide de la reconnaissance de la multitude. Ce sont là autant de paradoxes qu’il résout en établissant un système de pensée ouvertement placé dans ce qu’il estime être l’absolu. Proche à bien des égards de l’intransigeantisme catholique dont il procède par de nombreux points, Bloy affirme néanmoins n’appartenir à aucun mouvement, à aucun système.  </p>
+        <p>De même que ses contemporains, Bloy n’échappe pas à la prédilection de son époque pour l’histoire, alors vecteur d’identité et cristallisation des opinions politiques et sociales. En dehors de ses lectures et de ses pratiques propres d’approche de l’histoire, Bloy touche à ce domaine tout au long de son œuvre et non pas uniquement dans ses romans ou dans ses ouvrages d’exégèse historique. L’histoire est en réalité omniprésente chez Bloy.  </p>
+        <p>Travailler sur le lien entre Bloy et l’histoire, c’est donc également travailler sur le lien qu’entretient Bloy avec le monde contemporain, avec la société dans laquelle il vit. Lire l’histoire écrite par Bloy, c’est non seulement découvrir ses aspirations politiques et sociales, mais également, au vu de son interprétation mystique de la chose – le fameux « symbolisme de l’histoire » – appréhender sa spiritualité.  </p>
+        <p>Le Moyen Âge s’est révélé particulièrement intéressant à étudier : c’est en effet la période la plus révélatrice de cette projection de la personnalité bloyenne sur un objet historique, entièrement reconstruit et repensé. Or, cette figure du Moyen Âge est justement ce qui correspondrait à un mythe de l’âge d’or dans l’imaginaire catholique de la fin du <num>xix</num><hi rend="sup">e</hi> siècle, alliant unité spirituelle et suprématie pontificale.  </p>
+        <p>L’historiographie bloyenne est toujours partie du postulat de l’originalité profonde de Bloy en matière de réflexion historique. À contre-courant de cette idée, cette étude replace Bloy dans un contexte de production traditionaliste catholique bien particulier, afin d’établir les réelles originalités bloyennes en matière d’approche de l’histoire. Ainsi, c’est l’ensemble de l’œuvre bloyenne qui est considéré sans limitation de genre.  </p>
+        <p>Afin de percevoir au mieux l’originalité de Bloy et d’aider ainsi à une meilleure appréciation de son œuvre, il s’agit en premier lieu d’organiser un travail sur les sources de Bloy et ses moyens de connaissance de la réalité historique du Moyen Âge. Ce travail préliminaire permet dans un second lieu de discerner le système de pensée de Bloy, construit autour de l’histoire en général et du Moyen Âge en particulier. Et dans un dernier temps, sont étudiées les caractéristiques de l’écriture bloyenne de l’histoire, en lien avec la littérature et l’historiographie catholiques contemporaines.  </p>
+      </div>
+              <div type="sources"><head>Sources </head>
+        <p>Le corpus étudié comprend l’ensemble de l’œuvre de Léon Bloy. Cela comporte aussi bien les écrits publiés du vivant de l’auteur que ses ouvrages posthumes, et sa correspondance, publiée comme inédite. Cette dernière est conservée à la Bibliothèque nationale de France, au département des Manuscrits. Par ailleurs, il reste des éléments de correspondance inédite dans le fonds familial, conservé aujourd’hui par la famille Galpérine.  </p>
+        <p>Pour travailler au mieux sur les ouvrages publiés du vivant de Bloy, une critique génétique des textes a été élaborée ; les fonds Léon Bloy de la bibliothèque municipale de Périgueux et Joseph Bollery, collectionneur et admirateur de Léon Bloy, conservé à la bibliothèque municipale de La Rochelle, se sont révélés particulièrement précieux.  </p>
+        <p>Une attention toute particulière a été apportée à la presse écrite contemporaine, tout spécialement à la presse catholique. Les choix de consultation de ces titres se sont fait selon deux critères principaux : leur lecture par Bloy et la collaboration de Bloy à ces périodiques.  </p>
+        <p>De même, ont été consultés les écrits des proches de Bloy (Barbey d’Aurevilly, Blanc de Saint-Bonnet, Féval, De Groux, Huysmans, Lasserre, Maritain, Martineau) et de plusieurs de ses contemporains afin de définir au mieux l’originalité de Bloy. Ont ainsi été mis à profit des ouvrages d’historiens (Gautier, Ratisbonne, Roselly de Lorgues), d’écrivains catholiques (Hello, Huysmans, Richepin, De Gourmont, Péguy) afin d’établir une mise en perspective pertinente des écrits de Bloy.  </p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

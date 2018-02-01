@@ -1,0 +1,84 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Clive Bell appartient à un célèbre cénacle outre-Manche, le groupe de Bloomsbury, qui inclut au début du <num>xx</num><hi rend="sup">e</hi> siècle des membres tels que Virginia Woolf, John Maynard Keynes ou encore Roger Fry. Critique d’art, aux côtés de Fry, Bell fait découvrir l’art français contemporain, de Cézanne à Picasso, au public britannique. Il passe en outre beaucoup de temps en France, s’insère dans les réseaux artistiques et intellectuels et y noue de véritables amitiés. En dépit de son importance dans le groupe et de son rôle indéniable, Bell souffre d’une réputation quelque peu négative et n’a guère retenu l’attention des historiens. Le critique est la figure sociable de Bloomsbury, et le reste du groupe s’amuse de ses récits d’homme du monde, attaché aux apparences. Sans tomber dans le piège de la réhabilitation – loin de nous l’idée de nier le caractère parfois superficiel et snob de Bell –, force est de reconnaître que ses apparences mondaines ne contredisent pas la réalité de son amitié avec ses fréquentations françaises. La thématique sociale est directement liée aux questions artistiques, puisque Bell s’avère être un interlocuteur privilégié pour les artistes outre-Manche et un médiateur, et, à ce titre, joue un rôle important dans la pénétration de l’art français en Grande-Bretagne, surtout à partir des années 1920. </p>
+		<p>Nous avons voulu étudier la vie de Bell à Paris, reconstituer les réseaux sociaux français en démêlant le tourbillon mondain parisien, voir en quoi ses pratiques de sociabilité dans ce pays et même en Angleterre répondaient à un idéal culturel et comment cet idéal s’incarnait dans l’art français. Pour Clive Bell, la France ne s’arrête pas à la Manche et a autant d’importance dans son quotidien à Londres. Critique d’art, Bell est amené par sa passion à défendre et à faire connaître l’art français sur la scène britannique : quelles formes prend son effort de promotion ? Par le maintien des liens avec ses amis français, Bell fait office de pont entre deux rives : la nature des échanges avec ces artistes et autres notoriétés est au cœur de notre projet. Le personnage est en outre considéré à la fois dans et hors du groupe de Bloomsbury. Trop souvent, Bell n’a été vu que comme un membre de Bloomsbury et l’étude de sa vie en France offre un regard différent et complémentaire permettant une meilleure appréhension de son travail. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Les sources étudiées se divisent entre documents d’archives et textes publiés. Les fonds d’archives utilisés pour cette thèse sont essentiellement conservés en Angleterre. À Cambridge se trouvent les Charleston Papers de King’s College et le fonds Bell de Trinity College ; le premier se compose principalement de la correspondance passive de Bell, tandis que le second est plus centré sur ses documents de travail. Le versement d’un nouveau fonds à Trinity College en 2011, Bell II, a apporté un ensemble de documents inédits à notre corpus. À ces fonds est venue s’ajouter la correspondance de Clive et Vanessa Bell sur près de quarante ans, conservée à la Tate Archive, à Londres. L’université du Sussex conserve un dernier fonds numériquement important, celui des Charleston Papers, correspondance passive, et active dans une moindre mesure. Dans cette même institution se trouvent en outre les Leonard Woolf Papers et Monks House Papers, qui contiennent plusieurs documents, lettres et mémoires relatifs au critique. Enfin, la British Library conserve au département des manuscrits plusieurs ensembles, de taille variable, de correspondance émise ou reçue par Bell.  </p>
+		<p>Ces fonds déjà riches laissaient toutefois deux vides à combler, le premier étant le manque de lettres de Clive Bell. Quelques fonds conservés à King’s College ont pu pallier ces lacunes : plusieurs membres du groupe de Bloomsbury – Roger Fry, John Maynard Keynes, Frances Partridge – ou proches de Bell, comme J. T. Sheppard, ont légué leurs archives à l’institution. Les fonds concernant Bloomsbury ont été dispersés par les dons, ventes et legs, et certains se trouvent aux ÉtatsUnis, qu’il a fallu de fait exclure. Le second vide est une prolongation du premier : aux lettres de Picasso, Matisse, Derain, Duthuit, Cocteau, etc. adressées à Bell, il était souhaitable de confronter les réponses du critique, ce qui a suscité l’entreprise d’une recherche de la correspondance active de Bell dans les fonds privés afin de reconstituer les échanges épistolaires avec ses amis et interlocuteurs français, démarche souvent infructueuse. Malgré des résultats décevants dans bien des cas – Derain, Salmon, Kisling, Cocteau, Copeau… – la cinquantaine de lettres de Bell à Picasso et des archives Matisse dans lesquelles se trouvent des lettres de Bell au peintre, ainsi que d’autres documents à notre connaissance inédits, renseignent cette étude.  </p>
+		<p>Des sources publiées complètent ce corpus, au premier rang desquelles les publications de Clive Bell, ouvrages et articles. Elles ont été confrontées à des écrits de critiques d’art contemporains, français et britanniques. De nombreuses éditions de lettres de membres du groupe de Bloomsbury ont enfin permis d’approfondir le contexte biographique de cette thèse et les relations de Clive Bell avec ses amis londoniens. </p>
+    
+
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

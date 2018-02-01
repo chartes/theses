@@ -1,0 +1,86 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>Alors que la mort d’Henri II laisse le pouvoir monarchique fragilisé face à une présence huguenote de plus en plus problématique pour le royaume de France, François II fait appel, selon la volonté de son père, à Philippe II pour bénéficier de ses conseils. Le monarque espagnol envoie alors Thomas Perrenot de Chantonnay comme nouvel ambassadeur résident auprès du Roi Très Chrétien afin d’être informé de l’évolution des troubles religieux français. </p>
+    <p>Fort de ses convictions, le diplomate espagnol doit malgré tout s’adapter à ce royaume étranger pour en comprendre les pratiques en particulier politiques. Plus qu’une découverte, son ambassade est une confrontation. </p>
+    <p>C’est ainsi que s’opère un processus notable d’acculturation de Chantonnay, dont l’étude permet d’appréhender au plus près l’action de l’ambassadeur espagnol. Plutôt que de se focaliser sur les excès d’un personnage longtemps décrié faute d’avoir considéré la nature de sa mission, il s’agit d’analyser les étapes et les modalités de ce processus pour mettre en avant combien Chantonnay demeure un témoin précieux sur les premiers soubresauts de violence qui agitent alors la France. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources </head>
+    <p>Cette étude s’appuie avant tout sur le dépouillement de la correspondance active et passive de Chantonnay avec Philippe II, constituant un ensemble de 328 lettres rédigées entre juin 1559 et mars 1564 et conservées à l’<hi rend="i">Archivo General de Simancas</hi>. Il faut par ailleurs y ajouter quelques dépêches entre le diplomate et Marguerite de Parme ou bien encore l’empereur Ferdinand, Chantonnay étant l’agent de toute la dynastie habsbourgeoise.  </p>
+    <p>Confrontées à celles de ses homologues, anglais ou italiens notamment, les lettres du diplomate espagnol révèlent l’originalité et la pertinence du regard porté par le Franc-comtois sur la cour et le royaume de France. Les témoignages apportés par les mémorialistes du temps ont également permis de préciser le récit du diplomate espagnol, tout comme la correspondance de Catherine de Médicis elle-même avec le roi et la reine d’Espagne, sa fille.  </p>
+    <p>Enfin, des sources familiales ont été mises à profit afin d’éclairer l’existence du diplomate franc-comtois et comprendre au mieux le processus de son acculturation. Les actes notariés, testaments et multiples lettres ont révélé une politique familiale concertée dans laquelle s’inscrit Chantonnay au même titre que son frère Antoine, le cardinal Granvelle. </p>
+    
+    
+    
+    </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

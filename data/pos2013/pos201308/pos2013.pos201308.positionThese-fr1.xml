@@ -1,0 +1,84 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction </head>
+    <p>À partir de 1471, Charles le Téméraire, duc de Bourgogne, s’efforce de mettre en place une armée permanente pour la « garde, seürté et deffense » de ses terres ; cette armée est constituée de ce que l’on appelle « les compagnies de l’ordonnance », ou les compagnies d’ordonnance. Il suit en cela l’exemple de son cousin le roi de France, qui s’est doté d’un tel outil vingt-six ans plus tôt. L’ordonnance d’Abbeville met en place cette institution le 31 juillet 1471. Elle est par la suite remplacée par deux ordonnances successives, celle de Bohain le 13 novembre 1472 puis celle de Saint-Maximin de Trèves en novembre 1473. Cette dernière ordonnance est en outre complétée par une dernière ordonnance, dite du camp de Lausanne, prise lors de la campagne de 1476 contre les Suisses, pour réorganiser l’armée bourguignonne après la défaite de Grandson. </p>
+		<p>Une telle institution est une chose exceptionnelle au Moyen Âge, n’ayant eu qu’un seul précédent. De fait, elle a très tôt intéressé les historiens et bénéficie d’une bibliographie relativement abondante. Toutefois, les textes à son origine sont relativement méconnus, faisant au mieux l’objet de vieilles éditions. L’objectif principal de ce travail est donc de fournir une édition critique de toutes ces ordonnances, et d’en livrer un commentaire prenant en compte des points jusqu’alors négligés de ces ordonnances ainsi que les avancées récentes de la recherche. Il s’agit de déterminer l’originalité de cette institution, et donc la part de l’influence du modèle français, mais aussi d’autres éventuelles sources d’inspiration, autour de trois axes d’étude, que sont les aspects militaires, l’encadrement de l’armée et enfin le service du duc. </p>
+    
+    
+     </div>
+              <div type="sources"><head>Sources  </head>
+    <p>Les sources essentielles de cette étude sont bien entendu les quatre ordonnances militaires de Charles le Téméraire. Celle de 1471 est connue par une copie dans un registre de la chambre des comptes de Dijon, tandis qu’une copie de travail de celle de 1476 en est le seul témoin survivant. Celle de 1472 n’est connue que par une édition de la fin du <num>xvi</num><hi rend="sup">e</hi> siècle. Quant à celle de 1473, ce sont treize témoins survivants qui ont pu être mis à profit pour établir cette édition. Parmi ceux-ci, on compte cinq manuscrits contemporains, exemplaires fournis aux capitaines des compagnies, deux copies destinées aux Chambres des comptes ainsi que l’exemplaire du duc lui-même, qui a été utilisé comme manuscrit de base pour cette édition. </p>
+		<p>Il faut à cela ajouter d’autres textes législatifs du duc, ainsi que les chroniques contemporaines. Les ordonnances royales fournissent un support de comparaison intéressant. Enfin et surtout, les documents administratifs et surtout financiers peuvent venir à l’appui des textes législatifs. </p>
+    
+    
+    
+			</div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>

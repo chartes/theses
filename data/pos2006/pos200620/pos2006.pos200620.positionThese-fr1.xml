@@ -1,0 +1,97 @@
+<!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-199904" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">@TODO@</title>
+        <title type="sub">@TODO@</title>
+        <author key="@TODO@" ref="@TODO@">@TODO@</author>
+      </titleStmt>
+      <editionStmt>
+        <edition>École des chartes</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>École des chartes</publisher>
+        <date when="@TODO@"/>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/"/>
+        </availability>
+      </publicationStmt>
+      <seriesStmt>
+        <title>Positions des thèses</title>
+        <idno type="ISSN">0755-2976</idno>
+        <idno type="URI">http://www.sudoc.fr/013565311</idno>
+      </seriesStmt>
+      <sourceDesc>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @TODO@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <creation>
+        <date when="@TODO@"/>
+      </creation>
+      <langUsage>
+        <language ident="fr"/>
+      </langUsage>
+    </profileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
+        </cRefPattern>
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
+          <p>This pointer pattern extracts parts</p>
+        </cRefPattern>
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
+          <p>This pointer pattern extracts Front, Body and Back</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+  </teiHeader>
+  <text xml:base="@TODO@">
+      <body>
+          <div n="1" type="textpart" sub="section">
+              <div type="introduction"><head>Introduction</head>
+        <p>Entre 1898 et 1987, plusieurs dizaines de milliers de personnes travaillèrent, à Dunkerque, dans l’un des plus grands chantiers français de
+          construction navale, les Ateliers et Chantiers de France (A.C.F.). L’étude cherche à envisager divers aspects de l’évolution et de la vie de
+          cette entreprise sur une période qui se limite, pour des raisons de sources et de cohérence, aux Trente Glorieuses (1945-1973). L’histoire
+          de la construction navale en France reste encore, pour une large part, à faire : la construction navale, qui ne compte pas parmi les
+          secteurs de pointe de l’industrie, n’a guère suscité l’intérêt des historiens. Ce sont surtout les anciens salariés, à travers des livres,
+          des associations et des initiatives diverses, qui maintiennent vivante la mémoire de cette activité très spécifique. Quelques monographies
+          ont été consacrées dans les années 1990 et 2000 à l’un ou l’autre des chantiers français, mais un ouvrage de synthèse sur l’ensemble de
+          cette branche reste encore à écrire. Cette étude aborde une entreprise qui a déjà fait l’objet de recherches, mais dont les archives étaient
+          encore inexploitées. Elle tend à démontrer le poids du contexte mondial et national dans les destinées du chantier : fort d’une longue
+          tradition industrielle, celui-ci réagit en fonction de ses points forts à la pression croissante de la concurrence mondiale. Cependant, le
+          chantier n’aurait pu survivre sans l’appui de puissants acteurs extérieurs, à la fois publics et privés.</p>
+      </div>
+              <div type="sources"><head>Sources</head>
+        <p>Les sources utilisées sont d’une grande variété. Le Centre des archives du monde du travail, à Roubaix, conserve un très important fonds
+          d’archives de l’entreprise. Les dossiers les plus intéressants émanent de la direction parisienne de la Société anonyme des A.C.F., de la
+          direction dunkerquoise du chantier, ainsi que du secrétariat et du service des relations publiques. Ils sont complétés par les documents
+          conservés à Dunkerque par l’Association des anciens des A.C.F., qui correspondent aux archives du service du personnel. Riches et variées,
+          ces archives restent néanmoins lacunaires, ce qui a nécessité, afin de pouvoir développer certains thèmes, le recours à des fonds annexes et
+          à d’autres types de sources. Les archives administratives (services de la Marine marchande et des Finances) ont permis d’aborder la question
+          des relations entre les chantiers navals et l’État. Les archives du Crédit lyonnais comportaient des indications précieuses sur l’évolution
+          financière de l’entreprise. De même, la Chambre syndicale des constructeurs de navires possède des dossiers statistiques très intéressants
+          sur la production des chantiers français durant cette période. Plusieurs périodiques professionnels ont complété ces sources en apportant
+          d’utiles renseignements sur les investissements et l’activité des Ateliers et Chantiers de France. En revanche, le recours aux autres types
+          de sources, audiovisuelles, électroniques ou orales, est resté ponctuel.</p>
+      </div>
+          </div>
+          <div n="2" type="textpart" sub="section">
+              <div type="part">
+                <!-- @TODO@ -->
+              </div>
+          </div>
+          <div n="3" type="textpart" sub="section">
+              <div type="conclusion">
+                  <!-- @TODO@ -->
+              </div>
+              <div type="appendix">
+                  <!-- @TODO@ -->
+              </div>
+          </div>
+      </body>
+  </text>
+</TEI>
