@@ -40,16 +40,17 @@
       <refsDecl n="CTS">
     <!--
         <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
           <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
+    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section']//tei:div[@n='$2' and @type='part'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>
-    -->
+
         <cRefPattern n="Section" matchPattern="(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @subtype='section'])">
+          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
           <p>This pointer pattern extracts Front, Body and Back</p>
         </cRefPattern>
       </refsDecl>
@@ -57,14 +58,16 @@
   </teiHeader>
   <text>
       <body xml:lang="fr">
-          <div n="1" type="textpart" subtype="section">
+          <div n="1" type="section">
               <div type="introduction"></div>
               <div type="sources"></div>
           </div>
-          <div n="2" type="textpart" subtype="section">
+          <div n="2" type="section">
+              <!-- @TODO@
               <div type="part">
-                <!-- @TODO@ -->
+
               </div>
+               -->
           </div>
           <div n="3" type="textpart" subtype="section">
               <div type="conclusion">
