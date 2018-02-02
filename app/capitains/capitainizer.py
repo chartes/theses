@@ -22,13 +22,12 @@ SRC_FOLDERS=[
 ]
 
 DEST_PATH="../../data"
-THESES_DATA_TEMPLATE = 'template.xml'
 METADATA = '../../theses.csv'
 
 
 if __name__ == "__main__":
 
-    pt = PositionThese(METADATA, '__cts__textgroup.xml', '__cts__work.xml', 'edition.xml')
+    pt = PositionThese(SRC_PATH, METADATA, '__cts__textgroup.xml', '__cts__work.xml', 'edition.xml')
 
     for folder_name in SRC_FOLDERS:
         pt.write_textgroup(folder_name, DEST_PATH)

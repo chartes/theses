@@ -6,11 +6,13 @@ from datetime import date
 
 class PositionThese:
 
-    def __init__(self, metadata, textgroup_template, work_template, edition_template):
+    def __init__(self, src_path, metadata, textgroup_template, work_template, edition_template):
         self.__tg_template_filename = textgroup_template
         self.__w_template_filename = work_template
         self.__e_template_filename = edition_template
         self.__metadata = {}
+        self.__src_path = src_path
+        self.__nsmap = {"ti": 'http://www.tei-c.org/ns/1.0'}
 
         #remove double quotes then trim
         clean = lambda s: s[1:-1].strip()
@@ -18,8 +20,7 @@ class PositionThese:
         with open(metadata, 'r') as meta:
             for line in meta.readlines()[1::]:
                 line = line.split(",")
-                line.extend([""]*(13-(len(line)-1)))
-                titres = clean(line[6]).split(".")
+                line.extend([""]*(13-(len(line)-1))) #fill with empty str. should rather use a default dict
                 self.__metadata[line[0]] = {
                     "id" : line[0],
                     "promotion" : line[1],
@@ -37,13 +38,23 @@ class PositionThese:
                     "an_these": line[13],
                     "sous_titre": ""
                 }
+                # retrieve the titles from the src edition
+                src_edition = self.src_edition(self.__metadata[line[0]]["promotion"], self.__metadata[line[0]]["tri"])
+                for title in src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap):
+                    if title.get('type') == "sub":
+                        self.__metadata[line[0]]["sous_titre"] = title.text
+                    else:
+                        self.__metadata[line[0]]["titre"] = title.text
 
-                # split the subtitle from the title if any
-                self.__metadata[line[0]]["titre"] = titres[0].strip()
-                if len(titres) > 1:
-                    self.__metadata[line[0]]["sous_titre"] = titres[1].strip()
 
-                # print(self.__metadata[line[0]])
+    def src_edition(self, pos_year, tri):
+        src_edition_fn = os.path.join(self.__src_path, pos_year, "{0}.xml".format(tri))
+        if not os.path.isfile(src_edition_fn):
+            #raise FileNotFoundError("src file not found: {0}".format(src_edition_fn))
+            return ET.Element("div")
+
+        return ET.parse(src_edition_fn)
+
 
     @property
     def __tg_template(self): return ET.parse(self.__tg_template_filename)
@@ -53,6 +64,12 @@ class PositionThese:
 
     @property
     def __e_template(self): return ET.parse(self.__e_template_filename)
+
+    def write_to_file(self, filepath, tree):
+        if not os.path.isfile(filepath):
+            with open(filepath, 'w') as f:
+                tree_str = ET.tounicode(tree, pretty_print=True)
+                f.write(tree_str)
 
     def write_textgroup(self, pos_year, dest_path):
         # get a fresh new etree
@@ -72,12 +89,7 @@ class PositionThese:
         if not os.path.isdir(tg_dirname):
             os.makedirs(tg_dirname)
 
-        tg_filepath = os.path.join(tg_dirname, "__cts__.xml")
-        if not os.path.isfile(tg_filepath):
-            with open(tg_filepath, 'w') as f:
-                cts_tg = ET.tounicode(template, pretty_print=True)
-                f.write(cts_tg)
-                #print(cts_tg)
+        self.write_to_file(os.path.join(tg_dirname, "__cts__.xml"), template)
 
     def write_work(self, pos_year, dest_path):
         for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
@@ -111,12 +123,8 @@ class PositionThese:
                 shutil.rmtree(w_dirname)
             os.makedirs(w_dirname)
 
-            w_filepath = os.path.join(w_dirname, "__cts__.xml")
-            if not os.path.isfile(w_filepath):
-                with open(w_filepath, 'w') as f:
-                    cts_w = ET.tounicode(template, pretty_print=True)
-                    f.write(cts_w)
-                    #print(cts_w)
+            self.write_to_file(os.path.join(w_dirname, "__cts__.xml"), template)
+
 
     def write_edition(self, pos_year, src_path, dest_path):
         for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
@@ -129,80 +137,64 @@ class PositionThese:
                 "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]), "positionThese-fr1.xml"
             ))
 
-
-            src_edition_fn = os.path.join(src_path, pos_year, "{0}.xml".format(meta["tri"]))
-            if not os.path.isfile(src_edition_fn):
-                raise FileNotFoundError("src file not found: {0}".format(src_edition_fn))
-
-            src_edition = ET.parse(src_edition_fn)
-            nsmap = {"ti" : 'http://www.tei-c.org/ns/1.0'}
-
+            src_edition = self.src_edition(pos_year, meta["tri"])
 
             def insert_into(keyword, struct):
-                for intro in template.xpath("//ti:body//ti:div[@type='{0}']".format(keyword), namespaces=nsmap):
+                for tag in template.xpath("//ti:body//ti:div[@type='{0}']".format(keyword), namespaces=self.__nsmap):
                     for c in struct.getchildren():
-                        intro.append(copy.deepcopy(c))
+                        tag.append(copy.deepcopy(c))
 
             # titles
-            for title in src_edition.xpath("//ti:front/ti:head", namespaces=nsmap):
-                if title.get('type') == "sub":
-                    meta["sous_titre"] = title.text
-                else:
-                    meta["titre"] = title.text
-
-            for title in template.xpath("//ti:teiHeader//ti:titleStmt//ti:title", namespaces=nsmap):
+            for title in template.xpath("//ti:teiHeader//ti:titleStmt//ti:title", namespaces=self.__nsmap):
                 if title.get("type") == "main":
                     title.text = meta["titre"]
                 elif title.get("type") == "sub":
                     title.text = meta["sous_titre"]
 
             # author : en attendant meta["authorKey"] et meta["authorRef"]
-            for auth in template.xpath("//ti:teiHeader//ti:author", namespaces=nsmap):
+            for auth in template.xpath("//ti:teiHeader//ti:author", namespaces=self.__nsmap):
                 auth.set("key", "{0}, {1}".format(meta["nom"], meta["prenom"]))
                 auth.text = "{1} {0}".format(meta["nom"], meta["prenom"])
 
             # publicationStmt
-            for pub_date in template.xpath("//ti:teiHeader//ti:publicationStmt/ti:date", namespaces=nsmap):
+            for pub_date in template.xpath("//ti:teiHeader//ti:publicationStmt/ti:date", namespaces=self.__nsmap):
                 pub_date.set("when", meta["promotion"])
 
             # profileDesc
-            for pub_date in template.xpath("//ti:teiHeader//ti:profileDesc/ti:creation/ti:date", namespaces=nsmap):
+            for pub_date in template.xpath("//ti:teiHeader//ti:profileDesc/ti:creation/ti:date", namespaces=self.__nsmap):
                 pub_date.set("when", str(date.today().year))
 
             # année de la promotion dans le titre de la bibliographie
-            for bibl_title in template.xpath("//ti:teiHeader//ti:sourceDesc/ti:bibl/ti:title", namespaces=nsmap):
+            for bibl_title in template.xpath("//ti:teiHeader//ti:sourceDesc/ti:bibl/ti:title", namespaces=self.__nsmap):
                 bibl_title.text = bibl_title.text.replace("@PLACE_HOLDER@", meta["promotion"])
 
             # front
-            front = src_edition.xpath("//ti:front//ti:div", namespaces=nsmap)
+            front = src_edition.xpath("//ti:front//ti:div", namespaces=self.__nsmap)
             if len(front) > 0:
                 insert_into('introduction', front[0])
                 if len(front) > 1:
                     insert_into('sources', front[1])
 
             # body
-            for body in template.xpath("//ti:body", namespaces=nsmap):
+            for body in template.xpath("//ti:body", namespaces=self.__nsmap):
                 body.set("n", "urn:cts:frenchLit:pos{0}.pos{1}.positionThese-fr1".format(meta["promotion"], meta["id"]))
 
             # parts
-            for body in template.xpath("//ti:body/ti:div[@n='2']", namespaces=nsmap):
-                for part_id, part in enumerate(src_edition.xpath("//ti:body/ti:div", namespaces=nsmap)):
+            for body in template.xpath("//ti:body/ti:div[@n='2']", namespaces=self.__nsmap):
+                for part_id, part in enumerate(src_edition.xpath("//ti:body/ti:div", namespaces=self.__nsmap)):
                     new_part = ET.fromstring("<div n='{0}' type='part'></div>".format(part_id+1))
                     for c in part.getchildren():
                         new_part.append(copy.deepcopy(c))
                     body.append(new_part)
 
             # back
-            back = src_edition.xpath("//ti:back//ti:div", namespaces=nsmap)
+            back = src_edition.xpath("//ti:back//ti:div", namespaces=self.__nsmap)
             if len(back) > 0:
                 insert_into('conclusion', back[0])
                 if len(back) > 1:
                     insert_into('appendix', back[1])
 
-
             # write the edition file
-            cts_edition = ET.tounicode(template, pretty_print=True)
-            if not os.path.isfile(e_filepath):
-                with open(e_filepath, 'w') as f:
-                    f.write(cts_edition)
+            self.write_to_file(e_filepath, template)
+
 
