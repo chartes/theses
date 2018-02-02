@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Jeu du roi et jeu de la reine aux </title>
+        <title type="main">Jeu du roi et jeu de la reine aux &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; et &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles</title>
         <title type="sub">Du délassement personnel à la cérémonie de cour</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Billoir, Thibault">Thibault Billoir</author>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

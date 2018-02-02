@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">le périodique </title>
-        <title type="sub">« Passé le Détroit »</title>
+        <title type="main">« Passé le Détroit »</title>
+        <title type="sub">le périodique &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;The Studio&lt;/hi&gt; et la modernité française (1893-1914)</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Rigeade, Marine">Marine Rigeade</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

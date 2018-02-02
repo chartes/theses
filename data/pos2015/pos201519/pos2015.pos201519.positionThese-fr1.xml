@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Le Guay, une dynastie de fondeurs de cloches à Paris sous l’Ancien Régime</title>
-        <title type="sub">À l’enseigne de </title>
+        <title type="main">À l’enseigne de &lt;emph xmlns="http://www.tei-c.org/ns/1.0"&gt;La Cloche d’or&lt;/emph&gt;</title>
+        <title type="sub">Les Le Guay, une dynastie de fondeurs de cloches à Paris sous l’Ancien Régime</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Noual, Clément">Clément Noual</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

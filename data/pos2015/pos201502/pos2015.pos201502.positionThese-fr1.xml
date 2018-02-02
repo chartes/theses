@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édition de la </title>
-        <title type="sub">Histoire et enjeux de la théologie naturelle en sa première figure</title>
+        <title type="main">Une science naturelle de Dieu ?</title>
+        <title type="sub">Édition de la &lt;emph xmlns="http://www.tei-c.org/ns/1.0"&gt;Theologia naturalis&lt;/emph&gt; de Nicolas Bonet († 1343)</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Buffenoir, Aude">Aude Buffenoir</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

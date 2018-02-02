@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les moniales de Saint-Antoine-des-Champs au </title>
-        <title type="sub">« </title>
+        <title type="main">Les moniales de Saint-Antoine-des-Champs au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
+        <title type="sub">« &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Velut lucernas in loco caliginoso lucentes&lt;/hi&gt; »</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Szollosi, Vanessa">Vanessa Szollosi</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

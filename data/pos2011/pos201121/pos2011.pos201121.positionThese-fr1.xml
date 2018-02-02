@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Louis Delaporte, fondateur du Musée indochinois et organisateur des missions scientifiques aux ruines khmères (1866-1900) </title>
-        <title type="sub">À la découverte de l’art khmer </title>
+        <title type="main">À la découverte de l’art khmer</title>
+        <title type="sub">Louis Delaporte, fondateur du Musée indochinois et organisateur des missions scientifiques aux ruines khmères (1866-1900)</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Philippe, Julie">Julie Philippe</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

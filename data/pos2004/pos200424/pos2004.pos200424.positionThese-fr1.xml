@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Avoir vingt ans à Strasbourg au tournant du </title>
+        <title type="main">Avoir vingt ans à Strasbourg au tournant du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
         <title type="sub">Le niveau de vie des milieux modestes et défavorisés : approche par les registres de conscription et présentation de l’École de
         travail.</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
@@ -39,12 +39,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

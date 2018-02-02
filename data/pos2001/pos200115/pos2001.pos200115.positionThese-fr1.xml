@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">Le manuscrit Bibl. nat. de France, fr 688 et son traducteur</title>
-        <title type="sub">Édition de la </title>
+        <title type="sub">Édition de la &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Chronique universelle&lt;/hi&gt; et de l’&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Histoire romaine&lt;/hi&gt;.</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Moreau, Nathalie">Nathalie Moreau</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

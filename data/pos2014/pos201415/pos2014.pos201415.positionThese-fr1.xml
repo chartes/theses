@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">Eustache-Antoine Hua (1759-1836)</title>
-        <title type="sub"/>
+        <title type="sub">&lt;emph xmlns="http://www.tei-c.org/ns/1.0"&gt;Mémoires&lt;/emph&gt; et papiers privés d'un magistrat et député</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Pérésan-Roudil, Alice">Alice Pérésan-Roudil</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

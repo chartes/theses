@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édouard Reuss (1804-1891), </title>
+        <title type="main">Édouard Reuss (1804-1891), &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Erinnerungen aus meinem Leben&lt;/hi&gt;</title>
         <title type="sub">Édition partielle (1846-1872) et commentaire</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Woessner, Caroline">Caroline Woessner</author>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Un commentaire de la </title>
+        <title type="main">Un commentaire de la &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Dissuasio valerii&lt;/hi&gt; de Gautier Map : le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Hec epistola&lt;/hi&gt; de John Ridewall</title>
         <title type="sub">Étude et édition critique.</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Gautier, France">France Gautier</author>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

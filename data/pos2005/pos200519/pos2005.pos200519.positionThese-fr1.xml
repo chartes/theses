@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">“ Par devant moy, Martin Destourbe, tabellion et clerc juré ”</title>
-        <title type="sub">édition et étude de deux registres de tabellionage de Puisaye (XIV</title>
+        <title type="sub">édition et étude de deux registres de tabellionage de Puisaye (XIV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècles)</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Raze, Jean-Baptiste">Jean-Baptiste Raze</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

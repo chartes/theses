@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La revue </title>
-        <title type="sub">Les musées et la coopération culturelle internationale </title>
+        <title type="main">La revue &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Mouseion&lt;/hi&gt; (1927-1946)</title>
+        <title type="sub">Les musées et la coopération culturelle internationale</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Caillot, Marie">Marie Caillot</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">Pierre Gringore (v. 1475-v. 1538), homme de lettres, de théâtre et de cour</title>
-        <title type="sub">Être auteur au </title>
+        <title type="sub">Être auteur au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Stankiewicz, Florine">Florine Stankiewicz</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

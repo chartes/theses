@@ -5,7 +5,7 @@
     <fileDesc>
       <titleStmt>
         <title type="main">L'œuvre des haras, entre amélioration animale et création architecturale</title>
-        <title type="sub">L'implantation du dépôt d'étalons de Cluny (premier quart du </title>
+        <title type="sub">L'implantation du dépôt d'étalons de Cluny (premier quart du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Souvré, Amandine">Amandine Souvré</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

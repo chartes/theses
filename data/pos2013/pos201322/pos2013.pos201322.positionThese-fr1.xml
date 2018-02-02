@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le scotisme de Himbert de Garda O.F.M. (</title>
+        <title type="main">Le scotisme de Himbert de Garda O.F.M. (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;/num&gt;&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècle)</title>
         <title type="sub">Édition commentée de son premier livre du Commentaire du Livre des Sentences</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Susini, Baptiste">Baptiste Susini</author>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

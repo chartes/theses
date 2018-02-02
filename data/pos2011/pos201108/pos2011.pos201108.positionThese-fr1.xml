@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les monnaies mérovingiennes modifiées à des fins non monétaires </title>
-        <title type="sub">Usages et perceptions des métaux précieux </title>
+        <title type="main">Les monnaies mérovingiennes modifiées à des fins non monétaires</title>
+        <title type="sub">Usages et perceptions des métaux précieux</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Codine-Trécourt, Florence">Florence Codine-Trécourt</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

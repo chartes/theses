@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La séparation de biens dans la haute société parisienne au milieu du </title>
-        <title type="sub">« Les plaintes en séparation sont éternelles » </title>
+        <title type="main">« Les plaintes en séparation sont éternelles »</title>
+        <title type="sub">La séparation de biens dans la haute société parisienne au milieu du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle (1730-1761)</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Landelle, Marie">Marie Landelle</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’</title>
-        <title type="sub">Enquête à travers le </title>
+        <title type="main">L’&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ecclesia universa&lt;/hi&gt; comme sujet de droit</title>
+        <title type="sub">Enquête à travers le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Décret&lt;/hi&gt; de Gratien</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Au Yeung, Kwok Leung Luke">Kwok Leung Luke Au Yeung</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

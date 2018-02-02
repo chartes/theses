@@ -4,8 +4,8 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les « mestiers touchans habillemens de guerre » </title>
-        <title type="sub">Armuriers et fourbisseurs d’épées parisiens à la fin du Moyen Âge </title>
+        <title type="main">Les « mestiers touchans habillemens de guerre »</title>
+        <title type="sub">Armuriers et fourbisseurs d’épées parisiens à la fin du Moyen Âge</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Bernard, Marion">Marion Bernard</author>
       </titleStmt>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

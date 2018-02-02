@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le </title>
+        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De processione Spiritus Sancti&lt;/hi&gt;[ &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De Spiritu Sancto&lt;/hi&gt;] de Théodulfe d’Orléans</title>
         <title type="sub">Édition, étude des sources et commentaire.</title>
         <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
         <author key="Ménage, Christian">Christian Ménage</author>
@@ -38,12 +38,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-    <!--
-        <cRefPattern n="Chapitre" matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part']//tei:div[@n='$3' and @type='chapter'])">
-          <p>This pointer pattern extracts chapters</p>
-        </cRefPattern>
-    -->
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
           <p>This pointer pattern extracts parts</p>
         </cRefPattern>

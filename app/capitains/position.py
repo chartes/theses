@@ -1,8 +1,11 @@
 import os
+from itertools import chain
+
 import lxml.etree as ET
 import copy
 import shutil
 from datetime import date
+
 
 class PositionThese:
 
@@ -28,7 +31,7 @@ class PositionThese:
                     "nom": clean(line[3]),
                     "prenom": clean(line[4]),
                     "sexe": line[5],
-                    "titre": "",
+                    "titre": clean(line[6]),
                     "notBefore": line[7],
                     "notAfter": line[8],
                     "authorKey": clean(line[9]),
@@ -38,14 +41,13 @@ class PositionThese:
                     "an_these": line[13],
                     "sous_titre": ""
                 }
-                # retrieve the titles from the src edition
-                src_edition = self.src_edition(self.__metadata[line[0]]["promotion"], self.__metadata[line[0]]["tri"])
-                for title in src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap):
-                    if title.get('type') == "sub":
-                        self.__metadata[line[0]]["sous_titre"] = title.text
-                    else:
-                        self.__metadata[line[0]]["titre"] = title.text
 
+    def stringify(self, node):
+        parts = ([node.text] +
+                        list(chain((ET.tounicode(c) for c in node.getchildren()))) +
+                        [node.tail])
+        parts = filter(None, parts)
+        return ''.join(parts).strip()
 
     def src_edition(self, pos_year, tri):
         src_edition_fn = os.path.join(self.__src_path, pos_year, "{0}.xml".format(tri))
@@ -70,6 +72,7 @@ class PositionThese:
             with open(filepath, 'w') as f:
                 tree_str = ET.tounicode(tree, pretty_print=True)
                 f.write(tree_str)
+
 
     def write_textgroup(self, pos_year, dest_path):
         # get a fresh new etree
@@ -102,8 +105,11 @@ class PositionThese:
                 work.set("groupUrn", "{0}{1}".format(work.get('groupUrn'), pos_year))
 
             # title
+            src_edition = self.src_edition(pos_year, meta["tri"])
+            titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
             for title in template.xpath("//ti:title", namespaces=template.getroot().nsmap):
-                title.text = meta["titre"]
+                if len(titles) > 0:
+                    title.text = self.stringify(titles[0])
 
             # urn & workUrn
             for edition in template.xpath("//ti:edition", namespaces=template.getroot().nsmap):
@@ -112,10 +118,10 @@ class PositionThese:
 
             # work label & description
             for label in template.xpath("//ti:edition/ti:label", namespaces=template.getroot().nsmap):
-                label.text = meta["titre"]
-
-            for description in template.xpath("//ti:edition/ti:description", namespaces=template.getroot().nsmap):
-                 description.text = meta["sous_titre"]
+                label.text = self.stringify(titles[0])
+            if len(titles) > 1:
+                for description in template.xpath("//ti:edition/ti:description", namespaces=template.getroot().nsmap):
+                    description.text = self.stringify(titles[1])
 
             # make workgroup dir
             w_dirname = os.path.join(dest_path, "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]))
@@ -144,12 +150,13 @@ class PositionThese:
                     for c in struct.getchildren():
                         tag.append(copy.deepcopy(c))
 
+            titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
             # titles
             for title in template.xpath("//ti:teiHeader//ti:titleStmt//ti:title", namespaces=self.__nsmap):
-                if title.get("type") == "main":
-                    title.text = meta["titre"]
-                elif title.get("type") == "sub":
-                    title.text = meta["sous_titre"]
+                if title.get("type") == "main" and len(titles) > 0:
+                    title.text = self.stringify(titles[0])
+                elif title.get("type") == "sub" and len(titles) > 1:
+                    title.text = self.stringify(titles[1])
 
             # author : en attendant meta["authorKey"] et meta["authorRef"]
             for auth in template.xpath("//ti:teiHeader//ti:author", namespaces=self.__nsmap):
