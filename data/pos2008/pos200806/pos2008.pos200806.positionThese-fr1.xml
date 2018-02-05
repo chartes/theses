@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">« Curieux idolâtres et acheteurs de statues »</title>
-        <title type="sub">Le marché de la sculpture sous la Révolution et l’Empire à Paris</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">« Curieux idolâtres et acheteurs de statues »</title><title xml:lang="fr" type="sub">Le marché de la sculpture sous la Révolution et l’Empire à Paris</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Champy, Cécilie">Cécilie Champy</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200806.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire du marché de l’art a fait l’objet d’un renouveau d’intérêt de la part des historiens de l’art depuis la parution des ouvrages
           fondateurs de Francis Haskell et Antoine Schnapper consacrés à l’histoire du goût et à l’histoire des « curieux » et des collectionneurs
           dans la France du <num>xvii</num>
@@ -74,7 +77,7 @@
           nécessaire d’évoquer les échanges avec la province et surtout l’étranger, l’importation de sculpture depuis l’Italie étant un des ressorts
           du commerce parisien durant la période.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources pour l’étude du marché de la sculpture à Paris sous la Révolution et l’Empire peuvent se diviser en trois catégories : les
           catalogues de vente, les inventaires après décès conservés au Minutier central des notaires de Paris aux Archives nationales, les archives
           de la Commission temporaire des arts, conservées aux Archives nationales (série F<hi rend="sup">17</hi>). Cependant pour un sujet de cette
@@ -103,9 +106,8 @@
           d’étudier les transferts de sculpture opérés à la Révolution et de savoir quelles furent, parmi les sculptures issues des collections
           d’Ancien Régime, celles qui furent réservées pour le Muséum et celles qui furent vendues aux enchères sur le marché de l’art parisien.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le marché de la sculpture à Paris à la veille de la Révolution</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le marché de la sculpture à Paris à la veille de la Révolution</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les ventes de sculpture en 1788 et 1789</head>
           <p>La capitale à la fin du <num>xviii</num>
 <hi rend="sup">e</hi> siècle connaît un essor sans précédent du commerce de l’art. Les ventes aux enchères constituent un des événements
@@ -126,7 +128,7 @@
 <hi rend="sup">e</hi> siècle, les noms de Clodion et de ses élèves, Louis-Félix Delarue et Félix Lecomte, et de Jean-Baptiste Pigalle sont
             les plus souvent cités.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les marchands d’art et la sculpture</head>
           <p>Le second chapitre s’intéresse aux marchands d’art, les principaux acteurs du marché, intermédiaires entre les œuvres et les
             collectionneurs, et à la façon dont ils considèrent la sculpture. À la veille de la Révolution, trois personnalités dominent le marché de
@@ -141,7 +143,7 @@
             boutiques autour de la rue Saint-Honoré. La sculpture cependant se vend également rive gauche, rue Saint-Jacques, où est établi
             François-Léandre Regnault-Delalande et où se trouvent les boutiques des marbriers.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les « amateurs » de sculpture</head>
           <p>L’amateur, selon Furetière, c’est celui qui a du goût pour une chose, la musique, les Beaux-arts ou les « nouveautés ». Au
               <num>xviii</num>
@@ -161,8 +163,8 @@
             érudits s’intéressèrent aux sculptures des civilisations grecques, étrusques et romaines, ainsi qu’aux antiquités nationales et même, de
             façon exceptionnelle, aux sculptures « gothiques ».</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le marché révolutionnaire</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le marché révolutionnaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le vandalisme révolutionnaire : des sculptures détachées de leur contexte</head>
           <p>L’événement le plus important de la Révolution fut, dans le domaine économique, la vente des biens nationaux. L’objet des deux premiers
             chapitres est de montrer comment le marché de la sculpture à Paris a été influencé par les nationalisations d’œuvres d’art opérées à
@@ -179,7 +181,7 @@
             dignes du « Muséum » qui vient, en 1793, d’ouvrir ses portes. Les œuvres « médiocres » sont vendues aux enchères au dépôt des
             Petits-Augustins et passent sur le marché de l’art parisien.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les sculptures provenant des collections d’émigrés</head>
           <p>Les sculptures provenant des collections d’émigrés et de condamnés connaissent sous la Révolution un sort identique à celui des
             sculptures issues des édifices religieux. À partir de 1792, les biens des émigrés sont mis sous séquestre et la Commission temporaire des
@@ -195,7 +197,7 @@
             religieuse, les statues des émigrés jugées médiocres sont revendues à des particuliers, telle Anne Vallayer-Coster, peintre de nature
             morte, ou cédées aux marchands d’art parisiens, tels Lebrun ou Denor en guise de paiement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Marchands et amateurs de sculpture à l’époque révolutionnaire</head>
           <p>Dans ce chapitre, les deux types de marché, celui de la sculpture ancienne et celui de la sculpture contemporaine, sont envisagés. Dans
             le domaine de la sculpture ancienne, le marché, loin « d’agoniser » pour reprendre le terme d’un des premiers historiens du « commerce de
@@ -210,8 +212,8 @@
             commanditaires privés. La commande privée évolue à l’époque révolutionnaire : des sociétés se constituent, telle la Société des jeux
             gymniques, installée dans l’ancien hôtel d’Orsay, dont le but est d’acheter des œuvres aux peintres et sculpteurs contemporains.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Antiquités et curiosités <lb/>Ventes et collections de sculpture sous le Consulat et l’Empire</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Antiquités et curiosités <lb/>Ventes et collections de sculpture sous le Consulat et l’Empire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les ventes de sculpture à l’époque impériale</head>
           <p>Le marché de la sculpture à l’époque du Consulat et de l’Empire est constitué par deux types de commerce, le marché des ventes aux
             enchères d’une part, le commerce des marchands de curiosités de l’autre. Les marchands d’art parisiens les plus renommés, Lebrun, Paillet,
@@ -228,7 +230,7 @@
             contenu de leur « fonds de marchandises » connu par certains catalogues, montre que les amateurs recherchent les sculptures
             « égyptiennes » et les sculptures du Moyen Âge et de la Renaissance.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La sculpture contemporaine et les commandes officielles</head>
           <p>Le marché de la sculpture contemporaine demeure très peu développé à cette période, comme à la fin de l’Ancien Régime et sous la
             Révolution. Les sculpteurs contemporains dépendent avant tout des commandes officielles qui sont nombreuses sous l’Empire. Dans l’esprit
@@ -239,7 +241,7 @@
             famille, les Napoléonides, font preuve d’un goût marqué pour l’art statuaire de leur temps et en particulier pour la sculpture d’Antonio
             Canova, qu’ils contribuent à faire connaître en France.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Amateurs et collectionneurs de sculpture à l’époque impériale</head>
           <p>Le dernier chapitre est consacré à l’étude de personnalités d’amateurs de sculpture à l’époque impériale. L’auteur d’un guide destiné aux
             visiteurs de la capitale, paru en 1816, Pierre-Marie Gault de Saint-Germain, fait la distinction entre deux types d’amateurs, ceux qui
@@ -254,9 +256,7 @@
             connaître la collection, jamais passée en vente publique, qui comprend des œuvres de Joseph-Charles Marin et des copies en marbre d’après
             l’antique. Les amateurs de sculpture français installés en Italie, tel Lucien Bonaparte, sont également évoqués.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’étude du marché de la sculpture sous la Révolution et l’Empire à Paris permet de mettre en évidence l’évolution du goût des amateurs de
           sculpture entre 1780 et 1820. Alors qu’au début du <num>xviii</num>
 <hi rend="sup">e</hi> siècle, ce sont les sculptures d’après l’antique qui se trouvent en majorité sur le marché, la Révolution, en mettant
@@ -270,12 +270,11 @@
           l’étude du marché de la sculpture, pour être cohérente, mériterait d’être menée jusqu’aux années 1820-1840, date de la dispersion sur le
           marché des collections de l’époque impériale.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Inventaires de collections de sculpture : la collection du comte d’Orsay (1794), la collection du maréchal de Gouvion Saint-Cyr (1830). —
           Répertoire des catalogues de vente consultés. — Graphiques. — Illustrations.</p>
         <p/>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

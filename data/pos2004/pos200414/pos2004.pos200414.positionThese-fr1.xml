@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">François Le Métel de Boisrobert (1592-1662), écrivain et homme de pouvoir</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">François Le Métel de Boisrobert (1592-1662), écrivain et homme de pouvoir</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Iline, Anastasia">Anastasia Iline</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200414.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>François Le Métel de Boisrobert (1592-1662) eut une carrière d’hommes de lettres remarquable. Après une phase d’ascension caractéristique
           du parcours social des écrivains adeptes d’une “ stratégie du succès ” (Alain Viala), au cours de laquelle il usa des différentes
           institutions d’un monde littéraire en devenir, il intégra la clientèle du cardinal de Richelieu, auprès duquel il occupa rapidement une
@@ -64,7 +67,7 @@
           puissants par le succès public, qu’il rencontra en effet. Son devenir historiographique, en revanche, fut un oubli rapide, doublé de la
           réduction du personnage à quelques traits sans cesse répétés, tels que sa caractérisation en bouffon.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>En l’absence de fonds privé, c’est sur des documents dispersés et hétérogènes qu’il a fallu s’appuyer pour reconstituer la vie de
           Boisrobert. Tout d’abord, le Minutier central des notaires de Paris, conservé au Centre historique des Archives nationales, a fourni des
           informations précieuses sur Boisrobert et sa famille, en particulier à travers son testament, jusqu’ici inconnu. Ce dépôt a livré d’autres
@@ -81,9 +84,8 @@
           été largement utilisées : œuvres de Boisrobert lui-même, correspondances imprimées, ouvrages postérieurs permettant de suivre son image
           posthume (recueils rétrospectifs, catalogues de bibliothèques, manuels scolaires, ouvrages historiques).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’ascension vers la faveur</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’ascension vers la faveur</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Origines</head>
           <p>Boisrobert naquit à Caen en 1592, d’une famille rouennaise qui y avait émigré avec les officiers royalistes des cours souveraines
             opposées au gouvernement ligueur de la ville. A la fin des troubles, il semble que les Le Métel quittèrent rapidement Caen pour revenir à
@@ -102,7 +104,7 @@
             fut la mère de Pierre Le Prince, chanoine au Mans, qui fut l’héritier principal du poète. Les possessions de la famille étaient modestes,
             situées d’une part à proximité de Dieppe, et de l’autre près de Longueville, à l’est de Rouen.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le cheminement vers la faveur</head>
           <p>Après une formation incertaine, Boisrobert suivit la carrière de son père et se fit d’abord avocat. Ses premiers textes poétiques furent
             publiés dans des recueils rouennais. Lié par ses origines au milieu parlementaire, c’est logiquement qu’il choisit ses premiers
@@ -114,8 +116,8 @@
             extraordinaire en Italie en 1630. Revenu après la Journée des Dupes, il abandonna son ancienne protectrice pour le cardinal de Richelieu,
             auprès duquel il avait déjà entamé un rapprochement.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Pouvoir et fortune d’un favori</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Pouvoir et fortune d’un favori</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le pouvoir de Boisrobert : servir Richelieu</head>
           <p>A partir de 1630, Boisrobert mit sa plume au service de son nouveau patron. Il écrivit d’une part des pièces de théâtre, dont certaines
             furent le fruit d’une collaboration dans le cadre du groupe des Cinq-Auteurs formé par le cardinal. Surtout, il fut le maître d’œuvre de
@@ -127,7 +129,7 @@
             d’informations provenant de milieux divers. Cette position lui procura un pouvoir certain que lui reconnaissaient ses contemporains et qui
             lui permit d’accéder à la noblesse en 1636.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une fortune en bénéfices</head>
           <p>Ce pouvoir s’accompagna de la constitution d’une fortune importante, essentiellement constituée de bénéfices. Certes, Boisrobert reçut
             des pensions, des gages, des gratifications ponctuelles, mais ce sont ses prieurés, son abbaye de Châtillon-sur-Seine et son canonicat à
@@ -137,8 +139,8 @@
             hiérarchies établies dans l’institution ; il y possède un statut proprement extraordinaire, qui s’effrite lors de la mort du
             protecteur.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Disgrâce, défaveur et oubli</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Disgrâce, défaveur et oubli</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La disgrâce</head>
           <p>A deux reprises, Boisrobert dut affronter la disgrâce. Celle-ci peut se définir comme une interruption de la faveur se déroulant suivant
             des modalités toujours semblables (événement déclencheur, exil, démarches, rappel plus ou moins progressif), qui peut avoir des
@@ -160,7 +162,7 @@
             disgrâce fut surtout la matérialisation du problème d’image dont souffrait alors Boisrobert, déchiré entre la figure d’ “ abbé comique ”
             qui lui était attachée et son désir de s’acquérir une respectabilité nécessaire dans la nouvelle Cour.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La défaveur</head>
           <p>
             <hi rend="i">Trouver un remplaçant à Mécène. ­</hi> A la mort de Richelieu, Boisrobert se tourna vers d’autres puissants pour maintenir
@@ -180,7 +182,7 @@
             succès une participation active aux réseaux précieux, en fréquentant leurs salons et en participant aux recueils édités par ce milieu. Ces
             deux nouveaux rôles lui permirent de compenser quelque peu l’absence de positionnement clair au sein d’une clientèle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’oubli</head>
           <p>L’étude du testament de Boisrobert permet d’appréhender sa situation matérielle à la veille de sa mort, ainsi que d’éclairer certains
             aspects de sa personnalité, en particulier la nature de son sentiment religieux. La faiblesse de celui-ci apparaît dans les formulations
@@ -198,9 +200,7 @@
             particulier sur son rôle comme adaptateur de pièces espagnoles. Récemment, le développement de l’histoire sociale de la littérature
             autorisa un regard nouveau sur ces <hi rend="i">minores</hi> grâce à un travail de contextualisation systématique.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’axe faveur-défaveur apparaît ainsi comme central chez Boisrobert, à la fois dans le cours chronologique de son existence et dans les
           problématiques que soulève l’étude de sa biographie. D’une part, à travers son caractère de favori du cardinal de Richelieu, il offre un
           aperçu intéressant de la nature des services qu’un client pouvait rendre à son patron, et du pouvoir que cette position conférait en
@@ -209,8 +209,7 @@
           l’ensemble de sa carrière, saisir l’évolution du regard porté sur un personnage dont l’identité sociale repose sur des services acceptés et
           reconnus par les puissants et vacille aussitôt ces services ignorés.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

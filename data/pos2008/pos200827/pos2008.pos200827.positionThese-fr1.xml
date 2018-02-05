@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Inventaires de trésors de l’époque carolingienne en Francie occidentale (VIII&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-X&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Inventaires de trésors de l’époque carolingienne en Francie occidentale (VIII<hi rend="sup">e</hi>-X<hi rend="sup">e</hi> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Sonnefraud, Claire">Claire Sonnefraud</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200827.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les inventaires de trésors sont des textes exceptionnels pour la connaissance des objets, de l’art et de la langue, mais aussi des
           pratiques liturgiques et socio-économiques de l’époque carolingienne, période où le trésor constitue un moyen de gouverner et aide à
           révéler  les relations économiques et symboliques.</p>
@@ -69,7 +72,7 @@
           l’art et de la dévotion —, s’est élargi en direction de l’anthropologie historique et de l’histoire économique. Ces nouvelles approches
           permettent de considérer les inventaires de trésors sous des angles nouveaux.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les textes édités ont été choisis en fonction de leur contenu : ont été réunies toutes les énumérations de biens mobiliers, en tenant
           compte de leur période et de leur lieu de production. Ces extraits ont été produits dans les limites de la Francie occidentale, c’est-à-dire
           le royaume attribué à Charles le Chauve par le traité de Verdun de 843, et ce durant toute l’époque carolingienne, de l’accession au pouvoir
@@ -85,9 +88,8 @@
           cela a été possible, mais les sources principales restent les copies d’érudits de l’époque moderne conservées au Cabinet des manuscrits de
           la Bibliothèque nationale de France.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Commentaire</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Textes et réalités matérielles : quel inventaire pour quel trésor ?</head>
           <p>Le trésor est une notion bien réelle à l’époque carolingienne : les textes de la période emploient ce terme fréquemment, pour désigner
             un trésor d’église ou le trésor d’un souverain. La présence du terme <hi rend="i">thesaurum</hi> dans la Bible n’est pas pour rien dans la
@@ -122,7 +124,7 @@
             bilan de donations successives et un réservoir de donations à venir. Le don est en effet très important dans la civilisation médiévale,
             comme marqueur social, mais également comme moyen de racheter ses péchés par la transmission de ses biens terrestres à l’Église.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’art de l’inventaire</head>
           <p>Les inventaires de trésors sont nombreux à l’époque carolingienne, mais ils ne sont pas propres à cette période, puisque le pape
             Grégoire le Grand et la règle de saint Benoît conseillent déjà à la fin du <num>vi</num>
@@ -157,7 +159,7 @@
             toujours aisé de trouver à quel objet et quel emploi correspondent tel ou tel mot dans sa seule occurrence connue. Mais la comparaison
             avec d’autres sources permet d’en éclairer certains.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Objets, usages et représentations</head>
           <p>Les sources complémentaires utilisées pour aider à la compréhension du contenu des inventaires sont de trois natures. Les sources
             matérielles sont les objets de l’époque carolingienne connus aujourd’hui, étudiés principalement d’après les bases de données de la
@@ -206,9 +208,7 @@
             trouve dans la présence d’attributs de pouvoir personnel tels que les armes, les animaux de chasse ou les bijoux, comme le testament
             d’Heccard de Mâcon en fournit l’exemple.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>L’étude des inventaires permet donc de préciser la définition du trésor : celui-ci est d’abord un élément institutionnel destiné au bon
           déroulement des cérémonies religieuses, et ce caractère fonctionnel et sacré est accentué par la beauté de matières nobles et travaillées.
           Les trésors de particuliers ont également un rôle institutionnel, celui de marquer la place de leur possesseur dans la société. Mais les
@@ -222,7 +222,7 @@
           par son contenu, par l’histoire de sa circulation et des personnalités qui ont contribué à le former, est donc un véritable centre de la
           mémoire d’un établissement ecclésiastique et de ses fondateurs.</p>
       </div>
-              <div type="appendix"><head>Édition des inventaires</head>
+          <div type="appendix" n="5"><head>Édition des inventaires</head>
         <p>Les extraits édités sont au nombre de 71, de taille variable, dont 22 inventaires et 49 listes de biens. Ils se répartissent en 20
           dossiers constitués en fonction de l’origine géographique et des types de textes dont les extraits sont issus. Les dossiers principaux
           concernent les <hi rend="i">Gesta Pontificum Autissiodorensium</hi>, les <hi rend="i">Gesta abbatum Fontanellensium</hi>, les
@@ -231,7 +231,6 @@
           complétés par des extraits de testaments, comme celui de Heccard de Mâcon, ou celui de Dadila de Septimanie, et par un dossier important de
           consécrations d’églises du diocèse d’Urgel en Catalogne.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

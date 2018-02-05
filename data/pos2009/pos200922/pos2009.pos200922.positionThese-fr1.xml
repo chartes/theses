@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Louis Bonaparte, roi de Hollande dans le système napoléonien (1806-1810)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Louis Bonaparte, roi de Hollande dans le système napoléonien (1806-1810)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Reecht, Stéphane">Stéphane Reecht</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200922.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le royaume de Hollande, régime à la tête duquel est placé un frère de l’empereur des Français, n’est qu’une des formes de domination de la
           France sur l’ancienne République des Provinces-Unies, entre 1795 et 1813. Mais c’est probablement la plus ambiguë. D’une république-sœur, la
           République batave, créée en 1795, on passe au printemps 1806 à un royaume indépendant mais confié à Louis Bonaparte. C’est cependant à
@@ -67,7 +70,7 @@
           ligne de mire de nombreuses interrogations que l’on peut résumer ainsi : comment Louis répond-il aux exigences de son frère ? Qu’en conclure
           sur la nature de son pouvoir et sur la place de la Hollande dans le système européen voulu par Napoléon ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Pour étudier les relations entre Louis et Napoléon, il convient de donner la priorité à la correspondance qu’ils se sont échangée.
           Celle-ci comporte peu de lacunes et a été éditée, à quelques lettres près, par Félix Rocquain dans la seconde moitié du <num>xix</num>
 <hi rend="sup">e</hi> siècle. En deuxième lieu, les archives du cabinet du roi de Hollande, rapportées en France après son abdication et
@@ -79,9 +82,8 @@
           militaires (Service historique de la Défense, Vincennes), archives du pouvoir exécutif néerlandais (Nationaal Archief, La Haye), sans
           oublier quelques mémoires de contemporains, dont ceux du roi de Hollande lui-même.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’instauration du Royaume de Hollande</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’instauration du Royaume de Hollande</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Pourquoi l’instauration du Royaume de Hollande ?</head>
           <p>Dans son désir d’étendre la Révolution à l’Europe, la France conquiert en 1795 les Provinces-Unies, accueillie par un mouvement
             favorable, celui des Patriotes, qui avait échoué (1781-1787) à chasser le <hi rend="i">stathouder</hi> appuyé par l’Angleterre et la
@@ -101,7 +103,7 @@
           <p>Le changement de régime se fait à l’issue d’une négociation de quelques mois, au cours de laquelle Napoléon impose ses vues aux envoyés
             bataves à Paris. Il est effectif le 5 juin 1806.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La mise en place du nouveau pouvoir</head>
           <p>La constitution et les institutions nouvelles sont décidées en très grande partie sans concertation avec Louis. Elles entérinent les
             acquis révolutionnaires et conservent pour la plupart l’organisation antérieure. À cet égard, l’instauration du régime du
@@ -110,8 +112,8 @@
             constituée, qu’il agrandit d’éléments français et hollandais. Quant aux responsables politiques, le nouveau roi joue surtout la carte de
             la continuité et du compromis entre les différentes tendances que l’on peut distinguer.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’Armée et la Marine</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’Armée et la Marine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La Marine et les colonies</head>
           <p>Les exigences de Napoléon concernant la marine hollandaise ne sont pas constantes. C’est surtout à partir de début 1808 et, lors de
             l’ultime mise à l’épreuve, à l’occasion du traité du 16 mars 1810, que l’empereur se montre pressant. Mais l’effort demandé est
@@ -136,7 +138,7 @@
             général Daendels comme gouverneur de cette dernière colonie, pour la reprendre en main. En définitive, les colonies sont sacrifiées à la
             politique continentale à laquelle la Hollande est tenue de contribuer.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Armée hollandaise</head>
           <p>La question militaire est au cœur des relations entre la Hollande et la France. C’est un sujet d’échange permanent entre Napoléon et
             Louis, d’autant que tous deux s’occupent personnellement de la formation et des mouvements de leur armée nationale respective. Le roi de
@@ -155,7 +157,7 @@
             participation à l’effort militaire est considérée par l’empereur comme un tribut, qui se justifie par la conquête de 1795 et par la
             protection assurée par la France. La Hollande doit fournir plus qu’elle ne coûte.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Cohabitation ou coopération ? <lb/>Armée française et armée hollandaise en Hollande</head>
           <p>Les forces armées sont très présentes sur le territoire du royaume de Hollande. Cette présence pose la question des effectifs hollandais,
             mais surtout de leur cohabitation avec les forces françaises. En effet, des régiments français sont stationnés en Hollande, entièrement à
@@ -183,8 +185,8 @@
             Napoléon. À cette occasion, on se rend compte que, toute indépendante qu’elle soit d’un point de vue politique, la Hollande ne l’est pas
             du tout, dans l’esprit de Napoléon, d’un point de vue militaire.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les affaires intérieures</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les affaires intérieures</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La question financière</head>
           <p>En montant sur le trône, Louis hérite des régimes précédents une situation financière très mauvaise. Pour satisfaire aux exigences
             françaises, les dirigeants de la République batave ont considérablement endetté l’État. Ce qui fait qu’une bonne partie des revenus
@@ -205,7 +207,7 @@
             diminuer les dépenses publiques, le poids de la dette reste considérable. En définitive, la question financière aura constamment
             empoisonné le règne de Louis et représenté une solide barrière entre lui et son frère.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les distinctions honorifiques</head>
           <p>Il peut paraître anecdotique de s’intéresser à une telle question. Pourtant, il s’agit d’un sujet sur lequel les deux frères échangent
             beaucoup. Car il est lié à l’adoption du modèle français et, partant, à la nature du régime hollandais. Louis prend des initiatives sans
@@ -219,7 +221,7 @@
             son frère. Lorsque Louis créé une noblesse constitutionnelle à l’imitation de la France, l’expérience fait long feu, notamment à cause de
             l’opposition de Napoléon, qui y voit des dispositions contraires à la constitution hollandaise.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Aspects divers des affaires hollandaises</head>
           <p>Pour mesurer la réalité de l’indépendance du royaume de Hollande, d’autres domaines de la vie politique et publique proprement
             hollandaise sont intéressants à étudier. Ainsi, pour ce qui est des affaires étrangères, les marges de manœuvre de Louis sont relativement
@@ -249,9 +251,7 @@
             alliés de la France. De manière générale, le roi de Hollande se révèle défenseur et promoteur de l’État de droit, jusqu’à son abdication
             le 1<hi rend="sup">er</hi> juillet 1810, qui débouche quelques jours plus tard sur l’annexion du pays à la France.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Louis échoue à gérer la situation profondément ambiguë dans laquelle est plongé son pays. La Hollande est en effet à la fois indépendante
           politiquement – ce n’est pas un État fantoche – et dépendante de fait de la France. Cela crée des tensions, particulières et finalement plus
           dramatiques, du fait du lien de parenté qui existe entre le roi et l’empereur. Ce lien entraîne déception et incompréhension, mais il n’est
@@ -261,11 +261,10 @@
           et son pays à la France. L’écart réside dans le fait que, pour le roi, une des valeurs absolues est la sauvegarde de l’indépendance
           hollandaise, alors que pour l’empereur il s’agit de privilégier la construction de son système, du projet européen de la France.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Lettres inédites échangées par Louis et Napoléon. — Lettres circulaires de Louis à ses ministres (1808 et 1809). — Carte du royaume de
           Hollande. — <hi rend="i">Index nominum</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

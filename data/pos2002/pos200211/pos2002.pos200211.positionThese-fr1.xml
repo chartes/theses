@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La traduction castillane du &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De montibus&lt;/hi&gt; de Boccace</title>
-        <title type="sub">Édition et commentaire (Bibl. nat. de Fr., esp. 458).</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La traduction castillane du <hi rend="i">De montibus</hi> de Boccace</title><title xml:lang="fr" type="sub">Édition et commentaire (Bibl. nat. de Fr., esp. 458).</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Horovitz, Pauline">Pauline Horovitz</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200211.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le versant érudit de l’œuvre de Boccace est aujourd’hui en grande partie oublié du public. Or, en son temps, Boccace était surtout réputé
           pour ses traités savants. Parmi ce type d’écrits de Boccace, ce sont surtout la <hi rend="i">Genealogia deorum</hi>, le <hi rend="i">De
             casibus</hi>, le <hi rend="i">De mulieribus</hi> qui ont reçu la faveur des chercheurs. Le <hi rend="i">De montibus</hi>, si apprécié des
@@ -87,10 +90,9 @@
           permettre de mieux cerner quelle a été la réception du traité de géographie dans la littérature espagnole, et plus généralement, quelle a
           été son influence sur la culture géographique et mythologique espagnole.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’auteur et son œuvre</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">L’auteur et son œuvre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le <hi rend="i">De montibus</hi> et son auteur</head>
           <p>
             <hi rend="i">L’auteur : Jean Boccace (1313-1375)</hi>. ­ En son temps, Boccace était essentiellement réputé pour son œuvre latine et
@@ -110,7 +112,7 @@
             L’objectif de Boccace est de parcourir les lieux d’une géographie “ de papier ”, et non pas du monde réel. Elle se distingue des autres
             œuvres savantes de Boccace par l’absence de toute interprétation allégorique, moralisante et religieuse.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Portée de l’œuvre</head>
           <p>
             <hi rend="i">La diffusion des manuscrits et des éditions imprimées</hi>. ­ Soixante-six manuscrits latins sont parvenus jusqu’à nous, pour
@@ -147,7 +149,7 @@
             Hormis les travaux d’Attilio Hortis, au <num>xix<hi rend="sup">e</hi></num> siècle, les plus importants restent ceux de Manlio Pastore Stocchi,
             auteur de la seule édition moderne. La traduction castillane a rencontré la même absence de curiosité de la part des chercheurs du XX <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les raisons du succès</head>
           <p>
             <hi rend="i">Les thèmes développés</hi>. ­ La géographie au Moyen Âge se réduit souvent à la topographie et à la cosmographie et
@@ -171,9 +173,9 @@
             achevée au début du <num>xvi<hi rend="sup">e</hi></num> siècle, même si les nouvelles données géographiques en font une source d’anecdotes et non
             plus un traité savant.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La traduction castillane du <hi rend="i">De montibus</hi>
+      </div><div n="3" type="part"><head n="0" type="chapter">La traduction castillane du <hi rend="i">De montibus</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Boccace dans la péninsule ibérique au <num>xv<hi rend="sup">e</hi></num> siècle</head>
           <p>
             <hi rend="i">Un premier humanisme “ sous influence ”</hi>­ L’humanisme castillan du <num>xv<hi rend="sup">e</hi></num> siècle présente des
@@ -196,7 +198,7 @@
             antiques de la Péninsule et émerge une géographie “ nationale ”, avec Joan Margarit i Pau, Jerónimo Pau, Alfonso de Palencia, Lucio
             Marineo, Rodrigo Sánchez de Arévalo, Antonio de Nebrija et Jérôme Münzer.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La traduction castillane</head>
           <p>
             <hi rend="i">Le seul témoin castillan conservé</hi>. ­ Il s’agit du ms. esp. 458 de la Bibliothèque nationale de France. Il date du milieu
@@ -246,9 +248,7 @@
             de même nature, et très souvent associé à la <hi rend="i">Genealogia</hi> dans les manuscrits. Cela reste une hypothèse bien sûr, qu’il
             faudrait vérifier en comparant systématiquement les traductions de Martín de Ávila.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>La traduction castillane du <hi rend="i">De montibus</hi> se révèle très fidèle à l’original latin. Elle est bien représentative du
           mouvement culturel et intellectuel qui parcourt la Castille dans la première moitié du <num>xv<hi rend="sup">e</hi></num> siècle, caractérisé par
           l’importance des traductions vernaculaires des textes classiques et humanistes. Contrairement à ce que l’on aurait pu penser au premier
@@ -269,7 +269,7 @@
           Catalogne qu’en Castille. Reste à savoir si le <hi rend="i">De montibus</hi>était connu à travers sa traduction castillane ou seulement dans
           le texte original latin. L’index des noms propres devrait permettre de faciliter la recherche des traces de la traduction castillane du <hi rend="i">De montibus</hi> dans la littérature de la Péninsule.</p>
       </div>
-              <div type="appendix"><head>Édition du <hi rend="i">Libro de los montes e rios e selvas</hi>
+          <div type="appendix" n="5"><head>Édition du <hi rend="i">Libro de los montes e rios e selvas</hi>
       </head>
         <p>Le manuscrit unique, non autographe, pose des problèmes particuliers en raison de la complexité de la tradition latine, due au grand
           nombre de noms propres exotiques ou désuets contenus dans le texte. Les fautes d’origine incertaine ont été signalées dans le volume de
@@ -278,7 +278,6 @@
           intempestives, tout en cherchant à en donner un transcription lisible et “ interprétative ” au moyen d’une ponctuation et d’une accentuation
           diacritique, ainsi que par la séparation des mots. <lb/>Les notes critiques portent sur les méthodes du traducteur.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

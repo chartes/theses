@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Congo an I</title>
-        <title type="sub">Décolonisation et politique francaise au Congo-Brazzaville (1958-1963)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Congo an I</title><title xml:lang="fr" type="sub">Décolonisation et politique francaise au Congo-Brazzaville (1958-1963)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bat, Jean-Pierre">Jean-Pierre Bat</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200601.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’enjeu de la décolonisation de l’Afrique noire française répond à des logiques coloniales, africaines, nationales et internationales. La
           question de la décolonisation de l’Afrique est une des raisons essentielles de la création de la <num>v<hi rend="sup">e</hi></num> République. Le
           caractère moins spectaculaire qu’elle a pris en Afrique noire, au regard de la guerre d’Algérie, ne doit pas masquer les enjeux et les
@@ -62,7 +65,7 @@
           chronologique autour des logiques combinées entre les rythmes politiques français et congolais pour offrir une approche pragmatique et
           démythifiée. La figure de l’abbé Fulbert Youlou se place naturellement au centre des recherches.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Eparpillées entre Paris, Brazzaville et Abidjan, les sources sont le reflet d’une mémoire partagée entre la France et l’Afrique. L’axe de
           recherche amène à se concentrer sur les sources des différents acteurs de cette politique, personnes morales ou physiques. Au premier rang
           des archives des institutions républicaines en charge de cette question, se trouvent les archives du Secrétariat général des affaires
@@ -94,9 +97,8 @@
           politique de décolonisation. Les clivages transcendent largement la dialectique anticolonial/colonial, ou encore la dialectique noir/blanc,
           pour s’ancrer sur des réalités bien plus politiques.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">de l’âge colonial a la république du Congo</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">de l’âge colonial a la république du Congo</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De Gaulle brazzavillois, Brazzaville gaulliste</head>
           <p>Le discours de Brazzaville constitue a posteriori la légitimation la plus importante du discours gaulliste sur la décolonisation.
             Légitimation réelle ou recomposée, il permet d’aborder la symbolique de Brazzaville ainsi que le lien charnel qui l’unit au gaullisme,
@@ -108,7 +110,7 @@
             des logiques géographiques (fief traditionnel brazzavillois) qu’opportunistes (seul groupe – et pour cause – qui n’ait pas été approché
             par un grand parti extra-territorial).</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le balalisme</head>
           <p>Force d’inertie, de paralysie et de contestation de la vie politique coloniale, le balalisme – terme forgé au début des années 1950 par
             des savants et des administrateurs français face à l’importance de ce mouvement – désigne l’identification politique et sociale du groupe
@@ -125,7 +127,7 @@
             son statut ecclésiastique ne sont pas étrangers à son triomphe, les matsouanistes le désignent sous le terme de « Kiyunga » : la
             soutane.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’évolution politique congolaise</head>
           <p>Trois dimensions sont prises ici en compte. La première s’incarne dans la concurrence entre les leaders politiques congolais de 1945 à
             1956 : Jean-Felix Tchicaya d’une part, co-fondateur du RDA au côté de Felix Houphouët-Boigny et grand pourfendeur du colonialisme de
@@ -153,7 +155,7 @@
             paradoxe suivant : Opangault dirige le gouvernement congolais, mais Youlou jouit de la majorité à l’Assemblée à une voix près, à la suite
             de « l’affaire Yambot ».</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La réforme constitutionnelle et le référendum de 1958</head>
           <p>Conséquence de la crise algérienne, le général de Gaulle est rappelé au pouvoir et enterre la <num>iv<hi rend="sup">e</hi></num> République. Si en
             France le changement de régime peut provoquer un grand bouleversement politique, en Afrique noire le référendum se présente en termes
@@ -164,7 +166,7 @@
             au pouvoir de « l’homme de Brazzaville ». La mise en place du nouveau régime, loin de déstabiliser la politique congolaise menée par la IV
 <hi rend="sup">e</hi> République, s’inscrit dans son prolongement, tout en l’intégrant à ses prétentions.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Du référendum a l’autonomie</head>
           <p>Un des objectifs de Charles de Gaulle est de réussir la décolonisation de l’Afrique le plus rapidement possible. Jacques Foccart est
             chargé des colonies d’Afrique noire. La première étape est la proclamation des républiques africaines : la République du Congo naît dans
@@ -175,8 +177,8 @@
             s’installe au pouvoir avec son équipe et préside à la naissance de la République. Le divorce politique entre MSA et UDDIA-RDA ne trouve en
             ce 28 novembre qu’une solution bancale et imparfaite, mais une solution qui satisfait les orientations RDA incarnées par Youlou.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">De l’autonomie a l’indépendance</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">De l’autonomie a l’indépendance</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La stabilisation du pouvoir youliste</head>
           <p>Le premier objectif de l’abbé, une fois au pouvoir, est de stabiliser son gouvernement. La contestation s’ancre dans les logiques
             sociales et politiques des influences de chaque parti. La tension difficilement contenue depuis novembre éclate en février 1959 : les
@@ -186,7 +188,7 @@
             prévenir le danger sur sa droite en ostracisant les matsouanistes les plus intransigeants, devenus d’encombrants alliés ; le divorce entre
             matsouanisme et masses laris est réalisé définitivement au profit de Youlou.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La république française et sa petite sœur congolaise</head>
           <p>La fin de l’âge de la France d’Outre-Mer a comme indispensable corollaire la définition de nouveaux rapports entre la France et ses
             jeunes partenaires républicains africains au sein de la Communauté. Les protocoles de premier transfert de compétences, signés le 13 mars
@@ -196,7 +198,7 @@
             et le lieu d’élaboration des premiers jalons d’assistance. Le Congo fait à cette époque l’expérience des premières limites de l’assistance
             française.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">« Unité, travail, progrès » : 1959-1960 matrice du congo independant</head>
           <p>L’âge de l’autonomie républicaine ne compte pas tant pour les émancipations, très limitées en réalité, qu’elle permet, que pour
             l’empreinte matricielle dont elle marque les jeunes républiques africaines : le Congo est très révélateur de ce processus. Il s’inscrit
@@ -211,7 +213,7 @@
             Vincent »), qui s’avèrent les véritables pivots de cette stratégie française en Afrique centrale. Car Brazzaville n’est pas seulement la
             capitale du Congo, c’est aussi la porte française sur toute l’Afrique centrale, en ébullition avec la décolonisation du Congo belge.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le Congo et l’Afrique équatoriale</head>
           <p>La question de l’unité géographique des entités à naître de la décolonisation trouve sa théorisation en Afrique de l’Ouest autour de la
             querelle fédéraliste. Ce débat reçoit en Afrique équatoriale une réponse originale, structurée autour de principes généraux (alignements
@@ -227,7 +229,7 @@
             fossoyeur. Youlou n’a jamais cru à une réelle union politique et a toujours préféré tourner son regard vers l’autre rive du fleuve Congo.
             Les accords d’indépendance de l’été 1960, pourtant portés par ce projet d’URAC, l’enterrent définitivement.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">L’indépendance de la république du Congo</head>
           <p>La course aux indépendances aboutit officiellement en 1960 en Afrique francophone : Brazzaville, pressé à l’ouest par un Gabon ultra
             francophile, au nord par ses partenaires de l’URAC et au sud et à l’est par le Congo belge, obtient son indépendance le 15 août 1960 à la
@@ -237,15 +239,15 @@
             président de Gaulle à Brazzaville. En réalité, le 15 août n’est que l’aboutissement théâtral d’une course à l’indépendance dont les règles
             ont été établies bien plus tôt, plus discrètement.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le Congo indépendant</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le Congo indépendant</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La république du Congo, <lb/>De l’indépendance à la conférence de Brazzaville : <lb/>entre espoirs et réalités</head>
           <p>La période qui s’ouvre le 15 août et se referme fin décembre 1960 est le moment où le président congolais nourrit des ambitions qui
             dépassent ses moyens et où la dure réalité de la situation du petit Congo tout juste indépendant se marie assez mal avec ses rêves : la
             conférence qu’il organise à Brazzaville en est la preuve la plus flagrante. Houphouët-Boigny reste le maître africain de l’échiquier
             francophone et Youlou a bien du mal à s’imposer comme son pendant régional en Afrique centrale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La république française et la république du Congo : indépendance, communauté et influences</head>
           <p>Preuve de son absence de projet politique de fond, l’abbé président a du mal à définir la nature des nouvelles relations avec l’ancienne
             métropole, partagé entre son désir de plaire à de Gaulle et les impératifs de l’indépendance : il essaye d’élaborer; au nom de ses
@@ -260,7 +262,7 @@
             chevilles ouvrières de cette politique. Le cas de Brazzaville est d’autant plus intéressant que l’abbé s’entoure de conseillers français,
             comme Jean Mauricheau-Beaupré, « missus dominicus » de Foccart au Congo.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La république du Congo sur la scène internationale</head>
           <p>Le Congo est un petit pays dont le président nourrit de grandes ambitions, entre réalités stratégiques du pré carré français et rêves
             mégalomaniaques. Pour comprendre les positions choisies, le contexte de décolonisation ne suffit pas à lui seul ; il convient de prendre
@@ -277,7 +279,7 @@
             deux par la guerre froide), avec trois préférences occidentales : la RFA, Israël et les États-Unis. Il parvient à mener avec Washington
             une politique originale, inévitable au vu des appétits américains sur l’Afrique centrale en crise autour du Congo.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Brazzaville et la crise congolaise</head>
           <p>C’est sans conteste une des questions majeures du Congo indépendant et de la politique française au Congo. Les ambitions de Youlou se
             tournent volontiers vers la rive gauche du Congo ; les vues des Français en Afrique centrale prennent de plus en plus en compte le géant
@@ -299,7 +301,7 @@
             a été réalisé, la position franco-congolaise est loin d’être claire quant à la question du Congo ex-belge… Cette politique se poursuit
             au-delà du régime de Youlou, avec d’autres ressources mais avec le même objectif et les mêmes impératifs.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">La chute de l’abbé Fulbert Youlou</head>
           <p>Le 15 août 1963, trois ans jour pour jour après la proclamation de l’indépendance du Congo, le président Youlou est renversé par une
             révolution de trois jours. L’impopularité de l’abbé est à ce moment à son zénith et ses promesses ne font plus rêver personne. Toutes les
@@ -318,9 +320,7 @@
             imposer l’intervention française. C’est sous les yeux impassibles des Français que Fulbert Youlou est amené prisonnier au camp… « Fulbert
             Youlou ».</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La logique de l’indépendance africaine répond au principe suivant : mettre en place la matrice d’un État moderne qui puisse s’intégrer dans
           le monde contemporain, avec au cœur de cette matrice l’influence française. Ce projet est éminemment politique, essentiellement politique.
           Il ne faut pas vouloir faire dire au terme « indépendance » dans le cas de l’Afrique noire française plus qu’il ne signifie dans le projet
@@ -338,12 +338,11 @@
           européocentré, mais comme un processus d’hybridation et de réinvention où jouent, s’affrontent et se combinent des logiques et des pratiques
           d’État de facture « indigène », coloniale et post-coloniale.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Correspondance coloniale. – Correspondance privée de Youlou. – Transcriptions des entretiens avec René Gauze et Philippe Lettéron. – Notes
           de synthèse BUDES de Charles Delarue. –Presse. – Discours officiels. – Photographies noir et blanc des événements de la vie politique
           congolaise.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

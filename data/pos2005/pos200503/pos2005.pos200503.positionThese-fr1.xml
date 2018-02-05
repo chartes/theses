@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les officiers de justice au travail dans la sénéchaussée de Toulouse à la fin du Moyen Âge d’après les registres de la sénéchaussée</title>
-        <title type="sub">« Exercer le fait de la justice »</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les officiers de justice au travail dans la sénéchaussée de Toulouse à la fin du Moyen Âge d’après les registres de la sénéchaussée</title><title xml:lang="fr" type="sub">« Exercer le fait de la justice »</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bober, Benjamin">Benjamin Bober</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200503.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le Toulousain des <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles constitue un cadre approprié pour l’étude de l’impact de la
           justice royale sur une région relativement éloignée des institutions centrales. L’exercice du fait de la justice comporte deux dimensions :
           la première est incarnée par le travail au jour le jour qu’accomplissent des officiers rompus à toutes les techniques qu’exigent une tâche
@@ -63,10 +66,9 @@
           définit. De la place des différents officiers au sein du champ judiciaire local dépendent à la fois le prestige et la richesse, d’où de
           multiples tensions qui n’affectent pas pour autant le cours d’une justice royale prisée et estimée par les Méridionaux.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Typologie des sources</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Typologie des sources</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La production documentaire de la cour du sénéchal de Toulouse</head>
           <p>La méconnaissance de l’organisation administrative et judiciaire des bailliages et sénéchaussées vient en grande partie du fait qu’on ne
             possède que très peu d’archives produites par ces institutions. Toulouse échappe de très peu à la règle. Les archives de la sénéchaussée,
@@ -83,7 +85,7 @@
               sensu</hi> que la cour du juge des appeaux civils ou celle du viguier de Toulouse.</p>
           <p/>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Conception, élaboration et utilisation des registres</head>
           <p>Registre de cour, registre d’imbréviatures d’un notaire de la cour des appeaux civils, registres de procédure et registres d’enquêtes,
             les aléas de la conservation auront quand même permis de présenter aujourd’hui un panorama riche et intéressant de la production
@@ -110,8 +112,8 @@
             notaire-greffier en charge de la rédaction du registre de procédure utilise comme base un registre préparatoire, d’une cursivité plus
             marquée, d’où il tire des copies. C’est sur ces mêmes registres que travaillent les rapporteurs auprès du conseil de la sénéchaussée.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le travail à la cour du sénéchal de Toulouse</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Le travail à la cour du sénéchal de Toulouse</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un cadre du travail : les usages diplomatiques</head>
           <p/>
           <p>L’étude des actes produits par les cours royales de la sénéchaussée lors des procès permet de percevoir les influences subies par ces
@@ -127,7 +129,7 @@
             intimement influences des pratiques observées auprès des cours des officialités (suscriptions impersonnelles, usage du <hi rend="i">reddite litteras</hi>,…), mais aussi des cours royales septentrionales (observation du style de Pâques, là où les notaires sont
             habitués à suivre celui du 1<hi rend="sup">er</hi> avril).</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un cadre du travail : le style de la procédure</head>
           <p>Plus que tout, le style d’une procédure judiciaire est l’expression du degré de perfectionnement et de compétence d’une cour. Par
             extension, elle met en valeur les capacités à maîtriser le droit des officiers qui l’utilisent. Le cas de Toulouse est d’autant plus
@@ -147,7 +149,7 @@
             peut que laisser le champ libre aux simples conjectures. Quoi qu’il en soit, l’influence canonique à la cour du sénéchal de Toulouse est
             aussi importante, sinon plus, que l’influence royale.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’exercice du travail, un exercice pragmatique ?</head>
           <p>Les usages diplomatiques et procéduraux sont au nombre de ces cadres qui structurent l’exercice du travail de tous les officiers de
             justice de la sénéchaussée, juges, avocats, procureurs, notaires, sergents. De l’apprentissage et de l’application de ces usages naissent
@@ -164,13 +166,13 @@
             aux enquêtes, le recours à des éléments immédiatement identifiables pour marquer l’espace de la justice royale – un siège, une bible, un
             sergent fleur-de-lysé – ou encore le respect des grandes fêtes solennelles.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les officiers de justice toulousains dans le champ judiciaire local</head>
-        <p>On a dégagé trois grands types de personnes travaillant pour les cours de la sénéchaussée : les hommes de loi, les notaires, et les
+      </div><div n="4" type="part"><head n="0" type="chapter">Les officiers de justice toulousains dans le champ judiciaire local</head>
+        <p n="1" type="chapter">On a dégagé trois grands types de personnes travaillant pour les cours de la sénéchaussée : les hommes de loi, les notaires, et les
           sergents. Chacune de ces catégories occupe une place précise dans le processus décisionnel, à savoir la manifestation de l’ordre, sa
           transmission et son exécution. Au-delà de cette application concrète, cette division est le reflet d’un champ judiciaire en apparence
           cloisonné. Peut-on espérer franchir ces barrières ? Et quand bien même, ne se retrouve-t-on pas alors confronté à un monde médiéval qui
           souffre peu les bouleversements de hiérarchie et qui affecte de remettre à leur place ceux qui ont osé vouloir changer l’ordre établi ?</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Les hommes de loi dans le champ judiciaire local : <lb/>hiérarchies et tensions</head>
           <p>
             <hi rend="i">Fama</hi> et fortune, les hommes de lois au service des institutions de la sénéchaussée de Toulouse ont tout ce qu’un homme de
@@ -188,7 +190,7 @@
             éminemment technique, à la fois soudé par l’impression d’appartenir à un même corps, mais également régi par des principes qui ressortent
             de moins en moins de la sphère privée, du fait de la limitation des lieutenances.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les notaires-greffiers</head>
           <p>Les notaires-greffiers des cours de la sénéchaussée occupent une position cruciale dans le champ judiciaire toulousain puisqu’ils sont
             un lien. Lien unissant les officiers entre eux, ils permettent la matérialisation de l’ordre en le transcrivant dans des mandements, en
@@ -201,7 +203,7 @@
             place, deux métiers distincts coexistent : les greffiers modernes d’une part, actifs auprès des cours de justice de la sénéchaussée, et
             les simples notaires publics, de l’autre.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">La sergenterie toulousaine</head>
           <p>Les sergents toulousains, ni marginaux ni « patriciens », se situent donc dans le marais d’une classe moyenne composée majoritairement
             d’artisans ou de petits marchands. Véritable mosaïque socioprofessionnelle, la sergenterie a fédéré sous la bannière de saint Louis toute
@@ -221,9 +223,7 @@
             premier rang desquels les capitouls – ne s’expliquent pas en partie par la jalousie ou du moins par le sentiment de transgression sociale
             éprouvés par ces derniers, le tout sur un substrat de vérité qu’il est presque impossible d’évaluer.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Dans un Midi où les tout premiers agents du pouvoir royal, fins politiques, ont associé intimement les traditions locales aux usages
           royaux, obtenant ainsi un cadre original et efficace pour l’administration de la justice, le service de la couronne n’est pas chose anodine.
           C’est l’une des raisons de l’engagement d’universitaires, de notaires ou de simples artisans dans les institutions de la sénéchaussée. Fiers
@@ -242,10 +242,9 @@
           pour tout un chacun d’accéder aux institutions royales. Mais cette jalousie que l’on pense ressentir n’est-elle pas une marque du succès de
           ces dernières auprès de la population ?</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Édition d’un tarif notarié du début du <num>xv<hi rend="sup">e</hi></num> siècle. – Index.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

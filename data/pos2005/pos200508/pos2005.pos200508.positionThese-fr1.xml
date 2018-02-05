@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le Bureau des longitudes (1795-1854)</title>
-        <title type="sub">De Lalande à Le Verrier</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le Bureau des longitudes (1795-1854)</title><title xml:lang="fr" type="sub">De Lalande à Le Verrier</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Feurtet, Jean-Marie">Jean-Marie Feurtet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200508.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La création du Bureau des longitudes par la Convention thermidorienne le 7 messidor an III (25 juin 1795) intervient en plein cœur d’une
           période de bouillonnement culturel et de reconstruction institutionnelle prenant pour cadre le Paris savant. Tandis que l’Académie des
           sciences n’avait pas encore connu sa première résurrection au sein de l’Institut national, l’astronomie française se voyait dotée d’une
@@ -74,7 +77,7 @@
           Bureau était un centre privilégié d’élaboration des savoirs au carrefour des « sciences de l’observatoire ». Par la lorgnette d’études de
           cas et de réseaux, cette étude vise à saisir la nature profonde du creuset parisien, de mieux connaître ses codes et ses figurants.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Ce travail s’accompagne d’une mise à disposition des chercheurs des procès-verbaux du Bureau des longitudes, aujourd’hui encore conservés
           par cette institution, riche source jusqu’alors très largement méconnue. Les premiers temps, de 1795 à 1804, sont couverts par les notes
           assez brouillonnes rédigées principalement par le secrétaire Lalande, réparties sur deux cahiers : première décennie très homogène dont
@@ -95,9 +98,8 @@
         <p>Parmi les sources imprimées utilisées prioritairement, figurent la <hi rend="i">Connaissance des temps</hi> et l’<hi rend="i">Annuaire</hi>, dont la rédaction et la publication étaient l’une des préoccupations principales des séances du Bureau, ainsi que, plus
           ponctuellement, les <hi rend="i">Œuvres</hi> d’Arago, Laplace et Biot et certains périodiques scientifiques ou parisiens.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La formation d’un corps savant <lb/>de la Convention à l’Empire (1795-1804)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La formation d’un corps savant <lb/>de la Convention à l’Empire (1795-1804)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les tractations fondatrices</head>
           <p>Le besoin de réforme s’est fait sentir dans l’astronomie parisienne dès le milieu des années 1780 : à la tête de l’Observatoire de Paris,
             Cassini IV avait mis en place une nouvelle organisation plus clairement indépendante de l’Académie royale des sciences et une hiérarchie
@@ -118,7 +120,7 @@
             l’affirmation de son rôle d’exclusivité dans l’entreprise scientifique, par un contrôle plus fragmenté et nécessitant des interfaces plus
             adaptées à la redynamisation d’un champ préexistant et identifiable dès les années 1770.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un corps savant hétérogène : <lb/>le Bureau de Lalande</head>
           <p>Les premiers mois de réunion au Bureau se distinguent par l’activité et le volontarisme du secrétaire Lalande. Proche des milieux
             politico-culturels dominants de l’Idéologie, ce dernier entretient une façade publique essentielle pour un corps qui ne peut attendre de
@@ -142,7 +144,7 @@
             système métrique décimal, dont Laplace devint à sa suite avec Delambre et Prony le principal artisan, dans un Bureau organiquement lié à
             l’échafaudage technicien de la France nouvelle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Observatoire et observatoires de Paris <lb/>sous le Directoire et le Consulat</head>
           <p>Plusieurs « affaires » jalonnent la consolidation du nouveau Bureau, et tout d’abord celle du départ définitif de Cassini IV. Un faisceau
             complexe de facteurs contribue à expliquer que Cassini n’ait pas pu ou voulu tirer parti de son intégration au Bureau des longitudes pour
@@ -164,7 +166,7 @@
             Méchain de 1803-1804 en Espagne que le Bureau, et plus particulièrement Laplace, firent procéder à l’appropriation définitive d’un espace
             de science réaménagé et bientôt repensé.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Un premier âge d’or sous le Consulat</head>
           <p>Les conditions sociopolitiques propres au milieu de la capitale des Lumières offrent une trame sûre pour l’étude de la constitution d’un
             « creuset savant » bien circonscrit. L’arrivée de Bonaparte au pouvoir marque, après la mort de Borda, un second tournant dans la
@@ -186,8 +188,8 @@
             adjoints dans le dispositif de travail astronomique quotidien sont autant d’articulations majeures permettant d’expliquer la permanence et
             les réussites d’une institution essentiellement malléable.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">De Laplace à Arago, <lb/>ou la négociation des hégémonies</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">De Laplace à Arago, <lb/>ou la négociation des hégémonies</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les années Laplace</head>
           <p>Dans le sillage de la re-fondation du Bureau en 1804, une homogénéisation mathématicienne marginalise au sein de l’institution les
             observateurs purs, à l’instar de Messier, tandis que Delambre y définit les critères des observations « utiles ». Laplace domine de tout
@@ -214,7 +216,7 @@
             que le Dépôt de la Marine demeura plus intimement et durablement lié avec le cœur académique, à travers la présence active au Bureau de
             Beautemps-Beaupré et Daussy.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les nouveaux circuits de l’astronomie française <lb/>(premier tiers du <num>xix</num>
 <hi rend="sup">e</hi> siècle)</head>
           <p>Le développement de la science parisienne est souvent opposé à l’asphyxie de la vie scientifique provinciale du temps des Lumières. Une
@@ -232,7 +234,7 @@
             d’éclairer avec détail la perception de cette sécession organisée d’une astronomie sans programme et fondée sur d’autres valeurs
             sociales.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le Bureau et sa « succursale » de Marseille</head>
           <p>Second site de l’astronomie d’observation française au début du <num>xix</num>
 <hi rend="sup">e</hi> siècle, l’observatoire des Accoules, à Marseille, représente un cas paradigmatique de contrôle à distance exercé par
@@ -249,9 +251,9 @@
             correspondant d’Arago, dont la direction marque un reflux centrifuge progressif et partiel, un désintérêt croissant de la part du Bureau
             des longitudes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le Bureau des longitudes et l’Observatoire de Paris <lb/>au milieu du <num>xix</num>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le Bureau des longitudes et l’Observatoire de Paris <lb/>au milieu du <num>xix</num>
 <hi rend="sup">e</hi> siècle : <lb/>déchirure ou mutation accélérée ?</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’Observatoire d’Arago, un lieu de science <lb/>sous la monarchie de Juillet</head>
           <p>Après l’abandon définitif de l’observatoire de l’Ecole militaire, l’Observatoire devient le lieu d’observation unique du Bureau des
             longitudes. Arago y est nommé avec le titre de directeur des observations (1834) ; un recrutement d’une ampleur nouvelle se met
@@ -266,7 +268,7 @@
             d’abord satellisé par les astronomes du Bureau, gangue symbolique dont il tend à se détacher au fil des ans, avant de connaître une
             immense consécration publique avec la découverte de Neptune en septembre 1846.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La scission de l’élite astronomique parisienne</head>
           <p>Un retour sur « l’affaire Neptune » au Bureau des longitudes était nécessaire : l’analyse de certains documents clés permet en effet
             d’éclaircir la question du nom à donner à la planète. Ce débat cristallisa, à partir de février 1847, une véritable bipartition d’un champ
@@ -282,7 +284,7 @@
             se transforme en camp retranché d’un idéal d’autonomie savante, introduit depuis 1846 auprès des sphères politiques de l’Ordre, Le Verrier
             reste à la tête d’un pôle scientifique jumelé au pôle académique principal, dont l’unicité demeure un état de fait.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La séparation (1851-1854)</head>
           <p>Ce ne fut qu’au printemps 1852 que Le Verrier s’affirma comme alternative complète à l’Observatoire d’Arago, après avoir été l’un des
             principaux auteurs des profondes réformes engagées par le ministère Fortoul. Après le décret du 9 mars 1852, le Bureau des longitudes est
@@ -296,19 +298,16 @@
             la même époque permettent également de compléter le tableau d’un champ qui connaît, au tournant de 1853-1854, une mutation formelle qu’il
             convient de resituer entre logiques d’affrontements et refonte structurelle.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Administrer et faire science, telle était la mission permanente du Bureau des longitudes de France, organe collectif pensant et missionnant
           d’un Observatoire central et d’un réseau d’observateurs et collaborateurs à géométrie variable, institution de réunion informelle et corps
           hybride donnant à voir l’officialisation autogérée et les mutations du pouvoir savant de la capitale des Lumières. Il constitua
           ainsi, durant 60 ans, un foyer intégré, évolutif et mouvant de mise en relations des acteurs et de création discursive, au sein d’un champ
           de savoirs et de vastes reconfigurations des modes de production des sciences de l’observatoire.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition critique des deux premiers cahiers de procès-verbaux du Bureau des longitudes (juillet 1795-mai 1804)</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

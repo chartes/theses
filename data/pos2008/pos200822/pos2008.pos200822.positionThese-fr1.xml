@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">François Sublet de Noyers (1589-1645)</title>
-        <title type="sub">&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Ad majorem regis et Dei gloriam&lt;/hi&gt;</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">François Sublet de Noyers (1589-1645)</title><title xml:lang="fr" type="sub"><hi rend="i">Ad majorem regis et Dei gloriam</hi></title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lefauconnier, Camille">Camille Lefauconnier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200822.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>S’intéresser à François Sublet de Noyers, plus d’un siècle après Charles Schmidt, qui en fit son sujet de thèse d’École des chartes à la
           fin du <num>xix</num>
 <hi rend="sup">e</hi> siècle, c’est se pencher sur lui en bénéficiant d’un renouvellement complet de l’historiographie. En effet, il n’est
@@ -70,7 +73,7 @@
           génération des premiers vrais administrateurs du royaume. Le service du roi dans les plus hautes sphères du pouvoir et le service de Dieu en
           toute circonstance, sont les clefs de lecture pour comprendre cette figure du Grand siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La vie de François Sublet de Noyers ne se peut reconstituer qu’avec des sources extrêmement éclatées par leur dispersion. Pour ce qui est
           de la vie privée et de la famille de Sublet de Noyers, il faut se tourner en premier lieu vers le minutier central des notaires parisiens
           aux Archives nationales, en particulier les études XIX, XXIV, XXVI, LXXXIV (pour la famille de son épouse Isabelle Le Sueur), LXXXVII
@@ -92,9 +95,8 @@
           ont complété de nombreuses zones d’ombre en livrant des compilations de correspondance sur des sujets variés : famille du secrétaire d’État,
           gestion de l’administration des Bâtiments du roi, etc.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">François Sublet de Noyers, de la magistrature au pouvoir ministériel</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">François Sublet de Noyers, de la magistrature au pouvoir ministériel</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines de Sublet, de Blois à Paris</head>
           <p>La famille Sublet trouve ses origines à Blois, où Jean Sublet, greffier du bailliage, donne naissance à dix-huit enfants. L’un devient
             aumônier de Catherine de Médicis ; deux autres fils sont des officiers de finances, anoblis à la fin du règne de Charles IX, et forment
@@ -117,7 +119,7 @@
             active proche des idéaux de la Réforme catholique par nombre de ses membres, religieuses ou abbés, sont autant d’éléments de cohésion au
             sein de la nébuleuse des Sublet.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">François Sublet de Noyers, à la croisée des réseaux</head>
           <p>François Sublet de Noyers, né en 1589, est plongé dès sa jeunesse dans le réseau de ses parents, en particulier lorsque son oncle Jean
             Bochart, président du parlement de Paris et surintendant des finances, le prend sous son aile et lui ouvre les portes du Conseil des
@@ -136,8 +138,8 @@
             tardive : au moment de son arrivée au secrétariat d’État de la guerre, il est âgé de quarante-sept ans. Son ascension n’est pas due à
             Richelieu lui-même, mais plus généralement à un État monarchique en construction.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Ad majorem regis gloriam</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Ad majorem regis gloriam</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La créature de Richelieu</head>
           <p>François Sublet de Noyers succède à Abel Servien dans le poste de secrétaire d’État de la guerre. Servien a dû céder face à l’hostilité
             des autres secrétaires d’État et des surintendants des finances, et en particulier du « clan » formé par les surintendants des finances
@@ -159,7 +161,7 @@
             relative aux affaires de la guerre. Il en donne un rapport au roi et se charge d’expédier les ordres royaux. Il a donc une place
             privilégiée au Conseil du roi.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Monsieur de Noyers, secrétaire d’État</head>
           <p>François Sublet de Noyers doit gérer les aspects administratifs des guerres menées par Louis XIII de 1636 à 1643. Guerre contre
             l’Espagne, révoltes paysannes, prises d’armes nobiliaires sont autant de facteurs d’instabilité pour le royaume en ces années, d’autant
@@ -187,7 +189,7 @@
             locaux pour la Chambre des comptes à Paris –, révèlent les ambitions de Sublet de Noyers au service de Louis XIII : il s’agit de redonner
             à la France, par le biais de ses bâtiments comme de ses manufactures, un lustre antique sans précédent.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le secrétaire d’État au travail</head>
           <p>Afin de poser les jalons d’une étude des bureaux du département de la guerre sous Richelieu, ont été examinées les archives conservées au
             Service historique de la Défense. Les mentions dans la marge des minutes des actes, les billets qui circulent entre le secrétaire d’État
@@ -211,8 +213,8 @@
             encore largement à l’état embryonnaire et reposent sur des liens d’homme à homme, ce qui n’empêche pas des carrières dans les bureaux sur
             le long terme, même après la disgrâce de Sublet de Noyers.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La puissance d’un ministre et ses faux-semblants</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La puissance d’un ministre et ses faux-semblants</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Monseigneur de Noyers, les splendeurs d’un ministre</head>
           <p>Sublet de Noyers devient, du jour où il est nommé secrétaire d’État de la guerre, un « haut et puissant seigneur ». Sa fortune est
             difficile à déterminer, mais on peut évaluer ses revenus annuels à 50 000 livres tournois, qui proviennent de ses charges mais aussi de
@@ -236,7 +238,7 @@
             Sublet de Noyers, il faut souligner que le secrétaire d’État use de son pouvoir pour manifester sa foi et permettre le triomphe du
             catholicisme en France.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’apogée des Sublet, <num>xvii</num>
 <hi rend="sup">e</hi>- <num>xviii</num>
 <hi rend="sup">e</hi> siècles</head>
@@ -261,7 +263,7 @@
             d’épée française et même européenne, ce qui n’empêche pas les mauvaises langues de dénoncer parfois les origines roturières de la famille.
          </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">De la fragilité à la disgrâce, de la disgrâce à la mort</head>
           <p>François Sublet de Noyers est à l’apogée de son pouvoir en 1642. Il est avec Chavigny l’un des confidents les plus écoutés de Richelieu
             depuis la mort du père Joseph. La mort du cardinal, si elle le prive de son protecteur, lui laisse entrevoir la possibilité de devenir le
@@ -277,9 +279,7 @@
             octobre 1645, entouré d’un cercle d’amis et de parents proches. Selon une pratique courante, il fait enterrer son cœur dans l’église des
             Carmélites de Gisors et son corps dans la crypte du Noviciat des Jésuites de Paris, refusant par humilité toute épitaphe.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Sublet de Noyers meurt dans la disgrâce, admiré par les uns, moqué par les autres qui n’ont jamais vu son attitude dévote que sous l’angle
           de l’hypocrisie, et son attachement au cardinal que comme l’effet d’une ambition dévorante. Dès la seconde moitié du siècle, la figure de
           Sublet de Noyers est occultée par ses successeurs, Louvois et Colbert. C’est pourtant sous son ministériat que sont créées les conditions de
@@ -296,11 +296,10 @@
           laïcisation de la politique, ni celui d’une bureaucratisation du gouvernement, mais celui du « régime de l’extraordinaire », détenant les
           clefs de la politique de gloire qui allait par la suite faire des rois de France des monarques aspirant à l’hégémonie sur l’Europe.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Photographies (église et château de Noyers, château de Dangu, Nainville). — Reconstitutions généalogiques (Sublet, Bochart, Le Sueur). —
           Documents iconographiques divers (portraits, jetons, documents familiaux).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

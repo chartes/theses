@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’intervention française aux Açores en 1583</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’intervention française aux Açores en 1583</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Duchesne, Magali">Magali Duchesne</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200710.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’intervention française dans la crise de succession de Portugal entre 1578 et 1583, si elle s’inscrit dans un processus de rivalité avec
           l’Empire espagnol, dont participent également les invasions des Pays-Bas et l’alliance avec l’Empire ottoman, présente toutefois, tant sur
           le plan politique que militaire, de nombreuses particularités. Initiative personnelle de Catherine de Médicis qui met tout en œuvre pour
@@ -70,7 +73,7 @@
           commandant en chef réussit à obtenir de l’ennemi des conditions de reddition satisfaisantes. Ces conditions en font donc une opération
           atypique, intéressante à étudier pour l’histoire tant militaire que maritime du <num>xvi<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La principale source utilisée pour ce travail est un document notarié conservé aux Archives départementales de Seine-Maritime sous la cote
           2<hi rend="sup">e</hi>70 (40). Il s’agit du recueil, sous la forme d’un registre relié, des minutes des actes passés devant notaire au
           Havre pour la préparation de l’expédition aux Açores de 1583. Ce recueil contient également, dans les dernières pages, une trentaine d’actes
@@ -92,9 +95,8 @@
           archives portugaises sur la période, et particulièrement sur les Açores, aient subi de nombreuses pertes liées à des incendies ou à des
           troubles politiques.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie"/>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter"/>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’expédition ratée de 1582</head>
           <p>La déshérence du trône de Portugal après la mort du roi-cardinal Henri provoque une crise de succession qui très vite oppose les intérêts
             de Philippe II, désireux de réunir les couronnes ibériques sous son autorité, à ceux du prieur de Crato, dom António, prétendant
@@ -105,7 +107,7 @@
             La cruauté dont fait preuve l’amiral espagnol vis-à-vis des vaincus soulève l’opinion et encourage la couronne française à prôner la
             vengeance.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Préparer la revanche</head>
           <p>Après cette première défaite cuisante, Catherine de Médicis n’a de cesse qu’une nouvelle expédition soit montée, sans pour autant perdre
             de vue son espoir d’arriver, à force de pressions, à un compromis avec Philippe II qui passerait par un mariage entre une Infante et
@@ -113,7 +115,7 @@
             reine-mère tente de gagner à sa cause Elisabeth I<hi rend="sup">ère</hi> d’Angleterre, briguant également sa main pour son plus jeune
             fils.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Premiers préparatifs</head>
           <p>Une fois l’expédition décidée, le manque de fonds amène la France à rechercher des alliances contre Philippe II. Elisabeth I <hi rend="sup">ère</hi> d’Angleterre, alliée la plus plausible, répugne toutefois à s’engager sérieusement, préférant, par des
             demi-promesses, encourager la rupture entre ses deux principaux rivaux sans rien concéder. L’Empire ottoman, malgré des manifestations de
@@ -121,30 +123,28 @@
             L’organisation de l’expédition connaît quelques heurts, soumise à des querelles d’influence autour du choix du général commandant
             l’expédition. C’est finalement Aymar de Chastes, cousin du duc de Joyeuse et chevalier de Saint-Jean de Jérusalem, qui est désigné.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie"/>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter"/>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une expédition militaire en 1583</head>
           <p>Le port du Havre est choisi comme point de départ de l’expédition, en raison de son ouverture maritime, de son dynamisme économique et du
             dévouement de son gouverneur, Cardaillac-Sarlabous, au pouvoir royal. Toutefois, malgré la bonne volonté de ce dernier, le manque d’argent
             et de troupes retarde le départ de l’armée de plus de trois mois : en effet la guerre aux Pays-Bas ponctionne les finances de la
             reine-mère et mobilise les soldats.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Marine et marins en 1583</head>
           <p>Au <num>xvi<hi rend="sup">e</hi></num> siècle, les connaissances maritimes européennes sont au terme de l’évolution technique et scientifique qui
             a permis les grandes découvertes. L’effacement du navire long au profit du navire rond est en passe de s’achever tandis que l’artillerie
             maritime progresse considérablement. La société maritime évolue elle aussi et se met en place autour du commerce transatlantique et de la
             course. L’organisation de l’expédition aux Açores bénéficie donc de structures et de réseaux déjà existants.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le déroulement de l’expédition</head>
           <p>L’expédition arrive sans encombre à Terceira et s’organise rapidement pour résister à l’assaut espagnol imminent. Néanmoins, la
             supériorité numérique de l’armada de Santa-Cruz vient à bout des résistances franco-portugaises ; le contingent français obtient une
             capitulation honorable, mais les conditions très précaires du retour en France déciment l’armée.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’expédition française de 1583, comme la précédente, s’est soldée par un échec. Cette humiliation a longtemps suffi à désintéresser les
           historiens français d’un événement pourtant riche d’informations et de signification, tant sur le plan national qu’international. Les
           historiens étrangers, eux, ne s’y sont pas trompés : si la conquête des Açores en elle-même ne les a pas profondément intéressés, beaucoup y
@@ -167,7 +167,7 @@
           Canada, ce n’est qu’avec le cardinal de Richelieu puis surtout qu’avec Colbert que le pouvoir royal se tourne à nouveau vers la mer avec
           l’idée de devenir une puissance maritime et coloniale.</p>
       </div>
-              <div type="appendix"><head>Pièce justificative</head>
+          <div type="appendix" n="6"><head>Pièce justificative</head>
         <p>Est édité le registre 2<hi rend="sup">e</hi>70 (40) des Archives départementales de Seine-Maritime, qui retrace la préparation de
           l’expédition aux Açores de 1583, ainsi que des travaux effectués par le gouverneur du Havre sur la jetée du port.</p>
         <p>Parmi ces actes, on recense aussi bien des chartes-parties établissant l’affrètement d’un navire, que des actes de vente de provisions de
@@ -179,7 +179,6 @@
           ont été ajoutés afin d’améliorer la lisibilité de l’édition : le registre ne comprenait aucune de ces marques de mise en page, se contentant
           d’introduire chaque acte par la mention des dates.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

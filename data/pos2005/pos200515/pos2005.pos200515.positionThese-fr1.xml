@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les associations patriotiques en AOF durant la Seconde Guerre mondiale (juin 1940-octobre 1945)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les associations patriotiques en AOF durant la Seconde Guerre mondiale (juin 1940-octobre 1945)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Mbaye, Ousmane Ahmed">Ousmane Ahmed Mbaye</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200515.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Parler du patriotisme français des populations coloniales est un sujet qui jusqu’à aujourd’hui n’a pas été réellement abordé par les
           historiens de l’Afrique. Sujet tabou ou à la limite du « politiquement correct », les historiens africains l’ont ignoré et ont choisi
           d’étudier les mouvements nationaux africains, plus valorisants pour les populations du continent en quête d’identité nationale au lendemain
@@ -83,7 +86,7 @@
           libération nationale (CFLN) et de la France combattante à travers l’histoire des différentes associations gaullistes aofiennes. Elle permet
           enfin de saisir l’impact de ces différentes conceptions patriotiques auprès des populations aofiennes européennes et africaines.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Pour mener à bien cette étude, divers fonds d’archives ont été utilisés. La série G : <hi rend="i">Politique et Administration
             générale</hi>(1782-1959) du fonds de l’AOF, qui est l’une des séries les plus importantes des archives de l’AOF conservées aux Archives
           nationales du Sénégal (ANS), est une source de première importance pour le sujet : elle conserve les archives produites ou reçues par
@@ -101,10 +104,9 @@
           également exploitées, notamment la presse locale aofienne. Enfin des témoignages oraux recueillis auprès de témoins et parfois d’acteurs de
           ces événements ont complété le corpus des sources écrites.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La Légion française des combattants d’Afrique Noire, les Aofiens et la « Révolution nationale » <lb/>(juin
+          <div n="3" type="part"><head n="0" type="chapter">La Légion française des combattants d’Afrique Noire, les Aofiens et la « Révolution nationale » <lb/>(juin
           1940-avril 1942)</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Du choc de l’armistice au choix de Vichy : la naissance de la Légion</head>
           <p>À la fin juin 1940, la défaite, puis l’armistice avaient plongé définitivement la France dans un gouffre profond. L’AOF, éloignée des
             théâtres d’opération militaire et épargnée pour le moment par les conséquences immédiates de la défaite, entendait néanmoins continuer la
@@ -125,7 +127,7 @@
             très vite s’ouvrir à tous les Aofiens susceptibles de prendre part à cet appel patriotique, ce qui permit à cet organisme d’étoffer
             rapidement ses effectifs. À la fin de l’année 1941, la Légion était une institution bien en place au sein de la société aofienne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La Légion dans l’État ou l’État dans la Légion ?</head>
           <p>La Légion et les légionnaires étaient quasiment intégrés dans la sphère étatique de l’AOF et participaient entièrement au gouvernement de
             la fédération. Il est vrai que ses chefs étaient pour la plupart issus ou proches de l’administration coloniale. De ce fait, on était vite
@@ -139,7 +141,7 @@
             légionnaires. Grâce au soutien des autorités coloniales, la propagande légionnaire avait pu réellement se déployer au sein de l’ensemble
             de la société aofienne.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’impact de la propagande légionnaire sur les populations aofiennes : accommodement et résistance</head>
           <p>La propagande légionnaire était assez prégnante et bien organisée en AOF au point de pouvoir espérer toucher un public assez large et
             divers et par là participer activement à l’œuvre d’endoctrinement patriotique développée par le régime de Vichy. Pour être efficace, elle
@@ -163,9 +165,9 @@
             majorité des Africains, peu informés de la réalité des choses, se désintéressaient totalement de ces débats et attendaient simplement une
             amélioration des conditions de vie, de plus en plus difficiles en raison du blocus anglais et de l’état de guerre.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie ">De la tentation de la collaboration à la confrontation idéologique : <lb/>la fin de l’esprit légionnaire en AOF
+      </div><div n="4" type="part"><head n="0" type="chapter">De la tentation de la collaboration à la confrontation idéologique : <lb/>la fin de l’esprit légionnaire en AOF
           <lb/>(avril 1942-juillet 1943)</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La tentation de la collaboration</head>
           <p>Le 18 avril 1942, Pierre Laval revenait à la tête du pouvoir à Vichy en tant que chef du gouvernement. Encore plus disposé que l’Amiral
             Darlan à collaborer avec le régime hitlérien, il allait sceller pour de bon l’alliance franco-allemande dans la poursuite de la guerre.
@@ -182,7 +184,7 @@
             prises contre les ennemis du régime. Sous leur influence, la Légion vira définitivement vers une tendance collaborationniste sous l’égide
             du Service d’Ordre Légionnaire (SOL) et son activité se radicalisa au sein de la société aofienne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le ralliement de l’AOF aux Alliés : la reprise en main du pouvoir par Boisson</head>
           <p>À partir de l’été 1942, le gouverneur Boisson avait vu une grande partie de son pouvoir de commandement lui échapper au profit des chefs
             du SOL d’AOF  ; son influence avait même diminué auprès de certains administrateurs coloniaux, qui suivaient la ligne politique définie
@@ -203,7 +205,7 @@
             plus vite. Face à l’acharnement d’une opinion publique désormais clairement détachée de la « Révolution nationale », le maintien de cette
             politique allait rapidement déboucher sur une impasse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le maintien de la législation vichyssoise : une impasse</head>
           <p>Le gouverneur Boisson devint la cible de toutes les critiques de la part d’une opinion qui en appelait à un desserrement de l’étau
             vichyste au sein de la fédération ; son entêtement à vouloir sauvegarder les derniers vestiges d’un régime dorénavant détesté le plaçait
@@ -220,8 +222,8 @@
             rancœur des Aofiens. La création du CFLN le 3 juin 1943 accéléra le processus de déstabilisation du gouverneur Pierre Boisson, qui dut
             quitter son poste et laisser la place aux gaullistes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">De l’illusion de l’union patriotique à la manifestation des divergences politiques (juillet 1943-octobre 1945)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">De l’illusion de l’union patriotique à la manifestation des divergences politiques (juillet 1943-octobre 1945)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’appel à l’union patriotique gaulliste, une affaire d’Européens</head>
           <p>Le départ du gouverneur général Boisson marquait officiellement la fin du régime vichyste dans la fédération. L’arrivée de son
             successeur, Pierre Cournarie, gaulliste de la première heure, annonçait désormais le début d’une influence gaulliste au sein de la
@@ -246,7 +248,7 @@
             difficultés à fédérer tous les mouvements patriotiques aofiens. Les divergences des populations européennes allaient apparaître au grand
             jour avec la question de l’épuration.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Polémiques autour de l’épuration</head>
           <p>L’ensemble des associations patriotiques aofiennes avaient inscrit l’épuration des agents du régime de Vichy au nombre de leurs
             priorités, au même titre que la participation à la libération du territoire national en soutenant la Résistance métropolitaine et en
@@ -265,7 +267,7 @@
           <p>La mise en place de la Chambre civique en mai 1945 ne mit pas fin aux divisions des Européens, partagés entre les partisans d’une
             épuration sévère de la société et les modérés, qui en appelaient à une amnistie générale.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les enjeux politiques du combat patriotique : les débuts d’une nouvelle ère coloniale</head>
           <p>Durant toute cette période d’effervescence et de ferveur patriotiques, les associations africaines, certes peu importantes par rapport à
             la multitude de leurs homologues européennes, mais bien structurées, travaillaient dans l’ombre, en quête perpétuelle de légitimité
@@ -290,9 +292,7 @@
             restait plus aux Européens qu’à coopérer avec les leaders africains pour espérer trouver une place au sein des institutions
             politiques.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’étude de ces associations patriotiques révèle, en fin de compte, la difficulté de forger un esprit patriotique commun et unique au sein
           d’une société inégalitaire. Tant le régime de Vichy que le Gouvernement du CFLN et le Gouvernement Provisoire se sont trouvés dans
           l’impossibilité de mettre en place une unité patriotique en AOF. Les différences de culture entre Européens et Africains, les divergences
@@ -302,14 +302,13 @@
           autant d’éléments qui permettent de comprendre que chacun d’entre eux ne pouvait pas recevoir de la même manière l’idéologie patriotique
           préconisée par le régime en place.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Document en arabe de la propagande légionnaire. – Lettre du 20 janvier 1943 des légionnaires Mermet, Maillet, Chénier, Guillaume et
           Dulhoste au gouverneur général de l’AOF sur les activités collaborationnistes de Georges Marionnet, chef fédéral de la Légion. – Lettre
           manuscrite du 29 août 1945 de Léopold Sédar Senghor au directeur des affaires politiques du ministère des Colonies sur les préparatifs des
           élections législatives d’octobre 1945 et sur l’atmosphère politique en AOF. – Circulaire du 20 octobre 1945 du Ministre des Colonies sur la
           nouvelle politique coloniale du Gouvernement.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

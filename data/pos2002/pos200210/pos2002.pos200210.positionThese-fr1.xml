@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La Fête des fous dans le nord de la France (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La Fête des fous dans le nord de la France (<num>xiv<hi rend="sup">e</hi></num>-<num>xvi<hi rend="sup">e</hi></num> siècles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Guilleray, Pierre-Emmanuel">Pierre-Emmanuel Guilleray</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200210.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La fête des fous est attestée de la fin du <num>xii<hi rend="sup">e</hi></num> siècle à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle, principalement
           dans les villes françaises. Elle peut être définie comme une mascarade de Nouvel An, à laquelle les ecclésiastiques participent activement.
           La confusion qui résulte de ce mélange entre les registres religieux et populaires de la fête a beaucoup contribué à sa mauvaise réputation.
@@ -66,7 +69,7 @@
           dans la société. Enfin, la disparition de la fête au moment de la Réforme correspond à une rupture brutale dans le domaine des mentalités et
           des fêtes populaires.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sur la fête des fous sont à la fois ecclésiastiques et laïques. Pour la ville de Douai, les archives du chapitre de Saint-Amé
           sont conservées aux archives départementales du Nord (série 1G). Les comptes de la grande recette fournissent le plus de renseignements sur
           la fête, qui apparaît aussi dans les registres capitulaires et les inventaires du trésor liturgique. Les comptes communaux (série CC)
@@ -76,9 +79,8 @@
           contraire, la typologie des sources montre la grande variété des ressources documentaires sur la fête, mais aussi leur grande dispersion.
           Les sources ecclésiastiques sont d’un grand intérêt : elles permettent de connaître l’histoire de la fête dès la fin du XII <hi rend="sup">e</hi> siècle, parce que certains clercs y participent et que d’autres l’écrivent.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La fête des fous à Douai</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La fête des fous à Douai</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La fête des fous au chapitre Saint-Amé</head>
           <p>
             <hi rend="i">Les membres du chapitre.</hi>­ Les chapitres séculiers sont le cadre traditionnel de la fête des fous ecclésiastique. Les
@@ -100,7 +102,7 @@
             chanoines. La fête des fous finit par disparaître à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle, lorsque sont promulgués les nouveaux
             statuts qui appliquent les canons du concile de Trente : après les années 1580, les archives du chapitre ne la mentionnent plus.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">En ville : la fête des ânes</head>
           <p>
             <hi rend="i">Les jeux théâtraux. ­</hi> La fête des ânes a lieu en ville pour le Jour de l’An. Les “ jeux des ânes ” sont mentionnés à
@@ -120,8 +122,8 @@
             rapproche les pouvoirs laïc et ecclésiastique, qui imposent conjointement la suppression des mascarades de fin d’année, car Douai est
             devenu un bastion de la Contre-Réforme dans la région.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les origines de la fête des fous</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les origines de la fête des fous</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La fête populaire : le socle archaïque</head>
           <p>
             <hi rend="i">Le temps cyclique. ­</hi> La fête des fous a lieu au Nouvel An et exprime une conception cyclique du temps qui est empreinte
@@ -133,7 +135,7 @@
             semblent se maintenir jusqu’au <num>ix<hi rend="sup">e</hi></num> siècle, et peut-être jusqu’au <num>xii<hi rend="sup">e</hi></num> siècle, date de
             l’apparition de la fête des fous dans les églises.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La fête religieuse : les motifs chrétiens</head>
           <p>
             <hi rend="i">Le calendrier liturgique</hi>. ­ Les offices des Innocents (28 décembre) et de la Circoncision (1<hi rend="sup">er</hi>
@@ -145,7 +147,7 @@
             l’inversion de la hiérarchie religieuse. Ce jeu veut illustrer le message du Christ en faveur des humbles, ce que l’âne symbolise
             également.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une synthèse culturelle urbaine ?</head>
           <p>
             <hi rend="i">Ville et campagne.­</hi> La fête des fous apparaît pour la première fois vers 1182, sous la plume de Jean Beleth, dans le
@@ -157,8 +159,8 @@
             Les goliards sont des clercs qui semblent s’être fait une spécialité de la satire et des sermons parodiques. Ils sont contemporains de
             l’apparition de la fête des fous, et leur évêque Golias pourrait avoir servi de modèle aux évêques parodiques, plus tardifs.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les rituels d’inversion</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les rituels d’inversion</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’office des fous</head>
           <p>
             <hi rend="i">La discipline au choeur.­</hi> L’Eglise s’intéresse aux gestes dans la mesure où ils sont utilisés pour l’office divin. Pour
@@ -178,7 +180,7 @@
             l’eucharistie pendant la messe, car ils n’ont pas les ordres majeurs. Le sacrilège est hors de propos dans le cadre de la fête des fous,
             car la parodie est tout à fait banale au Moyen Âge.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les gestes des fous</head>
           <p>
             <hi rend="i">Les mauvais gestes selon l’Eglise.</hi>­ L’Eglise a déterminé les mauvais gestes que le prêtre ne doit pas accomplir : les
@@ -191,8 +193,8 @@
             de transgression, et pose la question de l’identification des masques à leur personnage. Elle peut servir à la satire de l’homosexualité.
         </p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Le lien social</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Le lien social</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les jeunes au pouvoir</head>
           <p>
             <hi rend="i">Le rôle des jeunes dans la fête.</hi>­ Les groupements de jeunesse des compagnies joyeuses sont les principaux acteurs de la
@@ -208,7 +210,7 @@
             que les ecclésiastiques partisans de la fête des fous illustrent au <num>xv<hi rend="sup">e</hi></num> siècle par la théorie de la “ soupape ” : la
             fête des fous permettrait de relâcher la pression des contraintes sociales, une fois par an.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’enfance et l’innocence</head>
           <p>
             <hi rend="i">L’innocence enfantine</hi>. ­ Par le biais de la fête des Innocents, la fête des fous se rattache au domaine de l’enfance. Le
@@ -218,8 +220,8 @@
             farces et les bêtises enfantines, lors des fêtes en particulier, commence à être remise en question au <num>xv<hi rend="sup">e</hi></num> siècle, à
             cause des dégâts provoqués par les “ grands enfants ”, c’est-à-dire les adolescents.</p>
         </div>
-      </div><div n="5" type="part"><head n="Cinquième partie">La disparition de la fête</head>
-        <div>
+      </div><div n="7" type="part"><head n="0" type="chapter">La disparition de la fête</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les interdictions</head>
           <p>
             <hi rend="i">Au sein de l’Eglise.</hi>­ Les interdictions de la fête des fous accompagnent son histoire pendant quatre siècles. C’est
@@ -233,7 +235,7 @@
             les clercs à participer à l’élection de l’évêque des fous. Les chapitres séculiers, de leur côté, profitent de leurs exemptions pour faire
             la sourde oreille aux évêques réformateurs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La Réforme</head>
           <p>
             <hi rend="i">L’attitude des pouvoirs laïcs.</hi>— Dès le <num>xv<hi rend="sup">e</hi></num> siècle, l’Eglise préconise le recours au bras séculier
@@ -245,9 +247,7 @@
             peut que jouer en défaveur de la fête, car l’Eglise cherche justement à assimiler ses participants aux hérétiques pour l’abolir. Ainsi, la
             Contre-Réforme lutte autant contre les protestants que contre les “ superstitions ” populaires.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="8"><head>Conclusion</head>
         <p>La fête des fous n’est pas seulement un amusement de clercs. Toute la ville y participe. De ce fait, les influences culturelles qui
           définissent la fête sont autant populaires que cléricales. Pourtant, la fête des fous en ville ne survit pas à la suppression de la fête
           chez les ecclésiastiques, après le concile de Trente. L’Eglise parvient à sacraliser le temps de Noël, grâce à la réforme de son clergé. Les
@@ -259,10 +259,9 @@
           l’individu moderne ne conçoit plus la fête comme dans la communauté traditionnelle rurale, où les mascarades de Nouvel An et de Carnaval
           gardent encore longtemps leur caractère magique.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="9"><head>Pièces justificatives</head>
         <p>Principaux documents sur la fête des fous à Douai (1314-1589), au chapitre Saint-Amé et en ville.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

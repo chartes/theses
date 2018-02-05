@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Guillaume de Nogaret et la pratique du pouvoir</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Guillaume de Nogaret et la pratique du pouvoir</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Nadiras, Sébastien">Sébastien Nadiras</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200319.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Guillaume de Nogaret a longtemps joui chez les historiens d’une image quelque peu déformée, due à son rôle dans la malheureuse affaire
           d’Anagni et dans la politique religieuse du règne de Philippe le Bel. L’historiographie romantique a en outre fait de lui l’archétype du
           légiste « imbu de droit romain », précurseur de l’absolutisme et de l’Etat moderne. Il convient d’aborder Nogaret dans une perspective
@@ -60,10 +63,9 @@
           de gouvernement et à la diversité des situations rencontrées ? Il faudra enfin déterminer si l’on peut parler ou non d’une politique de
           Guillaume de Nogaret.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Guillaume de Nogaret : L’état des connaissances</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Guillaume de Nogaret : L’état des connaissances</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une chance documentaire sans égale</head>
           <p>Un gisement documentaire considérable n’a jusqu’à présent pas été exploité : les papiers personnels de Guillaume de Nogaret, plusieurs
             centaines de documents en tout, saisis à son domicile après sa mort et versés au Trésor des chartes, soit l’actuelle série J des Archives
@@ -97,7 +99,7 @@
             noyau d’une documentation juridique ­ des ordonnances des rois de France ­, ainsi que plusieurs pièces relatives aux idées politiques
             alors en circulation.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Guillaume de Nogaret : une carrière</head>
           <p><hi rend="i">Les premières années : Nogaret homme de loi en Languedoc (1282-1295). </hi> — Nogaret embrasse dans ces années une carrière
             qui est alors celle de nombreux hommes de loi du Midi : elle se partage entre l’enseignement du droit, à Montpellier, et des activités de
@@ -127,8 +129,8 @@
             omniprésent dans les différentes institutions de la cour et intervient dans de nombreux secteurs, sans spécialisation particulière. Il
             demeure, malgré l’ascension de Marigny, un interlocuteur incontournable.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Nogaret au travail</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Nogaret au travail</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les travaux de Nogaret</head>
           <p><hi rend="i">Les affaires et les documents. </hi> — Les affaires auxquelles est mêlé Nogaret sont fort variées. Plus ou moins
             documentées selon les cas, elles peuvent être menées à Paris ou bien « sur place ». Les affaires politiques ­ relatives à une action
@@ -154,7 +156,7 @@
             discours, projet d’acte de chancellerie et jusqu’aux simples mémoires. C’est sous la plume de Nogaret que vient le mot ou l’expression
             juste, en un processus de création continu ­ les retouches s’effectuant au cours même de la rédaction mais aussi dans un second temps.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Compétences et connaissances : Les moyens de Nogaret</head>
           <p><hi rend="i">Le raisonnement. </hi> — Les connaissances et les autorités de Nogaret ne sauraient être envisagées indépendamment du
             raisonnement dans lequel elles prennent place. Celui-ci lui permet de convaincre son auditoire de la vérité d’une thèse et de le persuader
@@ -201,7 +203,7 @@
             asservi, il assimile cette dernière pour la faire sienne, témoignant en cela d’une grande faculté d’adaptation aux pratiques diplomatiques
             alors en usage.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les fins</head>
           <p>Nogaret n’agit pas qu’en exécutant. Il est possible, en quelques affaires, de déceler l’existence de préoccupations et d’une ligne
             politique qui lui sont propres.</p>
@@ -244,9 +246,7 @@
             permet d’employer des armes qu’il maîtrise parfaitement bien. Tout n’est cependant pas réductible à des catégories juridiques, ce qui peut
             conduire Nogaret à certains insuccès, comme en témoigne l’échec de la mise en accusation de Boniface VIII et de l’expédition d’Anagni.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>Gouverner, en ce qui concerne Nogaret, est en premier lieu une affaire de compétences, de savoirs et de savoir-faire. L’héritage de son
           cursus universitaire est à cet égard très important. Nogaret ne doit cependant pas tout à ce dernier. Il s’est en effet adapté aux
           traditions de gouvernement de la monarchie capétienne, ce dont témoignent le travail qu’il effectue sur les actes et sa connaissance fine de
@@ -260,11 +260,10 @@
           cependant être handicapé par ce bagage et par ses principes : l’importance qu’il accorde au droit peut parfois l’amener à se fourvoyer.</p>
         <p>Au final, Nogaret semble pouvoir être défini comme un « techno-crate » ­ au sens premier ­ doublé d’un homme de principes.</p>
       </div>
-              <div type="appendix"><head>Appendices</head>
+          <div type="appendix" n="5"><head>Appendices</head>
         <p>Etude particulière de cinq affaires conduites par Guillaume de Nogaret : l’affaire de Lunel, l’affaire de Montpellier, l’affaire de Saulx,
           le procès de Bigorre et l’affaire de Figeac.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

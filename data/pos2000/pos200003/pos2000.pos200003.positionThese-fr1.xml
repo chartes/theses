@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La traduction occitane de &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;L’Arbre des batailles&lt;/hi&gt; d’Honorat Bovet</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La traduction occitane de <hi rend="i">L’Arbre des batailles</hi> d’Honorat Bovet</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Biu, Hélène">Hélène Biu</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200003.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si les historiens ont abondamment exploité <hi rend="i">L’Arbre des batailles</hi> d’Honorat Bovet pour étayer des études sur la guerre à
           la fin du Moyen Age, l’œuvre n’a pas attiré les philologues, puisque c’est à un juriste belge féru de droit international, Ernest Nys, que
           l’on doit la simple transcription qui a révélé ce traité au public en 1883. A ce jour il n’existe aucune édition critique de l’œuvre de
@@ -62,10 +65,9 @@
           de la fin du Moyen Age d’une œuvre française soulève encore une fois l’épineux problème de la pénétration de la langue française dans les
           terres de langue d’oc.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’auteur et son œuvre</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">L’auteur et son œuvre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’arbre des batailles et son auteur</head>
           <p><hi rend="i">L’auteur </hi> — Honorât Bovet ou Bouvet (1345/1350-1410), contemporain d’Eustache Deschamps, de Jean de Montreuil ou de
             Jean Gerson, est issu d’une famille provençale de la vicomte de Valernes près de Sisteron. Un titre de docteur en décret de l’université
@@ -91,7 +93,7 @@
             batailles</hi> dont les branches sont occupées par des hommes, papes, rois, princes et simples sujets, qui se font la guerre. Peut-être
             souhaitait-il, en ce faisant, revendiquer l’héritage de ces deux grands maîtres ?</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Portée de l’œuvre</head>
           <p><hi rend="i">La diffusion de « L’Arbre des batailles » </hi> — Si l’on considère la seule tradition manuscrite française de <hi rend="i">L’Arbre des batailles</hi>, il n’est pas excessif de parler d’une très grande diffusion de l’œuvre, puisqu’on a conservé au moins
             quatre-vingt-six manuscrits français et onze manuscrits contenant des traductions intégrales ou partielles en castillan, catalan, occitan
@@ -124,7 +126,7 @@
             français, anglais et espagnols moins académiques, tels Christine de Pisan, Nicolas Upton, William Shakespeare, Jacques d’Enghien ou Joanot
             Martorell. Plusieurs raisons expliquent la renommée de ce traité parmi des écrivains d’horizons si divers.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les raisons du succès</head>
           <p><hi rend="i">Les thèmes développés </hi> — Honorat Bovet a composé un texte normatif qui s’apparente à un véritable programme de réforme
             en faveur de l’ordre au sein des armées et du respect des non-combattants, à une époque où les chefs militaires tentent de créer une
@@ -148,9 +150,9 @@
             qu’Honorat Bovet a pratiquée dans <hi rend="i">L’Arbre des batailles :</hi> par un style adapté aux objectifs didactiques qu’il s’était
             fixés, l’auteur est parvenu à rendre agréable la lecture d’une œuvre dont le thème était pour le moins aride.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La traduction occitane de <hi rend="i">L’arbre de batailles</hi>
+      </div><div n="3" type="part"><head n="0" type="chapter">La traduction occitane de <hi rend="i">L’arbre de batailles</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La traduction</head>
           <p><hi rend="i">Le seul témoin occitan conservé </hi> — Le seul manuscrit contenant une traduction occitane de <hi rend="i">L’Arbre des
               batailles</hi>, le Bibl. nat. de Fr., fr. 1277, date du début du <num>xv<hi rend="sup">e</hi></num> siècle et se caractérise par une grande
@@ -207,7 +209,7 @@
             habituel de rencontrer au XV siècle dans les textes du Midi des mots français ou bien des mots dont seule la terminaison est provençale,
             et que les structures des deux langues sont très proches.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La langue du manuscrit</head>
           <p>La superposition des aires d’extension de certains phénomènes phonétiques (altération du [s] implosif de ELMOSNA, le développement en
               <hi rend="i">ie</hi> et <hi rend="i">ia</hi> du [i] tonique long devant [l], etc.) et morphologiques (forme de l’article <hi rend="i">le/les</hi>à côté de <hi rend="i">lo/los</hi>, pronoms régimes roi, ti, si disjoints, <hi rend="i">me, te, se</hi> conjoints, désinence
@@ -216,16 +218,14 @@
             manuscrit Bibl. nat. de Fr., fr. 1277 a été copié dans un dialecte toulousain, mais il est difficile de préciser si le texte a été écrit
             dans l’aire dialectale toulousaine ou bien à Toulouse même.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Edition</head>
-        <p>L’édition porte sur la totalité de <hi rend="i">L’arbre</hi>
+      </div><div n="4" type="part"><head n="0" type="chapter">Edition</head>
+        <p n="1" type="chapter">L’édition porte sur la totalité de <hi rend="i">L’arbre</hi>
           <hi rend="i">de batallas</hi>, traduction de l’ensemble de <hi rend="i">L’Arbre des batailles.</hi> Les habitudes graphiques du copiste ont
           été respectées ( <hi rend="i">del</hi> pour <hi rend="i">deu</hi>à la troisième personne de <hi rend="i">dever</hi> au présent de l’indicatif
           devant voyelle, (os pour le possessif <hi rend="i">lors,...).</hi> Le texte a nécessité l’apport de quatre cent quatre-vingt-six corrections
           signalées dans l’édition par un appel de note renvoyant aux notes de bas de page, tandis que cinq cent quatre-vingt-six fautes relevant des
           déficiences du manuscrit français utilisé sont signalées par des astérisques renvoyant à des notes critiques.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="5"><head>Annexes</head>
         <p>Liste des manuscrits de <hi rend="i">L’Arbre des batailles. ­</hi> Liste des manuscrits consultés. ­ Liste des manuscrits enluminés. ­
           Eléments pour une ébauche de classement des manuscrits. ­ Fautes du texte occitan dues aux déficiences de la tradition manuscrite française
           : faute communes aux manuscrits Bibl. nat. de Fr., fr. 1277 et 1270. ­ Fautes communes aux manuscrits Bibl. nat. de Fr., fr. 1277 et Bibl.
@@ -236,8 +236,7 @@
           l’édition du Bibl. nat. de Fr., fr. 1277. ­ Table des citations scripturaires. ­ Table des citations juridiques. ­ Notes critiques. ­
           Glossaire. ­ Vocabulaire technique. ­ Index des noms propres.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

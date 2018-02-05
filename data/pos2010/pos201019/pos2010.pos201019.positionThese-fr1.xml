@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’iconographie de Caïn et Abel en France du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle au début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’iconographie de Caïn et Abel en France du <num>xi<hi rend="sup">e</hi></num> siècle au début du <num>xvi<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Maffre, Sabine">Sabine Maffre</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201019.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’iconographie de Caïn et Abel a suscité très tôt l’intérêt des historiens, mais il n’existe aucune étude de grande ampleur qui porte sur
           le corpus français envisagé dans sa globalité, tous supports confondus. Tous les épisodes de l’histoire de Caïn et d’Abel sont pris en
           compte dans cette thèse, de leur naissance à leur mort. Le champ chronologique couvre une période allant du <num>xi<hi rend="sup">e</hi></num> siècle au début du <num>xvi<hi rend="sup">e</hi></num> siècle. Néanmoins, les siècles antérieurs au <num>xi<hi rend="sup">e</hi></num> siècle sont évoqués, ne serait-ce que pour déterminer les évolutions et les particularités de la période traitée. L’étude
@@ -61,7 +64,7 @@
           explique la fortune de l’iconographie des deux frères et d’analyser les variations chronologiques des différents thèmes à la lumière des
           enjeux contemporains.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Deux types de sources ont été utilisés, des sources iconographiques et des sources textuelles. Le corpus d’œuvres compte deux cent
           quarante-deux objets, qui comportent une ou plusieurs scènes tirées de l’histoire de Caïn et Abel, au total cinq cent trois. Les supports
           sont variés : l’enluminure, le vitrail, la sculpture, la peinture murale, la peinture, l’émail, l’ivoire et la tapisserie sont en effet
@@ -71,9 +74,8 @@
           versions de la Bible (historiée, <hi rend="i">historiale</hi>, moralisée), les livres liturgiques, le <hi rend="i">Speculum Humanae
             Salvationis</hi>, la <hi rend="i">Cité de Dieu</hi> de saint Augustin, les chroniques universelles ou encore les traités de morale.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation des thèmes de l’iconographie de Caïn et Abel : de la Bible aux images</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Présentation des thèmes de l’iconographie de Caïn et Abel : de la Bible aux images</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation de la méthode</head>
           <p>La constitution du corpus a nécessité une démarche différente selon les supports, même si certains instruments de recherche ne se
             limitent pas à un seul support. Les bouleversements informatiques récents ont mis à disposition du chercheur des mines de données, grâce à
@@ -86,7 +88,7 @@
             autant que des variantes. Les images du corpus ont été codées selon plusieurs grilles d’analyse divisées en caractères et en modalités. Le
             recours aux graphiques sur plan factoriel facilite la lecture des données et rend visible les corrélations invisibles à l’œil nu.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">De la Bible aux images</head>
           <p>Les analyses statistiques aident à prendre la mesure des constantes et des variantes et mettent en lumière l’inventivité des images
             médiévales. Loin d’un art codifié et univoque, il existe de multiples solutions figuratives différentes, que rend visible par exemple le
@@ -101,15 +103,15 @@
                 au <num>xiii<hi rend="sup">e</hi></num> siècles de la scène des offrandes semble s’expliquer par les questions qui agitent la société
             contemporaine, comme la question de l’hérésie et de la dîme.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’actualisation de la scène des offrandes dans la société médiévale</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’actualisation de la scène des offrandes dans la société médiévale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La scène du sacrifice : légitimer la perception de la dîme</head>
           <p>L’Église s’appuie sur la scène des offrandes de Caïn et Abel pour légitimer la dîme face aux résistances suscitées par sa perception.
             L’offrande d’Abel renvoie à la dîme dont on s’acquitte sans résistance, celle de Caïn à la dîme que l’on paye frauduleusement. Caïn est en
             effet parfois représenté avec une petite gerbe ou avec de l’ivraie, tandis qu’il garde les meilleures gerbes pour lui. La représentation
             de la scène des offrandes de Caïn et Abel est un moyen pour l’Église de figurer le bon et le mauvais payeur de la dîme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La sacralisation de la dîme</head>
           <p>L’évolution chronologique particulière des représentations de la scène des offrandes s’explique par la volonté de l’Église de sacraliser
             une taxation massivement tombée aux mains des laïcs. En effet, la période faste au <num>xii<hi rend="sup">e</hi></num> siècle et
@@ -124,8 +126,8 @@
             hérétiques à ne pas se soumettre au paiement de la dîme. L’opposition très nette entre ces deux figures bibliques nous amène à étudier en
             détail la mise en images de la dualité des deux frères.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Caïn et Abel ou la dualité entre le Bien et le Mal</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Caïn et Abel ou la dualité entre le Bien et le Mal</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La mise en images de l’opposition entre les deux frères</head>
           <p>Caïn et Abel, deux figures diamétralement opposées, incarnent l’opposition entre le bien et le mal. L’antinomie radicale des deux frères
             est mise en images à travers une multitude de traits iconographiques qui permettent aux artistes de les distinguer. L’étude statistique a
@@ -137,7 +139,7 @@
             très marquée des deux frères n’implique pas une opposition entre l’éleveur et le cultivateur. C’est la qualité morale des deux frères qui
             l’emporte et qui ne se manifeste donc pas par la nature des offrandes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Caïn et Abel ou l’entrée de la conflictualité et de la discorde dans le monde</head>
           <p>L’opposition fondamentale entre Caïn et Abel en fait donc des sujets de choix pour illustrer la lutte entre les Vices et les Vertus. À
             l’honneur dans les traités d’édification morale, ces deux personnages bibliques incarnent le plus souvent l’opposition entre Équité et
@@ -154,9 +156,9 @@
             C’est précisément ce que Caïn refuse de faire, en évitant de donner généreusement à Dieu. Caïn se soustrait ainsi aux circuits de la <hi rend="i">caritas.</hi> À l’inverse, l’arche de Noé, image de la communauté des Chrétiens, est fondée, comme l’Église en général, sur la
               <hi rend="i">caritas</hi>.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La lecture typologique de l’iconographie de Caïn et Abel</head>
-        <p/>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">La lecture typologique de l’iconographie de Caïn et Abel</head>
+        <p n="1" type="chapter"/>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Abel, préfigure du Christ</head>
           <p>L’histoire de Caïn et Abel a très tôt été vue à travers le prisme de la typologie. Présente dans la liturgie, l’exégèse et les écrits des
             commentateurs chrétiens, cette lecture imprègne tout le Moyen Âge. Abel préfigure le Christ à plusieurs titres, par sa condition de
@@ -167,7 +169,7 @@
             lecture des passages relatifs à Caïn et Abel transparaît dans la mise en images de ces thèmes, avec par exemple le rapprochement
             iconographique entre la déploration du Christ mort et la déploration d’Abel par ses parents.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les scènes typologiques de l’histoire de Caïn et Abel les plus fréquentes dans l’iconographie : les offrandes et le
             meurtre</head>
           <p>Les offrandes et le meurtre d’Abel sont les scènes à caractère typologique de l’histoire de Caïn et Abel les plus représentées. Souvent
@@ -176,7 +178,7 @@
             Christ. Le lien entre le meurtre d’Abel et la mort du Christ transparaît à travers plusieurs éléments iconographiques, comme le sang
             d’Abel et le choix de l’arme de Caïn.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n=" Chapitre III">Caïn figure de Judas et des Juifs face à Abel, symbole des Chrétiens</head>
           <p>Par la faute de Caïn, le sang du juste Abel a coulé, et par la faute de Judas, le sang du Christ a été versé sur la croix. Caïn, figure
             de Judas et des Juifs, symbolise la Synagogue face à Abel qui signifie l’église. Cette opposition trouve une expression privilégiée dans
@@ -184,9 +186,7 @@
             pointu ou la barbe se retrouvent dans les représentations de Caïn. En revanche, la chevelure rousse, emblématique de Judas, est très peu
             fréquente dans l’iconographie de Caïn.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>L’histoire de Caïn et Abel relatée dans la Genèse fournit un vivier de thèmes dans lequel ont puisé les artistes au Moyen Âge. Certains
           épisodes ne sont pas mentionnés dans la Vulgate, sortis de l’imagination des clercs, comme la maternité d’Ève. En effet, l’enfance de Caïn
           et Abel n’est pas décrite dans ce texte. D’autres sujets sont issus des sources midrashiques, comme la déploration d’Abel mort par ses
@@ -207,14 +207,13 @@
           l’histoire de Caïn et Abel y voit l’opposition entre les Juifs et les bons chrétiens. Abel figure de l’Église s’oppose à Caïn, figure de la
           Synagogue. L’antinomie des deux frères transparaît dans l’iconographie, à travers de nombreux éléments qui différencient Caïn et Abel.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Reproductions en couleur des deux cent quarante-deux œuvres du corpus français comportant l’iconographie de Caïn et Abel, selon un
           classement par support et par zone géographique. — Échantillon de dix œuvres produites hors de France et citées à titre de comparaison.
           Aperçu de l’iconographie de Caïn et Abel avant le <num>xi<hi rend="sup">e</hi></num> siècle à travers une sélection de dix images.
           L’ensemble de ces reproductions s’accompagne d’une notice abrégée. — Corpus restreint à la scène des offrandes de Caïn et Abel. — Corpus
           restreint au meurtre d’Abel.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

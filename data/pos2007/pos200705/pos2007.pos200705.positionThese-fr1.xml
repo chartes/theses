@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les ordres mendiants et les pouvoirs à Rodez (XIV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XVI&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les ordres mendiants et les pouvoirs à Rodez (XIV<hi rend="sup">e</hi>-XVI<hi rend="sup">e</hi> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bouat, Vincent">Vincent Bouat</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200705.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’historiographie rouergate a fait très peu de place aux ordres mendiants ruthénois, sans doute à cause de la disparition de toute trace,
           ou presque, de la présence à Rodez des franciscains et des dominicains. Pourtant, alors que le couvent des franciscains est fondé seulement
           six ans après la mort de saint François, celui des dominicains est situé non loin du foyer originel de l’ordre qu’est Toulouse. Si
@@ -65,7 +68,7 @@
           ont traversé les crises de la fin du Moyen Age, comme le passage à l’Observance des franciscains à la fin du <num>xv<hi rend="sup">e</hi></num>
           siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La plus grande partie des sources se trouve aux Archives départementales de l’Aveyron qui ont récupéré à la Révolution les archives des
           couvents des franciscains et des dominicains de Rodez, aujourd’hui classées dans la série H, sous les cotes 11 H (dominicains) et 14 H
           (franciscains). Ces sources ont été très peu exploitées : après avoir été vu par un dominicain toulousain, le fonds des dominicains a servi
@@ -90,9 +93,8 @@
           un instantané des couvents à la fin de l’époque moderne ; quelques actes concernant les comtes de Rodez, comme des testaments, éclairent les
           fondations faites par eux auprès des établissements religieux de Rodez.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’installation des mendiants à Rodez</head>
-        <p>L’installation des Mendiants à Rodez reste un événement mal connu, en bonne partie en raison de la pauvreté des sources. On sait que,
+          <div n="3" type="part"><head n="0" type="chapter">L’installation des mendiants à Rodez</head>
+        <p n="1" type="chapter">L’installation des Mendiants à Rodez reste un événement mal connu, en bonne partie en raison de la pauvreté des sources. On sait que,
           contrairement aux couvents d’autres villes, les franciscains et les dominicains de Rodez n’ont jamais déplacé leur couvent, témoignage de la
           solidité de leur emprise sur la ville et des bons rapports entretenus avec les différents pouvoirs. Reste qu’au fil du temps, et plus
           particulièrement sur la période étudiée, cette implantation n’a jamais – ou presque – été mise en cause et cette domination sur l’espace
@@ -105,7 +107,7 @@
           moments forts de l’année liturgique. Prédicateurs, les franciscains et les dominicains ne délaisseront jamais cette fonction qui leur permet
           d’être au plus près des Ruthénois : ainsi les voit-on participer chaque année aux prédications d’Avent et de Carême dans les églises de
           Rodez, la cathédrale bien sûr, mais aussi Saint-Amans.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Les étapes et les soutiens</head>
           <p>La ville de Rodez doit attendre 1282 pour voir l’arrivée des dominicains. Cette date est assez tardive si on la compare avec la fondation
             des autres couvents de la province de Toulouse et de Provence : en effet, il existe déjà, pour la seule province de Toulouse, vingt-et-un
@@ -144,7 +146,7 @@
             l’idée d’un terrain propice aux dominicains et sans doute de l’existence d’une demande avant leur installation. Les frères ont une
             mobilité plus réduite que les prieurs : neuf frères sur dix demeurent au couvent de Rodez ou ne vont que dans un autre couvent.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">L’emprise géographique</head>
           <p>Le site de la ville de Rodez représente en lui-même une contrainte pour les frères. L’installation d’un couvent, et surtout d’une
             communauté, demande de l’espace : pour se loger bien sûr, mais aussi pour s’agrandir. Aux contraintes géographiques de la ville répondent
@@ -160,7 +162,7 @@
           <p>Les nombreux travaux que subissent les deux établissements sont également connus par les archives qui permettent d’en retracer les
             étapes, du Moyen Âge jusqu’au début de l’époque moderne.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">L’emprise spirituelle</head>
           <p>Plus encore que par leurs possessions foncières et leurs rentes, l’importance des Mendiants est révélée par l’emprise qu’ils ont sur les
             âmes des fidèles de la ville. Cette influence est due à plusieurs causes. On sait d’abord que le culte est célébré dans les églises
@@ -173,7 +175,7 @@
             partager les différentes campagnes de prédication qui marquent le temps religieux, aux moments forts de l’année liturgique, l’Avent et le
             Carême.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Les frères : un reflet de la société ruthénoise</head>
           <p>L’étude de l’obituaire des dominicains permet de retracer le recrutement des frères et leur origine, tant sociale que géographique,
             ainsi que de dégager des parcours individuels, qui implique une formation spirituelle et intellectuelle dont rien n’avait été dit
@@ -190,8 +192,8 @@
             Aldebert ou Jean Vayssière, mais aussi des personnalités qui, n’étant pas originaires du couvent, ont pu y être ensevelies après y être
             décédées, comme Sylvestre de Ferrare, général de l’ordre mort pendant sa visite du couvent de Rodez.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les mendiants conservateurs de la mémoire ruthénoise</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les mendiants conservateurs de la mémoire ruthénoise</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les fondations de messes</head>
           <p>Si l’on excepte l’obituaire des Frères prêcheurs et, dans une moindre mesure, un mémoire concernant les Mineurs, les donateurs ne se
             laissent guère approcher que grâce aux documents de gestion du casuel, où sont portées des rentrées régulières de revenus, « fondements de
@@ -204,7 +206,7 @@
             représenté une source importante des revenus des couvents, il convenait d’envisager de manière détaillée leur chronologie afin de mesurer
             l’évolution de la faveur dont jouissaient les Mendiants auprès de la population.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’église mendiante lieu de prière et de sociabilité</head>
           <p>Bonne de Berry, fille du duc Jean de Berry et de Jeanne d’Armagnac et épouse du comte de Rodez Bernard VII d’Armagnac, occupe une place
             importante dans le rayonnement spirituel du couvent des cordeliers de Rodez. On ne sait pas si les Mineurs tentèrent d’obtenir l’ouverture
@@ -224,7 +226,7 @@
           <p>Une étude de deux familles ruthénoises, les Reysséguier et les Ratier-Maleville, démontre l’attachement particulier dont pouvaient jouir
             les Mendiants à travers plusieurs générations.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les mendiants au centre de la vie politique et sociale de Rodez</head>
           <p>Les Mendiants ont toujours entretenu des relations étroites avec les institutions consulaires de la Cité et du Bourg, qu’ils considèrent
             comme une émanation de la communauté des fidèles. Ils n’hésitent pas à demander l’aide des représentants de la cité quand se fait jour la
@@ -238,8 +240,8 @@
             comptent parmi leurs frères des membres issus de la bourgeoisie ruthénoise ou rouergate. Bien évidemment, ces rapports connaissent des
             fluctuations et parfois se tendent, comme le montrent les différentes crises étudiées dans ce chapitre.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les mendiants, acteurs et victimes des luttes de pouvoir</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les mendiants, acteurs et victimes des luttes de pouvoir</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les rapports privilégiés avec les comtes</head>
           <p>Les Mendiants ont bénéficié de la protection sans faille des comtes de Rodez, et ce depuis leur venue dans la ville. Ce soutien n’a pas
             été unilatéral : les Mendiants incluaient la dynastie comtale dans leurs prières, lui offraient une nécropole et rappelaient aux yeux des
@@ -248,7 +250,7 @@
             confesseur leur revient naturellement, il est clair que ce poste stratégique auprès d’un seigneur puissant permet aussi de s’assurer ses
             bonnes grâces, pour soi, son couvent, son ordre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les rapports avec le clergé local</head>
           <p>Les rapports privilégiés avec les pouvoirs urbains et seigneuriaux ont suscité de nombreuses jalousies, surtout au vu de la rapidité à
             laquelle les couvents ont prospéré dans la ville. Plusieurs querelles sont venues émailler la vie des jacobins et des cordeliers. Le
@@ -259,7 +261,7 @@
             concernant autant leur couvent que les communautés alentours, preuve s’il en fallait que ce phénomène n’est pas proprement ruthénois et
             qu’il provoque chez les Mendiants une stratégie de défense associant les autres maisons de la province.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le passage des Franciscains à l’Observance</head>
           <p>Le passage des franciscains conventuels à l’Observance est sans doute la plus grave crise qui ait secoué le couvent de Rodez. Celle-ci
             arrive en outre à un moment critique dans l’histoire du comté de Rodez qui traverse une période sombre liée aux mauvaises relations
@@ -277,9 +279,7 @@
           <p>Si l’Observance finit par s’imposer, après quarante ans de conflits, de pertes et de reprises du couvent, le souvenir de ces événements
             laissera sans aucun doute un goût amer aux Ruthénois dans la période de questionnement religieux que représente ce début de XVI <hi rend="sup">e</hi> siècle.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les ordres mendiants de Rodez n’ont pas bénéficié de l’intérêt qu’ils auraient mérité auprès des historiens ; la disparition des couvents,
           dont il reste peu de traces, a sans doute contribué à cet oubli. Pourtant la richesse documentaire des fonds 11 et 14 H des Archives
           départementales de l’Aveyron démontre l’implication importante des Mendiants dans la vie religieuse, politique et sociale de Rodez et du
@@ -288,11 +288,10 @@
           notamment à la fin du <num>xv<hi rend="sup">e</hi></num> siècle, lorsque le roi cherche à s’imposer dans l’ancien domaine Armagnac après le meurtre de
           Jean V et la mort de Charles d’Armagnac et promeut la réforme des cordeliers ruthénois.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition du compte rendu écrit par Brémond de Saint-Félix, conseiller au Parlement de Toulouse, au sujet du passage du couvent des
           cordeliers à l’Observance. — Édition partielle de l’obituaire des dominicains.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

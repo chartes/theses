@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La parole aux albigeois : le procès de Bernard de Castanet, évêque d’Albi (1307-1308)</title>
-        <title type="sub">Introduction historique et édition.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La parole aux albigeois : le procès de Bernard de Castanet, évêque d’Albi (1307-1308)</title><title xml:lang="fr" type="sub">Introduction historique et édition.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Théry, Julien">Julien Théry</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200032.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les Archives vaticanes conservent dans la série des <hi rend="i">Collectoriae</hi> les actes d’une enquête criminelle menée à Albi contre
           l’évêque Bernard de Castanet, de l’automne 1307 au printemps 1308. Depuis sa découverte par l’historien de l’Albigeois Louis de Lacger, dans
           les années 1920, ce registre n’a été exploité que de manière ponctuelle. Source foisonnante pour l’histoire de la société languedocienne à
@@ -59,16 +62,15 @@
           l’histoire municipale et inquisitoriale d’Albi permet, par ailleurs, de replacer dans le long et profond conflit entre Bernard de Castanet
           et l’élite dirigeante albigeoise.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Outre le registre 404 des <hi rend="i">Collectoriae</hi>, de nombreux documents annexes ont été exploités, qu’ils soient édités (lettres
           pontificales, statuts synodaux d’Albi, procès d’Inquisition d’Albi en 1299-1300, procès de Bernard Délicieux, pièces relatives à la mission
           des cardinaux envoyés en 1306 visiter les prisons inquisitoriales du Languedoc) ou conservés aux Archives vaticanes (fonds des <hi rend="i">Regesta Vaticana</hi>, des <hi rend="i">Regesta Avinionensia</hi> et des <hi rend="i">Instrumenta miscellanea)</hi>, aux archives
           départementales du Tarn (fonds communaux des villes d’Albi et de Cordes) et du Cher (cartulaires de l’archevêché de Bourges G1 et G2) ou à
           la Bibliothèque nationale de France (procès d’Inquisition d’Albi en 1286-1287 et pièces copiées dans la Collection Doat).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Introduction historique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Introduction historique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Hérésie, absolutisme épiscopal et mouvement anti-inquisitorial à Albi (1277-1306) : le contexte du procès</head>
           <p><hi rend="i">Un grand commis de la papauté triomphante : Bernard de Castanet </hi> — Juriste, professeur de droit civil, Bernard de
             Castanet servit la papauté pendant sa décennie triomphante, celle qui allait conduire au concile de Lyon II (1274). Originaire de
@@ -153,7 +155,7 @@
             Vers la mi-avril, le même chanoine présenta à la Curie de terribles articles d’accusation contre la personne de l’évêque. Aucune mention
             n’y était faite des procès d’Inquisition ou des condamnés pour crime d’hérésie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Portrait de l’évêque en tyran : stratégies d’accusation</head>
           <p>Dans un monde où le pouvoir souverain avait pour attribut premier l’exercice de la justice, les formes pacifiques de la dissension
             politique étaient presque exclusivement celles du contentieux judiciaire. Les cas sont très nombreux, tout au long du XIII <hi rend="sup">e</hi>  siècle, où les procédures criminelles lancées par les papes contre des évêques correspondent en réalité à de graves différends
@@ -206,7 +208,7 @@
             dénonciation de gravissimes infractions à la législation canonique se devine paradoxalement, en filigrane, une profonde remise en cause de
             la légitimité du magistère de l’Eglise terrestre, incarné à Albi sous sa forme la plus rigoureuse par Bernard de Castanet.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">« Causa inquisitionis contra episcopum » : les enjeux juridiques de l’enquête d’Albi</head>
           <p><hi rend="i">La « fama », moteur de la procédure inquisitoire </hi> — Instituée par Innocent III au concile de Latran IV (canon <hi rend="i">Qualiter et quando)</hi> et réglementée au premier titre du Livre V des <hi rend="i">Décrétales</hi>, la procédure inquisitoire
             donnait au pouvoir souverain une puissance d’intervention dans la vie sociale inconnue jusqu’alors. Permettant au juge de s’auto-saisir
@@ -246,7 +248,7 @@
             Les chanoines d’Albi n’eurent pas à se donner cette peine. Bernard de Castanet semble avoir choisi de ne répondre que par le mépris à
             leurs accusations. Aucune trace ne paraît subsister d’une audition de témoins en sa faveur.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">« Fama denunciante » : la parole aux accusateurs</head>
           <p>L’enquête n’avait pas encore commencé le 20 novembre 1307, lorsque Clément V renouvela son mandement du 30 juillet à deux des trois juges
             initialement désignés ­ Arnaud Nouvel étant entre temps devenu vice-chancelier de l’église Romaine. L’audition de cent quatorze témoins,
@@ -332,7 +334,7 @@
             Carcassonne depuis 1300 ; le père de Pierre était mort sous la torture dans la prison du palais épiscopal après son arrestation pour crime
             d’hérésie.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Epilogue">Un propos clémentin</head>
           <p><hi rend="i">Echec judiciaire, succès politique des dénonciateurs </hi> — Dans leur ensemble, les témoignages pouvaient finalement, tout
             au plus, attester quelques excès et négligences pastorales, et mettre en lumière une administration du temporel parfois aux limites de la
@@ -372,9 +374,7 @@
             diffamaient pourtant gravement un prélat revenu en grâce, pourrait s’expliquer par leur utilisation, selon une méthode inquisitoriale
             éprouvée, pour la mise en œuvre des mesures de rétorsion au début du pontificat de Jean XXII.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>« Cum veritate vel falsitate... » : « Fama », politique et dissidence au début du XIV<hi rend="sup">e siècle</hi></p>
         <p>L’un des articles d’accusation probablement rédigés par Bernard de Castanet contre Bernard Délicieux lui reproche d’avoir rejeté les
           objections de certains de ses compagnons devant les accusations mensongères qu’il proposait de lancer contre l’évêque d’Albi et les
@@ -401,7 +401,7 @@
           pires turpitudes par certains de ses sujets, les légistes royaux n’eurent aucun mal à faire attester une <hi rend="i">fama</hi> révélant que
           l’évêque de Troyes Guichard avait, entre autres crimes inouïs, prêté hommage au démon et empoisonné la reine Jeanne…</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="5"><head>Édition</head>
         <p>Le registre est long de 183 folios. L’édition n’a nécessité qu’un apparat critique réduit. Les graphies divergentes, parfois fluctuantes et
           à l’occasion fantaisistes, des deux scribes qui se sont partagé la copie, ont été respectées.</p>
         <p>Les notes historiques présentent le plus souvent des informations biographiques, glanées dans l’ensemble de la documentation albigeoise,
@@ -409,7 +409,6 @@
           rassemblant les données fournies par les témoignages et les documents extérieurs sur les personnages, faits et événements précis évoqués par
           les dénonciateurs.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

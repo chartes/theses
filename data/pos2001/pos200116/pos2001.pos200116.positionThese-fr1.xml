@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’action de Louis Hautecœur au secrétariat général des Beaux-arts (1940-1944)</title>
-        <title type="sub">La permanence des beaux-arts dans la fracture de Vichy.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’action de Louis Hautecœur au secrétariat général des Beaux-arts (1940-1944)</title><title xml:lang="fr" type="sub">La permanence des beaux-arts dans la fracture de Vichy.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Poulain, Caroline">Caroline Poulain</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200116.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Vichy attire beaucoup les historiens, comme le reste de la société. De fait, la vie des beaux-arts et la politique culturelle pendant les
           années 1940 sont désormais éclairées par plusieurs études, mais celles-ci insistent sur le contexte de la guerre et du régime de Vichy plus
           que sur l’histoire artistique. Revenir sur ces années sombres par le biais d’une monographie biographique offre un point de vue nouveau, en
@@ -70,7 +73,7 @@
           une part importante de cette thèse est consacrée à l’action de Hautecœur face au régime de collaboration. Chaque partie suit une optique
           particulière : administrative et législative pour la première, artistique pour la deuxième et politique pour la dernière.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La première des sources est constituée par le livre de souvenirs publié par Louis Hautecoeur en 1948 - <hi rend="i">Les beaux-arts en
             France : passé et avenir</hi>. Evidemment partial et apologétique, cet ouvrage doit être nuancé, mais il a l’avantage d’être de la main
           même de l’intéressé.</p>
@@ -84,9 +87,8 @@
           nationaux, très précieuse pour l’étude des vols d’œuvres d’art et des projets d’échanges voulus par les nazis. Enfin, la documentation
           offerte par la Médiathèque du patrimoine et par la bibliothèque du Conseil d’État s’est révélée très utile dans le domaine juridique.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’homme des lois</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’homme des lois</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’arrivée de Louis Hautecœur  dans l’administration des beaux-arts</head>
           <p><hi rend="i">La nomination de Louis Hautecœur </hi>— Dans son livre de souvenirs, Hautecœur raconte les débuts de la guerre et sa
             situation personnelle. Il se trouve alors à Genève, en tant que commissaire d’une exposition d’architecture française. Il rentre en France
@@ -102,7 +104,7 @@
             par ses arts, comme le demande la Révolution nationale, à l’intérieur mais aussi à l’étranger, puis de protéger et conserver, d’instruire,
             de favoriser et de faire connaître la création artistique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un exemple de continuité patrimoniale de Vichy: la loi sur les abords des monuments historiques (1943)</head>
           <p><hi rend="i">Pourquoi 1943 </hi>— La plupart des lois prises entre 1940 et 1944 dans le domaine des beaux-arts auraient pu l’être par la
             République, comme le prouvent leur évolution et leur maintien après la guerre. Les causes de la loi sur les abords des monuments
@@ -119,7 +121,7 @@
           <p>En fin de compte, la loi de 1943 sur les abords des monuments historiques démontre le maintien, au sein de la rupture que représente
             Vichy, d’une administration qui peut être apolitique et se montrer efficace.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les autres lois patrimoniales</head>
           <p><hi rend="i">Les lois sur l’archéologie </hi>— La législation concernant les fouilles archéologiques est très pauvre en France, comme le
             fait apparaître en 1937 la conférence internationale du Caire. En 1941, le contexte est favorable à un renforcement de la législation, du
@@ -136,7 +138,7 @@
             publicité. Ce dispositif peut certes être analysé comme une protection de la terre, bien dans l’esprit du régime vichyssois, mais il ne
             faut pas en faire l’apanage de ce régime.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Louis Hautecœur et l’architecture</head>
           <p><hi rend="i">La profession d’architecte </hi>— Louis Hautecœur désire depuis longtemps réformer les conditions d’accès et d’exercice de
             la profession d’architecte : il fait état de ce souci dans un texte de 1929, <hi rend="i">Considérations sur l’art d’aujourd’hui</hi>, et
@@ -147,7 +149,7 @@
             et de créer un diplôme unique pour devenir architecte. Ces changements soulèvent une vague de protestations au sein de l’Association des
             élèves des Beaux-arts et chez certains architectes.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Les lois artistiques</head>
           <p><hi rend="i">Les musées </hi>— La situation des musées pendant la guerre est certes marquée par l’évacuation des œuvres dans des dépôts
             de protection, mais leurs activités se poursuivent. La loi du 13 août 1941 est adoptée pour donner un statut aux conservateurs, renforcer
@@ -161,8 +163,8 @@
             lois sur l’architecture et sur l’érection de monuments commémoratifs. Enfin, une dernière catégorie de lois traduit la volonté de Vichy de
             résister à l’hégémonie nazie : lois sur l’archéologie et sur les exportations.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’homme de l’art</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’homme de l’art</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’œuvre maîtresse de Louis Hautecœur : L’Histoire de l’architecture classique en France</head>
           <p><hi rend="i">Naissance de I’œuvre </hi>— Louis Hautecœur travaille à l’Histoire de l’architecture classique en France depuis une
             vingtaine d’années lorsque le livre paraît en 1943, après quinze ans de relations avec l’éditeur Picard. De nombreux textes publiés depuis
@@ -175,7 +177,7 @@
             ruptures factices entre les périodes, de définir les contraintes auxquelles est astreint l’architecte et d’aborder de nouvelles périodes.
             Il est très bien reçu par la critique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Hautecœur et l’art contemporain: Littérature et peinture en France</head>
           <p><hi rend="i">Naissance de l’ouvrage </hi>— Les recherches de Hautecœur l’ont toujours porté vers des domaines très divers, autres que
             l’architecture. Il s’intéresse ainsi à la peinture depuis longtemps ainsi qu’aux rapports que celle-ci entretient avec la littérature. Ce
@@ -186,7 +188,7 @@
             artistes étrangers et juifs n’atteint pas les débordements xénophobes de la période et découle surtout de sa critique des évolutions de
             l’art contemporain.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les autres activités artistiques de Hautecœur</head>
           <p><hi rend="i">Les activités personnelles ou antérieures à sa prise de fonction </hi>— Hautecœur est un homme très occupé, du fait de ses
             fonctions administratives et de ses ambitions intellectuelles. En plus des ouvrages publiés pendant cette période, il entretient des
@@ -197,7 +199,7 @@
             des activités intellectuelles (conférences, rédaction de textes sur l’architecture et sur l’art, dans le souci de promouvoir sa politique)
             et des activités de représentation (participation à des manifestations, parrainages ... ).</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Intermède">Art et politique</head>
           <p>Avant d’aborder l’action politique de Hautecœur, il est apparu essentiel de savoir si art et politique formaient un système chez lui.
             L’historienne américaine Hilary Ballon a voulu le prouver, estimant que ses écrits artistiques étaient le miroir de sa pensée
@@ -206,8 +208,8 @@
             des préférences en matière d’œuvres d’art qu’a manifestées Hautecœur au musée d’Art moderne, au ministère ou pour sa collection
             personnelle.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’homme de Vichy</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’homme de Vichy</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le poids de la guerre et de Vichy</head>
           <p><hi rend="i">Hautecœur et ses supérieurs : l’influence des ministres </hi>— Le secrétariat des beaux-arts dépend du ministère de
             l’Education nationale, qui fut dirigé par six hommes successifs. Les quatre premiers, Rivaud, Mireaux, Ripert et Chevalier, ne font qu’un
@@ -221,7 +223,7 @@
             charge de choisir les oeuvres en métal qui seront fondues pour les besoins de guerre allemands. L’examen de ces mesures révèle certaines
             censures politiques, mais surtout une conscience professionnelle assez profonde.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Dans les faits, entre libéralisme d’honneur et fermeté de situation</head>
           <p><hi rend="i">Libéral ou autoritaire </hi>— Rester dans l’administration de Vichy, c’est certes œuvrer pour protéger le patrimoine, mais
             c’est aussi risquer de céder aux dérives totalitaires du régime. Hautecœur ne se montre pas favorable à la politique antisémite, ni aux
@@ -231,7 +233,7 @@
             sa place à la tête de l’établissement quand il devient secrétaire général des beaux-arts. Mais Cassou le rouge est vite révoqué. Plusieurs
             lettres prouvent que Hautecœur lui a gardé son soutien tout au long de la guerre, ce qui révèle une personnalité fidèle et courageuse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Face aux allemands</head>
           <p><hi rend="i">Le vol du retable de Gand </hi>— Les grandes lignes de l’affaire du retable de l’Agneau mystique des frères Van Eyck,
             confié par la ville de Gand aux Musées nationaux et livré sur ordre gouvernemental aux nazis, sont connues mais le rôle de Hautecœur reste
@@ -241,7 +243,7 @@
             des “ offres ” d’échanges est significative de cet état d’esprit, même si elle parait moins claire que celle de Jaujard, le directeur des
             Musées.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Pétainiste ou vichyssois</head>
           <p><hi rend="i">Les opinions politiques de Hautecœur </hi>— Avant la guerre, Hantecœur n’a contracté aucun engagement politique particulier
             : il a seulement publié quelques textes contre l’hégémonie allemande et sur la montée fasciste en Italie. Pendant la guerre il est
@@ -254,7 +256,7 @@
             Laval finit par se débarrasser de lui et le remplace par l’un de ses fidèles, Georges Hilaire. Hautecœur est alors nommé directeur
             d’études à l’École pratique des hautes études.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">La libération et l’après-guerre</head>
           <p><hi rend="i">L’épuration des beaux-arts </hi>— Les organes d’épuration se mettent en place, notamment le conseil d’enquête des
             beaux-arts qui est instauré par arrêté du 28 octobre 1944. Le climat qui règne dans l’administration des beaux-arts n’échappe pas à la
@@ -267,9 +269,7 @@
             une chaire de professeur à la faculté des lettres lui sont proposés. Il y reste jusqu’en 1949. Mais cet exil n’efface pas les vieux démons
             et sa participation au régime de Vichy reste présente chez certains esprits, qui continueront à le lui reprocher.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Hautecœur s’inscrit difficilement dans l’histoire de Vichy parce qu’il s’abstrait lui-même du contexte. Il reste avant tout un
           administrateur, efficace, même si ce n’est pas ce que l’on attend des hommes de pouvoir de ces années noires. C’est pour cette raison que
           l’on peut parler de permanence des beaux-arts. Par ailleurs, Hautecoeur assure la continuité de sa pensée par de nombreuses publications
@@ -277,11 +277,10 @@
           Vichy. Mais le reproche qu’on peut lui faire est de continuer à travailler comme si le contexte était neutre, en refusant de prendre une
           position politique en une période aussi troublée et en niant encore après la guerre que Pétain et son régime aient été une aberration.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Biographie de Hautecœur avant la guerre. - Décorations espagnoles obtenues par Hautecœur. - Tableau de la législation patrimoniale de
           Vichy. - Textes de loi. - illustrations.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

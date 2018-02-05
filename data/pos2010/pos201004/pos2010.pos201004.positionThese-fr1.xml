@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Jeu du roi et jeu de la reine aux &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; et &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles</title>
-        <title type="sub">Du délassement personnel à la cérémonie de cour</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Jeu du roi et jeu de la reine aux <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles</title><title xml:lang="fr" type="sub">Du délassement personnel à la cérémonie de cour</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Billoir, Thibault">Thibault Billoir</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201004.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Comme bien des aspects de la vie de cour d’Ancien Régime, le jeu a longtemps souffert d’une étiquette « petite histoire », restant ainsi à
           l’écart des historiens et relégué au champ des anecdotes plaisantes. Le paradoxe est surprenant : on se représente souvent la cour de France
           des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles comme passionnément adonnée au jeu, du soir au
@@ -65,7 +68,7 @@
           curiales, symboliques et morales que matérielles et économiques qu’il est impossible d’occulter si l’on veut considérer ce rituel de cour,
           que constitue le jeu royal, dans toute sa richesse et sa complexité.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les fonds de la Maison du roi (sous-série O¹ des Archives nationales) constituent une grande part des sources utilisées. Les fonds de
           l’Argenterie, des Menus-Plaisirs et des Affaires de la Chambre nous intéressent tout particulièrement. Ce service qui se développe vers 1660
           et qui était dirigé, chaque année de façon alternative, par l’un des quatre gentilshommes de la Chambre, avait la mission de mettre en scène
@@ -86,9 +89,8 @@
           jeu, qui relaient le plus souvent les règles pratiquées à la cour, sont indispensables pour définir les grandes familles de jeu, établir une
           frontière entre jeux de commerce et jeux de hasard et mettre en avant les modes ludiques et leurs évolutions.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le jeu dans la société d’Ancien Régime</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le jeu dans la société d’Ancien Régime</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">À quoi joue-t-on ? Panorama historique du jeu aux <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles</head>
           <p>Les monarques sont reflets, relais et moteurs d’impulsion des modes ludiques de leur temps. Le paysage ludique des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles est caractérisé par des évolutions majeures et
             particulièrement fécondes.</p>
@@ -101,7 +103,7 @@
             Enfin la fascination pour le hasard conduit à une prolifération de jeux, théoriquement interdits, qui envahissent néanmoins l’univers de
             la cour, car conformes aux valeurs guerrières de la grande aristocratie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">la place particulière du jeu royal</head>
           <p>La société d’Ancien Régime est, dans son ensemble, une société caractérisée par un fort engouement pour le jeu. Les problèmes qui en
             découlent sont multiples : tricheries, troubles de l’ordre social, fraude organisée sur les cartes et économie parallèle du jeu, ce qui
@@ -114,7 +116,7 @@
             en mesure de fournir. Mais la raison première de cette exception légale réside dans le goût très prononcé des souverains français et de
             leur famille pour le jeu. Comment pourraient-ils alors interdire à leurs proches ce qu’eux-mêmes font quotidiennement ?</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Jeu du roi et jeu de la reine : l’opinion des moralistes</head>
           <p>L’opinion des théologiens et des moralistes sur le jeu est un domaine assez bien exploré. La liste des critiques et des condamnations, à
             une époque où la passion excessive du jeu est perçue non comme une maladie psychique, mais comme un dérèglement moral, a été bien étudiée.
@@ -127,8 +129,8 @@
             à la croisée de deux logiques contradictoires : le roi est à la fois le « Très Chrétien » et le premier de ses gentilshommes, tenu de
             montrer le bon exemple, et en même temps, d’avoir une cour brillante et de divertir ses courtisans.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Jeu du roi et jeu de la reine dans le système de cour</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Jeu du roi et jeu de la reine dans le système de cour</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le jeu du roi et le jeu de la reine : une réalité protéiforme. Aspects institutionnels</head>
           <p>Les divertissements de cour ne sont pas des loisirs libres mais une obligation quotidienne, un passage obligé pour les courtisans au
             point que le jeu public de la reine devient, au <num>xviii<hi rend="sup">e</hi></num> siècle, une étape à part entière des présentations à
@@ -143,7 +145,7 @@
             dans le salon de la Paix…) ; le grand jeu public (soirées de « grand appartement » lors des baptêmes et mariages princiers, jeu à
             l’occasion des grandes fêtes royales…).</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le roi et la reine au jeu : des joueurs comme les autres ?</head>
           <p>Le jeu a la caractéristique, pour Johan Huizinga, de transcender l’ordre social existant par de nouveaux rapports basés sur le doublet
             complémentaire : gagnant ou perdant. Une telle caractéristique ne semble pourtant pas s’appliquer au jeu royal à l’époque moderne : les
@@ -157,7 +159,7 @@
             ou la reine semblent plus accessibles et où il devient possible de leur adresser la parole. La logique de coteries, caractéristique des
             logiques et des conflits de pouvoir à la cour, opère la fusion du politique et du divertissement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Économie du jeu : gains et pertes à la table royale</head>
           <p>Il est très rare, sous l’Ancien Régime, de jouer sans mise matérielle, si petite soit-elle. La cour se singularise seulement par des
             données pécuniaires assorties au rang social des joueurs. Le jeu du roi et de la reine est donc à replacer dans un circuit financier
@@ -174,7 +176,7 @@
             complétées par les comptes personnels des courtisans qui avaient l’habitude de jouer à la partie des souverains, à l’exemple de Mme de
             Pompadour.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Économie du jeu : le coût de « l’équipement ludique »</head>
           <p>L’économie du jeu ne se limite pas seulement à une étude des divers flux d’argent conditionnés par le hasard des cartes, mais touche plus
             généralement à l’économie de luxe d’Ancien Régime. Le jeu nécessite des objets spécifiques, et parce qu’à la cour il participe d’une
@@ -183,8 +185,8 @@
             d’appréhender dans son ensemble cet aspect économique, car les logiques administratives sont complexes et les comptabilités des
             Menus-Plaisirs, très lacunaires.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le jeu du roi et de la reine au quotidien : la matérialisation dans l’espace de la sociabilité du jeu</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le jeu du roi et de la reine au quotidien : la matérialisation dans l’espace de la sociabilité du jeu</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’héritage louis-quatorzien du jeu public</head>
           <p>Avant le règne de Louis XIV, le jeu du roi reste une activité privée qui met peu de personnes en présence et se déroule dans la chambre
             royale, dans un cabinet attenant ou dans un autre lieu en retrait du tout venant de la cour. Les choses changent dans les années 1670 :
@@ -198,7 +200,7 @@
             bien que les voyages de Marly relèvent bien plus, sous les règnes de Louis XV et de Louis XVI, d’une obligation curiale que d’une réelle
             affection pour cette résidence.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Du jeu de la duchesse de Bourgogne à celui de Marie-Antoinette : le devenir du salon de la Paix</head>
           <p>Pendant les premières années du règne de Louis XV, à la suite de la disparition des soirées d’appartement, il n’y a plus à Versailles de
             forme de jeu public ordinaire. C’est le jeu de la reine Marie Leckzinska qui, à partir de 1739, reprend progressivement cette fonction. On
@@ -209,7 +211,7 @@
             siècle, le jeu de la reine dans le salon de la Paix résulte donc de cet héritage, comme de celui des soirées d’appartement dont il
             perpétue le type de sociabilité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une recherche d’intimité ?</head>
           <p>Si Louis XIV a donné au jeu royal une dimension publique inégalée, on le voit, dès les années 1680, donner des soirées
             d’appartement « parallèles », dans l’appartement intérieur qu’il se fait aménager à Versailles, pour échapper à la foule des courtisans
@@ -223,7 +225,7 @@
             jeu « intime », mais la forte implication du Garde-Meuble de la couronne rappelle que, même dans ce cas, il s’agit toujours du jeu du roi
             ou de la reine.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Épilogue">Le jeu du roi lors des grandes fêtes de cours</head>
           <p>Absent des fêtes royales du <num>xvi<hi rend="sup">e</hi></num> siècle et des trois premiers quarts du <num>xvii<hi rend="sup">e</hi></num> siècle, le grand jeu public est une innovation de la fin du règne de Louis XIV qui se greffe sur une tradition déjà
             ancienne de la fête royale et de ce fait se perpétue sous les règnes de Louis XV et de Louis XVI, au point de devenir un des ingrédients
@@ -233,9 +235,7 @@
             magnifique, non seulement aux courtisans qui y assistent et y participent tout à la fois mais encore à un public extérieur à la cour, venu
             tout exprès de Paris.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Loin d’être un simple divertissement, le jeu des monarques est avant tout un moment où, le roi étant plus accessible, on vient lui faire sa
           cour. Par son intégration progressive dans le système aulique, qui lui permet d’acquérir une forte portée symbolique et esthétique, le jeu
           royal atteint à la veille de la Révolution un degré de développement inégalé.</p>
@@ -244,7 +244,7 @@
           Finalement la disparition de la vie de cour sous la Révolution a entraîné celle d’une des formes les plus brillantes de l’expression
           ludique, qui n’a jamais connu de résurgences ou d’équivalences dans les cours du <num>xix<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Édition de 84 cartes à jouer et feuillets d’almanachs où sont inscrits, de la main de Louis XVI, les noms des courtisans invités à ses
           soupers et à son jeu (1786-1789). Cet ensemble de cartes conservées aux Archives nationales constitue une source majeure quant à la
           connaissance de la vie privée de Louis XVI et de son entourage « intime ». De façon générale, pour chaque date mentionnée dans les cartes,
@@ -254,7 +254,6 @@
           estampes représentant le jeu du roi ; planches et photographies des pièces dédiés au jeu dans les châteaux de Versailles et de Marly ;
           croquis d’un salon de jeu provisoire pour une fête royale prévue en 1770.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La représentation de l’architecture islamique à Paris au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle : une définition de l’orientalisme architectural</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La représentation de l’architecture islamique à Paris au <num>xix<hi rend="sup">e</hi></num> siècle : une définition de l’orientalisme architectural</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Declety, Lorraine">Lorraine Declety</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200103.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au sein du mouvement orientaliste, l’architecture ne suscite pas la même faveur chez les chercheurs que la peinture ou la littérature.
           Très longtemps, elle fut totalement ignorée et les rares monuments encore visibles en France souffrirent de cette indifférence et de ce
           mépris. Depuis une dizaine d’années, plusieurs études précises ont toutefois permis de mieux connaître quelques-uns de ses protagonistes et
@@ -59,7 +62,7 @@
           principaux mouvements architecturaux. L’orientalisme n’étant pas un phénomène nouveau en Occident, il convient de dégager une chronologie de
           la perception de l’architecture islamique, au travers notamment de sa matérialisation monumentale.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude de l’orientalisme architectural nécessite de recourir à des sources extrêmement variées. Les séries F<hi rend="sup">12</hi> , F
 <hi rend="sup">17</hi> , F<hi rend="sup">21</hi> et AJ<hi rend="sup">52</hi> des Archives nationales nous renseignent notamment sur la
           construction des pavillons étrangers et coloniaux des expositions universelles, sur les missions scientifiques, sur les fêtes publiques de
@@ -69,9 +72,8 @@
           les principales sources, que viennent compléter les séries topographiques conservées à la Bibliothèque nationale de France (département des
           estampes et de la photographie), à la Bibliothèque historique de la Ville de Paris et au Musée Carnavalet.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">De la campagne d’Egyte à la conquête d’Algérie (1798-1830)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">De la campagne d’Egyte à la conquête d’Algérie (1798-1830)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’«idée» d’Orient</head>
           <p>Les «turqueries» du <num>xviii<hi rend="sup">e</hi></num> siècle correspondent à une mode adoptée dans un premier temps par l’aristocratie. La
             connaissance, dans la haute société européenne, des codes de représentation qui réglaient la vie des odalisques dans le sérail de
@@ -88,7 +90,7 @@
             en Espagne réside dans les nombreuses vues de l’Alhambra qu’ils contiennent. L’ensemble des idées relatives à l’architecture islamique se
             met en place durant les trente premières années du siècle. D’emblée, elle est définie par son caractère élégant, léger et capricieux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les balbutiements d’une mode</head>
           <p>Cette idée de l’Orient et de l’architecture islamique est matérialisée par les premières réalisations orientalistes. Les jardins
             pittoresques se développent au début du <num>xix<hi rend="sup">e</hi></num> siècle. Afin d’éviter à l’architecte la faute de goût, le vocabulaire
@@ -107,7 +109,7 @@
             et d’indolence: tous ces établissements sont destinés à une clientèle riche qui accorde une importance croissante au plaisir et à la
             détente.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les grands débats de l’époque</head>
           <p>L’intérêt grandissant pour l’architecture islamique se manifeste aussi par sa prise en compte comme partie intégrante de l’architecture
             universelle, que les érudits s’appliquent alors à reconstituer. La question de ses origines fait débat: certains, comme Alexandre de
@@ -120,8 +122,8 @@
             polychromie sur les monuments de Sicile. Ces premières remises en cause d’un modèle unique ouvrent la voie à l’étude d’autres systèmes
             architecturaux, qui ne respectent pas les règles architectoniques et décoratives de l’architecture gréco-romaine.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Elaboration d’un vocabulaire architectural</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Elaboration d’un vocabulaire architectural</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La découverte devient connaissance</head>
           <p>Dans le deuxième tiers du <num>xix<hi rend="sup">e</hi></num> siècle, les missions scientifiques se développent considérablement. Le choix de
             nouvelles destinations découle certes du sentiment que rien de plus ne reste à découvrir sur les bords de la Méditerranée, mais aussi
@@ -145,7 +147,7 @@
             par Adalbert de Beaumont pour que soient diffusés des dessins reproduisant des modèles originaux. Cet ouvrage contribue bien plus que ces
             prédécesseurs à susciter le goût pour les ornements islamiques.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une architecture lisible</head>
           <p>L’orientalisme architectural se déploie dans des programmes conçus comme des enseignes publicitaires. Les premières réalisations servent
             de modèles à une nouvelle génération d’entrepreneurs de bains, de bals et de cirques, qui voit dans le vocabulaire orientaliste le moyen
@@ -167,7 +169,7 @@
             l’architecture orientaliste sert également à figurer les avancées de la colonisation en Algérie. Les reconstitutions grandeur réelle des
             victoires françaises sont ainsi le moyen d’intéresser le public à la question coloniale.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le décalage entre la connaissance et la reconnaissance</head>
           <p>La large diffusion de l’orientalisme dans les réalisations publiques contribue à son introduction, à partir du Second Empire, dans
             l’architecture privée. Les premières manifestations sont marquées par l’extériorisation de ce vocabulaire: des hôtels et des maisons sont
@@ -190,8 +192,8 @@
             l’architecture antique. Leur application aux arts décoratifs doit permettre de retrouver les principes créateurs de l’ornement, que les
             artistes contemporains ont oubliés.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’appropriation de l’orientalisme</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’appropriation de l’orientalisme</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les Expositions universelles</head>
           <p>Dès l’Exposition universelle de 1867, les commissions des expositions orientales souhaitent présenter au public européen les premières
             reconstitutions exactes de monuments existants. Bien qu’ils soient déjà en partie soumis à ces impératifs, les pavillons persans et le
@@ -217,7 +219,7 @@
             l’esprit des commissions coloniales et se reflète dans la disposition géographique des pavillons et dans le choix des expositions qui y
             sont présentées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">«L’Orient intime»</head>
           <p>Les derniers années de l’orientalisme architectural sont marquées par trois réalisations exceptionnelles. Le fumoir de l’hôtel d’Edmond
             de Rothschild, l’appartement d’Ambroise Baudry et l’hôtel de Delort de Gléon sont en effet des œuvres uniques, témoignant du respect des
@@ -244,7 +246,7 @@
             symbolisent le premier orientalisme, l’École coloniale manifeste le nouvel intérêt pour le caractère monochrome et austère de
             l’architecture maghrébine. Cette dernière étant celle des colonies, sa représentation acquiert une fonction symbolique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les nouveaux supports de l’orientalisme</head>
           <p>Le succès de la céramique lors des Expositions universelles et des expositions de l’Union centrale arts décoratifs illustre l’engouement
             pour une production artistique inspirée des œuvres islamiques. En effet, les premiers céramistes reprennent particulièrement des décors de
@@ -258,21 +260,18 @@
             architecturale est ainsi perçue comme le moyen de créer un style propre au <num>xix<hi rend="sup">e</hi></num> siècle. Cependant, l’inspiration
             islamique est de moins en moins perceptible à mesure que se forme un répertoire décoratif détaché de ses anciens modèles.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’orientalisme architectural correspond ainsi à l’histoire de la perception de l’architecture islamique à Paris au XIX <hi rend="sup">e</hi> siècle. Cette représentation est caractérisée par une grande homogénéité dans l’architecture commerciale et privée, puisque les
           références architecturales n’évoluent guère, en dépit d’une connaissance sans cesse élargie de l’architecture musulmane. En revanche,
           l’orientalisme plus «administratif», celui de l’École des Beaux-arts, du Salon et des bâtiments construits par l’État s’adapte aux
           découvertes scientifiques et aux objectifs politiques. La valorisation du patrimoine culturel maghrébin, désormais intégré à celui de la
           France, est ainsi mis en scène par des réalisations distinctes de celles, fantaisistes et «alhambresque», de l’architecture privée.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Demandes de souscriptionsà des publications scientifiques ; contrats d’adjudication pour la construction des pavillons orientaux et
           coloniauxdes Expositions universelles ; programmes des concours d’émulation de 1<hi rend="sup">ère</hi> classe de l’École des Beaux-arts;
           projets de construction de mosquées à Paris.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

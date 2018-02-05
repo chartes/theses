@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’enseignement de l’histoire de la médecine à Paris au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle (1794-1914)</title>
-        <title type="sub">La défaite de l’érudition</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’enseignement de l’histoire de la médecine à Paris au <num>xix<hi rend="sup">e</hi></num> siècle (1794-1914)</title><title xml:lang="fr" type="sub">La défaite de l’érudition</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Galanopoulos, Philippe">Philippe Galanopoulos</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200914.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Connaître l’histoire des sciences médicales a été l’une des exigences des médecins parisiens au <num>xix</num>
 <hi rend="sup">e</hi> siècle. Pour les uns, il s’agissait de connaître l’histoire de la grande famille médicale à laquelle tout médecin
           praticien appartenait de fait ; pour les autres, il s’agissait, par la connaissance historique, de contribuer au progrès continu de la
@@ -70,7 +73,7 @@
           de décrire, une époque où la critique textuelle et l’esprit philologique jouaient encore un rôle dans la constitution des connaissances
           médicales, scientifiques et techniques.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Afin d’éclairer l’histoire de l’enseignement médico-historique à la faculté de médecine de Paris, il paraissait indispensable de fonder
           cette histoire sur deux types de documents : tout d’abord, des documents permettant d’établir la chronologie institutionnelle d’un
           enseignement unique en France et pionnier en Europe ; d’autre part, des sources liées à l’enseignement de l’histoire de la médecine en tant
@@ -101,9 +104,8 @@
           l’ensemble du <hi rend="i">Cours d’histoire de la médecine du professeur Jules Parrot (1876-1879)</hi>, formant cinq volumes qui contiennent
           aussi bien ses leçons que les notes préparatoires à ses leçons.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Cadre et hors-cadre institutionnel</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Cadre et hors-cadre institutionnel</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’histoire de la médecine : de la discipline à la chaire</head>
           <p>Créée en même temps que l’École de santé de Paris, par le décret du 14 frimaire an III (4 décembre 1794), la chaire d’histoire de la
             médecine fut, dès sa naissance, rattachée à une autre discipline naissante : la médecine légale. Si rien ne paraît justifier le
@@ -116,7 +118,7 @@
             cheminait alors vers son horizon scientifique et affectait déjà tous les domaines du savoir. Il n’est donc pas surprenant que l’histoire
             ait pu rencontrer, dans son cheminement réflexif, le domaine médical lui aussi en pleine quête de scientificité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Création et suppression de la chaire d’histoire de la médecine</head>
           <p>Pensé par Félix Vicq d’Azyr, dans son <hi rend="i">Plan d’Instruction médicale</hi> de 1790, comme le couronnement même de la formation
             médicale, l’enseignement de l’histoire de la médecine fut rapidement marginalisé à l’École de santé de Paris. Entre 1794 et 1822, quatre
@@ -134,7 +136,7 @@
             Faculté. Au Collège de France, cet enseignement est alors confié à Charles-Victor Daremberg qui l’organise dès 1864 et le maintient
             jusqu’à la guerre de 1870.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le rétablissement de la chaire d’histoire de la médecine</head>
           <p>Alors que le rétablissement de la chaire d’histoire de la médecine paraissait difficilement envisageable à la faculté de médecine de
             Paris, un événement inattendu va pourtant le rendre possible. Grâce à un legs généreux, dû à Auguste Salmon de Champotran, maître des
@@ -149,8 +151,8 @@
             contraire, on assiste avec eux au renoncement progressif de toute prétention scientifique dans cet enseignement, qui se mue désormais en
             un enseignement de culture générale sur le passé d’une science et d’une profession.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Objet et utilité de l’histoire</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Objet et utilité de l’histoire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’héritage des siècles</head>
           <p>Dans le discours des médecins qui s’interrogent sur la nécessité d’un enseignement de type historique à la faculté de médecine de Paris,
             la question récurrente est bien celle de l’utilité de la connaissance historique dans le domaine médical. Avant même d’en discuter la
@@ -168,7 +170,7 @@
             alors en vogue, c’est bien un certain scientisme qui nourrissait l’ambition des médecins de faire de l’histoire un instrument de progrès
             indéfini pour les sciences et les techniques médicales.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’objet d’une discipline</head>
           <p>Restait donc pour les professeurs d’histoire de la médecine la tâche de définir l’objet historique le plus utile à l’avancement de la
             science médicale. Ainsi, la délimitation pédagogique auquel on assiste tout au long du <num>xix</num>
@@ -188,7 +190,7 @@
             les « génies » du passé de la médecine et de la chirurgie exprime sans doute la nostalgie de ces époques où la médecine semblait avoir été
             révolutionnée par quelques hommes et par quelques écrits.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La découpe de l’histoire</head>
           <p>En même temps que la définition de l’utilité et de l’objet de l’histoire de la médecine, c’est une périodisation de celle-ci que les
             titulaires successifs de la chaire d’histoire ont progressivement été amenés à établir. Cette découpe de l’histoire était d’autant plus
@@ -211,8 +213,8 @@
             signalé ici : celui de l’abandon progressif des recherches originales et inédites par les professeurs titulaires de la chaire d’histoire
             de la médecine nommés après 1870.  </p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Transmission des valeurs et réception des savoirs</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Transmission des valeurs et réception des savoirs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les valeurs d’un enseignement</head>
           <p>Comme tous les autres enseignements proposés à la faculté de médecine de Paris, l’enseignement de l’histoire de la médecine a participé
             à un projet général d’instruction médicale, dans lequel les savoirs positifs et les connaissances pratiques se trouvaient structurés
@@ -228,7 +230,7 @@
             prétexte, à la diffusion d’idées très profondément libérales, avec des prolongements idéologiques du côté de la libre-pensée et de
             l’anticléricalisme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le livre, le crâne et le tableau</head>
           <p>Au-delà des questions de contenus, ce sont les modalités d’enseignement de l’histoire de la médecine que cette thèse cherche à éclairer.
             Malgré la pauvreté du discours théorique touchant à une bonne pédagogie de l’histoire, on note, dans cet enseignement, quelques approches
@@ -244,7 +246,7 @@
             siècle de l’usage du tableau noir à celui du tableau peint. Ce passage illustre, à sa manière, comment l’enseignement de l’histoire de la
             médecine s’est progressivement mué, à Paris, en un enseignement attrayant et galant plutôt que scientifique et heuristique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Question de réception</head>
           <p>La question de la réception reste une question délicate. Comment mesurer la réussite ou l’échec d’un enseignement ? L’histoire polémique
             de la chaire d’histoire de la médecine et la difficulté à en assurer la pérennité institutionnelle à la faculté de médecine de Paris sont
@@ -259,9 +261,7 @@
             penser qu’autour de 1800 un élève sur quatre environ avait suivi, dans le cadre de sa formation médicale, des leçons d’histoire de la
             médecine, contre un étudiant sur dix autour de 1900.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’échec de l’enseignement de l’histoire de la médecine à Paris s’est donc manifesté à deux niveaux : au niveau institutionnel et au niveau
           pédagogique. Au niveau institutionnel, tout d’abord, cet enseignement n’a jamais su s’imposer et faire l’unanimité dans le champ
           hospitalo-universitaire. Pensé, à fin du <num>xviii</num>
@@ -283,11 +283,10 @@
           parmi d’autres ? Ne s’est-elle pas muée en une administration rationnelle et impersonnelle des soins et des malades ? Quelle saurait être
           l’avenir d’une science sans conscience historique ?</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Photographie des fonds documentaires. — Textes fondamentaux. — Portrait des professeurs d’histoire de la médecine. — Autres
           illustrations.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Mirabilia descripta&lt;/hi&gt; de Jordan Catala : une image de l’Orient au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les <hi rend="i">Mirabilia descripta</hi> de Jordan Catala : une image de l’Orient au <num>xiv<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gadrat, Christine">Christine Gadrat</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200021.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Certaines époques ont été plus propices que d’autres aux rencontres et aux échanges entre l’Asie et l’Europe ; les XIII <hi rend="sup">e</hi> et <num>xiv<hi rend="sup">e</hi></num>  siècles en font partie. En l’espace d’environ cent cinquante ans, quelques voyageurs isolés, ou en
           petits groupes, marchands ou missionnaires, s’élancent à la découverte de l’Est inconnu, à la recherche de ces merveilles et ces richesses
           dont ils ont entendu parler. Jordan Catala de Sévérac fait partie de ces voyageurs-explorateurs, de ces missionnaires envoyés par une
@@ -62,7 +65,7 @@
           texte relativement court n’en renferme pas moins quantité de notations précises sur la faune, la flore, les mœurs des Indiens, etc. Le titre
           donné à son récit invite à étudier plus particulièrement la question des merveilles du monde et leur vogue au Moyen Age.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La principale source de cette étude est constituée par le manuscrit du texte des <hi rend="i">Mirabilia descripta</hi>, dont il est donné
           une édition complète et une traduction en français. Le manuscrit, aujourd’hui conservé à la British Library, à Londres (ms. Additional
           19513), est unique. Il s’agit d’un recueil de textes présentant un intérêt géographique et dont les différentes pièces, sept au total, ont
@@ -73,9 +76,8 @@
           consultées les sources pontificales éditées. Enfin, le texte de Jordan a été confronté aux récits d’autres voyageurs contemporains, afin
           notamment de déterminer son éventuelle originalité.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Présentation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les missions et les voyages en Orient aux <num>xiii<hi rend="sup">e</hi></num> ­XIV<hi rend="sup">e</hi>  siècles</head>
           <p>Depuis le <num>xiii<hi rend="sup">e</hi></num>  siècle, à la suite des conquêtes mongoles, plusieurs hommes se sont en effet lancés à la
             découverte de l’Orient, qu’ils soient missionnaires, diplomates et/ou marchands. Tous sillonnent les mêmes routes, voyageant souvent
@@ -85,7 +87,7 @@
             jouent un rôle important dans la connaissance de l’Orient en Occident, ainsi que dans la persistance de l’idéal de croisade, relayé par la
             papauté.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Jordan Catala de Sévérac</head>
           <p>Les étapes de la vie de ce missionnaire restent mal connues, et lui-même nous en fait très peu part. Il est originaire d’une famille de
             notaires de Sévérac-le--Château (Aveyron). On ne connaît ni la date de son entrée chez les Dominicains, qui a dû probablement intervenir
@@ -101,7 +103,7 @@
             connaissance de l’Inde par la chancellerie pontificale, est indéniable. Le plus probable est qu’il soit ensuite reparti pour l’Orient,
             mais sa trace se perd alors complètement. Le devenir de l’évêché missionnaire de Quilon demeure tout aussi mystérieux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les textes laissés par Jordan Catala</head>
           <p>Jordan Catala décrit tout ce qui l’a émerveillé en Inde, et ailleurs en Orient, dans un texte qui ne nous est parvenu qu’à travers un
             manuscrit unique : les <hi rend="i">Mirabilia descripta.</hi> Davantage qu’un récit de voyage ou qu’un rapport de mission au pape, il
@@ -129,8 +131,8 @@
             que Jordan ne nous ait laissé qu’une seule lettre, qui a pu être remaniée ou interpolée à partir d’informations transmises par des
             marchands génois.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Commentaire</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’image du monde de Jordan Catala</head>
           <p>Sans en avoir visité l’intégralité, Jordan Catala s’attache à évoquer une très grande partie du monde connu à son époque, de l’Italie à
             la Chine et à l’Indonésie, sans oublier l’Afrique. Ce qu’il écrit, même très brièvement, sur chacune de ces régions, permet de dégager ses
@@ -141,7 +143,7 @@
           <p>A l’inverse de la plupart des autres voyageurs médiévaux, il s’est peu intéressé aux villes orientales et à leur fourmilière humaine. En
             revanche, il décrit une nature toute de couleurs vives.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Légendes et merveilles dans les <hi rend="i">Mirabilia descripta</hi>
         </head>
           <p>Comme leur titre l’indique, les <hi rend="i">Mirabilia descripta</hi> s’insèrent dans toute une tradition littéraire de recueils de
@@ -154,7 +156,7 @@
           <p>En fait, les merveilles de l’Orient résident avant tout pour lui dans les phénomènes qu’il a pu observer personnellement en Inde et qui
             sont bien réels : les animaux, les plantes, les peuples et leurs coutumes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un observateur attentif</head>
           <p>En tant que missionnaire, Jordan s’est, bien entendu, penché sur les pratiques religieuses des peuples qu’il a rencontrés. Il nous parle
             très peu des chrétiens orientaux, avec lesquels ses contacts ont cependant dû être importants, et préfère nous décrire les pratiques des
@@ -165,17 +167,15 @@
             disposent, tant en eau, qu’en nourriture et en animaux domestiques. Il nous décrit de façon très précise un grand nombre de plantes et
             d’animaux indiens et ne cache pas son émerveillement devant l’éléphant.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Edition, traduction glossaire</head>
-        <p>Le caractère unique du manuscrit conduit à en respecter le plus possible les leçons et à ne les modifier que lorsqu’elles entravent une
+      </div><div n="5" type="part"><head n="0" type="chapter">Edition, traduction glossaire</head>
+        <p n="1" type="chapter">Le caractère unique du manuscrit conduit à en respecter le plus possible les leçons et à ne les modifier que lorsqu’elles entravent une
           lecture facile et immédiatement compréhensible. Les sources qui ont pu être identifiées sont indiquées en note, ainsi que les passages
           communs à d’autres textes médiévaux, qu’il s’agisse d’ouvrages de nature encyclopédique ou d’autres récits de voyage.</p>
-        <p>La traduction tient à conserver la fraîcheur et la simplicité de la langue utilisée par Jordan Catala ; elle conserve aussi les répétitions
+        <p n="2" type="chapter">La traduction tient à conserver la fraîcheur et la simplicité de la langue utilisée par Jordan Catala ; elle conserve aussi les répétitions
           et les lourdeurs présentes dans le texte latin.</p>
-        <p>Le glossaire retient les mots difficiles présents dans le récit de Jordan Catala, les mots empruntés à l’occitan, au français ou à
+        <p n="3" type="chapter">Le glossaire retient les mots difficiles présents dans le récit de Jordan Catala, les mots empruntés à l’occitan, au français ou à
           l’italien, de même que les divers mots orientaux, indiens ou persans. Il est complété par un index des noms de lieux et de personnes.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Cette étude a l’ambition d’avoir fait un tour relativement complet du « dossier » Jordan Catala, en revenant tout autant sur son œuvre
           écrite, les <hi rend="i">Mirabilia</hi>
           <hi rend="i">descripta</hi> et ses lettres, que sur tout ce que l’on sait de lui par ailleurs. Les détails de sa vie et l’histoire du
@@ -192,13 +192,12 @@
           prétend pas rejeter les merveilles, mais cherche au contraire à les intégrer dans une réalité elle-même merveilleuse ; il fait preuve ainsi
           d’une curiosité et d’une capacité d’émerveillement remarquables.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Edition de la lettre de Jordan Catala du 12 octobre 1321. ­ Textes comparés de la première et de la seconde lettre attribuées à Jordan
           Catala. ­ Edition du récit du martyre de Thana par le custode Bartholomée de Tabriz. ­ Notices codicologiques des manuscrits. ­ Répertoire
           et description des différentes mains de lecteurs. ­ Plan thématique des <hi rend="i">Mirabilia descripta. ­</hi> Le martyre de Jordan Catala
           selon Giffre de Réchac. ­ Liste des documents diplomatiques concernant Jordan Catala.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

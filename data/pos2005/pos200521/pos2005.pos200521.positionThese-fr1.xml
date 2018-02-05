@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Justice, vengeance et compromis en Normandie (XI&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XII&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècles)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Justice, vengeance et compromis en Normandie (XI<hi rend="sup">e</hi>-XII<hi rend="sup">e</hi> siècles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Roche, Thomas">Thomas Roche</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200521.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’ombre de Charles Haskins plane encore sur l’historiographie normande. Paru en 1916, son ouvrage <hi rend="i">Norman institutions</hi>
           demeure aujourd’hui une référence incontournable, en particulier pour l’étude de la justice de la période anglo-normande (1066-1154). Il n’a
           pas été remplacé : en effet, les travaux des historiens du droit normand ont eu du mal à s’arracher à l’horizon du <hi rend="i">Très ancien
@@ -69,15 +72,14 @@
         <p>L’étude se déroule en trois temps : étude des stratégies d’écriture des sources, analyse des moments et des formes du conflit, esquisse de
           synthèse sur les relations entre conflit et pouvoir.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Deux types traditionnels de sources ont été étudiés. Les sources narratives sont facilement accessibles, en particulier grâce aux
           importants efforts d’éditeurs anglo-saxons. L’essentiel des documents diplomatiques publiés a été pris en compte ; les efforts de
           dépouillement des sources inédites se sont concentrés sur les actes et les cartulaires normands présents à la Bibliothèque nationale de
           France, même si les archives normandes n’ont ponctuellement pas été négligées.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Aux sources du conflit</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Aux sources du conflit</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’écrit documentaire en Normandie</head>
           <p>La production de documents diplomatiques par des auteurs normands pour des bénéficiaires normands ne réapparaît qu’à la fin du X <hi rend="sup">e</hi> siècle. Les grands traits de la diplomatique ducale sont esquissés, des influences carolingiennes repérables dans les
             actes de Richard II à celles qu’a pu produire la conquête de l’Angleterre.</p>
@@ -92,7 +94,7 @@
             Or il existe un biais significatif en défaveur des sources relatives au règlement des litiges ; notre information est fragmentaire, ce qui
             incite à la plus grande prudence.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Traces de litiges</head>
           <p>Notre information dépend non seulement de sources morcelées, mais aussi des discours qu’elles tiennent, suivant une logique qui leur est
             propre et qui conditionne notre vision des litiges qu’elles rapportent. La notice monastique apparaît moins narrative en Normandie que
@@ -105,8 +107,8 @@
             arrangements : elles démontrent l’implication des laïques dans la pratique de l’écrit, et témoignent aussi d’une certaine normativité,
             toute en singularité.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Morphologie du conflit et de son règlement</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Morphologie du conflit et de son règlement</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Violences (1) : les sires</head>
           <p>La richesse de l’<hi rend="i">Histoire ecclésiastique</hi> d’Orderic Vital invite à explorer les mécanismes des conflits entre nobles,
             à condition de faire la part de la lecture monastiquement et politiquement biaisée de son auteur, et du langage émotionnel employé, qui
@@ -122,7 +124,7 @@
             conflit est autant un conflit en paroles qu’en actes, puisqu’il faut justifier son défi, mobiliser ses alliés sans perdre l’opinion
             « publique ».</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Violences (2) : les hommes de Dieu</head>
           <p>Les religieux peuvent être touchés par le conflit de manière indirecte : les conflits laïques, et en particulier les conflits
             frontaliers, ont des répercussions indéniables sur les biens ecclésiastiques, mais celles-ci donnent lieu, la paix revenue, à des
@@ -136,7 +138,7 @@
             appuyées par un pouvoir séculier ; mais l’objectif est-il de remporter l’affrontement ou d’arriver tête haute à la table des
             négociations ?</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Négociations (1) : <hi rend="i">concordia</hi>
          </head>
           <p>Le temps des palabres a deux visages, difficilement dissociables. Dans un premier temps, c’est l’aspect informel, les négociations qui
@@ -149,7 +151,7 @@
             plutôt envisager l’accord comme un travail sur la qualification des échanges. C’est également le cas lors d’arrangements plus complexes,
             qui marquent la renégociation des statuts relatifs des deux parties.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Négociations (2) : <hi rend="i">judicium</hi>
          </head>
           <p>Du plaid de négociation on peut basculer dans le plaid de justice. La composition des cours est bien connue, mais on doit insister sur
@@ -167,8 +169,8 @@
             être sanctionné par la justice ducale. Mais il ne faut exagérer ni son efficacité ni son impartialité : l’inimitié agit lors du plaid,
             notamment lors des procès « politiques » lancés par le duc.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Conflit et société</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Conflit et société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Logiques de l’affrontement</head>
           <p>Il s’agit enfin de présenter le conflit dans sa variété, en proposant une typologie ordonnée, et en mettant en valeur les évolutions et
             les continuités. Comme nos sources sont ecclésio-centrées, le principal moteur de litiges est constitué par les tensions de la réforme
@@ -181,7 +183,7 @@
             la mise en place localement de micro-procédures de conciliation ; certes leur objet se limite à traiter des problèmes courants, mais il
             s’agit d’une manifestation non négligeable de la créativité normative médiévale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le pouvoir ducal en question</head>
           <p>La place du duc dans le règlement des conflits mérite un traitement particulier, d’autant plus qu’il ouvre la voie à une relecture
             nuancée de l’histoire politique du duché. Le modèle d’alternance entre des périodes fastes et d’autres anarchiques repose en fait sur la
@@ -191,9 +193,7 @@
             nuancé, en critiquant la valeur de notre principal informateur, Orderic Vital, et en mesurant la continuité avec le gouvernement de son
             père.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>En guise de conclusion, des pistes sont ouvertes dans deux directions. D’une part, il convient de s’interroger sur les points de
           convergence dans la culture de l’inimitié et de l’arrangement d’un côté et de l’autre de la Manche, en dépit des différences documentaires
           et d’un contexte institutionnel différent.</p>
@@ -202,10 +202,9 @@
           Cependant, si les pratiques privées de négociation et d’arrangement se maintiennent, le pouvoir tend non seulement à mieux s’en distinguer
           mais aussi à les déprécier. </p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Répertoire des affaires judiciaires normandes. – Édition d’actes inédits.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

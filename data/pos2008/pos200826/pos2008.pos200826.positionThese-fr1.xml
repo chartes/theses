@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La place du manuscrit Plut. 32 sin. IV de la Biblioteca Medicea Laurenziana dans la tradition du &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De Sanctis&lt;/hi&gt; de Jacques
-        de Voragine</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La place du manuscrit Plut. 32 sin. IV de la Biblioteca Medicea Laurenziana dans la tradition du <hi rend="i">De Sanctis</hi> de Jacques
+        de Voragine</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Servera, Dorothée">Dorothée Servera</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200826.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Lors des travaux préparatoires pour une édition des sermons <hi rend="i">De Sanctis</hi> du religieux dominicain Jacques de Voragine, M.
           Paolo Maggioni a remarqué un manuscrit qui, tout en portant le même titre, contenait un texte sensiblement différent et plus long (deux gros
           volumes). Il a rapproché cette découverte d’une mention portée par cet auteur dans sa <hi rend="i">Chronique de Gênes</hi> par laquelle il
@@ -64,16 +67,15 @@
 <hi rend="sup">e</hi> siècle. Pour mieux y répondre, nous limitons notre étude au premier des deux volumes qui couvre la moitié de l’année
           liturgique.</p>
       </div>
-              <div type="sources"><head>Sources et bibliographie</head>
+          <div type="sources" n="2"><head>Sources et bibliographie</head>
         <p>Nous donnons en préambule la liste des sources qui ont servi à notre étude en commençant par les textes de Jacques de Voragine, manuscrits
           et édités. On trouvera ensuite la liste des textes cités par l’auteur dans les sermons du Ms. Plut. 32 sin. <num>iv</num>que nous avons
           édités.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le manuscrit</head>
-        <p>Dans la première partie de notre commentaire, nous nous intéressons au manuscrit de Florence dans son ensemble : le codex en lui-même, mais
+          <div n="3" type="part"><head n="0" type="chapter">Le manuscrit</head>
+        <p n="1" type="chapter">Dans la première partie de notre commentaire, nous nous intéressons au manuscrit de Florence dans son ensemble : le codex en lui-même, mais
           aussi le texte qu’il contient de façon globale.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Analyse codicologique</head>
           <p>Le codex Plut. 32 sin. <num>iv</num>de la bibliothèque Laurenziana est un manuscrit en parchemin de la fin du <num>xiv</num>
 <hi rend="sup">e</hi> siècle ; il provient du couvent franciscain de Santa Croce, à Florence. Il est composé de 342 feuillets écrits en
@@ -85,7 +87,7 @@
             nombreux manuscrits. Il a résidé au couvent de Florence autour de 1380, qui doit être approximativement la date de composition de notre
             manuscrit.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Comment rapprocher le texte florentin du <hi rend="i">De Sanctis</hi> ?</head>
           <p>La première caractéristique de ce témoin par rapport à la tradition principale est sa longueur bien supérieure. Pourtant, il contient
             moins de sermons, mais ils sont toujours plus longs. Il est aussi construit différemment : certaines fêtes ne sont pas placées au même
@@ -96,10 +98,10 @@
               <hi rend="i">incipit</hi>, nous en avons identifié d’autres, plus ou moins lacunaires, dans des bibliothèques de l’est et du nord de
             l’Europe.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Analyse des sermons</head>
-        <p>Le seul moyen de répondre précisément aux questions posées en introduction est de procéder à une étude détaillée des sermons eux-mêmes :
+      </div><div n="4" type="part"><head n="0" type="chapter">Analyse des sermons</head>
+        <p n="1" type="chapter">Le seul moyen de répondre précisément aux questions posées en introduction est de procéder à une étude détaillée des sermons eux-mêmes :
           c’est l’objet de cette seconde partie.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">De qui est ce recueil ?</head>
           <p>Avant toute chose, il convient de vérifier que ces sermons peuvent bien être attribués à Jacques de Voragine. Pour cela, il faut les
             comparer non seulement avec la tradition établie du <hi rend="i">De Sanctis</hi>, mais aussi avec les autres œuvres du même auteur. Des
@@ -110,7 +112,7 @@
             homogène dans tous les sermons. De façon générale, on peut facilement établir des points communs avec plusieurs autres recueils de sermons
             du même auteur. On peut donc lui attribuer ce texte et y voir la version longue annoncée par la <hi rend="i">Chronique de Gênes</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">La place des sermons <hi rend="i">De Sanctis</hi> dans la production de Jacques de Voragine</head>
           <p>Actuellement, on ne sait pas dater précisément tous les textes de Jacques de Voragine. Sa première œuvre, la <hi rend="i">Légende
               dorée</hi>, a été rédigée en deux versions (1260 et après 1272) ; à l’opposé, le <hi rend="i">Liber Marialis</hi> et la <hi rend="i">Chronique de Gênes</hi> datent des années 1290, peu avant sa mort. Entre les deux, la place des <hi rend="i">Sermones de Sanctis et
@@ -122,7 +124,7 @@
             outre, la version longue semble plus proche du <hi rend="i">Liber Marialis</hi> que P. Mais dans l’état actuel des recherches, il est
             difficile de se prononcer plus précisément.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">La construction de cette version par rapport à P</head>
           <p>La question de la construction du recueil long ne peut trouver de réponse par la seule étude du témoin F. L’analyse d’un témoin N
             (Nürnberg, Stadtbibliothek, Ms Cent. II, 53), encore plus long que F malgré de larges lacunes, est indispensable. En effet, si l’on se fie
@@ -131,7 +133,7 @@
             manifestement des réécritures de P : l’auteur y a ajouté des annonces de plan, des transitions, des citations mais aussi des sous-parties
             entières et des commentaires. On trouve aussi dans F des sermons entièrement nouveaux, qui ne reprennent aucun élément de P.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">La destination de cette version longue</head>
           <p>Pourquoi Jacques de Voragine a-t-il composé une version longue de ses sermons <hi rend="i">De Sanctis</hi> ? Est-ce simplement pour y
             ajouter le fruit de ses nouvelles recherches, ou avait-il un but précis ? Quelques caractéristiques de la version longue émergent dans F.
@@ -142,17 +144,14 @@
             concevait peut-être aussi comme une sorte de somme de connaissances dans tous les domaines de la religion (théologie, hagiographie,
             morale, spiritualité…).</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Édition partielle</head>
+      </div><div type="conclusion" n="5"><head>Édition partielle</head>
         <p>Édition de sermons sélectionnés dans le manuscrit F. Ils sont précédés du plan détaillé de l’exposé et, pour les plus significatifs, d’une
           comparaison synoptique avec le sermon parent dans la tradition courte du <hi rend="i">De Sanctis</hi>.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Tables des matières du <hi rend="i">De Sanctis</hi> dans les manuscrits de Florence et de Nuremberg et dans la version courte. —
           Illustrations tirées du manuscrit F. — Index des sources citées.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

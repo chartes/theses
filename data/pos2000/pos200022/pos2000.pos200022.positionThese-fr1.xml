@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Du sceau à la signature : histoire des signes de validation en France (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Du sceau à la signature : histoire des signes de validation en France (<num>xiii<hi rend="sup">e</hi></num>-<num>xvi<hi rend="sup">e</hi></num> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Jeay, Claude">Claude Jeay</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200022.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>A partir du <num>xix<hi rend="sup">e</hi></num>  siècle, et sous le Second Empire en particulier, les historiens ont commencé à prêter davantage
           attention aux sceaux, aux cachets qui validaient les actes et les missives. Ces observations minutieuses et méthodiques ont abouti à la
           rédaction d’inventaires importants, souvent richement illustrés, et la sigillographie n’a cessé depuis lors de s’affirmer comme une
@@ -63,7 +66,7 @@
           signes de validation débouche sur l’histoire des sensibilités et des mentalités ; à l’instar de l’avènement d’une nouvelle emblématique et
           du portrait, la diffusion de la signature reflète la naissance de l’individu et de la personnalité.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les documents signés ou scellés sont d’une richesse et d’une diversité presque infinies. Définir un corpus d’étude est donc un préalable
           indispensable. La méthode la plus expédiente consistait à privilégier des séries chronologiques,  souvent factices, qui permettent une étude
           suivie. La Bibliothèque nationale de France offre ainsi de nombreux recueils intéressants, comme les lettres originales, minutes et pièces
@@ -75,9 +78,8 @@
           été réalisée grâce aux registres de matricules (Toulouse, Arch. mun., 9 vol.), renfermant un corpus d’une richesse exceptionnelle : plus de
           dix mille signatures (1271-1536).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Sceau et signature dans l’intimité du pouvoir</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Sceau et signature dans l’intimité du pouvoir</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Du monogramme à la signature ?</head>
           <p><hi rend="i">Le monogramme </hi> — De manière générale, il est admis, tacitement du moins, que le monogramme est une signature royale.
             Mérovingiens, Carolingiens et Capétiens en usent pour manifester solennellement leur approbation ; ensuite, les Valois signent simplement
@@ -101,7 +103,7 @@
             subsister seul. Plusieurs changements de signature méritent des développements plus importants, notamment ceux opérés par Charles VI,
             Louis XI et Charles VIII.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les signautres de Louis XI</head>
           <p><hi rend="i">Les signatures du roi </hi> — Si le contenu de la correspondance a largement inspiré le propos des chercheurs, la signature
             de Louis XI n’a, en revanche, retenu l’attention jusqu’à un article de Michel François. Une première signature perdure pendant presque
@@ -121,7 +123,7 @@
             biographiques. Jean Bourré et Ymbert de Batarnay ont exercé des fonctions identiques, sans qu’il soit pour autant possible de cerner leur
             activité avec la même précision.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Signature et portrait : la royauté mise en scène</head>
           <p><hi rend="i">Portrait et signature : une même origine ? </hi> — Le premier portrait d’un roi de France est celui de Jean le Bon. C’est
             aussi le premier roi dont nous conservons la signature. Cette corrélation de faits dépasse la simple coïncidence et conduit à mettre en
@@ -146,8 +148,8 @@
             politique. Progressivement, toute la symbolique et la thématique royales apparaissent sur le parchemin. L’âge d’or de la charte historiée
             est incontestablement le règne de Charles V.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Sceau et signature dans les cercles du savoir</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Sceau et signature dans les cercles du savoir</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les notaires et secrétaires du roi : Aux origines de la signature ?</head>
           <p><hi rend="i">Les notaires et secrétaires du roi, praticiens de l’écrit et hommes de culture </hi> — Au moment où les rois de France
             commencent à signer, les notaires et secrétaires de la chancellerie apposent leur signature sur les actes depuis déjà plusieurs décennies.
@@ -173,7 +175,7 @@
             régionales. Enfin l’étude du brevet et de la lettre du Châtelet permet encore un peu mieux d’appréhender le rôle de la signature.
             D’auxiliaire, elle se fait rapidement indispensable et suffisante.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Acte authentique et seing manuel</head>
           <p><hi rend="i">Le notariat toulousain </hi> — S’il ne faut pas trop vieillir l’institution du notariat toulousain, ce dernier n’en est pas
             moins ancien puisqu’il remonte aux toutes premières années du <num>xiii<hi rend="sup">e</hi></num>  siècle. Or, à partir des années 1270, à
@@ -190,7 +192,7 @@
             ressemblent de plus en plus aux signatures des notaires et secrétaires du roi, au point qu’il devient impossible pour nombre d’entre elles
             d’en identifier l’auteur à la fin du <num>xv<hi rend="sup">e</hi></num>  siècle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’art et la manière de signer</head>
           <p><hi rend="i">Représentations politiques, symboles de pouvoir </hi> — Les notaires toulousains choisissent souvent pour seing manuel un
             symbole de l’autorité municipale, puisqu’ils sont nommés par les capitouls. C’est donc à dessein qu’ils reproduisent la croix perlée ou,
@@ -210,8 +212,8 @@
             réductrice. Il faut davantage voir une complémentarité, puis, en avançant dans le temps, une évolution du figuratif à l’abstrait, comme en
             peinture, toutes proportions gardées.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le « droit à la signature »</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le « droit à la signature »</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les princes des fleurs de lis : la signature, entre devises et armoiries</head>
           <p><hi rend="i">Jean de Berry : les fêtes de la représentation </hi> — Jean de Berry est représenté de nombreuses fois sur ses sceaux les
             plus grands et les plus beaux. Il est frappant de constater que ces sceaux retracent l’évolution des traits du duc, qui changent à mesure
@@ -234,7 +236,7 @@
             participent pleinement de cette attitude. Philippe le Bon et les princes Louis et Charles d’Orléans attachent tous une grande importance à
             leur signature, pour des raisons néanmoins différentes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’épée ou la plume La signature des gens de guerre</head>
           <p><hi rend="i">Montres de gens de guerre, envois et quittance </hi> — Les nobles, les capitaines et les hommes de guerre cherchent avant
             tout la victoire. Par les armes, ils tentent d’obtenir le succès et la gloire. Le fait militaire, guerres et batailles, a toujours suscité
@@ -254,7 +256,7 @@
             paradoxe n’est qu’apparent : le développement de la culture nobiliaire va de pair avec une diffusion plus large de modèles communs, qui
             conservent chacun une marque personnelle discrète.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Signer un tableau, signer une œuvre</head>
           <p><hi rend="i">Les signatures du peintre </hi> — On se propose de reprendre la question de la signature du peintre en l’éclairant d’un
             regard nouveau, en l’abordant sous l’angle de la diplomatique. Il importe en effet de considérer le tableau comme un document, en
@@ -270,9 +272,7 @@
             et peuvent contribuer à expliquer la surprenante renaissance du monogramme sur les tableaux, après sa disparition des actes royaux en
             1330.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>II est faux de présenter comme une vérité établie, et délicieusement paradoxale, que la signature a été inventée par ceux qui ne savaient
           pas écrire. Au contraire, la signature appartient au cercle des praticiens de l’écrit, des personnages cultivés ; elle s’épanouit dans les
           cercles de la connaissance et dans l’intimité des puissants. Mais la signature ne reste pas confinée dans les bureaux et les tours ; elle se
@@ -285,10 +285,9 @@
           encore de même aujourd’hui. Par-delà les siècles, la signature possède toujours sa richesse, que l’on aurait tort de considérer comme
           appartenant inexorablement à l’ancien temps.</p>
       </div>
-              <div type="appendix"><head>Illustrations</head>
+          <div type="appendix" n="7"><head>Illustrations</head>
         <p>Figures dans le texte. ­ Cinquante planches hors-texte. ­ Album de deux cents reproductions.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

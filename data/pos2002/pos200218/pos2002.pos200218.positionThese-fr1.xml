@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’élevage des chevaux de travail dans l’Orne au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle (1815-1900)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’élevage des chevaux de travail dans l’Orne au <num>xix<hi rend="sup">e</hi></num> siècle (1815-1900)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Manneheut, Agnès">Agnès Manneheut</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200218.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire de l’élevage et en particulier de celui du cheval en France au <num>xix<hi rend="sup">e</hi></num> siècle, période de mutations
           constantes et profondes, est encore mal connue ; elle permet pourtant d’aborder l’étude de la société rurale sous un angle nouveau. Le
           département de l’Orne, marqué par une grande diversité de situations, offre un terrain d’observation propice à saisir cette question dans
@@ -61,7 +64,7 @@
           qui exerçaient cette activité, et enfin le soutien actif apporté par divers organismes et administrations à cette production, qui apparaît
           comme un enjeu de pouvoir, sont des éléments structurants de la société rurale.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources proviennent essentiellement des Archives départementales de l’Orne, notamment de la série M, qui renferme tous les documents de
           la préfecture relatifs à l’agriculture et à l’élevage du cheval : les plus intéressants sont les palmarès de concours et la correspondance
           portant sur la politique de l’élevage. Les sources habituelles de l’histoire sociale ont aussi été utilisées pour étudier les éleveurs comme
@@ -75,9 +78,8 @@
           décrivant l’élevage ou traitant de la “ question chevaline ” sous divers angles, des livrets de comptes-rendus et de débats publiés par les
           comices agricoles, mais aussi la presse locale, qui faisait une large part aux événements ayant trait aux chevaux et à l’élevage.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les chevaux de l’Orne et l’organisation de l’élevage</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les chevaux de l’Orne et l’organisation de l’élevage</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La population chevaline de l’Orne</head>
           <p>Par rapport aux départements voisins, celui de l’Orne se distinguait plus par la qualité que par la quantité de ses chevaux, dont le
             nombre ne connut d’augmentation que dans les deux premiers tiers du siècle. Cette situation s’explique tant par l’évolution de la
@@ -85,7 +87,7 @@
             liées. Dans cette région où l’élevage était une tradition relativement ancienne, les chevaux entretenaient en particulier un rapport
             complémentaire, parfois perçu comme conflictuel, avec les bovins.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les chevaux de l’Orne : destriers, rosses et autres</head>
           <p><hi rend="i">Les rosses </hi> — Dans l’Orne, comme partout ailleurs, se côtoyaient plusieurs qualités de chevaux ; les plus nombreux
             étaient de mérite et de valeur très inférieurs. Les sources se taisent souvent à leur sujet, mais il est possible d’en distinguer
@@ -123,7 +125,7 @@
             opinions sur l’agriculture et des conceptions aristocratique ou “ démocratique ” du cheval, comme le font ressortir les nombreuses
             discussions sur leur statut.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le commerce des chevaux dans l’Orne</head>
           <p>L’état du commerce eut toujours une influence décisive sur l’évolution de l’élevage, mais échanges et transactions déterminaient aussi
             le statut des éleveurs, en grande partie fondé sur leur insertion dans des réseaux et des circuits commerciaux. <lb/>Le commerce des
@@ -135,8 +137,8 @@
             <lb/>L’étude du déroulement des foires montre clairement que la vente des chevaux était un phénomène très aléatoire et n’atteignait une
             certaine régularité que sur le long terme.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Des hommes et des chevaux</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Des hommes et des chevaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les rapports entre “ éleveurs ”, “ naisseurs ”, cultivateurs et marchands</head>
           <p>Le mot “ éleveur ” peut correspondre à plusieurs réalités différentes : au <num>xix<hi rend="sup">e</hi></num> siècle, il était réservé à quelques
             herbagers qui s’occupaient principalement de bovins, plus ou moins de chevaux et aucunement de culture ; son sens fut aussi élargi à ceux
@@ -151,7 +153,7 @@
             spectacle des courses et des concours, tandis que diverses nuisances imputables à l’élevage équin éveillaient l’animosité de certains.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les hommes et leurs chevaux</head>
           <p>Les motivations qui conduisaient un cultivateur ou un amateur à se consacrer à l’éducation de chevaux et le choix du type d’animal qui
             devait représenter l’excellence de son activité de production relevaient de facteurs semblables : les préférences personnelles de chacun
@@ -162,7 +164,7 @@
             quelques indications sur les soins qui étaient donnés à ceux-ci ou les noms qu’ils portaient. L’examen de ces noms, indice de la culture
             personnelle du propriétaire, fait apparaître des constantes, qui n’empêchaient pas certains de faire preuve d’originalité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Différents types d’éleveurs</head>
           <p>Pour connaître aujourd’hui les cultivateurs qui s’occupaient de “ l’industrie chevaline ”, le recours aux palmarès de concours agricoles
             ou équins est le seul possible ; le groupe des lauréats qui se distinguent ainsi des éleveurs au sens large est relativement restreint,
@@ -177,8 +179,8 @@
             l’attention que leur portaient les autorités, leur activité est bien documentée et il est possible d’analyser les conditions de leur
             pouvoir et leur concurrence avec l’administration des haras.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Organismes, institutions et politiques d’élevage</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Organismes, institutions et politiques d’élevage</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Rassemblements et regroupements de cultivateurs</head>
           <p>Les courses, organisées par des sociétés formées de notables et courues uniquement par de grands éleveurs, donnaient leur popularité aux
             grands étalons, mais elles ne concernaient pas les possesseurs de poulinières et d’étalons aussi directement que les concours d’élevage.
@@ -192,7 +194,7 @@
             que l’élevage du cheval s’inscrivait dans le contexte plus large des problèmes agricoles en général, et longtemps les seules à
             s’intéresser aux races de trait.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La sollicitude des élus locaux</head>
           <p>Les autorités locales du département s’impliquèrent beaucoup dans l’élevage des chevaux. Les municipalités ne manquaient pas de réclamer
             des avantages à l’Etat, par l’intermédiaire du conseil général, qui ne se faisait pas faute de répercuter ces demandes après avoir tranché
@@ -203,7 +205,7 @@
             chevaline. L’action du département ne fut certes pas déterminante dans le développement de l’élevage chevalin dans l’Orne, mais elle
             l’accompagna par des mesures de promotion dont surent profiter les éleveurs.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’Etat intéressé : administration des haras et remontes militaires</head>
           <p>Les deux administrations concernées par l’élevage du cheval en France ont eu deux points communs au cours du <num>xix<hi rend="sup">e</hi></num>
             siècle : une histoire scandée par de nombreuses réorganisations, dont le détail n’a pas modifié en profondeur leurs missions, et l’ampleur
@@ -219,9 +221,7 @@
             Ceux-ci pouvaient faire pression sur l’administration, sans la faire céder pour autant sur tous les points, et jouer avec ses offres, qui
             permirent une certaine démocratisation de l’élevage.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’élevage du cheval au <num>xix<hi rend="sup">e</hi></num> siècle révèle donc de nombreuses tensions. En lui-même, par son organisation et son
           évolution, peut-être plus complexes dans l’Orne qu’ailleurs en France, il traduit l’adaptation d’une société et d’une économie aux progrès
           techniques, ainsi que les diverses réactions à ces transformations. A la fois production agricole au marché en expansion et instrument
@@ -231,7 +231,7 @@
           de sa production et de son image, constitue bien un axe d’approche privilégié de la France rurale, de son ouverture et de son affirmation
           face à l’Etat.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Exemple de fiche de la base de données des éleveurs formée à partir des palmarès de concours. ­ Cartes : les régions culturales du
           département de l’Orne ; les stations et les concours de l’administration des haras dans l’Orne (1815-1900) ; la géographie de l’élevage dans
           le Perche ornais. ­ Graphiques : le nombre de saillies dans l’ensemble du département de l’Orne et dans les différents types de stations
@@ -245,7 +245,6 @@
           des chevaux achetés par le dépôt de remonte pendant les mois de juin et juillet 1874. ­ Extraits des registres de déclaration, de
           recensement et de classement des chevaux, juments et mulets de la commune de Coulonces, 1883 (A.D. Orne, E dépôt 464 / 20 à 22).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

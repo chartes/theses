@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Guillaume-François Joly de Fleury</title>
-        <title type="sub">(1675-1756)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Guillaume-François Joly de Fleury</title><title xml:lang="fr" type="sub">(1675-1756)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Feutry, David">David Feutry</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200816.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Institution centrale tout au long de l’époque moderne, le Parlement de Paris est connu de tous les historiens, mais n’a jamais été étudié
           en tant que tel, tout comme ses principaux acteurs, notamment le procureur général. Coupable de tous les maux, rejeté au <num>xix</num>
 <hi rend="sup">e</hi> siècle autant par l’historiographie républicaine qui mettait en avant les valeurs des Lumières que par les derniers
@@ -68,7 +71,7 @@
           celle d’une réussite familiale, professionnelle et financière, elle correspond aussi au dernier point d’équilibre, maintenu en partie grâce
           à l’action du procureur général, d’une administration judiciaire bientôt dépassée et d’une monarchie déjà chancelante.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>
           <num>L</num>’étude de la vie de Joly de Fleury a été menée essentiellement grâce aux archives notariales du Minutier central des notaires
           parisiens. Plus de 1300 actes concernant Joly de Fleury ont pu être découverts dans les différentes études, la plus fournie étant l’étude du
@@ -79,16 +82,15 @@
           dans la collection Joly de Fleury et réparties aujourd’hui dans les nouvelles acquisitions françaises de la Bibliothèque nationale de
           France.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre liminaire">La collection joly de fleury</head>
-        <p>La recherche dans la collection Joly de Fleury, dépourvue d’inventaires détaillés, nécessitait de connaître l’évolution de sa composition
+          <div n="3" type="part"><head n="0" type="chapter">La collection joly de fleury</head>
+        <p n="1" type="chapter">La recherche dans la collection Joly de Fleury, dépourvue d’inventaires détaillés, nécessitait de connaître l’évolution de sa composition
           et l’histoire de son arrivée dans les établissements de conservation. Elle fut achetée en partie en 1836 par la bibliothèque royale et un
           résidu de 600 manuscrits fut cédé en 1853 aux Archives de l’Empire. Par l’échange de 1862 entre les deux institutions de conservation, le
           reste de la collection arriva à la Bibliothèque impériale mais il fut placé dans le fonds des nouvelles acquisitions. La reconstitution
           d’une entité globale, les archives du procureur général, permet aussi de comprendre comment s’organisait la gestion des dossiers par le chef
           du parquet, entre une partie chronologique et une partie thématique.</p>
-      </div><div n="2" type="part"><head n="Première partie">Les bases de la réussite de guillaume-françois joly de fleury</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les bases de la réussite de guillaume-françois joly de fleury</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Famille, réseau et parentés : les bases familiales</head>
           <p>La Bourgogne, berceau familial, avait été le premier lieu d’expansion des Joly. Dès l’époque médiévale, la famille, intégrée à l’élite
             lettrée, avait concrétisé sa domination intellectuelle et culturelle par l’accession aux charges municipales. Celles-ci n’avaient pas
@@ -99,7 +101,7 @@
             désormais nobles, avaient réussi à intégrer la haute noblesse parlementaire. Le couronnement de cette ascension fut l’entrée au parquet de
             Guillaume-François Joly de Fleury en 1705, après la mort inattendue de son frère aîné.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Personnalité et compétences : les bases personnelles</head>
           <p>Pourvu de capacités intellectuelles et oratoires remarquables soulignées par tous ses contemporains, même ses ennemis, Guillaume-François
             Joly de Fleury était devenu un conseiller indispensable pour le roi et les ministres. Ses qualités dépassaient d’ailleurs son activité
@@ -112,7 +114,7 @@
             était clerc tonsuré, il garda secrète entre 1703 et 1710 son union avec Marie-Françoise Lemaistre pour continuer à percevoir ses bénéfices
             ecclésiastiques.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le parquet : instrument institutionnel et structurel de la permanence des Joly de Fleury</head>
           <p>Étape essentielle dans l’ascension familiale, la promotion au parquet marquait un tournant pour les Joly de Fleury, désormais intégrés
             aux plus hautes sphères de la magistrature. La pérennité de la famille et le maintien d’un statut social et professionnel passaient par la
@@ -130,8 +132,8 @@
             la charge d’avocat général, Joly de Fleury avait ainsi scellé la réussite familiale et la transmission de la charge de procureur général,
             qu’il laissa à son fils aîné en 1746.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Le procureur général dans l’exercice de ses fonctions</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le procureur général dans l’exercice de ses fonctions</head>
+        <div n="1" type="chapter">
           <head n="Chapitre IV">Le parlement de paris, cadre de l’activité du procureur général</head>
           <p>Source à la fois du droit et de la justice, le parlement de Paris était au centre de l’activité quotidienne du parquet. Vu par nombre
             d’historiens comme un « Léviathan » coupable de la fin de l’Ancien Régime, il n’en demeurait pas moins une cour de justice. Bien qu’étant
@@ -145,7 +147,7 @@
             foi et à l’entêtement de certains plaideurs, tant les dispositifs de conciliation, assurés notamment par les avocats généraux, étaient
             nombreux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre V">Le parquet au travail</head>
           <p>Sous la direction du procureur général, avocats généraux, substituts, secrétaires et commis assuraient un service permanent auprès des
             différentes chambres. Dans cette organisation héritée de l’époque médiévale, tout devait passer par Joly de Fleury qui répartissait les
@@ -165,8 +167,8 @@
             condamnait alors la gestion du fils du « grand Joly de Fleury », faisant regretter un âge d’or qui n’avait jamais existé et un procureur
             général qui avait lui aussi croulé sous le poids des affaires lorsque la cadence était devenue infernale.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">Fortune et infortunes d’un homme du roi</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Fortune et infortunes d’un homme du roi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre VI">Les Joly de Fleury : une fortune parlementaire</head>
           <p>La réussite professionnelle et familiale avait été affermie par la constitution progressive d’un patrimoine foncier et rentier. Mais
             l’inventaire après décès de Guillaume-François Joly de Fleury, s’il mentionne une fortune de plus d’un million de livres, ne donne qu’un
@@ -181,7 +183,7 @@
             impécunieux aux yeux de ses contemporains, sa stratégie visait à placer ses enfants dans les meilleures places, en partie pour préparer
             déjà sa succession au parquet et marquer la suprématie des Joly de Fleury.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre VII">Les infortunes d’un homme du roi</head>
           <p>Sûr de ses ressources, Joly de Fleury avait souvent investi à la limite de ses possibilités. Malheureusement, dès les années 1730, la
             monarchie multiplia les expédients pour financer la guerre. Les impositions (dixième) ne furent que la partie la moins pénible à supporter
@@ -199,7 +201,7 @@
           <p>L’originalité de la fortune de Joly de Fleury résidait donc dans la temporalité très particulière de sa constitution – il hérita de la
             fortune de sa belle-sœur quelques mois avant sa mort – et aussi dans les moyens mis en œuvre pour limiter son impécuniosité passagère.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Épilogue">Splendeurs et misères des Joly de Fleury</head>
           <p>Les Joly de Fleury avaient fait souche au parquet : en 1746, Guillaume-François Joly de Fleury laissait au parquet son fils aîné
             Guillaume-François-Louis, avocat général promu procureur général, et Jean-Omer, son second fils, avocat général. Les Joly de Fleury
@@ -210,9 +212,7 @@
             Restauration, les Joly de Fleury tombèrent bientôt dans l’oubli et disparurent en 1866, faute d’héritiers, à la mort du dernier de leurs
             représentant, Bon-Gabriel-Jean-Guillaume Joly de Fleury.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Cette étude permet donc d’expliquer la réussite d’une famille au <num>xviii</num>
 <hi rend="sup">e</hi> siècle. Mais elle permet aussi de mettre en lumière les différents cercles dans lesquels s’inscrivaient le procureur
           général Joly de Fleury : son entourage familial, ses relations professionnelles et les réseaux financiers qu’il avait réussi à se constituer
@@ -223,13 +223,12 @@
           Hautefeuille, face à des conseillers à la fois ses subordonnés et ses crédirentiers, Joly de Fleury était en constante représentation et
           restait procureur général, même dans les actes les plus privés, mettant ainsi en lumière les ambiguïtés de sa fonction.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Les cinq premières pièces permettent de comprendre l’arrivée de la collection Joly de Fleury à la Bibliothèque nationale de France et son
           organisation. Trois autres témoignent des étapes essentielles de la vie de Joly de Fleury : discours prononcé à sa mort par l’avocat général
           Séguier ; acte notarié de reconnaissance et acceptation de son mariage jusque-là tenu secret ; tableau des rentes dues par Joly de Fleury
           (1700-1756).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

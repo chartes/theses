@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Camille Gaston Kahn (1864-1928)</title>
-        <title type="sub">Un consul français en Chine</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Camille Gaston Kahn (1864-1928)</title><title xml:lang="fr" type="sub">Un consul français en Chine</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Suchet, Soline">Soline Suchet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200723.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Aux <num>xix<hi rend="sup">e</hi></num> et <num>xx<hi rend="sup">e</hi></num> siècles, le consul est véritablement la clé de voûte de la politique des
           Puissances impérialistes en Chine. Les relations sino-étrangères sont alors fondées sur les traités acquis à la force des canons ; ces
           conventions garantissent la sécurité des étrangers dans la sphère restreinte des ports ouverts, sous l’autorité du consul, seul garant de
@@ -66,7 +69,7 @@
           pervers des ambitions étrangères sur l’équilibre chinois et plus largement, international. L’examen de l’évolution de sa pensée et de sa
           pratique mettent en lumière l’impasse à la fois concrète et morale dans laquelle le place cette prise de conscience.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude du parcours de Kahn exige de puiser à plusieurs sources. L’essentiel de son activité professionnelle est couvert par les archives
           conservées dans les services du ministère des Affaires étrangères : au Quai d’Orsay pour l’administration centrale ; au centre des archives
           diplomatiques de Nantes pour l’activité des postes consulaires et diplomatiques français en Chine. Ces archives sont à la fois riches et
@@ -90,9 +93,8 @@
           lecture des mémoires et des récits de voyages publiés par ses contemporains, viennent éclairer sa mission et l’évolution de sa pensée à la
           lumière des mentalités et des problématiques de son temps.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Profil d’un serviteur de la République en Chine</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Profil d’un serviteur de la République en Chine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aux origines d’un profil et d’une personnalité</head>
           <p>Il est difficile de juger le parcours professionnel d’un individu sans se pencher d’abord sur les éléments de sa personnalité
             indispensables à la compréhension de ses choix de carrière. Celle de Gaston Kahn trouve son explication dans le poids d’une triple
@@ -104,7 +106,7 @@
             diplômé de l’École spéciale des langues orientales vivantes, est bien celle de la rencontre d’une individualité et d’un dessein
             politique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Au Tonkin</head>
           <p>Avant de servir la République en Chine, Kahn est d’abord détaché au Tonkin, en 1886, au moment de la mise en place du gouvernement civil,
             après deux décennies de monopole militaire. La priorité est à la pacification, laquelle passe par une politique scolaire qui inaugure
@@ -118,7 +120,7 @@
             avant-goût de la force du décalage entre le dessein français et son application, au sein duquel interfère une réalité irréductible,
             l’humain, avec toutes ses variantes, à la fois véhicule des idéaux gouvernementaux et obstacle à leur réalisation.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une carrière au service du ministère des Affaires étrangères</head>
           <p>Une fois pénétré le monde de l’interprétariat de Chine, Kahn confirme les espoirs que les bureaux du Quai fondaient sur son profil. Fort
             de sa formation et des leçons tirées de l’Indochine, le jeune homme entame une carrière qui le mène jusqu’aux plus hauts degrés auxquels
@@ -129,7 +131,7 @@
             sa carrière dans le droit chemin et le font quitter l’interprétariat, pour rejoindre les « hautes sphères » du service consulaire et
             diplomatique.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Une carrière exemplaire</head>
           <p>Convictions, spécialisation et processus conventionnel de l’avancement professionnel ne suffisent pas à expliquer la remarquable
             ascension de Gaston Kahn. Pour commencer, il faut y voir le succès plus général d’un système, conçu et développé par l’État en vue d’un
@@ -138,8 +140,8 @@
             placent à des postes stratégiques à des moments-clé de l’histoire, et lui offrent un point de vue privilégié sur les enjeux français,
             chinois et internationaux à l’œuvre au tournant du <num>xix<hi rend="sup">e</hi></num> et du <num>xx<hi rend="sup">e</hi></num> siècles.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Consul en Chine</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Consul en Chine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le cadre de l’action consulaire</head>
           <p>Gaston Kahn doit assumer ses fonctions de consul dans un environnement matériel et humain inconnu de l’Européen d’alors. Dans ce
             contexte, l’excellence de l’agent dépend de la qualité des relations qu’il parvient à établir avec ses interlocuteurs ; bien plus, elle
@@ -153,14 +155,14 @@
             l’observation du profil général des collègues du consul, et de l’organisation du Quai et de la Légation, permet de juger du relais que
             trouvent ses analyses et ses avis auprès de sa hiérarchie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La défense des intérêts français</head>
           <p>Les diverses conventions d’établissement et de commerce conclues au <num>xix<hi rend="sup">e</hi></num> siècle et au début du XX <hi rend="sup">e</hi> siècle ont mis en place un régime d’exterritorialité dont la clé de voûte est le consul, garant de la sécurité des étrangers et
             de l’épanouissement de leurs intérêts économiques et culturels. Derrière cette mission, ce sont les intérêts plus larges de la France que
             l’agent consulaire a charge de promouvoir ; mais ces intérêts et ceux des particuliers ne se recouvrent pas toujours et placent le consul
             devant des choix souvent contradictoires.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les concessions françaises de Chine</head>
           <p>Parmi les ports ouverts, certains possèdent des concessions. Elles sont, après les privilèges économiques et les structures de propagande
             culturelle que les Puissances mettent en place sur le territoire chinois, l’expression la plus aboutie de l’impérialisme étranger. La
@@ -177,8 +179,8 @@
           <p>Au-delà, les concessions offrent également, à l’échelle locale, une illustration parlante des rivalités impérialistes, exacerbées par
             l’exiguïté de ces enclaves et la promiscuité de communautés dont les Puissances tutélaires sont concurrentes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’œil du consul</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’œil du consul</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aux origines d’une prise de conscience</head>
           <p>Pour étudier le développement de la réflexion élaborée par Kahn au sujet de l’évolution des rapports sino-étrangers, nous disposons à
             partir de son arrivée à Canton en 1904 d’un matériau particulièrement riche. À partir de cette date, il occupe des postes dont les
@@ -192,7 +194,7 @@
             du <num>xx<hi rend="sup">e</hi></num> siècle : un nationalisme puissant, dirigé à la fois contre la présence étrangère et la dynastie impériale,
             accusée d’avoir livré la Chine aux Puissances.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Remises en cause et adaptations</head>
           <p>Kahn ne se contente pas d’alerter ses supérieurs sur les transformations contemporaines. Il en tire des leçons qu’il intègre dans ses
             rapports quotidiens avec les autorités et la population chinoises. Comparé à ses collègues français et étrangers, il met en place une
@@ -205,7 +207,7 @@
             puis celles des extensions de concessions et de la juridiction mixte, l’une et l’autre à travers l’exemple particulier des concessions de
             Tianjin et Shanghai.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Mises en garde</head>
           <p>En attendant que la Chine obtienne son émancipation par des réformes positives, les étrangers doivent prendre garde à ne laisser prise à
             aucune prétention injustifiée de la part des Chinois. Si Kahn se montre favorable à certaines réformes positives, il demeure réticent à
@@ -228,9 +230,7 @@
             doivent, contrairement à leur instinct, accepter les évolutions et abandonner leurs rivalités incessantes ainsi que leurs réflexes
             impérialistes.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les dépêches consulaires de Kahn laissent transparaître, derrière la figure froide du technicien de l’État, celle de l’individu placé à la
           croisée de deux mondes conflictuels, sans plus vraiment faire partie de l’un à l’exclusion de l’autre. Quels rapports peut-on entretenir
           avec son pays d’origine lorsqu’on a passé plus de la moitié de sa vie dans un pays étranger ? Au bout du compte, Kahn n’est-il pas devenu
@@ -252,13 +252,12 @@
         <p>C’est ainsi que l’agent modelé en prévision de la promotion des intérêts exclusifs de l’État devient peu à peu sceptique et désabusé à
           l’égard de ces derniers et en vient à dénoncer le système même qu’il est censé défendre.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Accords, traités et conventions franco-chinois. — Protocole de 1901. — Règlements municipaux des concessions française de Canton, Tianjin
           et Shanghai. — Ordonnances consulaires. — Règlement du vice-roi de Canton sur les droits de propriété et correspondance officielle entre le
           vice-roi et Gaston Kahn (1905). — Édition de la correspondance de Gaston Kahn avec sa femme durant la seconde révolution chinoise (été
           1913).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

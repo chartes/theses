@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le Comité des travaux historiques et scientifiques (1834-1914) : entre animation et contrôle du mouvement scientifique en France</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le Comité des travaux historiques et scientifiques (1834-1914) : entre animation et contrôle du mouvement scientifique en France</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Leroy, Rodolphe">Rodolphe Leroy</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200112.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le Comité des travaux historiques et scientifiques est créé en 1834 par François Guizot, sous le nom de Comité pour la recherche et la
           publication des documents inédits relatifs à l’histoire de France. Initialement à forte connotation historique, le champ des recherches
           qu’il mène grâce à ses membres et à un réseau étendu de deux cents correspondants, tous membres de sociétés savantes, s’élargit rapidement:
@@ -69,7 +72,7 @@
           «érudits», cénacle parisien et héraut des chercheurs de province, le Comité est l’observatoire idéal pour saisir l’intervention de l’État
           dans le domaine scientifique au <num>xix<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le fonds du Comité des travaux historiques et scientifiques est conservé dans la sous-série F<hi rend="sup">17</hi> (ministère de
           l’Instruction publique) des Archives nationales. Constituées surtout de dessins, d’estampages, de communications de correspondants, de
           procès-verbaux des séances du Comité, les archives ont été versées une première fois en 1937 par la bibliothèque Mazarine, où elles se
@@ -80,10 +83,9 @@
           et amphibiens du Muséum national d’histoire naturelle et aux collections iconographiques des bibliothèques de l’Institut et de l’École
           française d’Extrême-Orient.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La création du comité pour la publication des documents inédits de l’histoire de France: l’Etat à la tête de
+          <div n="3" type="part"><head n="0" type="chapter">La création du comité pour la publication des documents inédits de l’histoire de France: l’Etat à la tête de
           l’érudition historique</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La rencontre d’un contexte favorable et d’une volonté politique (1810-1834)</head>
           <p><hi rend="i">L’intervention timide de l’État </hi>— La création du Comité en juillet 1834 concrétise la volonté affirmée par le
             gouvernement depuis vingt ans de recenser et de protéger les monuments intéressant l’histoire nationale. Sous la Restauration, les
@@ -103,7 +105,7 @@
             de l’archéologie, introduite chez les érudits français par les Anglais. Principaux objets d’études des sociétés savantes, l’histoire et
             l’archéologie sont au cœur des missions de la nouvelle instance scientifique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Entre animation et contrôle de l’érudition locale (1834-1852)</head>
           <p><hi rend="i">L’offensive de l’administration centrale (1834-1840) </hi>— Le Comité fait figure de nouveau venu par rapport à l’Institut
             de France. Son réseau étendu de correspondants le met très vite à la tête de nombreuses recherches historiques. En le réformant en 1837,
@@ -118,7 +120,7 @@
             journées de Juin montrent une fois de plus le danger des réunions publiques et des associations dans un climat de forte instabilité
             politique. Lorsqu’il accède au pouvoir, Louis-Napoléon Bonaparte, lui-même ancien carbonaro, en a parfaitement conscience.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un agent efficace de la centralisation: le Comité des arts et monuments (1835-1852)</head>
           <p><hi rend="i">La particularité du Comité des arts et monuments </hi>— Pensés dès l’origine comme objets d’étude du Comité, les monuments
             impliquent l’instauration d’une instance spécifique, le Comité des arts et monuments, qui se pose en juge des méthodes scientifiques dans
@@ -135,8 +137,8 @@
             opposants les plus vindicatifs sont écartés du Comité à partir de 1848, avant que Louis-Napoléon Bonaparte ne lui impose d’abandonner
             définitivement les polémiques pour se consacrer aux seuls enjeux scientifiques.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le comité au service de l’idée impériale (1852-1870)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le comité au service de l’idée impériale (1852-1870)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’empreinte de l’Empereur: la réorganisation administrative et scientifique du Comité (1852)</head>
           <p><hi rend="i">La réforme de 1852: le Comité de la langue, de l’histoire et des arts de la France </hi>— La réforme du Comité en 1852
             s’accompagne d’une réorganisation générale, préparée pendant les années 1849-1851. La structure du Comité est transformée: il y a
@@ -155,7 +157,7 @@
             pouvait s’assurer. En effet, si l’Empereur a conservé le Comité hérité d’une monarchie, c’est parce qu’il était bien plus intéressant de
             l’instrumentaliser que de le supprimer.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un organisme d’incitation à la recherche moderne: l’introduction des sciences (1858)</head>
           <p><hi rend="i">La vision originale de Rouland (1858) </hi>— Le ministre de l’Instruction publique, Rouland, prend en compte l’engouement
             pour les sciences qui tend à supplanter, dans les sociétés savantes, l’histoire et l’archéologie. Les sciences étaient jusqu’alors
@@ -172,7 +174,7 @@
             Juillet se prolongent sous l’Empire. L’identification du Comité à la monarchie de Juillet n’est pas assez forte pour que l’Empire l’ait
             supprimé ou entièrement bouleversé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">À la gloire de l’Empire: la Commission scientifique du Mexique (1864-1867)</head>
           <p><hi rend="i">Les raisons de la création de la Commission scientifique du Mexique </hi>— Derrière l’instauration de la Commission
             scientifique du Mexique en 1864, il y a le souvenir de l’oncle, Bonaparte, et de son expédition d’Égypte en 1798 qui lui a valu éloges et
@@ -190,8 +192,8 @@
             fois-ci, l’instrumentalisation du Comité par le pouvoir impérial avait atteint un tel niveau que le rejet de l’Empire aurait dû emporter
             le Comité. Mais, de façon surprenante, la continuité entre les deux régimes sur ce point est totale.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La république libérale et la direction des esprits (1870-1914)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La république libérale et la direction des esprits (1870-1914)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le Comité impérial: un héritage assumé par la République</head>
           <p><hi rend="i">L’héritage impérial assumé </hi>— En contradiction absolue avec le discours critique tenu par les Républicains sur
             l’inanité des réformes impériales, l’organisation en sections décidée par l’Empire et l’impulsion donnée à l’étude des sciences sont non
@@ -211,7 +213,7 @@
             et ne tolère pas l’intervention d’«amateurs». Dans ces conditions, le rapport entre les sociétés savantes et l’État ne s’est-il pas
             assoupli avec la République</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un nouveau rapport entre l’État et les sociétés savantes</head>
           <p><hi rend="i">Le Comité des sociétés savantes </hi>— Le lien affirmé dès la création du Comité en 1834 et renforcé sous l’Empire entre
             l’administration et les sociétés savantes est toujours d’actualité. Le Congrès national des sociétés savantes est l’occasion de
@@ -228,7 +230,7 @@
             «amateurs» qu’il soutient. En fin de compte, grâce au Comité, la République a maintenu l’emprise de l’État sur les sociétés savantes et
             sur leur activité scientifique, conformément à ses racines jacobines.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’exaltation de la nation</head>
           <p><hi rend="i">L’histoire de la République </hi>— Sans conteste, l’avènement de la République a de nombreuses conséquences sur les liens
             unissant l’administration au Comité et aux sociétés savantes. Paradoxalement, la défaite de 1870 exacerbe l’exaltation de la nation déjà
@@ -248,9 +250,7 @@
             importante que ce dernier occupe: il incarne pour l’État un compromis intéressant, en permettant une centralisation de la science qui
             évite une opposition frontale avec les sociétés savantes fières de leur indépendance.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’indépendance du mouvement scientifique au <num>xix<hi rend="sup">e</hi></num> siècle apparaît comme un leurre. Au sein du Comité des travaux
           scientifiques, trois sortes d’intervention du pouvoir central sont sensibles. D’un point de vue administratif d’abord, le siècle est marqué
           par le poids croissant de la centralisation, alors que les pouvoirs locaux défendent farouchement leurs droits. En outre, la nature des
@@ -264,14 +264,13 @@
           par exemple, d’éclairer sous un jour nouveau les collections du Muséum d’histoire naturelle de Paris et mêle histoire politique, histoire
           des sciences et histoire de l’art. Ces multiples aspects témoignent de la richesse des archives du Comité.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Textes administratifs (circulaires, arrêtés). ­ Instructions du Comité des arts et monuments sur le vitrail et sur la restauration des
           orgues (1840). ­ Rapport et devis sur les travaux à effectuer dans le cloître de Cadouin (1840). ­ Rapport du secrétaire du Comité sur les
           manuscrits de la bibliothèque Mazarine (1842). ­ Liste de 266 bibliothèques françaises, avec indication du nombre de leurs volumes (1842). ­
           Discours officiels et listes des publications scientifiques de la Commission scientifique du Mexique. ­ Description scientifique de trois
           spécimens de reptiles rapportés du Mexique. ­ Rapport de l’architecte Henri Parmentier sur les travaux faits à Angkor (1910).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

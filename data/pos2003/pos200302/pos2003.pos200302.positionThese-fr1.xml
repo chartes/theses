@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Georges Lanfry et son entreprise (1921-1969)</title>
-        <title type="sub">Au service du patrimoine.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Georges Lanfry et son entreprise (1921-1969)</title><title xml:lang="fr" type="sub">Au service du patrimoine.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Blin, Frédéric">Frédéric Blin</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200302.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Fondée en 1774, l’entreprise Baron devint la société Lanfry après son rachat en 1921 par Georges Lanfry. Cette personnalité hors du commun
           ­ à la fois catholique engagé, archéologue, chef d’entreprise ­ fit de cette société de bâtiment et de travaux publics spécialisée dans la
           restauration des monuments historiques (taille de pierre et charpente), l’une des plus importantes dans ce domaine au niveau national. Basée
@@ -59,7 +62,7 @@
           Société familiale à la très forte identité, fière d’une ancienneté et d’un savoir-faire rares, elle apparaît comme un exemple
           particulièrement instructif du rôle et de la place des entreprises dans le monde de la restauration des monuments historiques.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La monographie de l’entreprise Lanfry a été réalisée à partir des archives de l’entreprise, conservées au siège social à
           Déville-lès-Rouen. Remontant pour les plus anciennes à 1823, elles présentent pour le <num>xx<hi rend="sup">e</hi></num>  siècle un caractère de
           complétude assez intéressant même si certaines lacunes ont été constatées, notamment dans le domaine de la comptabilité. L’exploitation du
@@ -76,9 +79,8 @@
           (conservation régionale des monuments historiques), aux archives municipales de Rouen, aux archives de la Chambre de commerce et d’industrie
           de Rouen et à l’Institut Marc Sangnier, qui a vocation à recevoir à terme une partie des archives personnelles de Georges Lanfry.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre préliminaire">Avant l’entreprise Lanfry : l’entreprise Baron (1774-1921)</head>
-        <p>En 1774, un certain Pierre-Denis Baron s’inscrit à la corporation de la maçonnerie à Canteleu : c’est l’acte de naissance de l’entreprise.
+          <div n="3" type="part"><head n="0" type="chapter">Avant l’entreprise Lanfry : l’entreprise Baron (1774-1921)</head>
+        <p n="1" type="chapter">En 1774, un certain Pierre-Denis Baron s’inscrit à la corporation de la maçonnerie à Canteleu : c’est l’acte de naissance de l’entreprise.
           Après des débuts modestes dans le commerce de matériaux (plâtre, sable), l’entreprise profite au début des années 1820 de sa double
           implantation à Rouen et à Déville-lès-Rouen pour développer une activité de maçonnerie. Ce n’est qu’en 1844, avec le rachat de la propriété
           d’Achille Flaubert, père de Gustave, que Pierre-Louis Baron déménage définitivement l’entreprise à Déville. C’est alors la grande époque de
@@ -86,7 +88,7 @@
           favorable pour construire ou rénover plusieurs de ces manufactures et devenir l’une des plus importantes sociétés de bâtiment et de travaux
           publics de l’ouest rouennais. Ces chantiers lui ouvrent les portes d’une large clientèle privée, pour laquelle elle bâtit nombre d’immeubles
           et de châteaux particuliers, à Rouen et dans les communes environnantes.</p>
-        <p>La société dévilloise obtient également plusieurs chantiers publics importants, notamment de construction et de rénovation d’églises, grâce
+        <p n="2" type="chapter">La société dévilloise obtient également plusieurs chantiers publics importants, notamment de construction et de rénovation d’églises, grâce
           à son équipe de tailleurs de pierre qu’elle développe à partir des années 1850. La spécialisation dans la restauration des monuments
           historiques se dessine lentement : au cours de la décennie 1890, marquée entre autres par la construction du Palais Bénédictine à Fécamp,
           l’entreprise travaille au Palais de justice et à la cathédrale de Rouen, avant de se déplacer à l’abbaye de Jumièges en 1907. Le secteur
@@ -96,8 +98,8 @@
           reconstruction du département de la Somme, ainsi que par la position de plus en plus forte de Georges Lanfry face à Maurice Baron au sein de
           la société dévilloise. Lorsque ce dernier meurt le 30 juillet 1921, dernier représentant d’une dynastie de cinq générations, Georges Lanfry
           rachète la société dévilloise et la met à son nom.</p>
-      </div><div n="2" type="part"><head n="Première partie">Georges Lanfry (1884-1969) : l’homme</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Georges Lanfry (1884-1969) : l’homme</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le catholique engagé</head>
           <p>Né en 1884, élevé selon des préceptes catholiques, Georges Lanfry s’engage assez jeune dans les patronages rouennais, notamment au sein
             des Philippins, grâce auxquels il fait la connaissance en 1903 de Marc Sangnier. Compagnon de route de celui-ci au sein du Sillon, puis de
@@ -111,7 +113,7 @@
             campagne des chiffonniers d’Emmaüs en 1963-1965. Ses obsèques ont lieu en janvier 1969 à la cathédrale de Rouen, dernier hommage rendu à
             sa ferveur religieuse.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’archéologue</head>
           <p>Passionné très jeune par l’archéologie, Georges Lanfry se lance activement, après sa rencontre en 1926 avec l’archéologue anglais John
             Bilson, dans des fouilles à la cathédrale de Rouen et à l’abbaye de Jumièges, principalement. Après sa découverte d’un déambulatoire du XI
@@ -123,7 +125,7 @@
             le congrès international de Jumièges (1954), le congrès archéologique de France de 1966, ainsi qu’une abondante bibliographie, dont une
             série de monographies consacrée à la cathédrale de Rouen.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le bâtisseur</head>
           <p>Après une formation d’architecte au sein de l’Ecole des beaux-arts de Rouen et un passage dans deux cabinets d’architectes rouennais,
             Georges Lanfry entre en 1911 au service de l’entrepreneur Maurice Baron, auquel il rachète sa société en 1921. Chef d’entreprise, il
@@ -136,8 +138,8 @@
             la détermination du tracé de l’autoroute Paris-côte normande. Il est alors secondé à la tête de sa propre entreprise par son fils Marc,
             qui en devient président-directeur général à la mort de son père en janvier 1969.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Analyse économique et sociale de l’entreprise</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Analyse économique et sociale de l’entreprise</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le marché</head>
           <p>La décennie 1921-1931 est marquée par d’importants travaux dans le département de la Somme, très touché par la première guerre mondiale,
             et autour de Dieppe, où l’entreprise Lanfry dispose entre 1926 et 1932 d’une succursale. La crise des années 1932-1937 entraîne un
@@ -152,7 +154,7 @@
             cité administrative rive gauche (1958-1962), le Théâtre des Arts (1958-1962) ou le Palais des Consuls (1952-1956). La société Lanfry est
             alors l’une des plus importantes entreprises de construction de la région rouennaise.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les facteurs de production</head>
           <p>L’entreprise Lanfry est une société familiale, tant au niveau des dirigeants aux conceptions paternalistes (Georges Lanfry, son fils
             Marc, son petit-fils Jean-Marc), que des ouvriers. La vie interne est très calme, en raison des conditions sociales généreuses accordées
@@ -167,7 +169,7 @@
             seconde guerre mondiale : la part de la main-d’œuvre reste toutefois très importante, notamment en raison du secteur monuments historiques
             qui nécessite un savoir-faire manuel élevé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Stratégies et résultats</head>
           <p>Les stratégies de l’entreprise sont déterminées par une logique principale : la préservation de l’indépendance face aux banques et aux
             concurrents potentiels. Les dirigeants limitent leurs prétentions en conséquence, opérant un recentrage progressif de leurs activités sur
@@ -180,8 +182,8 @@
             malgré un bénéfice d’exploitation assez faible. Le retournement de la conjoncture, qui s’observe à partir de 1967, laisse ainsi planer une
             certaine menace à moyen terme, que Marc Lanfry aura à affronter durant la décennie 1970.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">La spécificité de l’entreprise Lanfry : Taille de pierre et monuments historiques</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">La spécificité de l’entreprise Lanfry : Taille de pierre et monuments historiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’entreprise en exercice : Historique des chantiers de restauration de monuments historiques entre 1921 et 1969</head>
           <p>L’activité de restauration des monuments historiques de l’entreprise Lanfry ne connaît un vrai développement qu’après 1944, lorsque
             s’ouvrent les très vastes chantiers de restauration des édifices atteints par les bombardements. Durant l’entre-deux-guerres, les
@@ -199,7 +201,7 @@
             mesure, en profitant de ses contacts politiques et journalistiques, mais il doit se résoudre à décider une importante vague de
             licenciement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les conditions d’exercice de l’activité de restauration des monuments historiques</head>
           <p>S’étant formé dans le cabinet de l’architecte des monuments historiques Emile Auvray et disposant d’une forte crédibilité archéologique
             et professionnelle, Georges Lanfry bénéficie de contacts privilégiés avec l’administration des monuments historiques. Soucieux de
@@ -215,7 +217,7 @@
             plus strict, les marges de liberté accordées aux ouvriers sont relativement étroites : il apparaît donc très difficile de déterminer
             d’éventuelles pratiques spécifiques à l’entreprise Lanfry, mise à part une très grande exigence de qualité d’exécution.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un exemple de chantier de restauration : La collégiale d’Auffay</head>
           <p>Eglise collégiale fondée en 1079, reconstruite en partie au <num>xiii<hi rend="sup">e</hi></num>  siècle et ayant subi de nombreuses modifications
             jusqu’au <num>xix<hi rend="sup">e</hi></num>  siècle, Notre-Dame d’Auffay possède une remarquable nef gothique du <num>xiii<hi rend="sup">e</hi></num>
@@ -230,9 +232,7 @@
             années. Le chantier, quoique moins connu que ceux de la cathédrale de Rouen ou de Saint-Maclou, n’en est pas moins remarquable, tant par
             la qualité du résultat final que par ce qu’il peut révéler sur la véritable nature de l’entreprise Lanfry.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>L’entreprise Lanfry de Déville-lès-Rouen se caractérise avant tout par la passion qui l’anime. Héritée d’un archéologue amoureux de sa
           région normande, transmise aux ouvriers qualifiés fiers de leur savoir-faire, cette passion est l’élément central qui distingue une
           entreprise spécialisée dans la restauration des monuments historiques, d’une entreprise de construction traditionnelle. Devenue l’une des
@@ -240,10 +240,9 @@
           historiques pour pallier le ralentissement de la conjoncture économique ; elle sort depuis une dizaine d’années des frontières de la
           Normandie pour exporter son expérience à l’étranger, tout en assurant la continuité dynastique et en préservant sa taille familiale.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Nombreuses copies de lettres. ­ Extraits de discours de Georges Lanfry.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

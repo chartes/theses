@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’amiral Claude d’Annebault ( &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ca.&lt;/hi&gt;1495-1552) : faveur du roi et gouvernement du royaume au milieu du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’amiral Claude d’Annebault ( <hi rend="i">ca.</hi>1495-1552) : faveur du roi et gouvernement du royaume au milieu du <num>xvi<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Nawrocki, François">François Nawrocki</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200224.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Claude d’Annebault fut le dernier “ grand favori ” de François I<hi rend="sup">er</hi> . De 1543 à 1547, le roi lui confia la
           responsabilité et la direction de toutes les affaires de l’État. L’amiral fut donc le plus grand personnage du royaume après son prince, et
           pourtant, il demeure mal connu, comme enveloppé par les ténèbres historiographiques qui pèsent sur la fin du règne du roi-chevalier. En
@@ -65,7 +68,7 @@
           règne de François I<hi rend="sup">er</hi> . Pour ne pas abstraire ces réflexions et ces problématiques de leur contexte, il a semblé
           pertinent de les insérer dans la trame chronologique de la vie de Claude d’Annebault.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La perte des papiers de la famille d’Annebault aurait pu constituer un obstacle. Mais même dans ce cas, un personnage d’une telle
           importance est toujours bien documenté. Les vestiges de sa correspondance sont conservés dans de nombreux fonds, notamment les manuscrits
           français de la Bibliothèque nationale de France ; ces recueils renferment également des lettres de contemporains de l’amiral, d’où ont été
@@ -76,9 +79,8 @@
           Mantoue, Modène, Venise). Enfin, les dépêches des ambassadeurs des ducs de Mantoue et de Ferrare, rarement utilisées en dépit de leur
           richesse, ont été compulsées avec fruit.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">Une famille normande de serviteurs du roi</head>
-        <p>La lignée des seigneurs d’Annebault apparaît dans la documentation au dernier quart du <num>xi<hi rend="sup">e</hi></num>  siècle. Cette famille
+          <div n="3" type="part"><head n="0" type="chapter">Une famille normande de serviteurs du roi</head>
+        <p n="1" type="chapter">La lignée des seigneurs d’Annebault apparaît dans la documentation au dernier quart du <num>xi<hi rend="sup">e</hi></num>  siècle. Cette famille
           reste surtout possessionnée dans le pays d’Auge jusqu’au début du <num>xv<hi rend="sup">e</hi></num>  siècle : la vallée de la Risle devient alors,
           avec la seigneurie d’Appeville, le cœur des fiefs patrimoniaux. Après avoir servi fidèlement les rois de France pendant la guerre de Cent
           ans, les d’Annebault sont dépossédés par Henri V d’Angleterre, avant de recouvrer leurs biens vers 1450. La famille s’installe alors
@@ -88,8 +90,8 @@
           de ses deux fils, est peut-être page, puis échanson de François I<hi rend="sup">er</hi> . La perspective de l’héritage des fiefs de son
           père, accrus par le partage des terres des Blosset, assure un avenir confortable au jeune Claude, d’autant que son mariage avec Françoise de
           Tournemine vers 1525 fait de lui le baron de Retz et de La Hunaudaye, et l’un des plus riches seigneurs de Bretagne.</p>
-      </div><div n="2" type="part"><head n="Chapitre II">Les débuts au service du roi</head>
-        <p>Claude d’Annebault fait l’apprentissage des armes et se distingue à la défense de Mézières (septembre 1521). Il côtoie les fils des
+      </div><div n="4" type="part"><head n="0" type="chapter">Les débuts au service du roi</head>
+        <p n="1" type="chapter">Claude d’Annebault fait l’apprentissage des armes et se distingue à la défense de Mézières (septembre 1521). Il côtoie les fils des
           familles les plus prestigieuses grâce à son père, qui l’introduit dans un complexe réseau de relations ; le jeune homme entre ainsi sous la
           protection de plusieurs puissants personnages de la cour et de Normandie (Bourbon, Guise, Montmorency, Brézé), grâce à quoi il ne sera
           jamais la créature d’un seul grand. Il participe comme lieutenant de la compagnie de François de Saint-Pol à la bataille de Pavie, où il est
@@ -101,8 +103,8 @@
           Depuis la mort de son père (1534), auquel il succède comme maître des toiles de chasse, il est un personnage éminent de la cour. Après la
           réunion du duché de Bretagne à la couronne de France, il affirme aussi son rang parmi les grands feudataires de cette province ; et un vieux
           procès pour la succession de Retz tourne enfin à son avantage.</p>
-      </div><div n="3" type="part"><head n="Chapitre III">La gloire militaire et l’estime du roi</head>
-        <p>Claude d’Annebault est l’un des principaux chefs de l’armée qui conquiert le Piémont (mars 1536), puis il s’enferme plusieurs mois dans
+      </div><div n="5" type="part"><head n="0" type="chapter">La gloire militaire et l’estime du roi</head>
+        <p n="1" type="chapter">Claude d’Annebault est l’un des principaux chefs de l’armée qui conquiert le Piémont (mars 1536), puis il s’enferme plusieurs mois dans
           Turin, qu’il parvient à conserver malgré un siège. Le roi lui en sait gré et lui confie, l’année suivante, d’importantes responsabilités sur
           la frontière picarde. Après avoir pris la place de Saint-Pol, il sauve Thérouanne en la ravitaillant par deux fois. Il s’y révèle un
           ingénieux stratège, mais il est capturé au retour du deuxième trajet. Le montant de sa rançon est très élevé, mais François I <hi rend="sup">er</hi> offre immédiatement de la payer. Toutefois, la reine de Hongrie ne libère pas Claude d’Annebault avant la conclusion de la paix,
@@ -110,8 +112,8 @@
           Montmorency devient connétable de France (10 février 1538). Titulaire d’un grand office de la couronne, il s’occupe de moins en moins du
           gouvernement de Normandie et ne quitte plus guère le roi et la cour, où il se trouve confronté à de violentes querelles partisanes entre ses
           deux principaux protecteurs, Montmorency et Chabot.</p>
-      </div><div n="4" type="part"><head n="Chapitre IV">Le Piémont : l’apprentissage du gouvernement</head>
-        <p>Nommé gouverneur de Piémont en septembre 1539, d’Annebault doit quitter la cour, non sans regrets. Cette récente conquête avait beaucoup
+      </div><div n="6" type="part"><head n="0" type="chapter">Le Piémont : l’apprentissage du gouvernement</head>
+        <p n="1" type="chapter">Nommé gouverneur de Piémont en septembre 1539, d’Annebault doit quitter la cour, non sans regrets. Cette récente conquête avait beaucoup
           souffert des maladresses de son brutal prédécesseur, Montejean. En quelques semaines, le nouveau gouverneur réunit les Trois États, gagne la
           confiance des Piémontais et prend les mesures nécessaires à la reconstruction du pays. Ce premier séjour est un moment clef de la mise en
           place des institutions françaises dans la province et inaugure la seconde phase de son intégration : celle du “ bon gouvernement ”. Entouré
@@ -123,8 +125,8 @@
           gouverneur fait figure de “ lieutenant général pour le roi delà les Monts ” et sert d’intermédiaire entre le roi de France et les princes de
           la Péninsule. Considérant sa tâche accomplie, il demande instamment son rappel, afin qu’un éloignement prolongé ne nuise pas à sa position.
           Arrivé début mai 1540 à la cour, il peut recueillir les fruits de ses succès.</p>
-      </div><div n="5" type="part"><head n="Chapitre V">Le renouvellement de l’entourage royal</head>
-        <p>De retour, Claude d’Annebault est convoqué au conseil du roi pour donner ses avis sur les affaires piémontaises et italiennes. Mais il peut
+      </div><div n="7" type="part"><head n="0" type="chapter">Le renouvellement de l’entourage royal</head>
+        <p n="1" type="chapter">De retour, Claude d’Annebault est convoqué au conseil du roi pour donner ses avis sur les affaires piémontaises et italiennes. Mais il peut
           être renvoyé d’un jour à l’autre dans son gouvernement. C’est alors que le roi retire sa confiance à Montmorency, sans pouvoir rappeler
           l’amiral Chabot, sous le coup d’un procès. En novembre 1540, d’Annebault entre donc au conseil étroit et devient l’un des principaux favoris
           du roi ; cette nouvelle position est connue de tous, grâce à la mise en scène “ ordinaire ” de cette faveur, qui s’accompagne parfois d’une
@@ -136,8 +138,8 @@
           une nouvelle guerre. Depuis son gouvernement de Piémont, il agit au cœur de la diplomatie internationale, tout en rénovant le système
           défensif de la province. Il peut ensuite rentrer en France (octobre 1541), après avoir arrangé le mariage de sa fille Madeleine et du
           marquis de Saluces ; cette union prestigieuse, autorisée par le roi, est le reflet d’une position sociale désormais éminente.</p>
-      </div><div n="6" type="part"><head n="Chapitre VI">L’essai d’un gouvernement collégial</head>
-        <p>Pendant un temps, François I<hi rend="sup">er</hi> ne donne pas de successeur à Montmorency, et aucun de ses conseillers n’obtient la
+      </div><div n="8" type="part"><head n="0" type="chapter">L’essai d’un gouvernement collégial</head>
+        <p n="1" type="chapter">Pendant un temps, François I<hi rend="sup">er</hi> ne donne pas de successeur à Montmorency, et aucun de ses conseillers n’obtient la
           responsabilité de toutes les affaires. D’Annebault se retrouve ainsi l’égal de Chabot, de Saint-Pol et surtout du cardinal de Tournon, qui
           devient peu à peu son plus proche collègue. En quelques mois, le maréchal acquiert l’expérience nécessaire à la conduite de négociations
           diplomatiques ou encore à la gestion de l’“ argent du roi ”. Il devient aussi le chef naturel des armées françaises, à la tête desquelles il
@@ -149,8 +151,8 @@
           l’obligent désormais à une prudence qui lui fait renoncer à de bonnes occasions, au grand dam de ses subordonnés. Le roi ne s’y trompe pas,
           exhibe plus que jamais sa faveur, et lui confie progressivement la charge de travail naguère dévolue au connétable de Montmorency. La mort
           de Chabot met définitivement fin à un système de gouvernement collégial qui ne satisfait pas le roi.</p>
-      </div><div n="7" type="part"><head n="Chapitre VII">Les derniers conflits avec Charles Quint</head>
-        <p>Face à l’alliance du roi d’Angleterre et de l’empereur, François I<hi rend="sup">er</hi> mène une nouvelle guerre. Claude d’Annebault
+      </div><div n="9" type="part"><head n="0" type="chapter">Les derniers conflits avec Charles Quint</head>
+        <p n="1" type="chapter">Face à l’alliance du roi d’Angleterre et de l’empereur, François I<hi rend="sup">er</hi> mène une nouvelle guerre. Claude d’Annebault
           commande la plupart des opérations en Hainaut ; il n’en participe pas moins au gouvernement, grâce à la proximité du roi, qui suit les
           armées, en retrait, avec ses autres conseillers. Puis cette campagne prend un tour heureux avec les prises de Landrecies et de Luxembourg.
           L’hiver suivant, le prestige de d’Annebault est à son sommet lorsque le roi le nomme amiral de France ; l’investiture de cette charge est
@@ -164,8 +166,8 @@
           s’ouvrent les pourparlers, l’empereur a l’avantage de menacer Paris. Claude d’Annebault négocie donc en position de faiblesse et concède une
           paix peu avantageuse, qui fait de nombreux mécontents (Crépy, septembre 1544). Mais il a obtenu l’essentiel en concluant une paix séparée :
           désormais, le roi de France peut lutter contre le seul roi d’Angleterre.</p>
-      </div><div n="8" type="part"><head n="Chapitre VIII">La campagne d’Angleterre et la paix des amiraux</head>
-        <p>À l’hiver 1545, Claude d’Annebault prépare une guerre d’un autre genre : il constitue une flotte capable de vaincre celle d’Henri VIII et
+      </div><div n="10" type="part"><head n="0" type="chapter">La campagne d’Angleterre et la paix des amiraux</head>
+        <p n="1" type="chapter">À l’hiver 1545, Claude d’Annebault prépare une guerre d’un autre genre : il constitue une flotte capable de vaincre celle d’Henri VIII et
           de porter la guerre sur le sol anglais. À l’étonnement général, l’amiral prend personnellement le commandement de cette armée. Malgré un
           départ peu encourageant (juillet 1545), la flotte française, fuie par celle de l’amiral anglais, connaît quelques succès notables sur l’île
           de Wight et les côtes anglaises. Mais ils sont sans lendemain : d’Annebault ne parvient ni à prendre Portsmouth, ni à délivrer Boulogne, et
@@ -176,8 +178,8 @@
           conditions plus heureuses que prévu dans ses instructions. Les deux rois sont satisfaits, mais les deux amiraux doivent encore défendre leur
           œuvre. L’amiral anglais vient ensuite à Fontainebleau pour la ratification du traité, puis Claude d’Annebault part pour l’Angleterre pour le
           même motif ; mais il profite de cette ambassade pour poser les jalons d’un rapprochement plus étroit entre l’Angleterre et la France.</p>
-      </div><div n="9" type="part"><head n="Chapitre IX">La faveur du roi</head>
-        <p>La faveur du roi est un bienfait collectif. Elle est “ distinguée ” au bénéfice d’un personnage, puis “ distribuée ” par son intermédiaire
+      </div><div n="11" type="part"><head n="0" type="chapter">La faveur du roi</head>
+        <p n="1" type="chapter">La faveur du roi est un bienfait collectif. Elle est “ distinguée ” au bénéfice d’un personnage, puis “ distribuée ” par son intermédiaire
           à ses clients. En réalité, les “ factions ” de la cour ne sont pas des structures rigides, mais des pyramides de faveur dont les sommets se
           confondent peu, mais qui s’interpénètrent davantage au fur et à mesure que l’on se rapproche de la base. Aussi d’Annebault a-t-il pu
           demeurer dans la clientèle de plusieurs puissants, jusqu’au moment où il s’est retrouvé trop proche du roi, source de faveur, pour ne pas
@@ -192,8 +194,8 @@
           son meilleur ami, mais aussi, de tous ses sujets, le plus apte à le représenter. L’amiral d’Annebault participe ainsi de la majesté du roi
           et gouverne à ses côtés, sans que cela prête au scandale, car seul un ami intime du souverain peut être le juste interprète de l’esprit de
           son maître, et donc le suppléer.</p>
-      </div><div n="10" type="part"><head n="Chapitre X">Le conseiller favori du roi</head>
-        <p>Dans les dernières années du règne de François I<hi rend="sup">er</hi> , Claude d’Annebault est le “ conseiller favori ” du roi. En tant
+      </div><div n="12" type="part"><head n="0" type="chapter">Le conseiller favori du roi</head>
+        <p n="1" type="chapter">Dans les dernières années du règne de François I<hi rend="sup">er</hi> , Claude d’Annebault est le “ conseiller favori ” du roi. En tant
           que tel, il exerce d’ordinaire la “ superintendance ” de toutes les affaires de l’État ; mais cette institution désincarnée ne lui
           appartient pas en propre. Nul ne peut en être titulaire, car elle doit être toujours assumée, même en cas d’absence ou de maladie du favori.
           Dans ce cas (25 % du temps), le cardinal de Tournon le remplace ; si celui-ci est indisponible, rien n’est prévu, sinon que Jean de Lorraine
@@ -204,8 +206,8 @@
           que sur les affaires militaires et maritimes, ou encore sur les finances royales ; c’est aussi l’un des rares personnages qu’un courtisan
           peut solliciter dans l’espoir d’obtenir grâces, pensions, charges ou bénéfices. Finalement, seules les affaires de justice lui échappent.
       </p>
-      </div><div n="11" type="part"><head n="Chapitre XI">La fin du règne</head>
-        <p>À partir de 1546, le roi est souvent malade et se décharge volontiers des labeurs du gouvernement sur son ami Claude d’Annebault.
+      </div><div n="13" type="part"><head n="0" type="chapter">La fin du règne</head>
+        <p n="1" type="chapter">À partir de 1546, le roi est souvent malade et se décharge volontiers des labeurs du gouvernement sur son ami Claude d’Annebault.
           Celui-ci, malgré une santé également en déclin, s’en acquitte en s’efforçant de se montrer digne de cette confiance, c’est-à-dire qu’il doit
           gouverner non comme il l’entend, mais comme le roi lui-même le ferait. L’amiral devient ainsi le véritable “ lieutenant ” du roi, qu’il ne
           dérange que pour les questions de la plus haute importance. François I<hi rend="sup">er</hi> ne cesse donc pas de régner, mais règne par
@@ -218,8 +220,8 @@
           intérêts. Ce jeu de dupe prend fin avec la mort du roi. Henri II commet l’amiral d’Annebault à la quarantaine du défunt et en profite pour
           le remplacer par Montmorency. Les funérailles de François I<hi rend="sup">er</hi> révèlent le lien mystique entre le roi et son favori, qui
           porte le coffret de son cœur, puis mène le cortège jusqu’à Saint-Denis.</p>
-      </div><div n="12" type="part"><head n="Chapitre XII">La disgrâce</head>
-        <p>L’amiral d’Annebault ne s’est pas fait beaucoup d’ennemis lorsqu’il a été au pouvoir. Mais Montmorency, qui le remplace auprès du jeune
+      </div><div n="14" type="part"><head n="0" type="chapter">La disgrâce</head>
+        <p n="1" type="chapter">L’amiral d’Annebault ne s’est pas fait beaucoup d’ennemis lorsqu’il a été au pouvoir. Mais Montmorency, qui le remplace auprès du jeune
           roi, lui tient rancune du passé. D’Annebault tente en vain de se concilier les bonnes grâces du connétable, mais celui-ci ne se laisse pas
           adoucir. Sans donner à l’amiral l’ordre formel de quitter la cour, Henri II lui fait comprendre qu’il n’y est plus le bienvenu, en le
           privant notamment de sa charge de maréchal, ce qui équivaut à un “ congé muet ”. Malgré quelques justifications exigées sur sa gestion des
@@ -228,8 +230,8 @@
           sauves, et il est davantage épargné que le cardinal de Tournon. Il conserve donc l’espoir d’un prochain rappel, qui pourrait s’obtenir par
           le truchement de puissants amis tels que les Guise. Ces derniers récupèrent progressivement le “ groupe de faveur ” de Claude d’Annebault,
           qui s’insère lui-même dans leur clientèle et place les siens ­ qui pâtissent aussi de la disgrâce de leur patron ­ sous leur protection.</p>
-      </div><div n="13" type="part"><head n="Chapitre XIII">La continuité du service du roi</head>
-        <p>Une nouvelle guerre avec l’Angleterre donne l’occasion à Claude d’Annebault de se faire valoir : en tant qu’amiral de France, il est
+      </div><div n="15" type="part"><head n="0" type="chapter">La continuité du service du roi</head>
+        <p n="1" type="chapter">Une nouvelle guerre avec l’Angleterre donne l’occasion à Claude d’Annebault de se faire valoir : en tant qu’amiral de France, il est
           appelé à jouer un rôle de la plus haute importance. Mais si certains de ses conseils sont suivis, il ne dirige finalement pas les
           opérations. Au début du règne d’Henri II, il se consacre donc essentiellement au gouvernement de Normandie. À la fin de l’été 1550, il
           prépare la venue en France de la reine douairière d’Écosse, à l’occasion de laquelle doivent se dérouler plusieurs entrées fastueuses. La
@@ -238,8 +240,8 @@
           grâce. Sa charge d’amiral lui permet de continuer à servir le roi. Au printemps 1551, Henri II déclare la guerre à l’empereur ; d’Annebault
           relance la guerre de course, renforce les ports et sollicite à nouveau le commandement d’une flotte. Dans le même temps, il prépare le
           retour de Marie Stuart en Écosse.</p>
-      </div><div n="14" type="part"><head n="Chapitre XIV">Un tardif retour aux affaires</head>
-        <p>Les efforts de Claude d’Annebault portent leurs fruits : avant de partir envahir la Lorraine, le roi le rappelle pour l’associer à
+      </div><div n="16" type="part"><head n="0" type="chapter">Un tardif retour aux affaires</head>
+        <p n="1" type="chapter">Les efforts de Claude d’Annebault portent leurs fruits : avant de partir envahir la Lorraine, le roi le rappelle pour l’associer à
           Catherine de Médicis, à qui il confie la régence du royaume ; d’Annebault sera “ lieutenant général du roi auprès de la reine ”. Ce retour
           en grâce est dû autant à l’estime de la reine qu’à l’étiolement des rancunes. D’Annebault est rappelé dès février 1552 pour assister au lit
           de justice qui proclame et organise la régence, puis entre à nouveau au conseil étroit, afin de prendre connaissance des affaires en cours ;
@@ -249,9 +251,7 @@
           royales. D’Annebault reprend cette place, puis rejoint Henri II au siège de Damvilliers, où il prouve la valeur de son expérience au roi,
           qui l’envoie ensuite défendre la Picardie. Fiévreux, l’amiral s’enferme à La Fère-sur-Oise, qu’il a le temps de mettre en défense avant de
           céder à la maladie. Par ces derniers services rendus au roi, il transmet à son fils unique, Jean, une faveur retrouvée.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="17"><head>Conclusion</head>
         <p>Il ne fallut qu’une ou deux générations pour que Claude d’Annebault sombrât dans l’oubli. L’extinction de sa lignée, le souvenir
           embarrassant de la disgrâce de Montmorency ont sans doute contribué à le faire disparaître de la mémoire collective ; et il n’est rien, dans
           sa carrière et dans sa vie, qui fût de nature à marquer durablement les esprits. Mais avec lui, c’est toute une décennie de l’histoire de
@@ -262,10 +262,9 @@
 <hi rend="sup">e</hi>  du XVIsiècle français, connaît son apogée, que symbolise le baiser déposé par l’amiral d’Annebault au cœur de son
           roi défunt.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="18"><head>Annexes</head>
         <p>Correspondance de Claude d’Annebault. ­ Pièces justificatives. ­ Cartes. ­ Illustrations.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

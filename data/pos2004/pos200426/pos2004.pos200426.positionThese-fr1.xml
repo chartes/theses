@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Exposer l’art contemporain à Paris. L’exemple de l’ARC au Musée d’art moderne de la Ville de Paris (1967-1988)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Exposer l’art contemporain à Paris. L’exemple de l’ARC au Musée d’art moderne de la Ville de Paris (1967-1988)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Ténèze, Annabelle">Annabelle Ténèze</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200426.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Faire l’histoire d’un musée d’art à l’ère de l’art exposé</p>
         <p>“ Musée d’art contemporain ”, voici une expression dont les termes peuvent sembler antinomiques : comment faire coïncider création et
           conservation ? Pourtant, l’art de ces dernières décennies s’est avant tout épanoui pour ou contre ce cadre. De plus, l’essor de l’exposition
@@ -61,7 +64,7 @@
           années 60, au cœur d’un “ musée-temple ” monumental le Palais de Tokyo  d’un des premiers “ musées-forums ”, jusqu’à sa mutation en
           “ musée-chantier ” au tournant des années 80.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’axe d’approche est celui des expositions, à partir d’un corpus de 311 expositions réalisées entre 1967 et 1988. Ce travail s’appuie sur
           les archives d’exposition conservées au Musée d’art moderne de la Ville de Paris (MAMVP), dont le traitement est inédit. Leur exploitation
           est rendue difficile par la caractère lacunaire du fonds, qui trahit un souci tardif des archives et une faible conservation de certains
@@ -76,9 +79,8 @@
           et l’objet d’une étude spécifique. Entre promotion et souvenir d’une exposition, sa temporalité et sa fonction sont fluctuantes. Devenu
           terrain de jeu des exposants, il participe à la fois du livre sur l’art et du livre d’artiste.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Exposer l’art contemporain à Paris</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Exposer l’art contemporain à Paris</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le Palais de Tokyo, un lieu pour l’art moderne : <lb/>Une architecture, deux institutions</head>
           <p>
             <hi rend="i">La lente genèse d’un lieu pour l’art moderne à Paris.</hi> Malgré le débat sur la création d’un musée d’art moderne lancé en
@@ -97,7 +99,7 @@
             obsolètes au moment de leur création ? Ils sont en tout gênés par les pesanteurs administratives, le modèle du musée est discuté et
             certains comme Jean Cassou et Le Corbusier travaillent au projet d’un nouveau musée d’art moderne parisien.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Exposer à Paris, les lieux de l’art contemporain en 1967</head>
           <p>
             <hi rend="i">Les grandes manifestations : des salons à la Biennale de Paris.</hi> Malgré deux musées traditionnels installés dans un
@@ -116,7 +118,7 @@
             galeries engagées font néanmoins l’actualité. Face à des musées sur la réserve, elles sont les principaux lieux d’information sur l’art.
         </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Politiques de la culture, idées du musée</head>
           <p>
             <hi rend="i">Le débat sur la démocratisation de l’art dans le contexte pré-68.</hi> La décennie 1960 est marquée par le bouleversement des
@@ -134,8 +136,8 @@
             bientôt remplacé par Alain Trapenard, issu du cabinet de Malraux, à la tête de la Direction des Beaux-Arts de Paris, qui devient la
             Direction de l’Action Culturelle.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’ARC (1967-1972), une institution engagée</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’ARC (1967-1972), une institution engagée</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une institution différente pour un public différent</head>
           <p>
             <hi rend="i">Création d’une structure différente.</hi> C’est dans le cadre du Musée d’Art Moderne de la Ville de Paris qu’est créé en 1966
@@ -160,7 +162,7 @@
             concerts-promenades et des journées d’écoutes, accueille les musiques expérimentales (musique concrète et électroacoustique) et élabore de
             nouvelles méthodes d’approche, dans la lignée de l’animation culturelle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des partis pris</head>
           <p>
             <hi rend="i">Être engagé.</hi> La création de l’ARC doit être replacée dans un contexte idéologique et historique. Dans une période où le
@@ -183,7 +185,7 @@
             ne sont pas dissociables. Les nouveaux figuratifs remettent en cause l’image (reprise, détournement et glaciation), tandis que les
             artistes de Supports/Surfaces déconstruisent la matérialité du tableau.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Exposer l’art dans la diversité de ses formes et de ses supports</head>
           <p>
             <hi rend="i">La mise en valeur des médiums reproductibles : la “ sociologie des multiples ”.</hi> La programmation met en valeur des
@@ -204,7 +206,7 @@
             définition traditionnelle des beaux-arts et constitue un acte militant qui brise les limites traditionnelles du musée. L’ARC s’ouvre ainsi
             à l’art industriel, aux <hi rend="i">Structures gonflables</hi> et aux dessins d’enfants.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’arrêt de l’ARC, la fin d’une expérience</head>
           <p>
             <hi rend="i">A l’épreuve de la réalité.</hi> L’action de l’ARC est freinée par la faiblesse de ses moyens. L’après mai 68 est marqué par
@@ -221,8 +223,8 @@
             subsiste un nouveau modèle muséographique. Le musée est un centre d’information, impliqué dans l’actualité artistique, qui se préoccupe de
             la mise en relation des visiteurs, des œuvres et des artistes, par le biais notamment de la présence animatrice de l’artiste.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’ARC 2 (1973-1977), l’établissement et le jeu de la découverte</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’ARC 2 (1973-1977), l’établissement et le jeu de la découverte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre pemier">L’ARC 2 et le “ musée d’art mobile ”</head>
           <p>
             <hi rend="i">Un changement dans la continuité : l’ARC 2 de Suzanne Pagé.</hi> Début 1973, la structure renaît sous la direction de Suzanne
@@ -242,7 +244,7 @@
             (Jochen Gerz). L’auditorium devient le centre du “ musée expérimental ”. Avec sa création, les sections musicales de l’ARC gagnent un lieu
             autonome et adapté : c’est le “ musée-spectacle ”.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le jeu de la découverte, découvrir…</head>
           <p>
             <hi rend="i">…d’autres artistes.</hi> En priorité sont présentés des artistes encore peu exposés ou l’actualité d’un travail. C’est le
@@ -261,7 +263,7 @@
             consacrées. L’institution s’ouvre par exemple à des pratiques para-artistiques. L’art documentaire, sorte de musée personnel, s’appuie sur
             l’espace du musée (accumulation, reconstitution) que les objets les plus étranges occupent</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La vidéo au musée</head>
           <p>
             <hi rend="i">Les débuts de la vidéo à l’ARC.</hi> L’exposition <hi rend="i">Canada Trajectoires 73</hi> est annonciatrice des nouvelles
@@ -281,7 +283,7 @@
             environnements, vidéo-concert et art sociologique. La présence de Dany Bloch, attachée de presse à l’ARC et critique d’art, favorise la
             diffusion de l’art vidéo.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Mutation de la scène parisienne (1977)</head>
           <p>
             <hi rend="i">La transformation du circuit parisien.</hi> L’ouverture du Centre Pompidou modifie la géographie artistique parisienne,
@@ -301,8 +303,8 @@
             Fleuret. L’exposition <hi rend="i">Mythologies quotidiennes II</hi> inaugure les nouvelles salles de l’ARC : l’étage du Palais aménagé par
             Pierre Faucheux offre à l’ARC 1600 m<hi rend="sup">2</hi> que les murs blancs et l’éclairage zénithal inondent de lumière.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">L’ARC (1978-1988), l’étage expérimental</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">L’ARC (1978-1988), l’étage expérimental</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le lieu du débat et de la contemporanéité, au plus près de l’actualité</head>
           <p>
             <hi rend="i">Le musée, lieu de débat. Singuliers de l’art (1978), Ils se disent peintres, ils se disent photographes (1981)</hi>,
@@ -323,7 +325,7 @@
             génération d’artistes, en particulier les artistes de la figuration libre. Après le succès de la première session, la formule devient
             bisannuelle et s’appuie sur un important travail de sélection.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Peinture et installation, l’œuvre d’art entre tradition et éclatement</head>
           <p>
             <hi rend="i">Le renouveau de la peinture.</hi> A côté de la continuation d’une voie abstraite, on note un renouveau de la pratique
@@ -342,7 +344,7 @@
             recréation de leurs œuvres par les artistes du mouvement (expositions de Iannis Kounellis, Mario Merz, Giuseppe Penone et Luciano Fabro).
         </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le musée face à l’œuvre, l’œuvre face au musée</head>
           <p>
             <hi rend="i">L’“ exposition-œuvre ”.</hi> Quand l’œuvre se crée au musée ou s’y recrée, quand l’exposition devient une œuvre de l’artiste,
@@ -355,23 +357,20 @@
             muséographique (rapport au mur, fonctionnalités du lieu), des caractéristiques architecturales du monument (colonnade) et des spécificités
             des salles de l’ARC (deux lieux d’investigation fétiches : la courbe et l’“ aquarium ”).</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>La fin du musée dans le musée (1988)</p>
         <p>Le choix de 1988 pour terme de ce travail correspond à un changement de administratif : Suzanne Pagé quitte la direction de l’ARC pour
           celle du MAMVP. L’ARC est intégré au sein des services du musée. L’exposition <hi rend="i">Histoire de musées</hi>(1989) lance un nouveau
           programme muséographique qui réconcilie la mission expérimentale de l’ARC avec la fonction historique du musée et annonce la prise en compte
           des engagements de l’ARC dans la nouvelle politique d’acquisition.</p>
       </div>
-              <div type="appendix"><head>Planches</head>
+          <div type="appendix" n="8"><head>Planches</head>
         <p>Environ deux cents planches abordent les différents axes d’approche d’une exposition (plans du musée, photographies des aménagements du
           musée, vues d’exposition, reproduction d’œuvres exposées, extraits de catalogues). L’absence de reportages photographiques systématiques
           pour les premières années de l’ARC complexifie l’appréhension des expositions - certaines prises de vue d’exposition et d’accrochage
           manquent - et rend nécessaire une collecte iconographique, dans les publications contemporaines, auprès d’acteurs de cette histoire,
           etc.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La seigneurie du Mont-Cassin et son peuplement grec du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle d’après les sources
-        écrites et archéologiques</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La seigneurie du Mont-Cassin et son peuplement grec du <num>xi<hi rend="sup">e</hi></num> au <num>xiii<hi rend="sup">e</hi></num> siècle d’après les sources
+        écrites et archéologiques</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Ranquet, Marie">Marie Ranquet</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200921.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Étudier la <hi rend="i">Terra sancti Benedicti</hi>, la seigneurie du Mont-Cassin, du <num>xi</num>
 <hi rend="sup">e</hi> au <num>xiii</num>
 <hi rend="sup">e</hi> siècle, permet de s’insérer dans une longue historiographie, tant le monastère fondé par Benoît de Nursie vers 530
@@ -79,7 +82,7 @@
           de la <hi rend="i">Terra</hi> au cours de la période, notamment son insertion dans le mouvement d’<hi rend="i">incastellamento</hi>; la mise
           en valeur des territoires dans un contexte de défrichements ; la présence d’une population spécifiquement grecque dans la région.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives du Mont-Cassin ont fourni une part indispensable à l’étude : le fonds de San Pietro della Foresta, partiellement édité à la
           fin de l’étude, y est conservé (Aula II, Capsula LI, fascicolo I, 1-11 ; fascicolo II, 12-22 ; Aula III, Capsula LI, 9 ; Capsula XII, 35).
           D’autres sources ont été utilisées : le registre de Pierre Diacre, dont il existe un fac-similé, les A <hi rend="i">cta Sanctorum</hi>, les
@@ -90,9 +93,8 @@
         <p>Enfin, de façon plus anecdotique, le fonds de photographies aériennes du ministère des Biens culturels italien (Royal Air Force 1942-1944)
           s’est révélé être un précieux complément pour l’appréhension générale de la région et des sites encore existants.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude historique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Étude historique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le Mont-Cassin du <num>xi<hi rend="sup">e</hi></num> au <num>xiii<hi rend="sup">e</hi></num> siècle</head>
           <p>
             <hi rend="i">Le berceau de l’ordre bénédictin. —</hi> L’ordre bénédictin doit son origine à Benoît de Nursie, qui fonde à la fin de sa vie
@@ -110,7 +112,7 @@
             antérieurement. En revanche, l’abbatiat d’Oderisius I<hi rend="sup">er</hi> marque la fin d’une époque, alors que le monastère se débat
             entre influences politiques et crises religieuses.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La Terra sancti Benedicti</head>
           <p>
             <hi rend="i">Le milieu physique.</hi>— La seigneurie du Mont-Cassin est située dans un cadre propice aux échanges : entre
@@ -159,7 +161,7 @@
             fonctionnelles, sans visée ornementale, et témoignent d’une nécessité de protection de l’habitat face à des troubles politiques et des
             raids militaires menés fréquemment.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le peuplement grec de la <hi rend="i">Terra sancti Benedicti</hi>
         </head>
           <p>
@@ -197,19 +199,19 @@
             Valle Pischeto, San Tommaso della Valle, San Tammaro, San Salvatore, Sant’Erasmo del Iure, San Martino, Santo Stefano, Sant’Angelo, San
             Giovanni de Pantanis, San Benedetto in Bagnarolo, cette dernière étant située sur le territoire de San Giovanni Incarico.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition partielle et commentaire <lb/>des actes de San Pietro della Foresta</head>
-        <p>
+      </div><div n="4" type="part"><head n="0" type="chapter">Édition partielle et commentaire <lb/>des actes de San Pietro della Foresta</head>
+        <p n="1" type="chapter">
           <hi rend="i">Corpus édité. —</hi> Les actes de San Pietro édités sont les seize premiers du fonds de San Pietro, qui en compte vingt-deux, et
           couvrent la période 1030-1075, soit la période pré-cassinésienne du monastère. On les trouve aux archives du Mont-Cassin, sous les cotes
           Aula II, Capsula LI, fascicolo I, 1-11 et fascicolo II, 12-16.</p>
-        <p>
+        <p n="2" type="chapter">
           <hi rend="i">Étude diplomatique. —</hi> Il s’agit le plus souvent de donations faites au monastère. Les actes sont rédigés sur parchemin dans
           le sens le plus étroit ; ils sont de taille irrégulière, s’amenuisant vers le bas. L’écriture employée est la bénéventaine, la langue est le
           latin. Il est possible d’analyser le détail des parties du discours ainsi que le style et le vocabulaire utilisés ; cette étude souligne la
           cohérence de l’ensemble des actes, qui répondent à un même modèle de présentation. On repère des notes dorsales au dos, des mentions
           archivistiques portées en latin ou en grec, qui semblent correspondre à plusieurs archivages différents : période grecque, fin du Moyen Âge,
           fin de l’époque moderne.</p>
-        <p>
+        <p n="3" type="chapter">
           <hi rend="i">Étude historique. —</hi> Les actes édités sont riches de renseignements. Ils attestent en effet de l’existence de certains
           toponymes inconnus ailleurs à cette époque, comme Rivo Vetellati, la Torella, ou Arriano par exemple, qui n’ont pu être repérés. Les régions
           concernées sont toutes à proximité immédiate de la Foresta. Une étude des terrains mentionnés dans ces actes permet de se représenter la
@@ -218,7 +220,7 @@
           relativement étendu. Les actes permettent de se représenter l’aspect physique de la région : il semble que la Foresta soit alors en plein
           défrichement, comme l’indiquent les nombreuses références à des terres <hi rend="i">inculta</hi> ou <hi rend="i">vacciba</hi>. Les terrains
           sont fréquemment accompagnés de vignes.</p>
-        <p>D’un point de vue juridique, les actes font de fréquentes références à la loi lombarde : les lois de <hi rend="i">colludium</hi>, la
+        <p n="4" type="chapter">D’un point de vue juridique, les actes font de fréquentes références à la loi lombarde : les lois de <hi rend="i">colludium</hi>, la
           pratique du <hi rend="i">ferquidum</hi> ou celle du <hi rend="i">morgincap</hi> en sont des exemples. Les actes ne permettent pas de
           déterminer l’origine sociale des donateurs, mis à part quelques cas exceptionnels où des éléments d’identification sociale sont apportés (un
           seigneur de Pontecorvo ou un prêtre). En revanche, il est fait mention, le cas échéant, de l’appartenance à une communauté particulière, la
@@ -226,9 +228,7 @@
           donations, il n’est pas fait mention de redevances ; en revanche, les pénalités en cas de non-exécution de l’acte ou de non-respect de ses
           clauses sont chiffrées, en sous byzantins, probablement sous l’influence de Gaète, qui utilise cette monnaie de façon courante. Les sommes
           mentionnées, entre 20 et 50 sous d’or byzantins, sont importantes.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>De nombreuses perspectives de travail sont ouvertes : la région est richement documentée et une étude poussée des actes pourrait permettre
           de mieux saisir les structures sociales et les mécanismes de donation aux monastères et d’appropriation par le Mont-Cassin. De plus,
           différentes structures de peuplement sont représentées dans la <hi rend="i">Terra</hi> par les <hi rend="i">castra</hi>, <hi rend="i">casalia</hi> et monastères : ces habitats, qui s’alternent et s’enchâssent, peuvent donner lieu à une étude systématique de l’occupation
@@ -242,7 +242,7 @@
           développent des habitats de type <hi rend="i">casale</hi>, aujourd’hui disparus, constituent des points de peuplement non négligeables. Les
           actes de San Pietro apportent un grand nombre de renseignements sur la physionomie de la région et sa mise en valeur.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Documentation historique. L’acte de fondation de San Paolo della Foresta (998). — Études annexes (la règle de saint Benoît de Nursie ; la
           vie culturelle au Mont-Cassin ; Saint Nil de Rossano et le Mont-Cassin ; les enquêtes et sentences de l’abbé Bernard I <hi rend="sup">er</hi> Ayglier, à la fin du <num>xiii</num>
 <hi rend="sup">e</hi> siècle). — Listes et dynasties (abbés du Mont-Cassin, papes, empereurs d’Occident et d’Orient, rois de Naples et de
@@ -255,7 +255,6 @@
           des sites).</p>
         <p>Index nominum.— Index rerum.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

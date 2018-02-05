@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Gentile da Foligno, médecin et universitaire du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub">Étude et édition critique du commentaire au &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Canon&lt;/hi&gt; d’Avicenne (3, 11, 1).</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Gentile da Foligno, médecin et universitaire du <num>xiv<hi rend="sup">e</hi></num> siècle</title><title xml:lang="fr" type="sub">Étude et édition critique du commentaire au <hi rend="i">Canon</hi> d’Avicenne (3, 11, 1).</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chandelier, Joël">Joël Chandelier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200202.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Gentile da Foligno, dit le Spéculateur, est l’un des plus grands médecins scolastiques du <num>xiv<hi rend="sup">e</hi></num> siècle. Attiré à la
           fois par la recherche spéculative et la pédagogie, il est également lié aux milieux humanistes. Malgré son prestige, l’homme reste mal
           connu, et ses œuvres relativement peu étudiées. Cette double lacune de l’histoire des sciences incite à envisager non seulement la vie, mais
@@ -58,10 +61,9 @@
           livre 3 du <hi rend="i">Canon</hi> d’Avicenne, présentant le cœur et ses maladies. Sur un sujet aussi important et débattu, Gentile pouvait
           montrer son originalité, tout en restant dans le cadre imposé par le genre du commentaire.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Biographie et commentaire</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Biographie et commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etat des sources</head>
           <p>Les archives italiennes livrent peu de renseignements sur la vie de Gentile da Foligno. Outre quelques actes épars, le fonds le plus
             utile est celui de l’Ospedale Santa Maria della Misericordia de Pérouse, qui renferme plusieurs documents produits par Francesco, fils de
@@ -77,7 +79,7 @@
             scolastique. Malgré deux récentes études (L. Ceccarelli, R. French), la vie de Gentile da Foligno n’a jamais été abordée au travers de ses
             œuvres et de ses manuscrits.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Biographie</head>
           <p>
             <hi rend="i">Naissance et formation</hi>. ­ Si la date de naissance de Gentile da Foligno n’est pas connue, il est possible de la placer
@@ -118,7 +120,7 @@
             d’Ombrie, Foligno et Pérouse. L’essentiel de la fortune de Gentile da Foligno revient, peu après sa mort due à la Peste noire (18 juin
             1348), à son seul fils survivant, Francesco.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les œuvres de Gentile da Foligno : tentative de recension</head>
           <p>
             <hi rend="i">Typologie formelle</hi>. ­ Gentile da Foligno a illustré tous les genres de la littérature médicale scolastique du Moyen Âge.
@@ -143,7 +145,7 @@
             près de deux siècles, ses textes sont copiés, édités et lus, et certains d’entre eux connaissent un énorme succès, comme les questions sur
             le sujet essentiel des fièvres. Le manuscrit Vat. lat. 2470 est assez caractéristique de cette diffusion : copié au milieu du XV<hi rend="sup">e</hi> siècle, il contient vingt-neuf traités du maître.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le commentaire au <hi rend="i">Canon</hi> d’Avicenne de Gentile da Foligno</head>
           <p>
             <hi rend="i">Le commentaire au</hi> Canon <hi rend="i"> : aspects généraux</hi>. ­ Le <hi rend="i">Canon</hi>, œuvre du philosophe et
@@ -188,15 +190,15 @@
             médecin florentin. Si cet opuscule permet à Gentile de présenter de manière parfaite sa théorie, sa faible diffusion montre le peu de
             succès de cette réfutation.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre final">Conclusion</head>
           <p>L’étude d’un médecin scolastique comme Gentile da Foligno imposait de privilégier l’étude des textes. Alors que la consultation des fonds
             d’archives n’apporte que des réponses partielles aux interrogations biographiques, l’utilisation des manuscrits permet de cerner les idées
             et l’importance de ce brillant intellectuel et scientifique. Sans marquer une étape décisive dans l’évolution générale de la science, il
             représente un aboutissement de la scolastique médicale, et porte en lui les germes de l’évolution ultérieure.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition critique</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Édition critique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La tradition manuscrite et imprimée du commentaire</head>
           <p>
             <hi rend="i">Le manuscrit V</hi>. ­ Un manuscrit, conservé à la bibliothèque du Vatican sous la cote Vat. lat. 4459 (V), présente un
@@ -218,7 +220,7 @@
             nombreux changements de mise en page, n’ont en revanche apporté aucune modification d’importance au texte. Dès lors, une seule édition a
             été collationnée, celle de 1520-1522 ; elle a l’avantage d’être la plus répandue et la plus pratique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Etablissement du texte</head>
           <p>
             <hi rend="i">Discussion stemmatique</hi>. ­ L’étude des lacunes montre qu’il n’y a pas de lien direct de filiation entre les manuscrits
@@ -239,7 +241,7 @@
             corrections indiquent un travail de collation de divers exemplaires. Le texte des éditions est donc assez éloigné de celui produit par
             Gentile, mais, paradoxalement, il est souvent meilleur que celui des manuscrits, dont il n’a pas les multiples lacunes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Principes suivis pour l’édition</head>
           <p>L’édition étant réalisée à partir d’un manuscrit de base peut-être autographe, son orthographe a été intégralement respectée. Le texte de
             V a été très peu modifié, sauf quand le sens ou la grammaire l’imposait. Les passages marginaux sont indiqués entre accolades, car ils
@@ -247,18 +249,15 @@
             sans conséquence sur le sens du texte. En revanche toutes les particularités de V sont répertoriées. Les interpolations et les passages
             réécrits sont renvoyés en annexe.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Pièces justificatives</head>
+      </div><div type="conclusion" n="4"><head>Pièces justificatives</head>
         <p>Édition du commentaire de Gentile da Foligno au Canond’Avicenne (3, 11, 1). ( De dispositionibus cordis)</p>
         <p>Editions de plusieurs actes provenant des archives de l’Ospedale Santa Maria della Misericordia de Pérouse.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="5"><head>Annexes</head>
         <p>Liste des manuscrits du commentaire au <hi rend="i">Canon</hi> de Gentile da Foligno. ­ Texte du <hi rend="i">Canon</hi> d’Avicenne, 3,
           11, 1, d’après l’édition de 1520-1522. ­ Interpolations et ajouts des manuscrits au texte édité. ­ Schéma contenu dans V au fol. 141v. ­
           Reproduction des fol. 138-145v du manuscrit V. ­ Index des manuscrits. ­ Index des noms de personnes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

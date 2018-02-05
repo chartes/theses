@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les relations entre la SFIO et le SPD dans l’immédiat après-guerre (1945-1953)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les relations entre la SFIO et le SPD dans l’immédiat après-guerre (1945-1953)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dohrmann, Nicolas">Nicolas Dohrmann</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200310.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les relations entre les socialistes français et le Parti social-démocrate allemand (SPD) étaient jusqu’à présent bien connues pour la fin
           du <num>xix<hi rend="sup">e</hi></num>  siècle et pour le début du siècle suivant. En 1997 et 1998, les thèses de Nicole In der Beeck, portant sur la
           comparaison entre le SPD et la SFIO face aux questions internationales après la première et la seconde guerre mondiale, et de Marie-Louise
@@ -77,7 +80,7 @@
           1945-1947, 1948-1949 et 1950-1953 ­ correspondent au règlement, ou non, d’un problème majeur entre les deux partis et recoupent en fait, à
           peu de choses près, celles du rapprochement politique entre la France et l’Allemagne.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sont conservées dans quatre centres d’archives : les Archives d’histoire contemporaines (AHC), le Centre d’histoire sociale du
           <num>xx<hi rend="sup">e</hi></num>  siècle (CHS) et l’Office universitaire de recherche socialiste (OURS) en France, les Archives de la
           social-démocratie (AdsD) en Allemagne. Aux AHC, les fonds du groupe parlementaire socialiste, de Cletta et Daniel Mayer, et d’Alain Savary
@@ -94,9 +97,8 @@
         <p>L’étude des journaux socialistes conservés à la Bibliothèque nationale de France ­ presse régionale de la SFIO, journaux du MDSEUE et
           presse social-démocrate de la Zone française d’occupation (ZFO) ­ permet de compléter l’examen des fonds d’archives.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">1945-1947 : le poids de la guerre et la lente normalisation des rapports entre le parti socialiste SFIO et le SPD</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">1945-1947 : le poids de la guerre et la lente normalisation des rapports entre le parti socialiste SFIO et le SPD</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La SFIO et le SPD à l’épreuve du nazisme et de la guerre</head>
           <p>Entre 1933 et 1944-1945, les partis socialistes français et allemands ont connu les heures les plus sombres de leur histoire. Pourtant,
             ni la répression ni l’exil n’ont totalement détruit la solidarité socialiste internationale, voire les liens particuliers entre les deux
@@ -110,7 +112,7 @@
             autorités d’occupation, est en effet à la recherche d’« alliés » européens et il n’hésite pas à demander l’aide de ses camarades français.
             Dans le même temps, la SFIO semble disposer des moyens, et surtout de la volonté, d’apporter son soutien à son homologue allemand.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le parti socialiste SFIO et l’Allemagne des premières années de l’après-guerre : une vision originale des rapports
             franco-allemands ?</head>
           <p>Entre 1945 et 1947, la SFIO développe une vision de la question allemande qui s’oppose pratiquement point par point au projet gaullien.
@@ -174,8 +176,8 @@
             sur le retour des sociaux-démocrates... Le comité, après avoir assisté au congrès national du SPD à Nuremberg, donne un avis favorable et
             en décembre 1947, le SPD revient enfin dans le mouvement socialiste international.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">1948-1949 : La SFIO, le SPD et la question allemande</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">1948-1949 : La SFIO, le SPD et la question allemande</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le programme et l’organisation des deux partis : entre cohérence et divergence</head>
           <p>Après la fin de la seconde guerre mondiale, les différences structurelles qui existaient déjà entre la SFIO et le SPD depuis leur
             création, à la fin du <num>xix<hi rend="sup">e</hi></num>  siècle et au début du siècle suivant, sont encore une réalité : l’organisation interne
@@ -190,7 +192,7 @@
             campagne anticléricale de Kurt Schumacher avant les législatives du 14 août 1949, ou encore le blocus de Berlin en 1948-1949, réactivent
             en effet les mécanismes de la solidarité socialiste, contre les cléricaux et contre les communistes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les rapports hors du cadre strict des partis</head>
           <p>La fin des années 1940 est marquée par deux profonds changements. Ce sont d’abord les liens personnels, tissés grâce aux réseaux des
             immigrés sociaux-démocrates et au LGDSF, qui disparaissent progressivement, sans être réellement remplacés. Les efforts de certains
@@ -210,7 +212,7 @@
             les camps de jeunesse. En 1949, les bonnes relations entretenues entre ces mouvements amènent même à la création d’une « Entente régionale
             du Rhin » dont le but est de favoriser le rapprochement franco-allemand ainsi que la construction européenne.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La SFIO et le SPD face au nouvel état allemand</head>
           <p>Au niveau des comités de direction du SPD et de la SFIO, les liens entre les deux partis sont mis à rude épreuve par la création de la
             RFA et par la politique allemande de la France. Cette dernière déplaît profondément aux sociaux-démocrates : les projets
@@ -228,8 +230,8 @@
             méfient, contribue encore à éviter le dépérissement des liens entre les deux partis, la SFIO renouvelant à cette occasion son soutien au
             SPD.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La SFIO et le SPD face à l’Europe : entre tensions et volonté d’entente</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La SFIO et le SPD face à l’Europe : entre tensions et volonté d’entente</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Socialistes, sociaux-démocrates et question européenne</head>
           <p>Dans les années 1950, les rapports entre les partis socialistes français et allemands tendent à se focaliser sur la question de la
             construction européenne. Cette dernière passe par le règlement de divers conflits portant notamment sur le statut de la Sarre, région
@@ -246,7 +248,7 @@
             comme une nouvelle force sur l’échiquier politique international. Ils demeurent largement isolés au sein de leurs propres partis et, en
             1953, le MDSEUE finit par être victime de querelles internes sur la question de la CED.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Face à l’intégration progressive de la RFA dans les institutions européennes et mondiales : la persistance des
             craintes anciennes</head>
           <p>Les « atouts » socialistes ne pèsent guère face aux trois principales raisons qui expliquent l’impuissance des socialistes français et
@@ -266,7 +268,7 @@
             accorder, ne parviennent donc pas à s’élever au-dessus de leurs préoccupations nationales. Ils n’opposent pas de front commun à la mise en
             place d’une Europe qui est pourtant loin de correspondre à leurs vœux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les dernières crises et le retour définitif à des relations apaisées</head>
           <p>Le début des années 1950 est marqué par un repli général du socialisme européen, qui n’épargne pas les partis français et allemand. Ce
             repli est quelque peu compensé par la renaissance, en juin 1951, de l’IS. Cette organisation, qui doit permettre aux socialistes de
@@ -289,9 +291,7 @@
             à la Présidence du Conseil et aux critiques social-démocrates vis-à-vis de sa politique algérienne, les crises demeurent très
             étouffées.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>De 1945 à 1953, les relations entre la SFIO et le SPD subissent de nombreuses évolutions. Elles tendent, au cours de trois périodes assez
           facilement discernables, à se dépersonnaliser et à perdre toute influence sur la définition des politiques française ou allemande. Ces
           années sont celles de la fin des illusions socialistes un peu partout en Europe. En France et en RFA, elles marquent l’échec relatif des
@@ -313,12 +313,11 @@
           doute été possible. Mais le poids conjugué des souvenirs de la guerre et de deux « nationalismes » bien réels fait avorter cette espérance.
           Les deux partis socialistes finissent ainsi par se cantonner dans les liens « institutionnels ».</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Dictionnaire biographique des socialistes français, allemands et sarrois impliqués dans les relations entre le Parti socialiste SFIO et le
           SPD. ­ Chronologie des congrès nationaux, des rencontres et des conférences internationales du SPD, de la SFIO, du MSEUE et des mouvements
           de jeunesses français et allemands (1944-1953).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

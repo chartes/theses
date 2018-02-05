@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Naissance d’une administration départementale</title>
-        <title type="sub">Le Jura (1790-1791)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Naissance d’une administration départementale</title><title xml:lang="fr" type="sub">Le Jura (1790-1791)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bouchard, Aline">Aline Bouchard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200606.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si des travaux récents commencent à éclairer les administrations centrales révolutionnaires, les institutions locales mises en place par
           l’Assemblée nationale constituante restent, elles, mal connues. Or, s’appuyant sur une nouvelle classe politique élue, elles sont un moyen
           de diffuser les idées révolutionnaires auprès des populations.</p>
@@ -64,7 +67,7 @@
           administrative locale, à compétence générale. La période 1790-1791 représente la période charnière de transition entre l’Ancien Régime et le
           nouveau, mais aussi la période de fonctionnement de la première équipe départementale.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Dans leur grande majorité, les sources consultées sont conservées dans la sous-série 1L des Archives départementales du Jura. C’est là en
           effet que l’on trouve les papiers produits et reçus par l’administration départementale dans le cadre de ses activités. La base de la thèse
           repose sur les trois registres de délibérations du directoire et du conseil général du département pour la période mai 1790-novembre 1791
@@ -82,29 +85,28 @@
           Bibliothèque nationale de France et des documents de la sous-série F<hi rend="sup">1</hi> aux Archives nationales. En revanche, les
           autobiographies conservées, comme celle de Lameth, président du département, n’apportent rien au sujet.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">La Franche-Comté au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
-        <p>Rattachée sous Louis XIV, la Franche-Comté reste longtemps marquée par la période espagnole, malgré la prudence de ses nouveaux dirigeants
+          <div n="3" type="part"><head n="0" type="chapter">La Franche-Comté au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
+        <p n="1" type="chapter">Rattachée sous Louis XIV, la Franche-Comté reste longtemps marquée par la période espagnole, malgré la prudence de ses nouveaux dirigeants
           qui lui conservent un statut particulier. Le <num>xviii<hi rend="sup">e</hi></num> siècle voit un développement certain dans tous les domaines
           (démographique, économique, culturel), mais il reste généralement modéré et n’empêche pas des tensions croissantes à la fin de l’Ancien
           Régime. La véritable assimilation passe par l’implantation des institutions royales françaises, comme l’intendant et ses subdélégués, mais
           aussi, paradoxalement, par les conflits contre l’intendant. L’opposition constante et ambiguë du parlement, seul représentant de la
           province, fait en effet naître une opinion publique précoce.</p>
-        <p>Dans un premier temps, l’union des Comtois permet de repousser le projet d’assemblée provinciale locale. Mais les divisions croissantes
+        <p n="2" type="chapter">Dans un premier temps, l’union des Comtois permet de repousser le projet d’assemblée provinciale locale. Mais les divisions croissantes
           entre les différents groupes de la société aboutissent à l’échec du renouveau des états provinciaux pourtant porteur de nombreux espoirs.
           Dans le tiers notamment, l’attachement aux privilèges spécifiquement locaux disparaît progressivement au profit d’une ouverture aux
           événements nationaux, plus prometteurs, ce que souligne le contenu des cahiers de doléances.</p>
-        <p>Les premiers mois révolutionnaires et la Grande Peur entraînent la fuite de l’intendant et la remise en cause des pouvoirs locaux, à
+        <p n="3" type="chapter">Les premiers mois révolutionnaires et la Grande Peur entraînent la fuite de l’intendant et la remise en cause des pouvoirs locaux, à
           commencer par le parlement. Le commandant de la province prend alors une place centrale et les municipalités s’organisent pour assurer
           l’ordre, par exemple avec le traité fédératif entre villes de bailliages.</p>
-      </div><div n="2" type="part"><head n="Chapitre II">La création des départements</head>
-        <p>Depuis la réunion des États généraux, la question de la réforme des administrations locales est une des préoccupations principales des
+      </div><div n="4" type="part"><head n="0" type="chapter">La création des départements</head>
+        <p n="1" type="chapter">Depuis la réunion des États généraux, la question de la réforme des administrations locales est une des préoccupations principales des
           députés. C’est la conséquence des critiques contre les agents du pouvoir royal dans les provinces, du désir de rationalisation des
           circonscriptions territoriales ou encore des différentes expériences d’assemblées locales, de Turgot à Brienne, qui proposent d’ouvrir
           l’administration aux capacités. Mais c’est aussi la conséquence de la situation particulière de l’été 1789 (Grande Peur et nuit du 4 août)
           qui nécessite de rétablir des pouvoirs locaux forts. Ainsi les députés peuvent-ils imposer au royaume une réforme radicale, territoriale,
           administrative et politique, en détruisant les provinces, principal obstacle au projet.</p>
-        <p>Les différents textes de loi adoptés (décret du 14 décembre 1789 sur les municipalités, décret du 22 décembre 1789 sur les départements et
+        <p n="2" type="chapter">Les différents textes de loi adoptés (décret du 14 décembre 1789 sur les municipalités, décret du 22 décembre 1789 sur les départements et
           districts, instructions du roi et de l’Assemblée nationale en 1790, décret du 15 mars 1791) sont le reflet des expériences de l’Ancien
           Régime : on y retrouve le système collégial avec directoire et conseil général, le personnage du procureur général syndic, l’ouverture aux
           élites locales et des tâches plus larges que celles des intendants. Les textes sont aussi le reflet des débats du début de la Révolution :
@@ -115,15 +117,15 @@
           mais peu d’attributions d’administration particulière. Ils restent étroitement soumis au contrôle du pouvoir législatif et du pouvoir
           exécutif de manière à ne pas recréer des entités locales trop fortes. Néanmoins le nouveau système n’est pas exempt de défauts : il ne
           prévoit aucun représentant local du pouvoir exécutif et, optimiste, il ne prend pas vraiment en compte les réalités locales.</p>
-      </div><div n="3" type="part"><head n="Chapitre III">La formation du département du Jura</head>
-        <p>
+      </div><div n="5" type="part"><head n="0" type="chapter">La formation du département du Jura</head>
+        <p n="1" type="chapter">
           <hi rend="i">Le département</hi>. – À la suite des décrets de l’Assemblée nationale, la Franche-Comté est divisée en trois départements.
           Ici, comme dans le reste du royaume, on attend beaucoup du nouveau système. De nombreuses discussions ont lieu pour établir la nouvelle
           carte, Besançon cherchant à défendre sa position de capitale de la province. Le député Vernier s’illustre en faveur de Lons-le-Saunier,
           finalement choisie comme chef-lieu du département, tandis que l’évêché est installé à Saint-Claude. Le Jura ainsi formé couvre 256 lieues
           carrées. Il est composé des anciens bailliages du Milieu et d’Aval, formant 6 districts (Dole, Lons-le-Saunier, Orgelet, Poligny,
           Saint-Claude, Salins remplacé ensuite par Arbois), 62 cantons et 759 municipalités. Sa population est d’environ 281 500 habitants.</p>
-        <p>
+        <p n="2" type="chapter">
           <hi rend="i">Élections</hi>. – Les élections municipales du début de l’année se déroulent sans problème et semblent indiquer l’adhésion de
           la population à la réforme de la Constituante, même si l’on retrouve les modèles antérieurs. Pour les élections du niveau local supérieur –
           département et districts –, le roi et l’Assemblée nationale prévoient des commissaires. Si l’on perçoit difficilement l’action des trois
@@ -131,7 +133,7 @@
           conditions correctes et relativement rapidement (mars-mai 1790), tant il est vrai qu’il faut presser la mise en place des nouvelles
           administrations. L’élection des membres du département montre elle aussi l’adhésion des électeurs à la réforme, puisqu’il y a peu d’absents
           et que l’on prend soin de rédiger différentes adresses aux pouvoirs parisiens.</p>
-        <p>
+        <p n="3" type="chapter">
           <hi rend="i">Le nouveau personnel</hi>. – Les nouveaux élus, et notamment les membres du directoire sur lesquels repose l’essentiel du
           travail, présentent les mêmes traits que leurs homologues d’autres départements. Ce sont des hommes relativement jeunes, d’une quarantaine
           d’années, appartenant à la même génération. Ils sont issus en majorité du monde judiciaire, alors que leurs électeurs appartiennent plus
@@ -142,17 +144,17 @@
           est vrai cependant que l’on n’élit pas de privilégiés. En l’absence d’assemblée provinciale ou d’états provinciaux, la seule expérience
           administrative des administrateurs est jusque là cantonnée à l’échelle municipale. Un certain nombre a déjà participé au mouvement
           révolutionnaire.</p>
-        <p>Les résultats des élections laissent supposer des discussions préalables, dont on peut seulement conjecturer le contenu. On le voit avec
+        <p n="4" type="chapter">Les résultats des élections laissent supposer des discussions préalables, dont on peut seulement conjecturer le contenu. On le voit avec
           l’absence totale de dispersion des voix des électeurs ou l’équilibre parfait entre les districts. On sait aussi que, contrairement à ce qui
           devrait se faire, certains élus font des démarches pour être élus. Les nouveaux élus appartiennent souvent à un monde en pleine ascension
           sociale, rendue plus difficile à la fin du siècle, et qui trouve là un avancement.</p>
-        <p>La rareté des documents et leur manque de précision empêchent de bien connaître les hommes de bureau (surnuméraires et commis) en dehors de
+        <p n="5" type="chapter">La rareté des documents et leur manque de précision empêchent de bien connaître les hommes de bureau (surnuméraires et commis) en dehors de
           leurs simples noms. Les quelques cas connus montrent des personnes jeunes, issues du monde judiciaire et ayant donc reçu une formation de
           base sérieuse. Si les relations personnelles expliquent certains choix, les nouveaux administrateurs savent aussi faire preuve de
           pragmatisme en cherchant à engager du personnel de l’intendance, tâche cependant difficile face à la concurrence des autres départements
           comtois.</p>
-      </div><div n="4" type="part"><head n="Chapitre IV">La transition administrative</head>
-        <p>
+      </div><div n="6" type="part"><head n="0" type="chapter">La transition administrative</head>
+        <p n="1" type="chapter">
           <hi rend="i">Les deux premiers mois (mai-juillet 1790)</hi>. – Deux mois s’écoulent entre la première réunion du conseil général et
           l’installation du directoire de manière à prendre les renseignements nécessaires auprès des différentes administrations. Des administrateurs
           sont nommés commissaires auprès des districts tandis que le président, Rabusson, et surtout le procureur général syndic, Ebrard, commencent
@@ -162,7 +164,7 @@
           deux premiers mois de fonctionnement sont également l’occasion de nombreuses hésitations et tâtonnements. On s’en tient alors toujours à une
           grande prudence pour éviter toute erreur préjudiciable. Mais globalement, le bilan à la mi-juillet est positif : les administrateurs
           commencent à travailler de concert et sérieusement, même si, dans le même temps, ils doivent apprendre à se débrouiller seuls.</p>
-        <p>
+        <p n="2" type="chapter">
           <hi rend="i">La liquidation de l’Ancien Régime</hi>. – Le jour de la formation des administrations départementales doit correspondre avec la
           cessation des fonctions des administrations provinciales d’Ancien Régime. Le Jura est concerné pour la Franche-Comté, mais aussi la
           Bourgogne et la Bresse. Les lois établissent des commissaires, choisis parmi les administrateurs, pour diviser les papiers, arrêter les
@@ -172,8 +174,8 @@
           générale, fin 1791, les archives des anciennes administrations sont toutes envoyées aux nouvelles administrations tandis que les comptes
           sont tous arrêtés. Enfin, les différents départements cherchent une plus grande indépendance vis-à-vis de leurs voisins, tout en défendant
           leurs propres intérêts en matière territoriale et financière.</p>
-      </div><div n="5" type="part"><head n="Chapitre V">L’administration départementale</head>
-        <p>
+      </div><div n="7" type="part"><head n="0" type="chapter">L’administration départementale</head>
+        <p n="1" type="chapter">
           <hi rend="i">Structures.</hi>– Révolutionnaires modérés, les nouveaux administrateurs ont bien compris le contenu des textes législatifs
           concernant les nouveaux pouvoirs : ils accordent une grande importance à la séparation des pouvoirs, au roi mais aussi à l’Assemblée
           nationale. Ils sont favorables aux acquis de la Révolution, au premier rang desquels l’égalité et son corollaire, la fin des privilèges
@@ -182,7 +184,7 @@
           doivent dominer des vues paternalistes comme la négociation, les principes d’économie ou l’attention aux pauvres. Enfin, les administrateurs
           cherchent à diffuser les principes de la Constitution et à former des citoyens, au moyen de fêtes civiques ou d’adresses. En effet, ils
           estiment que seul le succès de la Révolution, dont ils sont partie prenante, peut mettre fin aux dangers contre-révolutionnaires.</p>
-        <p>La place de président est essentiellement honorifique dans le cas de l’avocat Rabusson, et politique dans le cas de Lameth, frère des
+        <p n="2" type="chapter">La place de président est essentiellement honorifique dans le cas de l’avocat Rabusson, et politique dans le cas de Lameth, frère des
           députés. Le véritable pivot de l’administration jurassienne est le procureur général syndic, place cependant assez mal définie dans les
           textes de loi et très liée à la personne de celui qui l’exerce, l’avocat Ebrard. La place de secrétaire, qui revient à l’avocat Guichard,
           est encore plus mal définie et difficile à appréhender. Le conseil général, composé de 36 membres, se réunit un mois par an et est avant
@@ -191,7 +193,7 @@
           administrateurs s’appuient sur des modèles préexistants (Ancien Régime et Assemblée nationale) pour établir les règlements. Ils font aussi
           preuve de pragmatisme, par exemple dans la division des tâches. Quelques questions restent cependant en suspens comme celle de la publicité
           des séances, le traitement des administrateurs ou l’indemnisation des électeurs.</p>
-        <p>
+        <p n="3" type="chapter">
           <hi rend="i">Les bureaux</hi>. – Si l’administration hésite peu de temps pour le choix du local, une maison particulière, la question du
           nombre des bureaux, des employés et de leur répartition revient régulièrement dans les débats. Fin 1791, à côté des 10 membres de
           l’administration, il y a au moins 17 personnes dans les bureaux jurassiens. Il semble que le personnel soit moins fixé à des attributions
@@ -199,7 +201,7 @@
           salles, mais on sait néanmoins que les bureaux sont bien adaptés au travail administratif. Administrateurs et hommes de bureaux y trouvent à
           leur disposition les outils de travail matériels (papiers, registres, encre, cachets) et intellectuels (journaux, bibliothèque, archives)
           nécessaires.</p>
-        <p>
+        <p n="4" type="chapter">
           <hi rend="i">Le travail administratif</hi>. – S’il est difficile de bien connaître les conditions de travail, les documents conservés nous
           montrent un travail régulier, sérieux et beaucoup plus important que ne le laisseraient penser les seuls registres des délibérations.
           Recueillir les informations, les organiser, prendre des décisions puis les diffuser ne sont certes pas des tâches originales, mais elles se
@@ -210,8 +212,8 @@
           lois et celle de la correspondance avec les autres administrations (liaison Dole-Lons-le-Saunier, franchise postale). Cependant,
           l’accroissement des tâches n’est pas sans provoquer lenteurs, adaptations humaines et matérielles constantes, augmentation des coûts de
           fonctionnement.</p>
-      </div><div n="6" type="part"><head n="Chapitre VI">La hiérarchie des pouvoirs</head>
-        <p>
+      </div><div n="8" type="part"><head n="0" type="chapter">La hiérarchie des pouvoirs</head>
+        <p n="1" type="chapter">
           <hi rend="i">Avec Paris : le pouvoir reçu</hi>. – Reprenant un modèle antérieur à sa formation, le département est proche de ses députés,
           idéalement placés pour fournir informations inédites et soutiens auprès des pouvoirs centraux. Les députés, représentants de la nation, se
           font aussi représentants des intérêts locaux. En général, le département communique avec l’Assemblée nationale et ses comités pour tout
@@ -221,24 +223,24 @@
           Néanmoins, si les textes restent clairs, la séparation entre pouvoir législatif et pouvoir exécutif est parfois difficile à comprendre et à
           appliquer. Pourtant, malgré ces problèmes, le département reste profondément légaliste, hésitant toujours à prendre les mesures nécessaires
           sans l’avis du pouvoir central.</p>
-        <p>
+        <p n="2" type="chapter">
           <hi rend="i">Avec les administrations inférieures : le pouvoir appliqué</hi>. – Le département, situé au sommet de la pyramide
           administrative locale, joue en quelque sorte le rôle de l’Assemblée et des ministres, fournissant les conseils nécessaires, surveillant les
           administrations inférieures voire les sanctionnant. Jaloux de sa position, il cherche à faire respecter rigoureusement la pyramide
           administrative. Mais en cas de problèmes (retards, fautes), fort de ses principes, il privilégie toujours l’émulation entre administrations
           et la conciliation, du moins jusqu’à l’automne 1791. Il est vrai qu’il dispose de peu de moyens coercitifs, ce qui est bien visible dans les
           conflits locaux les plus graves entre les différentes administrations du département (affaire Joly à Dole et affaire de l’<hi rend="i">Adresse</hi>à Lons-le-Saunier).</p>
-        <p>
+        <p n="3" type="chapter">
           <hi rend="i">Avec les autres pouvoirs : entraide et conseils.</hi>– Les relations horizontales avec les autres départements sont moins
           conflictuelles mais tout aussi importantes pour le fonctionnement du département. Le pacte de fraternité reste cependant plus symbolique que
           vraiment utile. La Suisse voisine est un cas particulier car si les relations ne sont pas mauvaises, cela n’empêche pas une certaine
           méfiance.</p>
-      </div><div n="7" type="part"><head n="Chapitre VII">Les travaux</head>
-        <p>La situation léguée par l’Ancien Régime n’est pas bonne : impôts en retard, travaux publics abandonnés, crise des grains… La situation
+      </div><div n="9" type="part"><head n="0" type="chapter">Les travaux</head>
+        <p n="1" type="chapter">La situation léguée par l’Ancien Régime n’est pas bonne : impôts en retard, travaux publics abandonnés, crise des grains… La situation
           établie par la Révolution n’est guère plus simple : organisation de la force armée, constitution civile du clergé. Les textes attribuent des
           domaines de compétence variés aux départements. C’est l’occasion pour les administrateurs de mettre en pratique leurs principes, avec plus
           ou moins de succès.</p>
-        <p>Au premier rang, viennent les impositions et les finances, question technique et complexe qui rencontre les mêmes problèmes que dans le
+        <p n="2" type="chapter">Au premier rang, viennent les impositions et les finances, question technique et complexe qui rencontre les mêmes problèmes que dans le
           reste du royaume. Concernant son propre budget, le département est bien obligé de faire face aux tâches qui lui incombent. Aussi malgré des
           mesures strictes d’économie et un budget moins important que d’autres départements, il ne peut qu’être pragmatique. Les délibérations
           touchant la population permettent un meilleur encadrement que sous l’Ancien Régime. Les mesures concernant le maintien de l’ordre
@@ -247,16 +249,14 @@
           question car elle touche directement l’ordre public. Mais, même si le nouvel évêque constitutionnel travaille avec le département, elle
           alourdit le travail de l’administration. Surtout, elle cause la première rupture nette dans la population et amène les administrateurs à se
           détacher de leur légalisme foncier.</p>
-      </div><div n="8" type="part"><head n="Chapitre VIII">Situation au 15 novembre 1791</head>
-        <p>Le premier groupe d’administrateurs n’est pas modifié en profondeur par les élections de l’été 1791. On retrouve les mêmes traits que pour
+      </div><div n="10" type="part"><head n="0" type="chapter">Situation au 15 novembre 1791</head>
+        <p n="1" type="chapter">Le premier groupe d’administrateurs n’est pas modifié en profondeur par les élections de l’été 1791. On retrouve les mêmes traits que pour
           ceux de 1790, en partie grâce à la stabilité du directoire. Pourtant, une certaine radicalisation apparaît dans les sociétés populaires et
           les administrations inférieures alors que les problèmes liés à la constitution civile du clergé augmentent. Elles commencent à critiquer
           plus sérieusement la modération de l’administration en place. Néanmoins, celle-ci fait preuve de son efficacité lors de la crise de
           Varennes, durant laquelle elle se contente d’appliquer les principes et les modèles établis les mois précédents. L’acceptation de la
           Constitution peut être considérée comme le symbole de la solidité du système.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="11"><head>Conclusion</head>
         <p>La simple lecture des textes de loi concernant les nouvelles administrations mises en place par la Constituante ne rend pas compte de la
           réalité locale. En effet, les nouveaux corps disposent parfois de marges de manœuvres importantes parce que le pouvoir central est loin,
           parce qu’il ne prévoit pas tout et surtout parce qu’il faut bien travailler.</p>
@@ -266,13 +266,12 @@
           surtout l’application de la constitution civile du clergé pèsent de plus en plus lourdement sur le bon fonctionnement de l’administration.
           Ainsi, l’administration départementale prend-elle, malgré elle, un caractère politique de plus en plus marqué.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="12"><head>Pièces justificatives</head>
         <p>Procès-verbal de délimitation du Jura (24 février 1790). – Cantons du Jura (1790). – Bail pour la maison du département (15 juin 1790). –
           Règlement pour le conseil général (3 novembre 1790). – Frais d’administration du département et des districts (1790). – Normes de la
           correspondance. – <hi rend="i">Le conseil général de la commune de Lons-le-Saunier au département du Jura, à l’Assemblée nationale, aux
             citoyens libres</hi>(1791). – <hi rend="i">Adresse du directoire du département du Jura à l’Assemblée nationale</hi>(27 juin 1791).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Marie-Thérèse-Charlotte de France (1778-1851)</title>
-        <title type="sub">Représentations, sensibilités et politique.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Marie-Thérèse-Charlotte de France (1778-1851)</title><title xml:lang="fr" type="sub">Représentations, sensibilités et politique.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Becquet, Hélène">Hélène Becquet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200402.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La biographie de la fille de Louis XVI a été faite de nombreuses fois mais toujours sous la forme d’une suite d’anecdotes. Nul n’a songé à
           examiner de façon plus approfondie le rôle politique et symbolique qu’elle avait pu jouer, certes un peu malgré elle. Née fille de France,
           elle était destinée à tenir une place prestigieuse en France et en Europe. La Révolution a changé son sort et a ajouté au prestige du sang
@@ -63,7 +66,7 @@
           modifiée par la concurrence de celle du comte de Chambord : la résonance politique et même sensible de cette image en sort très
           amoindrie.</p>
       </div>
-              <div type="sources"><head>sources</head>
+          <div type="sources" n="2"><head>sources</head>
         <p>L’orientation même du sujet conduisait à privilégier les sources imprimées. Des brochures de nature variée, trouvées à partir des
           catalogues de la Bibliothèque nationale de France (BNF), et des journaux de l’époque ont servi de base à notre travail. Nous avons dépouillé
           de manière systématique une trentaine de titres de presse parus entre 1779 et 1830, en nous efforçant d’équilibrer les tendances politiques
@@ -77,14 +80,13 @@
           les sous-séries O<hi rend="sup">3</hi> , maison du roi, et F<hi rend="sup">7</hi> , police générale, se sont avérés particulièrement
           décevants, du moins de notre point de vue.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre liminaire">Une fille de France à la fin de l’Ancien Régime</head>
-        <p>Les filles de France ont un statut ambigu : elles ne peuvent exercer le pouvoir de par la loi salique mais y participent. Leur naissance
+          <div n="3" type="part"><head n="0" type="chapter">Une fille de France à la fin de l’Ancien Régime</head>
+        <p n="1" type="chapter">Les filles de France ont un statut ambigu : elles ne peuvent exercer le pouvoir de par la loi salique mais y participent. Leur naissance
           leur donne une place à part, leur vie obéit à des contraintes de représentation qui sont la marque de leur haut rang et suscitent des
           thématiques littéraires et artistiques stéréotypées et idéalisées. Le jeu de renvoi entre réalité, place politique et représentation que
           nous souhaitons étudier existe donc, de manière traditionnelle, dès la naissance de la princesse.</p>
-      </div><div n="2" type="part"><head n="Première partie">L’Orpheline du Temple</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’Orpheline du Temple</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La lente émergence d’une personnalité</head>
           <p>La Révolution modifie le sort dévolu normalement à Madame Royale. La famille royale se trouve bientôt déchue et la princesse suit ses
             parents au Temple. Dans un premier temps, l’attention de tous est fixée sur le roi et la reine et les enfants restent dans l’ombre.
@@ -112,7 +114,7 @@
             et, sauf quelques députés, tout le monde ignore le devenir des princes. Cette atmosphère de mystère explique que les bruits les plus
             divers aient couru au moment de la mort de Louis XVII, le 8 juin 1795.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Madame Royale sort de l’ombre</head>
           <p>La mort de Louis XVII réveille les sentiments de pitié à l’égard de sa sœur. On se met à accuser la Convention d’avoir empoisonné Louis
             XVII et de vouloir faire de même avec “ la fille de Louis XVI ”. Les bruits d’une maladie qui serait prête à l’emporter se multiplient.
@@ -132,8 +134,8 @@
             la Convention et qui déboucha sur le treize vendémiaire, le personnage de Madame a attiré des sympathies, permis un consensus entre les
             différentes tendances royalistes. Certains auraient même souhaité la voir sur le trône.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Vienne et l’exil</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Vienne et l’exil</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Vienne</head>
           <p>La Convention trouve la fille de Louis XVI encombrante. Garder la princesse en prison ne se justifie plus aux yeux de l’opinion, tandis
             que des complots peuvent se nouer autour du Temple. La libérer et la garder en France est impensable. On souhaite donc l’envoyer à
@@ -153,7 +155,7 @@
             l’empereur. Les réactions sont donc mitigées. Si les émigrés lui conservent leur affection et leur admiration, ils sont néanmoins un peu
             déçus.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le mariage et l’exil</head>
           <p>L’oncle de la princesse, Louis XVIII, alors en exil à Vérone, ne se résout pas à la voir entre les mains de l’empereur. Il cherche à
             tout prix à la récupérer afin de la marier à son cousin, le duc d’Angoulême, fils de son frère le comte d’Artois et héritier de la
@@ -166,7 +168,7 @@
             vite avorté puisqu’il est suivi de vingt années d’exil qui mènent la famille royale en Pologne, puis de nouveau en Courlande, avant
             l’Angleterre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La constitution d’un imaginaire royaliste</head>
           <p>Dans l’émigration, Louis XVIII favorise le développement d’une propagande active autour de Madame, par le biais notamment de brochures.
             Il connaît la popularité de sa nièce, dont les parents sont par ailleurs considérés par nombre de royalistes comme des martyrs. En ayant à
@@ -182,8 +184,8 @@
             fin du dernier volume ; le succès est si considérable qu’il décourage la censure. Deux romans de Jean-Baptiste Regnault-Warin : <hi rend="i">le cimetière de la Madeleine</hi> et surtout <hi rend="i">Les Prisonniers du Temple</hi>, parus en 1800 et 1801, poursuivent le
             phénomène.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">L’ange de la France ou l’apogée d’une image</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">L’ange de la France ou l’apogée d’une image</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le retour de Madame</head>
           <p>Marie-Thérèse-Charlotte de France est le personnage le plus connu et le plus sympathique de la famille au moment du retour des Bourbons
             en 1814 : l’attention se fixe donc très naturellement sur elle, d’autant que Louis XVIII ne cesse de la désigner à la foule et s’efforce
@@ -194,7 +196,7 @@
             “ Antigone ”. On arrive alors à un phénomène de décalage : c’est ce personnage littéraire qui est connu et loué, non plus la vraie
             princesse, dont finalement on ne sait rien ; mais dans les premiers mois de la Restauration, l’illusion paraît fonctionner.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le culte des “ martyrs royaux ”</head>
           <p>Dans le prolongement de la propagande développée durant l’émigration et dans le droit fil de la pensée contre-révolutionnaire de Maistre
             ou de Ballanche en particulier, Louis XVIII organise des cérémonies expiatoires, dresse des monuments en l’honneur de ceux que l’on
@@ -209,7 +211,7 @@
             s’élaborer à travers les brochures et les journaux une sorte de “ geste ” de Madame qui fait d’elle une princesse toute-chrétienne, digne
             descendante de saint Louis, et presque une sainte.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Cent-Jours</head>
           <p>Les Cent-Jours marquent à la fois l’apogée de l’image de la duchesse d’Angoulême et l’échec définitif du projet de Louis XVIII qui
             voulait rassembler les Français autour de sa nièce. L’annonce du retour de Napoléon surprend Madame et son mari à Bordeaux, où ils
@@ -232,8 +234,8 @@
             Paris. Ce n’est donc pas le pouvoir royal qui s’empare de cette image, mais l’ultraroyalisme, qui fait à présent de Madame son
             étendard.</p>
         </div>
-      </div><div n="5" type="part"><head n="Quatrième partie">la dernière Dauphine de France</head>
-        <div>
+      </div><div n="7" type="part"><head n="0" type="chapter">la dernière Dauphine de France</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Madame “ représentant la reine ”</head>
           <p>En l’absence de reine, la duchesse d’Angoulême en tient lieu, comme le souligne la formule employée lors des réceptions des femmes
             d’ambassadeurs à la cour. Plusieurs devoirs incombent à cette reine sans le titre. Le premier est de perpétuer la dynastie. C’est un échec
@@ -246,7 +248,7 @@
             roi et ses sujets, entre Dieu et les hommes. A travers la duchesse d’Angoulême, c’est la monarchie de la Restauration que l’on cherche à
             resacraliser.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les voyages de Madame</head>
           <p>La duchesse d’Angoulême a beaucoup parcouru le royaume. Elle se trouvait sur les routes presque chaque année pendant quelques semaines au
             moins et a passé l’année 1823 presque entièrement en province, principalement à Bordeaux. Tous les deux ans, elle se rendait en cure à
@@ -257,7 +259,7 @@
             L’image que nous avons de ces voyages est donc biaisée et nous ne connaissons pas ou peu les réactions des provinciaux au passage de
             Marie-Thérèse de France, si ce n’est dans deux endroits au royalisme bien ancré : la Vendée et Bordeaux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La fin d’une icône ?</head>
           <p>Après 1816, l’image de Madame s’estompe dans la propagande royaliste ; d’autres membres de la famille royale, la duchesse de Berry et ses
             enfants en particulier, prennent le relais. Ce phénomène s’explique par l’appui que la duchesse d’Angoulême apporte aux ultraroyalistes
@@ -271,25 +273,22 @@
             semble-t-il n’avait guère été le cas jusque-là et montre l’impopularité à laquelle la duchesse d’Angoulême était parvenue à la fin de la
             Restauration, à Paris du moins.</p>
         </div>
-      </div><div n="6" type="part"><head n="Epilogue">Reine d’exil</head>
-        <p>Après un court séjour en Ecosse jusqu’en 1832, la famille royale s’installe dans les Etats de la maison d’Autriche, à Prague, puis à
+      </div><div n="8" type="part"><head n="0" type="chapter">Reine d’exil</head>
+        <p n="1" type="chapter">Après un court séjour en Ecosse jusqu’en 1832, la famille royale s’installe dans les Etats de la maison d’Autriche, à Prague, puis à
           Gorizia et à Frohsdorff. La petite cour continue à vivre au rythme des disputes familiales qui opposent les partisans de la duchesse de
           Berry au reste de la famille royale. A la suite de l’échec de son expédition en France et de son remariage, la duchesse de Berry se voit
           exclue de la famille royale. C’est alors à la duchesse d’Angoulême, qui règne sans partage sur la cour en exil, qu’incombe l’éducation des
           enfants de France. C’est là son dernier rôle politique, le reste de sa vie se passant en prières et en charités. Sa mort en 1851 a un
           retentissement important en France, y compris dans les milieux non royalistes : une fois les passions politiques à son sujet assoupies,
           demeurait le souvenir pathétique de l’Orpheline du Temple.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Pièces justificatives</head>
+      </div><div type="conclusion" n="9"><head>Pièces justificatives</head>
         <p>Les brochures les plus intéressantes publiées sur Marie-Thérèse-Charlotte de France, des poèmes, des chansons et quelques extraits d’œuvres
           littéraires.</p>
       </div>
-              <div type="appendix"><head>Iconographie</head>
+          <div type="appendix" n="10"><head>Iconographie</head>
         <p>Corpus de soixante estampes, présentées à part avec leur notice, mais expliquées dans le cours de la thèse. - Des portraits de la princesse
           aux diverses époques de sa vie.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

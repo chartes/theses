@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les actes des évêques bretons (début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle-milieu du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;
-        siècle)</title>
-        <title type="sub">Étude diplomatique et édition critique</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les actes des évêques bretons (début du <num>xi<hi rend="sup">e</hi></num> siècle-milieu du <num>xii<hi rend="sup">e</hi></num>
+        siècle)</title><title xml:lang="fr" type="sub">Étude diplomatique et édition critique</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Henry, Cyprien">Cyprien Henry</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201014.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Alors que d’une part les diplomatistes s’intéressent peu à la Bretagne en raison de son bien connu manque de sources et que, d’autre part,
           les historiens de la Bretagne ont depuis longtemps quelque peu délaissé une réflexion approfondie sur les sources diplomatiques du duché au
           profit d’autres terrains historiographiques, il semble nécessaire aujourd’hui de relancer des études de fond sur la production documentaire
@@ -61,7 +64,7 @@
           Nantes, Rennes, Saint-Malo, Dol, Saint-Brieuc, Vannes, Quimper, Tréguier et Léon doit donc permettre de situer la production de chaque
           diocèse par rapport aux actes d’autres diocèses français et anglais, tout en faisant apparaître des traits saillants propres au duché.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p><hi rend="i">Les actes. —</hi> Environ un tiers des actes rassemblés sont encore connus en originaux. On les trouve dans les fonds des
           abbayes destinataires aux archives départementales d’Ille-et-Vilaine, de Loire-Atlantique, du Morbihan, des Côtes-d’Armor, du Maine-et-Loire
           et d’Indre-et-Loire, ainsi qu’aux Archives nationales pour quelques documents du fonds de Savigny (L 966 à 978). Un autre quart des actes
@@ -76,9 +79,8 @@
           chroniques, ou d’enquêtes reposant sur des témoignages.</p>
         <p/>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Partie liminaire">Les diocèses et les évêques</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les diocèses et les évêques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les diocèses bretons entre traditions séculaires et créations politiques</head>
           <p>L’origine des diocèses bretons est mal connue et, de fait, controversée. Elle repose largement et naturellement sur l’idée que l’on se
             fait des modalités et de la chronologie de la christianisation de la Bretagne. Sans tenter de trancher dans un débat fort complexe, on
@@ -94,15 +96,15 @@
             Saint-Brieuc reste plus mystérieuse : on peut la dater du <num>x<hi rend="sup">e</hi></num> siècle, avant 990, et elle correspond sans
             doute à la réorganisation de l’Église bretonne au retour de l’émigration massive qui avait accompagné les invasions scandinaves.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les évêques</head>
           <p>Une charte du duc Conan I<hi rend="sup">er</hi> datée de 990 nous permet de connaître le nom des neuf évêques à cette date. À partir de
             cette liste, dont l’authenticité a été critiquée mais qui semble pourtant digne de confiance, on peut établir des listes épiscopales plus
             ou moins bien renseignées selon les évêques et les diocèses. En effet, si nous connaissons assez bien les différents prélats qui se sont
             succédés à Nantes et à Rennes, les listes pour le Léon et Tréguier sont plus que fragmentaires.</p>
         </div>
-      </div><div n="2" type="part"><head n="Première partie">Vers une définition de l’acte épiscopal en Bretagne</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Vers une définition de l’acte épiscopal en Bretagne</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La définition de l’acte épiscopal : historiographie et problèmes</head>
           <p>Bien que la recherche s’attache depuis longtemps aux actes d’évêques, l’acte épiscopal est en soi assez difficile à définir : longtemps
             considéré comme un aspect particulier de la diplomatique ecclésiastique ou de la diplomatique privée, il ne semble pas présenter de
@@ -115,7 +117,7 @@
           <p>Ces réflexions préalables, nourries des exemples d’autres diocèses français déjà étudiés, permettent donc d’établir des critères servant
             à définir un corpus d’étude qui s’avère vaste et diversifié quant à la forme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Approche quantitative</head>
           <p>Les deux cent huit actes que compte le corpus pour toute la Bretagne sont très inégalement répartis dans le temps, puisque on a conservé
             vingt-cinq fois plus d’actes pour la décennie 1151-1160 que pour celle de 1000-1010. Le nombre d’actes émis connaît donc une croissance
@@ -142,7 +144,7 @@
             ducs émettaient globalement plus d’actes que les évêques, la situation se renverse bien vite au profit des évêques, l’acte épiscopal
             devenant avec les années et surtout après 1100 le type le plus répandu d’acte passé par une autorité publique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’appréhension de l’acte par les évêques</head>
           <p>Afin de tenter d’expliciter la conception que pouvaient avoir les évêques de leurs actes, plusieurs approches sont possibles. La première
             consiste à analyser le discours diplomatique et à y relever divers indices, au premier rang desquels on trouve les dénominations des
@@ -167,8 +169,8 @@
             considérés comme publics. Seul fait exception le diocèse de Quimper, dans lequel l’acte épiscopal reste essentiellement privé jusque vers
             les années 1120.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Genèse et mise en forme</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Genèse et mise en forme</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les conditions de la création de l’acte</head>
           <p>Dans l’analyse des procédés conduisant à la création d’un acte, il convient en premier lieu de savoir qui a l’initiative de l’action.
             Dans la plupart des cas, c’est le bénéficiaire qui formule une demande, une <hi rend="i">petitio</hi>, à l’évêque, qui peut toutefois à
@@ -181,7 +183,7 @@
             deuxième moitié du <num>xi<hi rend="sup">e</hi></num> siècle, à Rennes au moins depuis les années 1120 et à Alet au plus tard vers
             1150.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Composer l’acte</head>
           <p>Afin de bien comprendre les processus qui donnent naissance aux actes, il faut s’attacher à l’étude des formulaires employés. En
             Bretagne, certaines abbayes bénéficiaires emploient des formulaires assez caractéristiques : c’est en particulier le cas de Landévennec et
@@ -200,7 +202,7 @@
             même traitement : le breton est clairement identifié comme une langue à part, souvent non latinisable et donc laissée telle quelle ou
             entièrement traduite en latin, alors que le roman est lui bien plus souvent latinisé et se fond plus facilement dans le texte.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Rédiger et mettre en forme</head>
           <p>L’étude des différents formats de parchemin utilisés laisse entendre qu’encore une fois, les pratiques varient beaucoup d’un diocèse à
             l’autre. Une constante semble pourtant se dessiner : l’emploi de formats plus ou moins standardisés, sans qu’une évolution chronologique
@@ -212,7 +214,7 @@
             de grande originalité, en dehors du sceau de Quiriac, copié sur les bulles pontificales, et de celui d’Alain, évêque de Rennes au milieu
             du <num>xii<hi rend="sup">e</hi></num> siècle, qui est d’un type byzantin assez rare.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Quelques aspects concrets des pratiques instrumentaires épiscopales</head>
           <p>Les actes permettent de connaître une partie du fonctionnement concret des chancelleries. En particulier, on constate que le lieu où est
             passé l’acte n’est pas anodin. À Rennes, presque tous les actes sont passés dans la cité épiscopale, le plus souvent dans la <hi rend="i">camera</hi> de l’évêque, alors qu’à Nantes, l’évêque se déplace beaucoup plus et rédige souvent ses actes chez le bénéficiaire ou sur
@@ -231,8 +233,8 @@
             siècle, laisse supposer qu’en l’absence de chancellerie et selon des modalités en réalité traditionnelles, c’est la chapelle qui s’occupe
             de l’instrumentation.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">L’évêque « au miroir de ses actes »</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">L’évêque « au miroir de ses actes »</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’expression du pouvoir épiscopal dans les actes</head>
           <p>Au travers des actes épiscopaux, se lit la conception que les prélats se faisaient de leur fonction. Le plus souvent, l’évêque est
             présenté comme un gardien et un garant de la paix, soit qu’il la protège contre une rupture éventuelle, soit qu’il la rétablisse en cas de
@@ -243,7 +245,7 @@
             Tréguier et Quimper, l’hésitation entre plusieurs titulatures trahit une volonté de rattacher le siège qui à une tradition antique parfois
             fantasmée, qui à un grand saint fondateur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La politique diocésaine de l’évêque</head>
           <p>Les actes sont également un bon élément pour connaître les pratiques de gouvernement diocésain. Le « clergé » qui dans la tradition doit
             assister l’évêque se résume le plus souvent au chapitre, comme à Rennes, Dol, Quimper, Saint-Brieuc, et Vannes, ou bien aux archidiacres
@@ -273,7 +275,7 @@
             habituelles d’auxiliaires de l’évêque. La mise en place des doyens et des doyennés est moins bien connue du fait de leur discrétion dans
             les sources ; il est sûr néanmoins que dans le diocèse de Nantes en particulier leur rôle n’était pas négligeable.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’évêque dans la société</head>
           <p>Les actes sont enfin un bon moyen de connaître les relations de l’évêque avec le monde qui l’entoure et son inscription dans la société.
             Son ministère l’amène à agir souvent de concert avec d’autres évêques : il n’est pas rare que les évêques bretons se rassemblent pour
@@ -299,16 +301,14 @@
             particulièrement au fait que par deux fois au moins, au début du <num>xi<hi rend="sup">e</hi></num> siècle et en 1141, une charte ducale
             soit rédigée par la chancellerie de l’évêque de Rennes.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Il apparaît au terme de cette étude que les évêques bretons n’ont pas eu une pratique de l’écrit très homogène, mais que chaque diocèse a
           développé des traditions particulières, infirmant l’hypothèse qu’un diocèse en particulier ait pu jouer le rôle de modèle pour les autres.
           Bien plus, il semble que les diocèses de Nantes et Rennes aient systématiquement choisi des solutions opposées, proposant des modèles très
           différents tant dans le domaine de la diplomatique que dans leurs conceptions du pouvoir. Reste que les évêques ont en Bretagne joué un rôle
           important de diffusion des pratiques documentaires.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="8"><head>Édition</head>
         <p>L’édition regroupe les actes des évêques des neuf diocèses bretons, présentés par diocèse. Chaque diocèse fait l’objet de deux séries
           d’actes. La première présente les actes dont l’évêque est l’auteur nécessaire : il s’agit en premier lieu des chartes épiscopales, mais
           aussi des notices dans lesquelles l’évêque est l’auteur exclusif de l’action juridique, ou dans lesquelles son absence invaliderait
@@ -320,7 +320,6 @@
         <p>Planches : actes originaux et sceaux (originaux et dessins). — Cartes. — Plan de l’ancien palais épiscopal de Rennes. — <hi rend="i">Index
             nominum.</hi></p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

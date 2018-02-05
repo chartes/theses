@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Notoriété locale et service du roi en Bordelais</title>
-        <title type="sub">Marc-Antoine de Gourgue, de l’héritage d’Ogier de Gourgue à la première présidence du parlement de Bordeaux</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Notoriété locale et service du roi en Bordelais</title><title xml:lang="fr" type="sub">Marc-Antoine de Gourgue, de l’héritage d’Ogier de Gourgue à la première présidence du parlement de Bordeaux</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Courbin, Elsa">Elsa Courbin</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201008.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Marc-Antoine de Gourgue, grande figure bordelaise du début du <num>xvii<hi rend="sup">e</hi></num> siècle, doit sa renommée à l’exercice de
           la première présidence du parlement de Bordeaux entre 1617 et 1628, mais aussi à l’ascension socio-professionnelle de son père Ogier de
           Gourgue, couronnée par l’anoblissement. Les destinées du père et du fils sont à ce point imbriquées que l’étude des dimensions publique et
@@ -70,7 +73,7 @@
           dans la sphère privée, Marc-Antoine de Gourgue est néanmoins un représentant de ses concitoyens auprès du roi ; cette position, qu’il
           revendique et qui est lui reconnue par ses contemporains, peut alors le conduire à s’opposer à des décisions de la monarchie.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude d’une famille gagne à s’appuyer sur des archives privées qui puissent renseigner sur son patrimoine (les titres de propriété, des
           terriers, des actes de vente et d’achat) et sa transmission (en particulier les contrats de mariage et les testaments), tout en restituant
           la mémoire de la lignée. Malheureusement, les hasards de la conservation font qu’une infime partie des fonds privés conservés aux archives
@@ -82,9 +85,8 @@
           Bordeaux. Les secondes – œuvres artistiques et récits historiques consacrés à Marc-Antoine de Gourgue – sont indispensables pour explorer sa
           personnalité, mais certaines s’apparentent à des textes hagiographiques, qu’il convient de manipuler avec précaution.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Marc-Antoine, héritier d’Ogier de Gourgue</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Marc-Antoine, héritier d’Ogier de Gourgue</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un père issu d’une famille de petite noblesse ?</head>
           <p>Les origines du père de Marc-Antoine de Gourgue, et par conséquent de la lignée, soulèvent des interrogations : Ogier est-il issu d’une
             famille de petite noblesse, comme tendent à le prouver nombre de généalogies, ou y a-t-il eu a posteriori une « reconstruction
@@ -94,7 +96,7 @@
             processus a pris appui, sans aucun doute, sur l’exercice d’offices de finance de très bon niveau local et sur l’achat concomitant de
             terres titrées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le service de la monarchie et de la personne royale</head>
           <p>Ogier de Gourgue a consacré trente-six ans de sa vie à sa carrière dans le monde des finances. Son engagement est le signe de sa volonté
             de réussir socialement en se mettant au service de la royauté, et les charges importantes qu’il a occupées lui ont toujours servi de
@@ -105,7 +107,7 @@
             aussi toute sa famille et ses descendants, élevés dans l’esprit de service à la monarchie comme source d’honneurs, de dignité et de
             prestige.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une fortune considérable</head>
           <p>Réaliser l’étude de la fortune constituée par Ogier de Gourgue permet avant tout d’évaluer l’héritage qu’il a légué à ses descendants, et
             en premier lieu à son fils Marc-Antoine. Celle-ci lui permet de se porter acquéreur d’un grand nombre d’offices de finance, mais aussi de
@@ -114,7 +116,7 @@
             permettent de bénéficier d’une forte assise locale et même « régionale », puisque ses possessions s’étendent dans tout le Sud-Ouest : son
             aire d’influence et sa fortune considérables en font par conséquent un appui idéal pour le pouvoir royal.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le goût du luxe et de la gloire : vivre noblement</head>
           <p>L’emprise locale d’Ogier de Gourgue passe également par un mode de vie noble. Son aisance financière lui permet ainsi de mettre en scène
             sa nouvelle position sociale, qu’il voit au sommet de la société bordelaise. Il fait en effet preuve tout au long de sa vie d’une volonté
@@ -125,7 +127,7 @@
             était signifiant pour ses contemporains. Ogier de Gourgue devient ainsi le seigneur de Vayres, château et terre qu’il achète au roi de
             Navarre et qu’il entreprend de restaurer pour lui redonner le lustre qui convient à un personnage de son rang.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Un héritage</head>
           <p>Ogier de Gourgue a accumulé de grandes richesses au cours de sa vie, s’est rendu maître de grands ensembles fonciers. Au terme de sa vie,
             il s’agit alors pour lui d’organiser son héritage, dans le but de perpétuer son patrimoine au travers de ses descendants. En effet, un
@@ -133,8 +135,8 @@
             est, en tant que fils aîné survivant, le principal héritier de son père et celui qui est destiné à accroître la fortune et la renommée
             familiales.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Marc-Antoine de Gourgue, premier président du parlement de Bordeaux</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Marc-Antoine de Gourgue, premier président du parlement de Bordeaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’idéal du parfait magistrat</head>
           <p>Que signifie être un homme du roi au début du <num>xvii<hi rend="sup">e</hi></num> siècle en Guyenne, province à l’histoire et au passé
             plutôt mouvementés ? Devenir magistrat et occuper la fonction prestigieuse de premier président du parlement de Bordeaux impose d’abord à
@@ -145,7 +147,7 @@
             s’est avéré riche d’enseignements : les témoignages contemporains et postérieurs à l’époque du premier président dressent tous en effet le
             portrait du « parfait magistrat » fidèle et zélé, consacrant sa vie – et sa santé – à l’exercice de sa charge.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La nécessité d’avoir recours à un homme du roi dans le Bordelais du début du xviie siècle</head>
           <p>Être un homme du roi sous-entend également relayer l’autorité de la monarchie dans le royaume. La nécessité pour le souverain de placer
             un homme de confiance à la tête du parlement de Bordeaux existe bel et bien. En effet, l’éloignement du centre du pouvoir, l’instabilité
@@ -155,7 +157,7 @@
             possessions immobilières et des stratégies matrimoniales, qui ancrent Marc-Antoine de Gourgue et sa famille dans la région bordelaise et
             plus largement dans un grand Sud-Ouest.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La fonction de premier président ou comment assurer la direction d’une cour souveraine</head>
           <p>Relais local des décisions du pouvoir central, exemple vivant mais distant de décence et de gravité qu’impose le modèle du « parfait
             magistrat », Marc-Antoine de Gourgue est également le chef d’une cour souveraine, dont le pouvoir est très important au niveau local.
@@ -163,7 +165,7 @@
             résistances des parlementaires à accepter un nouveau mode d’exercice de la justice et à introduire des réformes dans l’institution
             judiciaire.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le premier président : un intermédiaire entre le pouvoir central et le pouvoir local</head>
           <p>Marc-Antoine de Gourgue tente bien sûr de concilier les intérêts de la Couronne avec ceux de sa compagnie et de sa province. Toute la
             complexité de sa charge réside dans cette double responsabilité. Figure exemplaire du fidèle, il se « donne » à un patron, à la personne
@@ -176,8 +178,8 @@
             conflit qui l’oppose à la fin de sa vie au pouvoir royal au sujet de l’arrivée de l’intendant Servien en Guyenne signe la défaite des
             agents du roi traditionnels, dont il est l’un des représentants éminents.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La sphère privée d’un premier président</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La sphère privée d’un premier président</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Son implication dans les débats de son époque : les questions religieuses</head>
           <p>Dans sa vie privée, le premier président doit également renvoyer l’image du « parfait magistrat ». En effet, s’il désire que les
             parlementaires bordelais soient des représentants dignes du pouvoir royal, s’il veut pouvoir être en mesure de proposer des réformes, il
@@ -188,13 +190,13 @@
             l’établissement de couvents de Jésuites ou de Carmélites, avec le concours de ses deux épouses successives, Marie Séguier et Olive de
             Lestonnac.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La constitution de réseaux : une emprise locale ?</head>
           <p>Grâce à ses mariages, mais aussi aux réseaux d’obligés qu’il se constitue, Marc-Antoine de Gourgue s’insère sans difficulté dans la
             société bordelaise parlementaire et nobiliaire, bénéficiant là-aussi des liens tissés par son père dans les différents milieux
             socio-professionnels de la ville et de la région.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La constitution de sa fortune</head>
           <p>Les nombreux récits consacrés à Marc-Antoine de Gourgue le présentent comme un homme peu intéressé par ses affaires et par l’augmentation
             de sa fortune. Cette image est le fruit d’une volonté du premier président d’échapper à toute critique vis-à-vis de son mode de vie,
@@ -207,7 +209,7 @@
             manière attentive son patrimoine, sans paraître attaché à faire l’acquisition de nouveaux domaines. Il vend même une part du legs de son
             père, amputant le grand ensemble foncier dont il a hérité.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le « destin d’une lignée »</head>
           <p>Marc-Antoine de Gourgue est le premier de sa lignée à intégrer le monde de la robe et inaugure une longue période de possession d’offices
             de justice par la famille. Pourtant, en observant les générations postérieures, on ne peut que constater un lent mais inéluctable déclin
@@ -216,9 +218,7 @@
             elles ne sont pas revêtues du même prestige, même s’il convient de signaler l’entrée de la branche aînée des de Gourgue au parlement de
             Paris à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>On pourrait résumer la vie et la carrière de Marc-Antoine de Gourgue à la rencontre entre une destinée familiale et un mouvement plus
           global qui est le service du pouvoir royal par le biais des offices. La réussite de Marc-Antoine est d’abord l’illustration du succès de la
           stratégie familiale mise en place par son père, qui a fait le choix des offices, pour obtenir pouvoir, reconnaissance sociale et fortune.</p>
@@ -229,10 +229,9 @@
           la monarchie, lorsqu’il jugeait sa politique néfaste pour le bien public – et parfois pour ses propres intérêts et ceux de sa compagnie.
       </p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Traduction partielle des « Parentalia ». — Reconstitutions généalogiques. — Photographies et plans du château de Vayres. — Cartes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

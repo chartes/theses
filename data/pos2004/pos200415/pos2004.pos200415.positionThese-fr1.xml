@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’émigration espagnole à Paris (1813-1844)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’émigration espagnole à Paris (1813-1844)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Leblay, Anne">Anne Leblay</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200415.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au <num>xix<hi rend="sup">e</hi></num> siècle, la France est une terre d’asile pour des Espagnols qui fuient leur pays. Entre la fin du Premier
           Empire et la monarchie de Juillet, ce sont des dizaines de milliers d’Espagnols qui y trouvent asile. Les vagues d’émigration espagnole sont
           alors à la fois multiples et provisoires : se succèdent des afrancesados, partisans de Joseph Napoléon, lors de la retraite des Français en
@@ -63,7 +66,7 @@
           l’exploitation de sources, tantôt abondantes, tantôt lacunaires, la situation d’exception de la capitale, ville interdite aux réfugiés,
           enfin, des préjugés sur l’émigration politique de Paris, supposée privilégiée.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Cette étude prend essentiellement appui, en raison de l’absence d’archives locales parisiennes, détruites en 1871 lors des incendies de la
           Commune, sur des documents d’archives conservés dans la sous-série F<hi rend="sup">7</hi> (police générale), au Centre historique des
           Archives nationales, à Paris.</p>
@@ -74,9 +77,8 @@
           nationales à Madrid. Ces sources d’archives ont été complétées par des sources imprimées, conservées à la Bibliothèque nationale de France :
           presse espagnole, brochures politiques.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le contexte d’accueil des réfugiés espagnols à Paris (1813-1844)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le contexte d’accueil des réfugiés espagnols à Paris (1813-1844)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Contexte de l’émigration espagnole</head>
           <p>L’Espagne connaît une période assez troublée dans la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle. Après la défaite de la France
             en 1813, Ferdinand VII arrive sur le trône et règne en roi absolu, allant jusqu’à rétablir l’Inquisition. Il est alors renversé lors du
@@ -92,7 +94,7 @@
             à son tour en 1843, date à laquelle ce sont les espartéristes qui doivent alors quitter leur pays. En outre, certaines régions comme la
             Catalogne restent assez agitées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La législation d’accueil des réfugiés espagnols</head>
           <p>Le réfugié politique se trouve dans une situation juridique ambiguë. Il est soumis à la loi du pays d’accueil en tant qu’étranger mais,
             exilé de fait sinon de droit, il se trouve en position d’apatride. Le réfugié est donc un étranger auquel la France applique assez
@@ -105,7 +107,7 @@
             politique d’astreinte de résidence, tout en diminuant progressivement les taux de secours. Devant le flot de réfugiés, elle tente aussi de
             développer une politique d’intégration.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Correspondance du ministère de l’Intérieur autour des réfugiés politiques espagnols</head>
           <p>L’arrivée de nombreux réfugiés en France entraîne une production documentaire massive de la part de l’administration qui tente de
             contrôler le mieux possible cette population mouvante. Mais les moyens, du moins sous la Restauration, restent limités. Les fonctionnaires
@@ -120,8 +122,8 @@
             cette masse documentaire doit cependant être relativisée, en raison du rôle important que joue aussi l’oralité dans les démarches
             administratives.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La vie politique des Espagnols à Paris et leurs relations avec les autorités françaises</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La vie politique des Espagnols à Paris et leurs relations avec les autorités françaises</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La vie politique des Espagnols au quotidien. Le regard tourné vers la Péninsule</head>
           <p>Ces Espagnols résidant en France pour des raisons politiques, il apparaît assez légitime de consacrer une large part de l’étude à leur
             activité politique. Les manifestations les plus visibles se font au travers de la production imprimée. Les Espagnols recourent assez peu à
@@ -135,7 +137,7 @@
             nécessaire action clandestine des réfugiés, dont le caractère peut aussi s’expliquer par la mentalité d’une époque et la culture politique
             de leur pays d’origine, les amènent à adopter des pratiques parfois proches de celles de la franc-maçonnerie ou du carbonarisme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les Espagnols dans la vie politique française. Leur participation aux Cent-Jours et à la révolution de Juillet</head>
           <p>Les réfugiés espagnols se sont assez peu impliqués dans la vie politique française, l’essentiel de leurs préoccupations va en effet vers
             les affaires péninsulaires. Néanmoins lors des grands événements, les réfugiés espagnols prennent position. Lors des Cent-Jours, les
@@ -156,7 +158,7 @@
             à la production de manifestes rédigés par des réfugiés espagnols de tous milieux qui remettent en cause les choix politiques de la France
             au lendemain de la Révolution.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Espagnols et l’administration parisienne</head>
           <p>Paris, lieu d’accueil d’un nombre limité de réfugiés, à l’accès difficile, constitue néanmoins une place fort originale pour les émigrés,
             puisque s’y trouvent réunies les institutions politiques françaises, les administrations centrales, ainsi que les représentations
@@ -175,8 +177,8 @@
             espagnole de sociétés non politisées, à but charitable ou culturel. L’individualisme paraît caractériser l’émigration espagnole, ce que
             peuvent traduire le faible développement de la presse espagnole ou le recours limité à des pétitions collectives.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La vie quotidienne des Espagnols à Paris</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La vie quotidienne des Espagnols à Paris</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Portrait des Espagnols de Paris</head>
           <p>L’Espagnol­type de Paris est jeune, vient plutôt du nord de l’Espagne, même si le vieillissement de la population réfugiée à Paris est
             perceptible sous la monarchie de Juillet. Les Espagnols ont aussi la particularité, par rapport aux autres nationalités, d’être plus
@@ -191,7 +193,7 @@
             vivent essentiellement dans les quartiers de la rive droite les plus commerçants, entre les boulevards et la Seine, vers la place Vendôme
             et à Montmartre. Mais il ne s’agit pas de “ ghettoïsation ”.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Sensibilités et sociabilités espagnoles à Paris</head>
           <p>L’expérience du déracinement constitue évidemment une épreuve pour les réfugiés. La solitude peut affecter les Espagnols de toute
             condition. Beaucoup d’émigrés résidant à Paris semblent meurtris ; les blessures ne sont pas rares. En revanche, seule une minorité de ces
@@ -210,7 +212,7 @@
             forme “ hiérarchique ”, lorsque le réfugié s’identifie à la clientèle d’une grande personnalité émigrée, mais des liens informels,
             d’amitié ou d’assistance se nouent également.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Représentations de l’émigration espagnole</head>
           <p>Les Français de Paris, probablement habitués à voir défiler des populations étrangères dans la capitale, ne semblent pas avoir projeté un
             regard spécifique sur les réfugiés espagnols. Les incidents entre Français et Espagnols dans la capitale sont peu nombreux. Il n’est pas
@@ -236,9 +238,7 @@
             “ liberticide ”, mais seulement ceux d’un parti. L’arrivée incessante de réfugiés espagnols brouille probablement la lecture des
             événements espagnols chez les Français.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La recherche d’un asile politique en France n’est pas un phénomène proprement espagnol. Néanmoins l’émigration espagnole se caractérise par
           la succession de vagues de réfugiés plus ou moins nombreux, défendant parfois des principes politiques contraires à ceux du gouvernement
           français. Les Espagnols ont laissé peu de souvenirs de leur présence, surtout en raison de leur faible implication dans la vie politique ou
@@ -248,13 +248,12 @@
           financiers et humains qui y sont disponibles, aux possibilités d’expression offertes par une imprimerie parisienne importante. Mais
           l’attraction propre exercée par la seule renommée de la capitale ne doit pas être négligée.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Documents produits par ou pour le ministère de l’Intérieur autour des réfugiés : correspondance, bulletin individuel de réfugié,
           certificat de réfugié. ­ Modes d’expression des Espagnols : brochure politique, adresse, manifeste, extraits de périodiques. ­
           Représentations et expressions des Français à l’égard des réfugiés ou des Espagnols : discours parlementaire, poèmes, illustration extraite
           des <hi rend="i">Étrangers à Paris</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

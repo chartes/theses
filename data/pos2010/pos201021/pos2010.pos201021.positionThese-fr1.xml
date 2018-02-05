@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La chambre du roi à Versailles ou l’espace de la majesté</title>
-        <title type="sub">Intérieurs, institutions et cérémonial au xviie siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La chambre du roi à Versailles ou l’espace de la majesté</title><title xml:lang="fr" type="sub">Intérieurs, institutions et cérémonial au xviie siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Richard, Vivien">Vivien Richard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201021.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La chambre du roi, ou chambre de Louis XIV, est l’un des principaux espaces du château de Versailles avec la galerie des Glaces et la
           chapelle. Pourtant elle n’a encore jamais fait l’objet d’étude spécifique. Seuls quelques articles font état de l’évolution de son
           aménagement et de sa décoration, mais aucune analyse ne lui a été entièrement consacrée. La chambre de Louis XIV attire l’attention, mais ce
@@ -77,7 +80,7 @@
           projets. Ainsi, fort de cette approche transversale, il est possible de voir à quoi ressemblaient ces espaces, comment l’on y vivait et
           quelles étaient leurs fonctions dans l’exercice de la majesté.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude de la chambre du roi à Versailles nécessite d’abord de prendre en compte l’espace et la décoration de la pièce : cette approche
           architecturale mobilise des sources variées que l’on peut regrouper en trois grandes catégories : les sources figurées, les sources offertes
           par le Garde-Meuble de la Couronne et les inventaires de Versailles, ainsi que les éléments livrés par les mémorialistes. Les sources
@@ -101,9 +104,8 @@
           permettent, grâce à leur expérience du temps et des lieux et leur connaissance de la cour et de son cérémonial, de compléter l’image que
           l’on se faisait de l’espace de la chambre du roi.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre liminaire">La situation de la Chambre du roi au Moyen Âge et à la Renaissance</head>
-        <p>Tout en revenant sur le terme « chambre », sur l’apparition de l’« appartement », sur leurs évolutions et les traditions institutionnelles
+          <div n="3" type="part"><head n="0" type="chapter">La situation de la Chambre du roi au Moyen Âge et à la Renaissance</head>
+        <p n="1" type="chapter">Tout en revenant sur le terme « chambre », sur l’apparition de l’« appartement », sur leurs évolutions et les traditions institutionnelles
           et auliques, il convient de s’intéresser à l’héritage transmis aux premiers rois Bourbons. En effet, à la fin du Moyen Âge et durant la
           Renaissance, la cour devient le lieu d’affirmation du caractère politique de l’institution de la Chambre, au départ essentiellement
           domestique, extension de la maison du roi. L’évolution des usages de cour exerce une influence sur l’architecture des distributions. En
@@ -114,13 +116,13 @@
           coucher commande un nombre variable de cabinets. Différents partis sont employés : verticalité à Vincennes, double distribution au Louvre.
           Tout au long du Moyen Âge l’institution de la Chambre se structure comme l’un des principaux départements de l’Hôtel du roi au service
           direct de la personne du roi. L’héritage médiéval est donc pluriel.</p>
-        <p>Le <num>xvi<hi rend="sup">e</hi></num> siècle tend à isoler le roi en construisant autour de sa chambre un espace sacré renforcé par le
+        <p n="2" type="chapter">Le <num>xvi<hi rend="sup">e</hi></num> siècle tend à isoler le roi en construisant autour de sa chambre un espace sacré renforcé par le
           cérémonial, tout en maintenant un accès relativement large. L’architecture royale évolue avec les institutions et leur cérémonial. La cour
           d’Henri III est à ce titre un moment fondateur dans la vie de cour et se trouve au cœur de la genèse de la chambre royale. Sa tentative
           d’introduire plusieurs antichambres et une étiquette très précise pour le lever et le coucher indispose, mais annonce le <num>xvii<hi rend="sup">e</hi></num> siècle qui en hérite et en poursuit la mise en œuvre. Les fonctions et le quotidien de la chambre du roi à
           Versailles ne peuvent être compris qu’à la lumière de cet héritage du Moyen Âge et de la Renaissance.</p>
-      </div><div n="2" type="part"><head n="Première partie">Les chambres royales à Versailles : du relais de chasse à l’installation de la cour (1623-1684)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les chambres royales à Versailles : du relais de chasse à l’installation de la cour (1623-1684)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La chambre du roi dans un château en quête de majesté (1623-1669)</head>
           <p>Entre 1623 – date d’édification du premier château de Louis XIII – et 1669 – début des grands travaux entrepris par Louis XIV –, la
             chambre du roi change plusieurs fois d’emplacement. La première chambre de Louis XIII au premier étage du corps central (1623-1630)
@@ -135,7 +137,7 @@
             miroirs ». Mais dès 1666, Louis XIV s’installe au rez-de-chaussée dans l’appartement de sa mère. La chambre du roi commande salon et
             cabinets et se signale toujours plus par la richesse de l’ameublement et de l’ornementation.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Entre majesté et confort : les chambres du roi (1669-1684)</head>
           <p>Le souhait d’édifier des lieux de fêtes durables pour accueillir la cour et de disposer d’appartements plus vastes pour permettre les
             cérémonies de la cour entraîne une profonde transformation du château. Après de nombreuses tergiversations, une nouvelle enveloppe ceint
@@ -154,7 +156,7 @@
             chambres de Louis XIV montre la tension constante entre le prestige d’une chambre de parade et la recherche de l’intimité de chambres à
             coucher plus privées.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les institutions de la Chambre du roi, des Valois à Versailles</head>
           <p>La Chambre du roi évolue peu sous les règnes d’Henri IV et de Louis XIII, en dehors du nombre de charges qui se fixe et du retour aux
             distributions antérieures aux règlements d’Henri III. On peut considérer le règne du dernier Valois comme une parenthèse et insister sur
@@ -176,8 +178,8 @@
             Valois. Le roi a constamment cherché à réduire leur nombre, mais pas celui des serviteurs. La Chambre du roi est un service fastueux, mais
             maîtrisé et raisonné.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">La majesté spatialisée (1684-1715)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La majesté spatialisée (1684-1715)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La chambre de 1684 : le brouillage des distributions traditionnelles</head>
           <p>Dès l’installation de la cour en 1682, le roi abandonne le grand appartement aux cérémonies de la cour et aux soirées d’appartement. Sa
             chambre ne joue plus qu’un rôle symbolique, certes important mais purement formel. L’appartement de la cour de Marbre devient son
@@ -194,7 +196,7 @@
             que Louis XIV n’utilise que quelques années avant de chercher d’autres espaces « particuliers » chez Madame de Maintenon ou dans les
             châteaux et les pavillons satellites de Versailles.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La chambre de Louis XIV : pièce centrale du château de Versailles</head>
           <p>En 1700 Louis XIV décide l’un des derniers grands chantiers, au demeurant limité dans son étendue et sa visibilité, mais très fort
             symboliquement : le réaménagement de son appartement et l’installation de sa chambre à coucher en plein cœur du château, à la place du
@@ -209,7 +211,7 @@
             1700 pour le duc d’Anjou, nouveau roi d’Espagne, et en 1701 pour le roi durant les travaux de la cour de Marbre. Enfin, la grande chambre
             du roi reprend toute sa dimension symbolique lors de la mort de Louis XIV, dont le corps y est exposé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La Chambre du roi à Versailles : cœur de la majesté</head>
           <p>La chambre du roi accueille une grande partie de la vie de la cour. Le cérémonial et l’étiquette quotidienne y assurent le service des
             deux corps du roi, sans qu’il soit toujours possible de les distinguer l’un de l’autre. La vie du roi alterne les moments publics de la
@@ -235,7 +237,7 @@
             du « corps physique » du roi, puisqu’elle est pour le roi un lieu de vie, de son service quotidien, de repos, d’agrément, mais également
             de maladie et d’agonie.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Épilogue">La destinée des chambres du roi au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>Lors de son retour à Versailles, Louis XV occupe la chambre de Louis XIV. En 1738, il s’installe dans une nouvelle chambre à coucher. Il
             revient à la distinction habituelle entre chambre de parade et chambre à coucher à laquelle Louis XIV avait renoncé. Le lever et le
@@ -252,9 +254,7 @@
             chambre de Louis XIV, tel un sanctuaire monarchique, les évolutions architecturales et institutionnelles ne confortent pas la chambre
             comme le plus important espace de majesté.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <head>Le mythe de la Chambre du roi</head>
         <p>La chambre du roi est par nature un espace privé, par fonction un espace public pour la vie de cour et de représentation du roi, et par
           nécessité un service quotidien avec son personnel dédié, ses règles et sa hiérarchie. Son emplacement dans les résidences royales exprime
@@ -278,11 +278,10 @@
         <p>S’il faut voir dans la chambre un mythe, c’est bien celui d’un espace fixé par le hasard de l’histoire et de l’architecture au centre d’un
           monde, tel un point d’ancrage, une image de la monarchie et de la majesté du roi.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Inventaires du château de Versailles. — Relation de la mort de Louis XIV et de Louis XV. — État du personnel de la Chambre du roi en 1789.
       </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

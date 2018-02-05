@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Témoigner du présent : le Journal de Hyacinthe Chobaut (1939-1946)</title>
-        <title type="sub">Édition critique et commentaire.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Témoigner du présent : le Journal de Hyacinthe Chobaut (1939-1946)</title><title xml:lang="fr" type="sub">Édition critique et commentaire.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Challéat, Violaine">Violaine Challéat</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200305.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>En janvier 1939, Hyacinthe Chobaut, archiviste départemental de Vaucluse, débute un journal qu’il poursuit durant plus de six ans,
           consignant méticuleusement chaque jour des notes sur ces Années noires de la guerre et de l’Occupation. Cette expérience d’écriture
           personnelle au cœur de l’événement n’est pas unique : intellectuels, journalistes, hommes politiques ou encore simples membres de la société
@@ -72,7 +75,7 @@
           dans le journal et de la recherche de leurs sources possibles, est aussi une forme de réponse à une variante de la lancinante question :
           « qui savait quoi ? », alors plutôt formulée ainsi : « qui pouvait savoir quoi ? ».</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Outre les dix-neuf cahiers manuscrits composant le journal, sous leur forme originale ou reproduite, la recherche s’est fondée sur deux
           ensembles principaux de sources : d’une part, les fonds issus de l’activité propre de Chobaut, en tant qu’archiviste départemental de
           Vaucluse mais également en tant que directeur du Centre départemental d’information et censeur civil au Contrôle de la presse, ainsi que les
@@ -83,9 +86,8 @@
           contexte et vérifier certaines assertions de l’auteur. Ces différentes sources ont été enrichies par le témoignage de la fille aînée de
           Chobaut.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Hyacinthe Chobaut, archiviste dans la guerre</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Hyacinthe Chobaut, archiviste dans la guerre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation biographique de Hyacinthe Chobaut</head>
           <p>Enfant du Comtat Venaissin, né le 12 septembre 1889 à Avignon, Hyacinthe Chobaut grandit au sein d’une famille ancrée dans la vie
             intellectuelle locale, comme fils unique du docteur Alfred Chobaut, entomologiste, membre et fervent défenseur de l’Académie de Vaucluse.
@@ -104,7 +106,7 @@
             constitue principalement un important dépôt de minutes notariales et se consacre au dépouillement minutieux de ces registres, dont il tire
             des articles scientifiques.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un fonctionnaire des archives face à la guerre</head>
           <p><hi rend="i">Dans les arcanes de l’opinion : le Centre départemental de l’information et le Contrôle de la presse. </hi> — Hyacinthe
             Chobaut occupe durant la Drôle de Guerre des fonctions singulières, ayant trait au contrôle de l’opinion en France. En août 1939, il doit
@@ -137,8 +139,8 @@
               France</hi>, journal né d’une publication clandestine. Mais aucun document ne permet d’éclaircir son rôle ou ses contacts supposés avec
             les membres de la Résistance locale. Il semble qu’il s’en soit principalement tenu à sa position d’observateur, de témoin.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Création du témoignage</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Création du témoignage</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le journal</head>
           <p><hi rend="i">Présentation matérielle et pratique d’écriture. </hi> — Le journal de compose de dix-neuf cahiers d’écoliers de petit
             format. Les années 1940, 1943 et 1944 occupent une place prépondérante dans cet ensemble dont la présentation évolue peu, hormis l’espace
@@ -153,7 +155,7 @@
             brusque fin peut être la marque d’un désenchantement face à la situation internationale incertaine même après la capitulation
             allemande.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Recherche et transmission de l’information</head>
           <p>Pour élaborer son témoignage, le rédacteur utilise des sources variées, sources ordinaires, secondaires ou privilégiées. Il dépouille
             soigneusement des titres de la presse locale, de diverses tendances politiques, et opère de même pour la presse nationale. La défaite,
@@ -169,7 +171,7 @@
             chartiste » : il les multiplie et les confronte dans son écrit pour aboutir à une vision du présent, qui se veut objective et proche de la
             réalité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La seconde guerre mondiale sous les yeux du témoin</head>
           <p><hi rend="i">Vivre le conflit au jour le jour. </hi> — Parmi les différents types de nouvelles contenus dans l’ensemble du journal,
             nouvelles à caractère politique international ou diplomatique, nouvelles de type militaire, évolution de la situation politique
@@ -192,22 +194,19 @@
             distante, factuelle. L’autocensure pourrait découler de la volonté de porter témoignage en se dégageant de l’intime ou encore d’un souci
             de réserve dans des circonstances troublées.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Le journal de Hyacinthe Chobaut constitue un témoignage non pas simplement au sens où il rendrait compte absolument fidèlement de son
           présent, mais avant tout parce qu’il offre, selon les termes d’Annette Wieviorka, la possibilité d’une « rencontre avec une voix humaine qui
           a traversé l’histoire, et, de façon oblique, la vérité non des faits, mais celle plus subtile mais aussi indispensable, d’une époque et
           d’une expérience. ». L’édition de ce témoignage vise alors à mettre à disposition d’autrui une source nouvelle.</p>
       </div>
-              <div type="appendix"><head>Édition critique</head>
+          <div type="appendix" n="6"><head>Édition critique</head>
         <p>Le journal a été édité intégralement, au terme d’une transcription qui a cherché à respecter le plus possible le style et les pratiques
           d’écriture de l’auteur, en conservant les abréviations et l’orthographe hésitante de certains toponymes ou patronymes. Les très nombreuses
           identifications de lieux et de personnes cités sont reportées en annexe, hormis lorsqu’elles sont nécessaires à la compréhension immédiate
           du texte. Les notes critiques visent avant tout à restituer le contexte avignonnais méconnu du lecteur et à mettre en valeur les sources
           d’information utilisées par le rédacteur.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

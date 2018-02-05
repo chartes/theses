@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La vie et l’œuvre de Léopold Bellan (1857-1936)</title>
-        <title type="sub">Un philanthrope sous la troisième république.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La vie et l’œuvre de Léopold Bellan (1857-1936)</title><title xml:lang="fr" type="sub">Un philanthrope sous la troisième république.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Charenton, Benoît">Benoît Charenton</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200306.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire des acteurs du secteur privé de l’assistance, et singulièrement des philanthropes, héritiers de la philosophie des Lumières,
           est bien connue pour la première moitié du <num>xix<hi rend="sup">e</hi></num>  siècle, notamment grâce aux travaux de Catherine Duprat. A cette
           époque l’action des philanthropes pallie le manque d’intervention de l’Etat dans le domaine social. Par contraste, les œuvres
@@ -75,7 +78,7 @@
           y a joint une étude monographique du développement de l’œuvre. Enfin, la mise en évidence des divers réseaux unissant les membres de
           l’association permet de développer une approche sociale des collaborateurs de Bellan.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de la Fondation Léopold-Bellan (64, rue du Rocher, 75008 Paris) constituent le principal fonds documentaire utilisé pour cette
           étude : outre leur intérêt pour l’histoire de l’œuvre, elles sont également une source très importante pour retracer la vie du fondateur,
           dont les papiers personnels ont été transférés au siège de l’association après sa mort. Quelques documents complémentaires collectés dans
@@ -93,9 +96,8 @@
           ouvrages anciens à caractère de source, ont été exploités à la Bibliothèque nationale de France, à la Bibliothèque historique de la ville de
           Paris, à la Bibliothèque administrative de la Ville de Paris et au C.E.D.I.A.S.-Musée social.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Une philanthropie républicaine (1857-1914)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Une philanthropie républicaine (1857-1914)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Genèse d’un philanthrope (1857-1894)</head>
           <p>Né dans une famille modeste originaire de Seine-et-Oise, Léopold Bellan, arrivé à Paris dès le milieu des années 1860, poursuit de
             courtes études à l’école Turgot, avant de débuter une carrière de comptable dans une maison de textile du Sentier. Divers éléments
@@ -108,7 +110,7 @@
             groupements philanthropiques et adhère à la franc-maçonnerie. Ses responsabilités au sein des comités radicaux du <num>ii<hi rend="sup">e</hi></num> arrondissement lui
             valent d’être élu en avril 1893 conseiller municipal du quartier du Mail, fonction qu’il occupe jusqu’à sa mort.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La Société d’enseignement moderne pour le développement de l’instruction des adultes (1894-1914) : Naissance et
             développement</head>
           <p>Suite à un appel de la Ligue de l’Enseignement en août 1894 en faveur de l’enseignement « post-scolaire » pour les adolescents et les
@@ -125,7 +127,7 @@
             tels que l’Association polytechnique. Cette croissance rapide semble due en partie à la variété des cours proposés par la société, au
             dynamisme de ses dirigeants et aux appuis dont son président bénéficie auprès du Conseil municipal.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La vie d’une société post-scolaire à la belle époque</head>
           <p>Le fonctionnement de l’œuvre s’appuie sur le réseau des sections ; la direction est assurée par un Conseil composé de représentants du
             corps enseignant de la société et un bureau présidé par Bellan. Un changement important survient en 1905 lors du vote de nouveaux statuts,
@@ -147,7 +149,7 @@
             élevé, la S.E.M. semble pourtant avoir exercé une action réellement efficace au niveau élémentaire pour la qualification de ses élèves
             dépourvus de tout diplôme.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Avant la guerre, l’amorce d’une diversification des activités</head>
           <p>En marge du programme d’enseignement de la société, certains éléments particulièrement dynamiques préfigurent la diversification des buts
             de l’œuvre après la première guerre mondiale. Fondés en 1904, les Cours normaux d’hygiène par la médication familiale s’adressent aux
@@ -161,8 +163,8 @@
             gymnase et divers équipements. Le don fait à la société d’une propriété située dans cette commune permet en outre de prévoir
             l’établissement de deux « écoles de plein air », projets que le déclenchement de la guerre vient interrompre.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Nouveaux enjeux et nouvelles pratiques de la philanthropie (1914-1936)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Nouveaux enjeux et nouvelles pratiques de la philanthropie (1914-1936)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La philanthropie dans la guerre (1914-1918)</head>
           <p>Le déclenchement du conflit désorganise profondément le fonctionnement de la S.E.M. dont l’activité s’effondre brutalement en 1914, à
             l’exception des cours normaux d’hygiène, pour ne reprendre ensuite que progressivement, à un niveau très inférieur à celui de
@@ -175,7 +177,7 @@
             l’association vise dès lors à l’« amélioration morale, intellectuelle, physique et matérielle du peuple ». Son action, qui passe par la
             création de nombreuses filiales, se déploie autour de trois axes principaux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Accueillir les plus faibles</head>
           <p>Le premier volet de l’action de l’Association Léopold-Bellan (A.L.B.) après la guerre a trait à la prise en charge de catégories de
             populations parmi les plus vulnérables. Outre les deux orphelinats de filles qu’elle possède à Bry-sur-Marne, l’A.L.B., désireuse
@@ -188,7 +190,7 @@
             par l’association de ces structures d’hébergement traduit la volonté de ses dirigeants d’assurer la cohésion sociale par la prise en
             charge solidaire des éléments les plus faibles du corps social.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Lutter contre les « fléaux sociaux » : Cancer et tuberculose</head>
           <p>Les préoccupations persistantes des milieux philanthropiques au sujet des ravages exercés par les « fléaux sociaux » que constituent le
             cancer, la tuberculose et la syphilis conduisent l’A.L.B. à développer un important réseau d’établissements médicaux. Ouvert en 1920,
@@ -202,7 +204,7 @@
             plus important de l’association. La variété des services offerts par l’A.L.B. dans le domaine médical fait d’elle un prestataire de lits
             et de services de premier ordre en région parisienne dans les années 1930.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Eduquer et moraliser le peuple</head>
           <p>Un dernier groupe de filiales de l’A.L.B., dans la lignée de son activité de l’avant-guerre, vise à la « moralisation » et à
             l’« amélioration intellectuelle » du peuple. L’activité d’enseignement populaire, remontant aux origines mêmes de la société, se poursuit
@@ -225,8 +227,8 @@
             volonté accrue de moralisation. Quoique respectueuse de la législation sociale et désireuse de la voir se développer, l’association entend
             pourtant continuer à jouer un rôle de premier plan dans la résolution des problèmes d’assistance.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une vie de philanthrope</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Une vie de philanthrope</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La carrière d’un notable républicain</head>
           <p>L’étude du parcours individuel de Léopold Bellan permet de jeter un éclairage complémentaire sur le développement de son association,
             dont il demeure sa vie durant le principal animateur. Au-delà de ses singularités irréductibles, la trajectoire personnelle du fondateur
@@ -247,7 +249,7 @@
             qui l’amène à s’investir à titre individuel dans de nombreuses œuvres : Mutualité maternelle, Société nationale d’encouragement au Bien,
             Musée social, dans lesquelles il exerce des fonctions de responsabilité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’association léopold-bellan : Etude d’un lieu de sociabilité</head>
           <p>L’étude de la composition sociale des membres de la S.E.M., puis de l’A.L.B. permet de mieux connaître les collaborateurs de Bellan et
             de remettre en perspective la personnalité de celui-ci dans le milieu social dans lequel il évoluait. Le Comité de patronage de l’œuvre,
@@ -278,7 +280,7 @@
             des réalisations philanthropiques conformes à ses conceptions sociales, qui anime le fonctionnement de l’A.L.B. L’existence de ce noyau
             soudé de philanthropes constitue sans doute un facteur important pour l’explication du développement réussi de l’association.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le philanthrope, un rôle social sous la troisième république ?</head>
           <p>Il convient en dernier lieu de s’intéresser à la conception de la philanthropie développée par Bellan et ses amis jusqu’à la veille de la
             seconde guerre mondiale. Les dirigeants de l’A.L.B. semblent en effet avoir résumé l’essentiel de leurs conceptions de l’assistance dans
@@ -301,9 +303,7 @@
             1930, la figure de « philanthrope » de Léopold Bellan apparaît ainsi comme le signe de reconnaissance d’un groupe social idéologiquement
             modéré, pour qui elle incarne la forme aboutie d’une solution spécifiquement républicaine de la question sociale.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’histoire de l’Association Léopold-Bellan et de son fondateur illustre le développement réussi d’une grande œuvre d’assistance laïque et
           républicaine : celle-ci continue aujourd’hui encore sous le nom de Fondation à exercer une action philanthropique dans divers domaines de
           l’action sociale. Jusqu’en 1936, la S.E.M. puis l’A.L.B. expriment un idéal de concorde sociale où se remarque la trace persistante du
@@ -323,12 +323,11 @@
           préoccupations sociales d’une fraction de républicains modérés, tenants d’une idéologie libérale atténuée mettent au premier plan les
           valeurs de solidarité et d’entraide pratiquées par les citoyens eux-mêmes, sous l’égide d’un Etat bienveillant mais non hégémonique.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Liste du mobilier possédé par la Société d’enseignement moderne (1905). ­ Programme des sections d’éducation sociale de la S.E.M.
           (1903-1904). ­ Extraits du B <hi rend="i">ulletin mensuel des cours normaux d’hygiène par la médication familiale</hi> : but des cours
           normaux, règlement et sujets de l’examen de 1914.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Philippe V et son Conseil : le gouvernement royal de 1316 à 1322</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Philippe V et son Conseil : le gouvernement royal de 1316 à 1322</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Canteaut, Olivier">Olivier Canteaut</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200008.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le roi doit gouverner par conseil : la théorie féodale de l’<hi rend="i">auxilium et consilium</hi> se conjugue au modèle du droit romain
           pour faire du conseil un élément indispensable au gouvernement. De cette obligation de prendre conseil naît progressivement une véritable
           institution, le Conseil du roi. Il n’est à l’origine qu’un organe consultatif, mais devient de plus en plus une assemblée de gouvernement.
@@ -58,7 +61,7 @@
           au-delà, il faut cerner les hommes qui lui donnent vie, leur position dans la machine gouvernementale et leur action à la tête du royaume, à
           la jonction de deux pratiques du pouvoir, celle des Capétiens et celle des Valois.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p><hi rend="i">Les actes de Philippe V </hi> — Les registres de chancellerie conservés au Trésor des chartes constituent, avec quelques 3 300
           articles, le plus vaste ensemble subsistant d’actes de Philippe V ; leur valeur documentaire est encore accrue par leur diversité. En effet,
           trois séries distinctes de registres coexistent. La première consigne, comme de coutume, des chartes, enregistrées le plus souvent à la
@@ -102,9 +105,8 @@
           relatives à des processus, certes ordinaires, mais parfois complexes et capables d’influer sur la compréhension d’un acte et de sa
           portée.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le conseil du roi</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le conseil du roi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les mots et les réalité du conseil</head>
           <p><hi rend="i">Un problème historiographique </hi> — « Conseil », « grant Conseil », « estroit Conseil », <hi rend="i">universale
               Consilium, majus et secretius Consilium</hi>, « conseil du mois »..., autant de dénominations du Conseil du roi sous Philippe V. Or
@@ -130,7 +132,7 @@
             mais il ne se juge nullement tenu de le consulter pour ses propres décisions. Le fonctionnement de ce Conseil du mois n’est au demeurant
             attesté que durant dix-huit mois, jusqu’en novembre 1320.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’organisation du Conseil</head>
           <p>Le Conseil du roi est donc unique, mais son organisation n’est pas uniforme tout au long du règne de Philippe V.</p>
           <p><hi rend="i">La fréquence des séances du Conseil </hi> — Ainsi la fréquence des séances évolue-t-elle fortement, au mépris des
@@ -156,7 +158,7 @@
             notaires royaux ; si Pierre Barrier est de loin le plus actif et semble attaché au Conseil, seize autres notaires participent également à
             ces travaux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les conseillers du roi</head>
           <p><hi rend="i">Recenser les conseillers du roi </hi> — Qui participe au Conseil du roi ? Le roi y appelle qui il le souhaite malgré les
             prétentions des princes du sang et des grands officiers. Or les mentions de participants à une séance du Conseil sont extrêmement rares :
@@ -174,8 +176,8 @@
             mais il est possible de cerner les membres les plus actifs du gouvernement en étudiant les quelques quatre-vingt personnes qui commandent
             des lettres royaux tout au long du règne de Philippe V.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Les acteurs du gouvernement</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les acteurs du gouvernement</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le gouvernement royal à travers les mentions hors teneur des registres du trésor des chartes</head>
           <p><hi rend="i">Les commanditaires d’actes royaux </hi> — Les registres du Trésor des chartes constituent un échantillon représentatif des
             actes de Philippe V : tous les commanditaires de lettres royales répertoriés y figurent, à quelques rares exceptions près. Ce sont donc
@@ -196,7 +198,7 @@
             unique officier. Dans certains cas, ce suivi peut même être plus global, l’un gérant les relations avec les Lombards, l’autre les intérêts
             navarrais...</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Philippe V : un roi à la tête de l’Etat</head>
           <p><hi rend="i">Un roi omniprésent </hi> — Près des deux tiers des actes produits par la chancellerie royale l’ont été à l’initiative
             directe ou indirecte du roi, et ce tout au long du règne. Seule la régence et quelques voyages réduisent cette activité ; mais rares sont
@@ -218,7 +220,7 @@
             haut ou à écarter les hommes qui le gênent, et il va jusqu’à annuler les dons concédés par son père et son frère à leurs principaux
             conseillers.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La chambre des comptes, moteur de la machine gouvernementale</head>
           <p><hi rend="i">La Chambre des comptes, un service technique ? </hi> — La Chambre des comptes constitue, avec le Parlement, le service le
             plus structuré de l’administration royale. Elle forme en effet un véritable corps, doué d’une réelle autonomie. Avant même l’ordonnance du
@@ -242,7 +244,7 @@
             entre ces deux institutions ne cessera dès lors de s’affirmer, sous Charles IV, mais surtout sous Philippe VI, où d’anciens conseillers de
             Philippe V, tels Miles de Noyers et Anseau de Join ville, tireront toutes les conséquences de cette innovation.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les poursuivants du roi</head>
           <p><hi rend="i">Les poursuivants du roi </hi> — Les six poursuivants du roi, futurs maîtres des requêtes de l’Hôtel, constituent l’un des
             groupes les plus actifs pour l’expédition de lettres royaux : les registres du Trésor des chartes ne contiennent pas moins de six cents
@@ -264,7 +266,7 @@
             sous le règne de Philippe IV. Quoi qu’il en soit, Philippe le Convers ne joue sans doute jamais de rôle politique éminent et ne pénètre
             probablement guère au Conseil.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">La chancellerie</head>
           <p><hi rend="i">Le chancelier </hi> — Le chancelier constitue l’un des rouages essentiels du gouvernement ; le nombre de lettres royaux
             qu’il commande en témoigne. Une grande partie de son activité découle des responsabilités techniques qu’il exerce à la tête de la
@@ -286,9 +288,7 @@
             d’Orléans devient « conseiller du roi » et poursuivant, Raoul de Préaux acquiert influence et fortune avant d’être disgracié, Jean
             Belleymont le sera à son tour à l’avènement de Charles IV.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Les membres du Conseil du roi comme, d’une façon plus générale, les acteurs du gouvernement s’avèrent difficiles à cerner. Par le biais des
           mentions hors teneur, l’activité de chacun peut être évaluée et certaines personnes mises en valeur : le roi omnipotent et omniprésent, mais
           aussi ses principaux conseillers rassemblés autour de la Chambre des comptes, instrument de la cristallisation  progressive d’un Conseil
@@ -299,10 +299,9 @@
           roi, peuplant l’Hôtel, le Parlement, les bailliages, etc., qui forment l’ossature politique du royaume, qu’il importe de mieux connaître et
           comprendre.</p>
       </div>
-              <div type="appendix"><head>Pièce justificative</head>
+          <div type="appendix" n="6"><head>Pièce justificative</head>
         <p>Edition de l’ordonnance de Saint-Germain-en-Laye, juillet 1316, d’après Arch. nat., JJ 57, fol. 40v-44.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

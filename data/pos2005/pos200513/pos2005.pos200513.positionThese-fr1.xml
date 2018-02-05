@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Une nouvelle édition du &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Bestiaire&lt;/hi&gt; de Philippe de Thaon</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Une nouvelle édition du <hi rend="i">Bestiaire</hi> de Philippe de Thaon</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Hogan Cottin-Bizonne, Shannon">Shannon Hogan Cottin-Bizonne</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200513.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si l’histoire ne nous a livré presque aucune information sur l’homme Philippe de Thaon, tel n’est pas le cas de son œuvre. Ses écrits,
           quoique conservés dans de rares manuscrits, donnent un aperçu de l’étendue de sa production, ainsi que de son influence à travers et même en
           dehors de l’aire linguistique anglo-normande. C’est le deuxième écrit de Philippe, le <hi rend="i">Bestiaire</hi>, qui a accaparé
@@ -61,10 +64,9 @@
           nouvelle édition critique. La présente thèse a pour objet de combler ce vide scientifique et de présenter une édition critique du <hi rend="i">Bestiaire</hi> dotée d’un apparat critique lisible et exhaustif, ainsi que de commentaires pour aider à le situer dans son
           contexte historique, littéraire et artistique.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le <hi rend="i">Bestiaire</hi> en contexte</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Le <hi rend="i">Bestiaire</hi> en contexte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Philippe de Thaon</head>
           <p>Les dates et lieux de la naissance et de la mort de Philippe de Thaon restent inconnus, mais nous pouvons raisonnablement postuler qu’il
             est né en Angleterre dans le dernier tiers du <num>xi<hi rend="sup">e</hi></num> siècle et mort après 1154, date théorique de la composition de sa
@@ -73,7 +75,7 @@
             Honfroi de Thaon fut chapelain d’Eudes, sénéchal du roi Henri I<hi rend="sup">er</hi> d’Angleterre. De même, l’introduction du <hi rend="i">Bestiaire</hi> suggère que Philippe lui-même avait ses entrées à la cour d’Angleterre, car cette œuvre est dédicacée à Adélaïde
             de Louvain, épouse d’Henri I<hi rend="sup">er</hi> Beauclerc.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les œuvres de Philippe de Thaon et leur succès</head>
           <p>De nombreux critiques reprochent à Philippe de Thaon d’être un auteur sans originalité, et il est vrai qu’il fut plutôt un vulgarisateur
             dans le sens premier du terme qu’un grand créateur littéraire. Ses œuvres ont toutes une orientation principalement scientifique ou
@@ -99,7 +101,7 @@
             de Thaon a duré environ deux siècles ; si on ne peut estimer leur influence indirecte à sa juste valeur, le succès du genre bestiaire
             vernaculaire donnerait à penser qu’elle a dû être assez conséquente.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le bestiaire, naissance d’un genre</head>
           <p>
             <hi rend="i">Les précurseurs du bestiaire</hi>. — Deux sources antérieures ont influencé les bestiaires médiévaux : le <hi rend="i">Physiologus</hi> et le livre XII des <hi rend="i">Étymologies</hi> d’Isidore de Séville. Du texte original grec du <hi rend="i">Physiologus</hi>, catalogue moralisateur de bêtes, furent tirées entre 386 et 431 des traductions en latin, qui connurent une très
@@ -127,7 +129,7 @@
             nombreux autres bestiaires français vinrent grossir les rangs de ce genre jusqu’au <num>xv<hi rend="sup">e</hi></num> siècle, date de rédaction d’un
               <hi rend="i">Bestiaire</hi> vaudois.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le <hi rend="i">Bestiaire</hi> de Philippe de Thaon</head>
           <p>Ni le plus long, ni le plus célèbre des bestiaires français, le <hi rend="i">Bestiaire</hi> de Philippe de Thaon a la particularité d’en
             être le premier en date. Suivant la dédicace à Adélaïde de Louvain, alors épouse d’Henri I<hi rend="sup">er</hi> d’Angleterre, on situe
@@ -143,8 +145,8 @@
             restent, pour leur part, énigmatiques, car on ne sait pas exactement à quoi elles renvoient. Cité huit fois, le livre XII des <hi rend="i">Étymologies</hi> d’Isidore de Séville fournit également une grande quantité de renseignements, surtout en matière d’étymologie ; en
             plus de ces citations, le <hi rend="i">Bestiaire</hi> s’appuie également deux traductions en langue vulgaire des <hi rend="i">Étymologies</hi>.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La tradition manuscrite et imprimée</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">La tradition manuscrite et imprimée</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Description des manuscrits</head>
           <p>
             <hi rend="i">Le ms</hi> L. — Le manuscrit le plus contemporain à la rédaction du <hi rend="i">Bestiaire</hi> est le ms BL Cotton Nero A v,
@@ -213,7 +215,7 @@
             autre danois, le comte Christian Danneskjold. La mise en vente de la collection de ce dernier en 1732 a permis au manuscrit d’intégrer
             enfin les collections de la Bibliothèque royale de Copenhague.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’édition d’Emmanuel Walberg</head>
           <p>L’édition scientifique du <hi rend="i">Bestiaire</hi> qui a fait référence tout au long du <num>xx<hi rend="sup">e</hi></num> siècle est celle
             Emmanuel Walberg, parue en 1900. Walberg utilise le ms <hi rend="i">L</hi> comme manuscrit de base. Pourtant, son édition reflète plutôt
@@ -225,8 +227,8 @@
             aient vite été considérées comme une partie intégrale du texte. Aussi convient-il de les laisser en place, afin de permettre au lecteur
             une vue d’ensemble du texte tel qu’il est présenté par les trois manuscrits.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Établissement du texte</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Établissement du texte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Critères retenus pour l’édition du texte</head>
           <p>Le choix du manuscrit de base du <hi rend="i">Bestiaire</hi> de Philippe de Thaon n’est pas des plus aisés, car les trois manuscrits
             conservés sont tous lacunaires, tant au niveau du texte qu’au niveau des rubriques et des miniatures. De plus, aucun ne semble clairement
@@ -257,7 +259,7 @@
             doute été rédigés en Angleterre au cours du <num>xiii<hi rend="sup">e</hi></num> siècle, probablement pendant la deuxième moitié. Le style et
             l’iconographie très “ anonymes ” des miniatures ne permettent ni des hypothèses quant à son modèle, ni une datation. Le ms <hi rend="i">C</hi>, au contraire des deux manuscrits anglais, est écrit par une main française qu’on peut dater à la deuxième moitié du XIII <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les interventions éditoriales</head>
           <p>L’objet même d’éditer un texte médiéval est de le rendre accessible au lecteur moderne sans que celui-ci soit obligé de recourir lui-même
             aux manuscrits. Il faut donc que l’éditeur prenne soin non seulement de transcrire, mais aussi de restituer le texte original – sans pour
@@ -265,7 +267,7 @@
             choix retenus en matière de corrections de la syntaxe, de facilitation de la lecture, d’utilisation des majuscules, de résolution des
             abréviations, d’accentuation, de présentation des lacunes et des citations et d’apparat critique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le dialecte anglo-normand</head>
           <p>
             <hi rend="i">Particularités lexicales</hi>. — Si le vocabulaire de Philippe de Thaon devait en principe être facilement compréhensible
@@ -283,15 +285,15 @@
             y a un flottement entre les graphies en <hi rend="i">c</hi> et <hi rend="i">ch</hi> devant des voyelles. La plupart des graphies qu’on
             trouve normalement en <hi rend="i">cha</hi> en ancien français sont rendues en <hi rend="i">ca</hi> dans ces manuscrits : <hi rend="i">cameil</hi> pour <hi rend="i">chameil</hi>( <hi rend="i">chameau</hi>), etc. A cause de l’équivalence de prononciation entre <hi rend="i">ai</hi>, <hi rend="i">ei</hi> et <hi rend="i">oi</hi>, on trouve fréquemment des graphies multiples pour un même mot.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Métrique</head>
           <p>Puisqu’il s’agit d’une œuvre poétique à pieds réguliers hexasyllabiques et octosyllabiques, il fut aisé de se rendre compte de la façon
             dont étaient prononcées les voyelles en anglo-normand en comptant les pieds de chaque vers. Prenant comme point du départ l’idée que la
             plupart des vers de Philippe devaient se conformer au mètre que celui-ci s’était imposé, il fut possible de déterminer quelles voyelles
             étaient muettes et quels groupes de voyelles étaient en fait prononcés en deux ou trois syllabes.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La relation entre texte et image</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La relation entre texte et image</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les références textuelles aux miniatures</head>
           <p>L’une des particularités du <hi rend="i">Bestiaire</hi> de Philippe de Thaon est que son auteur fait référence aux images censées
             illustrer son texte au sein même de celui-ci. En effet, en plus des rubriques latines qui décrivent les miniatures qui les suivent
@@ -302,7 +304,7 @@
             aux miniatures, comme les miniatures elles-mêmes, sont généralement limitées à une par article. Certains articles, bien que privés de
             rubriques, sont néanmoins pourvus de miniatures dans les manuscrits <hi rend="i">O</hi> et <hi rend="i">C</hi>.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le cycle des miniatures</head>
           <p>
             <hi rend="i">Les miniatures des mss</hi> O <hi rend="i">et</hi> C. — Prenant en compte les miniatures et les rubriques qui nous sont
@@ -327,19 +329,16 @@
             contraint d’abandonner ce travail avant de l’avoir mené à terme. À partir du fol. 15, il n’y a plus du tout de rubriques, alors que des
             emplacements ont été laissés à cette intention tout au long du manuscrit.</p>
         </div>
-      </div><div n="5" type="part"><head n="Cinquième partie">Édition</head>
-        <p>L’édition porte sur la totalité du <hi rend="i">Bestiaire</hi>, avec les interventions éditoriales développées dans la troisième partie. Le
+      </div><div n="6" type="part"><head n="0" type="chapter">Édition</head>
+        <p n="1" type="chapter">L’édition porte sur la totalité du <hi rend="i">Bestiaire</hi>, avec les interventions éditoriales développées dans la troisième partie. Le
           texte du <hi rend="i">Bestiaire</hi> est réparti en vers hexasyllabiques qui sont numérotés par groupes de quatre. Les rubriques latines ne
           figurent pas dans le compte des vers mais sont indiquées par les vers limitrophes de l’édition. L’apparat critique se trouve en bas de page,
           sauf dans le cas de grandes variantes textuelles qui sont regroupées en annexe.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="7"><head>Annexes</head>
         <p>Notes de fin. <hi rend="i">­</hi>— Variantes textuelles importantes. —­ Articles du <hi rend="i">Bestiaire</hi>. —­ Notices des manuscrits
           du <hi rend="i">Bestiaire</hi>. —­ Index thématique. ­— Index des noms propres. ­— Glossaire. —­ Planches photographiques.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

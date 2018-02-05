@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Paul-Émile Victor, biographie d’un explorateur polaire (1907-1995)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Paul-Émile Victor, biographie d’un explorateur polaire (1907-1995)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Fournier, Thierry">Thierry Fournier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200107.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les raisons militant en faveur d’une biographie de Paul-Emile Victor sont multiples. Désenchantées, les régions et les expéditions polaires
           peuvent accéder au statut d’objet d’histoire. L’activité autobiographique incessante de Paul-Emile Victor n’est pas un obstacle: elle
           fournit une base à la recherche et ses lacunes sont significatives: par exemple, Paul-Emile Victor n’est que rarement précis sur ses
@@ -73,7 +76,7 @@
           elle est replacée dans des problématiques plus larges concernant l’histoire des explorations, des sciences, des techniques et des
           médias.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Parmi les différents fonds d’archives utilisés, on peut distinguer deux sources principales: le fonds Paul-Emile Victor conservé au Musée
           de l’Hommeet le fonds Paul-Emile Victor conservé aux Expéditions Polaires Françaises, dont un classement scientifique a été établi à
           l’occasion de cette thèse. Cette documentation a été complétée par la consultation des archives des Expéditions Polaires Françaises et des
@@ -85,9 +88,8 @@
           popularité qu’il a pu avoir. C’est aussi le cas des sources radiophoniques, audiovisuelles ou cinématographique. Enfin l’état des sources ne
           serait pas complet sans ce luxe qui est accordé aux seuls historiens de la période contemporaine : les sources orales.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Itinéraires d’un ethnographe</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Itinéraires d’un ethnographe</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Enfance et formation (1907-1933)</head>
           <p>Né le 28 juin 1907 à Genève, Paul-Emile Victor aurait pu s’appeler Paul, Eugène Steinschneider: ce n’est en effet que le 10 juin 1907 que
             son père Erich Heinrich Victor Steinschneider obtient de la Lieutenance générale impériale et royale du Royaume de Bohême, dont il est
@@ -111,7 +113,7 @@
             sur le confort de la sédentarité, il quitte Lons-le-Saunier et l’usine en 1933, refusant de devenir
             «le-fils-Victor-successeur-de-son-père».</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les années Eskimo (1933-1939)</head>
           <p>Ces années sont essentielles dans la vie de Paul-Emile Victor, car elles marquent le commencement de sa longue carrière polaire. Cette
             dernière débute sous un double parrainage: Mauss ­ Paul-Emile Victor sera ethnographe ­, et surtout Charcot­ il sera spécialiste des
@@ -135,7 +137,7 @@
             scientifique que sur le plan médiatique, c’est donc une prometteuse carrière d’ethnographe-explorateur qu’interrompt le déclenchement de
             la guerre en 1939.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Paul-Emile Victor pendant la guerre (1939-1946)</head>
           <p>Cette période était jusqu’à présent la moins connue de la vie de Paul-Emile Victor. Une étude précise des sources disponibles, en
             particulier ses archives personnelles, permet cependant de retracer et surtout de comprendre le cheminement de Paul-Emile Victor pendant
@@ -174,8 +176,8 @@
             accède enfin à ses demandes répétées d’affectation en France, qu’il rejoint en décembre 1944. En 1945-1946, la vie de Paul-Emile Victor se
             partage entre la France et les Etats-Unis et se conclut par sa démobilisation et son mariage avec Eliane Decrais en 1946.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les premières années des Expéditions Polaires Françaises (1946-1952)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les premières années des Expéditions Polaires Françaises (1946-1952)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre IV">La création des Expéditions Polaires Françaises (Missions Paul-Emile Victor) (1946-1947)</head>
           <p>Pendant la guerre, Paul-Emile Victor prend conscience du fait qu’une expédition scientifique de grande envergure visant à l’étude
             complète de la calotte glaciaire du Groenland est désormais techniquement possible, du fait du progrès des techniques polaires que
@@ -192,7 +194,7 @@
             mobiliser autour de son initiative une bonne partie des milieux scientifiques et gouvernementaux, l’échec du Centre Polaire Charcot lui
             aliène une partie des anciens polaires français.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre V">La période héroïque des Expéditions Polaires Françaises (1947-1952)</head>
           <p>Le déroulement et les résultats des expéditions elles-mêmes étant déjà bien connus, il convient plutôt de s’attarder sur le rôle de
             Paul-Emile Victor au cours de celles-ci. Pendant cette période, d’explorateur polaire il devient entrepreneur d’expéditions polaires
@@ -218,8 +220,8 @@
             les Expéditions Polaires Françaises la reconnaissance va venir. S’il est globalement soutenu par les autorités et la presse, Paul-Emile
             Victor a cependant des adversaires, en particulier dans les milieux scientifiques et dans la Marine.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le temps des expéditions internationales (1952-1960)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le temps des expéditions internationales (1952-1960)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre VI">Paul-Emile Victor et les expéditions américaines au Groenland (1952-1957)</head>
           <p>N’ayant pu obtenir de financement pour poursuivre les campagnes EPF, Paul-Emile Victor se tourne, fin 1951, vers son deuxième pays: les
             Etats-Unis. Les relations qu’il a conservées et entretenues depuis la guerre avec les milieux polaires américains, ainsi que la réussite
@@ -231,7 +233,7 @@
             (1952-1953), sa coopération arctique avec les Américains entre dans une phase de cabinet (1954-1957), avec en particulier la publication
             de l’importante <hi rend="i">Geography of Northeast Greenland</hi> en 1955.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre VII">Paul-Emile Victor et l’Année Géophysique Internationale (1954-1959)</head>
           <p>Lors de la préparation de l’Année Géophysique Internationale (AGI), préparation qui commence réellement en 1954, Paul-Emile Victor est
             marginalisé par l’action conjuguée de deux adversaires: le père Lejay, et derrière lui une bonne partie du milieu scientifique français,
@@ -246,7 +248,7 @@
             garantissant de ce fait la pérennité des EPF, Paul-Emile Victor ayant le mérite de comprendre que la coopération internationale et les
             recherches scientifiques initiées lors de l’AGI en Antarctique étaient appelées à se poursuivre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre VIII">Paul-Emile Victor et l’Expédition Glaciologique Internationale au Groenland (1955-1960)</head>
           <p>L’Expédition Glaciologique Internationale au Groenland (EGIG) est en quelque sorte la suite des premières expéditions EPF au Groenland,
             tant au niveau des buts poursuivis (étude de la calotte glaciaire du Groenland) que des moyens logistiques utilisés (petits groupes
@@ -258,8 +260,8 @@
             reconnaissance internationale de l’excellence des méthodes scientifiques et techniques des EPF et de leur homme-orchestre,Paul-Emile
             Victor.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Un polaire engagé (1960-1995)</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Un polaire engagé (1960-1995)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre IX">Un homme très actif aux intérêts diversifiés (1960-1976)</head>
           <p>Le début des années 1960 marque un tournant dans la vie de Paul-Emile Victor. Sa vie personnelle, suite à son divorce et à son remariage,
             suite aussi à sa découverte de la Polynésie, se réorganise. De 1960 à 1976, il reste encore très actif dans le domaine polaire : il
@@ -274,7 +276,7 @@
             il participe aux travaux de la Commission des loisirs et des sports de plein air et mène des campagnes d’information sur l’eau ou les
             forêts par le biais du «Groupe Paul-Emile Victor pour la défense de l’homme et de son environnement», créé en 1974.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre X">Retraite à Bora Bora (1976-1995)</head>
           <p>En 1976, Paul-Emile Victor a 69 ans. Il prend sa retraite administrative: même si Victor reste directeur honoraire des Expéditions
             Polaires Françaises, c’est Jean Vaugelade qui les dirige désormais. Cette même année, il décide de s’installer définitivement avec sa
@@ -284,9 +286,7 @@
             trois directions: les expéditions polaires françaises, l’écologie et l’action en faveur des jeunes. Il s’accompagne d’une reconnaissance
             publique grandissante. Paul-Emile Victor meurt en mars 1995.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Ame de l’exploration polaire française pendant au moins quarante ans, ethnographe et logisticien polaire reconnu sur le plan national et
           international, pionnier de l’écologie, polygraphe de talent, artiste, homme d’influence et populaire, il est certain que Paul-Emile Victor a
           marqué son époque. Parmi tant de facettes, il est difficile de dire ce qui restera de son œuvre. Deux points semblent particulièrement
@@ -296,11 +296,10 @@
           ou l’exploit sportif), sur le plan logistique et technique (Paul-Emile Victor inaugure l’ère de la totale mécanisation des expéditions
           polaires) et enfin sur le plan médiatique.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Sélection de pièces originales provenant des archives personnelles de Paul-Emile Victor et de la photothèque des Expéditions Polaires
           Françaises.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

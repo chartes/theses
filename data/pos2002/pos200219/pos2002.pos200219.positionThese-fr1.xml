@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Gabriel Marcel et le théâtre</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Gabriel Marcel et le théâtre</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Mary, Anne">Anne Mary</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200219.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le nom de Gabriel Marcel renvoie immédiatement, dans la pensée des lecteurs, à la philosophie chrétienne qu’il a contribué à diffuser, et à
           la notion d’existentialisme, reprise par Sartre avec tant de succès. Pourtant, l’auteur se considère avant tout comme dramaturge, et refuse
           l’appellation de “ philosophe existentialiste chrétien ”. Il y a, indubitablement, une scission entre la vocation de Gabriel Marcel et la
@@ -62,7 +65,7 @@
           L’étude du théâtre de Gabriel Marcel en lui-même, en tant qu’œuvre théâtrale, et non en tant que complément de sa philosophie, s’impose donc
           pour résoudre ces problèmes.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Cette étude est essentiellement fondée sur le dépouillement du fonds Gabriel Marcel conservé au département des manuscrits de la
           Bibliothèque nationale de France. Il contient un grand nombre de lettres reçues par l’auteur, mais aussi des articles, des brouillons de
           conférences et de pièces. Le fonds Henry Marcel, conservé par la même institution, livre des lettres de jeunesse écrites par Gabriel Marcel,
@@ -74,9 +77,8 @@
           l’activité de critique littéraire exercée par Gabriel Marcel représente une grande partie des sources imprimées, ainsi que la correspondance
           publiée.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Gabriel Marcel : une vocation dramatique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Gabriel Marcel : une vocation dramatique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un cheminement vers le théâtre</head>
           <p>Gabriel Marcel est né le 9 octobre 1889, dans une famille de la grande bourgeoisie parisienne. Il passe une enfance heureuse, mais sa
             situation de fils unique lui pèse énormément. Très tôt, il est marqué par la mort de sa mère et le remariage de son père avec la sœur de
@@ -92,7 +94,7 @@
             représentations par des “ théâtres à côté ” remportent un succès d’estime, sans atteindre cependant le grand public. La Chapelle ardente
             est néanmoins montée par Gaston Baty au Vieux Colombier, en 1925. Un certain espoir s’empare du jeune auteur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La conversion : une étape décisive (1929)</head>
           <p>La famille de Gabriel Marcel ne joue aucun rôle dans sa conversion au catholicisme. Son père est agnostique, sa tante convertie au
             protestantisme libéral. Lui-même ne reçoit pas d’éducation religieuse. Par son mariage, il entre dans un milieu protestant dont la foi
@@ -106,7 +108,7 @@
             que représente le christianisme, dans la perspective de Marcel, empêche toute doctrine de s’exprimer de manière radicale et
             simplificatrice. Le prosélytisme est entièrement exclu de l’écriture marcellienne.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Primat de la philosophie ? Le semi-échec d’une vocation dramatique</head>
           <p>Malgré l’investissement dans le théâtre, Gabriel Marcel continue, sur les conseils de sa femme et de sa tante, à rédiger des notes
             philosophiques. A sa grande surprise, Jean Paulhan propose de les publier aux éditions de la N.R.F., en 1927. Cet ouvrage, le Journal
@@ -131,8 +133,8 @@
             d’écrire des articles. Sa notoriété devient grande vers les années 1950 : il est élu à l’Académie des Sciences morales et politiques,
             reçoit nombre de prix récompensant sa pensée, et reste une référence pour beaucoup de jeunes philosophes.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les conceptions théâtrales de Gabriel Marcel</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les conceptions théâtrales de Gabriel Marcel</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les écrits théoriques</head>
           <p>Dès ses débuts, Gabriel Marcel expose ses théories dramatiques dans la préface de son premier recueil de pièces, Le Seuil invisible, en
             1914. Le tragique de pensée est au centre de cette conception de jeunesse : il consiste à montrer les idées à l’œuvre, et à créer un
@@ -155,7 +157,7 @@
             contradiction liée à l’essence même d’une volonté, et doit entraîner le spectateur dans un monde de justice supérieure, où il ne puisse
             prendre parti.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les apports de la critique dramatique</head>
           <p>Les chroniques dramatiques de Gabriel Marcel permettent d’éclairer certaines exigences de leur auteur. Il y expose ses opinions à propos
             de certains types de théâtre et de certaines techniques. On voit se dessiner une esthétique dramatique qui correspond de façon très
@@ -182,7 +184,7 @@
             d’authenticité, notion qui renvoie à la sincérité de l’auteur, à sa volonté de créer sans penser à exploiter un courant de pensée, un
             thème, un style… L’auteur doit accomplir ce tour de force de présenter sa vision du monde sans pour autant l’imposer.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’œuvre dramatique</head>
           <p>L’accusation fréquente de “ théâtre à thèse ” dont font l’objet les œuvres de Marcel est récusée par l’auteur. Et, de fait, les
             personnages de Gabriel Marcel ne sont en rien des porte-parole. Aucun n’incarne la position de l’auteur, c’est davantage la situation qui
@@ -226,8 +228,8 @@
             indéniablement cohérent avec ses critiques dramatiques et ses théories, et une véritable esthétique découle des divers écrits de l’auteur,
             malgré l’absence de systématisation.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La réception du théâtre de Gabriel Marcel</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La réception du théâtre de Gabriel Marcel</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un théâtre d’élite ?</head>
           <p>Le théâtre de Gabriel Marcel est avant tout un théâtre de la conscience, dans la lignée de celui d’Ibsen. Il comporte donc des
             résonances morales, plus ou moins appréciées selon les spectateurs, mais que l’auteur n’a pas voulues : il est du côté de l’empirique.
@@ -244,7 +246,7 @@
             Cependant, sa réputation de philosophe l’emporte, et il se trouve, après la Seconde guerre mondiale, dépassé par des auteurs nouveaux ­
             qui, pour certains, s’inspirent de son propre théâtre, suivent le chemin qu’il a commencé à tracer.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un théâtre authentique</head>
           <p>L’authenticité passe par la représentation de la vie quotidienne. Certains lecteurs y retrouvent leurs angoisses, leurs émotions ;
             d’autres, des situations vécues, des réactions connues. Sans s’écarter de son chemin, Gabriel Marcel ignore la facilité, refuse de céder
@@ -264,7 +266,7 @@
             recherche avant tout le délassement. De nos jours, cependant, ses œuvres ne sont pas totalement tombées dans l’oubli. Des représentations
             d’amateurs, des études naissent de ses pièces.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La question scénique</head>
           <p>La représentation est le but de la vie d’une pièce ; or, cette satisfaction a rarement été accordée à l’œuvre de Gabriel Marcel. Sa
             carrière a connu des déséquilibres flagrants : quelques années de réussite, comme en 1937 lorsqu’il reçoit le prix Brieux pour Le Dard, et
@@ -285,9 +287,7 @@
             par hésitation, par scrupules ­ il déteste les démarches. Les expériences scéniques demeurent donc trop rares pour se prononcer sur la
             valeur théâtrale de certaines œuvres.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’échec final du théâtre de Gabriel Marcel ne doit pas cacher l’adhésion profonde qu’il a rencontrée auprès de certains intellectuels et
           spectateurs. Son engagement religieux l’a sans doute desservi, dans une époque en pleine déchristianisation. Ce ne peut être pourtant la
           raison de son manque de succès. L’appellation de “ théâtre à thèse ” est autrement plus gênante, mais butte contre l’ambiguïté et le
@@ -301,8 +301,7 @@
           nouveau théâtre, et n’a pour but que de faire réagir les spectateurs, non de les plonger dans le défaitisme. La précocité de cette prise de
           conscience a sans doute entraîné la méconnaissance de son œuvre dramatique, au profit de sa réputation de philosophe.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

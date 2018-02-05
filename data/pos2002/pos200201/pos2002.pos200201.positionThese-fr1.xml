@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les œuvres en prose de Catherine d’Amboise, dame de Lignières (1481-1550)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les œuvres en prose de Catherine d’Amboise, dame de Lignières (1481-1550)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bergeron-Foote, Ariane">Ariane Bergeron-Foote</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200201.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Catherine d’Amboise (1481-1550), dame de Lignières, prosatrice et poétesse de la première moitié du <num>xvi<hi rend="sup">e</hi></num> siècle,
           reste inconnue du grand public et peu connue du public lettré : seule l’édition de ses textes poétiques a permis de sauver l’écrivain d’un
           oubli complet. En revanche, ses écrits en prose, demeurés à l’état manuscrit, n’ont jamais fait l’objet de travaux critiques : leur première
@@ -62,7 +65,7 @@
           cachés, mais surtout nous permettent de décrypter ses préoccupations morales et religieuses, ses intérêts artistiques, littéraires et son
           goût pour l’écriture et le manuscrit, objet rare et précieux.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Nous conservons deux œuvres en prose de Catherine d’Amboise. La première, intitulée <hi rend="i">Livre des prudens et imprudens</hi>,
           datée de 1509, est conservée dans un manuscrit unique : Paris, Bibl. nat. de Fr., Arsenal 2037. La seconde, baptisée <hi rend="i">Complainte
             de la dame pasmee contre Fortune</hi>,écrite vers 1525-1535, est une œuvre sans titre et anonyme ; la paternité en est attribuée à
@@ -76,9 +79,8 @@
           </hi> . Parmi les sources imprimées, on citera tout particulièrement les œuvres de Michel d’Amboise, poète et traducteur, imprimées entre
           1529 et 1547.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Catherine d’Amboise : sa vie, son œuvre</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Catherine d’Amboise : sa vie, son œuvre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etude historique</head>
           <p>
             <hi rend="i">Catherine d’Amboise : sa vie, son milieu.</hi>- Fille de Charles I<hi rend="sup">er</hi> d’Amboise, mort à Tours en 1481 et
@@ -187,7 +189,7 @@
             imprudens.</hi> Certaines miniatures, en particulier celles illustrant les feuillets 63 et 133, ne sont clairement pas de la même main :
             l’auteur a pu envoyer certains cahiers ou feuillets dans d’autres centres d’enluminure.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Etudes littéraire et poétique</head>
           <p>Les textes présentés offrent des témoins supplémentaires de l’état de la langue alors en pleine évolution, de la persistance du
             manuscrit enluminé et des préoccupations d’une femme de lettres de la première moitié du <num>xvi<hi rend="sup">e</hi></num> siècle. Ils présentent
@@ -283,7 +285,7 @@
             ontologique et religieuse, sauf peut-être à deux reprises, avec la critique des mœurs du clergé et une courte défaillance chez la
             narratrice, qui se traduit par un désir de mort.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Conclusion">Catherine d’Amboise, femme écrivain</head>
           <p>Si l’on tente de dégager les principaux aspects de l’écriture de Catherine d’Amboise dans son expression formelle et les points
             essentiels de sa pensée et spiritualité, on note, à la lumière des trois œuvres successives, une évolution sensible. Notre analyse a porté
@@ -317,19 +319,19 @@
             iconographique des œuvres de Catherine d’Amboise, notamment autour des problèmes d’auto-représentation, du traitement du paysage, de la
             gestuelle et du traitement de la couleur.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Editions critiques</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Editions critiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Principes d’édition</head>
           <p>Étude de la langue : opinion de l’auteur sur la langue ; orthographe et morphologie ; graphie ; éléments de morphologie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">
             <hi rend="i">Le Livre des prudens et imprudens (1509)</hi>
         </head>
           <p>Note particulière sur l’établissement du texte. ­ Description matérielle du manuscrit unique : Paris, Bibl. nat. de Fr., Arsenal 2037
             (codicologie ; reliure ; provenance ; texte ; décoration). ­ Orientations bibliographiques. ­ Edition de texte. ­ Notes explicatives.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">
             <hi rend="i">La Complainte de la dame pasmee contre Fortune (vers 1525-1535)</hi>
         </head>
@@ -337,19 +339,16 @@
             Libraire Sam Fogg, 1999) (codicologie ; reliure ; provenance ; texte ; décoration). ­ Orientations bibliographiques. ­ Edition de texte. ­
             Notes explicatives.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Iconographie</head>
+      </div><div type="conclusion" n="5"><head>Iconographie</head>
         <p>Description des soixante-seize miniatures du <hi rend="i">Livre des prudens et imprudens</hi>, des huit miniatures de la <hi rend="i">Complainte de la dame pasmee contre Fortune</hi> (à partir de deux témoins) et des trois miniatures des <hi rend="i">Poésies</hi> (Paris,
           Bibl. nat. de Fr., fr. 2282).</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Edition d’extraits choisis des poésies de Michel d’Amboise. ­ Reproduction du texte des <hi rend="i">Poésies</hi> de Catherine d’Amboise,
           d’après l’édition de J.-J. Bourassé. ­ Tableau généalogique de la famille d’Amboise. ­ Proverbes et expressions proverbiales. ­
           Abréviations. ­ Glossaire commun. ­ Dictionnaires consultés. ­ Index des noms de personnes, de lieux et de sources scripturaires. ­ Sources
           manuscrites et imprimées. ­ Bibliographie.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

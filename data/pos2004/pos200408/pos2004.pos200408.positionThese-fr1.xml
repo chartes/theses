@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La Commission nationale de la communication et des libertés (1986-1989)</title>
-        <title type="sub">Audiovisuel et cohabitation.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La Commission nationale de la communication et des libertés (1986-1989)</title><title xml:lang="fr" type="sub">Audiovisuel et cohabitation.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Couriaut, Marie-Neige">Marie-Neige Couriaut</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200408.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La Commission nationale de la communication et des libertés (CNCL), créée en 1986, vient remplacer la Haute Autorité, première instance de
           régulation de l’audiovisuel ; elle dispose de prérogatives très importantes, qui lui permettent notamment de choisir les présidents des
           chaînes publiques, de décider quelle entreprise privée est la plus indiquée pour reprendre la première chaîne française ou de sélectionner
@@ -68,7 +71,7 @@
           son infortune médiatique, sur les motifs qui ont présidé aux décisions qu’elle a prises, sur les liens qu’elle a entretenus avec le pouvoir
           exécutif et sur les raisons de sa chute.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Ce travail est fondé à la fois sur des sources écrites et orales. Malgré leur difficulté de consultation, les sources écrites furent les
           plus aisément exploitables, qu’il s’agisse de fonds publics ou privés. Les archives de la CNCL, actuellement conservées dans les locaux du
           CSA, sont décevantes : elles se résument pour l’essentiel aux procès-verbaux de séance de la Comission. Ont été également consultées, sur
@@ -88,9 +91,8 @@
           de Skyrock (Pierre Bellanger), le directeur des programmes de TF1 (Étienne Mougeotte), l’avocat de Francis Bouygues au moment de la
           privatisation de la chaîne (Louis Bousquet), l’ancien directeur de l’information de La Cinq (Patrice Duhamel), ainsi que Michel Polac.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Pourquoi une autorité de régulation de l’audiovisuel ?</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Pourquoi une autorité de régulation de l’audiovisuel ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Genèse de l’idée de régulation de l’audiovisuel</head>
           <p>
             <hi rend="i">Le monopole d’État sur la radio et la télévision.</hi>­ Alors qu’avant la Seconde Guerre mondiale, les fréquences hertziennes
@@ -110,7 +112,7 @@
             une autorité détachée des structures traditionnelles de l’État et appelée, au gré des textes, commission, comité, autorité ou conseil.
             Cette ambition ne prend véritablement forme qu’avec la naissance de la Haute Autorité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le précédent de la Haute Autorité</head>
           <p>
             <hi rend="i">La naissance de la Haute Autorité</hi>. - La Haute Autorité est la première instance de régulation de
@@ -132,7 +134,7 @@
             remplacer la Haute Autorité sont nombreuses ; la cohésion de l’instance est mise à mal par les enjeux politiques et la division du collège
             sur des questions capitales éclate au grand jour. Dès que Jacques Chirac est nommé Premier ministre, la Haute Autorité est dissoute.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La loi du 30 septembre 1986 sur l’audiovisuel</head>
           <p>
             <hi rend="i">Le débat parlementaire. -</hi> Le gouvernement de Jacques Chirac entend imprimer sa marque sur la législation audiovisuelle,
@@ -150,8 +152,8 @@
             l’État. Mais l’indépendance de l’autorité de tutelle est bridée par la loi, son pouvoir est en réalité ambigu et limité dans les faits. La
             loi de 1986 apparaît vite comme une tentative de libéralisation maladroite et trop rapide.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’installation de la CNCL et ses premières décisions</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’installation de la CNCL et ses premières décisions</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une prise de décision collégiale</head>
           <p>
             <hi rend="i">La composition de la CNCL.</hi>­ Sont nommés membres de la CNCL : Gabriel de Broglie, qui la préside, Michel Droit, Daisy de
@@ -169,7 +171,7 @@
             ce qui laisse à penser que les membres font peu de cas des compétences réelles des hommes nommés, ou du moins que les débats politiques
             prennent le pas sur les préoccupations professionnelles.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La privatisation de TF1</head>
           <p>
             <hi rend="i">La vente de la première chaîne française, une décision à valeur de symbole. -</hi> L’affrontement des candidats au rachat de
@@ -190,7 +192,7 @@
             à l’autorité de régulation, surtout dans les domaines qui représentent de nouveaux enjeux financiers : la publicité, le parrainage et le
             télé-achat.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La réattribution de La Cinq et de la Six</head>
           <p>
             <hi rend="i">Le dossier de La Cinq. -</hi> La Cinq est née du temps de la Haute Autorité, sans que cette instance ait été réellement
@@ -209,8 +211,8 @@
             expliquent ce climat plus serein : Jean Drucker, président-directeur-général de la chaîne, sait habilement instaurer un dialogue avec les
             membres de l’autorité de régulation ; par ailleurs, M6 n’est pas directement en concurrence avec TF1 et La Cinq.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une commission condamnée d’avance ?</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Une commission condamnée d’avance ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La CNCL perd sa légitimité</head>
           <p>
             <hi rend="i">L’épineux dossier de la bande FM. -</hi> La CNCL doit examiner les dossiers de réattribution de fréquences FM à Paris. Ses
@@ -231,7 +233,7 @@
             politiques et à assurer un contrôle vigilant de la concurrence et de la concentration ; elle a mis en place des plans de fréquences radio
             efficaces et viables et a rédigé des cahiers des charges rigoureux et durables.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La CNCL, ligne de fracture de la cohabitation</head>
           <p>
             <hi rend="i">Un prétexte à l’affrontement entre Jacques Chirac et François Mitterrand. ­</hi> Les membres de la CNCL furent au cœur des
@@ -244,19 +246,16 @@
             régime de cohabitation, qui ne permet pas une organisation du travail sereine. Le 8 mai 1988, la victoire de François Mitterrand à
             l’élection présidentielle scelle la fin de la CNCL.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Certes une situation politique aussi exceptionnelle que la cohabitation ne créait pas des conditions d’existence faciles pour la CNCL, dont
           le fonctionnement était en outre compliqué par les modalités même de sa composition et le nombre trop important de ses membres ; le temps
           lui a aussi manqué pour asseoir sa légitimité. Mais son exemple montre cependant qu’il serait naïf de croire qu’une autorité de régulation
           peut demeurer imperméable au monde de l’économie des médias qui la courtise, et aux cercles politiques qui la surveillent, car son rôle se
           situe bien au confluent des enjeux économiques et des intérêts politiques.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Retranscription intégrale des entretiens avec les personnes interrogées.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

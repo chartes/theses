@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’administration municipale de Sélestat au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’administration municipale de Sélestat au <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lutz, Jean-François">Jean-François Lutz</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200216.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les institutions urbaines de Sélestat avaient été mises en place sur la base d’une charte octroyée par les instances impériales en 1292.
           Cet acte érigea une bourgade de pêcheurs et de laboureurs en une cité dont le seul suzerain était l’empereur. Forte de sa supériorité
           territoriale et de sa relative indépendance, la ville s’engagea en 1354, avec neuf autres cités alsaciennes, dans une alliance urbaine
@@ -68,7 +71,7 @@
           deux cols de basse altitude. Son implantation à la limite entre la plaine inondable rhénane et les collines sous-vosgiennes constituait son
           second atout et conférait au marché de la ville un rôle important de contact entre ces deux espaces de production agricole et viticole.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>S’agissant d’une monographie urbaine, les archives municipales de Sélestat constituent l’essentiel des sources mises à profit. Elles
           permettent à elles seules de saisir au mieux le fonctionnement des institutions communales et d’analyser l’étendue de leurs prérogatives.
           Plusieurs séries ont été systématiquement dépouillées pour le <num>xviii<hi rend="sup">e</hi></num> siècle (AA, BB, GG), et d’autres largement
@@ -77,9 +80,8 @@
           également consultés. Il s’agit de la série C aux archives départementales du Bas-Rhin, des séries A1 et 1M au Service Historique de l’Armée
           de Terre et de la série E aux Archives Nationales pour les arrêts du Conseil concernant Sélestat.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les institutions municipales de Sélestat et leur évolution au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les institutions municipales de Sélestat et leur évolution au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Composition et fonctionnement</head>
           <p>Contrairement à une évolution observée dans beaucoup d’autres provinces du royaume au cours du <num>xviii<hi rend="sup">e</hi></num> siècle, le
             statut de bourgeois conservait en Alsace un rôle fondamental. Le socle social de la ville de Sélestat était constitué de dix tribus de
@@ -105,7 +107,7 @@
             Magistrat réussit à toujours conserver une nette suprématie, en dépit de l’attention portée par les intendants aux griefs des conseillers.
         </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Modifications institutionnelles</head>
           <p>Les troubles qui accompagnèrent l’élection d’un nouveau bourgmestre à l’automne 1746 poussèrent les autorités royales à réformer
             profondément les institutions de la ville. L’intendant Barthélemy de Vanolles proposa en mars 1747 au comte d’Argenson, secrétaire d’Etat
@@ -129,7 +131,7 @@
             fonctions judiciaires et administratives, les premières devant être dévolues au Magistrat traditionnel tandis que les secondes devaient
             être assurées par une municipalité conforme au modèle de 1787.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le personnel de la ville</head>
           <p>Deux tribunaux exerçaient leur pouvoir dans l’étendue du ban de la ville : le tribunal du Magistrat et Conseil pour les causes civiles,
             criminelles et gracieuses ; celui du Magistrat pour les affaires de police. Les prérogatives judiciaires de la ville avaient été bien
@@ -140,8 +142,8 @@
             employés participaient à l’application des mesures édictées par le Magistrat dans des domaines aussi variés que la médecine, le domaine
             rural, le commerce ou la culture.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Relations avec le pouvoir royal</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Relations avec le pouvoir royal</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’intendant et ses services</head>
           <p>L’intendant d’Alsace fut à l’origine de toutes les modifications institutionnelles qui touchèrent la ville de Sélestat. En plus de ces
             interventions ponctuelles, le commissaire départi disposait d’un droit de regard permanent sur l’ensemble de l’administration urbaine. Il
@@ -154,7 +156,7 @@
             convient enfin de signaler que le service des ponts et chaussées de la province, dirigé par le commissaire départi, pouvait intervenir
             concurremment avec l’architecte municipal pour tout ce qui concernait les ponts et les canaux entourant la cité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’administration militaire</head>
           <p>L’enceinte fortifiée de Sélestat fut reconstruite dès 1675 sur les plans de Jacques Tarade et de Vauban. L’intérêt stratégique de cette
             place forte diminua toutefois sensiblement une fois la ville de Strasbourg soumise à l’autorité royale en 1681.Sélestat joua dès lors le
@@ -170,7 +172,7 @@
             développement de la prostitution. Il n’en reste pas moins que les militaires apportèrent une aide appréciée lors de certains sinistres et
             qu’ils participèrent à la diffusion, certes lente, de la langue française dans toutes les couches de la population.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Autres institutions royales et provinciales</head>
           <p><hi rend="i">Le roi </hi> — Comme toutes les autres communautés du royaume, la ville de Sélestat participait à la célébration des
             évènements ponctuant la vie de la famille royale. Le lien de la cité avec le roi connut une manifestation particulière lors de la visite
@@ -192,8 +194,8 @@
             de la ville, mais elle pouvait aussi protéger les démarches entreprises par les édiles. S’y trouvaient également les avocats de la ville,
             régulièrement sollicités pour la rédaction de consultations juridiques.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’administration de la ville au quotidien</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’administration de la ville au quotidien</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Travaux publics et domaine de la ville</head>
           <p>Plusieurs bâtiments publics de première importance furent construits ou rénovés par la ville au cours du <num>xviii<hi rend="sup">e</hi></num>
             siècle. Outre les casernes et les pavillons déjà mentionnés, il convient de citer le bâtiment des classes en 1742, l’hôpital bourgeois en
@@ -205,7 +207,7 @@
             également chargé des travaux à effectuer aux nombreux cours d’eau des alentours. Le cas de l’Ill est intéressant car cette rivière était
             gérée par un syndicat fluvial regroupant toutes les communautés riveraines et procédant à des visites annuelles.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Actions du Magistrat en faveur des bourgeois</head>
           <p><hi rend="i">La religion </hi> — Le Magistrat était très impliqué dans la vie religieuse de la cité et gagna en 1720 un procès contre le
             grand vicaire de la cathédrale de Strasbourg qui lui contestait le droit de présentation à la cure. Les édiles présentaient également à
@@ -233,7 +235,7 @@
             bourses laisse clairement apparaître que seuls les fils de notables y eurent accès. Suite à de nouvelles réclamations, le Magistrat obtint
             en 1769 le rétablissement des basses classes dont la tenue fut confiée aux pères récollets.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Finances et économie</head>
           <p>L’essentiel des recettes de la ville était, depuis 1685, mis à ferme pour des périodes de trois à neuf années. Des conflits opposèrent à
             plusieurs reprises le Magistrat au fermier et débouchèrent parfois sur le versement d’indemnités à ce dernier. Les comptes annuels étaient
@@ -250,9 +252,7 @@
             à l’été 1776, de la perception des divers droits municipaux touchant les grains fit perdre plus de 13 000 livres aux caisses de Sélestat
             malgré les protestations des édiles auprès du contrôleur général Turgot.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Tout au long du <num>xviii<hi rend="sup">e</hi></num> siècle, le pouvoir que croyaient avoir conservé les membres des institutions dirigeantes de
           Sélestat fut nettement affaibli pour deux raisons principales. La première était l’intervention constante des autorités royales dans les
           affaires internes de la ville. Ces interventions, qui connurent deux périodes de forte intensité (1683-1717 et 1740-1765), furent grandement
@@ -262,12 +262,11 @@
           institutionnels que dans le domaine des pouvoirs conservés et des relations entretenues avec les autorités de tutelle. En un sens,
           l’intégration de la ville de Sélestat au royaume de France se fit au prix de ses droits et de ses pouvoirs hérités de l’empire.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Quinze documents : mémoire sur la ville (1730) ; textes normatifs concernant l’organisation institutionnelle et administrative de la ville
           de Sélestat ; actes et correspondance relatifs à des conflits internes au Magistrat ; documents concernant la construction des pavillons
           destinés aux officiers des troupes en garnison.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

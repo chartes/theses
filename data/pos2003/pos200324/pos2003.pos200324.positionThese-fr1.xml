@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Raimond VII de Toulouse et la paix de Paris (1229-1249)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Raimond VII de Toulouse et la paix de Paris (1229-1249)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Villeminoz, Jérôme">Jérôme Villeminoz</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200324.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La paix de Paris (11 avril 1229) est souvent considérée comme un jalon de première importance dans le rattachement du Languedoc à la
           couronne : à la faveur de la conjoncture, elle aurait préparé le passage de la grande principauté méridionale sous la domination capétienne,
           en liant les mains du dernier des comtes de Toulouse issus de la maison de Saint-Gilles. Pour en évaluer le poids, il convient d’examiner
@@ -58,16 +61,15 @@
           l’Eglise et de la couronne, sous-jacentes soit aux sanctions et menaces, soit au contraire à la tolérance, voire aux faveurs, que ces deux
           pouvoirs prodiguèrent au comte à l’occasion de ses manquements.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Dans leur majeure partie, les sources de cette histoire ont été éditées, qu’il s’agisse des principales sources diplomatiques (Layettes du
           Trésor des chartes, registres pontificaux) ou de l’abondante documentation publiée pour le <num>xiii<hi rend="sup">e</hi></num> siècle, sous forme de
           recueils ou à titre de preuves, par les divers historiens du Languedoc. La <hi rend="i">Chronique</hi> de Guillaume de Puylaurens représente
           une source narrative de première importance, que viennent compléter des chroniques ou annales de moindre ampleur et d’une fiabilité moins
           bien établie.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’établissement de la paix de Paris</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’établissement de la paix de Paris</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La genèse de la paix</head>
           <p>La croisade menée par Louis VIII fut précédée d’une grande activité diplomatique, avec pour protagonistes le comte Raimond VII, le roi
             et le pape. L’intention du roi était manifeste : il attendait de la croisade un bénéfice matériel d’importance. Les dispositions du
@@ -87,7 +89,7 @@
             modifié en sa défaveur ; les clauses furent encore alourdies à Paris, sans que l’on sache de manière certaine la part qui en revint à
             chacun des négociateurs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La paix de Paris</head>
           <p>Le texte de la paix de Paris est connu. Le roi Louis IX et le légat reçurent le serment d’en respecter les conditions de la part d’un
             Raimond VII qui, plus que de vaincu, faisait figure de pénitent. Pour lourdes que fussent les clauses, il ne s’agissait pas tant d’une
@@ -99,7 +101,7 @@
             plus près ; de son côté, le comte acceptait la paix, en espérant sans aucun doute améliorer son sort à partir de l’acquis précieux que
             représentait la reconnaissance du comté de Toulouse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La mise en œuvre immédiate de la paix</head>
           <p>Le jour même, Raimond VII vit sa situation régularisée auprès des deux autorités spirituelle et temporelle : il reçut l’absolution et il
             prêta hommage au roi. Il demeura captif, pour cautionner l’application des premières clauses du traité, dont la remise de sa fille aux
@@ -108,8 +110,8 @@
             la mise en œuvre de la paix dans le comté de Toulouse : il promulgua les canons du concile de Toulouse qui en précisaient certaines
             clauses, notamment dans le domaine de la recherche de l’hérésie.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La paix de Paris dans la “grande politique” de Raimond VII</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La paix de Paris dans la “grande politique” de Raimond VII</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le parti de l’empereur (1230-1234)</head>
           <p>Par la paix de Paris, le comte Raimond VII avait définitivement abandonné à l’Eglise de Rome le marquisat de Provence. Mais il fit ce
             qu’il put, avec une part de succès, pour revenir sur cette cession. Dès octobre 1229, il s’intitulait marquis de Provence devant son
@@ -131,7 +133,7 @@
             <lb/>Par conséquent, le comte de Toulouse se trouvait en 1240 dans une position difficile : sa fidélité à l’empereur lui portait
             préjudice, alors qu’il pouvait trouver beaucoup d’avantages à s’entendre avec le pouvoir pontifical.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Secouer le joug royal (1241-1243)</head>
           <p>Au cours des années 1241 et 1242, on peut reconnaître quelques fils directeurs dans le parcours mouvementé qui caractérise alors
             l’intense activité diplomatique de Raimond VII . On le voit se rapprocher de la papauté avec un objectif avant tout politique. Il en
@@ -148,7 +150,7 @@
             sept années qu’il lui restait à vivre, il ne dépassa pas le stade de perspectives matrimoniales qui auraient pu servir éventuellement à
             remettre en cause les clauses territoriales de 1229.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’apaisement</head>
           <p>Pendant les événements de 1242, Raimond VII avait essayé autant que possible de ménager l’Eglise. Même en apparaissant comme un fauteur
             de troubles ou en tardant à remplir ses obligations, ce qui lui valut d’être excommunié à plusieurs reprises, il ne s’opposa jamais de
@@ -163,8 +165,8 @@
             notamment à la bienveillance de la reine Blanche. Mais alors qu’il prenait les dispositions nécessaires, et après avoir dû une première
             fois remettre son voyage, la mort qui l’emporta le 27 septembre 1249 l’exonéra de son vœu de croisade.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’application de la paix dans les Etats de Raimond VII</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’application de la paix dans les Etats de Raimond VII</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La poursuite des hérétiques</head>
           <p>Le concile de Toulouse de 1229 avait fixé les modalités de la lutte contre l’hérésie. Le comte les compléta par ses statuts de 1233. Non
             qu’il fût soucieux de leur application, loin s’en faut : sa compromission avec les hérétiques était notoire et c’est justement à cause de
@@ -186,7 +188,7 @@
             poursuivissent strictement l’hérésie, mais il les surprend parfois en flagrant délit de connivence avec des hérétiques, quand ils
             n’étaient pas eux-mêmes croyants cathares, ce qui était le cas pour quelques-uns d’entre eux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Ambiguïtés : les épisodes de Montségur et d’Avignonet</head>
           <p>L’attentisme de Raimond VII et l’ambiguïté de ses intentions dans la poursuite de l’hérésie trouvent une illustration frappante dans son
             attitude à l’égard de la citadelle de Montségur. Par l’intermédiaire de ses agents, le comte maintint en effet des relations avec la
@@ -200,7 +202,7 @@
             que des châtiments subis par les auteurs du massacre. Il faut cependant constater que Raimond d’Alfaro continua à bénéficier de la faveur
             du comte.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Raimond VII, les églises et l’application de la paix de paris</head>
           <p>La paix de 1229 prévoyait le versement de nombreuses sommes à l’Eglise. Parmi celles-ci, le comte devait effectuer pendant dix ans le
             paiement des maîtres de l’université de Toulouse. Raimond VII cessa vite de s’en acquitter, ce qui lui valut une excommunication.
@@ -216,9 +218,7 @@
             Ici encore, le successeur de Raimond hérita d’affaires en cours et de plaintes ; leur solution ne porta pas toujours tort aux droits du
             comte.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Raimond VII œuvra sans relâche pour desserrer l’étau que représentait la paix de 1229, quitte même à l’enfreindre plus d’une fois.
           Plusieurs tactiques lui servirent à cette fin. La stratégie de la rupture et de l’affrontement direct ne fonctionnant pas, Raimond sut user
           de manœuvres dilatoires et feindre de céder pour mieux se prémunir. Il procéda surtout avec pragmatisme, sa politique reposant avant tout
@@ -255,8 +255,7 @@
           qu’on ne revint sur les clauses qu’il avait réussi à faire mettre en sommeil. Mais résigné et sur le point de partir pour la croisade, il
           reconnaissait que la paix de Paris avait gagné, laissant à son successeur le soin de régler les dernières séquelles.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Émile Bertin (1878-1957), décorateur de théâtre</title>
-        <title type="sub">Le peintre aux vingt âmes diverses.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Émile Bertin (1878-1957), décorateur de théâtre</title><title xml:lang="fr" type="sub">Le peintre aux vingt âmes diverses.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Berbain, Iris">Iris Berbain</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200301.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le décorateur de théâtre est un artiste dont l’œuvre est destinée à disparaître. Au <num>xx<hi rend="sup">e</hi></num> siècle, rompant avec la tradition, les peintres non
           spécialistes envahissent l’espace théâtral. Leur présence, fréquemment étudiée, occulte dans les ouvrages le rôle des peintres décorateurs.
           Émile Bertin, bien que très connu à son époque, est, pour ces différentes raisons, tombé aujourd’hui dans l’oubli et n’est mentionné dans
@@ -59,7 +62,7 @@
           a lui-même en partie constituées. Le succès pendant cinquante ans de cet homme, reconnu par tous ses contemporains comme le représentant
           d’une tradition artisanale vilipendée dès les premières années du siècle, ne laisse pas de surprendre.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Cette étude prend appui essentiellement sur les documents conservés au département des arts du spectacle de la Bibliothèque nationale de
           France, dans la collection Émile Bertin, qui comprend des albums de correspondance et de coupures de presse touchant à l’ensemble de la vie
           et de l’œuvre du décorateur, constitués par Émile Bertin lui-même, ainsi qu’un vaste ensemble de maquettes planes. Ces sources sont
@@ -67,9 +70,8 @@
           de Gaston Baty et d’Émile Bertin de la collection Baty. D’autres maquettes planes d’Émile Bertin et de nombreuses photographies de scène ont
           été vues à la bibliothèque de la Comédie-française et à celle de l’Opéra.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">De l’apprenti au maître</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">De l’apprenti au maître</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">enfance et formation</head>
           <p>Émile Bertin est né en 1878 à Suresnes. Son père est un musicien local assez célèbre. Le divorce de ses parents lui fait passer son
             enfance en Angleterre aux côtés de sa mère. Ses études sont brèves et il se dirige rapidement vers des études artistiques. Élève du
@@ -82,7 +84,7 @@
             son propre atelier près des Buttes-Chaumont en 1910. A la veille de la guerre, Bertin est un décorateur reconnu, demandé pour de nombreux
             spectacles et exposant dans plusieurs manifestations nationales et internationales.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Expérience du camouflage et nouvelle reconnaissance</head>
           <p>En 1914, Bertin est mobilisé et part au front quelques mois avant d’être nommé au service du camouflage dont la section centrale est
             installée dans son atelier. Le camouflage mobilise de nombreux artistes et particulièrement les décorateurs. Bertin est appelé à effectuer
@@ -96,7 +98,7 @@
             fréquenter pendant l’été. Il sait faire reconnaître la qualité de son travail et contribue lui-même à la formation de son image de maître
             décorateur auprès des journalistes et des hommes de théâtre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un maître respecté</head>
           <p>Les activités de Bertin entre les deux guerres sont extrêmement nombreuses et diverses. Il collabore très souvent avec le metteur en
             scène Gaston Baty dont il est un des décorateurs favoris. Il décore également des comédies et des opérettes en grand nombre. Sa profession
@@ -108,8 +110,8 @@
             conserve une position de référence, mais son activité créatrice se réduit peu à peu. Bien que collaborant avec Jean-Louis Barrault ou
             décorant les pièces de Sartre, il se consacre de plus en plus à la simple exécution de décors. Il décède à Paris en janvier 1957.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Une place dans le monde des décorateurs</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Une place dans le monde des décorateurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Situation du décor de théâtre au tournant du siècle</head>
           <p>Le monde des décorateurs de théâtre au tournant du siècle est un monde encore très proche de l’artisanat et de plus en plus critiqué
             pour ses méthodes de travail archaïques. La naissance de la mise en scène, les différentes tentatives de décors symbolistes ou
@@ -121,7 +123,7 @@
             expériences nouvelles d’Antoine, de Max Reinhardt ou des décorateurs cubistes. Son opinion en matière de décors est des plus modérées.
         </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Diversité de l’activité de bertin</head>
           <p>L’activité de Bertin est très variée. Il peint au cours de sa carrière un nombre très impressionnant de décors qui peut être estimé à
             près de six cents pièces, se décomposant en une abondante production de décors pour des comédies, les décors de trois ou quatre revues par
@@ -133,7 +135,7 @@
             comme les décors qualifiés de cubistes font scandale. La diversité de son œuvre s’inscrit également dans le temps. Bertin suit l’évolution
             du décor et s’y adapte. Sa longévité lui permet de représenter plus de cinquante ans de théâtre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">évolution artistique</head>
           <p>Les maquettes d’Émile Bertin constituent un ensemble fourni qui permet de saisir l’évolution de son style comme dessinateur et peintre.
             A un style proche encore par les coloris sombres et ternes d’une certaine tradition de décor fouillé du <num>xix<hi rend="sup">e</hi></num> siècle,
@@ -144,7 +146,7 @@
             décorateur, en rupture avec la précision de ses prédécesseurs : la suggestion d’un lieu et de son atmosphère par la présence d’un élément
             ou d’une couleur caractéristique qui remplace l’accumulation de détails.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Traitement des thèmes</head>
           <p>Le décorateur n’est pas libre des sujets qu’il traite. Il doit s’adapter avant tout à la pièce pour laquelle il peint des décors. Les
             maquettes de Bertin peuvent ainsi être classées en différentes catégories : les intérieurs, les extérieurs architecturaux, les paysages.
@@ -156,7 +158,7 @@
             néo-gothique. Il apparaît clairement à l’étude de ces esquisses qu’il s’agit bien de maquettes et non simplement de croquis en deux
             dimensions : l’expérience du décorateur lui permet de prévoir dès les premiers coups de crayons l’organisation de l’espace scénique.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Sur les planches</head>
           <p>Le décor de théâtre prend tout son sens sur scène. Il répond aux attentes d’un certain public qui demande selon les pièces représentées
             un certain type de décors. Une grande importance est accordée au décor réaliste, particulièrement au décor qui cherche à représenter les
@@ -169,8 +171,8 @@
             Bertin participe à cette évolution, mais reste très fidèle aux formes traditionnelles. Selon ce point de vue, il reste un peintre
             décorateur de théâtre au sens plein du terme et ne peut être qualifié de scénographe.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Entre créateur et exécutant</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Entre créateur et exécutant</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">A la disposition du metteur en scène</head>
           <p>Bertin décorateur n’est pas totalement libre de sa création artistique. Il dépend du texte, mais également du directeur de théâtre et du
             metteur en scène. L’étude des différentes étapes depuis la lecture du manuscrit jusqu’à la réalisation et l’approbation de la maquette
@@ -181,7 +183,7 @@
             deux dimensions. Ce talent pour l’étude et la copie des caractéristiques d’un peintre favorise la collaboration de Bertin avec les
             peintres de plus en plus nombreux qui travaillent pour la scène, et dont il doit exécuter les décors.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Réception</head>
           <p>La critique théâtrale, quoique très abondante, n’accorde qu’un faible place au décor de théâtre, souvent brièvement décrit, en termes
             figés, plutôt que réellement étudié. L’œuvre de Bertin suscite néanmoins quelques critiques plus précises à l’occasion de certaines pièces
@@ -189,7 +191,7 @@
             la tradition et parvenant à l’adapter tout au long de son œuvre. Le nom de Bertin mentionné à propos de décor est souvent l’assurance de
             la qualité artistique des décors d’une pièce.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une relation privilégiée : la filiation antoine-gémier-baty</head>
           <p>Bertin, par sa présence aux côtés des metteurs en scène Antoine, Gémier et Baty, matérialise le lien qui les unit, lien que l’on fait
             fréquemment passer par le décor plus que par la direction d’acteurs. La marque de Bertin se manifeste dans les décors qu’il a effectués
@@ -201,8 +203,8 @@
             travaille par la suite avec Jean-Louis Barrault, qui n’est pas directement l’élève de ces maîtres, il contribue probablement à le
             rattacher à cette tradition.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Bertin chef d’atelier</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Bertin chef d’atelier</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le plus grand atelier de paris</head>
           <p>L’atelier de Bertin se situe dans la tradition des ateliers du <num>xix<hi rend="sup">e</hi></num> siècle, tant par le lieu de sa construction et son organisation que
             par les méthodes de travail qui y règnent. L’atelier, à mi-chemin entre l’atelier du peintre et celui de l’artisan, est le reflet du
@@ -212,7 +214,7 @@
             décorateur, par sa taille, par l’étrange aspect des décors qui y sont brossés et conservés, est un lieu auquel la presse confère une aura
             magique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Décors dans les théâtres</head>
           <p>Les décors de théâtre quittent l’atelier du décorateur pour être montés sur scène, ce qui nécessite de grandes compétences techniques.
             Les questions de délais, de coûts influent considérablement sur la qualité du décor et sont révélatrices de son évolution au cours du
@@ -221,7 +223,7 @@
             <num>xx<hi rend="sup">e</hi></num> siècle n’a touché tout d’abord que les théâtres parisiens les plus fortunés, tandis que la province se contentait de décors souvent
             vieillots.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Camouflage et restauration</head>
           <p>Les activités de camouflage et de restauration de décors intérieurs de théâtre sont deux activités pratiquées par de nombreux décorateurs
             de théâtre de la première moitié du <num>xx<hi rend="sup">e</hi></num> siècle. Bertin occupe cependant une place particulière dans ces domaines. L’atelier central de la
@@ -232,9 +234,7 @@
             particulièrement en restaurant la salle de l’Opéra de Paris en 1935 et en peignant à l’identique le mythique rideau de l’Opéra en 1952,
             sans oublier sa participation, à la veille de sa mort, au chantier de l’Opéra royal de Versailles.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>La carrière d’Émile Bertin est celle d’un décorateur formé aux traditions du <num>xix<hi rend="sup">e</hi></num> siècle, mais poursuivant son activité pendant toute la
           première moitié du siècle suivant. Elle est à la fois représentative de celle de bon nombre de décorateurs de l’époque, qui n’ont que
           rarement fait l’objet d’études, par ses aspects matériels (fonctionnement d’un atelier de décorateur, rapports avec les directeurs de
@@ -246,11 +246,10 @@
           travail auprès de metteurs en scène novateurs comme sur des scènes plus traditionnelles, contribué à la diffusion des nouvelles pratiques de
           décors et de mise en scène.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Documents figurant dans les albums de correspondance de Bertin relatifs au statut du décorateur de théâtre ainsi qu’aux échelles de tarifs
           pratiqués pour les décors établis par les syndicats patronaux de décorateurs. ­ Poème inédit de Paul Fort adressé à Émile Bertin.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

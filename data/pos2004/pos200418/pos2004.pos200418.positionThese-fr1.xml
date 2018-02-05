@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le désir de réforme. La liturgie entre tradition et magistère ( &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ca.&lt;/hi&gt;1500- &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ca.&lt;/hi&gt;1620)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le désir de réforme. La liturgie entre tradition et magistère ( <hi rend="i">ca.</hi>1500- <hi rend="i">ca.</hi>1620)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Meunier, Alexis">Alexis Meunier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200418.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La liturgie occupe dans les sociétés d’Ancien Régime une place centrale et, pourtant, elle est un objet auquel l’historiographie a accordé
           peu d’importance. Ce travail cherche à montrer la promesse que le dialogue entre histoire de la liturgie et histoire générale représente
           pour la compréhension des sociétés modernes. La période étudiée est une période de bouleversements pour la prière de l’Église, qui se voit
@@ -64,7 +67,7 @@
           transmission elle-même, c’est alors l’approbation explicite par l’autorité compétente qui remplit ce rôle. Cette transformation est
           parallèle à celle qui fit passer la coutume définie essentiellement par son caractère rationnel, garanti par le consentement <hi rend="i">tacite</hi> de l’autorité, à la coutume définie plus clairement sous un angle volitif, qui fait du consentement <hi rend="i">explicite</hi> une condition nécessaire à sa validité.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude se fonde d’abord sur les livres liturgiques eux-mêmes. Dans ce cadre, une attention particulière a été accordée au bréviaire, du
           fait du nombre de réformes qu’il a subies au cours de la période. Pour pouvoir exploiter cette masse documentaire imposante, le choix a été
           fait de se servir en partie des répertoires bibliographiques. L’analyse directe de ce type d’œuvres s’est limitée à quelques exemples : le
@@ -77,9 +80,8 @@
           et qui sont aujourd’hui conservés à l’ <hi rend="i">Archivio segreto vaticano</hi>. Par ailleurs, ont été consultés les registres de
           délibérations capitulaires de Notre-Dame de Paris et quelques dossiers concernant les Assemblées du clergé.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La liturgie au XVI<hi rend="sup">e </hi> siècle : le désir de réforme</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La liturgie au XVI<hi rend="sup">e </hi> siècle : le désir de réforme</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Situer la liturgie dans la société du XVI<hi rend="sup">e </hi> siècle</head>
           <p>Quels sont les liens tissés entre la société et la liturgie ? Bien qu’il soit difficile de voir la liturgie comme un aliment direct pour
             la foi des chrétiens de l’époque, le monde dans lequel ils vivent n’en est pas moins profondément imprégné par celle-ci. En effet, les
@@ -90,7 +92,7 @@
             révolution du livre fut la plus visible. La possibilité de répandre à petite échelle un texte identique joua certainement dans la
             naissance d’un discours de réforme qui cherche à construire l’unité liturgique de manière plus radicale qu’auparavant.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Redonner forme à la prière de l’Église : premières tentatives</head>
           <p>Avant Pie V, l’Europe liturgique connut un grand nombre de réformes. Celles-ci furent d’abord rendues possibles par les discussions
             humanistes autour de la liturgie. Au cours de ces débats, des critères de réforme furent mis en valeur et certains ecclésiastiques les
@@ -102,9 +104,9 @@
             récitation hebdomadaire stricte du Psautier. Les autres aspects de la réforme s’expliquent par la volonté d’adapter l’office à la
             récitation privée qui acquiert ainsi une indépendance nette par rapport à la récitation chorale.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Trois voies de la réforme liturgique : <lb/>l’œuvre de Pie V, les conciles provinciaux <lb/>et le travail de la
+      </div><div n="4" type="part"><head n="0" type="chapter">Trois voies de la réforme liturgique : <lb/>l’œuvre de Pie V, les conciles provinciaux <lb/>et le travail de la
           Congrégation des rites</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La “ révolution ” du <hi rend="i">Breviarium Pianum </hi> : Pie V et le droit liturgique</head>
           <p>Après un bref développement introductif sur le décret du concile de Trente relatif aux <hi rend="i">abusus missæ</hi>, c’est
             l’accomplissement par Pie V de la mission qui fut confiée au pape par le même concile qui est présenté. Sans prétendre constituer une
@@ -120,7 +122,7 @@
             fin du xiv<hi rend="sup">e </hi> siècle ­ âge d’or auquel succède une ère de développement de l’hérésie. C’est un Pie V profondément
             attentif à l’histoire et à la valeur normative de la coutume locale que l’on retrouve ainsi.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Quelques conciles provinciaux et la réforme de la liturgie</head>
           <p>En partie indépendant de la réforme menée par Pie V, le travail des conciles provinciaux en matière liturgique est des plus riches. Il se
             place en continuité avec les décrets du concile de Trente et cherche à les mettre en œuvre par un phénomène de réception locale. Les
@@ -133,7 +135,7 @@
             promulgués par Pie V, soit ils expriment la volonté de voir les livres locaux réformés sur le même modèle. Dans ce dernier cas, Rome ne
             manifeste pas d’opposition à la correction des canons, ni ne demande l’envoi des livres nouveaux pour approbation.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La liturgie à la Congrégation des rites</head>
           <p>Motivée par le nombre des demandes que la Congrégation du concile avait reçues à propos de la liturgie, la création de la Congrégation
             des rites est une véritable réponse romaine à un besoin ressenti par les Églises locales de certaines aires géographiques,
@@ -153,9 +155,9 @@
             de Pie V se trouvent ainsi relues à la lumière des nouveautés introduites par celles qui leur ont succédé. Cependant, la Congrégation
             reste un lieu de débats et l’on peut deviner, au travers de quelques exemples, les courants ecclésiologiques qui la partagent.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La France et l’usage romain réformé par le concile de Trente : <lb/>éclairages sur les enjeux politiques et
+      </div><div n="5" type="part"><head n="0" type="chapter">La France et l’usage romain réformé par le concile de Trente : <lb/>éclairages sur les enjeux politiques et
           spirituels</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Adopter le romain ? Les enjeux et les réalisations</head>
           <p>Une partie de la France adopta l’usage romain sans résistances avérées : il s’agit schématiquement de la France du Sud. Cette adoption
             put se faire dans le cadre des conciles provinciaux ou bien intervenir par le biais de la seule voie prévue par la législation romaine :
@@ -168,7 +170,7 @@
           <p>L’analyse de la réception de l’usage romain en France envisage particulièrement l’œuvre des conciles provinciaux et de l’Assemblée
             générale du clergé, où s’affirme le souci d’unité liturgique, ainsi que la position du pouvoir royal en la matière.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Réformer les usages antiques ? Dynamiques et oppositions</head>
           <p>L’opposition d’une partie du clergé de France à l’adoption pure du romain conduisit plusieurs évêques à mener la réforme des usages
             diocésains sur le modèle des livres promulgués par Pie V. Il convenait donc d’analyser les oppositions à l’adoption du romain manifestées
@@ -177,9 +179,7 @@
             saisira ainsi quelle compréhension de l’œuvre liturgique tridentine pouvaient avoir les instigateurs de ces deux réformes. Parallèlement,
             l’analyse des oppositions au romain permet de souligner certains aspects du gallicanisme encore peu connus.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Au début de la période étudiée, la liturgie représente un héritage intangible, signe de l’élection particulière en même temps que de la
           communion avec l’universel. En cherchant à la rendre plus pure dans son expression de la foi, les humanistes rendirent possible, par leurs
           critiques, la redécouverte de la catégorie de réforme liturgique. La prière de l’Église fut également alors mise en rapports très clairs
@@ -194,8 +194,7 @@
           la prière de l’Église locale, elle devint celle de la prière de la <hi rend="i">Catholica</hi>, assimilée de plus en plus à l’Église de
           Rome.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

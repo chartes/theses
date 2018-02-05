@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Lacombe Lucien de Louis Malle</title>
-        <title type="sub">Histoire d’une polémique, ou polémique sur l’Histoire ?</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Lacombe Lucien de Louis Malle</title><title xml:lang="fr" type="sub">Histoire d’une polémique, ou polémique sur l’Histoire ?</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Feste-Guidon, Aurélie">Aurélie Feste-Guidon</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200912.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le fonds du cinéaste Louis Malle, déposé en 2000 à la Bibliothèque du Film par ses héritiers, est fort riche, mais paradoxalement, a été
           peu exploité. Sans doute cela tient-il à la place ambivalente qu’occupe Louis Malle (1932-1995) dans le cinéma français depuis ses brillants
           débuts : il obtient avec Cousteau la Palme d’or pour Le Monde du Silence (1956) et le prix Delluc grâce à Ascenseur pour l’échafaud (1957).
@@ -78,7 +81,7 @@
           ampleur, sa microchronologie et ses caractéristiques, avant de proposer des explications à ce phénomène et d’en envisager la réception sur
           le long terme.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La consultation du fonds Louis Malle (BiFi) ne s’est pas limitée aux seules archives concernant Lacombe Lucien : la genèse complexe du film
           imposait de consulter toutes les archives la concernant depuis 1962. Deux fonds annexes ont également été très profitables : celui de la
           scripte Sylvette Baudrot-Guilbaud et celui de l’historien du cinéma Pierre Billard. Les archives, encore conservées au siège des Nouvelles
@@ -89,9 +92,8 @@
           différents titres n’a été opérée. Quelques courriers des lecteurs ont été relevés. Enfin, un repérage des émissions radio et télédiffusées a
           été effectué grâce aux collections de l’Institut national de l’audiovisuel.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Archéologie d’une œuvre</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Archéologie d’une œuvre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le projet mexicain : la réflexion sur le lumpenproletariat</head>
           <p>Louis Malle et le Mexique. — En 1971, Louis Malle se rend au Mexique après le succès du Souffle au cœur et est témoin des manifestions
             étudiantes sous la présidence de Luis Echeverria. Il est frappé par l’usage qui est fait de jeunes sous-prolétaires, les halcones, pour
@@ -100,7 +102,7 @@
             puise donc son origine dans la réflexion de Marx sur le Lumpenproletariat, bras armé du fascisme. Louis Malle abandonne son scénario
             devant l’opposition du gouvernement mexicain.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les sources algériennes : la torture en question</head>
           <p>L’adaptation de La Grotte de Georges Buis. — La deuxième source d’inspiration que mentionne Louis Malle est son expérience de la torture
             en Algérie. Il avait décidé d’adapter à l’écran le roman d’un militaire sur le conflit algérien, et était parti en repérage avec Volker
@@ -113,7 +115,7 @@
             temps à un scénario sur la guerre d’Algérie avec un harki combinant ces deux aspects, mais renonce devant un sujet aussi brûlant
             historiquement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La transposition dans la France de la Seconde guerre mondiale</head>
           <p>Feux croisés : effet de mode ou fait de mémoire ? — Un faisceau d’éléments a poussé Louis Malle à transposer son scénario du Faucon dans
             la France de 1944. L’influence du Chagrin et la Pitié n’est pas négligeable, d’autant plus que c’est la société de Louis Malle, la N.E.F.,
@@ -125,8 +127,8 @@
             tailleur… Au gré des réécritures, le personnage prend forme : c’est un jeune paysan, fruste et non sadique, avec un désir de revanche
             sociale.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Du Milicien à Lacombe Lucien</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Du Milicien à Lacombe Lucien</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La longue quête d’un co-scénariste</head>
           <p>Les scénaristes pressentis. — Après avoir lu Pompes funèbres, Louis Malle prend contact avec Jean Genet. Les deux hommes se rencontrent
             en août 1972, mais ne parviennent pas à se mettre d’accord sur le projet. On retrouve l’influence de l’écrivain dans les premiers
@@ -142,7 +144,7 @@
             majeures sont donc uniquement le fait de Louis Malle, avant sa collaboration avec Patrick Modiano. Le réalisateur, cherchant toujours un
             co-scénariste, se range alors à l’avis d’Alexandra Stewart, et envoie son synopsis au jeune écrivain en janvier 1973.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’écriture à quatre mains</head>
           <p>Patrick Modiano : le choix du romanesque. — Louis Malle est intrigué par l’érudition exceptionnelle de Patrick Modiano sur la période de
             la Seconde guerre mondiale, alors qu’il est né en 1945 : il considère qu’il saura retranscrire l’atmosphère des milieux troubles de la
@@ -153,7 +155,7 @@
             relations bourreau-victime, et en particulier à l’opacification des personnages : les motivations de Lucien et des membres de la famille
             juive sont de moins en moins expliquées.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Du Petit Lucien à Lacombe Lucien</head>
           <p>La réalisation du Petit Lucien. — Il s’agit d’une co-production franco-italo-allemande qui implique la présence d’acteurs étrangers. La
             distribution ne fait appel qu’à des gens inconnus du public, les deux premiers rôles étant joués par des acteurs non professionnels :
@@ -168,8 +170,8 @@
             (Santayana). La publicité sur le film, sorti le 30 janvier 1974, est relancée par la publication du scénario qui sort en librairie le 5
             février.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Lacombe Lucien : un événement</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Lacombe Lucien : un événement</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une couverture médiatique exceptionnelle</head>
           <p>L’étendue médiatique. — L’accueil réservé à l’œuvre dépasse le cadre ordinaire de la réception d’un film : le nombre d’articles et
             d’émissions, environ 300, est considérable. On compte environ 150 articles de la presse nationale quelle que soit la nature du journal :
@@ -181,7 +183,7 @@
             est la conséquence des multiples articles sur le film d’un même journal et des discussions sur la mode rétro. La tendance est identique
             dans la presse provinciale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les caractéristiques de la critique</head>
           <p>Minimisation de l’aspect allégorique. — La plupart des critiques ignorent la dimension allégorique voulue par Louis Malle pour se
             focaliser sur la représentation de la Seconde guerre mondiale. Il s’ensuit que le rôle de Patrick Modiano, considéré comme le spécialiste
@@ -195,7 +197,7 @@
             exemple de la mode rétro (avril-novembre) à cause de la sortie française de Portier de nuit (4 avril), tout en recevant toujours des
             critiques globalement favorables. Le passage du concert de louanges à la disharmonie de la controverse est frappant.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Cacophonie à tous les niveaux</head>
           <p>Des réactions contradictoires. — Les opinions sur le film sont divergentes, mais fondées sur les mêmes éléments appréciés de façon
             diamétralement opposée. Si l’on peut comprendre que les arguments s’opposent d’un journal à l’autre, il est plus étonnant que la même
@@ -210,8 +212,8 @@
             oppositions nettement caractérisées, mais elles sont rarement endossées par tous les adhérents d’une famille de pensée. Il y a souvent
             décalage entre l’opinion attendue et l’opinion proférée.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Lacombe Lucien, un film subversif ?</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Lacombe Lucien, un film subversif ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une remise en cause de l’histoire de la Seconde guerre mondiale</head>
           <p>La légende gaullo-communiste. — L’image d’une France collaboratrice se substituant à celle d’une France entièrement résistante n’est pas
             novatrice. La représentation de la Résistance est réduite par les coupes au montage et ne conforte pas plus le mythe gaullien : elle n’a
@@ -228,7 +230,7 @@
             rapports de classe : il devient dès lors beaucoup plus difficile d’analyser les personnages selon la grille de lecture dorénavant
             exclusive, celle du juif innocente victime confrontée à l’Holocauste.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Remise en cause esthétique de la représentation <lb/>de la Seconde guerre mondiale</head>
           <p>L’illusion générique : fiction ou documentaire ? — L’originalité du réalisateur consiste à réaliser, sous le masque d’un style académique
             – qui ne prédispose pas le public à recevoir une représentation non traditionnelle –, une fiction filmique caractérisée par des effets de
@@ -241,7 +243,7 @@
             Le passé de Lucien semble oublié et le récit acquiert une structure circulaire inquiétante, comme si l’expérience du mal ne laissait pas
             de trace, que ce soit pour les bourreaux ou les victimes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">« Belle fonction à assumer, celle d’inquiéteur » (André Gide)</head>
           <p>« L’innocent coupable ». — Lacombe Lucien soulève d’abord à travers le comportement de Lucien le problème de la banalité du mal, évoqué
             par Hannah Arendt, et renforcé dans le film par une représentation cinématographique particulière. La notion d’engagement politique est
@@ -257,9 +259,7 @@
             de la mention de l’aspect allégorique s’accompagne paradoxalement d’une exemplification du personnage de Lacombe Lucien vu comme le modèle
             du sous-prolétaire manipulé par les forces de la réaction.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>L’événement qu’a constitué Lacombe Lucien en 1974 et la polémique qui s’en est suivie toute une année a conforté la réputation sulfureuse
           de Louis Malle, mais l’on ne doit pas oublier que le sujet du film correspondait à ses préoccupations profondes. L’analyse de l’archéologie
           mexicaine et algérienne du film montre la permanence d’un projet porté par une réflexion sociale auquel s’agrège une réflexion sur la
@@ -287,12 +287,11 @@
           l’histoire d’une polémique que rendre au film son rôle de révélateur des conflits latents entre mémoire et histoire à l’intérieur d’une même
           société.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Les sept projets de scénario et scénarios retraçant la genèse du film. — Carnet de notes du voyage en Algérie de Volker Schlöndorff et
           Louis Malle. — Les six scènes coupées. — Document de postproduction. — Annonce-presse du livre Histoire vécue de la Résistance. — Page de
           garde du scénario de tournage de la scripte. — Index général.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

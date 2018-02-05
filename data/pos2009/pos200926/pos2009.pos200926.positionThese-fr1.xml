@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’Art nouveau à l’Exposition universelle de 1900</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’Art nouveau à l’Exposition universelle de 1900</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Tharaud, Marie-Amélie">Marie-Amélie Tharaud</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200926.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Apparu au début des années 1890, l’Art nouveau s’est diffusé dans toute l’Europe, renouvelant les arts décoratifs et l’architecture. Avant
           1900, des expositions importantes ont déjà eu lieu dans différents pays. Mais jamais encore l’Art nouveau n’a connu une manifestation d’une
           telle ampleur qu’à l’Exposition universelle de 1900 à Paris. En effet, c’est la première fois qu’une exposition universelle réunit un tel
@@ -75,7 +78,7 @@
           artistes, les modalités de l’entrée de l’Art nouveau dans les musées, l’organisation des expositions suivantes, et en observant les
           prolongements du débat artistique, elle cherche à évaluer la place de l’Exposition universelle dans l’histoire de l’Art nouveau.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La France ayant organisé l’Exposition, des centaines de cartons sont conservés aux Archives nationales sur ce sujet (série F <hi rend="sup">12</hi> ). Ces archives portent toutefois très peu sur les questions artistiques. Elles permettent de connaître les relations
           entre le commissariat général de la France et les commissariats des différents pays.</p>
         <p>De manière beaucoup plus anecdotique, les archives de l’Union centrale des arts décoratifs, conservées à la bibliothèque des Arts
@@ -90,9 +93,8 @@
           essais sont également intéressants, comme ceux de Jean Lahor, Roger Marx ou Robert de la Sizeranne, parmi d’autres : ils livrent une
           réflexion sur l’Art nouveau tout en permettant de connaître les œuvres présentes à l’Exposition universelle.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les modalités de la présence de l’Art nouveau <lb/>à l’Exposition universelle</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les modalités de la présence de l’Art nouveau <lb/>à l’Exposition universelle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’essentielle question du soutien politique</head>
           <p>La question du soutien officiel de chaque pays à l’Art nouveau est déterminante pour sa représentation à l’Exposition universelle. Quelle
             que soit l’importance du mouvement dans chaque pays, sa représentation à l’Exposition dépend avant tout d’une volonté politique.</p>
@@ -112,7 +114,7 @@
             nationale, son absence est souvent due à la puissance du nationalisme, en Espagne par le rejet de l’art catalan, en France et en Italie
             par le rattachement à un glorieux passé artistique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Art nouveau, un idéal… lucratif</head>
           <p>Les exposants ont deux raisons majeures de vouloir exposer l’Art nouveau : la conviction artistique et l’intérêt commercial.</p>
           <p>En effet, les artistes de l’Art nouveau viennent de tous les pays pour montrer leurs œuvres et contribuer à la reconnaissance du
@@ -127,7 +129,7 @@
             nouveau de qualité – on compte Henri Sauvage et Serrurier-Bovy parmi les architectes – et très séduisant. En se mettant au service d’une
             architecture commerciale, l’Art nouveau bénéficie en plus d’une grande publicité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La présence de l’Art nouveau soumise aux nationalismes</head>
           <p>Les Expositions universelles représentent une lutte pacifique entre les nations. Or, le contexte nationaliste joue un rôle fondamental
             dans la présence de l’Art nouveau à l’Exposition universelle. Il interfère tout d’abord dans l’organisation même de l’Exposition, conçue
@@ -143,7 +145,7 @@
             en permettant à différents pays de s’émanciper de la tutelle artistique française, et peut-être même de la renverser, comme le montrent
             les participations imposantes de l’Allemagne et de l’Autriche à l’Exposition.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’Exposition universelle, un tournant pour l’Art nouveau ?</head>
           <p>L’Exposition représente une tribune exceptionnelle pour l’Art nouveau, qui s’yimpose dans des centaines d’œuvres, et dont les artistes
             triomphent par l’obtention de récompenses et par l’attention que leur portent les critiques et le public. Si les édifices Art nouveau sont
@@ -158,8 +160,8 @@
             visibilité remarquable, mais qui aurait pu être encore plus importante si les styles anciens n’avaient été aussi présents et si
             l’organisation même de l’Exposition n’avait provoqué la dispersion de l’Art nouveau.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La réception critique de l’Art nouveau <lb/>à l’Exposition universelle : polémiques et définitions</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La réception critique de l’Art nouveau <lb/>à l’Exposition universelle : polémiques et définitions</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Des interrogations</head>
           <p>Deux camps s’opposent lors de l’Exposition parmi les critiques d’art : les partisans et les détracteurs de l’Art nouveau. Ils défendent
             leurs positions au sein de revues, d’essais, de rapports de jurys... Si certains sont résolument favorables à l’Art nouveau – Jean Lahor,
@@ -178,7 +180,7 @@
             jeunesse, tâtonnements inévitables qui font de l’Art nouveau une promesse pour l’avenir. Pour les autres, l’Exposition universelle marque
             au contraire le début de son agonie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les attaques formulées contre l’Art nouveau</head>
           <p>Les attaques portent sur trois points principaux : le manque de mesure de l’Art nouveau, ses manifestations à l’étranger, et l’échec de
             son industrialisation artistique.</p>
@@ -207,7 +209,7 @@
           <p>Finalement, la virulence et la diversité des accusations, mettant en relief les défauts de l’Art nouveau, ont certainement contribué à le
             dévaloriser.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Quand l’Art nouveau plaît</head>
           <p>L’Art nouveau est rarement contesté dans son ensemble : certaines tendances sont même unanimement louées. Ainsi, toute œuvre dite
             rationnelle est appréciée, et pour ce faire, l’artiste doit, pense-t-on, s’inspirer essentiellement de la nature. L’Art nouveau
@@ -228,8 +230,8 @@
             favorables. Certains reconnaissent même la supériorité de l’exposition allemande sur l’exposition française, et la capacité des artistes
             allemands à s’unir dans des associations.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les conséquences de l’Exposition universelle <lb/>sur l’Art nouveau</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les conséquences de l’Exposition universelle <lb/>sur l’Art nouveau</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Après l’effort… le bilan pour les artistes de l’Art nouveau</head>
           <p>Participer à l’Exposition universelle n’est pas anodin pour un artiste. L’investissement est important en temps et en argent, mais
             l’artiste peut retirer de l’expérience de précieux avantages : célébrité, clientèle...</p>
@@ -242,7 +244,7 @@
             déroulement même de l’Exposition, par les achats qui y sont effectués, puis dans les années qui suivent, par la constitution d’une
             clientèle qui se fie au succès de l’artiste à l’Exposition et lui permet de prospérer.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La reconnaissance officielle de l’Art nouveau</head>
           <p>L’Exposition universelle est source d’honneurs pour les artistes de l’Art nouveau : outre les récompenses obtenues, la Légion d’honneur
             leur est souvent conférée, et les étrangers reçoivent des titres honorifiques dans leur pays au retour de l’Exposition. L’Art nouveau est
@@ -256,7 +258,7 @@
             l’Exposition universelle, le débat critique autour de l’Art nouveau perd de sa vigueur, ce qui peut être une conséquence de
             l’institutionnalisation provoquée par l’Exposition.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le rôle artistique de l’Exposition universelle</head>
           <p>L’Exposition universelle joue un rôle artistique dans la carrière des artistes et plus généralement dans l’évolution du mouvement Art
             nouveau. Elle demande aux artistes de produire des œuvres exceptionnelles, qui vont parfois influencer la suite de leur carrière. Surtout,
@@ -277,9 +279,7 @@
             qui a mis en valeur les défauts de l’Art nouveau et lui a porté préjudice : la fin de l’Exposition met un terme au débat, mais marque
             aussi la fin de l’engouement des critiques pour l’Art nouveau.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’Exposition universelle reflète la place que tient l’Art nouveau dans la société française de l’époque : une place numériquement mineure –
           comparée à l’abondance des styles anciens – mais qui accapare l’attention. Elle marque une incroyable volonté de théorisation de l’Art
           nouveau de la part des critiques d’art, conscients du caractère exceptionnel de ce rendez-vous artistique. Les partisans de l’Art nouveau
@@ -294,10 +294,9 @@
           polémique provoquée par l’Exposition sur la validité de l’Art nouveau a également eu pour conséquence de fléchir l’enthousiasme de ses
           défenseurs en France.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Plans et photographies de l’Exposition universelle. <hi rend="i">—</hi> Liste des architectes officiels de l’Exposition universelle. <hi rend="i">—</hi> Statistiques des exposants d’arts décoratifs.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

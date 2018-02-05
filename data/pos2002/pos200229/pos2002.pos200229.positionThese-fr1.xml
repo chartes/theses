@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La bibliothèque de l’abbaye cistercienne de Fontenay (Côte-d’Or)</title>
-        <title type="sub">Constitution, gestion, dissolution (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle).</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La bibliothèque de l’abbaye cistercienne de Fontenay (Côte-d’Or)</title><title xml:lang="fr" type="sub">Constitution, gestion, dissolution (<num>xii<hi rend="sup">e</hi></num>-<num>xviii<hi rend="sup">e</hi></num> siècle).</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Stutzmann, Dominique">Dominique Stutzmann</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200229.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Seconde fille de Clairvaux et septième abbaye de l’Ordre cistercien, l’abbaye de Fontenay (Côte-d’or) a été fondée en 1119 et a été
           particulièrement favorisée par saint Bernard qui a surveillé sa construction et placé ses proches parents à sa tête. L’architecture, les
           restaurations et les modifications successives des bâtiments de l’abbaye, ainsi que les activités métallurgiques de la forge, sont désormais
@@ -74,7 +77,7 @@
           Philipps 1715 ; Bruxelles, Bibl. royale Albert-I<hi rend="sup">er</hi> , IV 289 ; London, British Libr., Add. 11294 ; Paris, Bibl. de
           l’Arsenal, 1225 ; Paris, Bibl. nat. de Fr., lat. 3925, 3953 et 11384 ; Stockholm, Kongl. Bibl., VU 16.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources pour l’histoire de la bibliothèque, en l’absence de catalogue médiéval, sont constituées par cinq catalogues de la période
           moderne, les manuscrits retrouvés, les actes et les documents relatifs au transfert des volumes et les témoignages de visiteurs. <lb/>Les
           catalogues sont : ms. Berlin, Staatsbibl.-Preussischer Kulturbesitz, Philipps 1866, fol. 31v (catalogue A) ; ms. Paris, Bibl. nat. de Fr.,
@@ -84,9 +87,8 @@
           correspondance entre Colbert et ses agents, les traces de la vente des manuscrits au marquis de Paulmy et les inventaires des saisies
           révolutionnaires. <lb/>Le seul témoignage de visite concernant la bibliothèque est celui des bénédictins dom Martène et dom Durand.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La création du fonds</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La création du fonds</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etude matérielle des manuscrits du <num>xii<hi rend="sup">e</hi></num> siècle</head>
           <p>Le support de l’écriture est le parchemin ; deux types de peaux sont utilisés : un parchemin fin et lisse pour les manuscrits les plus
             anciens et un parchemin épais et pelucheux pour les manuscrits de la seconde moitié du siècle. Il n’y pas de corrélation entre la largeur
@@ -103,7 +105,7 @@
             Fontenay diffère des réalisations monochromes de Cîteaux et de Clairvaux ; les manuscrits Paris, Bibl. de l’Arsenal 586, 989 et Troyes,
             Bibl. mun. 56 ont été décorés par un même artiste ; plusieurs mains enfin se retrouvent dans plusieurs manuscrits de Fontenay.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Culture monastique et réseaux cisterciens</head>
           <p>L’abbaye de Fontenay a souvent utilisé la bibliothèque de son abbaye-mère, Clairvaux, pour copier ses manuscrits. C’est le cas notamment
             pour la collection augustinienne du ms. Paris, Bibl. nat. de Fr., lat. 2099, pour les sermons sur l’Apocalypse de Geoffroy d’Auxerre, les
@@ -127,21 +129,21 @@
             et limités à l’essentiel : lettres et <hi rend="i">Panormie</hi> d’Yves de Chartres, <hi rend="i">Décret</hi> de Gratien, les quatre
             anciennes compilations de décrétales ; lettres de Sénèque, florilège de sentences de Publilius Syrus.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’organisation d’une bibliothèque</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’organisation d’une bibliothèque</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Emplacements de la bibliothèque</head>
           <p>L’emplacement de l’ <hi rend="i">armarium claustri</hi> a été retrouvé dans le cloître, contre le transept sud de l’abbatiale. La niche
             d’origine a été refaite dès le <num>xiii<hi rend="sup">e</hi></num> siècle et il est probable que la bibliothèque occupait également une partie de
             la sacristie. A partir du <num>xvi<hi rend="sup">e</hi></num> siècle, l’abbaye semble disposer d’une bibliothèque séparée, dans le bâtiment de
             “ l’enfermerie ”, mais la pratique des dépôts multiples ne cesse pas.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La reliure</head>
           <p>Seules huit reliures médiévales subsistent. Celles qui couvrent des manuscrits du <num>xii<hi rend="sup">e</hi></num>  siècle ont
             vraisemblablement réalisées au même moment, vers la fin du siècle. Ces reliures ont été exécutés à l’abbaye même et sont à double nerf de
             cuir et ais de bois recouverts de peau blanche.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le marquage des livres et l’organisation de la bibliothèque</head>
           <p>Hormis quelques mentions de dons, l’appartenance d’un volume à la bibliothèque de l’abbaye est seulement indiquée par un ex-libris de
             formulation unique : “ liber sancte Marie de Fonteneto ”. Une partie des ex-libris du <num>xii<hi rend="sup">e</hi></num> siècle présentent un “ n ”
@@ -168,19 +170,19 @@
             dépourvue de livres, même après que les manuscrits ont été pris ou vendus. Le dernier prieur, dom André Gentil, disposait même, dans le
             domaine des sciences, d’une bibliothèque personnelle bien fournie.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Etude des sources et histoire du fonds et de sa dispersion</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Etude des sources et histoire du fonds et de sa dispersion</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les sources médiévales</head>
           <p>Une liste de lectures contenue dans un manuscrit de Fontenay se révèle, à l’étude, n’être d’aucune utilité pour l’histoire de la
             bibliothèque. Un statut du Chapitre général de 1391 signale qu’un moine de Fontenay a emporté indûment un manuscrit des <hi rend="i">Bucoliques</hi> de l’abbaye de Chehery, mais ce manuscrit n’est pas connu par ailleurs. Une annotation médiévale sur un manuscrit de
             Cîteaux signale que le modèle, non retrouvé, était à Fontenay.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les lettres de Léon le Grand à la bibliothèque du Vatican</head>
           <p>Le ms. Vatican, Bibl. apost. vat., Vat. lat. 544, qui renferme des lettres de Léon le Grand et dont la provenance a été identifiée grâce
             à un ex-libris, est sorti très tôt de l’abbaye et est attesté dans les inventaires de la bibliothèque pontificale depuis la fin du XV <hi rend="sup">e</hi>  siècle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’intervention du père Pierre-François Chifflet</head>
           <p>Pierre-François Chifflet (1592-1682) connaît bien l’abbaye de Fontenay, dont il a édité plusieurs extraits du cartulaire. Parmi ses
             notes, on trouve plusieurs copies de textes présents dans des manuscrits de Fontenay (une généalogie royale, l’épître dédicatoire de Raban
@@ -188,7 +190,7 @@
             de l’ami chez qui il travaille le plus souvent , Jean Bouhier, conseiller au parlement de Dijon : le père Chifflet a sans doute servi
             d’intermédiaire lors du transfert de propriété entre l’abbaye et le collectionneur dijonnais.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’intervention de Colbert</head>
           <p>Jean-Baptiste Colbert, qui n’a jamais caché son goût pour les manuscrits, met à profit l’autorité dont il dispose sur les intendants
             pour enrichir sa collection. Averti par Pierre-François Chifflet, qu’il a fait nommer garde du médailler du roi en 1665, que l’abbaye de
@@ -200,19 +202,19 @@
             volumes qu’il envoie au contrôleur général en quatre caisses distinctes. Le catalogue C est rédigé par Etienne Baluze au moment où il
             classe les manuscrits et leur attribue une cote dans la bibliothèque colbertine, le 10 avril 1679.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Le “ Saint Cyprien ” de Baluze</head>
           <p>Un manuscrit de Fontenay (ms. Paris, Bibl. nat. de Fr., lat. 1650) a appartenu à Etienne Baluze sans avoir fait partie du lot envoyé par
             Claude Bouchu en 1679 : il s’agit des œuvres de saint Cyprien dont Baluze est entré en possession, selon ce qu’il en dit, en 1703. On
             ignore comment ce manuscrit est sorti de l’abbaye.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">Le témoignage de dom Martène et dom Durand</head>
           <p>Le témoignage du <hi rend="i">Voyage littéraire</hi>, quoiqu’il ne livre pas de liste des manuscrits, est important car il prouve que
             l’intendant de Bourgogne, qui croyait avoir pris tous les manuscrits, avait laissé “ un grand nombre de manuscrits qui sont la plupart des
             ouvrages des Pères de l’église ”.</p>
         </div>
-        <div>
+        <div n="7" type="chapter">
           <head n="Chapitre VII">La liste Bouhier</head>
           <p>La liste Bouhier (catalogue D) a vraisemblablement été rédigée durant le premier tiers du <num>xviii<hi rend="sup">e</hi></num> siècle. Il s’agit
             sans doute d’une mise au propre de notes diverses prises directement sur les manuscrits conservés à Fontenay. Entachés d’erreurs et
@@ -220,7 +222,7 @@
             plusieurs manuscrits qui ont depuis disparu et sont suffisants pour identifier plusieurs manuscrits aujourd’hui conservés à la
             Bibliothèque de l’Arsenal.</p>
         </div>
-        <div>
+        <div n="8" type="chapter">
           <head n="Chapitre VIII">Les collections du baron d’Heiss</head>
           <p>Alors que de 1735 à 1774, l’abbé commendataire de Fontenay est André-Joseph Zaluski, grand collectionneur de manuscrits et fondateur de
             la Bibliothèque nationale de Varsovie, 37 manuscrits de Fontenay et plusieurs manuscrits de Clairvaux (notamment les mss. Paris, Bibl. de
@@ -234,15 +236,13 @@
             femme. En tout état de cause, l’hypothèse d’un achat groupé auprès du libraire lyonnais Los Rios doit être écartée, et les relations avec
             l’abbé commendataire soulignées.</p>
         </div>
-        <div>
+        <div n="9" type="chapter">
           <head n="Chapitre IX">La bibliothèque à la Révolution et les manuscrits réapparus après la Révolution</head>
           <p>A la Révolution, aucun manuscrit ne figure dans les ventes des biens de l’abbaye de Fontenay. Cependant deux manuscrits (mss. Paris,
             Bibl. nat. de Fr., lat. 10522 et 11339) sont vendus à la Bibliothèque nationale par un libraire parisien. Il n’est pas impossible que ces
             manuscrits aient été apportés à Paris par le dernier prieur de l’abbaye, qui y meurt en 1802.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’abbaye de Fontenay, grandie sous le regard de saint Bernard, s’est dotée, par une activité de copie d’abord externe, puis dans l’abbaye
           même, d’une bibliothèque répondant aux exigences ascétiques et spirituelles de l’abbé de Clairvaux. Mais l’austérité polychrome a été
           remplacée par un monochromatisme splendide qui respectait plus la lettre que l’esprit de pauvreté tel qu’il a été formulé par saint Bernard.
@@ -265,11 +265,10 @@
           profit des archives ­ dont l’intérêt historique a été reconnu assez tôt ­, ainsi qu’au profit des imprimés qui ouvrent l’abbaye à la culture
           des Lumières et aux sciences.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Edition des catalogues A, B, C, D, E. ­ Catalogue des manuscrits subsistants. ­ Tables des auteurs et des œuvres. ­ Table des <hi rend="i">initia</hi>. <hi rend="i">­</hi> Planches : plan de l’abbaye, catalogues et correspondance, photographies et dessins des manuscrits
           subsistants, ex-libris. ­ Index des noms. ­ Table des manuscrits cités.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

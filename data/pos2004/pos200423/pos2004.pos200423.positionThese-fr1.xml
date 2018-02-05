@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les services d’Alsace-Lorraine face à la réintégration des départements de l’Est (1914-1919)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les services d’Alsace-Lorraine face à la réintégration des départements de l’Est (1914-1919)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Schmauch, Joseph">Joseph Schmauch</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200423.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’administration d’Alsace-Lorraine constitue un exemple significatif d’institution administrative née des besoins de la Grande Guerre. Dès
           1914 se pose cette question centrale : comment réintroduire une culture et des usages français dans une province qui, pendant un
           demi-siècle, a évolué dans un cadre politique et juridique différent ? L’histoire des services administratifs d’Alsace-Lorraine représente
@@ -62,7 +65,7 @@
           réintégration des provinces perdues ? Déterminer la responsabilité des hommes, des structures, des événements et des idées permet
           d’apprécier la part des erreurs administratives dans la montée du malaise alsacien au printemps 1919.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’une des particularités du sujet tient à la très grande dispersion des sources se rapportant aux différentes administrations
           d’Alsace-Lorraine. Cette dispersion n’est elle-même que le reflet du caractère “ exubérant ” et transitoire de l’organisation administrative
           mise en place durant la guerre et au lendemain de l’Armistice. Le fonds AJ<hi rend="sup">30</hi> (Administration de l’Alsace-Lorraine)
@@ -77,9 +80,8 @@
           acteur, un point de vue plus personnel et engagé que celui du fonctionnaire. Enfin, les publications des services d’Alsace-Lorraine, la
           presse d’opinion contemporaine des événements, ainsi que divers ouvrages anciens à caractère de source ont été exploités.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Préparer la réintégration des provinces perdues : des institutions de préfiguration (1915-1918)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Préparer la réintégration des provinces perdues : des institutions de préfiguration (1915-1918)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La mise en place des premières institutions consacrées à l’Alsace-Lorraine</head>
           <p>
             <hi rend="i">La Mission militaire administrative et la Conférence d’Alsace-Lorraine.</hi> Dès l’instant où la guerre est déclarée,
@@ -100,7 +102,7 @@
             privés se penchent sur la question d’Alsace-Lorraine, en particulier sur ses aspects industriels et douaniers, et collaborent étroitement
             avec les services administratifs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre 2">Réflexion et préfiguration : questions d’organisation administrative et de législation</head>
           <p>
             <hi rend="i">Organisation administrative.</hi> Tout en posant que “ l’administration de l’Alsace-Lorraine ne devra pas, dans l’avenir,
@@ -114,7 +116,7 @@
             reconnaissance de la nationalité française à tous les Alsaciens-Lorrains descendants des annexés de 1870, tout en prévoyant la possibilité
             de naturalisation pour les Allemands d’origine.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre 3">La Conférence et le Service d’Alsace-Lorraine face aux questions économiques et financières</head>
           <p>
             <hi rend="i">Questions économiques.</hi> Les hommes d’affaires français sont conscients des perturbations considérables que la concurrence
@@ -131,7 +133,7 @@
             de tabac). L’État français prendra à sa charge le budget d’Alsace-Lorraine, excepté les dettes contractées pour des dépenses incombant à
             l’Empire allemand.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre 4">Les questions culturelles et religieuses</head>
           <p>
             <hi rend="i">L’enseignement en Alsace.</hi> La Conférence et les sections d’études abordent la question de l’organisation universitaire et
@@ -159,7 +161,7 @@
             sur plusieurs points, en particulier sur la question des associations cultuelles. La Conférence d’Alsace-Lorraine prévoit l’introduction
             de la loi de séparation des Églises et de l’État, tout en prévoyant d’éventuelles négociations avec le Saint-Siège.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre 5">Les organes spécialisés</head>
           <p>
             <hi rend="i">Le bureau spécial d’études d’Alsace-Lorraine.</hi> C’est pour lutter contre une image de l’Alsace-Lorraine qui se dégrade que
@@ -184,8 +186,8 @@
             centre de renseignement militaire de Réchésy, chargé de renseigner le Grand Quartier général sur l’état moral et économique de
             l’adversaire.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le retour des “ chères provinces ” (novembre 1918 ­ mars 1919)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le retour des “ chères provinces ” (novembre 1918 ­ mars 1919)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La France s’établit en Alsace-Lorraine : la “ constitution de novembre ”</head>
           <p>
             <hi rend="i">L’installation des administrations françaises.</hi> Le 15 novembre 1918 un décret confie l’administration préfectorale à trois
@@ -213,7 +215,7 @@
             mémorandum, qui conteste le régime étroitement centralisé qui se met en place en Alsace, est adressé à Clemenceau par l’intermédiaire de
             Maringer. La réponse de Clemenceau, datée du 14 janvier 1919, est une fin de non recevoir.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre 2">Classement, expulsions et commissions de triage : l’épuration en Alsace-Lorraine</head>
           <p>
             <hi rend="i">Le classement de la population.</hi> Dès l’entrée des troupes françaises en Alsace, les mairies reçoivent pour consignes de
@@ -233,7 +235,7 @@
             attributions du pouvoir civil. Au printemps 1919, l’administration doit faire face aux critiques de l’opinion : on reproche aux
             commissions de triage l’arbitraire des procédures et la gravité des peines infligées aux Alsaciens.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre 3">Réorienter les échanges économiques</head>
           <p>
             <hi rend="i">Problèmes financiers.</hi> Un arrêté du 26 novembre 1919 fixe le taux de change du mark à 1 franc 25. Cette mesure
@@ -263,7 +265,7 @@
             à des Allemands et remplace les directeurs et ingénieurs de ces établissements par des Alsaciens. Les autorités organisent un service des
             Charbons, qui intervient pour la fixation du contingent et le contrôle des attributions de charbon.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre 4">Transports et moyens de communication en Alsace et en Lorraine reconquises</head>
           <p>
             <hi rend="i">Travaux publics et voirie.</hi> Le service des Ponts-et-Chaussées a recours aux chômeurs, aux soldats et aux prisonniers de
@@ -287,7 +289,7 @@
             normal. L’administration française s’efforce de créer des communications télégraphiques directes entre les principaux centres industriels
             et commerciaux et le reste de la France.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre 5">L’administration française face aux problèmes sociaux</head>
           <p>
             <hi rend="i">Le retour en Alsace-Lorraine des réfugiés, prisonniers de guerre et démobilisés de l’armée allemande</hi>. Une commission des
@@ -319,7 +321,7 @@
             <hi rend="i">Les services de l’hygiène et de l’Assistance publique.</hi> Les services d’hygiène sont organisés dès novembre 1918 et se
             heurtent surtout à la carence de personnel médical dans les hôpitaux.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre 6">“ Faites-leur aimer la France ” : questions culturelles et religieuses</head>
           <p>
             <hi rend="i">L’enseignement primaire et secondaire.</hi> L’administration de l’Instruction publique adopte une politique visant à franciser
@@ -348,7 +350,7 @@
             des bâtiments civils et des monuments historiques d’Alsace-Lorraine, ainsi que des archivistes placés à la tête des trois dépôts
             départementaux.</p>
         </div>
-        <div>
+        <div n="7" type="chapter">
           <head n="Chapitre 7">Les signes du malaise alsacien et la réorganisation de l’administration d’Alsace-Lorraine</head>
           <p>
             <hi rend="i">La reconstitution des partis et l’évolution de l’opinion.</hi> Au printemps 1919, l’administration française doit faire face à
@@ -367,9 +369,7 @@
             de “ départementalisation ” de Jeanneney, le gouvernement, s’inspirant très largement des suggestions de la Conférence d’Alsace-Lorraine,
             crée à Strasbourg un organe central d’administration.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’échec du “ système Jeanneney est d’abord la faillite d’une équipe mise en place dans les semaines qui ont précédé la signature de
           l’armistice du 11 novembre 1918. La nécessité de réorganiser l’administration des provinces libérées cinq mois à peine après leur libération
           révèle l’improvisation, l’impéritie, la méconnaissance du terrain par les fonctionnaires français mais aussi la radicalisation des
@@ -385,12 +385,11 @@
           de l’organisation administrative de la France ? Différentes propositions de réforme administrative seront soumises au Parlement au cours des
           années 1920.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Notices biographiques des membres de la Conférence d’Alsace-Lorraine. ­ Membres de la Conférence d’Alsace-Lorraine, des sections d’études
           du Service d’Alsace-Lorraine (ministère de la Guerre) et du Conseil supérieur d’Alsace-Lorraine. ­ Organigrammes des services
           d’Alsace-Lorraine.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

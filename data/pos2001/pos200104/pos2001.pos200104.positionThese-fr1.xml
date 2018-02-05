@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Beffrois et hôtels de ville de la fin du Moyen Âge en Flandre française</title>
-        <title type="sub">Les chantiers du pouvoir urbain.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Beffrois et hôtels de ville de la fin du Moyen Âge en Flandre française</title><title xml:lang="fr" type="sub">Les chantiers du pouvoir urbain.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Delrue, Laure">Laure Delrue</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200104.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le foisonnement des beffrois et des hôtels de ville dans le nord de la France et en Belgique incite à s’interroger sur les raisons de leur
           édification, sur leur intégration dans le paysage et dans l’histoire d’une cité, et, à plus grande échelle, d’une région, comme à
           s’intéresser aux modalités pratiques de leur construction.</p>
@@ -81,7 +84,7 @@
           recherches sur les actuels départements du Nord et du Pas-de-Calais, sans pour autant négliger de faire d’utiles comparaisons dans un cadre
           géographique plus vaste.</p>
       </div>
-              <div type="sources"><head>Sources écrites</head>
+          <div type="sources" n="2"><head>Sources écrites</head>
         <p>La majeure partie de la documentation écrite est conservée aux archives départementales du Nord et du Pas-de-Calais : archives communales,
           série 20 relative aux travaux des communes au XIX, siècle, dossiers de dommage de guerre qui nous renseignent sur l’état de certains
           édifices avant leur destruction.</p>
@@ -100,9 +103,8 @@
           sous-série F’3 (bâtiments civils) présente un certain intérêt, pour la période post-révolutionnaire, car elle contient des mentions de
           reconversion des édifices municipaux par l’administration révolutionnaire.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Pourquoi construire</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Pourquoi construire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Sources et méthodologie de l’historiographie</head>
           <p><hi rend="i">Les chroniques </hi>— Malgré leur vision trop étroite du champ de l’histoire, fondée sur une sélection d’«objets» d’étude
             selon des critères de convenance ou de dignité, les chroniques sont d’un enseignement très riche sur la perception des édifices municipaux
@@ -126,7 +128,7 @@
           <p><hi rend="i">L’archéologie </hi>— Suivant une évolution parallèle à celle de l’historiographie, naît à la fin du XIX <hi rend="sup">e</hi> siècle une archéologie scientifique et réglementée, dont les résultats permettent d’avancer dans la connaissance des structures
             urbaines médiévales.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les villes en Flandre aux <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles</head>
           <p><hi rend="i">Cadre politique et juridique </hi>— Quelques rappels historiques concernant l’évolution des structures territoriales, de la
             formation du comté de Flandre à l’intégration au duché de Bourgogne, et les phénomènes d’urbanisation et d’émancipation urbaine permettent
@@ -146,7 +148,7 @@
             autour de la fête et de la vie en commun, et, surtout, de l’identité urbaine. De manière secondaire, intervient l’état de l’enseignement
             et de l’instruction, qui permet d’évaluer le niveau culturel des citadins, et surtout, des échevins et des marchands.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Perspective européenne</head>
           <p><hi rend="i">Une particularité régionale </hi>— Il est loisible de s’interroger sur la multiplicité des beffrois et des hôtels de ville
             dans la région flamande : résultat du contexte économique et politique, conséquence des rapports de pouvoir établis Quoi qu’il en soit, on
@@ -163,8 +165,8 @@
             communes de Flandre. Les exemples de Londres, et, dans une moindre mesure, d’York et d’Exeter, soulignent l’importance de la classe
             marchande dans les partis pris architecturaux des édifices édilitaires.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La construction</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La construction</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Urbanisme</head>
           <p><hi rend="i">Les bâtiments communaux </hi>— Au travers de la description des différents bâtiments communaux (halles, beffrois, maisons
             de ville, chapelles échevinales, bureaux, prisons et poids public, grand-place, marché, foires, pilori, fontaines) se dégage une
@@ -172,7 +174,7 @@
           <p><hi rend="i">Situation relative des différents éléments </hi>— Le rapport des différents bâtiments entre eux dans un cadre physique et
             topographique illustre leurs poids respectifs aux yeux des échevins comme des citadins.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les chantiers</head>
           <p><hi rend="i">La maîtrise d’ouvrage </hi>— La maîtrise d’ouvrage comprend des tâches juridiques et fiscales et impose d’assurer la
             préparation technique des travaux et le contrôle de leur réalisation. Là encore, la plus grande diversité règne : la maîtrise d’ouvrage
@@ -189,7 +191,7 @@
           <p><hi rend="i">Matériaux </hi>— L’étude qualitative et économique des matériaux utilisés, pierres, briques et tuiles, bois, chaux, plomb,
             fer et verre, permet de comparer les édifices entre eux, en termes de coûts et d’aspect.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les hommes</head>
           <p><hi rend="i">Les artisans </hi>— Les ouvriers du chantier appartiennent à différents grands corps de métier, dont le nombre évolue au
             cours de la construction en fonction des besoins. L’étude de leur statut et de leur organisation interne, la comparaison des rémunérations
@@ -198,7 +200,7 @@
             consacrée ne s’appuie que sur quelques exemples particuliers, dans la mesure où leurs interventions sur ces chantiers restent minoritaires
             en comparaison au gros œuvre.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le parti architectural et décoratif</head>
           <p><hi rend="i">Conception d’ensemble </hi>— Le parti général des constructions, la distribution de la tour du beffroi et de la maison
             commune permettent d’établir une typologie des édifices.</p>
@@ -212,9 +214,7 @@
             concrets, cette enquête sur les aspects tant techniques que culturels des cloches et des horloges étaye la thèse selon laquelle
             l’architecture édilitaire est un instrument de pouvoir.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Délaissée par les historiens, l’architecture des édifices municipaux offre un champ d’investigation où se croisent histoire de l’art,
           histoire des mentalités et histoire économique. Construits pour servir et illustrer l’institution échevinale, les bâtiments édilitaires
           reflètent la conception du pouvoir qu’ont leurs contemporains.</p>
@@ -224,11 +224,10 @@
           celle de la France du milieu du <num>xix<hi rend="sup">e</hi></num> siècle. À ce titre, les passerelles jetées entre le Moyen Âge et les XIX <hi rend="sup">e</hi> -XX<hi rend="sup">e</hi> siècles, qu’il s’agisse de restauration ou d’imitation, sont empreintes de ces conceptions
           mythiques de l’Histoire.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Edition de pièces d’archives (layettes, comptes on registres municipaux) concernant les villes de Douai, Béthune, Aire-sur-la-Lys,
           Armentières, Saint-Omer.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

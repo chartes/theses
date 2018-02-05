@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Français et la vie culturelle en Tunisiedurant la Seconde Guerre mondiale</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les Français et la vie culturelle en Tunisiedurant la Seconde Guerre mondiale</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Corriou, Morgan">Morgan Corriou</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200506.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La défaite de la France et la mise en place du régime de Vichy marquent une rupture irréparable en Tunisie comme dans tout l’Empire
           colonial français. Diminuée, la France doit pourtant continuer à offrir son visage de puissance protectrice aux populations « indigènes »
           qui murmurent. Cette domination française trouve une expression essentielle dans les manifestations culturelles et apprécier la présence
@@ -71,7 +74,7 @@
           naissance d’une nouvelle capitale à Alger, la question de la place de la Tunisie dans la vie culturelle de l’Empire durant la guerre est
           également une clé essentielle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les fonds d’archives dépouillés se répartissent principalement entre les archives du ministère des Affaires étrangères à Nantes et à Paris,
           les Archives nationales de Tunisie et le Centre historique des Archives nationales, à Paris. Les informations, souvent dispersées, font
           mieux prendre la mesure de l’intérêt ou du désintérêt porté par les administrateurs pour le domaine culturel et du champ d’intervention de
@@ -83,9 +86,8 @@
           matériau livré par les revues, mais qui demande une autre méthode d’investigation, les pages littéraires hebdomadaires des quotidiens, où
           figurent souvent des auteurs familiers des revues littéraires de la Régence.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La Tunisie dans l’optique de la guerre : <lb/>bilan et perspectives culturelles nouvelles (janvier 1939-juin 1940)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La Tunisie dans l’optique de la guerre : <lb/>bilan et perspectives culturelles nouvelles (janvier 1939-juin 1940)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La vie culturelle en Tunisie en 1939</head>
           <p>A la veille de la guerre, Tunis réunit toutes les institutions nécessaires aux pratiques culturelles de la bonne bourgeoisie française de
             province : un théâtre municipal, un salon de peinture, un musée, une bibliothèque, des sociétés savantes et des revues érudites. Les
@@ -125,7 +127,7 @@
             culturelle. Le public semble être dans une grande mesure à l’image des acteurs de la vie culturelle. La pyramide de la société coloniale y
             est, en effet, à nouveau reproduite avec toutes ses inégalités.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les autorités françaises et les questions culturelles</head>
           <p>À la fin des années trente, la prépondérance culturelle française en Tunisie peut apparaître menacée à la fois par les ambitions
             fascistes, de plus en plus agressives envers le protectorat à partir de 1938 et qui agitent l’importante communauté italienne de Tunisie,
@@ -146,7 +148,7 @@
             en Tunisie est donc plus le prolongement d’une action politique qu’une véritable politique culturelle, qui impliquerait une réflexion sur
             la notion de culture semblable à celle qui a lieu dans l’administration métropolitaine depuis le Front populaire.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La machine de guerre culturelle</head>
           <p>La montée des tensions internationales en 1938-1939, le déclenchement des hostilités et la longue Drôle de guerre amènent les autorités
             françaises à s’intéresser de plus en plus aux questions de propagande. Celles-ci ont en effet devant elles l’exemple du redoutable
@@ -182,8 +184,8 @@
             cinéma. Cette évolution se poursuit dans les années suivantes, mais dans une optique plus répressive et plus propagandiste, liée à la
             montée des tensions internationales puis à la mise en place du régime de Vichy.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">De Vichy à la Libération : <lb/>la Tunisie et la grande aubaine culturelle de la guerre <lb/>(juillet 1940-1945)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">De Vichy à la Libération : <lb/>la Tunisie et la grande aubaine culturelle de la guerre <lb/>(juillet 1940-1945)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’action culturelle de la Résidence sous Vichy</head>
           <p>Les autorités mesurent immédiatement les suites possibles de la Défaite sur les populations colonisées ou « protégées » d’Afrique
             française du Nord. Dans ce contexte lourd de menaces, il est indispensable d’affirmer la continuité de la présence française et sa
@@ -212,7 +214,7 @@
             sont accusés par la Résidence de méconnaître les réalités coloniales. Pour des motifs, semble-t-il, autant politiques, et économiques que
             de simple orgueil, la Résidence générale tente tout aussi fermement de récuser l’échelon algérien qui est mis en place.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une effervescence littéraire et intellectuelle (1940-1943)</head>
           <p>Malgré les difficultés matérielles et politiques, le paysage culturel tunisien durant la guerre est loin d’offrir un visage dévasté, bien
             au contraire. Le domaine littéraire, en particulier, est saisi d’une véritable fièvre, qui touche toutes les tendances. La mise en place
@@ -240,7 +242,7 @@
             pendant tunisien de <hi rend="i">Fontaine</hi>. 
          </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La Libération et le changement impossible ? <lb/>(mai 1943-1945)</head>
           <p>Après les très violents combats de la Libération, la Tunisie entre dans une phase de longue reconstruction. Toute la vie culturelle est
             obérée par la situation de guerre qui a fait son entrée brutale en Afrique du Nord. Cette situation d’urgence favorise les solutions de
@@ -275,9 +277,7 @@
             retrouve donc sa situation de petite capitale de province et le retour à la normale prend la forme d’un immobilisme, immobilisme culturel
             qui n’est que la reproduction d’un immobilisme politique.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>En 1945, les grands changements attendus n’ont pas encore eu lieu et les espérances mises en l’idéal de la Résistance n’ont pas encore
           atteint le protectorat. La guerre et la fragilisation de l’Empire ont pourtant mis au cœur des questions culturelles la population
           tunisienne à laquelle la Résidence est contrainte de prêter de plus en plus attention. Jamais l’exaltation de la « collaboration
@@ -288,11 +288,10 @@
           surtout les mêmes personnes. Les Français n’ont finalement que peu de relais dans la société culturelle tunisienne, des relais qui se
           résument à une poignée de notables francophiles régulièrement appelés à la rescousse à chaque manifestation « interculturelle ».</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Pièces d’archives. – Documents photographiques. – Extraits de revues littéraires tunisiennes (« Ma mère » d’André Gide, « Une ville est
           ressuscitée » de Philippe Soupault...). – Articles de presse. – Programmes radio.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

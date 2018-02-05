@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Louis-Antoine de Noailles, cardinal-archevêque de Paris (1651-1729)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Louis-Antoine de Noailles, cardinal-archevêque de Paris (1651-1729)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gombert, Pierre">Pierre Gombert</author>
       </titleStmt>
       <editionStmt>
@@ -38,26 +40,27 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200413.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Parmi les grands noms de l’épiscopat que véhicule la mémoire nationale, les prélats du règne de Louis XIV occupent la meilleure place.
           Assez curieusement, le cardinal de Noailles n’en fait pas partie. Aucun travail de fond n’a été mené sur Louis-Antoine de Noailles, qui
           occupa successivement trois sièges épiscopaux. Au total, cinquante années passées au service de l’Église semblaient appeler une biographie,
           ou tout au moins une étude sérieuse sur son action pastorale, que tous les contemporains du règne s’accordaient à louer, Saint-Simon le
           premier.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La multitude et l’ampleur des sources ont rendu le sujet impossible à saisir dans son ensemble. L’analyse du milieu familial s’appuie sur
           l’exploitation de documents conservés au Minutier central des notaires parisiens, au Centre historique des Archives nationales, et au
           département des manuscrits de la Bibliothèque nationale de France (cabinet des titres). Le rôle pastoral exercé par Noailles au sein de son
@@ -67,9 +70,8 @@
           religieuses, a été traitée à partir des fonds consultés aux Archives du ministère des Affaires étrangères, aux Archives vaticanes et à la
           Bibliothèque de l’Arsenal.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le milieu familial</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le milieu familial</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines familiales de Louis-Antoine de Noailles</head>
           <p>
             <hi rend="i">Les origines.</hi>­ Par son père, Louis-Antoine de Noailles descend d’une famille dont la noblesse de race remonte au-delà du
@@ -89,7 +91,7 @@
             son frère, à l’archevêché. L’unique sœur de Noailles, Louise-Anne, épousa l’héritier d’une riche famille de la noblesse bretonne, puis
             mena une vie discrète et effacée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La part des parents</head>
           <p>
             <hi rend="i">Anne de Noailles et Louise Boyer.</hi>­ Avec Anne de Noailles, la famille réussit à approcher de près l’entourage royal :
@@ -106,7 +108,7 @@
             celle constituant l’héritage paternel. Au total, la somme recueillie par Louis-Antoine de Noailles est plutôt voisine de la dot constituée
             pour sa jeune sœur vingt sept ans plus tôt.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des alliances de choix</head>
           <p>
             <hi rend="i">Le mariage du fils aîné d’Anne-Jules : alliance et appui de Madame de Maintenon.</hi>­ A la fin du <num>xvii<hi rend="sup">e</hi></num>
@@ -127,7 +129,7 @@
             Le cardinal de Noailles se chargea personnellement de cette affaire. Dans ce conflit, l’importance de la faveur royale fut capitale : la
             victoire d’un maison fut assurée par la disgrâce de l’autre.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Vers l’épiscopat</head>
           <p>
             <hi rend="i">Les années d’études.</hi>­ Pour étudier la jeunesse d’un prélat, les <hi rend="i">Processi dei vescovi</hi> conservés aux
@@ -150,8 +152,8 @@
             <hi rend="i">La nomination.</hi>­ Après un premier refus de l’évêché de Mende en 1678, Noailles est nommé un an plus tard au siège de
             Cahors.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Monsieur de Cahors, Monsieur de Châlons, Monsieur de Paris</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Monsieur de Cahors, Monsieur de Châlons, Monsieur de Paris</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le portrait d’un évêque</head>
           <p>
             <hi rend="i">Un idéal épiscopal.</hi>­ Si pendant plus d’un siècle les évêchés de Châlons et de Paris ont été considérés comme des
@@ -174,7 +176,7 @@
             premières visites. La nomination à Châlons, négociée par son frère, le surprend en pleine tournée de visites. Après un premier refus,
             Noailles s’incline devant la volonté royale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’expérience de Châlons</head>
           <p>
             <hi rend="i">Le diocèse de Châlons à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle. </hi> ­ Le diocèse comprend des paysages différents,
@@ -214,7 +216,7 @@
             Noailles refusa. Convoqué à Versailles, il s’inclina une fois de plus devant la volonté royale. Afin que la grâce fût complète, Louis XIV
             poussa la complaisance jusqu’à transférer à son frère cadet, Gaston de Noailles, l’évêché de Châlons.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Paris : une réussite incontestable</head>
           <p>
             <hi rend="i">Être archevêque de Paris à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle. </hi> ­ Devenir archevêque de Paris était un
@@ -245,8 +247,8 @@
             alors qu’à Châlons, durant quinze ans, tout restait à faire. Il a su trancher avec ses prédécesseurs et rétablir le lien perdu entre
             l’archevêque de Paris et les paroissiens de campagne.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Entre gallicanisme et jansénisme</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Entre gallicanisme et jansénisme</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le gallican (1695-1705)</head>
           <p>
             <hi rend="i">Les premières affaires jansénistes.</hi>­ Noailles est archevêque de Paris depuis moins d’un an lorsqu’une première affaire,
@@ -276,7 +278,7 @@
             observations dans les dépêches envoyées au roi, ne cachant pas sa hâte de retrouver son clergé parisien. Et de fait, dès janvier 1700, il
             rentre en France, précédé d’une réputation d’heureux diplomate, ayant réussi ce que le roi attendait de lui.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le suspect (1705-1713)</head>
           <p>
             <hi rend="i">La bulle de 1705.</hi>­ La réception de la bulle <hi rend="i">Vineam Domini</hi>, condamnant le <hi rend="i">Cas de
@@ -298,7 +300,7 @@
             comme Fénelon jadis, il voulut être le premier, par son mandement du 28 septembre 1713, à annoncer et accepter la condamnation de Clément
             XI.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le banni (1713-1715)</head>
           <p>
             <hi rend="i">La rupture : l’Assemblée de 1713-1714.</hi>­ En refusant de signer l’acte d’acceptation de la bulle <hi rend="i">Unigenitus</hi>, Noailles, suivi de huit évêques, provoque une scission grave dans l’épiscopat. Dès février 1714, il recevait la
@@ -309,9 +311,7 @@
             de Paris, est décidée par le roi, qui, en décembre 1714, envoie à cette fin un ambassadeur extraordinaire à Rome, Michel Amelot. La mort
             du roi empêche la réalisation de ce projet.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Noailles meurt le 4 mai 1729, après cinquante années d’épiscopat. Dès sa mort, il fut regardé avec le mépris le plus complet. Les
           contemporains, puis les historiens ont retenu uniquement son incapacité à dominer les querelles religieuses de la fin du règne de Louis
           XIV ; les articles et les biographies du <num>xix<hi rend="sup">e</hi></num> siècle ne l’abordent qu’à travers son attitude ambiguë lors des querelles
@@ -320,12 +320,11 @@
           de ses mandements, tout cela aurait suffi à décourager le commun des prélats. Quoi que l’on puisse penser de ses convictions, Noailles
           présente une œuvre pastorale cohérente. Il peut être considéré comme l’un des meilleurs évêques tridentins de son temps.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Pièces réunies par le Père Léonard sur l’épiscopat de Noailles (1695-1696). ­ Oraisons pieuses de la duchesse de Noailles
           (1695-1696). ­ Conférences ecclésiastiques de 1697. ­ Extraits de la correspondance du cardinal de Noailles, du
           roi et de Torcy lors du conclave de 1700.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

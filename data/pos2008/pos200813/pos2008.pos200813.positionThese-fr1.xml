@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Michel Liénard, l’ornement du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Michel Liénard, l’ornement du <num>xix<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Derrot, Sophie">Sophie Derrot</author>
       </titleStmt>
       <editionStmt>
@@ -38,26 +40,27 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200813.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le nom de Michel Liénard n’évoque aujourd’hui que peu de choses. L’historiographie de cette période et le peu d’intérêt longtemps porté
           aux arts décoratifs du <num>xix</num>
 <hi rend="sup">e</hi> siècle sont sans doute en partie responsables de cet oubli. Sa carrière, extrêmement riche, a pourtant marqué de façon
           importante le monde du décor et de l’ornement, de la Monarchie de Juillet jusqu’à la chute du Second Empire, et il convient, dans le
           renouveau historiographique actuel de cette période, de lui rendre la place qui lui revient.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources qui éclairent la vie et l’œuvre de Michel Liénard sont dispersées et de natures très différentes. Des documents archivistiques
           nous renseignent sur son état-civil et celui de sa famille (Archives nationales, Archives de Paris, Archives départementales
           d’Indre-et-Loire et de Seine-Maritime), et nous offrent des mémoires de travaux et d’autres documents de comptabilité précieux : sous-séries
@@ -70,14 +73,13 @@
           l’Académie d’architecture. Les recherches ont été étayées par le fonds de dessins du département des Arts graphiques du musée des Arts
           décoratifs (MAD). Ces dessins sont constamment à mettre en rapport avec les éléments biographiques découverts.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Origine et formations (1810-1838)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Origine et formations (1810-1838)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’enfance</head>
           <p>Michel Liénard naît le 17 septembre 1810 à La Bouille, près de Rouen. Son père, ancien soldat de la grande Armée et secrétaire du
             maréchal Suchet, lui apprend l’administration. Sa mère décèle les aptitudes du garçon pour le dessin et l’encourage dans cette voie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La première formation : l’École de dessin</head>
           <p>L’École royale gratuite de mathématiques et de dessin, à Paris, offre à Liénard son premier enseignement, hors celui de ses parents. On
             n’a que peu de documents relatifs à son bref passage dans l’institution (1820-1822), mais il a pu y apprendre par la copie de gravures, la
@@ -85,7 +87,7 @@
             l’exactitude des représentations, que l’on peut retrouver dans le fonds du MAD dans les nombreuses études de plantes, d’animaux ou
             d’architecture.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’apprentissage chez Jean-Baptiste Plantar</head>
           <p>Le premier contact de Michel Liénard avec le métier de sculpteur ornemaniste a lieu dans l’atelier de Jean-Baptiste Plantar, qui le prend
             en apprentissage vers 1825. Plantar est le dernier artiste à porter le titre de sculpteur des bâtiments du Roi. Pendant le séjour de
@@ -96,8 +98,8 @@
             son maître. Cette période d’apprentissage est d’importance dans la vie et la carrière de Liénard : il se marie et a un premier enfant ;
             professionnellement, il commence à se faire un nom, ce qui le pousse en 1838 à prendre son indépendance et à s’installer à son compte.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’affirmation de la diversité (1839-1850)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’affirmation de la diversité (1839-1850)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre IV">La formation architecturale</head>
           <p>Deux grands chantiers vont marquer la carrière de Liénard et lui donner une crédibilité dans le domaine de l’ornement d’architecture. Il
             œuvre d’abord dans la chapelle royale de Dreux, entre 1839 et 1845, dont Louis-Philippe veut faire la sépulture officielle de la nouvelle
@@ -115,7 +117,7 @@
           <p>Michel Liénard travaille également à cette époque avec un architecte parisien, Pierre Dusillon, dans plusieurs grandes demeures dans les
             départements de la Sarthe et de la Somme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre V">L’ouverture d’un cercle de relations prometteur</head>
           <p>En parallèle avec ces prestigieux chantiers semi-officiels, Michel Liénard se fait une place dans les grandes Expositions, qui sont
             encore nationales (1839-1849). Les Expositions des produits de l’industrie française nous permettent de disposer d’un panel de fabricants
@@ -134,7 +136,7 @@
             Madeleine, etc. Entre les années 1840 et 1855, date de la mort de Froment-Meurice, Liénard participe pleinement aux créations de cet
             atelier renommé et quelques-uns de ses modèles seront repris par le fils de Froment-Meurice.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre VI">Les instruments d’un début de carrière</head>
           <p>Dans cette carrière qui s’annonce sous les meilleurs auspices, Michel Liénard est secondé par Émile Knecht, sculpteur d’origine
             alsacienne. Leurs deux noms se côtoient constamment entre 1838 et 1855, sur les chantiers les plus importants. Knecht mène également une
@@ -152,8 +154,8 @@
             Liénard avec l’atelier de reliure Gruel s’étend des années 1840 à 1855 et concerne essentiellement des reliures en bois sculpté, couvrant
             des livres bibelots offerts pour de grandes occasions (mariages, communions).</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Un ornemaniste au sommet de son art (1851-1860)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Un ornemaniste au sommet de son art (1851-1860)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre VII">Les premières Expositions universelles signent la reconnaissance de son talent</head>
           <p>À partir de 1851, les Expositions nationales prennent de l’ampleur et deviennent « universelles ». Michel Liénard y prend part jusqu’à sa
             fin de la vie, de 1851 à 1867. Chose nouvelle, il y expose des créations sous son nom propre, des sculptures sur bois représentant le plus
@@ -163,7 +165,7 @@
             Fourdinois) et les bronzes d’art. Les jurys successifs consacrent à l’ornemaniste de longues notices élogieuses, tout comme les
             rapporteurs et les journalistes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre VIII">L’hôtel du ministre des Affaires étrangères</head>
           <p>Le projet de donner de nouveaux locaux au ministère des Affaires étrangères existe dès la chute de la monarchie, mais il n’est réellement
             mis en application qu’à partir de 1845. Le nouveau bâtiment, entre le quai d’Orsay et la rue de l’Université, reçoit sa décoration
@@ -177,7 +179,7 @@
             Jeanselme (sièges, table, dressoirs, jardinière). Jeanselme fils recevra l’enseignement de Liénard, et cette collaboration va se
             renouveler, en 1855 notamment, avec un meuble de chasse acheté par Napoléon III.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre IX">Michel Liénard à l’église</head>
           <p>Capable de réaliser les décors officiels d’un ministère, Liénard se montre également à l’aise dans le domaine de l’ornement religieux,
             autant mobilier que monumental. Une longue collaboration avec le facteur d’orgues du <num>xix</num>
@@ -195,8 +197,8 @@
 <hi rend="sup">e</hi> siècles), il s’occupe de tout le décor, restaurant et recréant autels, motifs de sculpture sur pierre à l’intérieur
             et à l’extérieur.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Le Beau dans l’utile (1861-1870)</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Le Beau dans l’utile (1861-1870)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre X">L’ornement de l’architecture</head>
           <p>Michel Liénard entretient des liens privilégiés avec l’architecture durant toute sa carrière. En tant que sculpteur ornemaniste, il
             intervient dans des chantiers dirigés par des architectes d’envergure, notamment François Destailleur puis son fils Hyppolite-Alexandre.
@@ -211,7 +213,7 @@
             Monceau. Le tout nouveau Théâtre-Lyrique, sur la place du Châtelet, bénéficie également de ses œuvres, puisqu’il réalise une partie du
             décor sculpté, aujourd’hui détruit à l’intérieur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre XI">Les Beaux-arts appliqués à l’industrie</head>
           <p>La question de l’entente des arts et de l’industrie occupe les esprits durant tout le <num>xix</num>
 <hi rend="sup">e</hi> siècle. Les recherches sur ce thème s’affichent particulièrement aux Expositions universelles de 1862 et 1867,
@@ -226,7 +228,7 @@
             collaborateurs : il appartient à la Société du progrès de l’Art industriel et dessine les récompenses remises aux participants de
             l’exposition des Beaux-arts appliqués à l’industrie de 1865.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre XII">La succession de Michel Liénard et la diffusion de son œuvre</head>
           <p>Peu d’éléments subsistent concernant l’atelier et les élèves du maître ornemaniste que fut Michel Liénard. Seules quelques mentions
             citent certains de ses collaborateurs, très peu connus par ailleurs, excepté son neveu par alliance, Charles Kalthenheuser, et le mari de
@@ -242,9 +244,7 @@
             Charles Claesen, à Liège, réédité à Paris en 1872 et à New-York. Son fils et son gendre publieront également après sa mort un autre grand
             recueil, le <hi rend="i">Portefeuille de Liénard</hi>(1879).</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Michel Liénard meurt à Bruxelles le 29 décembre 1870, d’épuisement et de maladie. Son œuvre, si appréciée à son époque, va connaître une
           nette et progressive dépréciation : la nouvelle génération des artistes néo-Renaissance l’admettent parmi les initiateurs du mouvement mais
           le taxent de naïveté, et rapidement, l’esprit qu’il représentait va être dépassé par l’Art nouveau, puis méprisé au <num>xx</num>
@@ -252,13 +252,12 @@
           carrière de Liénard restent encore dans l’ombre, mais son importance dans l’univers de l’ornement du <num>xix</num>
 <hi rend="sup">e</hi> siècle est à ce jour indéniable.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Lettre de candidature de Michel Liénard et Émile Knecht pour les travaux de restauration de Blois. — Lettre de recommandation de Liénard
           par la comtesse de Meulan, pour les travaux de Blois. — Lettre de candidature de Liénard et Knecht pour les travaux du ministère des
           Affaires étrangères. — Demande de Victor Paillard en faveur de Liénard pour le grade d’officier de la légion d’honneur. — Lettre d’Aristide
           Cavaillé-Coll à M. Lissajous.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Louis d’Orléans (1703-1752), premier prince du sang et mystique érudit</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Louis d’Orléans (1703-1752), premier prince du sang et mystique érudit</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gordien, Marie-Estelle">Marie-Estelle Gordien</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200208.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Louis d’Orléans naît le 4 août 1703 au sein de la famille royale. Petit-fils de Louis XIV par sa mère Françoise-Marie de Bourbon et son
           petit-neveu par son père Philippe d’Orléans, le Régent, il est appelé naturellement à intervenir sur la scène politique, à défaut de jouer
           un rôle d’envergure dans la conduite des affaires. Premier prince du sang, il est héritier présomptif de la couronne à partir de 1723, en
@@ -64,7 +67,7 @@
           du christianisme contre les attaques du doute systématique, et il n’hésite pas pour cela à rassembler une bibliothèque considérable, qui
           alimente sa propre œuvre théologique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La vie de Louis d’Orléans est éclairée par des sources abondantes, mais dispersées. Une partie importante se trouve aux Archives
           nationales, dans la série K, la sous-série R<hi rend="sup">4</hi>  (apanage d’Orléans), le Minutier central (étude CXV) et, bien sûr, dans
           les archives privées de la maison d’Orléans (300 AP). Le Service historique de l’armée de Terre et les Archives du ministère des Affaires
@@ -78,9 +81,8 @@
           d’Orléans. L’abbé Ladvocat est un témoin privilégié de la vie de Louis d’Orléans, comme la plupart des auteurs des nombreuses oraisons
           funèbres imprimées.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le premier prince du sang</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le premier prince du sang</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le temps du duc de Chartres (1723-1742)</head>
           <p>
             <hi rend="i">L’enfance et l’éducation d’un prince</hi>. ­ Les premiers temps de Louis d’Orléans sont déterminés par son entourage
@@ -113,7 +115,7 @@
             par le comte de Bombelles et travaille avec le secrétaire d’État de la guerre, Claude Le Blanc. Mais il perd l’exercice de sa charge à
             partir de 1723, avant d’en démissionner en 1730.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">A la tête de la maison d’Orléans (1723-1742)</head>
           <p>
             <hi rend="i">Une succession difficile à assumer</hi>. ­ À la mort du Régent en 1723, Louis d’Orléans est le seul héritier mâle du
@@ -149,7 +151,7 @@
             médailles et de pierres gravées, rachetées à la Palatine et à Pierre Crozat. Il fait travailler de nombreux artistes, en particulier son
             portraitiste officiel, Charles Coypel, le peintre Alexis-Simon Belle, l’ébéniste Charles Cressent et l’orfèvre Thomas Germain.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un prince qui aspire à la sainteté (1742-1752)</head>
           <p>
             <hi rend="i">Les raisons de la retraite.</hi>­ À partir de la mort prématurée de sa femme en 1726, Louis d’Orléans se préoccupe avant tout
@@ -175,8 +177,8 @@
             bienfaisance, qui lui vaut le surnom de “ père des pauvres ”. Les circonstances de sa mort résument avec éloquence ces années où Louis
             d’Orléans tempère sa dévotion par l’éclat d’une science et d’une prodigalité dignes du premier prince du sang.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Louis le Pieux, mystique érudit</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Louis le Pieux, mystique érudit</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le “ père des pauvres ” : l’action charitable de Louis le Pieux</head>
           <p>
             <hi rend="i">Les diverses formes de la charité.</hi>­ Louis d’Orléans partage avec d’autres princes du <num>xviii<hi rend="sup">e</hi></num>
@@ -198,7 +200,7 @@
             Versailles en 1740, qui aurait dû assurer la pérennité de sa mémoire sous le nom de collège d’Orléans. Mais l’établissement fondé par le
             curé Jomard végète jusqu’à sa disparition, à la Révolution.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le prince savant</head>
           <p>
             <hi rend="i">L’intérêt pour les langues.</hi>­ Philologue averti, Louis d’Orléans maîtrise le latin et le grec, peut-être des langues
@@ -222,7 +224,7 @@
             met en relation avec des membres de la congrégation de Saint-Maur, comme dom Jacques Martin. Enfin, même les sciences exactes ne le
             rebutent pas, y compris l’horlogerie qui requiert de grandes connaissances mathématiques.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un prince lettré</head>
           <p>
             <hi rend="i">Bibliothèque princière et bibliothèque de travail.</hi>­ Louis d’Orléans constitue vraisemblablement le fonds de sa
@@ -250,9 +252,7 @@
             une réflexion théologique sur la création. Pourtant, Louis XV crut bon de soustraire ces manuscrits aux Dominicains, pour les enfermer
             dans sa propre bibliothèque et les priver de toute diffusion.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Premier prince du sang et mystique érudit, Louis d’Orléans concilia difficilement les devoirs de ces deux états antinomiques aux yeux du
           monde. Mais la mort consacra enfin tous les efforts de ce pieux duc, et les hommages funèbres d’usage, réservés aux grands de ce monde -
           souvent conventionnels -, s’unirent pour célébrer celui que d’aucuns considéraient déjà comme un saint. S’il n’a pas joué un rôle politique
@@ -260,14 +260,13 @@
           misanthrope trop souvent décrit. Il manifesta au contraire une piété et une curiosité d’esprit qui seraient louées chez un homme du commun,
           mais sont trop écartées de l’idéal du prince des lumières.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Mémoires de Louis d’Orléans. ­ Lettres de provisions de la charge de colonel général de l’infanterie. ­ État des officiers de la maison
           d’Orléans (1748) . ­ Actes notariés de fondations et de donations. ­ Procès-verbal de visite de l’appartement et du bâtiment neuf de
           l’abbaye de Sainte-Geneviève. ­ Testament de Louis d’Orléans. ­ Acte de fondation de la chaire hébraïque en Sorbonne. ­ Inventaire après
           décès à Sainte-Geneviève. ­ Chapitre premier du “ Commentaire sur quelques endroits de la Genèse ”. ­ Correspondance de Louis d’Orléans avec
           le comte d’Argenson, Philippe V d’Espagne, les abbés Sallier, Omelane, Houtteville, Boudeilles, etc</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

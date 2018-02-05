@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’entreprise Théodore Haviland de 1892 à 1941</title>
-        <title type="sub">Destinées industrielles de la porcelaine à Limoges</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’entreprise Théodore Haviland de 1892 à 1941</title><title xml:lang="fr" type="sub">Destinées industrielles de la porcelaine à Limoges</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Fléjou, Lucie">Lucie Fléjou</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200509.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Négociants new-yorkais, les Haviland développent le commerce de la porcelaine française aux États-Unis, avant de s’installer à Limoges au
           milieu du <num>xix</num>
 <hi rend="sup">e</hi> siècle, afin de produire des porcelaines spécifiquement adaptées aux goûts nord-américains. A leur suite, de
@@ -63,7 +66,7 @@
           française, celui du « luxe », doté d’une visibilité internationale forte, mais dont les dimensions commerciales et les rythmes économiques,
           spécifiques, ne sont encore connus que de manière partielle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La monographie de l’entreprise Théodore Haviland a été réalisée principalement à partir des archives de l’entreprise, déposées aux archives
           départementales de la Haute-Vienne (fonds 23J). Le fonds de l’entreprise Th. Haviland, de 1892 à 1957, présente un état de complétude
           intéressant : d’un volume très important, il comporte des séries comptables presque continues (bilans, grands livres…), ainsi qu’une
@@ -73,9 +76,8 @@
           diverses correspondances mi-professionnelles, mi-privées (Jacques Chardonne, Jean Dufy, Suzanne Lalique). Enfin, des dépouillements
           ponctuels aux archives départementales de la Haute-Vienne ont livré, en particulier, les dossiers des grèves de la porcelaine.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La porcelaine, Limoges et les Haviland</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La porcelaine, Limoges et les Haviland</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La porcelaine, histoire d’une matière</head>
           <p>D’abord un produit lointain, étrange et convoité, la porcelaine suscite légendes et mythes. Les hypothèses les plus fantaisistes courent
             sur sa composition. Les porcelaines chinoises, somptueusement montées, ornent d’abord seulement les tables royales, en Europe et dans
@@ -90,7 +92,7 @@
             porcelaine de table s’insère dans le contexte d’une société bourgeoise. Essentiellement utilitaire, elle devient l’œuvre d’usines, de plus
             en plus modernes, dans un marché hautement concurrentiel, au niveau mondial.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La production de porcelaine à la fin du <num>xix</num>
 <hi rend="sup">e</hi> siècle</head>
           <p>
@@ -109,7 +111,7 @@
             de dépeuplement. L’identité de Limoges se confond peu à peu avec la porcelaine, dont elle est la capitale française, grâce à l’action
             d’industriels entreprenants, et notamment, des Haviland.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La famille Haviland, des Américains à Limoges</head>
           <p>
             <hi rend="i">Une famille atypique</hi>. – La famille Haviland est très atypique à Limoges, ville enclavée, de tradition catholique.
@@ -127,8 +129,8 @@
             sont bien préparés à prendre la relève, après des études supérieures de bon niveau : Henri de Luze est ingénieur centralien, William
             Haviland diplômé d’Harvard, lié aux États-Unis par sa formation et son mariage.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La Belle Époque de la porcelaine de Limoges (1892-1914)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La Belle Époque de la porcelaine de Limoges (1892-1914)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Croissance et développement international : <lb/>une économie mondialisée ?</head>
           <p>
             <hi rend="i">La prospérité</hi>. – De 1895 à 1914, l’entreprise Théodore Haviland connaît une période marquée par une vraie prospérité.
@@ -155,7 +157,7 @@
             les marges de l’entreprise. Parallèlement, la concurrence étrangère à bas coût et la contrefaçon, notamment japonaise, se font sentir sur
             le marché américain.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La production : <lb/>l’usine et le travail de la porcelaine</head>
           <p>
             <hi rend="i">Des usines modernes, mais une productivité stagnante</hi>. – Le fonctionnement quotidien de l’entreprise Théodore Haviland
@@ -174,7 +176,7 @@
             la déqualification progressive de certains métiers : dans les ateliers de décor, les femmes sont largement majoritaires. Cette population
             ouvrière s’insère dans un contexte local fort, celui du mouvement ouvrier limousin, qui relaie ses difficultés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Question ouvrière et luttes sociales</head>
           <p>
             <hi rend="i">Des conditions de travail difficiles</hi>. – Le monde ouvrier de la porcelaine subit des conditions de travail difficiles. Si
@@ -192,8 +194,8 @@
             épicentre du conflit, les affrontements très violents qui opposent un patron, supposé exploiteur et jouisseur, et des ouvriers conscients
             de leur puissance, soutenus par les autorités municipales socialistes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">D’une guerre à l’autre (1914-1941) : la décadence ?</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">D’une guerre à l’autre (1914-1941) : la décadence ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La rupture de la Première Guerre mondiale</head>
           <p>Pendant la guerre, la porcelaine de table, industrie non prioritaire et difficilement convertible en production de guerre, est durement
             touchée par les pénuries. Transports et combustibles sont attribués par des offices semi-publics. Parallèlement, des organismes patronaux
@@ -205,7 +207,7 @@
             lendemain de la guerre, sa reconquête s’annonce ardue. Enfin, la guerre correspond au retrait de Théodore Haviland et au passage à une
             direction collégiale de l’entreprise par ses fils et ses gendres, William Haviland, Henri de Luze et Laurens d’Albis.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Entre-deux-guerres : <lb/>la fin de la porcelaine à Limoges ?</head>
           <p>
             <hi rend="i">Les années 1920</hi>. – L’entreprise Théodore Haviland ne retrouve jamais dans l’Entre-deux-guerres, même aux meilleurs
@@ -223,7 +225,7 @@
             Dans son roman, les <hi rend="i">Destinées sentimentales</hi>, écrit entre 1934 et 1936, il raconte la « grandeur et décadence » des
             Haviland, se faisant l’écho d’un pessimisme alors largement partagé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les ouvriers dans la crise (1914-1940)</head>
           <p>
             <hi rend="i">Transformations du mouvement ouvrier</hi>. – Les ouvriers de la porcelaine, avant-garde du mouvement ouvrier au
@@ -243,7 +245,7 @@
             suivent pas les grèves. Ceci donne la mesure de la crise qui touche le monde de la porcelaine de Limoges et révèle son exceptionnelle
             gravité. Chez Th. Haviland, la loi des quarante heures augmente la durée moyenne annuelle du travail ouvrier.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le choix du luxe et de l’art</head>
           <p>Dans les années 1920 et 1930, la Porcelaine Th. Haviland s’impose sur le marché du luxe. Plus encore qu’avant guerre, la porcelaine de
             Limoges est valorisée, lors des grandes expositions internationales, en tant que production artistique. L’entreprise s’attache les
@@ -260,9 +262,7 @@
             des préoccupations commerciales. Or, au cœur de la crise des années 1930, le relèvement de l’industrie porcelainière limousine passe
             principalement par la baisse du prix de la porcelaine française.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>De 1892 à 1941, l’entreprise Th. Haviland suit une trajectoire à contre-courant. Grande entreprise dans la France des années 1890, elle
           devient moyenne dans l’Entre-deux-guerres. Fortement exportatrice, elle se replie dès 1908, puis encore pendant les années 1920, pourtant
           marquées par une reprise nationale du commerce extérieur. Industrie dotée d’une main d’œuvre qualifiée et revendicative à la fin du
@@ -280,13 +280,12 @@
           moitié du <num>xix</num>
 <hi rend="sup">e</hi> siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Portrait de Théodore Haviland. – Extraction du kaolin, structure de la porcelaine dure. – Fours à porcelaine. – Publicité pour la machine
           Faure. – Réclames parues dans des journaux américains. – Plans et photographies des usines Th. Haviland. – Extraits de l’album
           photographique réalisé en 1912 (ateliers et personnel). – Articles de journaux locaux. – Chansons de manifestants en 1905. – Extraits de
           correspondances (William Haviland, Jacques Chardonne, Suzanne Lalique). – Composition des services de tables. – Formes et décors.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

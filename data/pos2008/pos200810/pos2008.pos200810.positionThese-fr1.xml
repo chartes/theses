@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le livre de raison d’Honoré de Quiqueran de Beaujeu</title>
-        <title type="sub">Une famille noble arlésienne aux &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; et &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;
-        &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"/&gt;siècles</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le livre de raison d’Honoré de Quiqueran de Beaujeu</title><title xml:lang="fr" type="sub">Une famille noble arlésienne aux <num>xvi<hi rend="sup">e</hi></num> et <num>xvii<hi rend="sup">e</hi></num>
+        <hi rend="sup"/>siècles</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Daigne, Nathalie">Nathalie Daigne</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200810.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’étude des écrits du for privé connaît un regain d’intérêt depuis quelques années comme en témoigne la création par le CNRS du GDR « Les
           écrits du for privé en France, de la fin du Moyen Âge à 1914 » en 2003. Parmi eux, le livre de raison occupe une place spécifique : s’il
           s’agit bien, comme pour les autres écrits du for privé, d’une écriture intime, c’est un « nous » collectif, celui de la famille, qui tend
@@ -78,7 +81,7 @@
 <hi rend="sup">e</hi> siècle – problématique pour cette noblesse moyenne et provinciale qui peine à s’intégrer dans les nouveaux rouages de
           l’absolutisme.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le point de départ de cette étude est bien évidemment le manuscrit du livre de raison d’Honoré de Quiqueran de Beaujeu conservé au centre
           historique des Archives nationales. Le département des manuscrits de la Bibliothèque nationale de France possède également un cahier faisant
           partie d’une collection d’autographes qui contient onze feuillets manquants. Les dossiers relatifs à la famille des Quiqueran conservés au
@@ -94,9 +97,8 @@
 <hi rend="sup">e</hi> siècle par des membres de la famille des Quiqueran.</p>
         <p/>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation générale du livre de raison</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Présentation générale du livre de raison</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le contexte de création</head>
           <p>
             <hi rend="i">Arles et son terroir au <num>xvii<hi rend="sup">e</hi></num> siècle.</hi> — Arles possède un territoire extrêmement vaste qui
@@ -135,7 +137,7 @@
             1644. Il mène alors jusqu’à la fin de sa vie une vie sédentaire pendant laquelle il s’efforce de gérer au mieux les biens de sa famille et
             de défendre sa position.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Forme et analyse comptable du livre de raison</head>
           <p>
             <hi rend="i">Présentation générale. —</hi> L’histoire du livre de raison de Pierre après sa rédaction est mal connue. On le retrouve à la
@@ -158,8 +160,8 @@
             Le provençal est conservé pour des mots techniques propres au terroir arlésien ou pour retranscrire d’une manière plus orale et expressive
             certaines émotions. Très présents dans la partie comptable, les nombres sont presque tous sous la forme de chiffres arabes.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition critique</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Édition critique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Conventions de transcription</head>
           <p>L’édition du livre de raison d’Honoré de Quiqueran de Beaujeu est complète et s’appuie sur le seul manuscrit existant. Les feuillets
             conservés à la BnF ont été réintégrés au corps du texte. La transcription et l’édition s’appuient sur les recommandations publiées par
@@ -168,7 +170,7 @@
             en revanche été seulement signalées dans l’apparat critique. Si la foliotation a été conservée, la disposition du texte n’a pas semblé
             suffisamment significative pour être respectée à l’exception de celle des pages rubriquées en marge et des pages de comptes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">
             <num>É</num>dition</head>
           <p>Le texte commence par une invocation à Marie, suivie du texte des « interrogations pour faire les preuves de noblesse des chevaliers de
@@ -181,8 +183,8 @@
             Constantinople grâce à son fils-aîné François-Joseph.</p>
           <p>Un index assez complet de la main d’Honoré conclut le livre.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Commentaire</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">
             <num>ê</num>tre noble</head>
           <p>
@@ -220,7 +222,7 @@
             chacune espérant que son chevalier fera une belle carrière et en fera profiter sa famille et ses alliés. La réalité est souvent décevante,
             comme le montrent les destins contrastés de trois générations de chevaliers chez les Quiqueran.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Portrait d’une famille arlésienne (XVI<hi rend="sup">e</hi>-XVII<hi rend="sup">e</hi> siècle)</head>
           <p>
             <hi rend="i">Vie sociale et familiale. —</hi>
@@ -263,7 +265,7 @@
             stratégie, d’une mauvaise gestion et de la malchance, avec une série de morts précoces et de destins contrariés – par exemple, le long
             emprisonnement du frère chevalier de l’auteur, à Constantinople.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre troisième">Aux marges de l’histoire : annales, chroniques, Mémoires ?</head>
           <p>
             <hi rend="i">Une écriture qui n’est pas historique. —</hi> Le récit contenu dans le livre de raison n’a pas de fonction historique.
@@ -293,9 +295,7 @@
             Son œuvre fait de lui un gardien, un lien entre les générations et – idéalement – un passeur : ce pour quoi il échoue, puisque le livre
             est abandonné à sa mort.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Dans son livre de raison, Honoré de Quiqueran de Beaujeu souhaitait veiller à la préservation du capital économique de sa maison, par la
           gestion du patrimoine qui transparaît dans ses comptes, et à la conservation de son capital symbolique, par la transmission de la mémoire
           familiale, pour permettre non seulement à ses descendants de continuer à vivre noblement, mais aussi de pouvoir témoigner de leur
@@ -307,13 +307,12 @@
           encore de la grande complexité et de la variété du genre du livre de raison, particulièrement développé en Provence, et dont les
           spécificités locales mériteraient d’être davantage étudiées.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Inscription de la chapelle des Quiqueran dans l’église Saint-Martin.  <hi rend="i">—</hi> Éloge de Pierre de Quiqueran par François de
           Claret.  <hi rend="i">—</hi> Épitaphe d’Honoré de Quiqueran de Beaujeu, Grand Prieur de Saint-Gilles.  <hi rend="i">—</hi> Testament de
           François de Quiqueran de Beaujeu.  <hi rend="i">—</hi> Extrait des <hi rend="i">Maintenues de noblesse de Provence</hi> par Belleguise.  <hi rend="i">—</hi>  <hi rend="i">Factum pour les créanciers d’Honoré de Quiqueran de Beaujeu</hi>.  <hi rend="i">—</hi> Inventaire après
           décès d’Honoré de Quiqueran de Beaujeu.  <hi rend="i">—</hi> Extrait du <hi rend="i">Nobiliaire</hi> d’Artefeuil.  <hi rend="i">—</hi>  <hi rend="i">Action héroïque de Jacques de Quiqueran</hi> par André Beuf.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

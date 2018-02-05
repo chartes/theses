@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Louis Le Vau : les débuts d’un architecte parisien (1612-1654)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Louis Le Vau : les débuts d’un architecte parisien (1612-1654)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Cojannot, Alexandre">Alexandre Cojannot</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200012.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Louis Le Vau est loin d’être un artiste méconnu, mais on n’a généralement de lui qu’une image fragmentaire, à la faveur d’analyses
           ponctuelles de telle ou telle de ses œuvres, ou en négatif, grâce à l’étude de ses contemporains et de ses proches, comme François Le Vau ou
           François d’Orbay. Un travail à caractère biographique permet non seulement de remédier à ces lacunes, mais ouvre aussi de nouvelles
@@ -62,10 +65,9 @@
         <p>L’abondance et la diversité des sources, presque exclusivement tirées du fonds du Minutier central des notaires de Paris, aux Archives
           nationales, conduit à accorder un traitement particulier aux devis d’ouvrages, édités et commentés en seconde partie.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Une demi-biographie (1612-1654)</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Une demi-biographie (1612-1654)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les débuts (1612-1639)</head>
           <p><hi rend="i">Origines </hi> — L’humble milieu social et familial dont est issu Louis Le Vau explique la rareté des sources à son sujet
             jusqu’au milieu des années 1630. La condition de son grand-père maternel, maréchal-ferrant à Montagny-en-Vexin, témoigne d’ailleurs
@@ -88,7 +90,7 @@
             distingue par une architecture soignée ; cependant, il ne s’agit en rien d’un véritable hôtel, mais de deux maisons indépendantes
             habilement jointes pour former un ensemble factice.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le temps des succès (1639-1646)</head>
           <p><hi rend="i">Famille et fortune </hi> — Après avoir logé pendant deux ans sur le quai des Célestins, la famille Le Veau s’installa rue
             Saint-Louis-en-1’Ile en 1639, où elle prospéra rapidement, de baptêmes en mariages. Louis, qui s’était depuis 1638 donné le nom de “ Le
@@ -114,7 +116,7 @@
             l’Université en 1642, mais aussi son pendant, le “ Petit Tambonneau ” (1644), puis les maisons de François Luillier et des orphelins de la
             famille Boyer (1645-1646).</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Méandres d’une carrière  (1646-1654)</head>
           <p><hi rend="i">Des temps plus difficiles </hi> — Alors qu’il y avait famille et biens, Louis Le Vau choisit en 1646 de quitter l’île
             Saint-Louis. Il fit l’acquisition d’une grande maison rue du Roi-de-Sicile, où il engagea aussitôt d’importants travaux de réfection et
@@ -140,7 +142,7 @@
             même de Louis Le Vau, ambitieux et avide d’honneurs, eut une influence directe sur l’évolution de cette fonction alors en concurrence avec
             la surintendance des bâtiments.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre final">Conclusion</head>
           <p>L’étude des vingt premières années d’activité de Louis Le Vau révèle le véritable effet de mode dont il fut l’objet à partir de 1639
             auprès de la clientèle parisienne, qui devait le conduire au service du roi et de la cour. Ce succès aussi rapide que brillant met en
@@ -150,22 +152,19 @@
             personnelle, érigée en système, et par une grande sensibilité aux attentes nouvelles de la clientèle en matière de commodités et de grand
             décor.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Édition des devis d’ouvrages de Louis Le Vau</head>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div n="3" type="part"><head n="0" type="chapter">Édition des devis d’ouvrages de Louis Le Vau</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>Le nombre important des devis d’ouvrages autographes de Louis Le Vau conservés dans les archives notariales conduit à reconsidérer la
           valeur de ces actes, souvent négligés du fait d’un contenu plus technique qu’artistique. Leur édition fournit l’occasion de revenir plus
           précisément sur les méthodes de travail de Louis Le Vau, sur son rôle de conducteur de chantier et sur les rapports complexes qu’il
           entretint avec les professionnels du bâtiment. Ils représentent un témoignage précieux pour la connaissance du métier d’architecte, à une
           époque où ce dernier se définit de plus en plus par opposition à celui d’entrepreneur.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="5"><head>Édition</head>
         <p>Sont édités intégralement les trente-deux devis et marchés retrouvés concernant les ouvrages de Louis Le Vau avant son accession au poste
           de premier architecte du roi, ce qui exclut les marchés notariaux seuls. Les quittances portées à la suite des marchés font l’objet de
           simples notices.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

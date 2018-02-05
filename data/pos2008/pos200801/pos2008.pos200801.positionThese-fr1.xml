@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les carnets de voyage de Malesherbes</title>
-        <title type="sub">Étude et édition critique</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les carnets de voyage de Malesherbes</title><title xml:lang="fr" type="sub">Étude et édition critique</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bart, Mélanie">Mélanie Bart</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200801.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Chrétien-Guillaume de Lamoignon de Malesherbes est un personnage bien connu. Cette notoriété est due à son origine familiale, puisqu’il est
           le fils du chancelier Lamoignon, et à ses fonctions : premier président de la Cour des Aides, directeur de la librairie, puis secrétaire
           d’État à la Maison du Roi et ministre sans portefeuille et enfin avocat de Louis XVI lors de son procès. De nombreuses études lui ont été
@@ -67,7 +70,7 @@
           place et transmet le fruit de ses observations au monde savant. Ce sont ces carnets qui font l’objet ici d’une édition critique
           partielle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de Guillaume-Chrétien de Lamoignon de Malesherbes sont réparties en trois fonds : le chartrier du château de Malesherbes,
           conservé aux Archives nationales, et ceux du château de Rosanbo et de Tocqueville, en mains privées, mais néanmoins consultables sous la
           forme de microfilms aux Archives nationales. Parmi ces trois fonds abondants, divers éléments concourent à la connaissance de Malesherbes
@@ -79,9 +82,8 @@
           d’exemple représentatif, on peut citer « sur les volcans », « pruniers », « procédés pour faire le fromage », etc.). Ils ont été inventoriés
           et certains sont édités en annexe.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les conditions de voyage</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les conditions de voyage</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Attitude face au voyage</head>
           <p>Avant de partir, l’expédition projetée fait l’objet de différents préparatifs qui en eux-mêmes témoignent des intentions du voyageur.
             Malesherbes prend donc des informations sur ce qu’il faut voir au cours de son trajet, fait des lectures, commence à se mettre en rapport
@@ -93,7 +95,7 @@
           <p>Enfin, Malesherbes n’échappe pas à la reprise de poncifs du journal de voyage, telle la liste des dangers encourus au cours de
             l’expédition ou l’image du voyageur et de son équipement – il est vrai, limité à une canne graduée et à un baromètre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Caractères généraux</head>
           <p>Les carnets de voyage sont rédigés dans un contexte matériel précis qui influe nécessairement sur leur contenu. Il en va ainsi du choix
             des moyens de transport (en voiture, à cheval, à pied) ou des lieux où l’on couche et où l’on mange (dans des auberges, chez des
@@ -104,7 +106,7 @@
             déroulement des voyages et se retrouvent dans la rédaction des carnets : le voyageur s’égare, se trouve confronté à des dangers, à des
             formalités administratives ou à des intempéries.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Trajets effectués</head>
           <p>Pour étudier les carnets de voyage de Malesherbes, il faut par ailleurs en présenter les itinéraires, puis voir comment ceux-ci ont été
             choisis par notre voyageur. On comprend dès lors que ce dernier s’appuie de façon préférentielle sur les routes de poste, qui offrent des
@@ -115,20 +117,20 @@
             Malesherbes a sélectionné les endroits où il voulait se rendre, les détours sont assez fréquents, ce qui démontre la souplesse de notre
             voyageur malgré sa préparation et ses repérages minutieux.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Collecter des informations scientifiques et pratiques</head>
-        <p>Malesherbes veille à collecter des informations pratiques qui concernent les domaines de l’économie et des sciences et qui visent à
+      </div><div n="4" type="part"><head n="0" type="chapter">Collecter des informations scientifiques et pratiques</head>
+        <p n="1" type="chapter">Malesherbes veille à collecter des informations pratiques qui concernent les domaines de l’économie et des sciences et qui visent à
           améliorer la vie du pays. Ses pérégrinations sont indissociables de son activité d’administrateur et constituent autant de voyages d’étude.
           Son attention à la valorisation des ressources naturelles et à la circulation des biens et des personnes s’inscrit parfaitement dans la
           réflexion scientifique et économique de son époque – celle de l’Encyclopédie, des physiocrates et des premiers penseurs du libre échange ou
           de Parmentier – et ses préoccupations trahissent celles des élites administratives et marchandes à l’orée de la première révolution
           industrielle.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Paysages</head>
           <p>Certes, comme pour tout voyageur, les paysages constituent le premier élément qui retient l’attention de Malesherbes : les vues et la
             beauté des paysages marquent notre voyageur, par ailleurs attentif aux populations qui façonnent ces terroirs. Mais ce sont bien les
             aspects économiques qui intéressent au premier chef cet administrateur ami des Lumières.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Agriculture</head>
           <p>Ainsi, les richesses naturelles et leur exploitation possible constituent-elles une des préoccupations continuelles de Malesherbes. Les
             notes prises sur les cultures (plantes, irrigation, rotation) sont assez précises et documentées pour pouvoir être réutilisées dans le
@@ -140,7 +142,7 @@
             production, d’accroître les revenus des producteurs et d’améliorer l’approvisionnement de populations toujours sous la menace de
             disettes.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Industrie</head>
           <p>C’est en effet l’utilité publique que Malesherbes vise dans ses carnets, au travers de la meilleure utilisation possible des ressources.
             De ce fait, les richesses en bois et en minéraux susceptibles de faire l’objet d’exploitation retiennent naturellement son attention. La
@@ -150,15 +152,15 @@
             le ministre. Par ailleurs, de façon plus anecdotique il est vrai, Malesherbes s’intéresse à la production de la faïence ou de la poterie.
         </p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Commerce</head>
           <p>Une fois repérées les richesses exploitables de chaque région, se pose le problème de leur transport vers les lieux de consommation.
             Malesherbes est particulièrement attentif aux conditions d’amélioration de l’efficacité des voies de communication. La question de la
             frontière devient à ce sujet cruciale, car elle constitue le plus souvent une barrière étanche, du fait des taxes qu’on y perçoit, qui
             sont vues comme des freins au commerce, tournés par la contrebande.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Un regard scientifique</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Un regard scientifique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’importance des sources</head>
           <p>La démarche scientifique de Malesherbes se manifeste d’abord par une attention scrupuleuse portée à ses sources : avant de noter une
             information dans ses carnets, il s’efforce de la vérifier auprès de plusieurs interlocuteurs, de la compléter avec des données de première
@@ -168,7 +170,7 @@
             et conserve de nombreux échantillons qui lui serviront par la suite à fixer sa mémoire et à étayer ses raisonnements, à constituer un
             matériau pour de nouvelles expériences avec un équipement plus complet ou en compagnie de plus savant que lui.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Malesherbes comme moyen de transmission d’informations</head>
           <p>S’il est si minutieux dans l’attention qu’il accorde aux sources, c’est que Malesherbes se comporte au cours de ses périples non comme un
             scientifique en tant que tel, mais plutôt comme un médiateur entre les données qu’il collecte et les savants qui pourront utiliser ces
@@ -179,7 +181,7 @@
             à rassembler toutes les connaissances dont il dispose sur un thème donné, et sont également voués à être diffusés et complétés par la
             suite par d’autres personnes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des sujets scientifiques</head>
           <p>Au-delà de la collecte critique des données et de leur transmission au monde savant, le caractère scientifique de la démarche de
             Malesherbes est perceptible dans la mise en œuvre de savoirs techniques au service de sujets scientifiques. Les considérations sur la
@@ -189,7 +191,7 @@
             sollicitées pendant ses déplacements, au cours desquels il observe toutes les pierres, les carrières, les couches, qui peuvent se
             présenter à ses yeux.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Un aspect particulier du paysage : les montagnes</head>
           <p>Pour bien comprendre la démarche de Malesherbes, un élément a été étudié en tant que tel, qui reprend de façon transversale tout ce qui
             constitue sa méthode et qui met en valeur le caractère scientifique de ces carnets de voyage. Le thème retenu a été celui de l’espace
@@ -201,16 +203,14 @@
             plus de vingt ans (1751-1778) – et des comparaisons entre les différentes chaînes de montagnes du territoire (Massif central, Alpes,
             Pyrénées).</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Ainsi, les carnets de voyage de Malesherbes apparaissent comme les témoins d’une pratique de transmission de connaissances entre
           l’informateur qui se rend sur le terrain et des savants qui peuvent exploiter ensuite les informations collectées. De ce point de vue, les
           voyages sont un moment privilégié de cette collecte et les carnets le moyen le plus efficace de garder en mémoire et de transmettre les
           observations faites, tout en rendant compte de cette pratique aux yeux des historiens. Cette pratique est représentative de l’époque des
           Lumières et rend compte des préoccupations de notre voyageur et de son réseau de sociabilité.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="7"><head>Édition</head>
         <p>Édition critique de trois carnets correspondant au premier voyage de Malesherbes, en 1751, en Auvergne, où ne sont notés que des
           compléments aux informations prises par son compagnon le docteur Guettard ; au voyage de 1767, qui emmène Malesherbes de Moulins à Avignon,
           en passant par les Alpes, puis d’Avignon à Tarbes, et des Pyrénées à la côte atlantique ; au voyage de 1778, intitulé par Malesherbes
@@ -218,7 +218,6 @@
           la Lorraine. L’édition est pourvue d’index des noms géographiques et des noms de personnes, d’un dictionnaire biographique et d’un glossaire
           scientifique.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

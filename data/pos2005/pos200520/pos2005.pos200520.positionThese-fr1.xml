@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Au cœur du Parti communiste français</title>
-        <title type="sub">Les notes de bureau politique de Maurice Thorez (1947-1964)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Au cœur du Parti communiste français</title><title xml:lang="fr" type="sub">Les notes de bureau politique de Maurice Thorez (1947-1964)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Regnaud, Mathilde">Mathilde Regnaud</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200520.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>En 1947, alors que les institutions de la <num>iv<hi rend="sup">e</hi></num> République se mettent en place, le Parti communiste français (PCF) est
           le premier parti de France. Cinq mois plus tard, les ministres communistes sont renvoyés du gouvernement et le parti entre peu à peu dans
           une phase d’opposition qui va être très longue, marquée par des attaques violentes contre la politique gouvernementale française et un
@@ -67,7 +70,7 @@
           décisionnel interne le Bureau politique, instance souvent considérée par l’historiographie du communisme français comme un organe de second
           plan dépourvu de tout réel pouvoir.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La source principale de ce travail se compose de trois cahiers d’écolier et de six cartons de feuilles volantes de format A4, sur lesquels
           Maurice Thorez écrivait ses notes. Mais la recherche s’est également fondée sur d’autres ensembles de sources : les archives de la direction
           du PCF tout d’abord, comprenant les décisions du secrétariat et du Bureau politique ; les témoignages écrits ou oraux, lorsque ce fut
@@ -75,9 +78,8 @@
           écrite, qui permettent de replacer systématiquement les propos des membres du Bureau politique dans le contexte politique, social et
           économique de la période : une attention particulière a été apportée à l’<hi rend="i">Humanité</hi> bien évidemment, mais surtout à l’<hi rend="i">Année politique</hi>, plus objective et plus complète.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Maurice Thorez, dirigeant du PCF</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Maurice Thorez, dirigeant du PCF</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation biographique de Maurice Thorez</head>
           <p>
             <hi rend="i">L’ascension d’un dirigeant. –</hi> Né en 1900 dans le Nord, Maurice Thorez a vécu dans un contexte familial et économique
@@ -120,7 +122,7 @@
             dirigeants de haut rang comme Laurent Casanova et Marcel Servin. Après avoir désigné son successeur lors du congrès de 1964, il meurt en
             juillet sur un bateau qui l’emmène en URSS.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les notes de Thorez</head>
           <p>Les notes du secrétaire général se répartissent en deux corpus : le premier, couvrant la période qui s’étend de janvier 1947 à mai 1950,
             se compose de trois cahiers. Le second, débutant en 1955 pour s’achever en juin 1964, est constitué par des feuilles volantes. Sur ces
@@ -129,8 +131,8 @@
             présence se signale par de nombreux indices – annotations, manière d’écrire – qui font aussi de ce texte un écrit à la première
             personne.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le Bureau politique, organe de direction du PCF</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le Bureau politique, organe de direction du PCF</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La place du Bureau politique dans le Parti</head>
           <p>Le rôle du Bureau politique n’est défini que très vaguement par les statuts du PCF ; hiérarchiquement, il se situe au-dessus du Comité
             central, dont il est l’émanation, et assure le travail courant dans l’intervalle des sessions de ce comité. Le secrétariat, dirigé par le
@@ -140,7 +142,7 @@
             au profit du secrétariat et surtout du secrétaire général. Cependant, un changement intervenu après le congrès du PCUS en 1956 vise à
             rendre au Bureau politique son rôle dirigeant.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les membres du Bureau politique</head>
           <p>Les personnes qui participent au Bureau politique durant la période 1947-1964 dépassent très largement le cadre des membres officiels,
             dont la liste est promulguée lors des congrès du PCF. Ces derniers forment un groupe stable, qui évolue peu tout au long de ces dix-sept
@@ -151,7 +153,7 @@
             –, des cadres administratifs en charge d’importantes fonctions dans l’appareil communiste – le responsable à l’organisation, aux cadres –
             ou encore les dirigeants de la CGT.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le fonctionnement du Bureau politique</head>
           <p>
             <hi rend="i">La réunion du Bureau politique. –</hi> Les réunions du Bureau politique sont programmées par le secrétariat, qui définit leur
@@ -181,15 +183,13 @@
             l’opinion de la base. Le bureau politique joue donc le rôle indispensable d’interface entre Maurice Thorez et la société communiste, entre
             le parti et le monde en général, tout en renforçant la solidarité du noyau dur de la direction du parti.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Les notes prises par Maurice Thorez lors des réunions du bureau politique constituent un corpus très riche, jusque-là inédit, qui nous
           livre une information de première main sur le mode et le style de direction de Thorez, sur l’information des cadres dirigeants communistes
           et sur l’élaboration d’une réflexion collective au sommet de l’appareil de l’un des partis politiques français les plus puissants. Elles se
           révèlent donc être un précieux outil de travail pour les historiens du Parti communiste et de la vie politique nationale sous la IV <hi rend="sup">e</hi> République et le début de la <num>v<hi rend="sup">e</hi></num> République.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="6"><head>Édition</head>
         <p>Les années 1947, 1948, 1956 et 1958 font l’objet d’un apparat critique détaillé, organisé autour de deux niveaux : un texte d’introduction
           précède chaque réunion et rappelle le contexte politique, économique et social ; des notes de bas de page identifient les personnages, les
           lieux et les événements dont il est question. L’établissement du texte s’est fait selon deux principes : celui du respect de l’auteur
@@ -198,7 +198,6 @@
           autant que faire se peut, respectée.</p>
         <p>Les dix autres années du corpus sont éditées sans apparat critique.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

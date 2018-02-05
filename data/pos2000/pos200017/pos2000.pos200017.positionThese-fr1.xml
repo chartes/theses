@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le cardinal de Granvelle et la Franche-Comté : la correspondance comme instrument de gouvernement</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le cardinal de Granvelle et la Franche-Comté : la correspondance comme instrument de gouvernement</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dinard, Simon-Pierre">Simon-Pierre Dinard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200017.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La correspondance du cardinal de Granvelle avec son cousin le prieur de Bellefontaine peut être envisagée du point de vue de l’apport
           biographique. En effet, le degré de parenté et l’amitié  permettent au cardinal d’employer dans ses lettres autographes un style direct et
           un ton familier propices aux confidences. Le cardinal s’y présente en homme d’Etat impartial, préoccupé du seul intérêt public et du service
@@ -63,7 +66,7 @@
           Rye, le cardinal pouvait craindre que son absence de sa province natale ne suscite trouble et défections parmi ses fidèles. Sa mise en
           représentation à distance par le clientélisme et le mécénat s’est donc révélée nécessaire pour conserver son influence en Franche-Comté.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La collection de lettres et de documents rassemblée par l’abbé Jean-Baptiste Boisot et conservée à la bibliothèque municipale de Besançon
           sous le titre générique de « collection Granvelle » concerne la famille Perrenot de Granvelle en général, dont les membres les plus
           illustres sont Nicolas Perrenot (1484-1550), garde des sceaux impérial, et son fils, Antoine, le cardinal de Granvelle (1517-1586).
@@ -73,9 +76,8 @@
           Piot en Belgique. Reliée en une centaine de volumes, cette collection englobe quelques ensembles cohérents, dont les lettres adressées par
           le cardinal de Granvelle à son cousin le prieur de Bellefontaine (volumes 83 et 84).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Eléments de biographie</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Eléments de biographie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les années de formation (1517-1550)</head>
           <p><hi rend="i">La famille Perrenot de Granvelle </hi> — Les ancêtres du cardinal de Granvelle étaient forgerons. Ces origines lointaines
             suscitèrent une rumeur sur la bassesse de son extraction, alors même que son arrière grand-père et son grand-père avaient permis
@@ -89,7 +91,7 @@
             son père, à la mort de ce dernier en 1550, l’initiation politique d’Antoine Perrenot est indissociable de l’action de son père en faveur
             de l’unité impériale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’exercice du pouvoir (1550-1564)</head>
           <p><hi rend="i">Conseiller de l’empereur </hi> — Formé par son père, Antoine Perrenot lui succède naturellement dans la confiance de
             Charles Quint. Cependant, son action et sa position à la cour sont fragilisées par des attaques personnelles et pâtissent de l’atmosphère
@@ -100,7 +102,7 @@
             générale des Pays-Bas, Marguerite de Parme. Toutefois, l’impopularité de la politique de Philippe II, notamment la réorganisation de
             l’Eglise aux Pays-Bas, entraîne en 1564 l’exil du cardinal, camouflé en départ volontaire.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les séjours Franc-Comtois et Italiens (1564-1579)</head>
           <p><hi rend="i">L’exil en Franche-Comté </hi> — Accueilli par ses parents et amis en Franche-Comté, le cardinal s’emploie à les rassurer et
             à dissimuler une disgrâce qu’il a du mal à accepter. La mort du pape lui permet de se rendre sur ordre royal à Rome, sans paraître aux
@@ -117,7 +119,7 @@
             roi. Par ailleurs, la dégradation de la situation en Franche-Comté et les velléités d’autonomie politique des Etats de la province
             redonnent de l’importance au cardinal et à sa clientèle comtoise.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">A la cour espagnole (1579-1586)</head>
           <p><hi rend="i">Le retour en grâce </hi> — En 1579, Philippe II procède à un renouvellement de son ministère et appelle le cardinal à
             Madrid pour lui confier la présidence du Conseil d’Italie. Mais le cardinal a du mal à s’adapter au processus de décision du roi. L’état
@@ -129,7 +131,7 @@
             Franche-Comté après 1564. Après s’être brouillé avec son neveu, qu’il avait choisi pour héritier, il a changé l’ordre prévu pour sa
             succession afin d’assurer au mieux la pérennité de la maison Granvelle.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Aspects de la personnalité du cardinal de Granvelle</head>
           <p><hi rend="i">La pensée politique du cardinal de Granvelle </hi> — Un trait dominant de la pensée politique du cardinal est la méfiance à
             l’égard de tout changement de l’ordre ancien. Il s’agit en grande part d’une attitude de repli vers le règne idéalisé de Charles Quint,
@@ -165,8 +167,8 @@
             jamais rompu le lien avec sa province natale, dont il promeut par exemple les vins avec fierté. Son exil en Franche-Comté lui permet de
             reprendre contact avec le pays et avec ses fidèles et d’affermir les bases de sa politique personnelle.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Le cardinal de Granvelle et la Franche-Comté</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le cardinal de Granvelle et la Franche-Comté</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Famille, alliés et clients</head>
           <p><hi rend="i">Les stratégies de Nicolas Perrenot de Granvelle </hi> — Le garde des sceaux impérial a cherché à consolider son crédit en
             cour et à asseoir la fortune de sa nombreuse famille par divers moyens. Les mariages de ses enfants, dont onze sont parvenus à l’âge
@@ -186,7 +188,7 @@
             Granvelle se préoccupe toujours du sort des élections qui renouvellent le gouvernement de Besançon et n’hésite pas à faire intervenir ses
             parents dans les joutes électorales. Son élection à l’archevêché est, du reste, un moyen supplémentaire de contrôler la cité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les biens du cardinal en Franche-Comté</head>
           <p><hi rend="i">Les bénéfices ecclésiastiques </hi> — Son père ayant destiné Antoine à la carrière ecclésiastique, il s’est chargé de lui
             procurer les bénéfices nécessaires à sa position à la cour. Les quelques données chiffrées qui sont encore conservées permettent d’estimer
@@ -201,7 +203,7 @@
             000 et 200 000 francs comtois. Quant au revenu de ses biens en Franche-Comté, il peut être estimé à environ 30 000 francs comtois par
             an.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Evergétisme et mécénat comtois du cardinal de Granvelle</head>
           <p><hi rend="i">Manifestations symboliques du patronage du cardinal de Granvelle </hi> — La notion d’évergétisme permet d’introduire la
             dimension publique et politique des actes de mécénat du cardinal de Granvelle. Celui-ci manifeste son patronage en Franche-Comté par
@@ -240,8 +242,8 @@
             de quatre tourelles carrées, alors que le parti d’organiser l’espace de manière rationnelle et symétrique témoigne de préoccupations
             résolument modernes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La correspondance Granvelle-Bellefontaine</head>
-        <p>L’édition de 292 lettres ou extraits de lettres de la correspondance entre le cardinal de Granvelle et le prieur de Bellefontaine couvre la
+      </div><div n="5" type="part"><head n="0" type="chapter">La correspondance Granvelle-Bellefontaine</head>
+        <p n="1" type="chapter">L’édition de 292 lettres ou extraits de lettres de la correspondance entre le cardinal de Granvelle et le prieur de Bellefontaine couvre la
           période 1555-1586, et plus particulièrement les dernières années de la vie du cardinal. En effet, 202 lettres sont postérieures à 1580 et
           correspondent à la période où le cardinal se trouve à la cour de Philippe II. Les lettres envoyées par le cardinal sont en bonne majorité
           des autographes (161 sur 279) et celles de son cousin le sont pratiquement toutes (12 sur 13). S’il apparaît normal que le prieur de
@@ -249,9 +251,7 @@
           tournure très personnelle que prend fréquemment sa correspondance, où se lit son indignation devant l’attitude de son neveu, explique
           certainement cette situation. La correspondance Granvelle-Bellefontaine, outre son intérêt historique général, acquiert de la sorte un
           intérêt pratiquement autobiographique.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Son exil des Pays-Bas en 1564 fait brutalement prendre conscience au cardinal de Granvelle du caractère aléatoire de la faveur royale, sur
           laquelle repose la fortune de la maison Granvelle. Lors de son passage en Franche-Comté, entouré de ses parents et de ses fidèles, il
           reprend confiance, en prenant conscience des appuis dont il dispose dans cette province, qui le reconnaît volontiers comme son protecteur.
@@ -270,12 +270,11 @@
           pratique du pouvoir la notion de distance géographique, qui constitue à la fois un obstacle et un élément moteur du développement de l’Etat
           moderne, en rendant nécessaire un système de représentation efficace pour la transmission et l’exécution des ordres.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives et annexes</head>
+          <div type="appendix" n="7"><head>Pièces justificatives et annexes</head>
         <p>Extraits de la correspondance du cardinal de Granvelle avec diverses personnes, en particulier Claude de Chavirey, receveur-payeur du
           cardinal en Franche-Comté. ­ Plans du palais construit par le cardinal de Granvelle à Besançon (second étage, parterre). ­ Tableaux
           généalogiques de la famille de Granvelle.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

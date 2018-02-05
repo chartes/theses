@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le roman en prose &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Guy de Warewyk&lt;/hi&gt;(&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub">Édition et commentaire.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le roman en prose <hi rend="i">Guy de Warewyk</hi>(<num>xv<hi rend="sup">e</hi></num> siècle)</title><title xml:lang="fr" type="sub">Édition et commentaire.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Desmet, Frédérique">Frédérique Desmet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200016.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire de <hi rend="i">Guy de Warewyk</hi>, aujourd’hui méconnue en France, a cependant joui en Angleterre  d’une vogue extraordinaire
           jusqu’au <num>xix<hi rend="sup">e</hi></num>  siècle. Ce succès repose en partie sur la mise en prose réalisée au <num>xv<hi rend="sup">e</hi></num>  siècle
           d’un roman en vers du <num>xiii<hi rend="sup">e</hi></num>  siècle, qui a remis au goût du jour, sous la forme de la chanson de geste, une vieille
@@ -70,10 +73,9 @@
           manuscrits et d’en donner une nouvelle édition. Ce travail préalable devrait contribuer à enrichir l’étude des adaptations apportées au
           texte de base lors de sa mise en prose et, ainsi, de mieux cerner l’évolution du goût littéraire.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Présentation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’arrière-plan historique du roman</head>
           <p>Au <num>xiii<hi rend="sup">e</hi></num>  siècle une légende traditionnelle saxonne a suffisamment retenu les esprits pour paraître digne d’être
             mise par écrit. Le récit des aventures de Guy de Warwick est censé reposer sur un événement réel, le combat singulier que se seraient
@@ -86,7 +88,7 @@
             danois Olaf Tryggvason, contemporain d’Ethelred.</p>
           <p>Surtout l’épisode du combat singulier semble devoir beaucoup au talent du rédacteur du roman et être inspiré directement du <hi rend="i">Moniage Guillaume</hi>, dont le héros, déguisé en pèlerin, combat les Danois.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La tradition du roman</head>
           <p><hi rend="i">La mise en vers au <num>xiii<hi rend="sup">e</hi></num>  siècle </hi> — La mise en vers de la légende au XIII <hi rend="sup">e siècle</hi> fait la part belle aux maisons comtales de Warwick et de Wallingford, dont les terres s’étendaient sur les comtés de
             Warwick, d’Oxford et de Buckingham et que d’étroites relations de parenté liaient. Il faut admettre à la suite des démonstrations d’Ewert
@@ -117,38 +119,35 @@
             Geoffroy de Monmouth <hi rend="i">(Historia</hi>  <hi rend="i">regum Britannie</hi>, IX, 13). Le succès de <hi rend="i">Guy de
               Warewyk</hi> tient tout compte fait au talent avec lequel son auteur enchaîne les événements et en amène le dénouement.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Edition</head>
-        <p>L’édition du roman en prose est basée sur deux manuscrits du <num>xv<hi rend="sup">e</hi></num>  siècle, dont le texte est confronté à celui de deux
+      </div><div n="3" type="part"><head n="0" type="chapter">Edition</head>
+        <p n="1" type="chapter">L’édition du roman en prose est basée sur deux manuscrits du <num>xv<hi rend="sup">e</hi></num>  siècle, dont le texte est confronté à celui de deux
           éditions imprimées parisiennes du <num>xvi<hi rend="sup">e</hi></num>  siècle.</p>
-        <p><hi rend="i">Les sources manuscrites </hi> — Un premier manuscrit, ici appelé <hi rend="i">P</hi>, est conservé à Paris, à la Bibliothèque
+        <p n="2" type="chapter"><hi rend="i">Les sources manuscrites </hi> — Un premier manuscrit, ici appelé <hi rend="i">P</hi>, est conservé à Paris, à la Bibliothèque
           nationale de France, sous la cote fr. 1476. L’écriture serrée qui court sur les quatre-vingt-six feuillets du manuscrit date sans conteste
           du <num>xv<hi rend="sup">e</hi></num>  siècle et provient d’une seule main. La décoration du premier feuillet, qui inclut notamment un écusson parti
           d’Orléans et de Rohan, nous renseigne sur l’identité du commanditaire du manuscrit. En effet, le manuscrit a appartenu à Jean d’Orléans,
           comte d’Angoulême, et à sa femme Marguerite de Rohan. Prisonnier des Anglais de 1412 à 1445, Jean d’Orléans profita de son séjour forcé dans
           ce pays pour y apprendre l’anglais et pour faire transcrire par le scribe John Duxworth des manuscrits, qu’il fit mettre an propre à son
           retour dans son château de Cognac.</p>
-        <p>Le second manuscrit, conservé à Londres (Brit. Libr., Old Royal 15.E.VI) et appelé <hi rend="i">L</hi>, remonte aussi au XV <hi rend="sup">e</hi>  siècle et contient, aux côtés du <hi rend="i">Gui de Warwick</hi>(fol. 227-272v), de nombreux autres romans comme, entre autres,
+        <p n="3" type="chapter">Le second manuscrit, conservé à Londres (Brit. Libr., Old Royal 15.E.VI) et appelé <hi rend="i">L</hi>, remonte aussi au XV <hi rend="sup">e</hi>  siècle et contient, aux côtés du <hi rend="i">Gui de Warwick</hi>(fol. 227-272v), de nombreux autres romans comme, entre autres,
           le <hi rend="i">Roman d’Alexandre</hi>, <hi rend="i">Fierabras</hi>, <hi rend="i">Ogier le Danois</hi>. Offert par John Talbot, premier
           comte de Shrewsbury, à Marguerite d’Anjou à l’occasion de son mariage avec Henry VI d’Angleterre, afin qu’elle n’oublie pas le français, ce
           manuscrit a été réalisé entre 1444 et 1445.</p>
-        <p>Des inventaires de bibliothèque rédigés au <num>xv<hi rend="sup">e</hi></num>  siècle à la cour de Bourgogne prouvent que les ducs bourguignons
+        <p n="4" type="chapter">Des inventaires de bibliothèque rédigés au <num>xv<hi rend="sup">e</hi></num>  siècle à la cour de Bourgogne prouvent que les ducs bourguignons
           possédaient du roman au moins deux autres manuscrits, qui n’ont malheureusement pu être identifiés.</p>
-        <p><hi rend="i">Les sources imprimées </hi> — Deux éditions parisiennes traduisent le succès populaire du roman au <num>xvi<hi rend="sup">e</hi></num>
+        <p n="5" type="chapter"><hi rend="i">Les sources imprimées </hi> — Deux éditions parisiennes traduisent le succès populaire du roman au <num>xvi<hi rend="sup">e</hi></num>
            siècle. Il est imprimé une première fois en 1525 par François Regnault, puis à nouveau, en 1550, par Jean Bonfons. Cette version imprimée,
           commune aux deux éditions, présente de nombreuses modifications par rapport aux manuscrits du <num>xv<hi rend="sup">e</hi></num>  siècle : ainsi
           disparaît la fin de l’histoire qui correspond aux aventures du fils de Guy. Il est très probable que ces aménagements soient le fait du
           libraire Jean Regnault, désireux de remettre le récit au goût du jour, sans qu’il faille soupçonner l’existence de témoins manuscrits
           antérieurs.</p>
-        <p><hi rend="i">La tradition manuscrite </hi> — Contrairement à l’opinion de Conlon, qui estimait que <hi rend="i">P</hi> et <hi rend="i">L</hi>étaient basés sur des originaux différents, il est probable que <hi rend="i">P</hi> et <hi rend="i">L</hi> dérivent d’une même
+        <p n="6" type="chapter"><hi rend="i">La tradition manuscrite </hi> — Contrairement à l’opinion de Conlon, qui estimait que <hi rend="i">P</hi> et <hi rend="i">L</hi>étaient basés sur des originaux différents, il est probable que <hi rend="i">P</hi> et <hi rend="i">L</hi> dérivent d’une même
           origine, comme donne  à le penser l’existence par endroits des mêmes fautes ; <hi rend="i">L</hi> est toutefois beaucoup plus développé que 
             <hi rend="i">P</hi>. En revanche, le texte imprimé au <num>xvi<hi rend="sup">e</hi></num>  siècle a davantage de parenté avec <hi rend="i">P</hi> qu’avec <hi rend="i">L</hi>.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="4"><head>Annexes</head>
         <p>Index. ­ Glossaire.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

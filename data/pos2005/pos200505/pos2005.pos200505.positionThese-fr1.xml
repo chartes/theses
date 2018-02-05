@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Jean-Jacques Huvé (1742-1808), architecte</title>
-        <title type="sub">Retour à Palladio</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Jean-Jacques Huvé (1742-1808), architecte</title><title xml:lang="fr" type="sub">Retour à Palladio</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chaufour, Sébastien">Sébastien Chaufour</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200505.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’architecte Jean-Jacques Huvé est peu connu du public car il n’a pas construit de grand édifice qui aurait fait passer son nom à la
           postérité. Huvé est pourtant l’un des architectes les plus intéressants de la fin du <num>xviii</num>
 <hi rend="sup">e</hi> siècle. Outre une carrière exemplaire qui l’a conduit de l’Académie de France à la cour, et même jusqu’à la mairie de
@@ -60,7 +63,7 @@
 <hi rend="sup">e</hi> siècle.</p>
         <p/>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La biographie de Jean-Jacques Huvé s’appuie pour l’essentiel sur trois fonds d’archives conservés par les descendants de l’architecte, par
           la Bibliothèque d’art et d’archéologie et la bibliothèque municipale de Versailles. La collection familiale se compose de plusieurs
           manuscrits : un traité d’éducation rédigé par Huvé à l’intention de ses enfants, <hi rend="i">L’Union des Sciences, des Arts et de la
@@ -75,9 +78,8 @@
         <p/>
         <p/>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les années de jeunesse et d’apprentissage (1742-1773)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les années de jeunesse et d’apprentissage (1742-1773)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La jeunesse et la formation théorique</head>
           <p>L’entrée de Jean-Jacques Huvé dans la carrière d’architecte est étroitement liée à la protection de la famille Savalette, des fermiers
             généraux qui emploient le père d’Huvé comme régisseur de leur domaine de Magnanville, près de Mantes. Les Savalette permettent à Huvé de
@@ -96,7 +98,7 @@
               plus beaux monuments de la Grèce</hi>(1758) a régénéré l’architecture en introduisant parmi les élèves de l’Académie le goût de
             l’antique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’apprentissage pratique</head>
           <p>La formation des architectes est longue et laborieuse en cette fin du <num>xviii</num>
 <hi rend="sup">e</hi> siècle. L’école de l’Académie réunit un vivier d’élèves particulièrement brillants. Tous concurrents, ils ne
@@ -110,7 +112,7 @@
             Franque (1709-1794) pour aménager la place du Peyrou, à Montpellier. Enfin, entre 1765 et 1766, Huvé est le principal collaborateur de
             Blondel sur les projets d’urbanisme de Metz et de Strasbourg.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Jean-Jacques Huvé, élève de Jacques-Denis Antoine</head>
           <p>Huvé travaille auprès de Jacques-Denis Antoine entre 1767 et 1773. Là encore, il est le principal collaborateur de l’architecte. Le
             projet est de premier ordre puisqu’il s’agit de construire le nouvel hôtel des Monnaies. Huvé participe à la réalisation des plans de
@@ -122,8 +124,8 @@
             rivaliser avec l’architecture des Anciens. Afin de suivre le chantier de la Monnaie, Huvé a repoussé son départ pour l’Académie de France.
             Ses fonctions ayant pris fin en 1773, il peut partir pour Rome.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le voyage en France et en Italie (1773-1776)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le voyage en France et en Italie (1773-1776)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le <hi rend="i">Voyage en Italie et dans les Deux-Siciles</hi> : <lb/>récit de formation, formation d’un récit</head>
           <p>Huvé a laissé de son voyage en France et en Italie un récit qui constitue une œuvre originale qui n’a jamais été publiée. Le texte se
             présente sous la forme d’un manuscrit autographe de l’auteur. Cinquante aquarelles sont insérées dans le volume. Elles sont composées dans
@@ -136,7 +138,7 @@
             Dominique-Vivant Denon (1747-1825) que comme un récit d’aventures où l’auteur se met en scène. L’architecte privilégie les aspects
             spectaculaires de son voyage comme les fêtes populaires et les célébrations religieuses et passe sous silence les détails quotidiens.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Voyage professionnel, voyage pédagogique</head>
           <p>Derrière la reconstruction du voyage d’Italie qu’offre le récit, le séjour d’Huvé peut être étudié grâce à sa correspondance. Elle ne
             propose plus le point de vue d’un touriste, mais plutôt celui d’un élève de l’Académie qui part pour l’Italie afin d’achever sa formation.
@@ -151,7 +153,7 @@
 <hi rend="sup">e</hi> siècle. S’inspirant du Panthéon et de la basilique Saint-Pierre, le plan centré et la coupole reviennent comme des
             leitmotiv dans ses réalisations.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’Italie de Jean-Jacques Huvé</head>
           <p>Huvé porte sur l’Italie le regard d’un Français des Lumières. S’il se défend de tomber dans les lieux communs de la plupart des voyageurs
             et s’il est vrai qu’il témoigne d’une véritable sympathie envers les Italiens, c’est sur un ton condescendant qu’il juge le système
@@ -165,8 +167,8 @@
             notamment dans ses villas, la dignité et la simplicité de l’antique qu’il recherche tant. Il les trouve également dans les temples grecs
             de la Sicile. Chez lui, la volonté de remonter toujours plus loin aux sources de son art est une obsession.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Entre carrière officielle et création artistique (1776-1789)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Entre carrière officielle et création artistique (1776-1789)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le retour en France et les premières commandes</head>
           <p>À son retour en France, Huvé est privilégié par rapport à la plupart de ses camarades. Des commandes importantes l’attendent. Il
             bénéficie de la protection des seigneurs de Magnanville, les Savalette puis les Boullongne. Le cercle de relations de ces deux familles de
@@ -179,7 +181,7 @@
             stéréotomiste acquis auprès d’Antoine. Huvé construit également deux autres hôtels entre 1776 et 1780, l’hôtel de Martainville et l’hôtel
             de Bosquillon. Commandés par des financiers, ils sont situés dans le nouveau quartier de la Chaussée d’Antin.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Jean-Jacques Huvé, inspecteur des Bâtiments du roi</head>
           <p>Aux succès que rencontre Huvé à son retour en France, s’ajoute une place d’inspecteur des Bâtiments du roi au château de Versailles. La
             protection du cardinal de Bernis (1715‑1794) lui a permis d’obtenir cette faveur. L’architecte est attaché aux abords du château : le
@@ -194,7 +196,7 @@
             chevaux et des centaines de voitures –, ne débouche sur aucune réalisation, toujours faute de moyens. La frustration des architectes des
             Bâtiments trouve une sorte d’exutoire dans les commandes privées.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La création artistique</head>
           <p>Dans ses réalisations, Huvé s’affirme comme un disciple de Palladio. Le palladianisme d’Huvé ne se manifeste pas tant dans l’emploi du
             vocabulaire de l’architecte vénitien – le portique de colonnes, les baies thermales ou les serliennes –, à l’instar du palladianisme
@@ -212,8 +214,8 @@
             Boullongne. Il a conçu plusieurs projets dans la région d’Anvers qu’il est difficile de documenter. Enfin, il est très possible qu’il soit
             à l’origine du château de Laeken, l’actuelle résidence des souverains belges.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La carrière politique et les dernières années (1789-1808)</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">La carrière politique et les dernières années (1789-1808)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De l’inspection des Bâtiments à la mairie de Versailles</head>
           <p>La Révolution met un terme à sa carrière d’architecte. Le départ de la cour pour Paris rend caduc son emploi d’inspecteur de Versailles.
             Sa clientèle privée émigre ou périt exécutée. Plutôt que de chercher à entrer dans les administrations créées par le nouveau régime, Huvé
@@ -225,7 +227,7 @@
             pour l’éducation du peuple. Huvé perd ses places en 1801. Se trouvant dans l’oisiveté, il cherche d’abord à entrer dans les
             administrations du Consulat, puis se résigne à la retraite.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les dernières activités de l’architecte</head>
           <p>Durant la Révolution, il n’a jamais complètement abandonné ses activités d’architecte. Il ne construit plus mais il expose au Salon ses
             vues d’Italie et il participe aux concours lancés par la Convention, puis par le Consulat. Détenu à la prison des Carmes, il conçoit un
@@ -240,9 +242,7 @@
             l’instar de Jacques‑Denis Antoine ou de Claude-Nicolas Ledoux, il commence ainsi une entreprise destinée à promouvoir son œuvre, celle
             d’un personnage qui n’a jamais douté d’être un artiste.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Huvé est certainement l’un des meilleurs représentants du palladianisme français de la fin du <num>xviii</num>
 <hi rend="sup">e</hi> siècle. À travers la caution de Palladio, il a cherché à retrouver les principes de l’architecture antique, seul moyen
           selon lui de régénérer les arts. Cette régénération s’exprime par l’austérité du style, des volumes et du décor. Une austérité qui doit
@@ -251,12 +251,11 @@
           traduire ses conceptions dans la pierre.</p>
         <p/>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Édition critique du <hi rend="i">Voyage en Italie et dans les Deux-Siciles</hi>, des notes de voyage et de la correspondance. – Contrat de
           construction et de bail de l’hôtel de La Rochefoucauld-La Suze. – Lettres et rapports de Jean-Jacques Huvé au comte d’Angiviller. – Adresse
           au Comité d’instruction public. – <hi rend="i">Prospectus d’un temple à l’Égalité</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

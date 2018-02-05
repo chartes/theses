@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le chartrier de la cathédrale de Coutances (XI&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XIV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècle)</title>
-        <title type="sub">Étude et édition</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le chartrier de la cathédrale de Coutances (XI<hi rend="sup">e</hi>-XIV<hi rend="sup">e</hi> siècle)</title><title xml:lang="fr" type="sub">Étude et édition</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Fontanel, Julie">Julie Fontanel</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200019.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire de la cathédrale de Coutances et de son clergé au Moyen Age n’a guère été explorée depuis les travaux érudits du XIX <hi rend="sup">e</hi> siècle. Cette situation s’explique moins par le désintérêt des chercheurs que par l’absence de sources facilement
           exploitables après la destruction d’une grande partie du chartrier lors du bombardement des archives départementales de la Manche, à
           Saint-Lô, le 6 juin 1944.</p>
@@ -61,7 +64,7 @@
           patrimoine du chapitre. Cette étude, portant non seulement sur la ville cathédrale, mais aussi sur tout le diocèse de Coutances, s’étend du
           <num>xi<hi rend="sup">e</hi></num> siècle, date du retour des chanoines à Coutances sous le règne du duc Guillaume, jusqu’à la fin du XIV <hi rend="sup">e</hi> siècle, durant les années troublées de la guerre de Cent Ans.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Seuls trois actes originaux sont encore conservés aux archives diocésaines de Coutances et aux archives départementales du Calvados. Les
           actes manquants ont pu être reconstitués grâce aux copies du <num>xix<hi rend="sup">e</hi></num> siècle du cartulaire B. Ces copies se trouvent aux
           archives diocésaines, sous les cotes M 27, M 28 et M 40, ainsi que dans le fonds Mancel du musée des Beaux-Arts de Caen (ms 300) et à la
@@ -70,9 +73,8 @@
           cathédrale, les pouillés épiscopaux, ont fait l’objet d’éditions, en particulier par Auguste Longnon (1903). Enfin, ces sources ont été
           complétées par l’inventaire de 1781 des archives diocésaines, par plusieurs copies prises sur des pièces du chartrier avant le XX <hi rend="sup">e</hi> siècle, par des manuscrits d’érudits et par les autres cartulaires du diocèse de Coutances, édités ou non.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le chartrier de la cathédrale</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le chartrier de la cathédrale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’histoire et la composition du chartrier</head>
           <p>Les archives capitulaires et les archives diocésaines étaient deux fonds distincts, les archives capitulaires étant conservées au Moyen
             Age dans une salle de la cathédrale attenante à la salle capitulaire. Une grande partie de la documentation fut perdue dès la fin du Moyen
@@ -91,7 +93,7 @@
             définitivement en 1944. Les archives capitulaires furent ensuite réunies au fonds épiscopal en 1863. Elles ne comportaient déjà plus les
             cartulaire A et C, disparus à la Révolution, ni le <hi rend="i">Livre noir du chapitre</hi>, perdu dans les années 1820.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le cartulaire B</head>
           <p>Le cartulaire était recouvert de vélin blanc orné de rouge, ces décorations ayant disparu au <num>xix<hi rend="sup">e</hi></num> siècle. Les
             premières lettres de chaque acte avaient été laissées en blanc par le copiste, en attendant l’ajout d’une lettrine qui ne fut pas toujours
@@ -103,7 +105,7 @@
             étant un privilège concédé à la cathédrale par Guillaume le Bâtard. Après cette première période de rédaction, achevée par un acte de
             1377, un second copiste a ajouté à la fin du registre onze actes allant de 1497 à 1514.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Caractéristiques diplomatiques des actes</head>
           <p>La langue vernaculaire apparaît pour la première fois dans un acte de 1279 (n. st.) et domine dans la première moitié du XIV <hi rend="sup">e</hi> siècle. La majorité des actes ont été rédigés par des laïcs, le plus souvent l’origine sociale assez modeste, ou
             passés auprès des officiaux, surtout dans la seconde moitié du <num>xiii<hi rend="sup">e</hi></num> siècle, et des vicomtes à partir du début du XIV
@@ -111,8 +113,8 @@
             on trouve des formes diplomatiques typiquement normandes, comme l’attestation des actes <hi rend="i">coram parrochia.</hi>
         </p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">L’histoire du chapitre</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’histoire du chapitre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’évolution institutionnelle du chapitre</head>
           <p>Après les invasions vikings et l’installation du chapitre dans le prieuré Saint-Lô de Rouen, les chanoines retournèrent à Coutances vers
             1056 à l’instigation du duc Guillaume le Bâtard et s’installèrent dans une cathédrale tout juste consacrée. Ils étaient quatorze à cette
@@ -128,7 +130,7 @@
             1356. Après la destruction partielle de cette enceinte, Charles V ordonna la construction d’une nouvelle fortification en 1366, entourant
             cette fois toute la ville.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le personnel cartulaire</head>
           <p>Les chanoines étaient à la collation de l’évêque. Leur recrutement était très local et teinté de népotisme, bien que l’influence
             pontificale commençât à se faire sentir au <num>xiii<hi rend="sup">e</hi></num> siècle, avec l’arrivée dans le chapitre de plusieurs Italiens, dont
@@ -151,8 +153,8 @@
             évêques se partageaient le jugement des affaires selon des règles arrêtées en 1274. Le chapitre ne pouvait pas jeter l’interdit sur la
             cathédrale, bien qu’il le tentât à plusieurs reprises au <num>xiii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le patrimoine du chapitre</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le patrimoine du chapitre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le patrimoine du chapitre avant 1204</head>
           <p>Un acte de confirmation générale, délivré par le duc Guillaume le Bâtard en 1056, et deux privilèges pontificaux délivrés par Eugène III
             en 1146 décrivent le patrimoine épiscopal et capitulaire. En effet, l’acte de Guillaume énumère les biens constitutifs d’abord de la mense
@@ -163,7 +165,7 @@
             Sainte-Marie-du-Mont. Il entra alors en concurrence avec la chapelle de Cherbourg pour la possession de l’église d’Aurigny et avec
             l’abbaye Notre-Dame-du-Vœu pour les patronages de Gatteville et Barfleur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le patrimoine du chapitre aux <num>xiii<hi rend="sup">e</hi></num> et <num>xiv<hi rend="sup">e</hi></num> siècles</head>
           <p>Le chapitre continua aux <num>xiii<hi rend="sup">e</hi></num> et <num>xiv<hi rend="sup">e</hi></num> siècles à étendre ses possessions au nord du diocèse. Il
             acheta de nombreuses rentes mais aussi des dîmes, ces rachats étant autorisés par une bulle du pape Jean XXI. Il reçut également des dons,
@@ -178,7 +180,7 @@
             engrangeaient, par exemple dans la grange de Jean de Pirou à Orglandes. Enfin, le chapitre percevait les procurations et les déports en
             l’absence de l’évêque et jouissait de nombreux privilèges, comme celui de l’exemption des droits de foire.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La situation à la fin du Moyen Age</head>
           <p>Les cartulaires du chapitre donnent une vision juste des dîmes possédées par le chapitre, comme le démontre une comparaison avec les
             pouillés. Le chapitre prélevait des dîmes sur tout le territoire du diocèse, excepté dans certains doyennés où la concurrence avec
@@ -191,22 +193,19 @@
             biens en propre au titre de leurs prébendes. Si ces revenus étaient nettement inférieurs à ceux des chapitres de Bayeux et Lisieux, on
             peut noter une moins grande inégalité entre les différentes prébendes.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Malgré sa modestie, le chapitre de Coutances jouissait de prérogatives importantes et d’une certaine indépendance vis-à-vis de l’évêque, en
           particulier dans la gestion de ses biens et de ses archives, ou dans la correction et le jugement de ses membres. Son influence s’étendait
           bien au-delà de la cité de Coutances grâce à des possessions dispersées dans tout le diocèse. Ses patronages, en particulier, lui
           permettaient de jouer un rôle dans l’encadrement religieux des fidèles. Le cartulaire du chapitre nous permet donc de connaître l’histoire
           de la cathédrale, mais il pourrait aussi servir à d’autres études, par exemple sur la vie rurale du diocèse.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="7"><head>Édition</head>
         <p>Les actes ont été édités dans l’ordre du cartulaire. Tous les actes n’ont pas été édités : quatre vingt-sept d’entre eux ont seulement fait
           l’objet d’une analyse détaillée accompagnée d’un tableau de la tradition. Le choix des actes édités s’est fait selon leur intérêt du point
           de vue historique et diplomatique. Le texte a été établi à partir du ms M 40 des archives diocésaines et corrigé grâce aux autres
           copies.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

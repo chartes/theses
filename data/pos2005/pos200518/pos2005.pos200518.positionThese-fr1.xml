@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La légation du cardinal Francesco Barberini en France en 1625</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La légation du cardinal Francesco Barberini en France en 1625</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Pieyre, Clément">Clément Pieyre</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200518.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Entre le temps des grandes paix catholiques de la fin du <num>xvi<hi rend="sup">e</hi></num> siècle et du début du <num>xvii<hi rend="sup">e</hi></num> siècle
           conclues par l’entremise de Rome et les traités de Westphalie, il est aujourd’hui établi que la diplomatie romaine, sans parler de déclin,
           dut néanmoins s’adapter aux nouvelles conditions politiques et religieuses pour ne pas sortir totalement de la « grande diplomatie ». Au
@@ -62,7 +65,7 @@
           légation en France en 1625 du cardinal Francesco Barberini, qui se solda par un échec retentissant, semble l’un de ces moments privilégiés
           où les contradictions du pouvoir romain éclatent au grand jour.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>
           <num>é</num>parpillées entre Paris et Rome, les sources de l’histoire de la légation Barberini ne souffrent que de rares lacunes. Jusqu’ici
           peu étudiée, la riche correspondance du légat Francesco Barberini avec le surintendant de l’État ecclésiastique Antonio Barberini <hi rend="i">senior</hi> est intégralement conservée à la biblioteca apostolica Vaticana (Barberiniani latini 7964-7968). Elle a été exploitée
@@ -77,9 +80,8 @@
           Ministère des affaires étrangères, les archives municipales de Lyon, les Archives nationales et surtout la Bibliothèque nationale de France
           (mss. français, nouvelles acquisitions françaises, Cinq-Cents de Colbert, Mélanges Colbert, italiens).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Partie liminaire">La question de la Valteline</head>
-        <p>La Valteline, cette haute vallée de l’Adda qui relie l’Italie à l’Empire, peuplée de catholiques mais sujette à la domination des Grisons
+          <div n="3" type="part"><head n="0" type="chapter">La question de la Valteline</head>
+        <p n="1" type="chapter">La Valteline, cette haute vallée de l’Adda qui relie l’Italie à l’Empire, peuplée de catholiques mais sujette à la domination des Grisons
           protestants et alliés de la France, concentre sur elle, à partir de 1620, l’attention de l’Europe entière. L’enjeu, il est vrai, est de
           taille : privés de leurs voies traditionnelles par le traité de Lyon en 1601, les Espagnols furent contraints de trouver une autre route
           pour acheminer leurs troupes du duché de Milan vers l’Empire, nécessité d’autant plus impérieuse à partir de 1618. À la faveur d’un
@@ -88,15 +90,15 @@
           Louis XIII en 1624. La Valteline est ainsi le théâtre d’un conflit larvé, symbolique et militaire opposant les Couronnes catholiques et
           mettant en jeu deux politiques. L’Espagne veut maintenir sous son autorité l’espace légué par Philippe II. La France, quant à elle, ne peut
           la laisser instaurer une monarchie universelle, mais ne veut toutefois entrer dans une confrontation directe.</p>
-        <p>Dans cette « guerre fourrée » avant l’heure, le pape ne pouvait pas adopter une attitude d’indifférence : la défense de l’Italie, la
+        <p n="2" type="chapter">Dans cette « guerre fourrée » avant l’heure, le pape ne pouvait pas adopter une attitude d’indifférence : la défense de l’Italie, la
           sauvegarde du catholicisme et la paix entre ses fils Très Chrétien et Catholique, quoique depuis longtemps émancipés, sont en effet en jeu.
           Face à ce triple défi, le souverain pontife s’employa, en vain, à différentes reprises à promouvoir un accord entre les puissances en
           présence. La légation en France en 1625 du cardinal Francesco Barberini est l’une de ces tentatives, la plus démonstrative, qui inaugure le
           pontificat d’Urbain VIII (1623-1644). Reprenant le modèle des ambassades extraordinaires héritées du Moyen Âge, la légation du cardinal
           Francesco Barberini est la dernière solution à la disposition du pape pour perpétuer l’illusion d’une Chrétienté dont il se veut le père
           commun.</p>
-      </div><div n="2" type="part"><head n="Première partie">La légation du cardinal Francesco Barberini en France en 1625 : hommes, finances, symboles</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La légation du cardinal Francesco Barberini en France en 1625 : hommes, finances, symboles</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Moyens humains de la légation</head>
           <p>Le choix de Francesco Barberini (1597-1679), neveu d’Urbain VIII, comme légat <hi rend="i">a latere</hi> aux deux Couronnes, avait une
             valeur symbolique forte. Cardinal-neveu et surintendant de l’État ecclésiastique depuis 1623, il tenait la seconde place après le pape
@@ -109,7 +111,7 @@
             cardinal avec sa maison et celui d’un <hi rend="i">padrone</hi> avec sa <hi rend="i">famiglia</hi>. Ainsi, le personnel de la légation
             offrait une image représentative de la Curie et de la République des Lettres.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Finances et vie matérielle de la légation</head>
           <p>Des moyens considérables financèrent cette légation. Le pape consentit à prélever extraordinairement 12 000 doublons d’or sur les fonds
             secrets du château Saint-Ange et décida que l’ensemble des frais occasionnés par la légation serait à la charge de la Chambre apostolique.
@@ -122,7 +124,7 @@
             documents fournis, la Chambre fit preuve d’une grande bienveillance. La légation Barberini fut pourtant un véritable gouffre financier
             pour le Saint-Siège.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La réception du cardinal Francesco Barberini dans le royaume de France</head>
           <p>Le voyage du légat en France fut ponctué par de nombreuses fêtes officielles et cérémonies liturgiques. Il est vrai que sa venue était
             particulièrement attendue. En effet, les occasions de recevoir un légat, <hi rend="i">alter ego</hi> du pape, étaient rares et le faste
@@ -137,8 +139,8 @@
             solennelles et visites installèrent le représentant d’Urbain VIII au centre de la vie de cour pendant plusieurs mois. Les conditions
             matérielles de sa mission étaient donc des plus satisfaisantes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">L’échec d’une légation de paix</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’échec d’une légation de paix</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Chronique des négociations</head>
           <p>Les négociations s’annonçaient particulièrement difficiles, car la conjoncture politique était préoccupante. La rumeur de tractations de
             paix entre le gouvernement et les protestants révoltés du Midi courait en effet à la cour. De plus, l’alliance franco-anglaise conclue
@@ -176,7 +178,7 @@
 <hi rend="sup">e</hi> siècle. Le Saint-Siège quant à lui trouvait une satisfaction relative. Le 9 février 1627, les forts valtelins
             furent restitués au pape. Le 6 mars, les troupes pontificales et françaises avaient quitté la vallée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’art de la négociation</head>
           <p>La chronique des négociations s’accompagne nécessairement d’une analyse des pratiques diplomatiques des parties en présence afin de
             préciser leur incidence sur l’insuccès de la légation. Le cadre général des négociations méritait ainsi quelques éclaircissements. Les
@@ -196,8 +198,8 @@
             Barberini put rentrer à Rome en ayant maintenu son rang et perpétué la tradition apostolique de médiation, même diminuée. En un temps où
             les apparences avaient parfois plus de poids que la réalité, n’était-ce pas là l’essentiel ?</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">Le cardinal Francesco Barberini, délégué apostolique du Saint-Siège</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Le cardinal Francesco Barberini, délégué apostolique du Saint-Siège</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un pouvoir et son exercice : les facultés du légat Francesco Barberini</head>
           <p>Comme sa titulature l’indique, le légat <hi rend="i">a latere</hi> est détaché de l’entourage du pape, littéralement « de son flanc ».
             Le fonctionnement de la légation en tant qu’annexe décentralisée de la Curie, recevant des suppliques et expédiant des bulles, méritait
@@ -217,7 +219,7 @@
             diminution très sensible. La collation des bénéfices et les dispenses matrimoniales en sont les illustrations marquantes. La légation
             Barberini est ainsi un révélateur intéressant du rétablissement moral et religieux à l’aube du « Siècle des Saints ».</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Juridiction pontificale et autorité épiscopale</head>
           <p>Décrétée année jubilaire par Urbain VIII, l’année 1625 est aussi celle de la réunion de la grande assemblée décennale du clergé de
             France. Francesco Barberini arrive ainsi à un moment essentiel dans les affaires religieuses françaises. Délégué apostolique, il
@@ -229,9 +231,7 @@
             leur autorité, avec ou sans l’approbation pontificale. Mais si la juridiction romaine fut quelque peu ébranlée, elle n’en sortit pas moins
             finalement vainqueur grâce à l’habileté du légat et du nonce Bernardino Spada.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Préoccupation centrale du Saint-Siège, la question de la Valteline révèle les aspirations et les limites de la politique du pape dans le
           concert des puissances catholiques. Médiateur recherché par les deux Couronnes, le souverain pontife s’est largement investi pour obtenir
           une paix catholique conclue sous son autorité. La légation du cardinal Francesco Barberini en France en 1625 est l’illustration de la
@@ -249,12 +249,11 @@
           légations à titre honorifique ne disparurent pas pour autant, désormais ce furent les nonces qui devinrent les agents par excellence de la
           diplomatie pontificale. Au lendemain des traités de Westphalie, le temps des légations de paix était révolu.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Édition intégrale du mémoire d’instructions et de la correspondance du cardinal Francesco Barberini, légat en France, avec le cardinal
           Antonio Barberini <hi rend="i">senior</hi>, surintendant de l’État ecclésiastique (28 mars-27 novembre 1625) selon les normes de la
           collection des <hi rend="i">Acta nuntiaturae gallicae</hi> de l’<num>é</num>cole française de Rome. 104 dépêches et 95 pièces jointes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

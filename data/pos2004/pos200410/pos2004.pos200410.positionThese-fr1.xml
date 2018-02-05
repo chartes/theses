@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le grand quartier général des forces terrestres françaises (28 août 1939-1er juillet 1940)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le grand quartier général des forces terrestres françaises (28 août 1939-1er juillet 1940)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Garcon, Ségolène">Ségolène Garcon</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200410.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Bien souvent, l’administration militaire évoque un univers très hiérarchisé, complexe, où la paperasserie règne en maître, en un mot, un
           univers assez peu exaltant. En réalité, l’étude d’une structure comme celle du grand quartier général (GQG) permet de se retrouver au cœur
           des mécanismes de prise de décision et des enjeux de pouvoirs, tout en s’éloignant du cadre de l’histoire-bataille, du simple récit des
@@ -66,7 +69,7 @@
           raisons de la défaite française de 1940, pour comprendre pourquoi et comment une armée, considérée pourtant comme une des meilleures du
           monde, s’est effondrée en moins de quarante jours.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude s’est principalement fondée sur les archives militaires conservées au Service historique de l’armée de terre (SHAT), à Vincennes,
           et en premier lieu sur celles du grand quartier général, produites entre la fin du mois d’août 1939, date de la mise en place de cette
           structure, et le 1<hi rend="sup">er</hi> juillet 1940, jour de sa dissolution. Ces archives forment la sous-série 27 N. On y trouve des
@@ -86,9 +89,8 @@
           dans lesquelles transparaissent les rivalités et les tensions entre les différentes personnalités et institutions ; enfin, les dossiers
           personnels des responsables du grand quartier général.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le grand quartier général : une structure aux bases fragiles</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le grand quartier général : une structure aux bases fragiles</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Dilution des responsabilités entre autorités civiles et militaires</head>
           <p>Tirant les leçons de la Première Guerre mondiale, les hommes politiques de l’entre-deux-guerres ont souhaité définir, dès le temps de
             paix, les attributions respectives du gouvernement et du haut commandement en temps de guerre. Derrière cette préoccupation se cache la
@@ -107,7 +109,7 @@
             temps, ni l’impartialité nécessaires pour vraiment remplir ce rôle. Le problème est similaire au sein du haut commandement. Les pouvoirs
             de coordination du général Gamelin sont en réalité très faibles et les risques de chevauchement de compétences sont importants.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Deux chefs, un GQG</head>
           <p>La bicéphalie du haut commandement, instaurée en 1920, est restée une constante dans l’organisation des forces terrestres. Elle vaut
             aussi bien pour le temps de paix que pour le temps de guerre. Les points de vue sur la forme à donner au grand quartier général ainsi que
@@ -126,7 +128,7 @@
             du refus des responsables politiques de choisir entre la maison Joffre, dont le général Gamelin est le représentant, et la maison Foch, à
             laquelle le général Georges se rattache par l’intermédiaire du général Weygand.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Limites de l’action du GQG</head>
           <p>Si, au terme de l’entre-deux-guerres, le choix s’est finalement porté sur l’instauration d’un grand quartier général unique, disposant de
             larges attributions et d’un personnel nombreux, l’importance ainsi donnée à cette structure n’enlève rien à la dilution des
@@ -142,9 +144,9 @@
             des organismes nécessaires au traitement d’une même affaire ralentit la prise de décisions ainsi que leur exécution et ne facilite pas la
             prise de responsabilités. Ces contraintes pèsent sur l’action du grand quartier général.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le grand quartier général : un cadre peu propice à une prise de décisions rapide et adaptée aux nouvelles formes de
+      </div><div n="4" type="part"><head n="0" type="chapter">Le grand quartier général : un cadre peu propice à une prise de décisions rapide et adaptée aux nouvelles formes de
           la guerre</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Organisation et fonctionnement du GQG</head>
           <p>Le grand quartier général est l’ensemble formé par l’état-major, les inspections et les directions de services mis à la disposition du
             commandant en chef pour l’exercice de son commandement. Chacun de ces trois éléments a une fonction bien déterminée : l’état-major est
@@ -166,7 +168,7 @@
             a finalement opté pour une troisième option : reprendre cet organe de commandement ­ ou plus exactement éloigner Georges du grand quartier
             général ­ en laissant la responsabilité de la conduite des opérations à Georges.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le personnel du GQG</head>
           <p>
             <hi rend="i">Des effectifs considérables</hi>. ¯ Un organisme ne peut vraiment fonctionner que s’il règne une bonne entente entre ses
@@ -193,7 +195,7 @@
             l’état d’esprit des responsables militaires de l’époque et de mettre en avant les rivalités, les tensions ainsi que l’existence de clans
             au sein de ce milieu. Ces différents éléments permettent de mieux comprendre les dysfonctionnements du grand quartier général.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le cadre de travail</head>
           <p>En dehors des questions d’organisation et du facteur humain, plusieurs autres éléments participent à la bonne marche d’une institution en
             créant des conditions et un climat favorables au travail. Il s’agit du cadre géographique, des moyens matériels mis à la disposition du
@@ -223,8 +225,8 @@
             périodes de tensions alternant avec celles de calme, celles d’espoir et de confiance avec celles de doute, d’abattement ou de frustration.
          </p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le grand quartier général face à la guerre</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le grand quartier général face à la guerre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le GQG et la Drôle de guerre</head>
           <p>La confrontation avec la réalité s’est avérée difficile pour le grand quartier général. Les réactions du haut commandement français face
             aux premières opérations ne sont pas toujours très convaincantes. Les défauts de l’organisation apparaissent vite : manque de souplesse,
@@ -242,7 +244,7 @@
             côtés de l’Allemagne. Les différentes tentatives pour affaiblir l’économie allemande et détourner Hitler de son offensive à l’ouest ont
             échoué.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le GQG face aux opérations de mai-juin 1940</head>
           <p>L’annonce de l’offensive allemande est accueillie avec un certain soulagement par les chefs militaires français. Avec le déclenchement
             des opérations, ils retrouvent une forme de guerre plus classique. Et qui plus est, les Allemands attaquent là où on les attendait. C’est
@@ -262,9 +264,7 @@
             temps de paix, à compter de la mi-juin, symbolisent bien l’échec français. Quarante-cinq jours après le déclenchement de l’offensive
             allemande entrent en vigueur les armistices signées par la France avec l’Allemagne et l’Italie, accourue à la curée.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>
           <hi rend="i">Un type d’organisation administrative originale.</hi>¯ La grande spécificité du GQG de 1939 réside dans sa mise à la
           disposition de deux chefs : le commandant en chef des forces terrestres françaises, d’une part, et le commandant du théâtre d’opérations du
@@ -308,7 +308,7 @@
           tardive pour provoquer un redressement de la situation et empêcher une défaite dont les conséquences ont largement dépassé le cadre de
           l’hexagone.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Textes législatifs et réglementaires sur l’organisation de la défense nationale. ¯ Notes du 28 septembre 1938 sur l’organisation et le
           fonctionnement du grand quartier général et les attributions du chef d’état-major général de la défense nationale, commandant en chef des
           forces terrestres. ¯ Cantonnements du grand quartier général. ¯ Extrait de <hi rend="i">l’Instruction sur l’emploi tactique des grandes
@@ -320,7 +320,6 @@
           française de septembre 1939 à juin 1940. ¯ Instructions personnelles et secrètes du général Gamelin (n° 1 à 12). ¯ Ordres et instructions du
           général Weygand (mai-juin 1940).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

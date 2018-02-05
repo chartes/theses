@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le chartrier du chapitre cathédral de Soissons (1089-1243)</title>
-        <title type="sub">Étude et édition.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le chartrier du chapitre cathédral de Soissons (1089-1243)</title><title xml:lang="fr" type="sub">Étude et édition.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lépolard, Hugues">Hugues Lépolard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200027.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au contraire de nombre de ses pareils de la France d’Ancien Régime, fût-ce même de la seule province ecclésiastique de Reims, le chapitre
           cathédral de Soissons n’a jamais fait l’objet d’une étude particulière, en dépit de son importance tant à l’échelle du diocèse, où son
           patrimoine et son implantation lui assuraient une prééminence indéniable, qu’à celle de la province ecclésiastique. Une telle entreprise
@@ -58,10 +61,9 @@
           part, pour la période la plus ancienne de son histoire, la constitution d’un corpus de chartes, ici menée des origines (1089) à 1243, ultime
           année possible du long épiscopat de Jacques de Bazoches.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Etude</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Etude</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etat des sources</head>
           <p>L’édition et l’étude des actes connus (originaux, copies ou mentions) ayant composé le chartrier du chapitre cathédral de Soissons pour
             la période 1089-1243 ne peuvent prétendre livrer une reconstitution fidèle ni même un état idéal de celui- ni à une quelconque époque. Le
@@ -164,7 +166,7 @@
             que grossièrement classées par établissement d’origine. Elles furent ensuite vraisemblablement acheminées à la bibliothèque Mazarine,
             puis, en 1834, aux actuelles Archives nationales ainsi qu’à la Bibliothèque nationale de France.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Histoire du chapitre cathédral de Soissons</head>
           <p><hi rend="i">Les origines du chapitre cathédral (IX<hi rend="sup">e</hi>  siècle-1089) </hi> — Etablir l’histoire du chapitre cathédral
             est difficile avant la fin du <num>xi<hi rend="sup">e</hi></num>  siècle, date à laquelle commencent généralement les séries documentaires
@@ -249,15 +251,12 @@
             furent impuissants à prévenir de nouveaux conflits, qui, joints à ceux qui suivirent et l’opposèrent au chapitre comme à d’autres
             établissements, participèrent à la ruine puis à la suppression de la commune, remplacée en 1326 par un prévôt royal.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition</head>
-        <p>Edition critique des 410 actes ou mentions connus pour la période 1089-1243.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div n="3" type="part"><head n="0" type="chapter">Édition</head>
+        <p n="1" type="chapter">Edition critique des 410 actes ou mentions connus pour la période 1089-1243.</p>
+      </div><div type="conclusion" n="4"><head>Annexes</head>
         <p>Documents anciens de nature archivistique conservés dans le chartrier du chapitre. ­ Carte du domaine du chapitre. ­ Index.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

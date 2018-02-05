@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La représentation diplomatique française en Russie dans la seconde moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La représentation diplomatique française en Russie dans la seconde moitié du <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lambert, Fanny">Fanny Lambert</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200617.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>En 1748, lors de la guerre de Succession d’Autriche, la Russie envoya un secours de trente mille hommes aux états alliés contre la France.
           Ce soutien provoqua le retour des diplomates français en poste en Russie, MM. d’Usson d’Allion et de Saint-Sauveur ; en réaction,
           l’impératrice rappela son ministre à la cour de Versailles, M. Gross, en décembre de la même année. Après quelques missions secrètes dont
@@ -64,7 +67,7 @@
           dégager, au-delà des traits communs partagés avec les autres ambassades françaises à l’étranger, les particularités de la représentation
           diplomatique française en Russie.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources principales sont constituées par les archives diplomatiques : registres de correspondance, mémoires et documents conservés aux
           archives du Ministère des Affaires étrangères au Quai d’Orsay, ainsi que les archives de la légation conservées au Centre des archives
           diplomatiques de Nantes. Ces dernières n’ont été que peu utilisées par les chercheurs jusqu’à présent. Le dossier de succession du marquis
@@ -76,9 +79,8 @@
         <p>Certains actes notariés ont également permis d’obtenir des renseignements sur le milieu social dont sont issus les diplomates français en
           Russie.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les préparatifs de la mission en Russie</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les préparatifs de la mission en Russie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le choix des diplomates</head>
           <p>
             <hi rend="i">Le caractère des diplomates.</hi>– Exception faite de l’ambassade du marquis de L’Hôpital, qui marque la reprise des
@@ -94,7 +96,7 @@
             majorité d’entre eux issus de la noblesse et ont effectué une carrière dans les armes. Les liens de parenté et le clientélisme tiennent un
             rôle déterminant dans le choix d’une personne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les préparatifs de la mission en Russie</head>
           <p>Le secrétariat d’État des Affaires étrangères prépare les instructions données aux diplomates avec grand soin. De leur côté, les
             diplomates se renseignent sur un pays dont ils ignorent tout : leurs principales sources d’information sont la lecture des archives
@@ -102,7 +104,7 @@
             attention particulière à choisir le personnel qui les accompagnera dans leur mission, notamment le secrétaire, dont la nomination peut
             être décidée par le secrétariat d’État, en concertation avec le diplomate.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le voyage en Russie</head>
           <p>On compte plusieurs relations de voyages de diplomates en Russie, qui permettent de dégager certaines caractéristiques communes. Ce
             voyage très long et coûteux s’effectue le plus souvent par terre, afin d’éviter les risques importants de naufrage lors des trajets en
@@ -110,8 +112,8 @@
             contournement d’un pays, au risque d’allonger encore le parcours. La mauvaise qualité des chemins empruntés rend le périple d’autant plus
             difficile. Sa longueur et son coût sont bien souvent sources de plainte pour les diplomates français et leur suite.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La vie quotidienne de la légation</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La vie quotidienne de la légation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le diplomate et la cour de Russie</head>
           <p>
             <hi rend="i">L’accueil à la cour de Russie</hi>. – Lors de son arrivée, le diplomate est reçu en audience ; cette séance se déroule
@@ -126,7 +128,7 @@
             la France à se faire représenter par un chargé d’affaires, qui ne doit présenter ses lettres de créance qu’aux ministres russes ; le
             problème est toutefois résolu en 1772 par la rédaction en latin des lettres de créance des ministres plénipotentiaires.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La vie à l’intérieur de l’ambassade</head>
           <p>La légation française ne dispose pas d’un bâtiment permanent. Les diplomates doivent louer leur lieu de résidence, à proximité du palais
             impérial où réside la cour et où les appellent les obligations de leur charge. À l’intérieur de ce bâtiment, le mode de vie privilégié par
@@ -134,7 +136,7 @@
             culturelles du diplomate le renvoient à ses habitudes françaises : les livres possédés sur place par le marquis de Bausset sont semblables
             à ceux que l’on peut trouver dans la bibliothèque d’un noble parisien du <num>xviii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le personnel du poste diplomatique</head>
           <p>Le diplomate dispose autour de lui d’un personnel diplomatique, qui l’assiste dans sa tâche politique, ainsi que d’un personnel
             domestique, qui veille au bon fonctionnement au quotidien de la résidence diplomatique.</p>
@@ -148,7 +150,7 @@
           <p>À ce personnel reconnu viennent s’ajouter les espions, que les diplomates n’hésitent pas à utiliser fréquemment afin de recueillir des
             informations.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les finances de la légation</head>
           <p>Les diplomates français en Russie reçoivent des appointements considérables, parmi les plus importants des postes français à l’étranger,
             qui leur assurent un certain train de vie dans la capitale, Saint-Pétersbourg, ville réputée comme l’une des plus chères de l’Europe de la
@@ -157,8 +159,8 @@
             dans ce pays où le rôle de l’ancienne capitale est encore important, et les cérémonies extraordinaires. L’entretien d’un poste
             diplomatique permanent en Russie coûte donc fort cher au gouvernement français.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les diplomates au travail</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les diplomates au travail</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le travail diplomatique</head>
           <p>
             <hi rend="i">Les cadres de travail</hi>. – Le diplomate installe dans sa résidence un cabinet, où il travaille et conserve les archives de
@@ -175,7 +177,7 @@
             d’un contexte politique tendu : c’est le cas de 1789 à 1792, lorsque la Russie rejette la Révolution et isole le chargé d’affaires
             français au sein de la cour de Russie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La correspondance</head>
           <p>La correspondance diplomatique souffre particulièrement de l’éloignement entre les deux cours : les délais d’acheminement sont d’environ
             un mois. Les diplomates ont souvent recours aux courriers extraordinaires, afin de protéger les informations recelées dans les dépêches
@@ -184,7 +186,7 @@
             changé régulièrement car il n’est pas rare que celui-ci soit connu du gouvernement russe, malgré l’attention qu’on apporte à sa
             protection.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Négocier avec la Russie : <lb/>les négociations politiques</head>
           <p>La France et la Russie ne furent unies par un traité diplomatique que durant la guerre de Sept ans, en l’occurrence par le traité de
             Versailles, négociée par le chevalier Douglas durant l’année 1756 ; la question de la déclaration secrétissime, qui visait à contraindre
@@ -194,7 +196,7 @@
             comte de Ségur s’attacha à négocier une nouvelle alliance politique, mais la Révolution française et son retour en France mirent fin à ce
             projet.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Négocier avec la Russie : <lb/>le traité de commerce de 1787</head>
           <p>L’Angleterre est le principal partenaire commercial de la Russie dès le <num>xvi<hi rend="sup">e</hi></num> siècle. Des projets voient le jour en
             France au <num>xvii<hi rend="sup">e</hi></num> siècle, avec notamment la création sous Colbert d’une Compagnie du Nord qui bénéficie de privilèges
@@ -206,9 +208,7 @@
             statut de nation la plus favorisée et des avantages importants, lui permettant de rivaliser dans ce domaine avec l’Angleterre. Toutefois,
             les événements de la Révolution française stoppent les efforts et les succès obtenues en Russie dans le domaine commercial.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le poste diplomatique français en Russie se présente donc, dans le paysage des ambassades et des légations en pays étranger de la seconde
           moitié du <num>xviii<hi rend="sup">e</hi></num> siècle, comme une institution mêlant à la fois attributs communs à toutes les légations et des
           spécificités dues au pays. Si les diplomates français en Russie sont issus du même milieu que leurs collègues en poste dans les autres
@@ -218,10 +218,9 @@
           en bonne voie en 1789. Toutefois, les événements politiques de la Révolution française vinrent interrompre la bonne entente entre les deux
           pays et mettre fin à une représentation diplomatique ayant duré plus d’un quart de siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition de correspondance, de mémoires et d’actes notariés.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’élaboration des lois sous Henri II</title>
-        <title type="sub">Éléments d’une étude du pouvoir royal au milieu du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’élaboration des lois sous Henri II</title><title xml:lang="fr" type="sub">Éléments d’une étude du pouvoir royal au milieu du <num>xvi<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Grange, Cécile">Cécile Grange</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200511.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au milieu du <num>xvi<hi rend="sup">e</hi></num> siècle, le double mouvement d’accroissement de l’importance du pouvoir législatif dans l’action
           royale et d’institutionnalisation des corps politiques entourant le souverain fait du processus d’élaboration des lois royales un élément
           clé de la compréhension du gouvernement. La description des acteurs participant aux décisions, à tous les niveaux, l’examen de l’instance
@@ -58,14 +61,13 @@
           publicité des arrêts royaux et de leur transformation tentent d’extraire du flot des événements la réalité des relations du souverain et de
           ses sujets, et de définir entre ces deux moteurs la valeur historique des lois : compromis, convergence ou rapport de force ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La matière principale de l’étude a été fournie par le Catalogue des actes de Henri II, parmi lesquels ont été retenus 1187 lois qui
           constituent le corpus de travail.</p>
         <p/>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les lois sous Henri II : théorie, définition, description générale</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les lois sous Henri II : théorie, définition, description générale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La théorie des lois</head>
           <p>Le milieu du <num>xvi<hi rend="sup">e</hi></num> siècle a été, du point de vue de la théorie du pouvoir royal et de son rapport avec la loi, une
             période de confirmation de la tendance à l’affermissement qu’avait ouverte le règne de François I<hi rend="sup">er</hi>. Dans l’ensemble
@@ -76,7 +78,7 @@
             l’unanimité parmi les théoriciens. Unanimité parmi les théoriciens, et entre eux et le pouvoir royal aussi. L’adéquation atteint en effet
             alors une qualité inédite et inégalée. Le pouvoir royal dispose d’une latitude doctrinale confortable pour faire des lois.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les lois du règne</head>
           <p>La définition de la loi donnée par François Olivier-Martin : “ Toute mesure émanée du roi, inspirée par le bien du royaume ou l’intérêt
             public, et présentant un certain degré de généralité et de permanence, c’est-à-dire s’appliquant à une série indéterminée de personnes ” a
@@ -89,12 +91,12 @@
             règne de Henri II conduit finalement à entreprendre des réformes d’importance pour le fonctionnement global de la monarchie,
             principalement dans le domaine des finances et de l’“ administration ” du royaume.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le Conseil du roi</head>
-        <p>Le Conseil du roi est l’organe de décision législative le plus visible pour l’historien. Rassemblant, en théorie sous l’égide du roi, les
+      </div><div n="4" type="part"><head n="0" type="chapter">Le Conseil du roi</head>
+        <p n="1" type="chapter">Le Conseil du roi est l’organe de décision législative le plus visible pour l’historien. Rassemblant, en théorie sous l’égide du roi, les
           principaux conseillers de celui-ci, il doit informer les décisions du souverain. Sous Henri II, il connaît un début d’institutionalisation,
           qu’il est indispensable d’examiner en parallèle avec son fonctionnement “ quotidien ” pour cerner son apport dans la réflexion
           législative.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">L’organisation du Conseil</head>
           <p>Deux règlements bien connus jalonnent l’histoire du Conseil du roi en 1547 puis en 1557. Le premier distingue deux sessions du Conseil :
             le matin se tient le Conseil des affaires, réservé à un très petit nombre de conseillers et consacré aux matières de politique étrangère
@@ -109,7 +111,7 @@
             correspond-elle à l’évolution intrinsèque de l’institution? L’étude des demandes d’avis au Grand Conseil apporte un début de réponse à
             cette question, permettant de saisir plus clairement l’activité judiciaire du Conseil privé avant ce règlement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les membres du Conseil</head>
           <p>L’un et l’autre règlements ont pour but premier de signaler explicitement quelles sont les personnes admises à entrer dans les
             différentes sessions du Conseil. Sans aucun doute affaire d’honneur, cette désignation peut également révéler l’habileté du souverain à
@@ -119,7 +121,7 @@
             examen permet également d’apprécier le recours à des personnels compétents, en particulier en matière de finances, qui entrent au Conseil
             non pour des raisons honorifiques, mais bien en tant que techniciens de questions spéciales.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Le Conseil au travail</head>
           <p>Très liée à la composition et à la réglementation du Conseil, la question de son fonctionnement effectif permet de prendre la mesure
             réelle des débuts de son institutionnalisation. En effet après avoir défini les cadres officiels dans lesquels se déroulent les séances,
@@ -134,7 +136,7 @@
             met pas en lumière la définition d’un groupe affecté clairement et uniquement au service du Conseil, ce qui sans doute freine sa
             constitution en organe autonome.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Les actes du Conseil</head>
           <p>Le travail du Conseil se traduit matériellement par la production d’actes, expression des décisions prises durant les séances. Si tous
             les actes n’appartiennent pas au domaine législatif, leur rapide étude d’ensemble permet seule de cerner la part relative consacrée à
@@ -142,8 +144,8 @@
             différentes catégories diplomatiques, lettres patentes, arrêts et lettres closes, montre la grande souplesse du mode de publication des
             décisions, et l’absence pour cette époque encore de structures réellement signifiantes dans leur mise par écrit.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’élaboration intellectuelle des lois</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’élaboration intellectuelle des lois</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les dossiers préparatoires</head>
           <p>Les préliminaires des décisions prises par le roi résident dans l’étude de dossiers constitués dans le royaume et envoyés au Conseil. Le
             Conseil recourt très souvent aux informations que peuvent lui fournir les serviteurs de la monarchie en fonction dans le royaume. Ils sont
@@ -157,7 +159,7 @@
             du mouvement, qui est celui de la vie. Les dossiers demandés par le Conseil, et constitués pour lui, révèlent un mode de réflexion qui
             n’est pas celui de la projection, mais seulement celui de la prospection.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Personnes et influences</head>
           <p>Quelques lois du règne de Henri II sont bien connues pour avoir été prises à l’instigation d’un proche du souverain. Les grandes figures
             qui l’entourent, Montmorency et les Guise entre autres, ont sans doute eu à jouer un rôle important dans la présentation, la préparation
@@ -165,7 +167,7 @@
             contours des intérêts des hauts personnages proches du roi, ne sauraient cependant définir précisément leurs interventions. Il s’en faut
             que l’on puisse discerner des matières attribuées exclusivement à l’un ou l’autre des grands acteurs de la politique royale.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’œuvre législative : des acteurs en collaboration</head>
           <p>En matière législative, la technicité de certaines questions d’une part, le caractère local de bien des demandes d’autre part, font que
             le Conseil a besoin d’être mû d’abord, informé ensuite, par des instances particulières. L’élaboration des lois se fait à l’initiative de
@@ -175,8 +177,8 @@
             l’autre, les échelons successifs des communautés locales, que leur aide soit sollicitée par le Conseil ou qu’elles soient elles-mêmes à
             l’initiative d’une réflexion.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La loi vivante : la « perlaboration »</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">La loi vivante : la « perlaboration »</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le Parlement de Paris, interlocuteur privilégié du roi dans l’élaboration des lois</head>
           <p>Les rapports entre le roi et le Parlement de Paris ont été, au cours du règne de Henri II, largement positifs, si l’on fait abstraction
             des réticences inévitables occasionnées par les mesures bouleversant par trop l’ordre suivi par les membres de la cour parisienne.
@@ -191,7 +193,7 @@
             celui-ci restant au demeurant finalement toujours dans l’obéissance. De ces éléments ressort que la pratique des remontrances dans
             l’élaboration des lois est véritablement perçue comme un devoir d’“ aide et conseil ” et non comme un moyen d’opposition politique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des sanctions pragmatiques</head>
           <p>Les lois, en grande part, plongent leurs racines dans des décisions antérieures, développent de multiples embranchements interprétatifs,
             subissent des coupes et des greffes qui modifient leur portée initiale. Vu de trop près, le corpus législatif échappe, semble-t-il, à tout
@@ -201,9 +203,7 @@
             sur laquelle les entités constitutives du royaume viennent, naturellement et à leur rythme, apporter leur touche de façon à ce que,
             idéalement, l’œuvre terminée corresponde aux exigences et aux attentes de toutes les parties.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>C’est finalement la place de la loi dans la construction de la monarchie absolue que la question de leur élaboration nous amène à aborder.
           Les lois rencontrées au cours de notre travail, quoique issues d’une collaboration vivante et réelle entre le Conseil et de l’une ou l’autre
           des entités constitutives du royaume, préparent en fait sans conteste la terrain de la prise en main par le pouvoir royal de toute décision.
@@ -212,12 +212,11 @@
           processus d’élaboration “ collective ” de la loi élargit le champ d’intervention <hi rend="i">motu proprio</hi> du roi en matière
           législative, et par là, légitime l’affermissement de son pouvoir et la construction de l’État.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Règlements du Conseil privé (1547, 1557, 1558). – Mémoire du chancelier Olivier sur le Conseil (1559-1560). – Catégories de lettres
           patentes (1553-1559). – Liste des lois de l’année 1547. – Mémoire de la Chambre des comptes. – Projet de règlement des finances. – Liste des
           actes modifiant l’édit de Crémieu. – Édit sur les secrets des délibérations judiciaires (6 juin 1553). – Divers documents.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

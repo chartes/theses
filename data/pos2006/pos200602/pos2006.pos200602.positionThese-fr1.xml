@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le renseignement français auprès du Roi Catholique (1630-1635)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le renseignement français auprès du Roi Catholique (1630-1635)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Becdelièvr, De">De Becdelièvr</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200602.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>En janvier 1629, le cardinal de Richelieu, du Conseil d’En haut depuis mai 1624, formulait dans un avis fameux au roi Louis XIII son
           dessein en politique européenne : « il faut avoir en dessein perpétuel d’arrêter le cours des progrès de l’Espagne ». Pour réussir semblable
           objectif encore fallait-il connaître son adversaire, en estimer justement la puissance, les potentiels militaires, pénétrer les intentions
@@ -87,7 +90,7 @@
           Fut-elle partiale ? Confirme-t-elle le discours historiographique d’un déclin de l’empire espagnol ? Relaya-t-elle « l’antipathie
           franco-espagnole », croissante depuis les années 1620 ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude de la nature et des modalités du renseignement français auprès du Roi Catholique fut menée à partir des correspondances des agents
           du Roi Très Chrétien à Madrid de 1630 à 1635, conservées au centre des archives du ministère des Affaires étrangères à Paris et reliées en
           trois volumes : les volumes 16, 17 et 18 de la série <hi rend="i">Correspondance politique</hi>, sous-série <hi rend="i">Espagne</hi>. Il
@@ -111,16 +114,15 @@
           Certains concepts et notions aux acceptions divergentes, telle celle de « foy publique » qui justifia l’arrestation du secrétaire Pény,
           présidèrent à la prise de décision en politique étrangère. Leur étude ouvre un vaste champ d’investigation.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le secret français</head>
-        <p>L’information constitua un enjeu stratégique pour mieux « estimer les desseins secrets » des Espagnols ; il convenait de la détenir, de se
+          <div n="3" type="part"><head n="0" type="chapter">Le secret français</head>
+        <p n="1" type="chapter">L’information constitua un enjeu stratégique pour mieux « estimer les desseins secrets » des Espagnols ; il convenait de la détenir, de se
           porter au-devant d’elle, de se l’approprier ou de la déformer. Pour répondre à cette soif, les deux monarchies avaient développé des
           structures du renseignement leur permettant d’aller chercher l’information fiable et de la faire remonter avec le plus de rapidité et de
           secret de sa source aux dirigeants. Aux dépêches officielles de l’ambassadeur ordinaire, à celles des ambassadeurs extraordinaires et des
           chargés de mission investis de charges publiques, s’ajoutait la somme des avis qui parvenaient aux gouvernements par voies secrètes. Des
           voies secrètes par nature difficiles à cerner et dont il convient de mesurer l’efficacité. L’ambassadeur Barrault fut-il un « honorable
           espion » ? Fut-il doublé par son secrétaire Pény, le gouvernement français privilégiant une diplomatie parallèle ?</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Administration française et administration espagnole du secret en 1630</head>
           <p>L’administration française du renseignement officiel, orchestrée autour du <hi rend="i">duo</hi> ambassadeur ordinaire-secrétaire d’État
             aux affaires étrangères telle qu’elle avait été définie par le règlement du 1<hi rend="sup">er</hi> janvier 1589, réformé par le
@@ -132,7 +134,7 @@
             Claude puis Léon, comte de Chavigny, ses « créatures », et le père Joseph. Une administration centralisée et efficace du renseignement
             s’investit dans la maîtrise des techniques du secret et principalement celle du chiffre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">L’espionnage français vers la péninsule</head>
           <p>L’espionnage français vers la péninsule ibérique fut orchestré par le comte de Barrault qui attirait à lui réseaux et filières. À la
             différence de ses homologues espagnols qui ne participèrent plus aux activités secrètes à Paris à partir de 1632, il parvint à impulser
@@ -156,7 +158,7 @@
             espagnols comme portugais, au bénéfice des sympathies francophiles du pape Urbain VIII dont la diplomatie favorisa la progression du
             secret en cour de Rome auprès des cardinaux Barberini.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Le contre-espionnage français</head>
           <p>Les infiltrations supposaient l’envoi d’agents en territoire étranger et un grand risque pour leur personne, mais il existait un autre
             mode d’investigation, plus sûr : l’observation des activités illicites espagnoles, ce que nous entendons aujourd’hui par
@@ -185,7 +187,7 @@
             Séguier, à Bouthillier et à Richelieu de nombreuses arrestations d’agents espagnols et suspecta une filière orchestrée par des Minimes
             depuis Bruxelles et soutenue par des Récollets depuis le Milanais espagnol.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Quels agents au service du secret français ?</head>
           <p>Une typologie comparée avec les agents de la monarchie espagnole fait ressortir la spécificité des agents du secret français. Il
             convient de souligner la sélectivité des sources qui ne gardèrent trace que des procès d’importance, à savoir ceux qui engageaient des
@@ -211,12 +213,12 @@
             grand mépris pour ce qu’il était sacrilège ; il était celui qui manquait à la foi et mettait en péril « la convivencia », l’ordre de la
             société humaine.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Une acception différente des fondements de la diplomatie</head>
-        <p>Les correspondances des agents français comme espagnols ainsi que les minutes des gouvernements usent souvent des mêmes notions, marqueurs
+      </div><div n="4" type="part"><head n="0" type="chapter">Une acception différente des fondements de la diplomatie</head>
+        <p n="1" type="chapter">Les correspondances des agents français comme espagnols ainsi que les minutes des gouvernements usent souvent des mêmes notions, marqueurs
           du langage politique d’une génération au pouvoir à partir de 1625, dont les acceptions différaient en espagnol et en français, alors même
           qu’elles justifièrent la prise de décision en politique extérieure. Des recherches sur les causes de ces emplois différenciés et leurs
           effets éclairent un aspect de la crispation des relations bilatérales à la veille de la rupture.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">« Sur-traductions »</head>
           <p>De nombreuses traductions augmentées en espagnol de discours ou dépêches d’ambassadeurs ou édits français furent nécessaires pour
             expliciter le sens de certaines notions. Ainsi dans la déclaration du roi Louis XIII « portant defenses à tous ses subjets faisans voyages
@@ -231,7 +233,7 @@
             stylistique du <hi rend="i">De Constancia</hi> de Lipsius dans le langage politique espagnol des années 1628-1635, qu’ils n’observent pas
             dans le discours politique français. L’étude reste ouverte à de nouvelles hypothèses.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Une acception différente de la foi publique</head>
           <p>Un autre constat d’un échec du dialogue paraît dans le procès-verbal du secrétaire Pény où Philippe IV s’emporta contre l’emploi abusif
             et dévié par Pény du concept de « foi publique » dans sa défense, concept qui justifiait au contraire pour le monarque espagnol son
@@ -259,8 +261,8 @@
             conscience une nouvelle pratique diplomatique, à l’œuvre dans les audiences et les passes d’armes entre le comte de Barrault, Guillaume de
             Bautru, le comte d’Orval, Pény et le gouvernement madrilène.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les atteintes aux immunités diplomatiques</head>
-        <p>Les correspondances de Barrault et de Pény soulignent la croissance des agressions portées contre l’appareil diplomatique français à
+      </div><div n="5" type="part"><head n="0" type="chapter">Les atteintes aux immunités diplomatiques</head>
+        <p n="1" type="chapter">Les correspondances de Barrault et de Pény soulignent la croissance des agressions portées contre l’appareil diplomatique français à
           Madrid : contre les immunités personnelles de l’ambassadeur et de ses gens, contre les immunités matérielles de l’ambassade. Des agressions
           qui rompaient avec le respect rigoureux dont avaient fait montre depuis la paix de Vervins de 1598 les dirigeants espagnols à l’égard des
           agents français sur lesquels se cristallisa dès l’été 1630, avec un seuil très sensible en 1633, la politique de représailles madrilène. Ces
@@ -271,7 +273,7 @@
           rétractations gouvernementales détermine autant de seuils qui montrent que, bien loin d’avoir été une inexorable marche à la guerre, la
           trame diplomatique de ces cinq années fut scandée d’atermoiements, de compositions de paix, de brutales agressions et de marches en
           arrière.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Atteintes aux immunités personnelles de l’ambassadeur</head>
           <p>Une politique de respect des immunités diplomatiques des ambassadeurs ordinaires et extraordinaires fut rigoureusement suivie de 1598 à
             1633 ; les procès-verbaux des sept incidents attentant à leurs immunités personnelles démontrent que l’initiative de ces agressions fut le
@@ -295,7 +297,7 @@
             protocole et au cérémonial se multiplièrent à la suite de cette affaire, annonçant la rupture et dès décembre 1634, le comte de Barrault
             reçut son audience de sortie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Atteintes aux immunités matérielles et à l’extraterritorialité</head>
           <p>Les mesures vexatoires du gouvernement madrilène tentèrent d’attenter à la survie matérielle de l’ambassade en empêchant son
             ravitaillement en vivres durant plusieurs mois en 1633. La « langue de bois » du comte-duc d’Olivares se refusa à toute composition, mais
@@ -311,7 +313,7 @@
             conscients des enjeux et prompts à justifier des marches en arrière. Plus qu’une inexorable marche à la guerre, jusqu’au tournant de
             l’année 1633, c’est une politique de prudence qui semble l’avoir emporté chez les dirigeants.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">La « hayne des François »</head>
           <p>Un autre moyen d’attenter à la souveraineté française, sans s’attaquer directement aux immunités diplomatiques, consista en l’agression
             des Français résidents ou de passage dans l’empire espagnol et le comte de Barrault échoua dès l’été 1630 à les protéger. Il ne parvint
@@ -327,9 +329,7 @@
             trouvèrent pas en Barrault un défenseur virulent. Le silence de ses correspondances quant à leur situation inscrit en creux son
             découragement, sinon sa démission à partir de l’année 1631. Il concentra alors ses efforts à la défense des immunités diplomatiques.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’année 1633 marqua un tournant dans le rapport de force bilatéral qui se jouait à Madrid entre le comte de Barrault et le gouvernement
           madrilène : les atteintes manifestes aux immunités diplomatiques personnelles et matérielles, les agressions systématiques des Français
           mirent en échec la politique de prudence observée jusqu’alors par les deux parties, mais qui se fissurait sur des discours et des actes de
@@ -351,11 +351,10 @@
           fonds qui s’ouvre tant à une lecture diplomatique qu’à des mises en perspective avec les multiples courants de pensée qui marquèrent le
           premier <num>xvii<hi rend="sup">e</hi></num> siècle espagnol et français.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition des correspondances du comte de Barrault, ambassadeur ordinaire de Louis XIII auprès de Philippe IV, et de son secrétaire Pény,
           augmentée de pièces espagnoles.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Divine tragédie&lt;/hi&gt;, projet de film d’Abel Gance (1947-1952)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La <hi rend="i">Divine tragédie</hi>, projet de film d’Abel Gance (1947-1952)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Sené, Xavier">Xavier Sené</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200321.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Abel Gance appréciait particulièrement la forme de l’épopée, a toujours aspiré à l’universalité sans exclure toutefois le nationalisme,
           considéré comme la base de l’unité, était très méfiant envers les scientifiques et s’est montré un fervent partisan du pacifisme après les
           horreurs de la première guerre mondiale. On le voit, un sujet tel que la vie du Christ, thème de la <hi rend="i">Divine tragédie</hi>, ne
@@ -65,15 +68,14 @@
           projets périphériques ? N’est-il pas paradoxal d’avoir voulu expérimenter dans ce film tant d’innovations techniques, tout en revendiquant
           une représentation du Christ presque sulpicienne ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Des archives concernant Abel Gance sont disponibles au Centre national de la cinématographie, à la Cinémathèque française, à la
           bibliothèque de la Femis, à la BiFi et au département des arts du spectacle de la Bibliothèque nationale de France (BNF). Les documents qui
           traitent de la <hi rend="i">Divine tragédie</hi> sont plus spécifiquement disponibles dans le fonds Abel Gance du département des arts du
           spectacle sous la cote 4°-COL-36/629 (boîtes 121 à 145).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le cinéma au service de la foi</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le cinéma au service de la foi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Chronologie</head>
           <p>Après plusieurs tentatives avortées pour écrire un scénario sur la vie du Christ auquel il pense depuis les années 1910, c’est seulement
             en 1947 que Gance trouve l’idée de base d’où va naître la <hi rend="i">Divine tragédie</hi>, le truchement pour transposer l’action de
@@ -100,7 +102,7 @@
             des <hi rend="i">Grands initiés</hi>. Il retravaille le scénario du film consacré à Jésus entre 1968 et 1975, mais ce nouveau projet ne
             restera que la velléité d’un vieil homme fatigué.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’opinion des théologiens</head>
           <p>Gance a fait connaître son découpage à des théologiens de toutes les confessions, dès juillet 1947 et jusqu’en 1950. Il se servira de la
             plupart de leurs observations pour établir la deuxième version de son scénario, mais la très grande diversité de leurs remarques ­ seuls
@@ -115,7 +117,7 @@
             car il donne l’impression que le Christ se réincarne physiquement, ce qui risque de créer une équivoque, mais Gance ne modifie en rien son
             scénario sur ce point.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une activité débordante</head>
           <p>Dans sa volonté d’éduquer et d’instruire les masses et de donner à son grand film un caractère universel, Gance envisageait également de
             réaliser ou de superviser plusieurs autres œuvres, documentaires ou fictionnelles : il pensait notamment à des documentaires sur le
@@ -134,8 +136,8 @@
             directions différentes. Gance travaillait dans le désordre ; de ce désordre pouvait naître de grandes idées, mais le cinéaste ne
             perdait-il pas ainsi une grande partie de ses forces et de son énergie ?</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Une foi aveugle dans son cinéma ?</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Une foi aveugle dans son cinéma ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’innovation technique à tout prix</head>
           <p>Pour chacune des trois inventions que Gance a mis au point, pictographe, triptyques et perspective sonore, il utilise la même méthode de
             travail : il mène des essais techniques aussi poussés que possible et cherche à intéresser, souvent en liaison d’ailleurs avec la <hi rend="i">Divine tragédie</hi>, plusieurs groupes ou personnes, notamment américains, à l’acquisition des divers procédés.
@@ -160,7 +162,7 @@
             production renonce à la couleur et annonce que la <hi rend="i">Divine tragédie</hi> sera tournée en noir et blanc, seuls certains films
             annexes, catéchistiques et documentaires, étant réalisés en couleurs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une vieille avant-garde</head>
           <p>La <hi rend="i">Divine tragédie</hi> devait rester une œuvre anonyme : aucun nom de technicien ne devait figurer sur les affiches ou
             dans le générique. Néanmoins, Gance fait appel à certains des plus grands techniciens français et étrangers, nouveau témoignage du
@@ -180,7 +182,7 @@
             maquillage à Georges Klein. Mais Gance n’engagera finalement personne pour ces postes qui ne sont traditionnellement pourvus qu’après le
             début du tournage.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un cinéma de tradition ?</head>
           <p>Les spectateurs de la Passion dans le film étant les acteurs de la Passion moderne qui se déroule pour eux, il est prévu que les rôles
             soient joués par les mêmes artistes. Dans le même temps, Gance revendique une légitimation artistique relevant d’une tradition picturale
@@ -205,8 +207,8 @@
             sont sceptiques : voyant la difficulté de la mise en scène, ils chercheront avant tout, surtout les Américains, une assurance de rentrer
             dans leurs frais. Or, Gance traîne depuis des lustres une réputation de metteur en scène trublion et difficile à contrôler.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une utopie financière</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Une utopie financière</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Cariatides</head>
           <p>Tout se passe en 1947 comme si Gance avait enfin trouvé dans le vicomte Georges de La Grandière la personne qui lui permettrait enfin de
             réaliser des rêves qu’il caresse depuis les années 1920 sans pouvoir les concrétiser. Né à Angers en 1911, joueur de tennis et escrimeur
@@ -232,7 +234,7 @@
             le passé : la société qu’il crée en zone internationale est un décalque pur et simple de celle qu’il voulait créer avec l’appui de la
             Société des nations en 1928 et qui a été un échec cuisant. Dès le départ, la construction financière paraît donc une utopie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La rupture</head>
           <p>Gance cherche à promouvoir son film au nom de l’universalité, ce qui ne va pas sans paradoxes. Or, à partir de la fin de 1949 et du début
             de 1950, ces paradoxes trouvent une traduction bien réelle : le montage financier complexe que La Grandière a eu tant de mal à mettre en
@@ -261,9 +263,7 @@
             à une amende de cent mille francs. Il forme le 8 juillet un pourvoi en cassation contre cet arrêt, mais le pourvoi est rejeté le 14
             octobre.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La responsabilité de l’échec de la <hi rend="i">Divine tragédie</hi> ne peut être imputée entièrement à Gance ou à La Grandière. Gance
           s’est montré en maintes occasions trop gourmand ou trop versatile et, à trop vouloir donner un aspect universel à son propos, il n’a pu
           garder le contrôle de son œuvre. Tout se passe comme si, persuadé d’avoir raison contre tous les autres, il s’isolait de plus en plus dans
@@ -291,13 +291,12 @@
           création, l’essence même du travail de l’artiste. Et c’est peut-être en cela qu’un travail sur la <hi rend="i">Divine tragédie</hi> se
           révèle le plus intéressant.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Le scénario ayant connu six versions différentes, une édition de texte était parfaitement envisageable et même relativement novatrice.
           Toutefois, la durée de projection correspondant à la première version du scénario était de plus de 6 heures, celle correspondant à la
           dernière version était de 2h30, les versions intermédiaires duraient 4h30, 3h45 et 3 heures : une édition scientifique complète semblait
           difficile à mener dans le temps imparti. C’est donc seulement la version la plus courte qui a été éditée.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

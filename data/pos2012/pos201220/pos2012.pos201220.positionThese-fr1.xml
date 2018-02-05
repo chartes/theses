@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">« Considérant le profond malaise qui règne chez les militants… »</title>
-        <title type="sub">Aspects de la critique et de la parole militante au Parti socialiste SFIO sous la IV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; République (1944-1958)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">« Considérant le profond malaise qui règne chez les militants… »</title><title xml:lang="fr" type="sub">Aspects de la critique et de la parole militante au Parti socialiste SFIO sous la IV<hi rend="sup">e</hi> République (1944-1958)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Michel, François">François Michel</author>
       </titleStmt>
       <editionStmt>
@@ -38,25 +40,26 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201220.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction </head>
+          <div type="introduction" n="1"><head>Introduction </head>
     <p>L’idée initiale de cette étude était de se pencher sur le militantisme socialiste sous la IV<hi rend="sup">e</hi> République dans son ensemble. Mais, face à l’ampleur de la question, et après une analyse approfondie du fonds des correspondances du Parti avec ses fédérations, qui constitue la principale source, il a été décidé de restreindre le champ d’étude, ce qui semblait plus raisonnable dans le temps imparti pour ce travail de thèse. Aussi faut-il lire l’optique choisie, à savoir l’étude de la critique et de la parole militante, comme un prétexte pour étudier le militantisme, ou plutôt pour tenter d’approcher un pan de l’opinion militante socialiste de l’époque.  </p>
     <p>Le choix de la « critique » militante comme angle d’attaque est somme toute assez logique, compte tenu des caractéristiques de la période étudiée : la IV<hi rend="sup">e</hi> République représenta à bien des égards, jusqu’à aujourd’hui d’ailleurs, une plaie dans la conscience de la gauche française, car elle fut perçue comme le symbole des occasions manquées, des compromissions et des erreurs d’appréciation du socialisme de gouvernement. Il est donc normal de privilégier les critiques, la remise en cause dans les témoignages militants utilisables.  </p>
     
     
      </div>
-              <div type="sources"><head>Sources </head>
+          <div type="sources" n="2"><head>Sources </head>
     <p>L’état des sources est rapide, dans la mesure où ce travail s’appuie sur des sources assez restreintes, avec un seul fonds d’archives occupant une place quasi exclusive, à savoir le fonds des correspondances du Parti socialiste SFIO avec ses fédérations, tout au long de la période 1944-1958. Pour élargir un peu plus le corpus, a été également utilisé le fonds des Indisciplines parlementaires, portant sur la même période, mais seulement pour enrichir l’analyse : seules les lettres du premier fonds ont été éditées. Ces deux fonds appartiennent au même ensemble, à savoir les archives du Parti socialiste SFIO, de la Libération à la disparition du PS SFIO et à son intégration dans le nouveau Parti socialiste (1944-1969).  </p>
     <p>Plus compliquée fut en revanche la délimitation du corpus. Le choix d’éditer le corpus rendait impossible d’embrasser un spectre trop large. Par ailleurs, une multitude d’aspects de la vie partisane est évoquée dans le fonds des correspondances fédérales : il constitue à ce titre une sorte de tableau de l’organisation interne, dans la mesure où les destinataires et les rédacteurs appartiennent à tous les « échelons » de l’organigramme du Parti, depuis le « militant de base » jusqu’au député. On peut déceler deux grands thèmes présents dans les correspondances active (du secrétariat vers les fédérations) et passive (des fédérations vers le secrétariat) : discipline interne d’un côté, propagande et organisation interne de l’autre ; il faudrait sans doute ajouter une catégorie « divers », où l’on regrouperait l’ensemble des lettres plus exceptionnelles. La difficulté principale fut donc de déterminer quelle catégorie appréhender pour obtenir un échantillon à la fois cohérent, représentatif et de taille raisonnable. Le choix a été fait de s’en tenir à une série de critères pour éliminer d’office un certain nombre de lettres. Ont été exclues : 1°. la correspondance active du secrétariat vers les fédérations, l’étude cherchant plutôt à refléter l’opinion militante qui « remonte » à la surface, et pas le processus inverse ; 2°. les lettres appartenant à la catégorie « propagande et organisation interne », qui contenaient des informations sur le fonctionnement et l’organisation administrative ; 3°. les lettres ne s’intéressant qu’à un problème purement local, par exemple un conflit intra fédéral entre un secrétaire fédéral et des adversaires – il ne s’agit pas ici de faire de l’histoire régionale, mais plutôt d’utiliser des points de vue locaux pour dresser un tableau d’ensemble de la situation nationale à un moment donné – ; 4°. les lettres présentant des difficultés d’identification – non signée, sans indication sur le rédacteur ou sur celui qui transmet sa lettre.  </p>
     <p>À l’inverse, ont été privilégiées les lettres appartenant à la catégorie générale « discipline interne », et plus précisément celles qui reflétaient la critique militante, c’est-à-dire la remise en cause d’une décision, de la ligne politique du Parti, de l’action de ses ministres, et plus largement les lettres se faisant le reflet d’un mécontentement. Au total, ce corpus comprend 458 lettres, réparties inégalement selon les fédérations, et représente environ 5 % de l’ensemble des correspondances. Autant dire qu’en termes purement quantitatifs, il paraît difficile d’affirmer que le corpus puisse résumer ou condenser l’ensemble du fonds. En revanche, si l’on ne s’intéresse qu’à l’expression de l’opinion militante, sans prendre en compte les aspects purement administratifs de fonctionnement du Parti, la masse d’archives concernée se trouve considérablement réduite, et la part du corpus considérablement augmentée.  </p>
@@ -67,12 +70,11 @@
     
     
     </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude </head>
+          <div n="3" type="part"><head n="0" type="chapter">Étude </head>
     
     
     
-      <div>
+      <div n="1" type="chapter">
 <head n="Chapitre premier">« Il oblige ses mandataires à vivre dans la clameur des critiques » Le militant, enjeux et définition. </head>
     <p>La définition même du « militant », qui se trouve difficile à cerner avec certitude au PS SFIO sous la IV<hi rend="sup">e</hi> République, est au cœur de ce chapitre. « Fédération de fédérations », sans centralisation forte, le Parti n’a pas conservé d’informations sérielles sur ses militants, qui sont par conséquent difficiles à identifier.  </p>
     
@@ -84,7 +86,7 @@
     
     
       </div>
-      <div>
+      <div n="2" type="chapter">
 <head n="Chapitre II">« Il est regrettable que le Parti ne sente pas battre le sentiment populaire » Aspects de la critique militante </head>
     <p>Comme l’indique ce titre tiré d’une lettre d’un militant, l’enjeu de ce chapitre est de mettre en valeur les grands thèmes qui traversent les lettres critiques des militants sur la période. Après avoir essayé de saisir la figure du militant dans la première partie, il s’agit ici de se pencher sur les principales caractéristiques de ses revendications.  </p>
     
@@ -100,7 +102,7 @@
     
     
       </div>
-      <div>
+      <div n="3" type="chapter">
 <head n="Chapitre III">« Ceci n’est pas la prose de quelque savant doctrinaire » Aspects de la parole militante. </head>
     
     <p><hi rend="i">Parler socialiste, connaître l’ennemi</hi>. — Ce chapitre résume d’abord les grands traits spécifiques à l’expression socialiste, les grands réflexes rhétoriques et les références historiques et idéologiques. Le langage est vu ici comme un élément de l’identité partisane. Ce point est d’autant plus important que le Parti socialiste fut de tout temps marqué par une utilisation très codifiée du vocabulaire.  </p>
@@ -114,7 +116,7 @@
     
      </div>
       
-   <div>
+   <div n="4" type="chapter">
     <head n="Conclusion"/>
     <p>Cette partie analytique, qu’il convient de lire en parallèle à l’édition elle-même, constitue donc une sorte de grille de lecture de notre corpus. Il apparaît que la base militante fut constamment en porte-à-faux entre ses luttes quotidiennes et la politique menée sur le long terme par le parti. Dès lors, de nombreux constats s’imposent. Il convient tout d’abord de souligner une des caractéristiques principales, à savoir les écarts entre la base et le centre. À une base très marquée par la rhétorique ouvrière et marxiste, affichant une hostilité têtue face à la participation gouvernementale, et mue par un sentiment d’injustice qui persista longtemps après la Libération, s’opposèrent des ministres et des parlementaires plus pragmatiques, dont la volonté d’exercer le pouvoir, par volontarisme plus que par opportunisme, fut à l’origine d’un malentendu que la direction du Parti ne parvint jamais réellement à dissiper. Ce malentendu intervint à un moment extrêmement révélateur de l’histoire du mouvement ouvrier en France, moment délicat où la tension entre les deux composantes historiques du socialisme jaurésien, démocratie et révolution, fut peut-être la plus palpable, tiraillé qu’était le Parti entre son désir d’investissement et le poids de sa tradition d’opposition, en permanence piqué au vif par la présence d’un Parti communiste fort. </p>
     <p>Pour en revenir plus précisément aux différents aspects de la critique observables à travers cette étude, plusieurs « moments » sont à repérer. La principale vague de protestations se situa entre 1945 et 1948, marquée par un rejet de la participation gouvernementale, rejet accompagné d’une série d’appels à l’unité ouvrière et de critiques durables contre l’inefficacité de l’épuration et de la lutte contre le marché noir. À côté de ces trois principaux thèmes de la critique militante, notons la faiblesse des questions liées à la politique extérieure, même si elles ne furent pas totalement absentes – avec notamment une hausse en 1956-1957, au moment du retour des socialistes au pouvoir, au tournant de la guerre d’Algérie. Enfin, de manière moins marquée et plus continue, sans que l’on puisse observer une véritable concentration à un moment précis, une remise en cause de l’attitude générale du parti, dans sa relation avec la base comme dans sa combativité, est également notable sur l’ensemble du corpus.  </p>
@@ -124,21 +126,18 @@
     
     
       </div>
-    </div><div n="2" type="part"><head n="Deuxième partie">Édition de correspondances </head>
+    </div><div n="4" type="part"><head n="0" type="chapter">Édition de correspondances </head>
     
-    <p>Édition critique des correspondances répondant aux critères indiqués en introduction et écrites entre le 1<hi rend="sup">er</hi> octobre 1944 et le 23 décembre 1958. L’étude a porté sur toutes les fédérations de France métropolitaine et de l’Union française, mais le fond est largement lacunaire, notamment pour les fédérations ultramarines, où l’implantation du Parti était moins solide qu’en métropole. Le nombre de lettres par fédération est variable selon les cas. </p>
-    <p>Les lettres sont éditées dans l’ordre chronologique, sans séparation liée à la provenance géographique. La période a été découpée en quatre « moments » : la libération et ses lendemains (1944-1946) ; l’exercice du pouvoir dans le cadre de la Troisième force (1947-1952) ; le passage dans l’opposition (1952-1955) ; et enfin le Front républicain et la Guerre d’Algérie (1956-1958). Chacune de ces parties est introduite par une courte présentation des principaux enjeux et événements du temps.  </p>
+    <p n="1" type="chapter">Édition critique des correspondances répondant aux critères indiqués en introduction et écrites entre le 1<hi rend="sup">er</hi> octobre 1944 et le 23 décembre 1958. L’étude a porté sur toutes les fédérations de France métropolitaine et de l’Union française, mais le fond est largement lacunaire, notamment pour les fédérations ultramarines, où l’implantation du Parti était moins solide qu’en métropole. Le nombre de lettres par fédération est variable selon les cas. </p>
+    <p n="2" type="chapter">Les lettres sont éditées dans l’ordre chronologique, sans séparation liée à la provenance géographique. La période a été découpée en quatre « moments » : la libération et ses lendemains (1944-1946) ; l’exercice du pouvoir dans le cadre de la Troisième force (1947-1952) ; le passage dans l’opposition (1952-1955) ; et enfin le Front républicain et la Guerre d’Algérie (1956-1958). Chacune de ces parties est introduite par une courte présentation des principaux enjeux et événements du temps.  </p>
     
     
-    </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes </head>
+    </div><div type="conclusion" n="5"><head>Annexes </head>
     <p>Tableaux récapitulatifs, figures, cartes et illustrations sur le corpus de correspondances, la provenance géographique des lettres et l’organisation du Parti sous la IV<hi rend="sup">e</hi> République. — Liste des rédacteurs de lettres, par fédération. — Index des noms propres.  </p>
     
   
      </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

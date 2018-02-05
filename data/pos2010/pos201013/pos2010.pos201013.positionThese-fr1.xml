@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La bibliothèque nationale sous l’administration de Jules-Antoine Taschereau (1858-1874)</title>
-        <title type="sub">Vers une réorganisation profonde et durable de l’établissement</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La bibliothèque nationale sous l’administration de Jules-Antoine Taschereau (1858-1874)</title><title xml:lang="fr" type="sub">Vers une réorganisation profonde et durable de l’établissement</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Galvez, Marie">Marie Galvez</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201013.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’année 1858 marque le début d’une nouvelle ère pour la Bibliothèque nationale, alors impériale. Elle correspond en effet au début d’une
           réorganisation profonde préparée par les réflexions théoriques de la commission Mérimée, qui se réunit de janvier à mars, officialisée par
           le décret du 14 juillet qui nomme Jules-Antoine Taschereau administrateur général de la bibliothèque, et poursuivie jusqu’en 1874 par les
@@ -62,7 +65,7 @@
           administration dans l’histoire d’une institution, dans le contexte politique et culturel particulier qu’est celui du Second Empire, ainsi
           que dans la carrière d’une importante personnalité du temps : Jules-Antoine Taschereau.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les documents relatifs à l’administration de la bibliothèque de 1858 à 1874 sont essentiellement conservés aux Archives nationales et à la
           Bibliothèque nationale. Dans la première institution, les versements opérés par le ministère de tutelle, le département de l’Instruction
           publique, se révèlent très intéressants pour comprendre le travail de la commission Mérimée ainsi que les réactions de l’opinion aux
@@ -74,9 +77,8 @@
           passionnants, autant par leur forme, puisqu’il s’agit de dialogues fictifs ou réels entre le conservateur et son supérieur, que par leur
           contenu, riche d’enseignements sur la bibliothéconomie.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La commission Mérimée et ses conséquences (1858-1862)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La commission Mérimée et ses conséquences (1858-1862)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La commission Mérimée, ultime tentative réformatrice dans un contexte propice à la réorganisation</head>
           <p>La commission qui se réunit à partir de janvier 1858 est loin d’être la première tentative d’un gouvernement pour réformer la
             bibliothèque. Elle s’inscrit dans la longue lignée de ces commissions qui, depuis le début du <num>xix<hi rend="sup">e</hi></num> siècle,
@@ -88,7 +90,7 @@
             l’empereur Napoléon III, le ministre d’État, Achille Fould, le ministre de l’Instruction publique et des Cultes, Gustave Rouland, et le
             sénateur familier de la cour impériale, Prosper Mérimée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La commission Mérimée : réfléchir en vue d’agir</head>
           <p>La commission Mérimée se compose de onze membres, choisis dans les assemblées représentatives du pays, dont la plupart n’ont jamais
             exercé d’emplois en bibliothèques. Si les Archives nationales sont représentées par leur nouveau directeur, Léon de Laborde, en revanche,
@@ -101,7 +103,7 @@
             Commission, tout au long de son existence, rappelle qu’elle entend se démarquer de ses prédécesseurs en mettant en application les grandes
             idées théoriques qu’elle énonce.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La commission Mérimée, conséquences et émules</head>
           <p>Le rapport rédigé par Prosper Mérimée à l’issue des débats de la commission tarde à être publié, ce qui provoque l’agacement de son
             auteur. Le document est finalement inséré au <hi rend="i">Moniteur universel</hi> le 20 juillet 1858, soit six jours après le décret
@@ -117,8 +119,8 @@
             nombreuses institutions (les Archives impériales, les musées) sur la nature et l’étendue de leurs missions. Face aux nouvelles
             revendications de ces établissements, la Bibliothèque impériale doit se positionner et défendre ses intérêts.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Conservation et reconstruction : affaires courantes et grands travaux (1862-1868)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Conservation et reconstruction : affaires courantes et grands travaux (1862-1868)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une nouvelle administration</head>
           <p>Une fois la position de l’établissement précisée au sein du réseau des institutions patrimoniales parisiennes, Jules-Antoine Taschereau
             peut davantage asseoir son autorité, d’autant que des mouvements dans le personnel entraînent le départ de certaines personnalités
@@ -138,7 +140,7 @@
             tardive (1867) et par conséquent peu approfondie, sur la mise en place de la salle B ou « salle de lecture publique ouverte à tout
             venant » même le dimanche, censée correspondre à la prise en compte d’un lectorat populaire à la bibliothèque.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les grands travaux de Labrouste</head>
           <p>La décision du gouvernement de confier dès 1854 la rénovation et la reconstruction de la Bibliothèque impériale à Henri Labrouste, grand
             prix de Rome en 1824, correspond une fois encore à la volonté réformatrice maintes fois affirmée par le régime. L’architecte passe alors
@@ -153,7 +155,7 @@
             Notons qu’au cours de cette période, aucun aménagement particulier n’est entrepris pour la salle de lecture publique « ouverte à tout
             venant », étant entendu que celle-ci doit être installée dans l’ancienne salle de lecture unique des Imprimés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III ">Quelle collaboration entre les deux équipes ?</head>
           <p>L’un des faits marquants de la période demeure l’indifférence que semblent éprouver les conservateurs envers les travaux entrepris à la
             bibliothèque. Certes, les fonctionnaires s’émeuvent de la suppression de leurs logements, qu’ils doivent définitivement évacuer en août
@@ -168,9 +170,9 @@
             s’accompagne toutefois de virulentes critiques sur la gestion d’Henri Labrouste qui interdisent une collaboration entre l’architecte et
             l’administrateur, laquelle aurait été avant-gardiste pour l’époque.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Apogée et déclin : une nouvelle organisation malmenée par les événements politiques et la vieillesse de
+      </div><div n="5" type="part"><head n="0" type="chapter">Apogée et déclin : une nouvelle organisation malmenée par les événements politiques et la vieillesse de
           l’administrateur (1868-1874)</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une nouvelle organisation efficace et moderne</head>
           <p>S’il est communément admis que l’année 1867, marquée par l’Exposition universelle de Paris, représente l’apogée culturel et artistique
             d’un régime qui vit déjà les dernières heures de sa brillante existence, c’est 1868 qui fait figure d’année charnière pour la Bibliothèque
@@ -185,7 +187,7 @@
             centralisation impériale qui la place dans la dépendance du ministre de l’Instruction publique, se trouve englobée dans les critiques de
             plus en plus violentes formulées à l’égard des dirigeants dès 1869.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les bouleversements politiques et leurs conséquences</head>
           <p>Cette situation s’aggrave avec la guerre franco-prussienne de 1870 et la Commune de 1871, époque bien sombre au cours de laquelle
             l’établissement fonctionne au ralenti, les conservateurs se préoccupant surtout d’assurer la sécurité des collections. Si le premier
@@ -197,7 +199,7 @@
             l’autorité militaire à l’encontre de certains employés, et des accroissements considérables de collections résultant de la liquidation de
             la Liste civile impériale et de la suppression du musée des Souverains.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">retour au calme mais déclin de Taschereau au profit de Léopold Delisle : la fin d’une époque</head>
           <p>Une fois les troubles politiques passés, les collections définitivement réinstallées dans les magasins, et alors que les lecteurs
             reprennent, comme à l’accoutumée, le chemin de la rue de Richelieu, la situation de l’établissement apparaît considérablement modifiée.
@@ -211,9 +213,7 @@
             cesse de croître. Les choses sont appelées à changer, une nouvelle page n’attend que la retraite de l’administrateur, prononcée assez
             brutalement le 10 septembre 1874, pour s’écrire.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’administration de Jules-Antoine Taschereau correspond donc à une période particulièrement riche de l’histoire de la Bibliothèque
           nationale. Rendue possible par un contexte politique et culturel favorable, tant sur le plan national qu’international, la réorganisation de
           l’établissement ne trouve un début de concrétisation que grâce à l’action de l’administrateur général Taschereau. Personnage controversé et,
@@ -245,14 +245,13 @@
           persévérance il prouve qu’un retour à l’ordre est possible – ce dont commençaient à douter l’opinion publique et certains érudits – et, ce
           faisant, ouvre la voie à son successeur, Léopold Delisle.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Extraits du poème des bibliothécaires Pillon et Manne, <hi rend="i">Plaintes de la Bibliothèque nationale au peuple français</hi> (Paris :
           Techener, 1848). — Avertissements rédigés par Jules-Antoine Taschereau au moment de la première parution de la <hi rend="i">Revue
             rétrospective</hi> (1833) et lors de sa reprise (1848). — Documents officiels, décrets et arrêtés impériaux relatifs à la réorganisation
           de la bibliothèque. — Morceaux choisis des papiers d’Olivier Barbier, conservateur sous-directeur adjoint au département des Imprimés.
           — États du personnel. — Répertoire biographique. — Illustrations. — Index des noms de personnes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

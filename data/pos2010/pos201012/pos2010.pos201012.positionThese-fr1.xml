@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le livre de raison (1729-1745) de Jean-Baptiste de Grille</title>
-        <title type="sub">Vie quotidienne et portrait intime d’un gentilhomme arlésien dans la première moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le livre de raison (1729-1745) de Jean-Baptiste de Grille</title><title xml:lang="fr" type="sub">Vie quotidienne et portrait intime d’un gentilhomme arlésien dans la première moitié du <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Domergue, Marie-Anne">Marie-Anne Domergue</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201012.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le livre de raison de Jean-Baptiste de Grille est un document unique, par définition : c’est un manuscrit inédit, et c’est surtout un
           exemple de la pratique de l’écriture de soi comme elle a pu être pratiquée durant l’époque moderne. En tenant son livre de raison, le chef
           de famille fait ses comptes et rapporte les grands événements de la vie de famille, révélant ainsi les détails de sa vie quotidienne. Ici
@@ -63,13 +66,12 @@
           donne sur tous les aspects de la vie quotidienne, c’est une source précieuse pour l’histoire de la famille, de la noblesse, des mentalités,
           mais aussi, dans une moindre mesure, de l’éducation, de la santé, ou de l’alimentation.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le livre de raison de Jean-Baptiste de Grille est conservé au Centre historique des Archives nationales, sous la cote AB XIX 3300 A. En
           raison de son état, ce document n’est consultable que sur autorisation.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première Partie">Présentation du texte de Jean-Baptiste de Grille</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Présentation du texte de Jean-Baptiste de Grille</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aspect matériel du document : description et définition</head>
           <p>Avant tout chose, il convient de décrire précisément le manuscrit et d’analyser sa composition. Ensuite se pose la question de la
             définition exacte du document : Jean-Baptiste de Grille l’appelle « Livre de ma dépense journalière », mais la présence de longs passages
@@ -80,7 +82,7 @@
           <p>Par ailleurs il faut prendre en compte le fait qu’il s’agit d’un document isolé, séparé de l’ensemble documentaire auquel il a dû
             appartenir. Les informations qu’il contient sont parfois incomplètes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La vie quotidienne d’un aristocrate désargenté</head>
           <p><hi rend="i">Revenus.</hi> — Les revenus de Jean-Baptiste de Grille sont extrêmement limités, il touche une petite pension annuelle de la
             part de son frère et, à partir de 1738, une petite terre agricole en Camargue augmente un peu le montant total de ses revenus annuels. Ces
@@ -98,7 +100,7 @@
             qu’il a une grande famille. Le regard de ses pairs sur sa situation est source d’un fort sentiment d’humiliation. Enfin, un des aspects
             les plus insupportables pour lui est l’influence des contraintes financières sur ses relations sociales et familiales</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Portrait d’un homme ordinaire</head>
           <p>Au-delà des détails matériels de la vie quotidienne, le livre de raison de Jean-Baptiste de Grille est également le témoin d’une époque
             et d’un groupe social. L’auteur peut être considéré comme le représentant de la petite noblesse provençale du <num>xviii<hi rend="sup">e</hi></num> siècle. Après avoir précisé son identité et sa généalogie, il convient de s’intéresser au système de valeurs qu’il
@@ -116,7 +118,7 @@
             ne manifeste que peu d’intérêt pour les affaires du royaume. Il respecte le roi par principe plus que par connaissance de ses décisions.
             Son intérêt pour les campagnes est dû à son passé de mousquetaire, mais surtout à son affection pour ses deux fils militaires.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La famille de Jean-Baptiste de Grille</head>
           <p>Les relations de Jean-Baptiste de Grille sont tout aussi révélatrices des valeurs de la noblesse, ainsi que de l’évolution des
             mentalités. L’auteur étant lui-même âgé, ses parents sont décédés, et il ne les mentionne que très rarement. Il ne s’étend par sur ses
@@ -137,7 +139,7 @@
             doivent se transmettre. Loin d’en tirer de l’amertume, Jean-Baptiste de Grille a de très bonnes relations avec son frère aîné et la
             plupart des membres de la famille de celui-ci. L’affection est réelle et totalement dénuée d’envie.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">L’espace dans le livre de raison de Jean-Baptiste de Grille</head>
           <p>Un autre aspect intéressant du livre de raison est la représentation de l’espace qu’il révèle. La façon dont l’auteur perçoit le monde
             autour de lui est aussi un témoignage de l’état des mentalités au début du <num>xviii<hi rend="sup">e</hi></num> siècle.</p>
@@ -159,20 +161,20 @@
             plus un objet d’émerveillement, ni des luxes accessibles uniquement aux plus riches des privilégiés. Il n’est plus question ici d’intérêt,
             mais d’un savoir banal.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition complète du manuscrit</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Édition complète du manuscrit</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Comptes chronologiques (mars 1729-janvier 1745)</head>
           <p>Cette première partie est aussi la plus importante : elle occupe les huit premiers cahiers du manuscrit. Elle comprend les comptes et les
             réflexions personnelles de Jean-Baptiste de Grille tenus dans l’ordre chronologique, de mars 1729 à janvier 1745.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Dépenses organisées par postes (juin 1731-juin 1748)</head>
           <p>Cette deuxième partie correspond au dernier cahier du manuscrit. Les dépenses y sont organisées par postes, et les entrées sont faites
             par ordre chronologique à l’intérieur de chaque section. Les différents postes de dépenses traités dans cette partie sont principalement
             la liste des servantes et le montant de leurs gages, des listes de dettes, des dépenses domestiques (ustensiles, chandelles, et bois)
             ainsi que quelques « petits extraordinaires » (thé, café, fruits en conserve).</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Pièces annexes contenues dans le volume</head>
           <p>Le livre de raison de Jean-Baptiste de Grille contient quinze documents annexes, présentés à la fin de l’édition. Les pièces les plus
             notables sont un reçu de l’abbesse de Saint-Laurent d’Avignon pour la pension de deux des filles de l’auteur (1719), une copie de lettre
@@ -180,9 +182,7 @@
             1737), une recette de bouillon d’agneau aux écrevisses (s. l., s. d.). Les autres pièces se composent de listes de dettes et de notes
             d’artisans.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Ainsi, Jean-Baptiste de Grille est un homme de son temps : parce que sa vie n’a rien que d’ordinaire, elle est parfaitement exemplaire. Il
           représente cette frange de la noblesse de province vivant au début du <num>xviii<hi rend="sup">e</hi></num> siècle, sans doute plus ancrée
           dans le siècle précédent que dans la représentation actuelle du Siècle des Lumières.</p>
@@ -196,10 +196,9 @@
         <p>Finalement, ce livre de raison tellement ordinaire transforme l’écriture de soi en l’écriture de tout un monde, au sens à la fois
           géographique et social.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Chronologie de la famille de Grille. — Reconstitution généalogique. — Glossaire. — Index.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

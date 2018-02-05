@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Migrations et réseaux florentins à la fin du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle, d’après les &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Testamenti forestieri&lt;/hi&gt;</title>
-        <title type="sub">« Fuor’della Città et Stato di Fiorenza ».</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Migrations et réseaux florentins à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle, d’après les <hi rend="i">Testamenti forestieri</hi></title><title xml:lang="fr" type="sub">« Fuor’della Città et Stato di Fiorenza ».</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Brau, Pierre-Frédéric">Pierre-Frédéric Brau</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200303.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les migrations sont rarement le fait d’individus isolés : le migrant compte, le plus souvent, sur un ensemble de relations qui accompagnent
           sa démarche. Une fois arrivé à destination, il conserve des liens avec sa patrie et peut en entretenir avec des compatriotes émigrés comme
           lui ; il noue aussi de nouvelles relations dans le lieu qui l’accueille, de façon plus ou moins large.</p>
@@ -61,7 +64,7 @@
           bien vivante au <num>xvi<hi rend="sup">e</hi></num>  siècle, de cerner non seulement certaines des caractéristiques de leur migration (durée,
           causes...), mais aussi les systèmes de relation qui la sous-tendent.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les <hi rend="i">Testamenti forestieri</hi> passés au cours du <num>xvi<hi rend="sup">e</hi></num>  siècle par des Florentins émigrés, conservés à
           Florence ( <hi rend="i">Archivio di Stato</hi>, <hi rend="i">Notarile moderno</hi>) sont au centre de l’étude. Le cas des testateurs
           présents à Lyon et à Rome a été approfondi : ont été exploités pour Rome les minutes du Consulat des Florentins (Rome, <hi rend="i">Archivio
@@ -71,10 +74,9 @@
           ainsi que le fonds de la Charité, conservé au Service central des archives des Hospices civils de Lyon (séries B et E). Enfin, on s’est
           appuyé sur les pièces du Cabinet des titres (Bibl. nat. de Fr., Pièces originales et Cabinet d’Hozier).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Une clef d’accès aux réseaux florentins : Les <hi rend="i">Testamenti forestieri</hi>
+          <div n="3" type="part"><head n="0" type="chapter">Une clef d’accès aux réseaux florentins : Les <hi rend="i">Testamenti forestieri</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Genèse des testamenti forestieri</head>
           <p>En 1570 est fondée par Cosme I<hi rend="sup">er</hi> , grand-duc de Toscane, une institution archivistique originale : le <hi rend="i">Pubblico generale archivio dei contratti</hi>. Structure centralisée ayant son siège à Florence, il assure un contrôle administratif et
             disciplinaire sur les notaires actifs dans le <hi rend="i">Stato vecchio</hi>, tout en veillant à la collecte, à la conservation et au
@@ -86,7 +88,7 @@
             est tenue d’en faire parvenir copie à Florence, sous peine de confiscation d’une partie de ce bien : c’est là l’origine des <hi rend="i">Testamenti forestieri</hi>. Le fonds, qui s’accroît régulièrement jusqu’au milieu du <num>xix<hi rend="sup">e</hi></num>  siècle, fait l’objet
             d’un classement et d’une indexation à la fin du <num>xviii<hi rend="sup">e</hi></num>  siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">
             <hi rend="i">Testamenti forestieri</hi> et réseaux florentins</head>
           <p>Les <hi rend="i">Testamenti forestieri</hi> sont produits dans le cadre du droit romain et visent à la répartition des biens du
@@ -104,7 +106,7 @@
             permettent d’approfondir la vision de ses réseaux d’affaire et de la teneur de ses liens avec sa patrie ; l’étude des procurations qu’il
             passe est, de ce point de vue, fort précieuse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les émigrés</head>
           <p>Les <hi rend="i">Testamenti forestieri</hi> ne sauraient rendre compte de l’ensemble du phénomène de migration florentine à la fin du
             <num>xvi<hi rend="sup">e</hi></num>  siècle ; ils en donnent toutefois un précieux reflet. En écartant les testaments passés par des individus
@@ -128,8 +130,8 @@
             certaines villes italiennes telles Ancône, Palerme, Naples ou Venise ; Rome accueille un grand nombre de marchands, de nobles et de
             clercs.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">« In qualsivogli luogo o parte d’Italia » : Réseaux florentins en Italie</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">« In qualsivogli luogo o parte d’Italia » : Réseaux florentins en Italie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Des migrations de proximité</head>
           <p>Une part importante des testaments du corpus est passée à la lisière du <hi rend="i">Stato vecchio</hi>, ou dans des régions
             relativement proches. Les individus qui accomplissent des migrations frontalières, que ce soit vers des villes ou des villages, font
@@ -142,7 +144,7 @@
             largement tournés vers leur patrie, tout en fréquentant la société locale, alors que la population beaucoup plus importante de Bologne
             semble inciter au rapprochement entre immigrés d’une même origine.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des migrations italiennes</head>
           <p>D’autres testateurs vont plus loin en Italie. La variété extrême de leurs situations sociales invite à se concentrer d’une part sur ceux
             qui sont installés le long des routes de Rome, et d’autre part sur ceux dont on peut déterminer l’état.</p>
@@ -158,7 +160,7 @@
             hors des grands pôles commerciaux montrent leurs auteurs vivant le plus souvent dans la proximité de compatriotes et entretenant des
             réseaux d’affaire avec d’autres Florentins expatriés, sur une grande échelle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des colonies marchandes</head>
           <p>Des ports de Venise, Naples, Palerme et Ancône, villes marchandes de premier plan, proviennent des <hi rend="i">testamenti
               forestieri</hi> passés par des individus aux activités majoritairement commerciales ; leurs migrations sont le plus souvent pérennes,
@@ -173,7 +175,7 @@
             ces groupes des communautés fermées sur elles-mêmes : composés de marchands, ils sont naturellement ouverts à la société qui les
             accueille. A Palerme point cependant une certaine tendance au repli.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les florentins de Rome</head>
           <p>La présence florentine à Rome, à la fin du <num>xvi<hi rend="sup">e</hi></num>  siècle, est ancienne et bien établie. Les grands marchands y sont
             nombreux, mais aussi les artisans, ce que viennent confirmer les minutes du Consulat des Florentins, dépouillées entre 1586 et 1591,
@@ -194,8 +196,8 @@
             Sicile, Venise et Lyon ; tout comme leurs confrères actifs ailleurs en Italie, ils sollicitent depuis Rome des compatriotes pour mener à
             bien leurs affaires.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">« Fuor d’Italia di là dai monti e mari » : réseaux florentins hors d’Italie</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">« Fuor d’Italia di là dai monti e mari » : réseaux florentins hors d’Italie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Afrique du nord, Péninsule ibérique, Europe du nord-ouest</head>
           <p>Hors de la péninsule italienne, France mise à part, les testateurs sont peu nombreux. La présence de Florentins en Afrique du Nord n’est
             due qu’à l’expédition menée contre les Barbaresques en 1573 et à l’attraction marchande d’Alexandrie ; le milieu fréquenté par l’individu
@@ -208,7 +210,7 @@
             entretiennent des relations de dimension européenne, notamment avec Lyon. Les autres testateurs des Pays-Bas se trouvent au service des
             Espagnols, mais n’en restent pas moins attachés à leurs origines.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les florentins de Lyon : Une colonie marchande</head>
           <p>Lyon est le seul pôle florentin d’importance situé hors de la péninsule italienne : dix-sept testateurs y sont présents, aux activités
             essentiellement marchandes. Ils s’appuient sur des réseaux familiaux qui préparent leur migration ou les secondent ; des alliances
@@ -223,7 +225,7 @@
             auquel sont donnés de nouveaux statuts en 1501, et autour d’une chapelle nationale fondée au couvent Notre-Dame de Confort ; les
             testateurs professent en effet un catholicisme unanime.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les florentins en France</head>
           <p>La France, hormis Lyon, accueille assez peu de testateurs. Les <hi rend="i">Testamenti forestieri</hi> attestent toutefois de la
             présence, après 1570, d’individus arrivés au cours de la grande vague d’immigration italienne en France des années 1540-1560, ou un peu
@@ -241,9 +243,7 @@
             cercles du pouvoir, à Paris : les testateurs y font venir leurs familles, y acquièrent des immeubles et achètent des seigneuries alentour,
             afin de se fondre dans la noblesse.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’émigration florentine, au travers du prisme des <hi rend="i">Testamenti forestieri</hi>, apparaît dans toute sa variété. A la diversité
           des situations sociales des migrants répond la diversité des réseaux auxquels ils participent. Les migrants modestes les déploient sur place
           et prennent aisément les chemins de l’intégration. L’élite des émigrés, que ce soit dans la péninsule ou au-dehors, va peupler les
@@ -253,12 +253,11 @@
         <p>Où qu’ils se trouvent, et quel que soit leur statut social, les émigrés ne vivent pas en communautés fermées sur elles-mêmes : les réseaux
           qu’ils entretiennent à l’étranger sont largement placés sous le signe de l’ouverture.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>
           <hi rend="i">Statuts de la nation florentine</hi> de Rome (1515). ­ <hi rend="i">Statuts de la nation florentine</hi> de Lyon (1501). ­
           Exemples de <hi rend="i">testamenti forestieri</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

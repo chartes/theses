@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Étude iconographique de l’Arbre de Jessé en France du Nord du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Étude iconographique de l’Arbre de Jessé en France du Nord du <num>xiv<hi rend="sup">e</hi></num> siècle au <num>xvii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lepape, Séverine">Séverine Lepape</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200416.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’Arbre de Jessé est un thème iconographique qui semble bien connu des historiens et des historiens d’art. Cette image est inspirée de la
           prophétie d’Isaïe (Is. XI, 1), disant que le patriarche Jessé donnerait naissance à une tige et à une fleur, prophétie interprétée comme
           l’annonce de la venue du Christ par la Vierge. Le <num>xii<hi rend="sup">e</hi></num> siècle constitue à ce titre une des périodes les plus riches en
@@ -63,7 +66,7 @@
           plusieurs disciplines : l’histoire de l’art, l’histoire religieuse, l’histoire littéraire ; toutes sont requises pour comprendre comment,
           pourquoi et sous quelle forme l’Arbre de Jessé perdure aux siècles tardifs du Moyen Âge et au-delà.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées sont de deux types : sources iconographiques, c’est-à-dire les œuvres d’art comportant le thème de l’Arbre de Jessé,
           et sources textuelles.</p>
         <p>Les sources iconographiques englobent les enluminures, la gravure, les verrières, la sculpture, la peinture murale, la tapisserie, le
@@ -76,9 +79,8 @@
           périodes abordées et le problème de la disparition de l’Arbre de Jessé ont conduit à utiliser les décrets du concile de Trente, les écrits
           des Réformés tels que Luther et Calvin, ainsi que les traités sur les images composés par des théologiens de la Contre-Réforme</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Analyse du corpus établi</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Analyse du corpus établi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Analyse diachronique de l’Arbre de Jessé</head>
           <p>Il convient de montrer dans quelle proportion l’Arbre de Jessé se diffuse du <num>xiv<hi rend="sup">e</hi></num> siècle au XVI <hi rend="sup">e</hi> siècle. On envisage donc un retour en arrière sur le <num>xiii<hi rend="sup">e</hi></num> siècle, afin de comprendre mieux la spécificité
             des siècles postérieurs. Au <num>xiii<hi rend="sup">e</hi></num> siècle, période faste pour l’Arbre de Jessé, succède une période de ralentissement
@@ -98,7 +100,7 @@
             forme “ tréflée ”, sorte de transition inédite vers l’arborescence qu’il connaît au début du <num>xv<hi rend="sup">e</hi></num> siècle et qu’il
             n’abandonne plus. Ces transformations vont de pair avec une évolution iconographique des personnages.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Analyse thématique de l’Arbre de Jessé</head>
           <p>On s’intéresse plus spécifiquement à l’évolution des protagonistes de l’Arbre de Jessé. Schématiquement une rupture apparaît à la mi-XV
 <hi rend="sup">e</hi> siècle : une nouvelle formule intervient et se propage avec plus ou moins de fortune suivant les régions. Jessé
@@ -111,8 +113,8 @@
           <p>Cette nouvelle formule atteste d’un glissement significatif, insistant sur le poids de la Vierge dans la parenté du Christ et sa
             conception.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les grandes problématiques de l’Arbre de Jessé</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les grandes problématiques de l’Arbre de Jessé</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’Arbre de Jessé, une image de généalogie ?</head>
           <p>L’Arbre de Jessé comme illustration de la généalogie du Christ constitue une problématique intéressante car le motif contient une
             certaine ambiguïté dans la conception même de la notion de généalogie. L’Arbre de Jessé n’est pas, par ses origines scripturaires, pensé
@@ -132,7 +134,7 @@
             dans cette idée si on considère les autres représentations de la généalogie du Christ dans l’iconographie médiévale “ française ” : on ne
             trouve aucune autre image qui n’ait pas été à terme évincée par l’Arbre de Jessé.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Arbre de Jessé, une image de l’Immaculée Conception ?</head>
           <p>La nouvelle forme et la résurgence que l’Arbre de Jessé connaît à partir du <num>xv<hi rend="sup">e</hi></num> siècle et jusqu’au XVI <hi rend="sup">e</hi> siècle ont été attribuées par l’historiographie traditionnelle au fait que l’Arbre de Jessé avait été récupéré comme
             une image de l’Immaculée Conception de la Vierge. L’hypothèse mérite d’être vérifiée : il a pu être tentant d’instrumentaliser l’image de
@@ -159,7 +161,7 @@
             tout une image de parenté qui continue à fleurir pendant toute la première moitié du <num>xvi<hi rend="sup">e</hi></num> siècle, alors même que
             l’Immaculée Conception voit son iconographie se fixer.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’Arbre de Jessé, une image de propagande royale ?</head>
           <p>S’inspirant de la sociologie politique et des écrits de Kantorowitz, un courant historiographique a voulu voir dans l’Arbre de Jessé un
             produit politique développé par Suger pour exalter la royauté capétienne, en liaison avec l’abbaye de Saint-Denis ; du reste, ce type de
@@ -180,8 +182,8 @@
             démontrent l’impossibilité en l’espèce de différencier le religieux du politique, tant le pouvoir du roi se revêt de plus en plus d’une
             dimension religieuse évidente.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Figures d’Arbres</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Figures d’Arbres</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’Arbre et la Parenté</head>
           <p>Il s’agit de voir en quoi la figuration arborescente est devenue, à partir du <num>xv<hi rend="sup">e</hi></num> siècle, un moyen d’exprimer la
             parenté. Ainsi, certains arbres généalogiques de la fin du <num>xv<hi rend="sup">e</hi></num> siècle ont adopté le sens ascendant et l’arborescence
@@ -201,7 +203,7 @@
             semble être plus déterminante que la parenté spirituelle, ce qui correspond à la fin du <num>xv<hi rend="sup">e</hi></num> siècle à une remise en
             cause de ce dernier type de parenté imposée par l’Église dans certaines couches de la société.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Arbre et le Songe</head>
           <p>La représentation de l’Arbre de Jessé se fait selon la modalité du rêve alors qu’aucun élément textuel n’invite à un tel cadre. Il faut
             donc en déduire que la prophétie conditionne implicitement la représentation du rêve. Néanmoins, on peut se demander si d’autres raisons
@@ -216,7 +218,7 @@
             la figuration végétale est employée pour dire l’indicible, l’intention de Dieu ou les grands événements fondateurs de l’Histoire sainte.
         </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’Arbre et la Croix</head>
           <p>La figuration arborescente a aussi été utilisée à l’époque médiévale en raison du contenu eucharistique et ecclésiologique que l’analogie
             typologique entre l’arbre de la Connaissance/l’arbre de vie et le bois de la Croix sous-entendait. Aussi trouve-t-on des représentations
@@ -231,14 +233,14 @@
             Credo des Apôtres ou le Pressoir mystique. La figuration arborescente inhabituelle que l’on constate parfois dans ces deux cas ajoute un
             élément de parenté qui conduit à la représentation de l’Église.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La disparition de l’Arbre de Jessé</head>
-        <p>La période postérieure à 1550, exclue de notre analyse statistique, marque un ralentissement progressif, puis un arrêt en 1663, de la
+      </div><div n="6" type="part"><head n="0" type="chapter">La disparition de l’Arbre de Jessé</head>
+        <p n="1" type="chapter">La période postérieure à 1550, exclue de notre analyse statistique, marque un ralentissement progressif, puis un arrêt en 1663, de la
           production de l’Arbre de Jessé : le vitrail et la sculpture restent les deux supports encore un peu dynamiques.</p>
-        <p>Les éléments iconographiques de l’Arbre de Jessé semblent par ailleurs montrer que cette image n’innove plus. La station assise de Jessé
+        <p n="2" type="chapter">Les éléments iconographiques de l’Arbre de Jessé semblent par ailleurs montrer que cette image n’innove plus. La station assise de Jessé
           qui avait constitué un moment de redémarrage devient minoritaire. La Vierge à l’Enfant adopte un type de support l’assimilant de plus en
           plus à la Vierge de l’Immaculée Conception. L’Arbre de Jessé revient donc, par ses caractéristiques iconographiques, à un état
           iconographique datant du début du <num>xv<hi rend="sup">e</hi></num> siècle. On a le sentiment que l’Arbre de Jessé devient une image statique.</p>
-        <p>Quelles furent les raisons de cet essoufflement ? Faut-il invoquer l’influence de la Réforme, la réaction du concile de Trente,
+        <p n="3" type="chapter">Quelles furent les raisons de cet essoufflement ? Faut-il invoquer l’influence de la Réforme, la réaction du concile de Trente,
           traditionnellement tenues comme responsables de la disparition de certaines images au <num>xvi<hi rend="sup">e</hi></num> siècle ? Luther, comme
           Calvin, évoquent la <hi rend="i">virga Jesse</hi> au sujet du rôle de la Vierge : à leur yeux, la Vierge n’est que la pauvre servante du
           Christ et n’est en aucun cas la Reine du Ciel, telle qu’elle apparaît chez les “ Papistes ”. La <hi rend="i">virga Jesse</hi> fait donc
@@ -248,9 +250,7 @@
           n’intéressait déjà plus. Il faut donc expliquer la disparition de l’Arbre de Jessé par un désamour pour cette image, qui allait de pair avec
           l’abandon du système typologique et la manière médiévale de penser, dont l’Arbre de Jessé était un des représentants les plus éclatants.
       </p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>L’analyse de l’Arbre de Jessé pendant cette longue période nous a permis de comprendre comment une image médiévale était capable d’évoluer
           et de se diffuser dans la société. Les trois grandes problématiques invoquées pour comprendre la signification complexe de cette image ne se
           sont pas révélées entièrement satisfaisantes, comme si l’Arbre de Jessé comportait ces notions mais les dépassait largement. Cette image se
@@ -262,14 +262,13 @@
           “ divinisation ” est le moteur de l’évolution de l’Arbre de Jessé, qui, derrière la perspective d’exprimer un système de parenté spécifique,
           cache l’ambition de représenter l’Église.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Quatre tomes renferment les différentes œuvres comportant l’iconographie de l’Arbre de Jessé : les œuvres sont présentées suivant un
           classement géographique ; pour chaque œuvre figurent une notice explicative et une reproduction ; le tome I contient les enluminures, le
           tome II, les vitraux, le tome III, les sculptures, le tome IV, les autres objets mobiliers. Le tome V offre un échantillon des autres
           iconographies évoquées à titre de comparaison. Le tome VI présente la méthode et les éléments de l’analyse statistique qui sous-tend la
           thèse.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

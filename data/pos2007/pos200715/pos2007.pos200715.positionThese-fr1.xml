@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les lettres de dénonciation à l’encontre des conventionnels pendant la Terreur et la Réaction thermidorienne</title>
-        <title type="sub">Représentants face au peuple</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les lettres de dénonciation à l’encontre des conventionnels pendant la Terreur et la Réaction thermidorienne</title><title xml:lang="fr" type="sub">Représentants face au peuple</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Legoff, Jean-Baptiste">Jean-Baptiste Legoff</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200715.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La France révolutionnaire est un pays en proie à des affrontements violents, au bord de la guerre civile, où les oppositions s’exacerbent.
           Ces tensions peuvent se traduire par l’envoi de dénonciations, phénomène connu et récurrent dans l’histoire. L’époque de la Convention
           correspond à un des moments clefs de la Révolution, sûrement celle où les oppositions sont les plus vives au sein de la nation. De
@@ -62,7 +65,7 @@
           nombreux renseignements sur la relation des Français avec les événements, tant nationaux que locaux, sur leur univers mental, sur leurs
           expériences… La dénonciation est un témoin, non pas tant de la réalité, mais de sa perception et de son instrumentalisation.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Toutes les dénonciations étudiées se trouvent aux Archives nationales. La plupart sont classées dans le fonds du Comité de législation,
           sous les cotes D III 343-359 essentiellement, car c’est ce Comité qui a eu en charge, à partir de prairial an III, de rassembler les
           différentes dénonciations pour en faire des rapports. Nous avons cependant trouvé des lettres dans les cartons du Comité de sûreté générale
@@ -71,9 +74,8 @@
           général » fait par les commissaires du Comité de législation recensant toutes les lettres conservées au Comité, mais le corpus étudié donne
           déjà une bonne idée de la production délatrice du temps.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Dénoncer un représentant en l’an III</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Dénoncer un représentant en l’an III</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La « Réaction » et les historiens</head>
           <p>La « Réaction » thermidorienne est « coincée », pour ainsi dire, entre deux périodes fortement chargées de sens : la Terreur et l’épopée
             napoléonienne. Pour de nombreux historiens, ces quelques mois de l’histoire de la Convention ne seraient, au mieux, qu’une pâle transition
@@ -84,7 +86,7 @@
             les lettres de dénonciation sont un des vecteurs privilégiés pour saisir comment les Français ont <hi rend="i">réagi</hi> pendant la
             Terreur et après.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Comment la Convention remet en cause son histoire terroriste</head>
           <p>
             <hi rend="i">Le lourd héritage de Robespierre</hi>. — Si la chute de Robespierre ne signifie pas, dans un premier temps, la fin de la
@@ -120,7 +122,7 @@
             droite et rapproche la Convention de ses anciens ennemis. Le jour même de sa séparation, le 4 brumaire an IV (26 octobre 1795), la
             Convention décrète, afin de conjurer le péril royaliste, l’amnistie pour tous les faits de Révolution.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le temps de l’épuration <lb/>le Comité de législation et les lettres de dénonciation</head>
           <p>Après la Grande Terreur, les députés, qui se sont sentis personnellement menacés par les pouvoirs du Comité de salut public, veulent
             garantir leur sécurité tout en permettant de mettre en accusation les députés suspects de « robespierrisme ». C’est avec la loi du 8
@@ -135,8 +137,8 @@
             fait donc un véritable travail à partir de ces documents, travail qui se voit encore aujourd’hui dans l’organisation du fonds de ce
             Comité.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Comment dénoncer un conventionnel ?</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Comment dénoncer un conventionnel ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les lettres dans le temps</head>
           <p>La plupart des lettres de dénonciation qui sont aujourd’hui dans les cartons des Comités de gouvernement ont été écrites après le 9
             thermidor. L’analyse du rythme des dénonciations tant en l’an II qu’en l’an III montre l’inscription de ces lettres dans les luttes
@@ -150,7 +152,7 @@
             Cependant, le vote de la Constitution de l’an III et les épurations menées depuis germinal aboutissent à un quasi arrêt du mouvement à la
             fin de l’été.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le choix des mots</head>
           <p>Les dénonciateurs emploient souvent un vocabulaire particulier visant à renforcer l’image qu’ils veulent donner dans leurs lettres de
             dénonciation des événements qu’ils ont vécus. On trouve beaucoup de références à la Terreur dans ces lettres mais aussi à l’Antiquité,
@@ -163,7 +165,7 @@
           <p>Les images qu’on utilise le plus dans ces lettres sont aussi celles qu’on retrouve dans la presse de l’époque ou dans les nombreux
             pamphlets qui sont alors publiés, même si certains font preuve d’un peu plus d’originalité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les motifs de dénonciation</head>
           <p>Dans ces écrits, on dénonce surtout le despotisme des représentants, les arrestations et les condamnations à mort qu’ils ont ordonnées
             mais on met aussi en avant des motifs plus proprement politiques et les accusations de royalisme, de robespierrisme… se succèdent. On
@@ -176,8 +178,8 @@
             lettres en l’an III qu’en l’an II, moment où l’exclusion et la violence qui frappent les contre-révolutionnaires atteint son paroxysme,
             elle n’en demeure pas moins implicite par divers procédés qui visent à faire de celui qu’on attaque un être hors l’humanité.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les dénonciateurs</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les dénonciateurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre I">La géographie de la pratique dénonciatrice</head>
           <p>Tous les départements n’ont pas participé de la même façon au mouvement dénonciateur en l’an II comme en l’an III. Les régions qui
             connaissent la plus forte pratique dénonciatrice sont avant tout les régions qui ont participé à l’insurrection fédéraliste et les zones
@@ -193,7 +195,7 @@
             dénonciation, bien souvent, ne sont pas vraiment spontanés et les autorités constituées, les événements nationaux, voire les représentants
             en mission thermidoriens, ont parfois influencé la rédaction de certaines lettres.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les dénonciateurs : portrait de groupe et évolutions</head>
           <p>Il existe différents types de dénonciateurs : il y a ceux qui agissent seuls, anonymement ou non, il y a aussi ceux qui écrivent
             collectivement mais il y a également des administrations, régulières ou révolutionnaires, qui prennent la plume et des conventionnels
@@ -208,7 +210,7 @@
             jusque-là assez silencieuses, prennent la parole pour dénoncer ce qui s’est passé sur leur territoire durant la Terreur à la suite du
             renouvellement de celles-ci après le 9 thermidor.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Dénonciateurs et luttes politiques</head>
           <p>Dans de nombreuses lettres, il est fait allusion à des événements marquants de l’histoire révolutionnaire. On retrouve surtout des
             mentions des journées des 31 mai et 2 juin 1793 mais, après la chute de Robespierre, on fait aussi beaucoup de références au 9 thermidor
@@ -218,8 +220,8 @@
             moments forts de la Révolution trahit souvent leurs attentes et leurs opinions. Un « Réacteur » et un homme resté fidèle aux idéaux de
             l’an II n’ont pas la même perception de ces événements.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Les Conventionnels dénoncés</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Les Conventionnels dénoncés</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Qui attaque-t-on ? Esquisse d’un portrait de groupe des conventionnels qu’on dénonce</head>
           <p>
             <hi rend="i">Selon quels critères attaque-t-on un conventionnel ?</hi>– Le dénonciateur connaît dans la plupart des cas, de manière
@@ -236,7 +238,7 @@
             Montagne qui sont les plus attaqués mais ce schéma d’ensemble est à nuancer. L’appartenance politique n’est pas le principal facteur de
             dénonciation, même si celle-ci peut parfois être déterminante, surtout au moment des purges politiques.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Comment attaque-t-on un conventionnel ?</head>
           <p>
             <hi rend="i">Le sérieux des dénonciations</hi>. — Il s’agit en fait de voir comment les dénonciateurs motivent leurs dénonciations. En
@@ -257,7 +259,7 @@
             ou tout au moins des proches de celles-ci. On peut dès lors se demander si, derrière les proclamations de bonnes intentions que font les
             dénonciateurs, ne se cachent pas des ressentiments et un certain esprit de vengeance.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Conventionnels face aux dénonciations</head>
           <p>
             <hi rend="i">L’acharnement</hi>. — Il s’agit ici de distinguer les conventionnels qui font l’objet d’un nombre important de dénonciations
@@ -277,9 +279,7 @@
             considérations politiques ou personnelles sont entrées en compte pour le choix des députés qui devaient faire l’objet d’une enquête, ni
             Tallien ni Dumont, par exemple, n’ayant été cités lors de ces séances.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Les dénonciations sont un témoin privilégié du rapport des Français avec leur époque car, dans leurs lettres, ils racontent ce qu’ils ont
           enduré avec leurs mots, mais ils insinuent aussi ce qu’ils souhaitent. Le phénomène dénonciateur est pleinement inscrit dans un espace donné
           et dans le temps, il est autant le produit de l’histoire locale que des événements nationaux dont il répercute les effets. La dénonciation
@@ -287,11 +287,10 @@
           la fois dans un contexte politique, géographique, mental, social et culturel. C’est l’intersection de ces différents domaines qui donne à la
           dénonciation un statut si particulier.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Edition de onze dénonciations (avec quelques photographies). — Tableau des représentants du peuple dénoncés entre 1792 et 1795 avec le
           nombre de dénonciations. — Chronologie de la « Réaction thermidorienne ». — Index des noms de lieu et des noms de personne.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -1,4 +1,5 @@
 import os
+import html
 from itertools import chain
 
 import lxml.etree as ET
@@ -94,6 +95,11 @@ class PositionThese:
 
         self.write_to_file(os.path.join(tg_dirname, "__cts__.xml"), template)
 
+    def encapsulate(self, tag, node, ns):
+        return ET.fromstring("<ti:{0} xmlns:ti='{1}' xml:lang='fr'>{2}</ti:{0}>".format(
+                    tag, ns, self.stringify(node))
+            )
+
     def write_work(self, pos_year, dest_path):
         for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
             # get a fresh new etree
@@ -107,9 +113,10 @@ class PositionThese:
             # title
             src_edition = self.src_edition(pos_year, meta["tri"])
             titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
-            for title in template.xpath("//ti:title", namespaces=template.getroot().nsmap):
-                if len(titles) > 0:
-                    title.text = self.stringify(titles[0])
+
+
+            template.getroot().insert(0, self.encapsulate("title", titles[0], "http://chs.harvard.edu/xmlns/cts"))
+
 
             # urn & workUrn
             for edition in template.xpath("//ti:edition", namespaces=template.getroot().nsmap):
@@ -117,11 +124,11 @@ class PositionThese:
                 edition.set("urn", "{0}.{1}".format(work.get("urn"), "positionThese-fr1"))
 
             # work label & description
-            for label in template.xpath("//ti:edition/ti:label", namespaces=template.getroot().nsmap):
-                label.text = self.stringify(titles[0])
-            if len(titles) > 1:
-                for description in template.xpath("//ti:edition/ti:description", namespaces=template.getroot().nsmap):
-                    description.text = self.stringify(titles[1])
+
+            for edition in template.xpath("//ti:edition", namespaces=template.getroot().nsmap):
+                edition.insert(0, self.encapsulate("label", titles[0], "http://chs.harvard.edu/xmlns/cts"))
+                if len(titles) > 1:
+                    edition.insert(1, self.encapsulate("description", titles[1], "http://chs.harvard.edu/xmlns/cts"))
 
             # make workgroup dir
             w_dirname = os.path.join(dest_path, "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]))
@@ -149,14 +156,20 @@ class PositionThese:
                 for tag in template.xpath("//ti:body//ti:div[@type='{0}']".format(keyword), namespaces=self.__nsmap):
                     for c in struct.getchildren():
                         tag.append(copy.deepcopy(c))
+                return tag
 
             titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
             # titles
-            for title in template.xpath("//ti:teiHeader//ti:titleStmt//ti:title", namespaces=self.__nsmap):
-                if title.get("type") == "main" and len(titles) > 0:
-                    title.text = self.stringify(titles[0])
-                elif title.get("type") == "sub" and len(titles) > 1:
-                    title.text = self.stringify(titles[1])
+            for titleStmt in template.xpath("//ti:teiHeader//ti:titleStmt", namespaces=self.__nsmap):
+                if len(titles) > 0:
+                    t = self.encapsulate("title", titles[0], self.__nsmap["ti"])
+                    t.set('type', 'main')
+                    titleStmt.insert(0,t)
+                    #    print(c.text)
+                if  len(titles) > 1:
+                    sub_title = self.encapsulate("title", titles[1], self.__nsmap["ti"])
+                    sub_title.set('type', 'sub')
+                    titleStmt.insert(1,sub_title)
 
             # author : en attendant meta["authorKey"] et meta["authorRef"]
             for auth in template.xpath("//ti:teiHeader//ti:author", namespaces=self.__nsmap):
@@ -175,31 +188,51 @@ class PositionThese:
             for bibl_title in template.xpath("//ti:teiHeader//ti:sourceDesc/ti:bibl/ti:title", namespaces=self.__nsmap):
                 bibl_title.text = bibl_title.text.replace("@PLACE_HOLDER@", meta["promotion"])
 
+
+            part_index = 1
             # front
             front = src_edition.xpath("//ti:front//ti:div", namespaces=self.__nsmap)
             if len(front) > 0:
-                insert_into('introduction', front[0])
+                intro = insert_into('introduction', front[0])
+                intro.set("n", str(part_index))
+                part_index += 1
                 if len(front) > 1:
-                    insert_into('sources', front[1])
+                    sources = insert_into('sources', front[1])
+                    sources.set("n", str(part_index))
+                    part_index += 1
 
             # body
             for body in template.xpath("//ti:body", namespaces=self.__nsmap):
                 body.set("n", "urn:cts:frenchLit:pos{0}.pos{1}.positionThese-fr1".format(meta["promotion"], meta["id"]))
 
             # parts
-            for body in template.xpath("//ti:body/ti:div[@n='2']", namespaces=self.__nsmap):
-                for part_id, part in enumerate(src_edition.xpath("//ti:body/ti:div", namespaces=self.__nsmap)):
-                    new_part = ET.fromstring("<div n='{0}' type='part'></div>".format(part_id+1))
-                    for c in part.getchildren():
-                        new_part.append(copy.deepcopy(c))
-                    body.append(new_part)
+            for body in template.xpath("//ti:body", namespaces=self.__nsmap):
+                parts = src_edition.xpath("//ti:body/ti:div", namespaces=self.__nsmap)
+                for i, part in enumerate(parts):
+                    new_part = ET.fromstring("<div n='{0}' type='part'></div>".format(part_index))
+                    for j, c in enumerate(part.getchildren()):
+                        sec = copy.deepcopy(c)
+                        sec.set("n", str(j))
+                        sec.set("type", "chapter")
+                        new_part.append(sec)
+                    body.insert(i+2, new_part)
+                    part_index += 1
+
+            #for part in template.xpath("//ti:body/ti:div", namespaces=self.__nsmap):
+            #   for i, chapter in enumerate(part.xpath(".//ti:div", namespaces=self.__nsmap)):
+
+            #       chapter.set("n", str(i))
 
             # back
             back = src_edition.xpath("//ti:back//ti:div", namespaces=self.__nsmap)
             if len(back) > 0:
-                insert_into('conclusion', back[0])
+                conclusion = insert_into('conclusion', back[0])
+                conclusion.set("n", str(part_index))
+                part_index += 1
                 if len(back) > 1:
-                    insert_into('appendix', back[1])
+                    appendix = insert_into('appendix', back[1])
+                    appendix.set("n", str(part_index))
+                    part_index += 1
 
             # write the edition file
             self.write_to_file(e_filepath, template)

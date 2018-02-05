@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Au service d’un projet ambitieux</title>
-        <title type="sub">Les comptes de la fabrique de l’abbaye Saint-Oyend-de-Joux à Saint-Claude (1421-1446)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Au service d’un projet ambitieux</title><title xml:lang="fr" type="sub">Les comptes de la fabrique de l’abbaye Saint-Oyend-de-Joux à Saint-Claude (1421-1446)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Joulie-Champion, Anne-Claire">Anne-Claire Joulie-Champion</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200917.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>
           <hi rend="i">L’historiographie sanclaudienne. —</hi> Le nom de Saint-Claude est aujourd’hui peu évocateur et ne renvoie, dans le meilleur
           des cas, que l’image d’une bourgade du Jura où l’on fabrique la plupart des pipes françaises. Néanmoins, Saint-Claude connut son heure de
@@ -78,14 +81,13 @@
           église située à la limite de l’enceinte monastique, dédiée aux saints Oyend et Claude et qui accueille les pèlerins venus en quête de grâce
           et prêts à faire preuve de libéralité.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sont essentiellement constituées par la sous-série 2 H des archives départementales du Jura, consacrée au fonds de l’abbaye de
           Saint-Claude. Ce sont surtout les deux registres comptables, 2 H 122 et 2 H 123 qui ont fait l’objet de toutes les attentions, afin de
           fournir une édition des comptes de la fabrique du chantier.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La gestion du chantier</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La gestion du chantier</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les registres</head>
           <p>
             <hi rend="i">Description. —</hi> Les deux registres de comptes 2 H 122 et 2 H 123 sont deux volumes de papier qui consignent mensuellement
@@ -106,7 +108,7 @@
             ses périphéries méridionales et orientales – le comté puis duché de Savoie – ont permis une pénétration précoce du droit romain dans cette
             contrée, dont attestent les usages bien rodés des notaires chargés de la rédaction des registres.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une fabrique monastique</head>
           <p>
             <hi rend="i">Apparition.</hi>— Tout le monde s’accorde à considérer que si la fabrique appartient au monde séculier, l’œuvre constitue son
@@ -136,7 +138,7 @@
             ornements ou encore la tenue des banquets lors des fêtes solennelles. Il lui arrive enfin exceptionnellement d’engager des frais pour
             soulager les finances – sans doute en difficulté – de l’abbaye.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des poids et des mesures : les outils de gestion de la fabrique</head>
           <p>Située au carrefour de nombreuses routes commerciales, l’abbaye de Saint-Oyend-de-Joux concentre de multiples systèmes de références, que
             ce soit dans le domaine des monnaies, ou dans celui des unités de longueur, de poids ou de volume. De fait, la matière contenue dans les
@@ -144,8 +146,8 @@
             systématique de toutes ces unités a été effectué et des équivalences ont été fournies dans la mesure du possible. Il serait vain de faire
             ici le catalogue de ces trop nombreuses unités de mesure.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le déroulement du chantier</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le déroulement du chantier</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les hommes au travail</head>
           <p>
             <hi rend="i">La direction du chantier.</hi>— Le chantier de l’église abbatiale Saint-Pierre a bénéficié de la présence d’une dynastie
@@ -184,7 +186,7 @@
             maître des cloches qui interviennent dans le cadre de l’église Saint-Oyend-Saint-Claude dans les dernières années documentées par les
             registres. On retrouve enfin les incontournables manœuvres, ainsi qu’un cordier et d’anecdotiques tuiliers et terrassiers.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les matériaux</head>
           <p>
             <hi rend="i">Transport et mise en œuvre des matériaux.</hi>— La provenance des matériaux indique l’important rayonnement de l’abbaye à la
@@ -212,8 +214,8 @@
             protection absolument nécessaire. Il s’agit principalement d’« ancelles » (bardeaux) qui constituent de plus la couverture
             du bâtiment, mais également de tuiles et de bois.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Des comptes au service d’un projet ambitieux</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Des comptes au service d’un projet ambitieux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Nature et chronologie de la construction</head>
           <p>
             <hi rend="i">Jalons chronologiques du chantier médiéval. —</hi> Le registre n’ayant pas pour fonction d’établir un bilan comptable des
@@ -247,7 +249,7 @@
             réforme qui affectent alors le monastère ; le contraste entre ces deux œuvres d’art permet de souligner la complexité des motivations
             coexistant à cette époque et conduit à nuancer toute explication fondée uniquement sur la réforme de l’ordre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’église abbatiale, cœur et reflet de l’éminence du monastère <lb/>à la fin du Moyen Âge</head>
           <p>
             <hi rend="i">Les commanditaires.</hi>— Contrairement aux affirmations de l’historiographie du <num>xix</num>
@@ -268,7 +270,7 @@
             retrouve un nombre certain d’artistes ayant œuvré dans l’orbite du pape Clément VII, alias Robert de Genève –  <hi rend="i">via</hi>
             Genève justement – et présents sur le chantier, ainsi que des artisans issus plus largement du duché de Savoie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’église Saint-Pierre dans la création artistique régionale</head>
           <p>
             <hi rend="i">Quelques pistes d’interprétation.</hi>— L’église abbatiale Saint-Pierre est dotée d’un certain nombre de particularités qui
@@ -298,9 +300,7 @@
             spécifiques ainsi qu’à un contexte spirituel et culturel très précis et daté, et ne peut donc être vu comme un modèle adaptable à d’autres
             situations.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Ainsi, l’église abbatiale Saint-Pierre fut certainement, avec son ensemble de stalles, le chant du cygne d’une très grande abbaye appelée à
           sombrer dans l’oubli. Exhumer les grandes étapes et le fonctionnement de son chantier ne relève donc pas du domaine de l’anecdotique, comme
           l’indiquent d’ailleurs les nombreuses découvertes que cette étude permit de réaliser : celles-ci touchent tant le fonctionnement particulier
@@ -313,7 +313,7 @@
           abbatiale et de relevés précis de la modénature de l’église abbatiale, qui seront l’occasion d’affiner la chronologie et de mettre en
           rapport l’architecture sanclaudienne avec des monuments voisins.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="7"><head>Édition</head>
         <p>
           <hi rend="i">Édition linéaire de l’année 1426. —</hi> Cette première partie permet d’offrir la lecture linéaire et critique de l’année 1426,
           qui donne un bon aperçu lexicographique et diplomatique de l’ensemble des registres.</p>
@@ -322,7 +322,6 @@
           tableaux synthétiques qui n’en retiennent que la substantifique moelle, en en rationnalisant l’organisation et l’orthographe. Le formulaire
           en est ainsi supprimé, au profit du seul nom des artisans, de leur tâche et de leur salaire.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

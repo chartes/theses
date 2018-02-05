@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les procureurs à la cour pontificale d’Avignon au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle : les procureurs des prélats français sous Urbain V et Grégoire XI à la
-        Chambre apostolique</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les procureurs à la cour pontificale d’Avignon au <num>xiv<hi rend="sup">e</hi></num> siècle : les procureurs des prélats français sous Urbain V et Grégoire XI à la
+        Chambre apostolique</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Berthe, Pierre-Marie">Pierre-Marie Berthe</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200403.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le titre de <hi rend="i">procurator</hi> désigne, à la curie pontificale, l’homme qui, exceptionnellement ou régulièrement, agit auprès
           des différents services de l’administration centrale du Saint-Siège, au nom d’un client qui lui en a donné procuration, tant à cause de
           l’éloignement géographique que de la complexité des affaires à traiter. Même si le procureur n’est pas à proprement parler un agent de
@@ -67,7 +70,7 @@
           l’époque de la papauté d’Avignon, puisque l’on dispose pour cette période d’une très belle série de registres qui signale indirectement
           leurs interventions. L’état général des sources invite alors à privilégier les pontificats d’Urbain V et de Grégoire XI.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Deux sources permettent d’étudier la fonction de procureur : d’une part, les textes normatifs émanés du Saint-Siège, édités depuis plus
           d’un siècle, qui font connaître les devoirs attachés à la charge de procureur et les dérèglements de la profession ; d’autre part, les
           mandats de procuration, tels qu’en renferme en assez grand nombre le fonds quelque peu disparate des <hi rend="i">Instrumenta
@@ -82,9 +85,8 @@
           pontificale, facilement accessibles par les publications papier et informatique de l’École française de Rome, permettent de retrouver
           d’autres traces d’interventions de ces individus comme mandataires à la curie, et de retracer en partie leur biographie.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La fonction de procureur à la cour pontificale d’Avignon au <num>xiv<hi rend="sup">e</hi></num> siècle</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La fonction de procureur à la cour pontificale d’Avignon au <num>xiv<hi rend="sup">e</hi></num> siècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le métier de procureur : histoire d’une fonction</head>
           <p>Alors que la Chancellerie doit faire face à un accroissement d’activité considérable, à la fin du <num>xii<hi rend="sup">e</hi></num> siècle, tout
             requérant qui souhaite obtenir une lettre pontificale se voit contraint de rédiger lui-même sa demande en utilisant les clauses et les
@@ -96,7 +98,7 @@
             toujours plus nombreux et leur champ de compétences s’élargit sans cesse, notamment au domaine de la justice : ainsi un corps stable de
             procureurs à demeure à la curie se met-il progressivement en place, au cours du <num>xiii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les procureurs <hi rend="i">ad impetrandum</hi> et <hi rend="i">ad contradicendum</hi>à la Chancellerie et à
             l’Audience des lettres contredites</head>
           <p>Le procureur <hi rend="i">ad impetrandum</hi> est chargé d’obtenir contre rétribution les bulles pontificales réclamées par son mandant,
@@ -111,13 +113,13 @@
             grâces qui sont sur le point d’être accordées, lorsqu’il se trouve lésé par l’octroi d’une faveur indue à quelque personnage indélicat, et
             peut s’y élever contre d’éventuelles protestations injustifiées à l’encontre de la lettre qu’il est sur le point d’obtenir.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les procureurs <hi rend="i">ad impetrandum</hi>à la Pénitencerie apostolique</head>
           <p>Juridiction spirituelle du Saint-Siège, la Pénitencerie jouit d’une certaine autonomie au sein du gouvernement pontifical et possède sa
             propre chancellerie. Aussi est-il naturel que des procureurs <hi rend="i">ad impetrandum</hi> s’y retrouvent avec un rôle assez proche de
             celui qu’ils tiennent à la Chancellerie apostolique.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les procureurs <hi rend="i">ad agendum</hi>à la Rote et dans les autres cours de justice</head>
           <p>Le procureur <hi rend="i">ad agendum</hi> ou <hi rend="i">ad causas</hi> représente la partie appelée ou appelante au sacré-palais, mais
             aussi dans les tribunaux cardinalices et à l’audience de la Chambre, en suivant la procédure propre à chaque cour. Les missions du
@@ -126,7 +128,7 @@
             qui s’imposent, mais aussi éventuellement choix d’un bon avocat, puisque le procureur n’est pas autorisé à supplanter d’une quelconque
             manière ce dernier.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Les procureurs <hi rend="i">ad promittendum, ad solvendum</hi> et <hi rend="i">ad visitandum</hi>à la Chambre
             apostolique</head>
           <p>Les procureurs <hi rend="i">ad promittendum</hi> prennent l’engagement de payer à la Chambre apostolique les communs et menus services
@@ -138,7 +140,7 @@
             ne correspond plus à l’état réel du bénéfice ou encore à négocier de nouveaux délais pour retarder l’échéance des paiements ou des
             visites.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">Les procureurs en curie <hi rend="i">ad resignandum</hi>
          </head>
           <p>Tout bénéfice majeur ou mineur peut être résigné en toute liberté par son bénéficiaire, sans compensation ou, plus souvent, en vue d’une
@@ -147,10 +149,10 @@
             comme en témoignent de nombreuses lettres de provision de bénéfice qui font brièvement mention de la récente résignation qui a provoqué la
             vacance de la charge de nouveau concédée.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les procureurs des prélats français à la Chambre apostolique sous Urbain V et Grégoire XI, d’après les registres des
+      </div><div n="4" type="part"><head n="0" type="chapter">Les procureurs des prélats français à la Chambre apostolique sous Urbain V et Grégoire XI, d’après les registres des
             <hi rend="i">Obligationes-Solutiones</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Recensement des procureurs à partir des registres des <hi rend="i">Obligationes-Solutiones</hi>
          </head>
           <p>Durant la période avignonnaise des pontificats d’Urbain V et de Grégoire XI (28 septembre 1362-30 avril 1367 puis 27 septembre 1370-13
@@ -165,7 +167,7 @@
             partie des interventions recensées : les 27 % de procureurs (297 individus sur 1109) cités à plus de trois reprises dans les registres ont
             à leur actif 3740 interventions sur les 4751 dénombrées, soit plus de 78 % des affaires considérées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’enregistrement du nom des procureurs dans les registres</head>
           <p>Même si les registres des <hi rend="i">Obligationes-Solutiones</hi> livrent un nombre impressionnant de noms de procureurs, il est
             prouvé qu’ils négligent souvent de garder trace du nom des intermédiaires mentionnés dans les actes qu’ils consignent, ce qui exige une
@@ -175,7 +177,7 @@
             principe clair ne préside au choix des titres qui sont attribués. Un tel enregistrement aussi lacunaire et peu rigoureux révèle la bien
             faible importance qui est accordée à la fonction de procureur à la Chambre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le profil des carrières des procureurs à la Chambre</head>
           <p>Les 204 individus apparaissant plus de trois fois dans les registres au terme du premier dépouillement constituent un échantillon
             intéressant pour mieux cerner les diverses carrières de procureurs à la Chambre. Si quasiment la moitié de ces mandataires ne se trouve
@@ -187,7 +189,7 @@
             il apparaît que la durée des carrières peut varier de trois mois pour les plus brèves jusqu’à 29 ans et 10 mois pour les plus longues,
             chaque procureur restant en moyenne sept années à la Chambre.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La polyvalence des procureurs</head>
           <p>Parmi ces 204 individus, 66 sont signalés comme procureurs <hi rend="i">ad resignandum</hi> : chacun d’entre eux abandonne en moyenne
             entre deux et trois bénéfices, en général à des dates qui sont contemporaines de celles de leurs interventions à la Chambre. Les charges
@@ -201,7 +203,7 @@
             différents, à l’exception de quelques grands professionnels comme <hi rend="i">Johannes Louterelli de Ulmonte</hi> qui sont vraiment des
             procureurs polyvalents.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Enquête prosopographique sur les procureurs à la Chambre</head>
           <p>La grande hétérogénéité du groupe étudié invite à confronter la carte d’identité et le <hi rend="i">curriculum vitae</hi> de ces 204
             individus, en s’appuyant sur une étude prosopographique, pour cerner la personnalité des procureurs à la Chambre.</p>
@@ -243,8 +245,8 @@
             manière très pragmatique, à des personnes qui se trouvent dans l’entourage de la Chambre : c’est ainsi que 14 des procureurs à la Chambre
             jouent ce rôle au moins une fois au cours de leur carrière.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Carrières de procureurs à la Chambre apostolique sous Urbain V et Grégoire XI</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Carrières de procureurs à la Chambre apostolique sous Urbain V et Grégoire XI</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les procureurs spéciaux</head>
           <p>L’expression de procureur spécial peut s’appliquer à des hommes envoyés exprès en curie pour représenter un prélat particulier, durant
             plusieurs mois, voire quelques années. Ces personnages, principalement mandatés par des abbés ou des évêques méridionaux, entretiennent
@@ -261,7 +263,7 @@
             les délégués particuliers du maître qui les envoie à Avignon, interviennent épisodiquement pour un ou deux autres prélats, sans jamais
             s’attacher à eux durablement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les procureurs occasionnels</head>
           <p>Le terme de procureur occasionnel peut servir à désigner 66 procureurs dont la présence à Avignon ne s’explique nullement par les
             interventions qu’ils effectuent à la Chambre en tant que mandataires : ces personnages sont mandatés à titre plus ou moins exceptionnel,
@@ -288,7 +290,7 @@
             chez les autres, seul l’enracinement géographique de leur clientèle est vraiment à même de caractériser leur carrière. Aussi ce groupe de
             procureurs occasionnels compte-t-il sans doute un bon nombre de procureurs de métier qui exercent à côté une autre charge.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les procureurs professionnels</head>
           <p>Le titre de procureur professionnel peut être attribué, sans aucun doute, aux mandataires qui sont désignés comme <hi rend="i">procuratores in Romana curia</hi> et, de manière plus hypothétique, aux hommes qui, n’étant assurément ni procureurs spéciaux, ni
             procureurs occasionnels, ont des carrières étonnamment semblables à celles des procureurs de métier mais qui ne se voient jamais qualifiés
@@ -318,9 +320,7 @@
             représenter les différents abbés, ce qu’ils font en effet prioritairement, sans s’attacher jamais à quelque prélat en particulier, ni même
             à une aire géographique déterminée.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les procureurs spéciaux se distinguent par un nombre d’interventions très faible, une clientèle fort réduite, une carrière assez brève, une
           activité limitée aux obligations, paiements et visites à effectuer à la Chambre, une origine plutôt méridionale en lien avec celle de leurs
           clients, un état de clerc ou de religieux, selon qu’ils représentent un évêque ou un abbé, enfin une formation universitaire excessivement
@@ -331,14 +331,13 @@
           nombreux que dans les autres groupes, les seconds par des études universitaires moins rares et une tendance à intervenir ailleurs qu’à la
           Chambre, notamment à la Chancellerie ou dans une cour de justice.</p>
       </div>
-              <div type="appendix"><head>Conclusion générale</head>
+          <div type="appendix" n="7"><head>Conclusion générale</head>
         <p>L’étude de la carrière et de la biographie de 204 mandataires <hi rend="i">ad obligandum</hi>, <hi rend="i">ad solvendum</hi> et <hi rend="i">ad visitandum</hi> révèle la grande hétérogénéité du groupe des procureurs à la Chambre et les contours d’un univers immense
           encore inexploité. En suggérant le genre de rapports qu’entretient un mandant avec son mandataire, en mettant en lumière les liens qui
           peuvent unir certains procureurs entre eux, quand bien même ils viennent d’horizons fort différents, en cernant la délimitation géographique
           de la clientèle des procureurs souvent liée avec leur propre région d’origine, le monde des procureurs à la Chambre, jusqu’alors totalement
           méconnu, se révèle progressivement dans toute sa complexité.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

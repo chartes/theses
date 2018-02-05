@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Asseoir l’autorité monarchique par l’impôt au sortir des guerres de Religion</title>
-        <title type="sub">La fiscalité en Normandie (1585-1610)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Asseoir l’autorité monarchique par l’impôt au sortir des guerres de Religion</title><title xml:lang="fr" type="sub">La fiscalité en Normandie (1585-1610)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Laperdrix, Marie">Marie Laperdrix</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201016.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Cerner l’impôt royal dans sa complexité et dans sa singularité, au tournant du <num>xvii<hi rend="sup">e</hi></num> siècle, permet de
           comprendre la mutation de l’État moderne à la suite des guerres de Religion. Depuis les années 1960, l’impôt royal au <num>xvii<hi rend="sup">e</hi></num> siècle, l’économie française et les révoltes dites « populaires » ont été très bien étudiés. Pourtant, l’impôt
           royal à la fin du <num>xvi<hi rend="sup">e</hi></num> siècle et son évolution sous le règne d’Henri IV sont très mal connus et sont d’autant
@@ -67,7 +70,7 @@
           contentieux fiscal permet également d’évaluer le système de perception et de collecte des impôts, l’intégration de la Normandie au royaume
           de France ainsi que la contestation de cette fiscalité royale à l’aube du Grand Siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le fonds de la cour des aides de Normandie conservé aux archives départementales de Seine-Maritime représente la plus grande partie des
           sources consultées. Plus spécifiquement pour analyser le contentieux fiscal, les registres d’arrêts sur rapport de la Chambre du conseil ont
           tous été dépouillés pour la période entre 1585 et 1610 (3 B 233-250). L’ensemble des procédures a été traité de manière sérielle dans une
@@ -77,9 +80,8 @@
           arrêts du conseil d’État conservés aux Archives nationales (E *) ainsi que les manuscrits et autres papiers écrits aux <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles par les officiers de la cour des aides et conservés à la
           bibliothèque municipale Villon de Rouen (collection Martainville et collection Coquebert de Montbret).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">La Normandie au sortir des guerres de Religion (1585-1610)</head>
-        <p>Qu’est-ce que la Normandie à la fin des années 1580 ? Pays d’états, la Normandie est aussi un pays d’élection, dont la réputation
+          <div n="3" type="part"><head n="0" type="chapter">La Normandie au sortir des guerres de Religion (1585-1610)</head>
+        <p n="1" type="chapter">Qu’est-ce que la Normandie à la fin des années 1580 ? Pays d’états, la Normandie est aussi un pays d’élection, dont la réputation
           de « terre d’impôt » dépasse largement les frontières du royaume de France. Elle est régie, entre autres, par une coutume particulière, qui
           lui permet de conserver une certaine autonomie par rapport à Paris, qui est pourtant proche géographiquement. Épargnée depuis la
           Saint-Barthélemy par les conflits religieux, la province est, à nouveau, au centre des affrontements entre protestants et ligueurs à partir
@@ -88,8 +90,8 @@
           grand. Elles entraînent une refonte de l’organisation fiscale de la province et semblent réduire au silence les états provinciaux et la cour
           des aides de Normandie. La mainmise du Conseil du roi sur les décisions prises par la cour des aides est une nouveauté et entache
           l’autonomie décisionnaire de cette cour souveraine.</p>
-      </div><div n="2" type="part"><head n="Chapitre II">La Normandie, une province imposée</head>
-        <p>Le système de perception de l’impôt royal en Normandie s’articule autour du contrôle souverain de la fiscalité par le parlement et la
+      </div><div n="4" type="part"><head n="0" type="chapter">La Normandie, une province imposée</head>
+        <p n="1" type="chapter">Le système de perception de l’impôt royal en Normandie s’articule autour du contrôle souverain de la fiscalité par le parlement et la
           chambre des comptes de Normandie. En matière fiscale, les procès s’engagent en première instance devant les élus, les grènetiers, le maître
           des ports ou les juges des traites, puis sont portés par la voie de l’appel devant la cour des aides, qui juge alors souverainement. Ce
           système est d’autant plus contraignant que la Normandie est l’une des provinces les plus imposées du royaume. Pour autant, les tailles,
@@ -102,20 +104,20 @@
           successivement ces charges entre 1585 et 1610, prouvent leur fidélité sans faille à la personne royale. Certaines d’entre elles exercent
           leurs charges à la cour des aides transférée à Caen. Une fois la paix retrouvée et la cour établie de nouveau à Rouen, elles exécutent
           scrupuleusement les décisions prises par le roi sans autre forme de contestations.</p>
-      </div><div n="3" type="part"><head n="Chapitre III">La taille au service du roi : entre archaïsme et modernité</head>
-        <p>À la fin du <num>xvi<hi rend="sup">e</hi></num> siècle, la taille est un impôt en pleine mutation. Déjà Henri III avait tenté de remédier
+      </div><div n="5" type="part"><head n="0" type="chapter">La taille au service du roi : entre archaïsme et modernité</head>
+        <p n="1" type="chapter">À la fin du <num>xvi<hi rend="sup">e</hi></num> siècle, la taille est un impôt en pleine mutation. Déjà Henri III avait tenté de remédier
           aux problèmes liés à la répartition et à la perception de cet impôt. Henri IV reprend les dispositions prises précédemment par Henri III, et
           qui affectent l’organisation de la répartition de la taille, en laissant une place de plus en plus importante aux élus dans le jugement du
           contentieux fiscal. Les mécontentements se cristallisent autour de cet impôt qui symbolise l’arbitraire royal. Les sergents royaux et les
           archers sont souvent pris à partie par les taillables qui contestent leur assise de taille. En la matière, les châtiments à l’intention
           éminemment dissuasive sont exemplaires, car l’insulte faite à un officier royal est une insulte à l’encontre du roi.</p>
-        <p>L’observation attentive du contentieux relatif à la taille révèle un déséquilibre géographique entre des espaces intégrés au royaume de
+        <p n="2" type="chapter">L’observation attentive du contentieux relatif à la taille révèle un déséquilibre géographique entre des espaces intégrés au royaume de
           France et d’autres où la contestation est moins importante. L’espace dit « rural » s’oppose à l’espace dit « urbain » bien mieux intégré à
           l’économie du royaume. La paroisse occupe une place privilégiée dans cette étude, puisqu’elle peut être soit un intimé soit un appelant dans
           des affaires relatives à la taille. Elle souligne la parcellisation très forte de la province normande, dans laquelle la taille est
           inégalement répartie et se retrouve donc au cœur du système de perception et de contestation de l’impôt royal.</p>
-      </div><div n="4" type="part"><head n="Chapitre IV">La Normandie, terre d’expériences fiscales</head>
-        <p>La Normandie est un pays de grande gabelle mais aussi de quart-bouillon. Cette grande diversité face à l’impôt sur le sel encourage
+      </div><div n="6" type="part"><head n="0" type="chapter">La Normandie, terre d’expériences fiscales</head>
+        <p n="1" type="chapter">La Normandie est un pays de grande gabelle mais aussi de quart-bouillon. Cette grande diversité face à l’impôt sur le sel encourage
           inévitablement une contrebande importante que les arrêts sur rapport de la cour des aides de Normandie permettent d’analyser. À ce titre, la
           cour souveraine confirme le plus souvent les jugements rendus en première instance par les grènetiers. Elle révèle ainsi l’intransigeance
           exigée par le roi dans ses jugements à l’encontre des faux-sauniers. Ainsi, toute sentence condamnant à mort un contrebandier est
@@ -137,8 +139,8 @@
           l’inadéquation des compétences des généraux des aides avec les nouvelles réalités de l’impôt, puisqu’ils confirment le plus souvent le
           jugement émis par les élus ou le maître des ports. De même, toute initiative de la cour dans ce domaine est contrecarrée par le roi et son
           Conseil.</p>
-      </div><div n="5" type="part"><head n="Chapitre V">Le contentieux fiscal, révélateur d’une société d’ordres</head>
-        <p>Le contentieux fiscal de la cour des aides de Normandie permet d’en apprendre davantage sur les parties en présence dans les procédures
+      </div><div n="7" type="part"><head n="0" type="chapter">Le contentieux fiscal, révélateur d’une société d’ordres</head>
+        <p n="1" type="chapter">Le contentieux fiscal de la cour des aides de Normandie permet d’en apprendre davantage sur les parties en présence dans les procédures
           jugées. Une grande partie de l’activité de la cour tient à l’enregistrement des lettres patentes relatives à l’anoblissement. Ces lettres,
           qu’elles soient enregistrées pour entériner un nouvel anoblissement ou pour mettre fin à une dérogeance, démontrent que la mainmise du roi
           sur la classe nobiliaire normande est totale. Si la cour des aides conteste un anoblissement, notamment lorsqu’il s’agit d’anciens ligueurs
@@ -155,8 +157,8 @@
           l’ensemble de la province, même si certaines élections semblent plus concernées que d’autres. C’est le cas notamment pour les élections de
           Caen, Valognes, Bayeux et Alençon. Peut-être peut-on y voir les prémices des « fameuses » révoltes populaires qui agiteront la province dans
           les années 1630 ?</p>
-      </div><div n="6" type="part"><head n="Chapitre VI">Entre pacification du territoire et consentement à l’impôt, la fiscalité au service du roi</head>
-        <p>Quelle est la place occupée par la cour des aides de Normandie dans l’organisation fiscale sous le règne d’Henri IV ? L’autonomie de
+      </div><div n="8" type="part"><head n="0" type="chapter">Entre pacification du territoire et consentement à l’impôt, la fiscalité au service du roi</head>
+        <p n="1" type="chapter">Quelle est la place occupée par la cour des aides de Normandie dans l’organisation fiscale sous le règne d’Henri IV ? L’autonomie de
           jugement de la cour des aides de Normandie est redéfinie à l’aube du <num>xvii<hi rend="sup">e</hi></num> siècle. Les pouvoirs croissants
           délégués aux élus et l’intervention régulière du Conseil du roi contraignent les officiers de la cour à s’en tenir de plus en plus à une
           confirmation des jugements de première instance. Son indépendance est donc illusoire. Elle a permis à Henri IV de maintenir une
@@ -180,9 +182,7 @@
           œuvre de justice sans interruption. Néanmoins, l’activité de la cour des aides est modifiée au second semestre de l’année 1610, car elle se
           doit d’enregistrer de nombreux arrêts relatifs aux nouvelles nominations d’officiers des finances, ce qui, vraisemblablement, ne fait que
           renforcer la prédominance de l’autorité royale dans cette province pacifiée.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="9"><head>Conclusion</head>
         <p>La fiscalité royale a joué un rôle prépondérant en Normandie dans la reconquête du pouvoir par Henri IV au sortir des guerres de Religion.
           En effet, elle a permis au roi de France de financer sa campagne militaire tout en assurant une permanence de la justice fiscale royale aux
           quatre coins de la province déjouant ainsi les plans de la famille de Guise. À ce titre, la cour des aides de Normandie est un bon exemple
@@ -200,7 +200,7 @@
           royaume de France, constitue un des instruments de pouvoir incontestables de sa toute puissance souveraine après l’épisode des guerres de
           Religion.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="10"><head>Annexes</head>
         <p>Présentation de la base de données. — Éditions d’arrêts sur rapport de la cour des aides de Normandie. — Éditions de textes relatifs à la
           cour des aides de Normandie : édit de mai 1552 définissant ses prérogatives, édit de 1535 établissant son ressort définitif, arrêt sur
           rapport de la cour des aides de Normandie de 1594 relatif au transfert des cours souveraines normandes de Caen à Rouen. — Fiches
@@ -208,7 +208,6 @@
           photographie de l’ancien bâtiment de la cour des aides de Normandie, place de la cathédrale à Rouen ; gravures de l’ancien bureau des
           finances de Rouen au <num>xix<hi rend="sup">e</hi></num> siècle ; plans de la ville de Rouen de 1581, 1655 et 1724.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

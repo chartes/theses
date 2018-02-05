@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La vie des monuments de l’État</title>
-        <title type="sub">Histoire administrative et patrimoniale de la Caisse nationale des monuments historiques(1912-1978)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La vie des monuments de l’État</title><title xml:lang="fr" type="sub">Histoire administrative et patrimoniale de la Caisse nationale des monuments historiques(1912-1978)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Carpentier, Valérie">Valérie Carpentier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200805.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Aucune étude historique n’a été consacrée à la Caisse nationale des monuments historiques, acteur majeur de l’histoire patrimoniale du
             <num>xx</num>
 <hi rend="sup">e</hi> siècle, présent avec une remarquable continuité depuis les mois décisifs précédant la première guerre mondiale. La
@@ -69,7 +72,7 @@
           multiples touchant à la fois à la gestion du patrimoine et à la politique culturelle a pu naître d’une simple bourse de secours à la
           disposition de la direction des Beaux-arts.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Ce sujet possède la qualité remarquable de confronter simultanément l’historien aux deux problèmes qu’il risque de rencontrer en histoire
           contemporaine : la lacune des sources, pour la première partie du <num>xx</num>
 <hi rend="sup">e</hi> siècle, et la surabondance de sources parfois très sèches après les années 1950. Les archives de l’établissement
@@ -97,9 +100,8 @@
           1939, et reprise en 1954 par la Caisse qui en assura la publication jusqu’en 1996, constitue par ailleurs une source majeure pour l’histoire
           de l’institution, de même que la production éditoriale de la Caisse depuis les années 1950 (catalogues, guides et monographies).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Naissance d’un établissement public (1912-1960)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Naissance d’un établissement public (1912-1960)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Du projet à la loi</head>
           <p>
             <hi rend="i">Réforme financière ou nouvelle féodalité ?</hi>— Le sénateur Jean-Honoré Audiffred est l’auteur en 1912 du
@@ -123,7 +125,7 @@
             les crédits annuels des Monuments historiques, étant donné le refus formel opposé par l’administration des Finances. 
         </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le bas de laine des Beaux-arts (1920-1939)</head>
           <p>
             <hi rend="i">Paul Léon et la mise en route de la Caisse</hi>. — Au lendemain de la guerre, le décret d’application concernant la Caisse
@@ -146,7 +148,7 @@
             de progression sous le Front populaire, permet à l’État d’acquérir divers châteaux. La question du développement d’un tourisme patrimonial
             au cours de cette période se révèle cependant délicate à trancher globalement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’argument touristique (1940-1960)</head>
           <p>
             <hi rend="i">Au service de l’État châtelain et de l’industrie nationale du tourisme sous Vichy</hi>. — La Caisse, comme de nombreux autres
@@ -166,8 +168,8 @@
             l’augmentation des recettes de l’établissement et en dépit d’une administration toujours embryonnaire, de grands espoirs sont fondés dans
             le développement des activités commerciales de la Caisse.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Naissance d’une administration</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Naissance d’une administration</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une nouvelle Caisse des monuments historiques (1961-1965)</head>
           <p>
             <hi rend="i">Chronologie et enjeux d’une réforme (1961-1965).</hi>— Au début de la décennie 1960, un renforcement administratif de
@@ -190,7 +192,7 @@
             mesures avaient été prises en ce sens, il n’en est plus question trois ans plus tard, ce qui engendre des complications administratives
             dans les opérations.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Mise en place de la machine administrative (1964-1969)</head>
           <p>
             <hi rend="i">Des débuts difficiles.</hi>— Le recrutement d’agents sur un rythme rapide est un véritable enjeu pour mener à bien la
@@ -210,7 +212,7 @@
             désormais indissociable de celui de l’établissement public, qui fait de la renaissance des fastes de Sully le symbole de son rayonnement
             nouveau.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Moyens et résultats : un bilan en demi-teinte</head>
           <p>
             <hi rend="i">Monuments historiques et rentabilité : le choc des cultures ?</hi>— L’optimisme prévaut lorsque sont lancées en série et sans
@@ -234,8 +236,8 @@
             en 1969, la plupart des têtes changent et un nouvel équilibre se met durablement en place, autour du tandem Jean Salusse (directeur) et
             Yves Malécot (président).</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Construction d’une identité</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Construction d’une identité</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Entre autonomie et tutelle</head>
           <p>
             <hi rend="i">L’image de l’administration.</hi>— La Caisse développe une politique qui rejoint les aspirations des équipes du ministre
@@ -254,7 +256,7 @@
             de cabinet de Michel Guy. Les volumineux dossiers consacrés à cette affaire dans les archives des différentes administrations intéressées
             permettent de saisir la portée des enjeux dans les relations de l’établissement public avec sa tutelle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une « administration de mission » ?</head>
           <p>
             <hi rend="i">Les moyens de l’établissement : une « toute petite PME » ?</hi>— L’examen du fonctionnement administratif de la Caisse montre
@@ -274,7 +276,7 @@
             l’administration dans les années 1970 : l’étude d’un service, celui des visites-conférences, et d’un groupe de monuments, la Conciergerie
             et la Sainte-Chapelle à Paris.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les châteaux de la Caisse : de la gestion de fait à la constitution d’un patrimoine propre</head>
           <p>
             <hi rend="i">La Caisse gestionnaire de domaines.</hi>— La Caisse nationale des monuments historiques n’a pas été créée à l’origine pour
@@ -297,9 +299,7 @@
             six (Aulteribe, Bouges, La Motte-Tilly, l’hôtel de Lunas à Montpellier, l’abbaye de Beaulieu-en-Rouergue, le château de Gramont). Apparaît
             ici en filigrane une autre histoire de la Caisse des monuments historiques, vue de ses châteaux.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Depuis la fin des années 1970, un certain nombre de décrets ont modifié les missions et les attributions de la Caisse nationale des
           monuments historiques et des sites. Ils ont fait de l’actuel Centre des monuments nationaux un établissement public que peu de choses
           rattachent au porte-monnaie de secours à la disposition de la direction des Beaux-arts qu’était la Caisse dans les années 1920, mais aussi
@@ -308,13 +308,12 @@
           patrimoine propre, ne peuvent se comprendre que par l’accumulation de micro-réformes pendant plus d’un demi-siècle. À la fin des années
           1970, la Caisse s’est imposée comme un acteur incontournable de la politique patrimoniale et culturelle en France.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Pièces justificatives : large choix de documents d’archives illustrant l’évolution de l’établissement public au long du <num>xx</num>
 <hi rend="sup">e</hi> siècle. — Graphiques et tableaux : étude budgétaire détaillée sous divers angles, liste des dirigeants de
           l’établissement. — Illustrations : dossier iconographique sur les activités de la Caisse. — Index des noms de personnes et de lieux. —
           Tables.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

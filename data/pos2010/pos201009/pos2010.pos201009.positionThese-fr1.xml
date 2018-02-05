@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Droit et répression de l’hérésie à Toulouse au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub">la &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Repetitio de inquisitione hereticorum&lt;/hi&gt; de Nicolas Bertrand (Toulouse, 1512)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Droit et répression de l’hérésie à Toulouse au <num>xvi<hi rend="sup">e</hi></num> siècle</title><title xml:lang="fr" type="sub">la <hi rend="i">Repetitio de inquisitione hereticorum</hi> de Nicolas Bertrand (Toulouse, 1512)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Daydé, Cyril">Cyril Daydé</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201009.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>En 1979, Philippe Wolff proposait de stimuler la réflexion des historiens du catharisme en leur soumettant la question suivante : « Y
           eut-il une optique propre des histoires régionales (<num>xvi<hi rend="sup">e</hi></num>-<num>xviii<hi rend="sup">e</hi></num> siècle) ? »
             (<hi rend="i">Cahiers de Fanjeaux</hi>, 14, p. 71-84). Trois décennies plus tard, cette interrogation, quoique légitime, n’a toujours pas
@@ -74,7 +77,7 @@
           répression de l’hérésie, tant d’un point de vue historique que juridique et théologique.</p>
         <p/>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La méconnaissance du traité de Nicolas Bertrand relatif à la procédure inquisitoriale du début du <num>xvi<hi rend="sup">e</hi></num> siècle tient principalement à sa rareté. Ce post-incunable produit à Toulouse par l’atelier de Jean Grandjean au cours de
           l’été 1512 ne subsiste plus qu’à un seul exemplaire identifié, conservé à la Réserve des livres rares et précieux de la Bibliothèque
           nationale de France sous la cote Res. H-2276. Aucune édition postérieure de cette <hi rend="i">Repetitio de inquisitione hereticorum</hi> ne
@@ -91,9 +94,8 @@
           actes constitutifs de la commune, les délibérations des magistrats municipaux et les rôles d’impôts occupent respectivement les séries AA,
           BB et CC.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Étude</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Droit et hérésie à Toulouse à la fin du Moyen Âge</head>
           <p><hi rend="i">La période de l’Inquisition classique (<num>xii<hi rend="sup">e</hi></num></hi>-<hi rend="i">xiii<hi rend="sup">e</hi></hi> <hi rend="i">siècle).</hi> — La procédure exceptionnelle qu’était l’inquisition en fit une des modalités les plus
             caractéristiques de la répression de l’hérésie dans la Chrétienté médiévale. Néanmoins, elle ne fut pas la première ni jamais la seule
@@ -164,7 +166,7 @@
             parlement. Ces auteurs politiques devinrent progressivement gallicans, mais dans le respect des règles canoniques fixées dès l’époque de
             l’Inquisition classique. La question des deux droits, notamment, fut au cœur des traités d’Étienne Aufréri et de Nicolas Bertrand.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La répression de l’hérésie sous la plume de Nicolas Bertrand</head>
           <p><hi rend="i">Nicolas Bertrand, historien et juriste toulousain.</hi> — Nicolas Bertrand est généralement réduit à sa production
             d’historien de Toulouse, relativement pionnier, ayant fait la synthèse de ses prédécesseurs Bernard de Rosier et Étienne de Gan. Pourtant,
@@ -217,22 +219,22 @@
             La répartition des nombreuses allusions, références ou citations reflète ces intérêts, même si les sources juridiques s’avèrent largement
             dominantes dans la <hi rend="i">Repetitio</hi>, ce qui confirme la vocation universitaire de cette œuvre.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition critique</head>
-        <p>Le second volet de la thèse donne l’édition d’un abondant matériau relatif à la répression de l’hérésie dans le Midi, entre la fin du
+      </div><div n="4" type="part"><head n="0" type="chapter">Édition critique</head>
+        <p n="1" type="chapter">Le second volet de la thèse donne l’édition d’un abondant matériau relatif à la répression de l’hérésie dans le Midi, entre la fin du
               <num>xii<hi rend="sup">e</hi></num> et le début du <num>xvi<hi rend="sup">e</hi></num> siècles. Il s’agit de comprendre la situation à
           la fin de cette période, à la lumière des tâtonnements successifs qui conduisirent à l’élaboration de l’institution inquisitoriale et à son
           plein épanouissement à la période classique, jusqu’aux temps de son déclin.</p>
-        <p>Les textes ainsi accumulés étant relativement homogènes, le parti a été pris de proposer une édition en trois temps successifs mais selon
+        <p n="2" type="chapter">Les textes ainsi accumulés étant relativement homogènes, le parti a été pris de proposer une édition en trois temps successifs mais selon
           des règles de présentation uniformes.</p>
-        <p><hi rend="i">La décrétale</hi> Ut Inquisitionis <hi rend="i">(Boniface</hi> <hi rend="i">viii</hi>, <hi rend="i">1298) et ses
+        <p n="3" type="chapter"><hi rend="i">La décrétale</hi> Ut Inquisitionis <hi rend="i">(Boniface</hi> <hi rend="i">viii</hi>, <hi rend="i">1298) et ses
             commentaires.</hi> — Cette décrétale correspond au texte de Boniface viii tel qu’il apparaissait dans les manuscrits médiévaux, augmenté
           de sa glose ordinaire éditée par les soins de Grégoire xiii en 1582. La principale disposition porte sur la coopération indispensable des
           autorités laïques à l’action inquisitoriale des tribunaux ecclésiastiques, sous peine de sanctions spirituelles graves.</p>
-        <p><hi rend="i">La</hi> Repetitio de inquisitione hereticorum, <hi rend="i">texte intégral.</hi> — La méconnaissance généralisée de ce texte
+        <p n="4" type="chapter"><hi rend="i">La</hi> Repetitio de inquisitione hereticorum, <hi rend="i">texte intégral.</hi> — La méconnaissance généralisée de ce texte
           justifierait à elle seule le choix d’une édition intégrale. Celle-ci est d’autant plus légitime que le genre de la répétition juridique
           correspond à un type intellectuel et matériel clairement défini ; ses caractéristiques apparaissent ainsi pleinement dans une édition
           complète. La dimension matérielle fait l’objet d’une présentation codicologique précise en introduction du texte.</p>
-        <p><hi rend="i">L’</hi> Opus de Tholosanorum gestis ab urbe condita, <hi rend="i">morceaux choisis.</hi> — La présence de cette œuvre ne va pas
+        <p n="5" type="chapter"><hi rend="i">L’</hi> Opus de Tholosanorum gestis ab urbe condita, <hi rend="i">morceaux choisis.</hi> — La présence de cette œuvre ne va pas
           spontanément de soi dans un corpus consacré à la répression de l’hérésie. Mais outre les traités relatifs à des questions religieuses,
           l’histoire méridionale et surtout le rattachement du Languedoc à la Couronne sont indissociables du développement de l’hérésie dans cette
           province, de l’inactivité du comte et des réactions menées depuis le nord du royaume. Les nombreux emprunts de Nicolas Bertrand à des
@@ -241,9 +243,7 @@
           s’intégraient naturellement dans l’édition des écrits de Nicolas Bertrand en matière de droit et de répression de l’hérésie. Certains
           développements relatifs à la délimitation géographique et linguistique du Languedoc ont été ajoutés à cette édition sélective parce qu’ils
           se rapportent à l’empreinte territoriale de l’Inquisition méridionale.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Pièces justificatives</head>
+      </div><div type="conclusion" n="5"><head>Pièces justificatives</head>
         <p>Afin de donner davantage de profondeur historiographique aux textes édités, une vingtaine de pièces justificatives ont été placées à leur
           suite. Elles sont regroupées autour de trois grands thèmes : la mémoire archivistique toulousaine au Moyen Âge, la mémoire historiographique
           méridionale à l’époque moderne et le dossier hagiographique de la <hi rend="i">Repetitio</hi>.</p>
@@ -261,11 +261,10 @@
           Toulouse au début du <num>xvi<hi rend="sup">e</hi></num> siècle rappelle l’adhésion de notre auteur à la confrérie des Corps-Saints de
           Saint-Sernin en 1508, attestée par les archives conservées dans cette paroisse.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Cartes. — Reconstitutions généalogiques, notamment des Bertrand (<num>xii<hi rend="sup">e</hi></num>-<num>xv<hi rend="sup">e</hi></num> siècle). — Liste des inquisiteurs méridionaux (<num>xiii<hi rend="sup">e</hi></num>-<num>xv<hi rend="sup">e</hi></num> siècle). — Tableaux relatifs aux autorités et aux références invoquées dans la <hi rend="i">Repetitio.</hi> — Iconographie :
           miniature du <hi rend="i">Livre des histoires</hi> pour les années 1510-1511 (AM Toulouse, BB 273, chr. 188, fol. 193) ; miniature de la <hi rend="i">Repetitio de inquisitione hereticorum</hi> (fol. 1) ; Toulouse au temps de Nicolas Bertrand (AM Toulouse, II 699). — <hi rend="i">Index nominum et rerum</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

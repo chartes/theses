@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Représentations de la table et de la commensalité (1150-1350)</title>
-        <title type="sub">Dans la moitié septentrionale de la France, l’Angleterre et les Pays-Bas</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Représentations de la table et de la commensalité (1150-1350)</title><title xml:lang="fr" type="sub">Dans la moitié septentrionale de la France, l’Angleterre et les Pays-Bas</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Benrubi, David-Jonathan">David-Jonathan Benrubi</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200802.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Cette thèse s’inscrit au croisement de l’histoire de l’alimentation et de l’histoire des idéologies et des représentations. La première a
           progressivement affirmé, depuis une trentaine d’années, une solide vocation à étudier un ensemble englobant d’aspects de la vie matérielle,
           sociale et culturelle des temps anciens. En particulier, les historiens de l’alimentation s’intéressent de plus en plus à la cour. Comment
@@ -65,7 +68,7 @@
           table, on ne fait pas que manger tant il est vrai que l’espace commensal est un lieu privilégié de la parole, de la séduction, de la
           traîtrise, de l’assassinat...</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources de cette étude sont des images et des textes. Dans le premier cas, on a retenu comme manifestation de la commensalité toute
           présence de deux personnes ou plus autour d’une table, de préférence garnie de nourriture mais sans que ce critère soit discriminant. Ont
           donc été exclues du corpus iconographique les images de consommation alimentaire hors la table, et, a priori, celles de repas à table
@@ -93,9 +96,8 @@
           sculpture ou le vitrail...</p>
         <p>De la même manière, le corpus textuel a été constitué en fonction d’une volonté de varier les types d’approche.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">Constitution du corpus iconographique</head>
-        <p>Après une présentation des instruments bibliographiques utilisés pour la constitution du corpus, on s’interroge sur sa représentativité.
+          <div n="3" type="part"><head n="0" type="chapter">Constitution du corpus iconographique</head>
+        <p n="1" type="chapter">Après une présentation des instruments bibliographiques utilisés pour la constitution du corpus, on s’interroge sur sa représentativité.
           Un survol comptable du corpus iconographique révèle une valeur modale de sa distribution chronologique vers 1200 et une augmentation accrue
           du nombre d’images à partir de 1250. Surtout, l’indexation thématique (« Cène », « Arthur et Laure de Carduel », « Repas de couronnement
           d’Henri le Jeune »...) révèle une diversification croissante du répertoire thématique et met en exergue ce qui doit être considéré comme
@@ -108,8 +110,8 @@
           au <num>xiii<hi rend="sup">e</hi></num> siècle doit sans doute être considéré comme un fait culturel majeur, au même titre que l’évolution des
           représentations de l’espace au siècle suivant – est encore délaissé par l’histoire proprement dite des images. Le contraste est ici frappant
           avec l’intégration des romans à l’histoire culturelle de la société médiévale.</p>
-      </div><div n="2" type="part"><head n="Chapitre II">Quelques modèles de commensalité en vigueur vers 1150-1200</head>
-        <p>Au seuil de cette recherche, l’état des recherches sur le festin au haut Moyen Âge – le hall anglo-saxon, l’invention de la Table Ronde,
+      </div><div n="4" type="part"><head n="0" type="chapter">Quelques modèles de commensalité en vigueur vers 1150-1200</head>
+        <p n="1" type="chapter">Au seuil de cette recherche, l’état des recherches sur le festin au haut Moyen Âge – le hall anglo-saxon, l’invention de la Table Ronde,
           le repas monastique, la table au tympan comme affirmation ecclésiologique et image de lutte contre les hérésies rejetant la doctrine
           eucharistique – fait l’objet d’une présentation sous la forme de « modèles » et de nouvelles pistes de recherche. Au XII <hi rend="sup">e</hi> siècle, un imaginaire antique de la table perce en plusieurs lieux de la documentation historique : un motif iconographique, le
           trépied de table, peut être suivi du <num>iv<hi rend="sup">e</hi></num> au <num>xii<hi rend="sup">e</hi></num> siècle et jusqu’aux gloses marginales des traités
@@ -118,8 +120,8 @@
           avec l’imaginaire du festin : la présence ici et là de tables courbes, inspirées de l’imagerie byzantine et antique, va dans le même sens.
           Le fantasme oriental – dont l’influence sur certaines modes du goût médiéval est déjà documenté – est à chercher dans les récits liés aux
           lettres du Prêtre Jean ou dans l’hagiographie de Thomas l’Apôtre.</p>
-      </div><div n="3" type="part"><head n="Chapitre III">Qu’est-ce qu’un « dois » ?</head>
-        <p>Entre 1150 et 1250, bien plus rarement au-delà du <num>xiii<hi rend="sup">e</hi></num> siècle, de nombreux récits de repas font intervenir un « dois
+      </div><div n="5" type="part"><head n="0" type="chapter">Qu’est-ce qu’un « dois » ?</head>
+        <p n="1" type="chapter">Entre 1150 et 1250, bien plus rarement au-delà du <num>xiii<hi rend="sup">e</hi></num> siècle, de nombreux récits de repas font intervenir un « dois
           » que les traducteurs disent être une table. Le constat que « dois » et « table » coexistent alors fréquemment dans les mêmes récits invite
           à rejeter leur équivalence et à considérer comme insatisfaisantes les précisions de glossaire telles que « table d’honneur » ou « table
           surélevée ». L’enquête procède à un vaste relevé d’occurrences. On s’intéresse ensuite à l’histoire du mot « discus », l’étymon de « dois ».
@@ -130,8 +132,8 @@
           Dans l’ordre du discours, « dois » est donc – paradoxalement – un mot plus concret que « table » ou « mensa » dont l’extension sémantique
           dépasse largement l’alimentation et le support, comme le montrent par exemple la <hi rend="i">mensa episcopalis</hi> ou la Table des
           pauvres... La question se pose alors : le « dois » a-t-il existé, ou est-il une création littéraire ?</p>
-      </div><div n="4" type="part"><head n="Chapitre IV">La constitution d’un langage iconographique</head>
-        <p>Comment réalise-t-on une image de repas au <num>xiii<hi rend="sup">e</hi></num> siècle et dans la première moitié du <num>xiv<hi rend="sup">e</hi></num> siècle
+      </div><div n="6" type="part"><head n="0" type="chapter">La constitution d’un langage iconographique</head>
+        <p n="1" type="chapter">Comment réalise-t-on une image de repas au <num>xiii<hi rend="sup">e</hi></num> siècle et dans la première moitié du <num>xiv<hi rend="sup">e</hi></num> siècle
           ? Les instructions aux enlumineurs du manuscrit du Chevalier au Beau Cygne de la Bibliothèque nationale de France, ainsi qu’un document
           iconographique présentant un défaut de fabrication – le linceul d’une bière a été confondu avec la nappe d’une table – suggèrent que le
           contenu de la table, en particulier les plats, relèvent de l’ornementation plus que du discours iconographique. Ce qui pose le problème des
@@ -144,8 +146,8 @@
           la nappe qui constitue un objet important de la représentation. Constitué dans l’iconographie germanique du <num>xi<hi rend="sup">e</hi></num> siècle,
           il demeure majoritaire tout au long de la période considérée. Le langage iconographique de la table exploite aussi une gestuelle de table,
           attendue à l’époque où les contenances de table issues des milieux monastiques et curiaux s’efforcent de régir l’attitude des convives.</p>
-      </div><div n="5" type="part"><head n="Chapitre V">Représentations de la table dans la Bible moralisée conservée à Oxford, Paris et Londres</head>
-        <p>Une autre base de données a été constituée à partir des images de table contenues dans la bible moralisée conservée à Oxford, Paris et
+      </div><div n="7" type="part"><head n="0" type="chapter">Représentations de la table dans la Bible moralisée conservée à Oxford, Paris et Londres</head>
+        <p n="1" type="chapter">Une autre base de données a été constituée à partir des images de table contenues dans la bible moralisée conservée à Oxford, Paris et
           Londres, grâce à l’exploitation des volumes de fac-similés publiés au début du <num>xx<hi rend="sup">e</hi></num> siècle. Chaque image a été indexée,
           notamment en fonction des caractères suivants : nombre de convives, place de la table dans l’espace de la représentation, dans l’espace
           narratif, type des convives (Jésus, roi, clerc, femme...), lexique du texte accompagnant l’image ( <hi rend="i">commessatio, mensa,
@@ -153,8 +155,8 @@
           ensuite été converti afin d’être traité par un logiciel d’analyses factorielles. Les plans factoriels suggèrent l’existence de trois groupes
           d’images : la table du Christ, la table du roi, la table peccamineuse. Plus généralement, les concepteurs de la bible moralisée semblent
           avoir eu le souci de respecter un certain équilibre dans la représentation de l’espace commensal, ni complètement perdu par la <hi rend="i">gula</hi>, ni absolument sauvé par l’eucharistie.</p>
-      </div><div n="6" type="part"><head n="Chapitre VI">La Table de Dieu</head>
-        <p>On s’intéresse surtout à la Cène, thème qui n’a pas fait l’objet d’une étude proprement iconographique pour cette époque et cet espace
+      </div><div n="8" type="part"><head n="0" type="chapter">La Table de Dieu</head>
+        <p n="1" type="chapter">On s’intéresse surtout à la Cène, thème qui n’a pas fait l’objet d’une étude proprement iconographique pour cette époque et cet espace
           géographique. On soutient l’idée que la Cène est alors paradoxalement une image relativement rare. Moins de 120 miniatures la représentant
           ont été localisées pour la période 1125-1350. Ce constat est cohérent avec les remarques formulées par D. Donadieu-Rigaux, pour l’Italie, et
           M. Rubin, pour l’Angleterre, sur le rôle des développements tardifs de la dévotion eucharistique, notamment autour de l’instauration de la
@@ -168,14 +170,14 @@
           relation entre les trois principaux protagonistes : Jésus (le père), Jean et Judas (les deux fils ?). On se demande ensuite comment la Cène
           a pu, non systématiquement, apparaître comme un modèle pour les autres représentations de la commensalité. Enfin, le repas d’onction est à
           la fois un concurrent, un complément et un symétrique de la Cène.</p>
-        <p>Un aspect important de la représentation de la commensalité se manifeste avec un éclat particulier dans les images de repas divins :
+        <p n="2" type="chapter">Un aspect important de la représentation de la commensalité se manifeste avec un éclat particulier dans les images de repas divins :
           l’importance de l’axe vertical. De l’iconographie du repas à Emmaüs au motif arthurien du « convive pensis », la table prolonge volontiers
           sa verticalité – structurée dans le vocabulaire par l’opposition du haut dois et de la porte, du haut bout et du bas bout – dans un
           mouvement d’ascension. Pourtant les repas proprement célestes, à l’instar de la <hi rend="i">communio sanctorum</hi>, sont rares à la fois
           dans l’iconographie, jusque vers 1250, et dans les textes (cf le genre des Voies de Paradis). On pose ensuite les premières bases d’une
           approche iconographique des Noces de l’Agneau, qui prend son essor avec les apocalypses anglaises de la moitié du XIII <hi rend="sup">e</hi> siècle.</p>
-      </div><div n="7" type="part"><head n="Chapitre VII">La Table du roi</head>
-        <p>L’étude systématique du <hi rend="i">Lancelot</hi> en prose permet d’identifier le banquet du roi – non la Table Ronde – comme une
+      </div><div n="9" type="part"><head n="0" type="chapter">La Table du roi</head>
+        <p n="1" type="chapter">L’étude systématique du <hi rend="i">Lancelot</hi> en prose permet d’identifier le banquet du roi – non la Table Ronde – comme une
           métonymie de la cour. On le démontre en procédant à l’analyse séquentielle du long et célèbre épisode de la libération des enfants Lionel et
           Bohort, qui couvre une grande partie des <hi rend="i">Enfances Lancelot</hi>. Utilisant les travaux de S. Vecchio et C. Casagrande, on
           s’intéresse ensuite au statut de la parole de table. Les textes normatifs hésitent sur ce point, trahissant ainsi la tension entre les deux
@@ -198,16 +200,16 @@
           l’isolement du roi. Alors que dès le <num>xi<hi rend="sup">e</hi></num> siècle des souverains prétendent manger seul, l’iconographie opère autour de
           1300 un véritablement renversement : le mangeur solitaire cesse d’être connoté négativement, le roi commence à manger seul, et les
           personnages négatifs (gloutons) ou suspects (Janus) tendent à partager leur repas.</p>
-      </div><div n="8" type="part"><head n="Chapitre VIII">La coupe : un objet polysémique</head>
-        <p>Parce qu’elle est le plus souvent dorée, la coupe figurée est un élément onéreux de la table peinte. Par ailleurs, cet objet occupe souvent
+      </div><div n="10" type="part"><head n="0" type="chapter">La coupe : un objet polysémique</head>
+        <p n="1" type="chapter">Parce qu’elle est le plus souvent dorée, la coupe figurée est un élément onéreux de la table peinte. Par ailleurs, cet objet occupe souvent
           une place importante dans les récits de fiction. Il mérite donc une attention particulière et ne doit pas être réduit à un Graal qui au
           demeurant n’a pas toujours été une coupe. En littérature et dans les images, ainsi que dans un certain nombre de récits historiographiques,
           la coupe est associée à des gestes qui lui confèrent, ou sont censés lui conférer, une force rituelle, pacifique ou violente, que l’on
           s’efforce d’étudier. Ce dossier réunit un vaste corpus transdocumentaire. On est amené à formuler l’hypothèse de l’évolution suivante : à la
           fin du Moyen Âge, la coupe du roi, la coupe comme objet symbolique de la souveraineté, tend à disparaître devant la polarisation de l’objet
           coupe entre d’une part le calice et d’autre part la coupe empoisonnée.</p>
-      </div><div n="9" type="part"><head n="Chapitre IX">Hommes et femmes à table <lb/>Iconographie de la Cause 36 du Décret de Gratien</head>
-        <p>La question de la mixité conviviale intéresse les historiens de l’alimentation et les représentations littéraires et iconographiques
+      </div><div n="11" type="part"><head n="0" type="chapter">Hommes et femmes à table <lb/>Iconographie de la Cause 36 du Décret de Gratien</head>
+        <p n="1" type="chapter">La question de la mixité conviviale intéresse les historiens de l’alimentation et les représentations littéraires et iconographiques
           peuvent apporter des éléments de réponse. À l’instar des « traductions » françaises de l’<hi rend="i">Art d’aimer</hi>, elles traduisent
           des positions variées, plus ou moins méfiantes à l’endroit du mélange des genres. La littérature arthurienne en prose indexe le sens de
           cette mixité sur une typologie des lieux de table : à la cour, la présence de la reine est exceptionnelle – elle se produit par exemple lors
@@ -215,7 +217,7 @@
           déjeuner sur l’herbe, elle dénote un érotisme qui peut se révéler de bon aloi ou au contraire risqué ; enfin, il est un lieu où la femme
           convive est soit dangereuse soit en danger : le pavillon – et, en image, c’est aussi dans un pavillon que la mère d’Alexandre reçoit le
           baiser de Nectanebo ou que Judith enivre le général assyrien...</p>
-        <p>On s’intéresse ensuite de près à une série d’images illustrant toutes la cause 36 du <hi rend="i">Décret</hi> de Gratien. L’histoire des
+        <p n="2" type="chapter">On s’intéresse ensuite de près à une série d’images illustrant toutes la cause 36 du <hi rend="i">Décret</hi> de Gratien. L’histoire des
           représentations de la commensalité rejoint alors l’histoire du droit, l’histoire du genre et l’histoire des jeunes. En effet, pour illustrer
           un texte traitant du rapt, les enlumineurs sont partis du récit de la <hi rend="i">causa</hi> : un jeune homme invite une jeune fille à un
           repas. Vers 1300, les artistes français, imités ensuite par leurs confrères italiens, flamands, espagnols et anglais, remplacent ce sujet
@@ -227,9 +229,7 @@
           laissent la place à la paix et à l’alliance. Une mise en série des images, ainsi qu’un regard plus insistant sur quelques-unes d’entre
           elles, permettent de mettre en exergue une diversité de discours iconographiques sur la valeur du consentement de la femme dans l’union
           charnelle.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="12"><head>Conclusion</head>
         <p>On le sait, les dimensions réflexive et transitive de la représentation sont indissociables. Cela est particulièrement vrai dans le cas de
           ce qu’on pourrait appeler des « représentations de représentations » : le geste de l’élévation du prêtre à la messe est probablement très
           peu différent dans une image de missel et dans l’église où officie le prêtre propriétaire de ce missel. Ceci vaut plus encore pour le
@@ -248,12 +248,11 @@
           table pose problème et suscite de la part de l’Église des réactions différentes. Ce que suggère le relativement petit nombre d’images de la
           Cène dans les manuscrits.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="13"><head>Annexes</head>
         <p>Liste des manuscrits formant le corpus iconographique. — Plan factoriel des notices d’images de table de la bible moralisée OPL. — Dossier
           iconographique commenté (parcours d’images). — CD-Rom comprenant la base de données de travail, au format Access, et le corpus
           iconographique de travail.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La Grèce dans l’imaginaire de Gustave Moreau Terre des Muses et des poètes</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La Grèce dans l’imaginaire de Gustave Moreau Terre des Muses et des poètes</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lutz, Marion">Marion Lutz</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201018.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La Grèce antique trouve sa place naturelle dans l’œuvre d’un peintre d’histoire, tant dans son répertoire de sujets, où elle côtoie la
           Bible, que dans son répertoire de formes. Jusqu’à la fin du <num>xix<hi rend="sup">e</hi></num> siècle, l’antique est la référence absolue
           des artistes, placée au cœur de l’enseignement dispensé par l’école des beaux-arts, pour avoir atteint le plus haut degré de perfection dans
@@ -88,7 +91,7 @@
           partie s’attache, enfin, à observer de quelle manière il le met en scène, et par quels moyens iconographiques il représente à travers lui le
           processus immatériel de la création et la condition ambivalente, très romantique, du créateur.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de Gustave Moreau, conservées au musée qui lui est dédié, ont été une source fondamentale pour ce travail. Ses manuscrits
           autographes (archives GM 1 à 557), inventoriés et en partie publiés par Peter Cooke, révèlent, mêlées à des notes de diverses natures, de
           nombreuses notes de lectures, prises sur des ouvrages de sa bibliothèque ou sur des ouvrages, gravures ou dessins consultés à la
@@ -103,9 +106,8 @@
           l’exploration de sa culture grecque. Les inscriptions portées sur les dessins conservés au musée, plus de douze mille en tout, ont également
           été mises à profit pour retrouver les ouvrages ou pièces de musées que l’artiste a incessamment copiés.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Une culture classique de la Grèce</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Une culture classique de la Grèce</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un artiste formé aux humanités classiques</head>
           <p>Issu d’une famille bourgeoise et cultivée, le peintre est imprégné par une culture classique de la Grèce dès sa plus tendre enfance. Son
             père, Louis Moreau, architecte néoclassique, possesseur d’une vaste bibliothèque et d’une collection d’antiques, lui transmet l’admiration
@@ -118,7 +120,7 @@
             dans le texte originel – , de l’histoire de la Grèce ancienne, de sa géographie, de sa philosophie et de son art oratoire. C’est bien la
             Grèce antique qui est au cœur des humanités, et non la Grèce moderne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une vaste bibliothèque imprégnée par la culture classique</head>
           <p>Dans le prolongement des humanités, la documentation grecque rassemblée par l’artiste renvoie une vision classique de la Grèce. Il
             complète sa propre bibliothèque, qui ne peut prétendre à l’exhaustivité du fait de son caractère encyclopédique, par des lectures à la
@@ -172,7 +174,7 @@
             van Thulden ; et les illustrations d’Homère, d’Eschyle et d’Hésiode créées par John Flaxman, qui renouvellent l’imagerie antique dans un
             esprit néoclassique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un contact direct avec les objets archéologiques révélant l’Antiquité grecque</head>
           <p>Gustave Moreau complète l’étude livresque de la Grèce antique par une observation « sur nature » de l’art grec. Sa formation artistique
             académique lui confère une connaissance intime de la statuaire antique. Selon le cursus habituel, il se forme dans l’atelier privé de
@@ -187,9 +189,9 @@
             céramiques et de sculptures antiques réunie par son père. Elle prend chez lui la forme de la copie, d’après des ouvrages et des revues,
             mais aussi d’après des pièces exposées dans les musées de la péninsule italienne ou au Louvre, qu’il visite sans relâche.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La réappropriation de l’Antiquité grecque : l’exemple de la figure du poète, « miroir mythique et idéal » de
+      </div><div n="4" type="part"><head n="0" type="chapter">La réappropriation de l’Antiquité grecque : l’exemple de la figure du poète, « miroir mythique et idéal » de
           l’artiste</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le poète dans l’Antiquité : l’homme chéri des Muses</head>
           <p>L’érudition grecque de Gustave Moreau préside non pas à une reconstitution archéologique stricte de l’Antiquité grecque, mais bien plutôt
             à une recréation moderne ; elle le porte à un point de compréhension intime des sujets qu’il traite. L’interprétation qu’il donne de la
@@ -198,7 +200,7 @@
             vertu civilisatrice qui lui est reconnue que par le patronage des divinités de l’inspiration, Apollon et les Muses, et par l’ascendance de
             fondateurs prestigieux, d’Orphée à Homère.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">
             <hi rend="i">Ut pictura poesis</hi></head>
           <p>À l’aube de la Renaissance, la peinture, privée de naissance mythologique, se voit aussi refuser la reconnaissance sociale : elle est
@@ -218,7 +220,7 @@
             courant symboliste.</p>
           <p/>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La représentation de l’artiste sous les traits de la figure idéale du poète</head>
           <p>Dans ce contexte théorique complexe assimilant la peinture à la poésie et le peintre au poète, et posant par là-même la question du
             statut du peintre et de la nature de l’art de peindre, la représentation du poète dans l’œuvre de Gustave Moreau a un caractère nettement
@@ -235,8 +237,8 @@
             musique étant l’art le plus abstrait, elle est considérée comme la mieux à même de faire sentir la réalité profonde, sous-jacente au monde
             terrestre. Musique et poésie sont ainsi figurées pour ouvrir le monde mystérieux de la vie intérieure, du rêve.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La mise en scène du poète</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La mise en scène du poète</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une figure centrale dans l’œuvre de Gustave Moreau</head>
           <p>Le poète est pour Gustave Moreau un sujet de réflexion intarissable sur sa propre condition de créateur. Elle occupe une place inégalée
             dans son œuvre, qui va au-delà des préoccupations des autres précurseurs du symbolisme d’un point de vue tant quantitatif, puisque, si
@@ -258,7 +260,7 @@
             la carrière de l’artiste, usé par l’incompréhension de ses pairs, par les deuils successifs, et par la maladie qui l’atteint à la fin de
             sa vie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une vision romantique du poète inspiré et voyant</head>
           <p>L’artiste est profondément imprégné par la conception romantique du poète inspiré civilisateur, qui fait de lui le médiateur entre le
             monde terrestre et le monde céleste, choisi par les divinités pour élever l’esprit des hommes vers la compréhension des réalités
@@ -300,7 +302,7 @@
             poète est un « prêtre poétique ». Son costume évoque les vêtements sacerdotaux ; un temple le place fréquemment sous le signe du sacré, et
             la lumière de Dieu l’enveloppe.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une vision romantique du poète maudit</head>
           <p>Si l’inspiration emporte le poète du côté de l’esprit plutôt que du côté du corps, son incarnation corporelle le soumet aux nécessités
             terrestres. Il fait le lien entre la terre et le ciel, mais sans appartenir pleinement à l’un ou l’autre monde, d’où une incapacité
@@ -331,9 +333,7 @@
             sérénité des gisants médiévaux et de la Vierge de la Dormition ainsi que par la pâleur céleste des anges ; comme le Christ et les saints,
             auxquels est emprunté l’attribut de la palme, son Ascension marque son triomphe posthume.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La Grèce de Gustave Moreau est, dans un esprit classique, la terre des Muses, nourricière des artistes des siècles ultérieurs. Son essence
           se résume dans la figure du poète, reflet tragique du peintre, d’où sa récurrence dans l’œuvre de ce dernier, partagée à des degrés divers
           par l’ensemble des symbolistes. Pour atteindre son sens profond, l’artiste mêle à la source grecque primordiale la source chrétienne. C’est
@@ -342,10 +342,9 @@
           La création d’« une poésie personnelle et [d’] une fantaisie appropriée [aux] besoins d’âme et d’esprit moderne » s’appuie ainsi sur le legs
           de la Grèce antique, tout en le passant au tamis de la sensibilité chrétienne.</p>
       </div>
-              <div type="appendix"><head>Illustrations</head>
+          <div type="appendix" n="7"><head>Illustrations</head>
         <p>Quatorze planches accompagnent la lecture du texte de l’étude.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

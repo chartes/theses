@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les voyages présidentiels dans la France de l’entre-deux-guerres</title>
-        <title type="sub">Rôle et image des chefs d’Etat de 1918 à 1940.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les voyages présidentiels dans la France de l’entre-deux-guerres</title><title xml:lang="fr" type="sub">Rôle et image des chefs d’Etat de 1918 à 1940.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Versavel, Dominique">Dominique Versavel</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200033.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les présidents de la Troisième République jouissent d’une légende assez terne dans l’histoire comme dans la mémoire collective. Il convient
           pour autant de s’intéresser à l’une de leurs fonctions majeures, à leur raison d’être pour ainsi dire, à savoir leur rôle symbolique de
           représentation. Le voyage présidentiel dans les départements français est un cérémonial d’Etat primordial, instauré par le Président Carnot.
@@ -61,7 +64,7 @@
           devenu traditionnel Ce dernier reste-t-il ou non adapté à son temps Comment comprendre enfin, à la lumière de cette étude, l’échec final
           d’un régime si long et si profondément enraciné dans le paysage politique français</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives du secrétariat général civil de la présidence de la République, conservées aux Archives nationales (sous-série 1 AG),
           constituent le cœur de notre documentation. Elles offrent des voyages présidentiels une vision officielle, que complètent utilement les
           archives locales et protocolaires. Les premières (séries I et K des archives départementales et municipales), trop nombreuses pour être
@@ -73,9 +76,8 @@
           plus anthropologique, en donnant une idée des comportements et des impressions suscitées par le rituel. La presse et les témoignages
           imprimés enfin permettent de cerner la dimension politique accordée au voyage présidentiel et de souligner leur réception par l’opinion.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les voyages présidentiels en France de 1918 à 1940 : Organisation et évolution</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les voyages présidentiels en France de 1918 à 1940 : Organisation et évolution</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Constitution et structures d’un cérémonial politique</head>
           <p><hi rend="i">En amont du voyage : décideurs et décisions </hi> — Il convenait dans un premier temps de déterminer les différentes
             instances impliquées dans l’organisation d’un voyage afin de mieux définir les origines du rituel et les marges d’initiative tantôt
@@ -112,7 +114,7 @@
             et les visites non officielles. Ces catégories nous renseignent sur les motivation profondes qui sous-tendent l’organisation et la mise en
             place d’un voyage de président et sur les enjeux réels de son déplacement en province.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Evolution et ruptures des voyages présidentiels</head>
           <p><hi rend="i">L’empreinte des temps et des hommes </hi> — Malgré un protocole figé, destiné à assurer sa continuité dans le temps et sa
             stabilité symbolique, la Présidence se trouve être soumise, dans son rôle de représentation, aux influences multiples de son époque. Les
@@ -137,8 +139,8 @@
             valoir son image. Enfin, après l’élan des années vingt, la crise des années trente et celle de la Présidence s’accompagnent d’une nette
             bureaucratisation du rituel d’Etat et d’une inévitable sclérose des signes de la République.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les présidents en voyage : enjeux, moyens et mise en scène d’un cérémonial politique</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les présidents en voyage : enjeux, moyens et mise en scène d’un cérémonial politique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Rôle et image des présidents dans la mise en scène des voyages officiels</head>
           <p><hi rend="i">Elaboration et mise en scène de l’image présidentielle </hi> — Voué par sa fonction à une représentation permanente,
             symbole vivant de la France comme de la République, le président doit corporellement remplir son devoir de démonstration publique. La mise
@@ -163,7 +165,7 @@
             locale. La parole présidentielle, autre volet essentiel du voyage officiel et forme particulièrement ritualisée, suit peu à peu cette
             courbe du désengagement politique de l’institution élyséenne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Perception et réception du cérémonial par l’opinion : Des succès répétés, un échec final</head>
           <p><hi rend="i">Efficacité du cérémonial des voyages : des succès répétés </hi> — II convenait, pour finir, de comprendre ce qui constitue
             le paradoxe majeur des voyages présidentiels durant l’entre-deux-guerres : leur échec final, avec le ralliement général des Français au
@@ -195,9 +197,7 @@
             progressif des Français, qui se traduit notamment à travers la désaffection de la presse pour les voyages présidentiels, et leur
             attachement à une personnalité forte, paradigme par excellence de ce que la Troisième République voulait par principe éviter.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Le voyage présidentiel, à une période où pourtant la médiatisation se développe, reste un moyen très employé de mise en scène républicaine
           et nationale directe. Ce rituel d’Etat, riche de sens, semble cependant se scléroser après le déclin de la Présidence politiquement forte
           des années vingt ; la crise présidentielle due à Alexandre Millerand en 1924 constitue en cela une véritable rupture. De même qu’elle ne
@@ -208,11 +208,10 @@
           avec les attentes réelles des populations livrées au malaise croissant des années trente, aboutira à l’échec final de la politique
           symbolique de la Troisième République et à l’instauration d’un régime autoritaire, fortement personnalisé.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Texte du décret protocolaire de juin 1907. ­ Extraits de programmes. ­ Lettres anonymes, déclarations et affiches municipales. ­ Discours
           présidentiels. ­ Photographies et caricatures des présidents en voyage.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

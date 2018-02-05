@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’académie impériale des beaux-arts de Saint-Pétersbourg (1757-1802)</title>
-        <title type="sub">Du Moujik à l’artiste.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’académie impériale des beaux-arts de Saint-Pétersbourg (1757-1802)</title><title xml:lang="fr" type="sub">Du Moujik à l’artiste.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Baudez, Basile">Basile Baudez</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200001.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Alors qu’au milieu du <num>xviii<hi rend="sup">e</hi></num> siècle la Russie est encore perçue comme une puissance barbare incapable de produire
           aucune forme d’art évolué, la situation est tout à fait différente au début du siècle suivant. Certains historiens français de la fin du XIX
 <hi rend="sup">e</hi> siècle, tel Emile Veuclin, attribuèrent ce changement à l’influence bénéfique de la civilisation française. A
@@ -58,7 +61,7 @@
           d’enseignement de l’art en Russie. Tous étaient pourtant d’accord pour attribuer le mérite de la naissance de l’art moderne russe à
           l’Académie des beaux-arts de Saint-Pétersbourg.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de l’Académie des beaux-arts de Saint-Pétersbourg antérieures à 1917 sont conservées dans le fonds 789 des Archives
           historiques de l’Etat russe à Saint-Pétersbourg ; une partie de ce fonds a été publiée entre 1864 et 1866 par Piotr N. Petrov à l’occasion
           du centenaire de la réforme de Catherine II. Les Archives centrales des actes anciens de Russie, situées à Moscou, comprennent la
@@ -71,9 +74,8 @@
           scientifique de l’Académie des beaux-arts, situé à Saint-Pétersbourg, recèle une vaste collection de dessins, de tableaux, de sculptures et
           de maquettes d’architecture ; malgré sa richesse, ce fonds reste d’un accès difficile.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Fondation</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Fondation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le concept académique</head>
           <p>
             <hi rend="i">Tentative de définition. ­</hi> Née dans l’Italie humaniste du <num>xv<hi rend="sup">e</hi></num> siècle, la première académie à
@@ -94,7 +96,7 @@
             l’auteur en 1763 du bâtiment de Saint-Pétersbourg, en rupture avec le projet d’Académie du Nord que son maître Jacques-François Blondel
             avait proposé six années auparavant.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La situation en Russie au milieu du <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>
             <hi rend="i">L’œuvre de Pierre le Grand. ­</hi> Les réformes du premier empereur russe s’étaient étendues à tous les domaines, notamment à
@@ -121,7 +123,7 @@
             la francophilie de la société aristocratique s’étendit au domaine politique. C’est dans ce contexte que l’Académie des beaux- arts fut
             fondée.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les premières années (1757-1764)</head>
           <p>
             <hi rend="i">Ivan Chouvalov et la fondation de l’université de Moscou. ­</hi> Force est de reconnaître le rôle du fondateur de la première
@@ -146,10 +148,10 @@
             novembre 1764 auxquels est donnée la plus grande publicité, grâce notamment à une nouvelle traduction en français réalisée par le docteur
             Clerc et Diderot en 1775. Désormais, pour la postérité, l’Académie fut fondée en 1764 par Catherine II.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Deuxième partie">Mise en place</head>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre premier">Le bâtiment et son architecte</head>
           <p>
             <hi rend="i">Jean-Baptiste Michel Vallin de La Mothe. ­</hi> Formé dans l’Ecole des arts de son cousin Jacques-François Blondel, Vallin de
@@ -177,7 +179,7 @@
             confusions budgétaires entraînèrent des problèmes financiers qui marquèrent l’arrêt du chantier de 1768 à 1776. Le gros-œuvre étant achevé
             vers 1781, ce n’est cependant qu’en 1794 que le bâtiment put être occupé.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre II">Cadre institutionnel</head>
           <p>
             <hi rend="i">Un texte fondateur. ­</hi> Les privilèges octroyés par Catherine II à l’Académie avaient pour but d’assurer à l’institution
@@ -198,7 +200,7 @@
             danger la survie de l’institution. Ce n’est que grâce à l’arrêt des dépenses de construction et surtout grâce à une gestion cohérente des
             budgets et à la reprise de l’aide gouvernementale que l’Académie put continuer à mener à bien.</p>
         </div>
-        <div>
+        <div n="7" type="chapter">
           <head n="Chapitre III">Vie de l’établissement</head>
           <p>
             <hi rend="i">Intendance. ­</hi> Les trois cents élèves et la soixantaine d’employés et de professeurs de l’Académie étaient logés sur
@@ -216,10 +218,10 @@
             académiques étaient répandues, non pas grâce aux expositions annuelles qui n’eurent jamais le succès ni l’impact des Salons parisiens,
             mais grâce à la vente d’œuvres d’élèves ou de professeurs et aux reproductions de sa collection de moulages.</p>
         </div>
-        <div>
+        <div n="8" type="chapter">
           <head n="Troisième partie">Enseignement</head>
         </div>
-        <div>
+        <div n="9" type="chapter">
           <head n="Chapitre premier">Enseignement général</head>
           <p>Les <hi rend="i">élèves. ­</hi> A partir de 1764, l’Académie procéda tous les trois ans au recrutement de soixante élèves âgés de cinq ou
             six ans. La volonté initiale d’Ivan Betskoï de ne prendre que des Russes issus de milieux modestes semble avoir été parfaitement
@@ -238,7 +240,7 @@
             La place de l’apprentissage des langues étrangères fut réduite au profit de cours de littérature et d’histoire nationales. L’Académie
             s’inscrivait dans le mouvement patriotique russe qui connut son plein épanouissement dans le romantisme des premières années du XIX <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="10" type="chapter">
           <head n="Chapitre II">Enseignement artistique</head>
           <p>
             <hi rend="i">Outils. ­</hi> Selon un principe commun à la plupart des académies, les étudiants suivaient tous des cours réguliers de dessin
@@ -257,7 +259,7 @@
             La particularité de l’Académie de Saint-Pétersbourg était cependant de proposer aux étudiants qui ne pouvaient entrer dans les classes
             artistiques l’apprentissage d’un métier d’art enseigné par des maîtres artisans salariés et logés par l’institution.</p>
         </div>
-        <div>
+        <div n="11" type="chapter">
           <head n="Chapitre III">Les pensionnaires</head>
           <p>A la fin d’un cycle complet d’études, les meilleurs étudiants, en termes de résultats, mais aussi de comportement, étaient envoyés à
             Paris pour se former auprès de ceux que les autorités académiques considéraient comme les meilleurs artistes de l’Europe, et à Rome pour y
@@ -266,7 +268,7 @@
             Russie sur l’actualité artistique occidentale. Les problèmes de discipline ne peuvent occulter l’utilité d’un tel séjour, puisque la
             quasi-totalité des professeurs académiques étaient anciens pensionnaires.</p>
         </div>
-        <div>
+        <div n="12" type="chapter">
           <head n="Chapitre IV">De l’utilité d’une académie des beaux-arts en Russie</head>
           <p>Malgré le succès que rencontrait son atelier de fonderie, considéré comme le meilleur de l’empire, l’Académie ne parvenait pas encore à
             trouver un marché assez grand et un soutien assez fort de la Cour pour garantir une carrière à ses étudiants beaucoup se détournaient de
@@ -274,21 +276,18 @@
             tentatives pour établir un monopole de l’enseignement de l’art, l’Académie est investie au début du <num>xix<hi rend="sup">e</hi></num> siècle d’une
             autorité incontestée dans le domaine artistique.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>Dans une ville neuve, à l’image de la société que ses fondateurs lui assignaient de former, l’Académie impériale des beaux-arts représente
           l’apogée du mouvement académique, aussi bien dans sa réalisation architecturale que dans ses objectifs pédagogiques. Ses membres étaient
           portés par la croyance dans le pouvoir d’une éducation capable de transformer des fils de soldats ou de moujiks incultes en artistes
           susceptibles de rivaliser avec les maîtres des nations européennes.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="5"><head>Annexes</head>
         <p>Programme d’enseignement de l’Ecole des arts. ­ Projet de place Louis XV de Vallin de La Mothe. ­ Contrat d’engagement de Vallin de La
           Mothe et lettres qu’il a adressées au marquis de Marigny. ­ Règlements et privilèges de l’Académie de Saint-Petersbourg. ­ Contrat d’un
           professeur et d’un maître artisan à l’Académie. ­ Listes de personnel, des programmes de Grands prix, d’achats pour les collections
           académiques. ­ Index des noms de personnes et des noms de lieux.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

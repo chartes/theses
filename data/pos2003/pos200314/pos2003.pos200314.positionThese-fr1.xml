@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Un hôpital au Moyen Age : l’hôtel-Dieu Saint-Nicolas de Troyes du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub">« soustenir les povres ».</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Un hôpital au Moyen Age : l’hôtel-Dieu Saint-Nicolas de Troyes du <num>xiii<hi rend="sup">e</hi></num> au <num>xv<hi rend="sup">e</hi></num> siècle</title><title xml:lang="fr" type="sub">« soustenir les povres ».</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gesret, Julie">Julie Gesret</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200314.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’hôtel-Dieu Saint-Nicolas de Troyes est un établissement de taille moyenne, situé dans une ville qui joue un grand rôle durant la période
           médiévale. Des sources diversifiées permettent d’aborder à peu près tous les aspects de la vie de cet établissement et de dresser ainsi le
           portrait d’un hôtel-Dieu semblable à tant d’autres pour nombre de ses aspects, mais original de par son implantation dans une ville
@@ -61,7 +64,7 @@
           ses liens avec le chapitre qui l’a fondé, son emplacement et ses bâtiments, son personnel et ses hôtes, pour ensuite montrer de quoi vit
           l’établissement.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude de l’hôtel-Dieu Saint-Nicolas s’appuie principalement sur le fonds de l’établissement ainsi que sur celui du chapitre cathédral,
           tous deux conservés aux archives départementales de l’Aube, qui renferment des documents de nature variée. On peut notamment signaler pour
           le fonds de l’hôtel-Dieu un grand nombre de donations faites en sa faveur, des documents qui concernent des conflits avec la paroisse à
@@ -73,18 +76,17 @@
           (département des manuscrits) et les Archives nationales. Une typologie des sources a été réalisée et répartit les documents consultés en
           trois grandes catégories : donner/recevoir, contrôler, gérer.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre préliminaire">L’hôtel-dieu dans son environnement</head>
-        <p><hi rend="i">La ville de Troyes du <num>xiii<hi rend="sup">e</hi></num>  au <num>xv<hi rend="sup">e</hi></num>  siècle. </hi> — L’étude de tout établissement
+          <div n="3" type="part"><head n="0" type="chapter">L’hôtel-dieu dans son environnement</head>
+        <p n="1" type="chapter"><hi rend="i">La ville de Troyes du <num>xiii<hi rend="sup">e</hi></num>  au <num>xv<hi rend="sup">e</hi></num>  siècle. </hi> — L’étude de tout établissement
           hospitalier urbain doit s’accompagner de la présentation de la ville qui l’abrite. Sont donc évoqués la prospérité médiévale de la ville de
           Troyes, due aux foires de Champagne et à la politique ambitieuse des comtes de Champagne, la population troyenne et ses caractéristiques
           sociales, le déclin de la cité à partir du <num>xiv<hi rend="sup">e</hi></num>  siècle.</p>
-        <p><hi rend="i">L’hôtel-Dieu Saint-Nicolas et les autres maisons-Dieu de Troyes. </hi> — Une comparaison avec les autres établissements
+        <p n="2" type="chapter"><hi rend="i">L’hôtel-Dieu Saint-Nicolas et les autres maisons-Dieu de Troyes. </hi> — Une comparaison avec les autres établissements
           charitables de la ville permet de mieux dégager les spécificités de l’hôtel-Dieu Saint-Nicolas. Il existe en effet à Troyes un hôtel-Dieu
           principal : l’hôtel-Dieu le Comte, et cinq établissements de taille moindre, appelés les « petits hôpitaux », parmi lesquels figure
           l’hôtel-Dieu Saint-Nicolas.</p>
-      </div><div n="2" type="part"><head n="Première partie">La structure de l’hôtel-Dieu Saint-Nicolas</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La structure de l’hôtel-Dieu Saint-Nicolas</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La fondation et les liens avec le chapitre</head>
           <p>L’hôtel-Dieu Saint-Nicolas est l’établissement hospitalier le plus ancien de Troyes. Dès l’évangélisation de la ville, l’évêque a dû
             organiser autour de la cathédrale un service d’assistance aux plus démunis, comme c’est le cas dans chaque <hi rend="i">civitas</hi>. Par
@@ -101,7 +103,7 @@
             médecine dans la bibliothèque du chapitre pourrait également indiquer un intérêt particulier pour le soin des hôtes de
             l’établissement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’emplacement et les bâtiments</head>
           <p><hi rend="i">Choix de l’emplacement. </hi> — L’emplacement de l’hôtel-Dieu obéit naturellement à des raisons topographiques. La
             proximité de l’une des portes de la ville peut par exemple indiquer la volonté délibérée d’accueillir les passants. Le voisinage avec une
@@ -123,8 +125,8 @@
             latrines…) ainsi que la chapelle. Ces bâtiments demandent un entretien régulier et de fréquentes réparations, dont il est intéressant de
             mesurer la place sur le budget de Saint-Nicolas.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Le fonctionnement de l’hôtel-Dieu</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le fonctionnement de l’hôtel-Dieu</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le personnel de l’hôtel-dieu</head>
           <p><hi rend="i">Quel effectif ? </hi> — La communauté de l’hôtel-Dieu Saint-Nicolas est composée de religieux, hommes et femmes, qui
             suivent la règle de saint Augustin. Elle est peu importante et son effectif semble, au <num>xiv<hi rend="sup">e</hi></num>  siècle, tourner autour
@@ -149,7 +151,7 @@
             garde de la prévôté. Ces personnels, notamment les chapelains, ne viennent pas nécessairement des proches environs de Troyes et
             représentent un poste important dans le budget de l’hôtel-Dieu.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’accueil</head>
           <p><hi rend="i">Qui sont les hôtes de Saint-Nicolas et combien sont-ils ? </hi> — L’effectif des hôtes qui sont accueillis à Saint-Nicolas
             est difficile à évaluer. Si l’on se fie au nombre de lits présents dans l’infirmerie et la salle des malades, il serait d’une quarantaine,
@@ -162,8 +164,8 @@
             base des repas, mais des légumes, de la viande, des fromages, des fruits secs viennent les compléter. Les personnes les plus faibles
             bénéficient de soins particuliers : nourriture spécifique ou soins médicaux.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">Les moyens de subsistance de l’hôtel-Dieu</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Les moyens de subsistance de l’hôtel-Dieu</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un établissement propriétaire et gestionnaire</head>
           <p><hi rend="i">La localisation et la nature des biens immeubles. </hi> — Deux types de biens immeubles sont à distinguer parmi les
             possessions de l’hôtel-Dieu. D’un côté on trouve des immeubles, situés à Troyes, de l’autre, les biens agricoles que l’hôtel-Dieu possède
@@ -198,7 +200,7 @@
             l’hôtel-Dieu se révèlent suffisantes pour que l’établissement n’ait jamais besoin d’acheter des céréales et de la cire, et presque jamais
             du vin.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le soutien de la société</head>
           <p><hi rend="i">Les donations. </hi> — L’hôtel-Dieu Saint-Nicolas bénéficie de nombreuses donations entre le <num>xiii<hi rend="sup">e</hi></num>  et
             le <num>xv<hi rend="sup">e</hi></num>  siècle. Les donateurs sont en majorité des clercs, chanoines pour la plupart, qui vivent à Troyes même ou
@@ -226,9 +228,7 @@
             tâche pour lui refuse de recevoir la moindre rémunération, les closiers des vignes accueillent et nourrissent parfois gracieusement les
             vendangeurs de l’hôtel-Dieu…</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>L’hôtel-Dieu Saint-Nicolas se révèle, par bien des aspects, semblable à la plupart des hôpitaux capitulaires de son temps, mais son lieu
           d’implantation, la singularité des itinéraires de certains religieux, ses relations avec la société qui l’entoure concourent à en faire un
           établissement spécifique. De plus, la grande richesse de ses livres de comptes permet de reconstituer son budget et d’évaluer la part des
@@ -238,11 +238,10 @@
           Moyen Age et de dresser avec eux d’utiles comparaisons. Elle a également cherché à dépeindre le tableau d’un établissement profondément
           ancré dans la ville et le plat pays environnants.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Extrait d’un registre de délibérations capitulaires. ­ Livre de comptes pour l’année 1379-1380. ­ Inventaire des biens de l’hôtel-Dieu
           Saint-Nicolas (1383). ­ Donation d’Isabelle, rendue à l’hôtel-Dieu Saint-Nicolas.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

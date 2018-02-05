@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Entre liberté d’entreprendre et surveillance par l’État</title>
-        <title type="sub">Les salines de Franche-Comté dans la seconde moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;/num&gt;&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècle (1840-1907)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Entre liberté d’entreprendre et surveillance par l’État</title><title xml:lang="fr" type="sub">Les salines de Franche-Comté dans la seconde moitié du <num>xix</num><hi rend="sup">e</hi> siècle (1840-1907)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Boully, Vincent">Vincent Boully</author>
       </titleStmt>
       <editionStmt>
@@ -38,34 +40,34 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2013.pos201305.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction </head>
+          <div type="introduction" n="1"><head>Introduction </head>
     <p>L’inscription des salines d’Arc-et-Senans (Doubs) et de Salins-les-Bains (Jura) au patrimoine mondial de l’humanité, respectivement en 1982 et en 2009, témoigne de la mise en valeur patrimoniale d’une activité industrielle majeure en Franche-Comté jusqu’au milieu du <num>xx</num><hi rend="sup">e</hi> siècle. Pour autant, la liste des lieux de production de sel à l’époque contemporaine ne s’arrête pas à ces deux salines. Si les deux sites ont été abondamment étudiés pour leurs qualités architecturales, pour les aspects techniques de la production de sel du Moyen Âge à l’époque contemporaine, pour la dimension utopiste du projet de Claude-Nicolas Ledoux, il n’existe aucune étude générale sur les entreprises salicoles ayant exploité les différentes salines-usines après la Révolution française. Cette thèse a pour objet d’analyser la démographie des entreprises salicoles actives dans la seconde moitié du <num>xix</num><hi rend="sup">e</hi> siècle, après l’instauration du nouveau régime salicole par la loi du 17 juin 1840. </p>
 		<p>Matière première hautement stratégique jusqu’au milieu du <num>xix</num><hi rend="sup">e</hi> siècle pour les finances publiques et pour l’économie, le sel a fait l’objet d’une surveillance particulière par l’État. Comment s’est-elle manifestée dans le nouveau cadre légal de la production de sel ? Pourquoi l’État est-il intervenu dans ce secteur industriel qu’il a libéralisé en 1840 ? Quels étaient les moyens de contrôle dont disposaient les pouvoirs publics à l’encontre d’entreprises de droit privé ? Telles sont les questions auxquelles cette thèse tente de répondre de manière générale pour les entreprises salicoles de Franche-Comté, entre 1840 et 1907, et de manière particulière pour la Société des anciennes salines domaniales de l’Est, entre 1862 et 1907. </p>
     
     
      </div>
-              <div type="sources"><head>Sources  </head>
+          <div type="sources" n="2"><head>Sources  </head>
     <p>Pour étudier les salines de Franche-Comté, le parti a été pris de trouver un équilibre entre le point de vue interne offert par les archives des entreprises, et le point de vue externe donné par celles de l’administration des Mines. D’un intérêt inégal, le fonds d’archives de la saline de Montmorot, conservé aux archives départementales du Jura sous la cote 8 J, contient notamment les registres de procès-verbaux d’assemblées générales des deux principales entreprises salicoles franc-comtoises durant la seconde moitié du <num>xix</num><hi rend="sup">e</hi> siècle. Les minutes notariales renseignent également la vie des entreprises salicoles : statuts des sociétés, listes d’actionnaires, baux, contrats, procurations. Concernant le point de vue externe, les fonds d’archives publiques de l’administration des Mines conservés aux Archives nationales (F<hi rend="sup">14</hi>) sont complémentaires de ceux conservés aux archives départementales du Jura, du Doubs et de la Haute-Saône (théoriquement sous-série 8 S). Les sources imprimées intéressant les salines franc-comtoises sont en outre nombreuses : de l’affaire Teste-Cubières jugée par la Cour des Pairs en 1847 aux opuscules de particuliers contre la fiscalité du sel, en passant par les débats législatifs et les textes normatifs sur la production et la commercialisation de sel. Trois séries de publications officielles sont également à signaler : la <hi rend="i">Statistique de l’industrie minérale</hi>, les enquêtes générales sur le sel de 1849-1851 et de 1866-1868, et les rapports annuels des ingénieurs des mines dans les <hi rend="i">Rapports et procès-verbaux des délibérations du Conseil général du Jura</hi>. </p>
     
     
     
     </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les salines de Franche-Comté dans la seconde moitié du xix<hi rend="sup">e</hi> siècle :  démographie des entreprises salicoles </head>
+          <div n="3" type="part"><head n="0" type="chapter">Les salines de Franche-Comté dans la seconde moitié du xix<hi rend="sup">e</hi> siècle :  démographie des entreprises salicoles </head>
 
-		<div>
+		<div n="1" type="chapter">
 <head n="Première section"><hi rend="i">Dura lex, sed lex</hi> : le sel, objet de choix politiques (1789-1848) </head>
     
     
@@ -86,7 +88,7 @@
     
       </div>
 			</div>
-		<div>
+		<div n="2" type="chapter">
 <head n="Deuxième section">Concentration et cartellisation des entreprises salicoles :  une entrave à la concurrence ou un remède nécessaire ? </head>
 
 		<div>
@@ -105,9 +107,9 @@
 		
 		</div>
 		</div>
-		</div><div n="2" type="part"><head n="Deuxième partie">La Société des anciennes salines domaniales de l’Est,  une grande entreprise salicole (1862-1907) </head>
+		</div><div n="4" type="part"><head n="0" type="chapter">La Société des anciennes salines domaniales de l’Est,  une grande entreprise salicole (1862-1907) </head>
 		
-				<div>
+				<div n="1" type="chapter">
 <head n="Première section">À la croisée du droit et de l’économie :  une entreprise industrielle, ses institutions, ses performances</head>
 		
 
@@ -129,7 +131,7 @@
 		<p>Après une période de forte croissance, de 1862 à 1872, et une maximisation des profits réalisés et des dividendes versés, la Société des anciennes salines domaniales de l’Est connaît une période d’incertitudes de 1873 à 1900. Les bénéfices de l’entreprise deviennent aléatoires, en fonction de facteurs conjoncturels (climat sur les littoraux du Midi et de l’Ouest, prix du charbon, accidents techniques) et structurels (organisation commerciale en Franche-Comté et en Lorraine, développement des réseaux ferroviaires). L’entreprise est à nouveau florissante à l’aube du <num>xx</num><hi rend="sup">e</hi> siècle, mais ses dirigeants font le choix d’investir massivement pour la modernisation des usines de production de sel et de produits chimiques, afin que la Société des anciennes salines domaniales de l’Est reste compétitive, dans le contexte des cartels régionaux du sel. </p>
 					</div>
 				</div>
-				<div>
+				<div n="2" type="chapter">
 
 <head n="Deuxième section">Actionnaires et administrateurs :  des hommes, des capitaux, des dirigeants pour l’entreprise </head>
 
@@ -146,7 +148,7 @@
 		<p>Les vingt-neuf notices biographiques des administrateurs de la Société des anciennes salines domaniales de l’Est témoignent de la diversité de leur origine sociale, de leur parcours professionnel et de leurs responsabilités au sein de l’entreprise ou de ses filiales. </p>
 					</div>
 				</div>
-				<div>
+				<div n="3" type="chapter">
 
 <head n="Troisième section">De la société aux usines : l’exploitation des salines jurassiennes (Montmorot, Salins et Grozon) </head>
 
@@ -157,17 +159,14 @@
 		<p>Le véritable changement intervenu au cours de cette période concerne les modalités de surveillance des salines. À partir de 1869, les entrepreneurs et entreprises dont la Société des anciennes salines domaniales de l’Est peuvent librement modifier ou augmenter leurs capacités de production. Le contrôle exercé <hi rend="i">in situ</hi> par les agents des contributions indirectes sur toute la chaîne de production du sel reste inchangé, mais les préoccupations des ingénieurs des mines évoluent. Aux craintes nées dans les années 1840 et ravivées dans les années 1870 quant à un éventuel effondrement de terrain dû à l’exploitation par dissolution des mines de sel, succède une surveillance accrue des conditions de travail (sécurité des ouvriers, système de retraite), en corrélation avec l’émergence d’une législation sociale, à l’aube du <num>xx</num><hi rend="sup">e</hi> siècle. </p>
 					</div>
 				</div>
-			</div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion </head>
+			</div><div type="conclusion" n="5"><head>Conclusion </head>
     <p>Par la loi du 17 juin 1840, l’État confie au secteur privé la mise en valeur d’une richesse naturelle alors stratégique tant pour les finances publiques que pour l’économie nationale : les gisements souterrains de sel gemme. La libéralisation de la production de sel en Franche-Comté permet notamment de répondre à la demande croissante de l’industrie chimique et de l’agriculture. Si l’initiative privée prédomine dans le nouveau régime salicole, les entreprises productrices de sel ne sont pas affranchies d’une surveillance par les pouvoirs publics. L’État régulateur intervient à différentes échelles, en tant que concesseur des mines de sel, en tant qu’autorité administrative décidant ou non la formation de sociétés anonymes jusqu’en 1867, en tant que percepteur de droits fiscaux et en tant que garant de la sécurité des individus et des constructions publiques ou privées. </p>
     
     
      </div>
-              <div type="appendix"><head>Pièce justificative </head>
+          <div type="appendix" n="6"><head>Pièce justificative </head>
 		<p><hi rend="i">Les statuts de la Société des anciennes salines domaniales de l’Est : étude comparative (1862-1906)</hi>. — L’édition des statuts de l’entreprise est présentée sous la forme d’un tableau synoptique mettant en regard les deux versions. </p>
 		</div>
-          </div>
       </body>
   </text>
 </TEI>

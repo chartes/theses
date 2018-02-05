@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les châteaux de l’orbite des Polignac en Velay (XIII&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XVI&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècles)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les châteaux de l’orbite des Polignac en Velay (XIII<hi rend="sup">e</hi>-XVI<hi rend="sup">e</hi> siècles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dumalle, Bérangère">Bérangère Dumalle</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200613.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le Velay possède un grand nombre de châteaux médiévaux, dans des états divers allant de la disparition complète à la conservation presque
           totale en élévation. Il n’a cependant pas encore bénéficié d’une étude archéologique à vocation de synthèse. Ce travail se limite aux
           châteaux qui appartinrent, dans cette région, aux vicomtes de Polignac entre les <num>xiii<hi rend="sup">e</hi></num> et <num>xvi<hi rend="sup">e</hi></num>
@@ -58,7 +61,7 @@
           archéologiques, il vise à reconstituer le réseau de fidélité que s’étaient constitué les Polignac à partir du contrôle des châteaux, et
           au-delà, à cerner le château sous tous ses aspects, tel qu’il apparaît dans les textes.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>On a eu recours essentiellement à des sources éditées, constituées par les différents cartulaires vellaves ou auvergnats (Le
           Monastier-Saint-Chaffre, Pébrac), les chroniqueurs (Médicis, Burel) et surtout l’énorme corpus rassemblé et publié par Antoine Jacotin entre
           1898 et 1906, les <hi rend="i">Preuves de la Maison de Polignac</hi>. Cette somme réunit plus de 800 textes de toutes sortes, allant du IX
@@ -70,9 +73,8 @@
           département des estampes et de la photographie de la Bibliothèque nationale de France a fourni un contingent important, mais non exhaustif,
           de documents.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Essai de synthèse</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Essai de synthèse</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation générale du contexte</head>
           <p>
             <hi rend="i">Présentation historique. —</hi> Le Velay, qui forme aujourd’hui plus de la moitié est du département de la Haute-Loire, qui
@@ -134,7 +136,7 @@
             conservés à l’époque moderne dans une salle spécifique de leur château respectif ou « trésorerie », et pour le dernier transféré dans une
             salle du couvent des dominicains du Puy dans le courant du <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le réseau castral des vicomtes en Velay : <lb/>un réseau de pouvoir</head>
           <p>
             <hi rend="i">Constitution : typologie. —</hi> Le patrimoine foncier propre des Polignac en Velay s’est constitué par l’accumulation
@@ -169,7 +171,7 @@
             Polignac est le seul site pour lequel on a pu effectuer un va-et-vient constant entre les textes et l’architecture et utiliser de la
             documentation archéologique, à la suite de sondages récents.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le château en Velay d’après l’exemple des Polignac : <lb/>essai de définition</head>
           <p>
             <hi rend="i">Fonctions du château. —</hi> Qu’est-ce qu’un château en Velay au Moyen Âge ? Les textes font apparaître trois fonctions
@@ -207,14 +209,12 @@
             désigne une maison forte, de borie ou de métairie, qui mettent l’accent sur le rôle agricole du lieu. Une évolution chronologique précise
             n’est pas vraiment décelable entre ces termes au sein de la période envisagée.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Monographies</head>
-        <p>Le catalogue monographique répertorie 72 sites, dont 8 péages, relevant des vicomtes de Polignac et recense 55 familles. Les données sont
+      </div><div n="4" type="part"><head n="0" type="chapter">Monographies</head>
+        <p n="1" type="chapter">Le catalogue monographique répertorie 72 sites, dont 8 péages, relevant des vicomtes de Polignac et recense 55 familles. Les données sont
           présentées dans le cadre de notices individuelles, sont classées dans un ordre chronologique strict et prennent systématiquement en compte
           les mêmes éléments distinctifs : vocabulaire employé pour désigner la personne ou le château, référence du texte, renvois vers les autres
           notices concernées par le même document. Ces notices sont un reflet brut de ce que livrent les textes utilisés.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>La documentation médiévale montre ici sa limite essentielle : masquer presque entièrement le château dans la réalité qui est pourtant la
           première à le caractériser aujourd’hui : sa réalité monumentale. À côté d’un bâtiment qui se dérobe et n’apparaît jamais en tant que tel
           dans les textes, on rencontre en permanence un château symbole et objet de pouvoir. Le château vellave est un peu, dans les textes, l’absent
@@ -225,11 +225,10 @@
           concernés, travail long et ambitieux très partiellement entrepris pour la région à ce jour et qui n’était pas l’objet de cette recherche,
           viendrait judicieusement compléter ces données en les éclairant d’un jour plus matériel.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Divers textes ayant pour sujet principal le château. — Reconstitutions généalogiques simplifiées des familles de Polignac, Poinsac et
           Chalencon. — Carte du Velay. — Photographies et plans de monuments cités, notamment du château de Polignac.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

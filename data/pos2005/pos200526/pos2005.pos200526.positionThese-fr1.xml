@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Georges Charpentier (1846-1905)</title>
-        <title type="sub">Éditeur de romans, roman d’un éditeur</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Georges Charpentier (1846-1905)</title><title xml:lang="fr" type="sub">Éditeur de romans, roman d’un éditeur</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Serrepuy, Virginie">Virginie Serrepuy</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200526.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’éditeur Georges Charpentier est principalement connu pour son amitié avec Émile Zola et pour son rôle « d’éditeur des Naturalistes ». Il
           passe néanmoins pour avoir été davantage passionné par les toiles de ses amis impressionnistes que par le bon fonctionnement de sa maison
           d’édition. On connaît surtout deux moments de sa période d’activité : les débuts dans les années 1870, avec les premiers grands succès de
@@ -64,7 +67,7 @@
           signifie confronter la réalité d’un catalogue reconstitué avec les différents regards des acteurs contemporains du champ littéraire. De
           cette façon, il s’agit de réfléchir sur le phénomène de construction d’un discours autour de la figure de l’éditeur.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Pour reconstituer le catalogue de la maison Charpentier entre 1871 et 1896, il était utile de rassembler l’ensemble des informations
           disponibles dans une base de données permettant un traitement statistique aisé. Les données ont été collectées grâce aux catalogues
           commerciaux conservés dans le fonds Q<hi rend="sup">10</hi> de la Bibliothèque nationale de France, à la <hi rend="i">Bibliographie de la
@@ -75,9 +78,8 @@
           conservées dans plusieurs bibliothèques patrimoniales parisiennes comme celles de l’Institut, de l’Arsenal ou le département des manuscrits
           de la Bibliothèque nationale de France. Les souvenirs des contemporains et la presse ont également été abondamment consultés.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">« L’éditeur des Naturalistes » (1871-1880)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">« L’éditeur des Naturalistes » (1871-1880)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’héritage</head>
           <p>Il s’agit de réfléchir sur l’héritage laissé par Gervais Charpentier à son fils Georges sur le plan financier, littéraire mais aussi
             symbolique. Le parcours de Gervais Charpentier est bien connu : avec la création de la <hi rend="i">Bibliothèque Charpentier</hi> en 1838,
@@ -97,7 +99,7 @@
             pour redonner vie au catalogue et gérer une image ambivalente. L’absence de formation du jeune homme vient d’ailleurs renforcer la
             fragilité de cet héritage.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’éditeur des Naturalistes : le temps des luttes et des succès</head>
           <p>En 1885, dans une lettre à Émile Zola, Georges Charpentier se qualifie « d’éditeur des Naturalistes », et la postérité s’est bien souvent
             contentée de cette étiquette commode. Il convenait donc de s’interroger sur la légitimité de ce titre. Marquée par une dynamique
@@ -118,7 +120,7 @@
             l’éditeur avec Joris-Karl Huysmans, Guy de Maupassant ou Léon Cladel montre au contraire une certaine réserve vis-à-vis des débutants.
             Georges Charpentier reste donc prudent à l’égard de la stratégie de groupe et soucieux de préserver l’équilibre de son catalogue.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le reste de la production</head>
           <p>La notion de naturalisme a servi d’étendard à Émile Zola pour faire connaître son œuvre : pour qu’il y ait une véritable école
             naturaliste, il fallait un « éditeur des Naturalistes ». Ce titre retenu par la postérité, Georges Charpentier le mérite sans aucun doute
@@ -152,8 +154,8 @@
             première génération naturaliste, et qu’un titre plus large « d’éditeur du roman contemporain », incluant le roman naturaliste, rendrait
             peut-être mieux compte de la réalité de sa politique éditoriale.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">« Ci-gît Charpentier, un éditeur fantaisiste qui tuait ses livres » (1880-1896)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">« Ci-gît Charpentier, un éditeur fantaisiste qui tuait ses livres » (1880-1896)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">
             <hi rend="i">La Vie moderne</hi>, journal illustré (1879-1883)</head>
           <p>Georges Charpentier est souvent présenté comme un dilettante qui aurait consacré l’essentiel de ses forces à soutenir ses artistes
@@ -171,7 +173,7 @@
             parisienne à la fois brillante et frivole. L’expérience est finalement victime des difficultés financières de l’éditeur – à moins qu’elle
             ne les ait provoquées –, qui cède le périodique en 1883.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les déséquilibres financiers et la perte de l’autonomie</head>
           <p>Dès 1879, l’éditeur se trouve dans une situation financière précaire, en dépit des succès d’Émile Zola qui lui rapportent à présent
             beaucoup d’argent. Georges Charpentier doit alors faire appel à des financements extérieurs. Après l’échec de négociations avec Calmann
@@ -186,7 +188,7 @@
             de politique éditoriale, mais, pendant les sept années où ils ont été majoritaires, Marpon et Flammarion ont laissé à la maison
             Charpentier son originalité et son image de marque.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Stratégies d’une maison littéraire</head>
           <p>A partir de 1880, la maison Charpentier est marquée par un déclin du nombre de titres publiés et d’auteurs nouveaux recrutés. De plus,
             dans les années 1890, le « krach de la librairie » vient encore accentuer le poids de la concurrence. Dans ce contexte difficile, quelles
@@ -220,8 +222,8 @@
             un groupe ou un genre littéraire, et celui de la grande maison généraliste, soucieuse de vendre au plus grand nombre, contribue sans doute
             à expliquer l’image brouillée de la maison d’édition.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Portrait d’un éditeur, image d’une maison</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Portrait d’un éditeur, image d’une maison</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La vie bourgeoise : l’espace de la représentation</head>
           <p>Au-delà du strict monde de l’édition, il était nécessaire d’esquisser le portrait d’un éditeur dont l’image conditionne celle de sa
             maison. Sa vie privée et publique est celle de la haute bourgeoisie, avec ses rites et ses valeurs à la fois intériorisés et mis en scène.
@@ -231,7 +233,7 @@
             femmes : tous se croisent au théâtre ou sur les plages selon les codes en vigueur dans cette catégorie sociale où les loisirs constituent
             un facteur de distinction.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Georges Charpentier ou l’affirmation du prestige culturel de l’éditeur</head>
           <p>
             <hi rend="i">De la collection au mécénat</hi>. – Georges Charpentier devient un véritable mécène des Impressionnistes, notamment de
@@ -258,9 +260,7 @@
               moderne</hi>. Ainsi, par son mode de vie, ses goûts et ses amitiés, Georges Charpentier pourrait porter le titre « d’éditeur de la vie
             moderne. »</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Alors que les historiens n’ont retenu que le titre « d’éditeur des Naturalistes », les contemporains avaient une conscience plus claire de
           la composition variée du catalogue Charpentier, comme le montrent plusieurs dictionnaires biographiques contemporains. Georges Charpentier
           est un homme fidèle en amitié, ce qui a sans doute contribué à la construction d’une forme de mythe autour de sa personne. De cette façon,
@@ -280,7 +280,7 @@
           puisque l’histoire doit parfois redistribuer les étiquettes à défaut de pouvoir y renoncer complètement, retenons celle d’Auguste Duviard
           qui voyait dans la maison Charpentier « la grande librairie du roman français. »</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Annexes et pièces justificatives ont été rassemblées selon des thèmes transversaux. En ce qui concerne <hi rend="i">La Vie moderne</hi>,
           des graphiques présentent l’évolution du contenu de la revue, avec le nombre d’articles publiés chaque mois sur différents sujets entre 1879
           et 1883. Pour ce qui est de l’illustration des ouvrages publiés par la maison Charpentier, quelques reproductions donnent une idée du style
@@ -291,7 +291,6 @@
           Charpentier avec ses auteurs, soit proches des milieux naturalistes, soit particulièrement bien représentés dans le catalogue Charpentier
           (Jean Ajalbert, Charles et Mary Bigot, Ernest d’Hervilly, Hector Malot, Oscar Méténier, Octave et Alice Mirbeau, Edgar Monteil).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Recherches sur l’antiquaire lyonnais Guillaume du Choul (&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ca.&lt;/hi&gt; 1496-1560)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Recherches sur l’antiquaire lyonnais Guillaume du Choul (<hi rend="i">ca.</hi> 1496-1560)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Guillemain, Jean">Jean Guillemain</author>
       </titleStmt>
       <editionStmt>
@@ -38,24 +40,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200209.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si l’on pressent l’importance de Guillaume du Choul dans l’histoire des antiquaires de la Renaissance, on ne sait en revanche presque rien
           de sa vie et de ses collections. La découverte de nouveaux documents et l’étude détaillée de ses livres permettront de mieux connaître le
           milieu dans lequel il vivait et de comprendre en quoi consistait l’œuvre d’un antiquaire lyonnais dans la première moitié du XVI <hi rend="sup">e</hi> siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources de la biographie de Du Choul sont peu nombreuses. Le principal fonds exploité concerne ses cousins (Vienne, Archives
           communales, fonds de l’hôpital, H 130 à 234). Le cabinet des titres de la Bibliothèque nationale de France contient plusieurs dossiers
           généalogiques d’autant plus précieux qu’ils ont conservé trace, sous la forme d’analyses, de documents perdus : généalogies dans ms. fr.
@@ -63,9 +66,8 @@
           l’étude de ses livres, on se fonde sur divers traités du <num>xvi<hi rend="sup">e</hi></num> siècle en épigraphie, en numismatique, en sciences
           naturelles, ainsi que sur des recueils d’estampes et de dessins, pour identifier ses intérêts littéraires et graphiques.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Un antiquaire lyonnais</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Un antiquaire lyonnais</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’Antiquité à Lyon sous François I<hi rend="sup">er</hi> et Henri II</head>
           <p>
             <hi rend="i">Les recherches</hi>. ­ L’importance de Lyon dans les études antiquaires à la Renaissance n’est plus à démontrer. On distingue
@@ -80,7 +82,7 @@
             médaillier de Guillaume du Choul, attesté dès 1537, ou du jardin archéologique de Bellièvre. Les médailliers en particulier sont bien
             connus grâce au corpus numismatique de Jacopo Strada.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Biographie de Guillaume du Choul</head>
           <p>
             <hi rend="i">Le milieu familial</hi>. ­ La famille de Guillaume du Choul, originaire de Longes et de Saint-Andéol-le-Château, en Lyonnais,
@@ -97,8 +99,8 @@
             Choul participait à l’assemblée savante que l’historiographie lyonnaise a appelée “ Académie de Fourvière ” et qui, en 1537, réunissait
             entre autres Girolamo Fondulo, Michel Servet, Benoît Lecourt, Guillaume et Maurice Scève.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les œuvres de Guillaume du Choul</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les œuvres de Guillaume du Choul</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le manuscrit des <hi rend="i">Antiquités romaines</hi>(Turin, Biblioteca Reale, ms. varia 212)</head>
           <p>O. Hirschfeld dans le <hi rend="i">Corpus inscriptionum latinarum</hi>, en 1899, et R. Cooper, en 1988, ont daté de 1538 le plus ancien
             livre de Guillaume du Choul qui ait été conservé, le manuscrit des <hi rend="i">Antiquités romaines</hi>. L’étude critique du texte
@@ -132,7 +134,7 @@
             mention dans son autobiographie de 1561. <lb/>L’examen codicologique du manuscrit a notamment permis de rétablir l’ordre initial des
             feuillets.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le livre des <hi rend="i">Bains</hi>(Bibl. nat. de Fr., ms. fr. 1314)</head>
           <p>Du Choul annonçait à la fin du manuscrit de Turin une étude sur les “ thermes et lavacres au livre second [des] <hi rend="i">Antiquitez
               romaines</hi> ”, alors qu’il en était déjà au livre III, entendu comme unité codicologique dans le système de 1555. En 1547, l’auteur
@@ -166,7 +168,7 @@
             depuis peu à Rome et dont la description laisse entendre qu’il pourrait s’agir d’une copie d’après les Loges de Raphaël au Vatican :
             peut-être conviendra-t-il de revenir sur le jugement de H. Zerner, qui avait exclu l’hypothèse d’un voyage à Rome de Fantuzzi.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Du <hi rend="i">De re nautica</hi> au <hi rend="i">Discours de la religion</hi>
          </head>
           <p>Le <hi rend="i">De re nautica</hi>, manuscrit qui serait actuellement conservé à la bibliothèque de l’Université du Minnesota, est connu
@@ -211,8 +213,8 @@
             monétaires, jusqu’alors mal compris. La <hi rend="i">Religion</hi>, que l’on trouve dans bien des catalogues de bibliothèques anciennes,
             servit de répertoire iconographique à plusieurs peintres, comme Nicolas Poussin.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La documentation et sa mise en œuvre</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La documentation et sa mise en œuvre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les sources littéraires</head>
           <p>
             <hi rend="i">La bibliothèque de Guillaume du Choul</hi>. ­ On connaît actuellement trois livres portant les armes peintes de Du Choul, un
@@ -230,7 +232,7 @@
             <hi rend="i">Liste des citations explicites</hi>. ­ La liste de toutes les références bibliographiques avouées dans les livres de Du Choul
             met en évidence la prédominance des auteurs grecs et latins de l’Antiquité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le dossier épigraphique</head>
           <p>
             <hi rend="i">Les recueils d’inscriptions de Du Choul</hi>. ­ Contrairement à ce que rapporte la tradition historiographique lyonnaise, Du
@@ -243,7 +245,7 @@
             <hi rend="i">Catalogue des inscriptions</hi>. ­ Est donnée la liste des 113 inscriptions latines citées dans les livres de Guillaume et de
             Jean du Choul, en partie identifiées grâce au <hi rend="i">Corpus inscriptionum latinarum</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La documentation graphique</head>
           <p>
             <hi rend="i">Monnaies antiques</hi>. ­ Le médaillier de Guillaume du Choul, l’un des premiers documentés en France, était déjà
@@ -274,7 +276,7 @@
             Penni, ainsi que de plusieurs <hi rend="i">modelli</hi> de Jules Romain pour le Palais du Té (Mantoue) et d’un dessin du Primatice d’après
             la colonne Trajane.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La composition</head>
           <p>
             <hi rend="i">La citation</hi>. ­ L’analyse d’un passage du manuscrit de Turin sur l’histoire de Lyon dans l’Antiquité montre que le mode
@@ -285,22 +287,19 @@
             cascades de relatives. D’autre part les insertions témoignent de la mise à jour de la documentation de l’auteur : ainsi les thermes de
             Caracalla, fouillés en 1545-1547, n’étaient pas mentionnés dans le manuscrit des <hi rend="i">Bains</hi>.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La vie détaillée de Guillaume du Choul nous échappe par manque de sources. En revanche, l’étude de ses œuvres permet de se faire une idée
           relativement précise de sa pratique d’antiquaire. Il avait réuni depuis 1537 au moins une documentation abondante, comprenant des gravures
           et des copies de dessins italiens qui lui venaient non seulement de Rome mais aussi de Fontainebleau. Ces ressources documentaires étaient
           largement ouvertes aux lettrés. Depuis 1546, Du Choul composait des manuscrits destinés à être présentés au roi : les <hi rend="i">Antiquités romaines</hi>(1547) pour François I<hi rend="sup">er</hi> qui mourut avant l’achèvement du livre, les <hi rend="i">Bains</hi>(1547) et le <hi rend="i">De re nautica</hi>(v. 1548-1550) offerts à Henri II. N’ayant pas obtenu de gratification, il fit
           imprimer trois livres, consacrés à l’armée, aux bains et à la religion des Romains, qui connurent un grand succès jusqu’au XVIII <hi rend="sup">e</hi> siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Lettres de Claudio Tolomei à Sybille Sève (16 janvier 1545), à Jean Sapte (16 janvier 1545), à Luca Contile (9 mai 1545), à Gabriel Cesano
           (25 avril 1547). ­ Echange entre Jean et Claude de Tholomey (31 juillet 1563) [extrait]. ­ Appointement entre Jean de Tholomey et Madeleine
           du Choul d’une part, et Claude du Choul de l’autre (18 mars 1567). ­ Inventaire de la bibliothèque de Jean Choul (17 octobre 1556). ­
           Preuves de noblesse de Floris du Chol (25 janvier 1668).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

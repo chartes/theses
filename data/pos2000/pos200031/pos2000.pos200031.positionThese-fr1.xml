@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Fièvre jaune et ordre colonial au Sénégal (1850-1960)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Fièvre jaune et ordre colonial au Sénégal (1850-1960)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Pam, Adama Aly">Adama Aly Pam</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200031.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La production historique relative à l’histoire coloniale est caractérisée par la prédominance de certains thèmes de recherche et une
           absence presque symptomatique d’autres. L’histoire de la médecine coloniale est de ceux-là. Le fait que l’œuvre sanitaire ait été considérée
           comme un élément principal de la mission civilisatrice de la France explique en grande partie le retard de la recherche historique française
@@ -77,7 +80,7 @@
           dont ils ne veulent pas laisser le monopole aux Maures. Sur le plan de la recherche strictement médicale, les médecins coloniaux participent
           à l’assainissement des colonies.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources relatives à l’histoire de la santé aux colonies sont riches et variées, mais dispersées. Il s’agit essentiellement des rapports
           médicaux fournis par les services de santé mais également des correspondances diverses entre les différentes administrations pendant les
           crises sanitaires : les services de police, les chambres de commerce, les correspondances diverses des populations adressées à
@@ -92,16 +95,15 @@
         <p>Les sources imprimées sont essentiellement constituées de relations de voyage contemporaines et de thèses de médecine soutenues par des
           médecins coloniaux.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Colonisation et santé : A la rencontre d’un étrange univers morbide</head>
-        <p>Dans la deuxième moitié du <num>xix<hi rend="sup">e</hi></num>  siècle, l’opportunité de l’entreprise coloniale, du fait du coût économique et
+          <div n="3" type="part"><head n="0" type="chapter">Colonisation et santé : A la rencontre d’un étrange univers morbide</head>
+        <p n="1" type="chapter">Dans la deuxième moitié du <num>xix<hi rend="sup">e</hi></num>  siècle, l’opportunité de l’entreprise coloniale, du fait du coût économique et
           humain, ne fait pas l’unanimité au sein de l’élite métropolitaine. Certains lobbies constitués autour de l’Union coloniale et des
           parlementaires convaincus tels que Jules Ferry font l’éloge de la colonisation, d’autres plus sceptiques estiment que l’œuvre coloniale,
           minée par des mortalités continuelles, est « un vrai château de sable sur lequel on fonde des espérance chimériques ». Dans les rapports de
           certains médecins, parmi les colonies françaises les plus insalubres, le Sénégal semble une des plus redoutables. La mortalité moyenne est
           de 140 pour 1 000 de 1832 à 1837. En 1881 les garnisons françaises de Podor, de Bakel et de Kayes sur le fleuve Sénégal accusaient même une
           mortalité de 40 pour 100.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Les conditions générales d’hygiène</head>
           <p>L’état sanitaire du Sénégal comme celui du reste de l’Afrique est perçu comme dangereux. Cette crainte transparaît à travers des
             expressions comme « le pays des fièvres », « le tombeau de l’homme blanc » ou « le rivage de la mort », qui étaient utilisées pour
@@ -114,7 +116,7 @@
             développement des moyens de communication, qui ouvrent des espaces jadis relativement clos à des influences épidémiologiques
             profondes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">La mise en place des institutions sanitaires</head>
           <p>Face à la réputation d’insalubrité des colonies, la pacification biologique, plus que la pacification politique, était le premier
             préalable de toute œuvre de conquête. La protection des militaires chargés de la conquête constitue le premier souci de l’administration.
@@ -127,13 +129,13 @@
             multiples maladies était préjudiciable à la mise en valeur de la l’Empire. L’objectif de la politique sanitaire se tourne alors vers une
             politique démographique. Il faut « faire du Noir ».</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La lutte contre la fièvre jaune : La médecine au secours de la colonisation</head>
-        <p>Première préoccupation de l’administration coloniale, la lutte contre la fièvre jaune mobilise le monde médical aussi bien aux colonies
+      </div><div n="4" type="part"><head n="0" type="chapter">La lutte contre la fièvre jaune : La médecine au secours de la colonisation</head>
+        <p n="1" type="chapter">Première préoccupation de l’administration coloniale, la lutte contre la fièvre jaune mobilise le monde médical aussi bien aux colonies
           qu’en métropole. Le caractère meurtrier des différentes épidémies et leurs répercussions politiques et économiques justifient cet intérêt
           particulier par rapport au typhus amaril. Toutefois, la politique de lutte contre la maladie ne fut pas la même à toutes les époques et elle
           a considérablement varié selon la politique des différents gouverneurs. Il apparaît que les rapports de pouvoir et de savoir entre médecins
           et administrateurs ont parfois eu des effets négatifs dans la politique de santé publique.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">L’évolution des idées et des pratiques médicales</head>
           <p>Les médecins chargés d’organiser la défense de la colonie contre la redoutable maladie n’étaient pas, du moins jusqu’à la révolution
             pastorienne, scientifiquement préparés à apporter des réponses satisfaisantes aux maladies particulières qui sévissaient dans les
@@ -157,7 +159,7 @@
             suivent pas toujours les recommandations du corps médical. Certains médecins n’ont pas manqué de dresser des réquisitoires sévères à
             l’encontre de l’administration de la colonie à l’occasion de certaines épidémies particulièrement graves, dont celles de 1878 et 1900.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Le cadre scientifique de la lutte contre la fièvre jaune : Les missions d’étude</head>
           <p>Le dernier quart du <num>xix<hi rend="sup">e</hi></num>  siècle fut marqué par l’essor incontestable de la bactériologie. La nouvelle science
             permettait de juguler les maladies en Europe, en Amérique du Nord et au Japon. Elle se heurtait toutefois aux pathologies dites
@@ -168,7 +170,7 @@
             celle effectuée en 1901 au Brésil pour vérifier les découvertes de Finlay. En 1928 a lieu la conférence africaine de la fièvre jaune et en
             1934 la découverte du vaccin contre la fièvre jaune par l’institut Pasteur de Dakar.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">La colonie : vaste laboratoire d’expérimentation</head>
           <p>L’année 1927 constitue le point de départ d’une nouvelle étape dans la lutte contre la fièvre jaune avec l’isolement du virus du typhus
             amaril appelé souche de Dakar, par le professeur Sellards. Un spécimen prélevé sur un jeune Syrien atteint de la maladie en décembre 1927,
@@ -186,8 +188,8 @@
             médicalisation par des pratiques diverses : par la fraude, par l’absentéisme au séances de vaccination, et parfois par des moyens
             violents.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les conséquences socioculturelles de la fièvre jaune</head>
-        <p>Le duel singulier entre la société coloniale et la fièvre jaune est riche d’enseignements. Les problèmes de santé publique ont été d’une
+      </div><div n="5" type="part"><head n="0" type="chapter">Les conséquences socioculturelles de la fièvre jaune</head>
+        <p n="1" type="chapter">Le duel singulier entre la société coloniale et la fièvre jaune est riche d’enseignements. Les problèmes de santé publique ont été d’une
           manière générale le lieu d’une confrontation sociale, entre plusieurs modèles interprétatifs des faits de santé ; d’où le problème de la
           médicalisation de la société sénégalaise. De quelle manière celle-ci a-t-elle accepté le modèle de la médecine coloniale Quel a été l’impact
           de la maladie dans le devenir et la construction de la société coloniale Quelles réactions a-t-elle engendré, quelles réalités matérielles
@@ -198,7 +200,7 @@
           de vie et de mort reposent en Afrique sur des connaissances tacites, mystiques et religieuses, en opposition avec les connaissances et les
           pratiques occidentales. La confrontation avec la fièvre jaune, que les indigènes appellent « maladie des blancs », est un moment privilégié
           d’expression de ces contradictions.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">La fièvre jaune et la psychologie collective</head>
           <p>Déclinée sous quatre-vingt-dix-neuf vocables, la fièvre jaune inspire la crainte, elle est la hantise des coloniaux. Au Sénégal le monde
             scientifique s’accorde à trouver une origine étrangère à la maladie. Pendant l’épidémie, les services administratifs, les écoles, les
@@ -210,7 +212,7 @@
             l’affreuse réputation de la colonie. Ainsi dans le <hi rend="i">Moniteur du Sénégal</hi>, organe officiel d’information, en cas
             d’épidémie, on cesse systématiquement de publier la liste hebdomadaire des décès.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les difficultés sociologiques de la médicalisation de la société coloniale</head>
           <p>La principale difficulté de la médecine coloniale a été de faire admettre les normes de la nouvelle médecine. Cette difficulté est à
             mettre en relation avec les représentations culturelles des faits de santé. Dans la société indigène, dont certaines sont islamisées, d’un
@@ -226,7 +228,7 @@
             fièvre jaune ou les accidents liés au début de la vaccination antiamarile, les médecins coloniaux ont parfois été soupçonnés d’euthanasie
             par les indigènes. C’est aussi pourquoi ceux-ci ont élaboré toute une panoplie de stratégies pour échapper aux mesures sanitaires.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">L’espace politique de la santé</head>
           <p>Devant la difficulté de soumettre les indigènes et la conviction que ces derniers constituent le réservoir de virus où toutes les
             maladies contagieuses prenaient leur source, l’administration se résout progressivement à une politique de mise à l’écart de la population
@@ -249,9 +251,7 @@
             les statistiques médicales de la capitale. La maladie cesse de se manifester dans les centres urbains pour réapparaître dans les
             campagnes, sans toutefois mettre en péril la capitale, protégée par la vaccination.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’étude de la fièvre jaune porte un éclairage singulier sur la dynamique de la médecine coloniale, son évolution, sa confrontation avec
           d’autres pratiques médicales. Elle permet d’appréhender des phénomènes sociaux et culturels généraux. La lutte contre la fièvre jaune a
           laissé sa marque dans le paysage urbain du Sénégal par la présence de bâtisses au baies grillagées, mais également par la création d’espaces
@@ -260,13 +260,12 @@
           auteurs, comme Lapeysonnie, prédisent déjà, du fait de l’abandon des campagnes de vaccination de masse en Afrique, le retour des épidémies
           meurtrières du passé.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Sources en langue arabe : lettre du marabout Cheikh Sidia Baba à la population de Dakar ; lettre du marabout El Hadji Malick Sy à la
           population de Dakar. ­ Arrêté portant mesures à prendre dans la ville de Saint-Louis lors de l’épidémie de fièvre jaune de 1881. ­ Rapport
           au gouverneur général de l’A.O.F. suivi d’un projet de création d’un service d’assistance médicale aux indigènes (1904). ­ Arrêté portant
           création d’un service d’assistance médicale aux indigènes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

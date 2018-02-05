@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Notre-Dame de Senlis : une cathédrale au coeur de la cité</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Notre-Dame de Senlis : une cathédrale au coeur de la cité</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Christophe, Delphine">Delphine Christophe</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200203.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La cathédrale gothique conserve dans la pierre le souvenir des ambitions et des aspirations d’une société, dont elle reflète la culture, la
           pensée et les pratiques liturgiques. Malgré sa taille modeste, bien éloignée du gigantisme de certaines de ses contemporaines, Notre-Dame de
           Senlis est le fruit de l’ambition d’un prélat cultivé, désireux de doter son diocèse d’un édifice répondant aux exigences nouvelles. Située
@@ -59,7 +62,7 @@
           nouveauté du thème ne manqua pas de frapper les historiens d’art, Notre-Dame suscita peu d’intérêt, ce que déplorait déjà Anthyme Saint-Paul
           en 1877. Les dommages subis par la construction gothique desservirent ce monument, qui se révèle pourtant passionnant.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Plusieurs types de sources ont été utilisés pour cette étude. Les archives conservées frappent par leur pauvreté, notamment pour le haut
           Moyen Âge. Aucune charte, ni notice épiscopale du <num>xi<hi rend="sup">e</hi></num> siècle ne subsiste. Cette pauvreté documentaire, certes fréquente
           pour des périodes anciennes, ne permet guère de s’appuyer sur des documents pour l’étude de l’évolution du groupe épiscopal senlisien et de
@@ -74,9 +77,8 @@
           patrimoine, aux Archives nationales (série NN) et aux archives départementales de l’Oise (série Fi). Les plans cadastraux ont constitué un
           dernier type de sources, essentiel à la compréhension de la topographie de la cité.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">De la cathédrale primitive au <num>x<hi rend="sup">e</hi></num> siècle</head>
-        <p>
+          <div n="3" type="part"><head n="0" type="chapter">De la cathédrale primitive au <num>x<hi rend="sup">e</hi></num> siècle</head>
+        <p n="1" type="chapter">
           <hi rend="i">Senlis antique</hi>. La ville de Senlis est construite sur un terrain qui s’élève sensiblement depuis le sud, où coule la
           Nonette, jusqu’à la partie septentrionale de l’enceinte du Bas-Empire, qui culmine à 78 mètres. Probablement fondé à l’époque d’Auguste, <hi rend="i">Augustomagus</hi>, “ le marché d’Auguste ”, est élevé au rang de cité malgré la superficie fort réduite du territoire de la <hi rend="i">civitas Sulbanectium</hi>. Sa situation géographique, qui en fait un véritable nœud routier entre la Belgique et la Gaule,
           justifie ce changement de statut. Entouré d’une muraille au Bas-Empire et ainsi réduit à environ six hectares, Senlis vit son tracé urbain
@@ -102,8 +104,8 @@
           cuisines. L’extension de la cathédrale au <num>xiii<hi rend="sup">e</hi></num> siècle contraignit les chanoines à abandonner cet espace au cours du
           deuxième quart du <num>xiii<hi rend="sup">e</hi></num> siècle, date à laquelle Louis IX accorda au chapitre l’autorisation d’implanter le quartier
           canonial au sud de Notre-Dame.</p>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le groupe épiscopal senlisien autour de l’an mil.</head>
-        <p>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le groupe épiscopal senlisien autour de l’an mil.</head>
+        <p n="1" type="chapter">
           <hi rend="i">Senlis autour de l’an mil</hi>. Passée en 980 aux mains de Hugues Capet, Senlis connut autour de l’an mil un essor
           considérable. Sa situation géographique et stratégique ainsi que les attraits traditionnels exercés par la proximité de forêts giboyeuses en
           firent un lieu de résidence particulièrement apprécié de la dynastie capétienne, qui participa au dynamisme de la ville à l’aube du nouveau
@@ -124,8 +126,8 @@
           d’établir un rapport univoque entre la fonction d’un édifice et ce parti architectural. Le vocable associé à cet édifice, sa localisation à
           l’écart de l’église cathédrale et l’évolution du culte des reliques en font plus assurément une église destinée à conserver dès l’origine
           les reliques des deux saints milanais qu’un ancien baptistère ou une chapelle.</p>
-      </div><div n="3" type="part"><head n="Troisième partie">Notre-Dame au <num>xii<hi rend="sup">e</hi></num> siècle</head>
-        <p>
+      </div><div n="5" type="part"><head n="0" type="chapter">Notre-Dame au <num>xii<hi rend="sup">e</hi></num> siècle</head>
+        <p n="1" type="chapter">
           <hi rend="i">Le contexte de la reconstruction</hi>. A l’aube de la première moitié du <num>xii<hi rend="sup">e</hi></num> siècle, l’évêque de Senlis
           décida de se lancer à son tour dans l’exceptionnelle aventure lancée en Ile-de-France par l’abbé Suger à Saint-Denis et par l’archevêque
           Henri Sanglier à Sens, malgré les dimensions et les revenus modestes de son diocèse. La présence fréquente des rois et la personnalité
@@ -179,9 +181,7 @@
           repérées dans le massif occidental et la chapelle du Bailli ne peuvent être assimilées à des marques de tâcherons, ces dernières requérant
           simplicité et rapidité d’exécution. Ces tracés soignés gardent le souvenir des techniques et de l’art de la géométrie des chantiers
           médiévaux.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La construction de Notre-Dame de Senlis se déroula dans un contexte politique et intellectuel extrêmement favorable, grâce à la présence
           fréquente des rois capétiens et à la personnalité particulièrement brillante de l’évêque Pierre (1134-1151), qui prit l’initiative de la
           reconstruction de la cathédrale, comme le montre un faisceau d’indices archéologiques, stylistiques et historiques. La situation financière
@@ -192,12 +192,11 @@
           livre nombre de ses secrets à l’observation. Souhaitons que cet édifice trop souvent omis ou évoqué pour son seul portail intéressera
           désormais plus largement les chercheurs de la première architecture gothique.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Actes divers concernant l’évolution du quartier canonial, la construction de Notre-Dame au <num>xii<hi rend="sup">e</hi></num> siècle. Obits des
           évêques de Senlis contemporains des travaux effectués dans la cathédrale. Détails des différents objets de sculpture étudiés et modelés par
           Pierre Robinet, statuaire, pour la restauration du portail principal de la cathédrale de Senlis.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

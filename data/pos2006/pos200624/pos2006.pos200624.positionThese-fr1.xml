@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les duchés de Bénévent et de Spolète</title>
-        <title type="sub">de la conquête lombarde au début de l’époque carolingienne</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les duchés de Bénévent et de Spolète</title><title xml:lang="fr" type="sub">de la conquête lombarde au début de l’époque carolingienne</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Thomas, Aurélie">Aurélie Thomas</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200624.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les duchés lombards de Bénévent et Spolète apparaissent à la fin du <num>vi</num>
 <hi rend="sup">e</hi> siècle en Italie centro-méridionale, au moment où l’invasion lombarde porte ses premiers coups contre le pouvoir
           byzantin en Italie. Les deux duchés, fondés par des troupes d’auxiliaires lombards autrefois au service de Byzance, se trouvent indépendants
@@ -70,10 +73,9 @@
           des deux duchés n’a pu faire absolument abstraction du second : ils sont toujours en regard l’un de l’autre et seule leur évolution
           différente à partir de l’époque carolingienne a pu rendre – dans une mesure qui reste à déterminer – cette comparaison caduque.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Naissance de Bénévent et de Spolète</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Naissance de Bénévent et de Spolète</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les sources</head>
           <p>Les sources pontificales sont les plus anciens témoignages que nous possédions sur l’existence des duchés de Bénévent et de Spolète. La
             correspondance de Grégoire le Grand, à la fin du <num>vi</num>
@@ -94,7 +96,7 @@
               Lombards de Bénévent</hi> d’Erchempert et la <hi rend="i">Chronique de Salerne</hi>, concernent ensuite exclusivement la principauté de
             Bénévent, détachée de son voisin spolétin.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Géographie des deux duchés</head>
           <p>La chaîne des Apennins qui s’étend du nord-ouest au sud-est de la péninsule, est la colonne vertébrale qui structure la physionomie des
             deux duchés. Elle constitue une ligne de fracture majeure entre un versant adriatique et un côté sud-ouest descendant vers la mer
@@ -105,7 +107,7 @@
             méridional vers les territoires byzantins de la Pouille, via la voie Trajanne, du duché de Naples, via l’Appia, et vers la Calabre, via la
             voie Popilia.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Origine des duchés, conquête et mise en place des frontières</head>
           <p>Le désastre lombard a longtemps été un lieu commun galvaudé par l’historiographie : l’arrivée de la nation barbare dans la péninsule
             était considérée jusque récemment comme synonyme de cités désertées, de campagnes vidées. Une relecture des sources et en particulier des
@@ -122,7 +124,7 @@
 <hi rend="sup">e</hi> siècle. A la fin du <num>vii</num>
 <hi rend="sup">e</hi> siècle, les duchés de Bénévent et de Spolète ont ainsi acquis leur forme quasi définitive.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">De la conquête a l’assimilation</head>
           <p>La première image qu’évoque l’implantation lombarde dans la péninsule italienne est celle d’un séparation radicale entre deux peuples.
             Véhiculée par la littérature grégorienne, cette image a été constamment reprise ensuite par l’historiographie. Par affinité culturelle
@@ -139,8 +141,8 @@
               <num>vii</num>
 <hi rend="sup">e</hi> siècle, on ne trouve plus à Bénévent et à Spolète que des Lombards réunis sous une même loi. Le terme de <hi rend="i">Romanus</hi> désigne désormais exclusivement les Byzantins et la population du duché romain.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Pouvoir et institutions dans les duchés</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Pouvoir et institutions dans les duchés</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Deux duchés autonomes au sein du <hi rend="i">regnum langobardorum</hi>
         </head>
           <p>Les ducs bénéventains et spolétins ont joui, tout au long de leur histoire, d’une autonomie unique au sein du monde lombard. Leur
@@ -169,7 +171,7 @@
             dynastie de Grimoald, marqué par l’avènement du Frioulan Arichis à la tête du duché, ne remettent d’ailleurs pas sérieusement en cause
             l’autonomie du duché.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le prince en son duché : un modèle de pouvoir a part</head>
           <p>Leur qualité de chefs de guerre et de conquérants – et non la nomination royale, comme pour les autres <hi rend="i">duces</hi> du
             royaume – fondait, à l’origine, la légitimité du pouvoir des ducs bénéventains et spolétins. La singularité de ces « duc-conquérants »,
@@ -189,7 +191,7 @@
 <hi rend="sup">e</hi> siècle, en opposition à un royaume « d’Outre-Pô » de plus en plus considéré comme une véritable terre étrangère.
         </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les institutions du duché</head>
           <p>Bénévent comme Spolète constituent à la fois une exception au sein du monde lombard et un modèle de son fonctionnement étatique. Toute
             la hiérarchie et l’organisation propre au <hi rend="i">regnum</hi> se retrouvent à Bénévent et à Spolète – à une autre échelle et avec des
@@ -206,8 +208,8 @@
 <hi rend="sup">e</hi> siècle et par les conséquences de la conquête. A côté des grands monastères et des évêchés, cohabitent également
             tout un ensemble d’églises particulières ou « Eigenkirche », fondées par de riches laïcs ou par les ducs eux-mêmes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">élites et société</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">élites et société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les élites dirigeantes</head>
           <p>Au cours de la période lombarde, on assiste à l’émergence dans les deux duchés d’une « noblesse » ducale, qui se distingue par sa
             richesse foncière et par la détention d’offices publics. Elle devient, à partir du <num>viii</num>
@@ -231,7 +233,7 @@
             sanctionnait la fidélité au duc de l’élite gouvernante du duché. Il témoignait en même temps de la proximité de ces hommes avec le
             pouvoir.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Élites et société locale</head>
           <p>La stabilité du système politique bénéventain et spolétin reposait à la fois sur la capacité du pouvoir ducal à intégrer ses élites et
             sur la capacité de ces dernières à assumer à leur tour, en concurrence avec le duc, ces mêmes fonctions de redistribution des richesses et
@@ -245,7 +247,7 @@
             des offices ducaux au sein d’une même famille. La création de liens familiaux permettait de conforter les réseaux d’influence d’une lignée
             donnée, en assurant à ses enfants l’appui de leurs <hi rend="i">cognati</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Richesse foncière et mobilité des terres</head>
           <p>L’ensemble des cartulaires qui regroupent la documentation des duchés, pour le <num>viii</num>
 <hi rend="sup">e</hi> et le début du <num>ix</num>
@@ -262,10 +264,10 @@
             partir de la fin du <num>viii</num>
 <hi rend="sup">e</hi> siècle – en est un autre élément distinctif.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Troisième Partie">Les deux duchés face a la conquête franque</head>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre Premier">Hildeprand et le duché de Spolète</head>
           <p>Au moment de la défaite lombarde, le duché spolétin retrouve son indépendance sous les auspices romains. Le nouveau duc élu à Rome,
             Hildeprand, est un Lombard, un adversaire de l’ancien parti royal au pouvoir à Spolète avant la chute du <hi rend="i">regnum</hi> lombard.
@@ -280,7 +282,7 @@
             bénéventaine. Spolète à travers Hildeprand est entré dans le camp des vainqueurs et a poursuivi son existence sinon indépendante, du moins
             relativement autonome.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre II">Le règne fondateur d’Arichis II de Bénévent</head>
           <p>La chute de la monarchie lombarde constitue également un moment déterminant pour le duché bénéventain. Contrairement à ce que l’on
             observe pour le duché spolétin, qui tombe dans un certain anonymat, la postérité a retenu le « coup de génie » d’Arichis  <num>ii</num>,
@@ -294,7 +296,7 @@
             sut par ailleurs gagner l’alliance byzantine afin de faire pièce au pouvoir franc. Son règne, ducal et princier, constitue donc un
             moment-charnière de la vie du duché.</p>
         </div>
-        <div>
+        <div n="7" type="chapter">
           <head n="Chapitre III">L’héritage d’Arichis et d’Hildeprand</head>
           <p>La disparition en 788 des deux protagonistes du passage dans l’époque franque marquait un véritable tournant dans l’histoire des deux
             duchés. Arichis et Hildeprand disparaissaient en effet presque simultanément, laissant derrière eux un héritage politique considérable.
@@ -303,9 +305,7 @@
             par Arichis depuis 774. En revanche, Hildeprand n’a pas d’héritier pour lui succéder dans son œuvre. L’avènement d’un Franc, Guinichis,
             sonne le glas de l’autonomie du duché et l’échec posthume de la politique menée par l’énergique duc spolétin.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Les duchés de Bénévent et de Spolète ont suivi, à la période lombarde, un parcours très analogue, tant sur le plan institutionnel et
           politique que sur le plan diplomatique. On retrouve à Bénévent comme à Spolète des institutions comparables, fidèles au modèle lombard et à
           ses particularités. La prééminence, dans le couple formé par ces deux duchés, revenait cependant au grand duché méridional, dont l’influence
@@ -325,13 +325,12 @@
           lombard et le monde romain laisse la place à une frontière culturelle et étatique durcie que l’on retrouvera encore mille ans après à
           travers l’existence du Mezzogiorno italien.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Carte de Bénévent et Spolète au <num>viii</num>
 <hi rend="sup">e</hi> siècle. – L’histoire de Bénévent et de Spolète à travers l’<hi rend="i">Historia Langobardorum.</hi> – Tableau des
           ducs de Spolète. – Tableau des ducs de Bénévent. – Reconstitutions généalogiques de la noblesse bénévento-spolétine. – Liste des abbés de
           Farfa. – Monnaies bénéventaines. – Dossier sur Sainte-Sophie de Bénévent. – Index des noms.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

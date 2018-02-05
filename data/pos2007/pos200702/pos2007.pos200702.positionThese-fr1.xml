@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Cronice ab origine mundi&lt;/hi&gt; de Gonzalo de Hinojosa</title>
-        <title type="sub">Une chronique universelle écrite par un évêque Castillan au début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle et traduite pour Charles V</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les <hi rend="i">Cronice ab origine mundi</hi> de Gonzalo de Hinojosa</title><title xml:lang="fr" type="sub">Une chronique universelle écrite par un évêque Castillan au début du <num>xi<hi rend="sup">e</hi></num> siècle et traduite pour Charles V</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Aubert, Stéphanie">Stéphanie Aubert</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200702.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les <hi rend="i">Cronice ab origine mundi</hi> sont une chronique universelle écrite au début du <num>xiv<hi rend="sup">e</hi></num> siècle par
           Gonzalo de Hinojosa, évêque de Burgos, mort en 1327. Cette chronique a connu un succès sans doute médiocre en Espagne, puisqu’elle n’est
           conservée que dans un seul manuscrit. Les historiens de la littérature ont longtemps expliqué cette désaffection par le caractère archaïque
@@ -64,12 +67,11 @@
         <p/>
         <p/>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude</head>
-        <p/>
-        <p/>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Étude</head>
+        <p n="1" type="chapter"/>
+        <p n="2" type="chapter"/>
+        <div n="3" type="chapter">
           <head n="Chapitre premier">Biographie de l’auteur</head>
           <p>L’étude de la biographie de l’auteur n’a pu être faite qu’à partir de précédentes biographies et d’éditions ou de catalogues d’actes.
             Elle apporte néanmoins quelques éclairages à son œuvre. Gonzalo de Hinojosa vient d’une famille de <hi rend="i">ricos
@@ -80,7 +82,7 @@
             avec le genre de l’histoire universelle, notamment à Saint-Denis, où il a probablement consulté l’œuvre de Guillaume de Nangis.</p>
           <p/>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre II">Le manuscrit : l’historien et son atelier, étude codicologique</head>
           <p>
             <hi rend="i">Présentation du manuscrit</hi>. — De nombreux indices laissent penser que le manuscrit latin est un manuscrit d’auteur, copie
@@ -104,7 +106,7 @@
             lecteurs.</p>
           <p/>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre III">Le texte : composition du récit historique</head>
           <p>
             <hi rend="i">Le prologue</hi>. — Le prologue se divise en deux parties, l’une rhétorique, l’autre technique. La première permet
@@ -153,7 +155,7 @@
             en français.</p>
           <p/>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre IV">Diffusion : la traduction de Jean Golein</head>
           <p>On connaît quatre exemplaires de la traduction française des <hi rend="i">Cronice</hi> de Gonzalo de Hinojosa, appelée <hi rend="i">Chroniques de Burgos</hi>. Tous ont été copiés dans les années 1370-1410, un pour le roi Charles V, deux pour le duc de Berry et un
             pour Louis d’Orléans. Cette traduction a été réalisée par le carme Jean Golein sur commande du roi Charles V, à une date non déterminée,
@@ -180,17 +182,17 @@
           <p/>
           <p/>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition</head>
-        <p/>
-        <p/>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Édition</head>
+        <p n="1" type="chapter"/>
+        <p n="2" type="chapter"/>
+        <div n="3" type="chapter">
           <head n="Chapitre premier">Notices des manuscrits</head>
           <p>L’édition du texte latin est faite à partir d’un manuscrit unique (E), le P. I. IV de la Real Biblioteca d’El Escorial. L’édition du
             texte français repose sur deux manuscrits : B, manuscrit 1150 de la Bibliothèque municipale de Besançon, et L, manuscrit Royal 19 E VI de
             la British Library de Londres.</p>
           <p/>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre II">Principes d’édition</head>
           <p>Le texte latin de l’édition suit exactement le manuscrit E. Les nombreuses fautes de syntaxe ou d’orthographe ont néanmoins été corrigées
             et renvoyées en apparat. Les corrections apportées par l’auteur sont signalées dans le texte.</p>
@@ -207,9 +209,7 @@
             l’identification de la source utilisée par Gonzalo de Hinojosa.</p>
           <p/>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Édition</head>
+      </div><div type="conclusion" n="4"><head>Édition</head>
         <p>L’édition comprend le prologue, en latin et en français, et un passage allant de l’avènement d’Othon Ier (962) à la veille de celui de
           Lothaire IV (1133), soit les folios 230v à 257 du manuscrit E et 431 à 471 du manuscrit B. Ces événements sont suffisamment éloignés pour
           que l’auteur en ait exclusivement écrit l’histoire à partir de livres et suffisamment proches pour que les sources à sa disposition aient
@@ -220,13 +220,12 @@
         <p/>
         <p/>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="5"><head>Annexes</head>
         <p>Reconstitutions généalogiques. — Liste de documents mentionnant Gonzalo de Hinojosa. — Liste des répétitions. — Table des rubriques de la
           seconde partie.</p>
         <p/>
         <p/>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

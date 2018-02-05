@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Étude comparée des diplômes de Louis le Germanique et de Charles le Chauve (829-877)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Étude comparée des diplômes de Louis le Germanique et de Charles le Chauve (829-877)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Brousseau, Nicholas">Nicholas Brousseau</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200304.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au cours de leurs règnes, Louis le Germanique et Charles le Chauve donnèrent un grand nombre de diplômes qui comptent au nombre des
           sources les plus précieuses pour notre connaissance de leur royauté. Ces actes ont fait l’objet de plusieurs études scientifiques depuis le
           milieu du <num>xix<hi rend="sup">e</hi></num>  siècle ; ils ont en outre été publiés dans les grandes collections nationales d’édition critique. Les
@@ -61,7 +64,7 @@
           pourquoi il a été entrepris d’étudier de manière comparée les diplômes royaux de Charles le Chauve et de Louis le Germanique sous trois
           angles différents : historique, historiographique et diplomatique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées au cours de ce travail comprennent d’une part les diplômes de Louis le Germanique et de Charles le Chauve, et
           d’autre part des archives d’histoire de la diplomatique des <num>xix<hi rend="sup">e</hi></num> -XX<hi rend="sup">e</hi>  siècles. L’objectif de ce
           travail étant précisément d’étudier les diplômes des deux rois, il a paru inutile de détailler ici la composition des différents corpus
@@ -69,9 +72,8 @@
           au fonds de la Commission des chartes et diplômes conservé à l’Institut de France et aux papiers d’Arthur Giry, qui sont conservés à Paris,
           à l’Ecole pratique des hautes études (E.P.H.E.), et à Vienne, pour une partie de la correspondance.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les hommes : leur règne, leur chancellerie</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les hommes : leur règne, leur chancellerie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les règnes de Louis le Germanique et de Charles le Chauve (817-877)</head>
           <p>Les règnes de Charles le Chauve et de Louis le Germanique jouèrent un rôle capital dans le développement des Francie occidentale et
             orientale au <num>ix<hi rend="sup">e</hi></num>  siècle. Louis le Germanique exerça le pouvoir dès 817 dans le « sous-royaume » de Bavière créé pour
@@ -107,7 +109,7 @@
             royaux, et donc d’en étudier les conséquences au sein des institutions concrètement responsables de l’émission et de la forme de ces
             documents : la chapelle royale et la chancellerie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Etude comparée des chancelleries de Louis le Germanique et de Charles le Chauve</head>
           <p>Pendant le règne de Louis le Germanique en Bavière (826-833), le personnel de sa chapelle et de sa chancellerie se limita à quelques
             clercs de l’entourage impérial placés sous la direction de l’abbé Gauzbald d’Altaich (826-833) ; tous les diplômes furent rédigés par le
@@ -149,8 +151,8 @@
             s’exerça. Le contexte de production des actes permet donc de se pencher désormais directement sur le cœur de la documentation,
             c’est-à-dire les diplômes eux-mêmes.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les corpus d’actes édités</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les corpus d’actes édités</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etude comparée des destinataires et de la tradition des diplômes</head>
           <p>Les diplômes de Charles le Chauve sont deux fois plus nombreux que ceux de Louis le Germanique : 420 diplômes sincères pour le premier et
             167 pour le second. Pourtant, les expéditions originales conservées sont en nombre similaire : respectivement 111 et 94. La disproportion
@@ -198,7 +200,7 @@
             également sur les méthodes critiques d’évaluation et d’édition qui se mirent en place en France et en Allemagne et constituent en quelque
             sorte le bout de la chaîne entre les Carolingiens et nous.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le développement de la diplomatique carolingienne en Allemagne et en France (1815-1955)</head>
           <p>Le fait que seulement 26% des diplômes de Charles le Chauve soient des originaux et que plus du tiers de ceux-ci proviennent du
             chartrier d’un seul destinataire, Saint-Denis, influa sur le développement des méthodes d’édition françaises dans le dernier quart du XIX
@@ -224,8 +226,8 @@
             desquelles les oppositions nationales, mais aussi les échanges concurrentiels entre érudits français et allemands, ont à n’en pas douter
             joué un grand rôle dans la perception de l’évolution des diplômes originaux.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les diplômes originaux</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les diplômes originaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les caractères externes des diplômes de Louis le Germanique et de Charles le Chauve et leur évolution entre 830
             et 870</head>
           <p>L’évolution des caractères externes des diplômes de Louis le Germanique et de Charles le Chauve suit les deux phases des règnes.
@@ -245,7 +247,7 @@
             impérial. D’autre part, le nombre croissant d’actes rédigés hors chancellerie provoque l’éclatement des formes et la multiplication des
             formats aberrants.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Typologie des actes originaux de Charles le Chauve et de Louis le Germanique</head>
           <p>L’influence de la mesure prise par le souverain sur la forme diplomatique a fait l’objet de travaux importants pour l’époque
             carolingienne. Robert-Henri Bautier a ainsi proposé de répartir les diplômes en trois catégories : les préceptes mineurs, qui ne portent
@@ -271,9 +273,7 @@
             diplomatique, mais ils ne présentent d’unité ni de format ni de dimension. En revanche, ils ont comme caractéristique commune de posséder
             un formulaire très long et complexe.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’étude des diplômes de Charles le Chauve et de Louis le Germanique sous trois angles, historique, historiographique et diplomatique,
           permet de conclure à une évolution distincte des actes des deux rois entre 829/840 et 876/877. Cette évolution distincte se perçoit beaucoup
           plus nettement en Francie orientale qu’en Francie occidentale. A l’Est, elle est le reflet d’un projet politique cohérent : la création d’un
@@ -282,12 +282,11 @@
           de plusieurs siècles. Il est également malaisé de déterminer dans quelle mesure les changements observés dans les diplômes de Francie
           orientale ont été commandés par le roi lui-même.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Extraits numérisés de diplômes originaux de Charles le Chauve et de Louis le Germanique. ­ Edition de lettres et d’extraits de notes de
           cours d’Arthur Giry. ­ Lettres d’Engelbert Mühlbacher à Arthur Giry. ­ Lettre de Theodor Sickel à Henri d’Arbois de Jubainville. ­ Lettre de
           Maurice Prou à Arthur Giry.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

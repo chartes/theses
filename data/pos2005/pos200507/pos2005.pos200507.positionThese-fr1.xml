@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Un univers carcéral (XVI&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XVII&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècles) la prison de la Conciergerie et sa société</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Un univers carcéral (XVI<hi rend="sup">e</hi>-XVII<hi rend="sup">e</hi> siècles) la prison de la Conciergerie et sa société</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dégez, Camille">Camille Dégez</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200507.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La prison de la Conciergerie est restée presque totalement à l’écart de la recherche historique jusqu’à une période très récente, à
           l’inverse d’autres prestigieux établissements comme la Bastille, Vincennes, Saint-Lazare et même le Châtelet. La Conciergerie du Palais
           était pourtant au <num>xvii</num>
@@ -64,7 +67,7 @@
           la lignée de la récente discipline qu’est la sociologie pénitentiaire, ainsi que sur les parcours individuels des occupants de la
           Conciergerie.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le contraste est frappant entre la faible quantité du matériau historique disponible pour l’étude des prisons anciennes et la quantité des
           études qui leur sont consacrées. Dans le cas de la Conciergerie, seuls les registres d’écrous, conservés aux archives de la Préfecture de
           Police de Paris, ressortent véritablement de la catégorie des « archives pénitentiaires ». Dans ces registres étaient consignées suivant les
@@ -92,14 +95,13 @@
           données dont nous ne disposons pas pour le siècle précédent, faute de documents administratifs de cette nature : sont ainsi envisagés la
           nourriture des prisonniers, l’estimation de la population de la prison, le chapelain de la Conciergerie, etc.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">État des lieux de la Conciergerie au début du <num>xvii</num>
+          <div n="3" type="part"><head n="0" type="chapter">État des lieux de la Conciergerie au début du <num>xvii</num>
 <hi rend="sup">e</hi> siècle</head>
-        <p>L’objectif de cette partie est de dresser un cadre général pour une meilleure compréhension de qui est au centre de l’étude, à savoir la
+        <p n="1" type="chapter">L’objectif de cette partie est de dresser un cadre général pour une meilleure compréhension de qui est au centre de l’étude, à savoir la
           sociabilité et les comportements des prisonniers à la Conciergerie. Les documents sont en effet particulièrement riches sur ces derniers
           aspects, mais ils nous renseignent aussi, de façon plus parcellaire, sur le cadre, sur les conditions de vie et l’identité des prisonniers,
           sur le personnel de la prison, enfin sur la manière d’écrire le récit judiciaire.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">La plus importante prison de Paris ?</head>
           <p>La Conciergerie du <num>xvii<hi rend="sup">e</hi></num> siècle peut certes être qualifiée de « prison ordinaire », puisqu’elle accueille
             majoritairement des prisonniers de droit commun, elle occupe cependant une place particulière dans le paysage pénitentiaire parisien. Au
@@ -122,7 +124,7 @@
             parviennent également aux oreilles des contemporains et connaissent parfois une diffusion importante par le biais de l’imprimé, en
             particulier les récits d’évasion et autres faits divers.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">L’espace carcéral</head>
           <p>Si l’architecture des bâtiments de la Conciergerie est depuis longtemps étudiée par les historiens de l’art, la répartition des espaces
             intérieurs est mal connue pour le <num>xvii</num>
@@ -144,7 +146,7 @@
             dans une certaine mesure à la Conciergerie, divisée entre espace extérieur, aire de surveillance et zones franches, elles-mêmes comportant
             des espaces réservés et des refuges.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Les conditions matérielles de détention</head>
           <p>Les conditions matérielles de la détention dans les prisons de l’époque moderne sont souvent décriées par les historiens du
               <num>xix</num>
@@ -158,7 +160,7 @@
             fondement ; il suffit d’étudier les conséquences sanitaires et démographiques des conditions de détention (maladie physique et mentale,
             décès) pour s’en convaincre.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Les occupants de la prison</head>
           <p>Afin d’étudier les interactions entre les différents groupes qui occupent la prison, voire entre les personnes au sein de ces groupes, il
             est nécessaire de connaître leurs caractéristiques propres.</p>
@@ -184,7 +186,7 @@
             personnel individuellement ; elles sont d’ailleurs parfois heureusement complétées par les minutes des notaires parisiens. Les deux
             dynasties successives de concierges, les familles Regnoust et Dumont, ont ainsi pu faire l’objet d’un traitement particulier.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre V">Le récit judiciaire</head>
           <p>Les « informations » ou enquêtes sont la source principale pour l’étude de la Conciergerie du <num>xvii</num>
 <hi rend="sup">e</hi> siècle. Les circonstances de leur déroulement sont en même temps celles de l’élaboration du récit judiciaire. Ce
@@ -197,12 +199,12 @@
             structure du récit judiciaire en envisageant les pièces de la procédure l’une après l’autre. L’énumération des données fournies par chaque
             document de l’affaire Claude Boursier (1570) a servi à expliquer le travail de recomposition du récit à la base de cette étude.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La sociabilité carcérale</head>
-        <p>Sans chercher absolument à calquer l’étude de la sociabilité de la Conciergerie sur les concepts de la sociologie goffmanienne, on s’est
+      </div><div n="4" type="part"><head n="0" type="chapter">La sociabilité carcérale</head>
+        <p n="1" type="chapter">Sans chercher absolument à calquer l’étude de la sociabilité de la Conciergerie sur les concepts de la sociologie goffmanienne, on s’est
           efforcé d’en garder à l’esprit les principaux, qui sont venus enrichir l’analyse des différents récits, mis en série ou individuellement. On
           a retenu notamment, tout en la nuançant fortement, la double opposition entre prisonniers et personnel, dehors et dedans comme principale
           dynamique des relations sociales dans l’espace carcéral.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Les prisonniers entre eux : <lb/>une caricature de la société dans son ensemble ?</head>
           <p>La prison serait, selon E. Goffman, « à la fois un modèle réduit, une épure et une caricature de la société globale ». La société
             carcérale peut donc être examinée à l’instar de la société de son ensemble, sous l’angle des facteurs de regroupement (de la simple
@@ -213,7 +215,7 @@
             motivations des prisonniers querelleurs, les circonstances précises des bagarres et les modalités de la violence, enfin la résolution de
             ces conflits et leurs conséquences disciplinaires et judiciaires.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les prisonniers et le personnel</head>
           <p>Les deux groupes qui cohabitent à la Conciergerie divergent en de nombreux points, ce qui rend fort complexes les relations sociales
             entre eux. En premier lieu, ils sont disproportionnés en taille : la prison héberge de 200 à 300 prisonniers contre une douzaine de
@@ -226,7 +228,7 @@
             conflit, causées principalement par les « abus » commis par le personnel (cupidité, brutalité, abus de pouvoir), dont le guichetier Pierre
             Pelletier, dit La Pierre, est la caricature. La riposte des prisonniers est parfois violente.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Les prisonniers et l’extérieur</head>
           <p>Les rapports qu’entretiennent les prisonniers avec le monde extérieur sont peut-être ce qui distingue le plus radicalement la
             Conciergerie du <num>xvii</num>
@@ -241,14 +243,14 @@
             procureurs, gens du Parlement et personnes charitables). La notion de « mort civile » est enfin à bannir pour la majorité des prisonniers,
             qui peuvent signer des contrats devant notaires, et même sortir de la prison temporairement sous certaines conditions.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’aventure de l’évasion, un révélateur</head>
-        <p>La prison se doit d’être un lieu de sûreté. La préoccupation du personnel de la prison, et à un plus haut niveau, de l’administration
+      </div><div n="5" type="part"><head n="0" type="chapter">L’aventure de l’évasion, un révélateur</head>
+        <p n="1" type="chapter">La prison se doit d’être un lieu de sûreté. La préoccupation du personnel de la prison, et à un plus haut niveau, de l’administration
           judiciaire est donc d’empêcher les évasions, qui sont à la fois un danger pour l’ordre public et un frein à la bonne marche de la justice.
           Si l’on se place à présent du côté des prisonniers, la prison équivaut à la privation de la liberté. Toutes leurs pensées vont naturellement
           à chercher les moyens d’en sortir, par la voie légale du procès ou celle de l’évasion. Il convient de ne pas perdre de vue les deux versants
           du phénomène, sa préparation et sa mise en œuvre par les prisonniers et leurs complices éventuels d’un côté, et de l’autre une attention de
           tous les instants du personnel – dans l’idéal, du moins.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Contexte et enjeux de l’évasion</head>
           <p>
             <hi rend="i">L’évasion dans la théorie.</hi>– L’étude de la terminologie autant que celle des juristes sont un excellent moyen de pénétrer
@@ -272,7 +274,7 @@
             simple synthèse comparatiste. Hors du cadre de ce travail, chaque récit mériterait d’être étudié pour lui-même d’une façon approfondie.
          </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">S’évader de la Conciergerie</head>
           <p>Les dossiers reconstitués livrent une formidable série d’histoires individuelles, de tentatives d’évasions couronnées ou non de succès,
             dont on ne connaît malheureusement pas toujours l’issue. Plus intéressante encore est l’étude de ces textes mis en série, qui fait surgir
@@ -304,9 +306,7 @@
             car les fugitifs sont rarement repris. Les conditions dans lesquelles se déroulent les transferts expliquent la fréquence des évasions,
             qui peuvent être étudiées de façon symétrique aux évasions depuis la prison.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>En observant le paysage carcéral parisien et français, on trouve des établissements qui présentent un certain nombre de similitudes avec la
           Conciergerie, au-delà de la vocation à accueillir les prisonniers de la justice royale. L’un des plus proches, qui pourrait faire l’objet
           d’un travail comparable à cette thèse à partir de sources identiques, est le Grand Châtelet. La Conciergerie reste cependant la prison la
@@ -331,11 +331,10 @@
           ou d’un groupe de prisonniers, à la biographie desquels cette recherche concourt en quelque sorte, notamment Claude Boursier, le baron de
           Contenant et Pierre du Jardin.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition des documents concernant les affaires Claude Boursier (1570), de Leans (1609), Contenant (1641), Bienvenue (1641) et Coulombier
           (1644).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

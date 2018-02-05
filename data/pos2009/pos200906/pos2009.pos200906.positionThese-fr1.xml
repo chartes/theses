@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Photographes et photographies de la Libération</title>
-        <title type="sub">Le Service cinématographique de l’armée, du débarquement de Provence à Berchtesgaden (août 1944-mai 1945)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Photographes et photographies de la Libération</title><title xml:lang="fr" type="sub">Le Service cinématographique de l’armée, du débarquement de Provence à Berchtesgaden (août 1944-mai 1945)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Blum, Catherine">Catherine Blum</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200906.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Une profusion d’images fixes et animées accompagnent, encadrent et illustrent la Libération. Cet événement historique se décompose lui-même
           en une multitude de scènes, dans le temps et dans l’espace, des premiers vacillements du Reich allemand avec le débarquement en Afrique du
           Nord en novembre 1942, jusqu’à la poursuite des combats sur le front du Pacifique en 1945. L’armée française, désireuse de redorer son
@@ -75,7 +78,7 @@
           diffusion et un impact sur le public largement conditionnés par un cadre de travail exceptionnel, une emprise nécessaire et parfois
           implicite de la censure, et une conception très traditionnelle des mécanismes de propagande.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les fonds photographiques de l’Établissement de communication et de production audiovisuelle de la Défense (fort d’Ivry) constituent le
           corpus de départ de la recherche. La quasi-totalité de la production du SCA y est conservée, accompagnée des comptes rendus des opérateurs
           aux armées. Une fois les contours géographiques et chronologiques du sujet définis, il est nécessaire de partir à la recherche de sources
@@ -87,9 +90,8 @@
           fonds documentaires relatifs à la Seconde guerre mondiale, mais des échantillons conséquents et facilement repérables sont conservés à la
           Bibliothèques du SHD, à la Bibliothèque de documentation internationale contemporaine (Nanterre) et au Mémorial de Caen.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">fonctionnement du service et définition des cadres de production</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">fonctionnement du service et définition des cadres de production</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un outil aux ambitions multiples : <lb/>propagande, instruction et documentation</head>
           <p>
             <hi rend="i">La position originale d’un service de production iconographique dans la hiérarchie militaire</hi>. — Ce travail de recherche
@@ -114,7 +116,7 @@
             populations civiles. L’impératif de la défense nationale, telle qu’elle est définie par le général de Gaulle, implique de soutenir le
             moral de tous, à tous prix, y compris celui d’une information objective et impartiale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Structure et fonctionnement</head>
           <p>
             <hi rend="i">Les moyens d’une politique et son application : budget et effectifs</hi>. — Une étude institutionnelle du SCA implique
@@ -146,7 +148,7 @@
             la diffusion de la propagande, durant la période, constituent une tentative de mieux intégrer le service dans l’organigramme militaire.
             Cette expérience et cette volonté d’une meilleure coordination sont malheureusement éphémères.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La diffusion de la production</head>
           <p>
             <hi rend="i">Des canaux de diffusion multiples, un risque de dispersion de la production</hi>. — Les différents moyens et médias par
@@ -160,8 +162,8 @@
             publicitaires sont esquissées, les moyens les plus traditionnels sont finalement les plus employés, à l’instar de la presse aux armées.
         </p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’opérateur du SCA, photographe et « soldat d’opérette »</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’opérateur du SCA, photographe et « soldat d’opérette »</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les opérateurs aux armées, avant, pendant et après le SCA</head>
           <p>
             <hi rend="i">Le jalon d’un plan de carrière ou les hasards de la mobilisation ?</hi>— L’attention se porte ici sur le personnel qui
@@ -177,7 +179,7 @@
             sur le terrain, l’écart est grand, sans pour autant nuire à l’activité du service. Les opérateurs apprécient au contraire la grande
             liberté de mouvement et d’initiative qui leur est accordée presque par défaut, en l’absence d’un encadrement et de consignes stricts.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Soldats-photographes, un profil contrarié ?</head>
           <p>
             <hi rend="i">Un frère jumeau du reporter ?</hi>— L’opérateur du SCA est ici comparé à son homologue de la presse civile, largement plus
@@ -201,7 +203,7 @@
             du SCA correspond à l’apogée de la popularité du Général. Alors que l’ennemi est clairement désigné par la propagande, le groupe des
             opérateurs, largement impliqué, n’échappe pas à l’unanimité patriotique de rigueur.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Photographe et acte photographique face à la guerre</head>
           <p>
             <hi rend="i">Création du reportage photographique, création de l’événement</hi>. — L’implication des photographes du SCA dans la guerre se
@@ -218,8 +220,8 @@
             création du reportage photographique, la question de la censure apparaît en effet secondaire, et n’intervient qu’en aval, lors de la
             sélection des images.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">« Ramenez des images ! » <lb/>Étude de la production photographique</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">« Ramenez des images ! » <lb/>Étude de la production photographique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre Premier">Nature de la production : une extraordinaire accumulation d’images</head>
           <p>
             <hi rend="i">Les contours d’une production institutionnelle</hi>. — L’analyse de la production photographique proprement dite est
@@ -236,7 +238,7 @@
             esthétiques, en passant par la valeur accordée aux symboles. D’autre part, c’est l’occasion d’aborder un type particulier de publication
             périodique de l’époque de la Libération, moins connue que la presse politique : la presse spécialisée et la presse aux armées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Où est la guerre ? Décryptage d’un langage iconographique</head>
           <p>
             <hi rend="i">Rhétorique de l’image</hi>. — La composition des images du SCA suit un rythme binaire et joue sur l’association de deux
@@ -252,7 +254,7 @@
             dans un réservoir de symboles connus, en particulier des thématiques religieuse et historique, pour signifier les caractères sacré et
             épique du parcours de l’armée française durant la Libération.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">« Une réconfortante vérité » : pour la construction d’un récit</head>
           <p>
             <hi rend="i">Mise en place et temporalité du récit</hi>. — Le récit de la Libération, à travers les images du SCA, est bien sûr le fruit
@@ -271,9 +273,7 @@
             cela par le gouvernement civil, la cohésion de l’Empire, symbolisée par la communion des combattants métropolitains et coloniaux sur le
             champ de bataille, constitue pour elles un enjeu de première importance.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’œuvre de propagande du SCA n’est pas à proprement parler un exemple de manipulation éhontée des foules par les dirigeants politiques.
           Dans un contexte marqué par l’incertitude politique, économique et sociale, elle participe au contraire activement à structurer une opinion
           publique désorientée. Dans le cadre des consignes de Défense nationale, et de manière plus vaste, selon une volonté de redonner à la France
@@ -283,7 +283,7 @@
           puisque le pilier de la nation que voulait être l’institution militaire est profondément ébranlé par de nouveaux conflits, avec en toile de
           fond durant la période, un bouleversement profond de toute la société française.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Textes fondamentaux relatifs à la création du SCA (novembre 1942-août 1944). — Textes et études concernant l’activité du SCA (mai
           1944-février 1958). — <hi rend="i">Note d’orientation pour les officiers de presse des grandes unités</hi>, Section Presse-Documentation (12
           avril 1945). — <hi rend="i">Instruction sur la préparation morale de l’armée à l’occupation de l’Allemagne, destinée aux commandants des
@@ -297,7 +297,6 @@
           libre. — Tableau récapitulatif des informations concernant les responsables du SCA titulaires d’un grade ou d’une équivalence de grade
           militaire. — Tableau récapitulatif des informations concernant les reportages du SCA France libre.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

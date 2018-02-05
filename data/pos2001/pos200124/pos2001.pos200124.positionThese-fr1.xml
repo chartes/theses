@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Concierges et capitaines du château de Vincennes (1258-1418)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Concierges et capitaines du château de Vincennes (1258-1418)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Zang, Marie-Astrid">Marie-Astrid Zang</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200124.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au début du <num>xii<hi rend="sup">e</hi></num> siècle, les rois Capétiens occupent deux types de résidences fortifiées: les unes sont issues du
           fisc carolingien ou font partie du domaine royal depuis longtemps, les autres ont été construites il y a peu pour affirmer la domination
           royale sur des terres récemment conquises. L’ensemble de ces châteaux sont confiés à la garde de châtelains, par ailleurs chargés de
@@ -68,7 +71,7 @@
           les concierges et les capitaines en poste à Vincennes. L’évolution observée à Vincennes sera confrontée avec la situation des autres
           résidences royales.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées sont conservées aux Archives nationales et à la Bibliothèque nationale de France, mais demeurent dispersées en une
           multitude de fonds. Aux Archives nationales ont été consultées les grandes séries conservant les documents produits par l’administration
           royale: Trésor des chartes, Monuments historiques, registres du parlement civil de Paris et surtout les archives de la Chambre des comptes,
@@ -80,9 +83,8 @@
           on a eu recours à titre complémentaire à diverses pièces originales (comptes, quittances, montres d’hommes d’armes…), dispersées dans la
           collection Clairambault, dans le fonds français et dans celui des nouvelles acquisitions françaises.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les concierges et les capitaines du château de Vincennes entre 1258 et 1418</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les concierges et les capitaines du château de Vincennes entre 1258 et 1418</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les concierges</head>
           <p><hi rend="i">Les concierges de Vincennes </hi>— Les rois de France ne s’intéressent au bois de Vincennes qu’à partir de la fin du
             XIIesiècle, lorsqu’ils résident de plus en plus souvent à Paris. Philippe Auguste acquiert divers droits d’usage afin de devenir le seul
@@ -126,7 +128,7 @@
             n’apparaissent qu’une ou deux fois dans la documentation: garde des maisons, garde des clefs des vieilles maisons, garde du parc, garde de
             la conciergerie, garde de l’étang, garde des ruisseaux, oiseleur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les capitaines</head>
           <p><hi rend="i">L’apparition d’un capitaine à Vincennes </hi>— La création de l’office de capitaine à Vincennes à la fin des années 1360
             participe à l’effort de mise en défense du royaume après la défaite de Poitiers (1356) et le traité de Brétigny-Calais (1360). Les
@@ -165,8 +167,8 @@
             ses hommes en même temps que les siens et délivre parfois quittance à leur place. Il peut commander aussi les troupes extérieures qui sont
             présentes à Vincennes lorsque le roi y réside.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Etude prosopographique</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Etude prosopographique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Leurs origines sociale et géographique</head>
           <p><hi rend="i">Le milieu social </hi>— A l’exception de Jean le Goix, tous les concierges et les capitaines de Vincennes dont nous
             connaissons l’extraction sont nobles, pour certains de fraîche date(André Le Clerc est anobli et Nicolas Braque est fils d’anobli). La
@@ -179,7 +181,7 @@
             leurs possessions patrimoniales. Lorsque ces dernières sont connues, les nouvelles acquisitions sont toujours situées à proximité. Ce
             voisinage permet de déduire la région d’origine des concierges et des capitaines : aucun ne semble venir du midi de la France.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Leur place dans l’entourage royal et leur rôle politique</head>
           <p><hi rend="i">Leur place dans l’entourage royal </hi>— La plupart des concierges et des capitaines du château de Vincennes sont membres
             de l’Hôtel du roi; seul Jean le Goix n’en a jamais apparemment fait partie. Les charges occupées à l’Hôtel sont d’importance diverse: les
@@ -200,7 +202,7 @@
             au cours de la guerre de Cent Ans. Certains ont pu être des pourvoyeurs de fonds et prêter de l’argent au roi, en vue notamment d’une
             campagne militaire. Autant que l’on puisse en juger, ces prêts sont fréquemment remboursés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Leurs autres fonctions</head>
           <p><hi rend="i">Les fonctions militaires </hi>— Au-delà de la garde de Vincennes, les concierges et les capitaines peuvent exercer d’autres
             fonctions militaires: au moins deux concierges, tous deux nommés Guillaume de Comtes, sont explicitement attestés au cours de campagnes
@@ -217,8 +219,8 @@
             eaux et forêts. Plusieurs enfin ont fait partie de l’administration locale en qualité de vicomte en Normandie, de bailli, de maire d’une
             ville, de garde dans une forêt ou de sergent.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La place de Vincennes dans l’administration royale</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La place de Vincennes dans l’administration royale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">D’autres résidences royales ont-elles connu la même évolution</head>
           <p><hi rend="i">Les résidences dépourvues de capitaines </hi>— Certaines résidences administrées par un concierge n’ont pas connu la même
             évolution que Vincennes. Une résidence urbaine comme le Palais de la Cité n’a jamais été confiée à un capitaine pour deux raisons: les
@@ -254,7 +256,7 @@
             concierge a dû être privé alors de la partie de ses attributions relatives à la forêt, à la différence de Vincennes, avant que sa charge
             même ne soit supprimée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Place des officiers de Vincennes dans l’administration royale</head>
           <p><hi rend="i">Les hommes </hi>— Comme leurs homologues en poste à Vincennes, les concierges et les capitaines des autres forteresses
             royales sont tous issus du même milieu social: mis à part quelques exceptions pendant les périodes de domination bourguignonne, ils sont
@@ -275,9 +277,7 @@
             le capitaine de Vincennes voit ses gages ramenés de 500 à 300 francs. Il n’est pas le seul à subir une telle baisse et demeure même moins
             touché que les autres capitaines, dont les gages sont quelquefois divisés par deux, voire par quatre.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Au milieu du <num>xiii<hi rend="sup">e</hi></num> siècle au plus tard, la résidence de Vincennes est confiée à un concierge qui s’occupe de
           l’entretien et de l’approvisionnement du manoir et veille sur le domaine forestier, avec l’aide d’un personnel assez nombreux. La
           construction du donjon, puis de la grande enceinte, par Jean II et Charles V entraîne un changement de statut de la résidence, qui est
@@ -290,10 +290,9 @@
         <p>Le château de Vincennes occupe une place particulière parmi les résidences royales: la fonction de concierge y a gardé tout son prestige
           après la création de l’office de capitaine et à aucun moment les deux fonctions n’y ont été confondues.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Ordonnances royales, mandements royaux et non-royaux, quittances, attestations.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

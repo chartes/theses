@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les lettres de cachet pour affaires de famille en Franche-Comté au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les lettres de cachet pour affaires de famille en Franche-Comté au <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Jandeaux, Jeanne-Marie">Jeanne-Marie Jandeaux</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200818.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La lettre de cachet pâtit grandement de sa sulfureuse réputation. Elle demeure le symbole de l’arbitraire de l’Ancien Régime et
           l’incarnation de l’oppression exercée par une puissance royale aveugle. Sa légende noire se fonde sur son seul usage répressif et tout
           particulièrement sur la lettre de cachet politique par laquelle le roi faisait enfermer dans ses bastilles des opposants, des gêneurs ou
@@ -75,7 +78,7 @@
           question. La procédure des lettres de cachet de famille offre la possibilité de saisir la complexité de cette relation privilégiée entre le
           pouvoir et les sujets et son évolution.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le fonds principal sur lequel s’appuie cette étude est le fonds de l’intendance de Franche-Comté, riche d’environ 350 dossiers de lettres
           de cachet dont 80 % de lettres de cachet pour affaires de famille. L’essentiel de ces dossiers sont conservés aux archives départementales
           du Jura (C 107 à 120, C 132 à 136) et de la Haute-Saône (C 72 à 75) ; on constate la disparition des dossiers concernant les subdélégations
@@ -96,10 +99,9 @@
           lettre de cachet ont été jugées constituent également une source excessivement précieuse pour l’étude des rapports unissant justice retenue
           et justice déléguée, commissaires et officiers (séries B des trois départements).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’institution des lettres de cachet en Franche-Comté au <num>xviii</num>
+          <div n="3" type="part"><head n="0" type="chapter">L’institution des lettres de cachet en Franche-Comté au <num>xviii</num>
 <hi rend="sup">e</hi> siècle</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation de l’institution des lettres de cachet</head>
           <p>Les lettres de cachet, à l’origine expédiées au nom de la seule raison d’État, peuvent dans les faits signifier n’importe quel ordre
             royal direct. Grâce à cette souplesse, à leur discrétion et à leur rapidité, elles sont devenues le moyen privilégié pour le roi de donner
@@ -129,7 +131,7 @@
             l’arbitraire et de la cruauté de l’État monarchique. Il est frappant de constater que peu d’études fouillées et objectives portent sur ce
             sujet tellement fameux et surtout hautement polémique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La procédure des lettres de cachet de famille en Franche-Comté</head>
           <p>La procédure des lettres de cachet de famille mobilise la hiérarchie administrative dans son entier. Le mémoire des familles pour
             l’obtention d’une lettre de cachet est en effet adressé au roi ou au secrétaire d’État de la Guerre qui a sous son administration la
@@ -148,7 +150,7 @@
             états de détenus par ordre du roi dans la province sont un remarquable exemple –, la procédure tend à lui échapper, notamment dans
             l’exécution des lettres de cachet.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Failles et contraintes du système des lettres de cachet</head>
           <p>Le contexte et l’objet même de la procédure des lettres de cachet de famille rendent sa conduite délicate. D’une part, elle implique
             l’ensemble de la hiérarchie administrative et exige une grande rigueur dans son exécution. D’autre part, elle plonge les agents du roi au
@@ -163,7 +165,7 @@
             sur le secrétaire d’État, l’intendant et le subdélégué et en jouant de la considération dont elles jouissent et surtout du fort respect de
             l’honneur familial et de l’autorité paternelle qui imprègne la pratique administrative et l’ensemble de la société d’Ancien Régime.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Relations, interférences et concurrences entre les différentes institutions de l’État monarchique et rôle des
             « puissances » de la province dans la procédure des lettres de cachet</head>
           <p>L’action administrative souffre de son manque de moyens en hommes et en temps certes. Mais elle est aussi limitée par l’intervention dans
@@ -186,8 +188,8 @@
             abus et qui connaît une dérive inquiétante dans la seconde moitié du <num>xviii</num>
 <hi rend="sup">e</hi> siècle.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La lettre de cachet, élément révélateur des tensions et des conflits familiaux</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La lettre de cachet, élément révélateur des tensions et des conflits familiaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Caractères généraux des lettres de cachet de famille en Franche-Comté</head>
           <p>Les dossiers de lettres de cachet de famille offrent l’image d’une entité familiale déchirée qui expose ouvertement ses divisions les
             plus secrètes au roi et au secrétaire d’État. Quelles sont les structures du conflit familial et les schémas-type des affrontements soumis
@@ -209,7 +211,7 @@
             l’État et la communauté soucieuse de préserver sa tranquillité. La rupture est alors consommée entre la famille et l’accusé. Ce dernier
             fait les frais d’un glissement des responsabilités familiales vers une prise en charge quotidienne des problèmes familiaux par l’État.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des familles déchirées. Étude des trois principales configurations</head>
           <p>Parents contre leurs enfants, maris contre leurs épouses, tels sont les schémas conflictuels les plus courants dans les lettres de
             cachet pour affaires de famille au <num>xviii</num>
@@ -248,7 +250,7 @@
             nucléaire. L’unanimité qui doit présider à l’octroi d’une lettre de cachet vole parfois en éclat autour de l’individu menacé, soutenu par
             une partie de sa parenté et attaqué par l’autre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Quand l’honneur dissimule l’intérêt. <lb/>Motifs revendiqués et motifs réels des lettres de cachet de famille</head>
           <p>L’argent est le moteur des conflits familiaux. La recherche omniprésente de l’intérêt pécuniaire anime la plupart des demandes de lettres
             de cachet de famille. Celle-ci est parfaitement admise par l’État lorsqu’il s’agit de faire cesser les dissipations d’un fils qui menacent
@@ -271,8 +273,8 @@
             conjoint imposé voire détesté, gênent l’épanouissement personnel de l’autre. La tentation est grande alors de faire usage de la lettre de
             cachet pour éliminer de sa vie un proche bien embarrassant.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">À l’ombre des maisons de force</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">À l’ombre des maisons de force</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation des principaux lieux d’enfermement</head>
           <p>Le statut à part des détenus par lettre de cachet de famille en lui-même entraîne leur réclusion dans des lieux spécifiques : les prisons
             d’État, mais surtout les maisons religieuses, les hôpitaux et les dépôts de mendicité sont les lieux par excellence de l’internement
@@ -294,7 +296,7 @@
             pension en apprend donc beaucoup, non seulement sur l’état d’esprit des parents et leurs relations avec l’accusé, mais aussi sur les
             conditions de vie de ce dernier.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Vivre dans une maison de force au <num>xviii</num>
 <hi rend="sup">e</hi> siècle</head>
           <p>Les conditions de vie des correctionnaires sont étroitement soumises aux dépenses consenties par leur famille et aux moyens financiers
@@ -318,7 +320,7 @@
             prendre ombrage de leurs démarches auprès d’elles ou de l’administration royale au sujet de la situation du prisonnier ou du défaut de
             paiement de la pension, source de continuelles querelles.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’émergence d’une réflexion sur le sens de la détention par lettre de cachet et le sort du correctionnaire</head>
           <p>Quels sont les buts réels de la détention par lettre de cachet ? Comment le prisonnier de famille est-il perçu par sa famille, par
             l’administration, puis par l’opinion publique naissante ? En fin de compte ces questions essentielles portant notamment sur le sort et le
@@ -344,9 +346,7 @@
             votée la loi instaurant les tribunaux de famille qui répond à cet « inextinguible besoin d’État » (A. Burguière) que la Révolution
             renforce encore.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les familles qui pouvaient recourir à l’autorité royale au <num>xviii</num>
 <hi rend="sup">e</hi> siècle ont beaucoup gagné dans le développement des lettres de cachet pour affaires de famille, et paradoxalement
           l’individu aussi, qui a trouvé dans le conflit un moyen de s’affirmer aux yeux de ses parents, de la communauté et de l’État. Le grand
@@ -362,11 +362,10 @@
           est de taille : contrôler la famille est un défi que l’État monarchique s’est attelé à relever ; s’il n’en a retiré que peu de profit, il a
           eu le mérite d’inaugurer une politique sociale en direction des familles que les régimes qui lui succèdent ont soin de continuer. </p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition de lettres des familles Bolot, Vuillin et Poncelin de Rancourt (1752-1771). — Édition des lettres patentes pour l’établissement du
           Bon Pasteur de Besançon et du règlement de cette maison de force (1744).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

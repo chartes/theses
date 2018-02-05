@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le couvent des Mathurins de Paris et l’estampe au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le couvent des Mathurins de Paris et l’estampe au <num>xvii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bermès, Emmanuelle">Emmanuelle Bermès</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200101.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’ordre de la sainte Trinité et Rédemption des Captifs, créé en 1198 par Jean de Matha et Félix de Valois, se donnait pour objectif de
           réunir d’importantes sommes d’argent afin de racheter dans les états barbaresques d’Afrique du Nord les chrétiens qui y étaient maintenus en
           esclavage. Leur maison parisienne, le couvent Saint-Mathurin, se trouvait rue Saint-Jacques, dans un quartier où, au XVII <hi rend="sup">e</hi> siècle, les graveurs et les marchands d’estampes rejoignaient les libraires et imprimeurs qui y étaient déjà installés en raison
@@ -62,7 +65,7 @@
           d’une iconographie trinitaire, peuvent permettre de mieux connaître la vie sociale, spirituelle, intellectuelle et culturelle de ces
           religieux.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La recherche des sources iconographiques concernant les Mathurins de Paris a été effectuée exclusivement dans les collections de la
           Bibliothèque nationale de France. Au département des estampes et de la photographie, il faut signaler la richesse des séries de portraits
           (N2 et N3), des séries alphabétiques de saints (Rd2) et des recueils factices de costumes religieux (Oc2). Une recherche par artistes
@@ -76,9 +79,8 @@
           couvent au <num>xvii<hi rend="sup">e</hi></num> siècle, conservées dans les études XLIX et CIX, et par la consultation dans la série S (biens des
           établissements religieux supprimés) des baux des maisons que possédaient les religieux dans le quartier Saint-Jacques.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’ordre des trinitaires à Paris</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’ordre des trinitaires à Paris</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Des «Trinitaires» aux «Mathurins»</head>
           <p>L’histoire du grand ordre français de rédemption de captifs fut toujours intimement liée à l’histoire de la ville de Paris, ce qui
             contribua à asseoir la prépondérance du couvent parisien dans l’ordre. Le couvent Saint-Mathurin prit une telle importance que le nom de
@@ -93,7 +95,7 @@
             depuis le couvent des Mathurins, contribuèrent à faire du ministériat de Louis Petit l’une des périodes les plus fastes pour les
             Trinitaires.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les hommes, les réalisations</head>
           <p>Louis Petit eut le ministériat le plus long de l’histoire de l’ordre. Il consacra sa vie à lutter contre les progrès des Trinitaires
             réformés, en œuvrant à embellir l’image du couvent des Mathurins par des travaux et des commandes de tableaux, et en développant une
@@ -111,7 +113,7 @@
             trois toiles que l’on changeait selon le temps liturgique. La menuiserie fut refaite au temps de Pierre Mercier. Ce général fit aussi
             réaliser en 1682 une série de portraits destinés à orner le cloître.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le couvent des Mathurins au Quartier latin</head>
           <p>Le dynamisme du couvent des Mathurins devait beaucoup aux relations qu’il entretenait au Quartier latin avec l’Université, avec les
             membres des confréries et avec les locataires des maisons qui lui appartenaient.</p>
@@ -139,8 +141,8 @@
             logeaient aussi toutes sortes d’artisans auxquels ils avaient de préférence recours, notamment pour les travaux de construction et de
             rénovation des maisons. Ce tissu de relations nouées dans le quartier était aussi un moyen de recruter des novices pour le couvent.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les Mathurins et l’estampe</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les Mathurins et l’estampe</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les fonctions des estampes</head>
           <p>L’intérêt des Trinitaires pour les images correspondait à une préoccupation caractéristique du temps: depuis le concile de Trente, les
             estampes faisaient l’objet d’une attention toute particulière de la part de la hiérarchie ecclésiastique. L’utilisation de l’estampe pour
@@ -170,7 +172,7 @@
             fonction principale, assignée aux estampes dans l’ordre. Cet usage déterminait donc plus que tout autre la production des estampes et les
             choix mis en œuvre lors de leur commande par les religieux trinitaires.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La commande et la production</head>
           <p>Si les religieux savaient tirer parti des liens qu’ils établissaient avec leurs locataires, à plus forte raison quand ceux-ci étaient
             des artisans ou des commerçants susceptibles de leur fournir les services dont ils avaient besoin, le cas des graveurs était particulier
@@ -204,7 +206,7 @@
             éditeurs d’estampes, en particulier les portraits de saint Jean de Matha et Félix de Valois figurant dans des suites de saints publiées
             par des éditeurs comme Herman Weyen, Michel Van Lochom ou Martin Van den Enden.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Circulation des estampes dans l’ordre trinitaire</head>
           <p>Les estampes produites autour du couvent des Mathurins n’avaient pas pour seul objectif de séduire le public: elles devaient aussi
             circuler au sein de l’ordre pour créer une uniformité stylistique et iconographique, conformément aux désirs de Louis Petit. Celui-ci
@@ -234,8 +236,8 @@
             de l’Espagne, même si elle était moins développée que celle qui allait de Paris vers l’Espagne: un échange existait bien. L’iconographie
             trinitaire s’élabora au <num>xvii<hi rend="sup">e</hi></num> siècle, d’abord à Paris, mais aussi en Espagne.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Iconographie trinitaire</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Iconographie trinitaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines de l’ordre trinitaire</head>
           <p>Les deux fondateurs de l’ordre, Jean de Matha et Félix de Valois, ont vu leur iconographie se créer de toutes pièces dans les premières
             années du <num>xvii<hi rend="sup">e</hi></num> siècle. Certaines images des saints fondateurs constituaient une allégorie représentative de l’ordre:
@@ -260,7 +262,7 @@
             parisiennes cherchaient à asseoir la tradition historique de l’ordre avec le plus d’exactitude possible. En somme, c’est toute la
             sensibilité et la spiritualité de ces deux pays qui est lisible dans l’iconographie des deux fondateurs de l’ordre trinitaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Dévotions particulières de l’ordre trinitaire</head>
           <p>Si le culte rendu à Jean de Matha et à Félix de Valois était le plus original et le plus spécifique à l’ordre trinitaire, d’autres
             dévotions particulières rythmaient la vie de ces religieux. La première d’entre elles était évidemment la dévotion à la Trinité, dont ils
@@ -279,7 +281,7 @@
             souvent ambiguë, les dévotions unitaires de l’ordre se mêlant aux dévotions locales de certains couvents. De plus, les Trinitaires
             semblaient parfois leur consacrer moins d’intérêt qu’à la rédemption des captifs.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’image du religieux trinitaire</head>
           <p>En même temps que se fixait, au début du <num>xvii<hi rend="sup">e</hi></num> siècle, l’iconographie de Jean de Matha, de Félix de Valois et des
             autres dévotions particulières de l’ordre, les religieux commencèrent à se soucier de donner d’eux-mêmes une image visuelle. En premier
@@ -300,9 +302,7 @@
             l’évocation d’une réelle activité. 
         </p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le couvent des Mathurins de Paris présentait au <num>xvii<hi rend="sup">e</hi></num> siècle une double spécificité: la place prépondérante qu’il
           tenait au sein de l’ordre trinitaire et son emplacement dans une partie de la cité dont l’activité intellectuelle et commerciale était
           exceptionnellement développée. Les images qui étaient commandées par les religieux de ce couvent étaient le reflet de ces caractéristiques:
@@ -314,7 +314,7 @@
           des influences artistiques à l’échelle de l’Europe, parce qu’il contribuait à la diffusion de modèles esthétiques et iconographiques d’un
           pays à l’autre, parfois dans des délais très courts, parfois sur le très long terme.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Un catalogue offre un corpus sélectif de 114 estampes. Il est organisé suivant un classement thématique qui répond à l’étude de
           l’iconographie trinitaire donnée plus haut. La première partie concerne la tradition historique de l’ordre, c’est-à-dire l’iconographie des
           deux fondateurs, Jean de Matha et Félix de Valois. La seconde partie regroupe les dévotions particulières de l’ordre trinitaire. La
@@ -322,7 +322,6 @@
           le classement des estampes. Pour chaque estampe ont été donnés des renseignements techniques, une description détaillée et parfois une
           illustration.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

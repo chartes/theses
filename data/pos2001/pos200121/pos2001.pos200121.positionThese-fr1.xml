@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’Église cathare du Carcassès (1167-début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’Église cathare du Carcassès (1167-début du <num>xiv<hi rend="sup">e</hi></num> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Roche, Julien">Julien Roche</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200121.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>« Eglise cathare du Carcassès » ou « catharisme en Carcassès » Les deux énoncés sont proches. Ils présentent néanmoins deux différences
           fondamentales. La première est d’ordre géographique. L’Eglise du Carcassès telle qu’elle a été définie lors du concile cathare de
           Saint-Félix-de-Caraman en 1167 dépasse largement le cadre des environs immédiats de Carcassonne, qui correspond au Carcassès historique,
@@ -68,10 +71,9 @@
           tranquillité dans les principaux <hi rend="i">castra</hi> de la région au début du <num>xiii<hi rend="sup">e</hi></num> siècle, jusqu’à la
           clandestinité, l’exil et la disparition dans la deuxième moitié du <num>xiii<hi rend="sup">e</hi></num> siècle et au début dusiècle suivant.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation des sources</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Présentation des sources</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les sources d’Inquisition et la collection Doat</head>
           <p>Si une étude de l’hérésie en Carcassès peut s’appuyer sur les seuls registres de l’Inquisition, l’historien qui entreprend celle de
             l’Eglise cathare du Carcassès doit avoir recours à d’autres sources, car ces registres sont extrêmement pauvres sur la situation en
@@ -82,7 +84,7 @@
             réalisées au <num>xvii<hi rend="sup">e</hi></num> siècle sur ordre de Colbert, aujourd’hui conservées à la Bibliothèque nationale de France dans la
             collection Doat.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les autres sources</head>
           <p>Les livres de l’Inquisition sont les plus riches. Néanmoins, d’autres sources existent, qui sont du plus haut intérêt lorsque l’on
             quitte la zone géographique couverte par les registres inquisitoriaux. Chroniques, traités et documents d’archives fournissent alors les
@@ -91,7 +93,7 @@
             succès de l’hérésie dans cette ville à la veille du massacre de la population, ou encore l’enquête royale sur les <hi rend="i">faidiments</hi> des seigneurs du Midi. L’ensemble de la documentation, très hétérogène, a l’avantage de présenter l’hérésie selon
             plusieurs points de vue, ce qui n’est pas le cas des sources d’Inquisition.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Problèmes d’authenticité et interprétation des sources</head>
           <p>Les problèmes liés aux faux n’épargnent pas le domaine du catharisme occitan en général, et la question de l’hérésie dans le Carcassès en
             particulier. La toute puissance des inquisiteurs a pu mener à certains abus et des agents de l’Inquisition ont pu être tentés de profiter
@@ -103,7 +105,7 @@
             critique. Néanmoins, l’hypothèse d’une falsification tant médiévale que moderne ne résiste pas à une critique serrée: l’acte parait bien
             authentique.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le discours dans les dépositions d’Inquisition</head>
           <p>Les dépositions devant le tribunal inquisitorial fournissent l’écrasante majorité des informations conservées sur l’hérésie dans le
             ressort du diocèse cathare du Carcassès. Liées à des circonstances exceptionnelles, ces documents présentent des caractéristiques très
@@ -118,8 +120,8 @@
             travestissement de la vérité qui lui fait accuser parents, amis et voisins. La déposition subit enfin une dernière déformation liée à la
             traduction des paroles du témoin, de sa langue maternelle, l’occitan, en latin.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’église cathare du Carcassès dans la première moitié du XIIIesiècle</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">L’église cathare du Carcassès dans la première moitié du XIIIesiècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre Premier">L’hérésie dans la partie occidentale de l’évêché</head>
           <p>L’étude de l’hérésie cathare dans la partie occidentale de l’évêché du Carcassès est relativement aisée, malgré de nombreuses lacunes
             dans les sources. Les registres d’Inquisition permettent de reconstituer l’implantation géographique et l’organisation ecclésiale de
@@ -152,7 +154,7 @@
             croyants; les réseaux de solidarité sur lesquels ils s’appuyaient sont systématiquement détruits par l’Inquisition, qui manie avec une
             grande efficacité la déstabilisation psychologique des croyants et fait éclater les liens familiaux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’hérésie dans la partie orientale de l’évêché</head>
           <p>Les territoires situés à l’est du Carcassès, le Minervois et le Biterrois, ont également été touchés par l’hérésie. Selon les régions,
             les registres de l’Inquisition n’ont pas été conservés ou n’ont jamais existé. L’étude comparée des sources disponibles montre une hérésie
@@ -163,8 +165,8 @@
             comparable aux autres villes « hérétiques » du Languedoc, comme Toulouse ou Albi. L’implantation de l’hérésie connaît ainsi une
             remarquable continuité, depuis Toulouse jusqu’à Béziers. En ce sens, on peut parler d’une présence extensive de l’hérésie.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’hérésie dans la seconde moitié du XIIIesiècle et au début du XIVesiècle</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’hérésie dans la seconde moitié du XIIIesiècle et au début du XIVesiècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le registre de Galand est-il une imposture</head>
           <p>Après 1260, toute hiérarchie disparaît en ce qui concerne l’Eglise cathare du Carcassès: les années 1250 semblent constituer un ultime
             recul de l’hérésie. Pourtant, le registre de Jean Galand et de Guillaume Saint-Seine indique qu’une poignée de bonshommes mène une
@@ -193,7 +195,7 @@
             accusations d’hérésie portées contre l’oligarchie carcassonnaise n’auraient donc aucun fondement, du point de vue strictement
             religieux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les Bonshommes</head>
           <p>Les bonshommes n’ont pas tous disparu en Carcassès durant les années 1250: le registre de Galand décrit l’activité d’une poignée d’entre
             eux à partir des années 1260. Les renseignements fournis par ce document sur la vie de ces ministres de l’hérésie sont particulièrement
@@ -216,7 +218,7 @@
             ils ont été formés. Même dans l’exil, les Eglises du Carcassès et du Toulousain ont probablement connu une existence séparée, car les
             sources concernant les gens du Toulousain sont muettes sur l’éventuelle présence de personnes du Carcassès à leurs côtés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Croyants</head>
           <p>Le tableau de l’hérésie en Carcassès après 1260 est totalement conditionné par la lecture que l’on fait du registre de Galand. Accepter
             l’ensemble des accusations contenues dans ce document conduit à décrire une hérésie fortement implantée dans tous les milieux sociaux:
@@ -246,7 +248,7 @@
             hérétiques fréquentent sensiblement les mêmes lieux avant et après le milieu du <num>xiii<hi rend="sup">e</hi></num> siècle. L’hérésie n’est donc pas
             encore morte, même si elle recule régulièrement.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La question de l’hérésie au début du <num>xiv<hi rend="sup">e</hi></num> siècle</head>
           <p>Les sources du début du <num>xiv<hi rend="sup">e</hi></num> siècle ont un caractère strictement rétrospectif: aucun document ne fait état, pour le
             Carcassès, de faits d’hérésie postérieurs à ceux dénoncés dans le registre de Galand. Le compte des encours de l’hérésie d’Arnaud Assalit
@@ -256,9 +258,7 @@
             années 1320, la théologie cathare a pu subsister sous forme de réminiscences parmi les croyances attestées par les dépositions de certains
             déviants, et ceci jusqu’au début du <num>xv<hi rend="sup">e</hi></num> siècle. Le catharisme, lui, avait disparu depuis longtemps.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Le visage de l’hérésie dans le diocèse cathare du Carcassès n’a cessé de changer entre les premières attestations de catharisme dans la
           région durant le dernier tiers du <num>xii<hi rend="sup">e</hi></num> siècle et les dernières poursuites attestées dans les documents conservés, au
           cours du premier quart du <num>xiv<hi rend="sup">e</hi></num> siècle. Si certaines périodes sont assez bien connues, comme par exemple les années 1240,
@@ -274,12 +274,11 @@
           concernant le Toulousain et l’Albigeois, afin de déterminer avec précision la part d’originalité de chacune des trois principales Eglises du
           Midi.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Rôle des hérétiques de Béziers. ­ Déposition de Raymond Huc, d’Aiguesvives. ­ Déposition de Bernard de Padiers, de la Livinière. ­
           Déposition de Pierre Daydé, de Pradelles. ­ Déposition d’Arnaud Mazelier, de Rivière. ­ Déposition de Raymond Marty, de Roquefère. ­
           Déposition de Bernard de Lagarrigue, de Ladoux. ­ Déposition de Guillaume Courtès.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

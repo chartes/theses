@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Frantz Jourdain (1847-1935), architecte, critique d’art et homme de lettres</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Frantz Jourdain (1847-1935), architecte, critique d’art et homme de lettres</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Clatin, Marianne">Marianne Clatin</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200011.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>De son vivant comme par la suite, le personnage de Frantz Jourdain, dont la formation première était celle d’architecte, a été connu
           également pour ses autres activités, en particulier à la tête du Salon d’automne depuis la fondation de celui-ci. Pourtant, les deux
           principales études dont il a déjà fait l’objet ont insisté plus spécialement sur ses deux œuvres majeures que furent ce Salon d’automne,
@@ -65,7 +68,7 @@
           l’exception, également délibérée, du Salon d’automne ; enfin, l’œuvre écrite de Frantz Jourdain, consistant tant en textes critiques qu’en
           textes littéraires, élaborée en relation avec sa fréquentation des cercles artistiques et littéraires.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Un fonds spécifiquement consacré à Frantz Jourdain, ainsi qu’à ses fils et petit-fils, est conservé à la Bibliothèque nationale de France,
           où le département des Estampes a acheté, en 1992, une partie des papiers de la famille Jourdain. Concernant Frantz Jourdain, l’essentiel de
           ce fonds, qui n’était ni classé ni coté au moment de la recherche, est constitué de revues dans lesquelles ont paru des articles de Frantz
@@ -87,9 +90,8 @@
         <p>Enfin, les écrits publiés par Frantz Jourdain lui-même sont une source indispensable non seulement pour le connaître comme critique et
           écrivain, mais également pour éclairer ses autres activités.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Architecture</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Architecture</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La formation de l’architecte</head>
           <p>Frantz Jourdain fut d’abord un architecte, au moins dans sa formation première qu’il reçut à l’Ecole des beaux-arts. Or les rapports
             conflictuels qu’il entretint avec cette institution sont restés gravés dans sa légende ; s’ils ont été retenus comme l’une des principales
@@ -100,7 +102,7 @@
             vision de son passage dans l’institution et indique surtout le lent cheminement de sa propre réflexion critique. Elle pose en outre la
             question de la complexité de l’analyse du personnage à partir de ses propres écrits, en fonction de ses aveux et de ses silences.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Frantz Jourdain dans les sociétés d’architectes</head>
           <p>L’investissement successif de Frantz Jourdain dans deux grandes sociétés d’architectes, la Société centrale des architectes français et
             l’Union syndicale des architectes français, fut relativement intense. Il y tenta une défense ardente de sa profession et la promotion de
@@ -113,7 +115,7 @@
             deux sociétés met également en lumière les précautions à prendre dans l’appréhension d’un homme à la vie active si longue et aux attitudes
             nécessairement changeantes selon les périodes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le rôle de l’architecte</head>
           <p>Les conflits de Frantz Jourdain avec son milieu professionnel, cristallisés en particulier autour des problèmes sociaux, se
             manifestèrent dans des débats qui sont l’occasion de saisir la façon dont Frantz Jourdain appréhendait les enjeux de son métier, mais
@@ -126,7 +128,7 @@
             nombre de portraits d’architectes, au premier rang desquels se trouve Viollet-le-Duc, à la pensée duquel celle de Frantz Jourdain apparaît
             affiliée.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’œuvre de l’architecte de Frantz Jourdain</head>
           <p>Les documents manquent pour appréhender l’activité du cabinet d’architecte de Frantz Jourdain, dont il ne subsisterait pas d’archives,
             mais on peut tenter d’établir une typologie de ses constructions et travaux autres que son úuvre la plus célèbre qui reste la Samaritaine.
@@ -137,8 +139,8 @@
             dans le seul cadre public qui lui fut accessible, celui des Expositions universelles. Il entreprit enfin une úuvre de construction
             singulière en contribuant à l’élaborationdu cadre architectural de plusieurs oeuvres d’Emile Zola.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’engagement dans la société</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’engagement dans la société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Frantz Jourdain face à la politique</head>
           <p>En raison du caractère virulent des discours de Frantz Jourdain en matière artistique, ainsi que de ses prises de position souvent
             provocatrices, il est resté attaché au personnage, de son vivant et après sa mort, une réputation d’extrémiste dans beaucoup de domaines
@@ -153,7 +155,7 @@
             auparavant inhabituel de le voir s’investir. Mais ses déclarations sans ambiguïté sur la question bolchevique nuancent largement le
             caractère radical des opinions dont on prétendit l’affubler.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Pour une architecture sociale</head>
           <p>L’architecte Frantz Jourdain ne s’illustra pas particulièrement dans le domaine du logement social, travaillant surtout au service d’une
             commande privée concernant principalement des habitations plus aisées, tels hôtels particuliers ou châteaux. Il s’intéressa toutefois au
@@ -171,7 +173,7 @@
             termes souvent provocateurs par son président Frantz Jourdain, illustrant des prises de position relativement précoces dans les polémiques
             sur l’organisation des villes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le soutien aux artistes</head>
           <p>Frantz Jourdain passa sa vie entouré d’artistes de tous arts et aux positions sociales des plus variées, depuis quelques prix de Rome
             célèbres jusqu’à des maîtres obscurs ou méconnus. Or lui qui avait choisi l’architecture en parfaite connaissance de cause, comme une
@@ -187,7 +189,7 @@
               lesont pas.</hi>
          </p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Vers un art social</head>
           <p>Fortement engagé dans des actions en faveur de l’art en général et de la reconnaissance des artistes, Frantz Jourdain entendit mener une
             réflexion sur les modes de diffusion de l’art, et en particulier auprès de publics habituellement peu concernés par le sujet. Au-delà de
@@ -206,8 +208,8 @@
             optimiste dans la valeur éducative d’un art mis, dans une démocratie, au service du plus grand nombre constitua une des convictions
             récurrentes de Frantz Jourdain.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’homme de plume dans les cercles d’artistes</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’homme de plume dans les cercles d’artistes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le critique d’art</head>
           <p>Dans le domaine de l’écriture, Frantz Jourdain se manifesta tout d’abord comme critique polémiste s’intéressant aux formes d’art les
             plus variées, depuis les salons (beaux-arts, architecture), jusqu’aux représentations théâtrales. Cette activité menée de façon régulière
@@ -221,7 +223,7 @@
             pourquoi elles étaient souvent marquées du ton de la polémique, au cours de prises de positions qui ne furent pas toujours bien reçues,
             cet accueil contribuant à renforcer l’engagement de leur auteur dans la défense d’une critique d’art indépendante.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Au milieu des artistes</head>
           <p>S’il porta sur les artistes un regard extérieur dans son activité de critique artistique, Frantz Jourdain fréquenta en fait beaucoup ce
             milieu de l’intérieur. Lui-même artiste par sa profession d’architecte, ayant fait ses études à l’Ecole des beaux-arts, il entretint ses
@@ -238,7 +240,7 @@
             manque de modération contribua ainsi à renforcer l’ambiguïté de ses rapports passionnels avec un milieu auquel il se consacra entièrement,
             tout en portant sur lui un jugement souvent sévère.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La création lttéraire</head>
           <p>Au-delà de sa seule œuvre de critique, Frantz Jourdain mena un travail d’écriture dans des genres variés, depuis la nouvelle jusqu’à la
             pièce de théâtre. Fortement marqué par des amitiés nées d’enthousiasmes littéraires, il produisit une œuvre d’inspiration largement
@@ -250,9 +252,7 @@
             d’origine. Ses publications relativement précoces furent en tout cas le signe d’une volonté bien résolue d’applitnier à son œuvre
             elle-même son attachement à l’unité des arts et à l’importance de leur collaboration permanente.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Familier assidu de quelques lieux de la littérature et de littérateurs marquants de leur époque, de Zola à Concourt en passant par Daudet,
           Frantz Jourdain participa de façon marquante, en raison de la diversité de ses centres d’intérêt et du ton polémique de la plupart de ses
           interventions, aux débats de son temps sur nombre de questions artistiques. D’abord relativement contesté à cause de positions qui se
@@ -265,12 +265,11 @@
           important de considérer le personnage dans sa totalité, sans délaisser ses activités les moins prestigieuses mais aussi peut-être les plus
           significatives d’une vie.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Extrait de naissance de Frantz Jourdain. ­ Demande d’admission à la Société centrale des architectes français. ­ Correspondance avec
           l’Union syndicale des architectes français. ­ Edition d’une partie de sa correspondance. ­ Edition de notes, de textes et d’articles
           inédits.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

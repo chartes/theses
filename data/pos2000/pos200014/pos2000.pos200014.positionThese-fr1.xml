@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le peintre Antoine Rivalz (1667-1735)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le peintre Antoine Rivalz (1667-1735)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Néouze, Valérie">Valérie Néouze</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200014.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La qualité et le foisonnement des arts à Paris et à Versailles à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle ont retenu longtemps
           l’attention presque exclusive des historiens de l’art de cette époque. Pourtant dans l’ombre de la capitale s’affirmaient des écoles
           provinciales dont les artistes talentueux avaient choisi de demeurer dans leur ville natale. Aujourd’hui, les recherches se tournent
@@ -61,7 +64,7 @@
           catalogue de son œuvre peint, gravé et dessiné. Restait à démontrer dans quelle mesure Antoine Rivalz, par la synthèse personnelle qu’il fit
           de diverses influences artistiques, fonda une école originale, en marge de l’évolution de la peinture à Paris.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’essentiel des sources concernant la vie d’Antoine Rivalz demeure dans des dépôts toulousains. Ont été notamment consultées, aux archives
           municipales de Toulouse, les séries des délibérations de l’hôtel de ville et les pièces fournies à l’appui des comptes de la ville et, aux
           archives départementales de la Haute-Garonne, les registres des notaires toulousains (sous-série 3 E). Il convient de signaler en outre deux
@@ -74,9 +77,8 @@
           fils. Les documents relatifs au séjour de Rivalz à Rome et à sa participation au concours de l’académie de Saint-Luc sont conservés à
           l’Archivio générale del Vicariato, à l’Archivio di Stato de Rome, ainsi que dans les archives de l’académie de Saint-Luc.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Biographie d’Antoine Rivalz (1667-1735)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Biographie d’Antoine Rivalz (1667-1735)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Formation</head>
           <p>Baptisé à Toulouse en 1667, Antoine Rivalz débuta sa formation dans l’atelier de son père, Jean-Pierre Rivalz, architecte et peintre de
             l’hôtel de ville de Toulouse. Il y fit deux rencontres importantes : le sculpteur Marc Arcis et le dessinateur Raymond Lafage, déjà
@@ -87,7 +89,7 @@
             royale de peinture et de sculpture. A son retour à Toulouse, il aurait reçu ses deux premières commandes, l’une pour l’hôtel de Rieux,
             l’autre pour l’hôtel de Progen, demeures de deux parlementaires toulousains.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Rome</head>
           <p>A la fin du <num>xvii<hi rend="sup">e</hi></num> siècle, le voyage de Rome était un passage obligé, en particulier pour les artistes du midi de la
             France, très sensibles aux influences venues de la péninsule italienne. Sur les conseils de son père, Antoine Rivalz partit pour Rome
@@ -105,7 +107,7 @@
             représentant <hi rend="i">La Mort de Priam</hi>, thème de l’un de ses tableaux romains cité dans le testament de son père. Si la période
             romaine marqua la fin de la formation d’Antoine Rivalz, elle fut aussi l’avant-scène d’une carrière qui s’annonçait brillante.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Retour à Toulouse : une carrière officielle</head>
           <p>La carrière officielle d’Antoine Rivalz est étroitement liée à ses fonctions de peintre de l’hôtel de ville de Toulouse. Dès son retour
             de Rome, il fut en effet nommé en 1703 à cette charge, qu’il assuma jusqu’à sa mort en 1735. Essentielle au gouvernement de la ville et à
@@ -117,7 +119,7 @@
             de Toulouse, faiblement rémunérée (400 livres par an), lui permit cependant de nouer de fructueuses relations avec le patriciat toulousain
             et de bénéficier d’un quasi-monopole des commandes publiques, religieuses et privées à Toulouse.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le chantier du Capitole</head>
           <p>A la fin du <num>xvii<hi rend="sup">e</hi></num> siècle, les magistrats toulousains entreprirent de réhabiliter trois galeries situées au cœur du
             Capitole, nom donné à l’hôtel de ville : il s’agissait d’en faire un lieu d’apparat et de mémoire dédié à l’histoire et aux hommes
@@ -135,7 +137,7 @@
             siècle, en particulier Charles Le Brun. Echelonnées entre 1702 et 1727, elles offrent un excellent résumé de l’art de Rivalz, dans sa
             chronologie autant que dans sa diversité.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Vie et carrière privées</head>
           <p>En 1703, Antoine Rivalz épousa Louise Rivalz, sa cousine germaine, originaire de Labastide d’Anjou, village situé au cœur du Lauragais.
             De ce mariage naquirent six enfants, dont Pierre, dit le chevalier Rivalz, qui fut le seul à s’engager dans une voie artistique.</p>
@@ -160,8 +162,8 @@
             fonction le peintre de l’hôtel de ville ainsi que la direction de l’école de dessin, qui, après une période d’incertitude, fut en
             définitive maintenue.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les moyens de la création</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les moyens de la création</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le rôle du dessin dans l’œuvre de Rivalz</head>
           <p>On ne retient souvent d’Antoine Rivalz que l’image du peintre officiel et du portraitiste talentueux de la société toulousaine du XVIII
 <hi rend="sup">e</hi> siècle. Pourtant Rivalz fut en premier lieu un dessinateur fécond ont le talent s’exprime autant dans les grandes
@@ -174,7 +176,7 @@
             comprendre les étapes de sa création, du dessin d’ensemble au <hi rend="i">modello</hi> en passant par les études de figures à la pierre
             noire rehaussée de craie ou de gouache blanche, technique de prédilection de l’artiste.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Atelier et collaboration</head>
           <p>En tant que peintre de l’hôtel de ville, Antoine Rivalz disposait au Capitole d’un vaste atelier où affluaient de nombreux élèves,
             peintres, sculpteurs, orfèvres. L’ouverture de l’école de dessin en 1726 ne fit qu’accentuer ce mouvement. Antoine Rivalz se réservait le
@@ -185,7 +187,7 @@
             répliques permettaient ainsi de répondre aux exigences d’une clientèle trop nombreuse pour le seul pinceau de Rivalz. Enfin, ce dernier
             collaborait également avec d’autres peintres, dont il peuplait les paysages de personnages, selon une tradition née au XVII <hi rend="sup">e</hi> siècle avec les grands décors.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Rivalz et la gravure</head>
           <p>L’activité de graveur d’Antoine Rivalz est encore mal connue, malgré l’intérêt évident qu’elle présente pour la connaissance de l’œuvre
             de cet artiste. Une étude plus approfondie de son maigre corpus de gravures originales, neuf au total, permet de situer cette activité
@@ -195,7 +197,7 @@
             moyen de diffusion de son œuvre : les gravures conservées sont soit des gravures d’invention soit des illustrations, manifestant un goût
             particulier pour l’allégorie.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La fortune critique</head>
           <p>Le <num>xviii<hi rend="sup">e</hi></num> siècle semble avoir accueilli avec une certaine faveur l’œuvre d’Antoine Rivalz. Le souvenir de son nom,
             intimement lié à la fondation de l’école de dessin de Toulouse, fut perpétué par ses illustres élèves tels que Guillaume Cammas ou Pierre
@@ -209,9 +211,7 @@
             manifesta sous l’impulsion de Robert Mesuret, alors conservateur du musée Paul Dupuy, à Toulouse. Ce dernier lança un vaste programme de
             recherche sur l’école de peinture de Toulouse qui remit à l’honneur ses artistes les plus talentueux, dont Antoine Rivalz.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Au terme de cette étude, il convient de rendre à Antoine Rivalz sa place dans la peinture de l’époque. Son retour de Rome, suivi de sa
           nomination à la fonction influente de peintre de l’hôtel de ville en 1703, bouleversa la vie artistique à Toulouse. Portraitiste réputé, il
           infléchit son style vers un langage plus réaliste dont témoignent ses portraits de Capitouls mais plus encore ses portraits privés. L’acuité
@@ -228,12 +228,11 @@
           cultivé à Paris, avec son originalité, ses élèves et une institution officielle, l’école de dessin, capable de diffuser et de perpétuer ses
           modèles et ses principes.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Extrait du manuscrit de Joseph Malliot relatif à la vie d’Antoine Rivalz. ­ Extrait du manuscrit de Louis de Mondran sur la fondation de
           l’école de dessin par Antoine Rivalz. ­ Edition du <hi rend="i">Catalogue</hi> du chevalier Rivalz et d’un document relatif à la commande
           des Pénitents blancs.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

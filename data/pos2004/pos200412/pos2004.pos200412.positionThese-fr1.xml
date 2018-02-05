@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La vie musicale à l’ &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ospedale di San Lazzaro e dei Mendicanti&lt;/hi&gt;, à Venise (1600-1797)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La vie musicale à l’ <hi rend="i">ospedale di San Lazzaro e dei Mendicanti</hi>, à Venise (1600-1797)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Giron, Caroline">Caroline Giron</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200412.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les <hi rend="i">ospedali</hi> vénitiens, célèbres au <num>xviii<hi rend="sup">e</hi></num> siècle pour la qualité des concerts que donnaient les
           orphelines qui y étaient recueillies, n’intéressèrent que tardivement les historiens. Ces institutions étant à la fois des hôpitaux, des
           hospices, des orphelinats et des conservatoires avant la lettre, elles suscitèrent toutefois l’intérêt des chercheurs en histoire sociale et
@@ -66,7 +69,7 @@
           d’étudier un groupe de personnes au sein d’une institution particulière, dédiée en partie à la musique, à une époque où “ l’affolement de la
           nation pour cet art est inconcevable ” (Charles de Brosses).</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de l’ <hi rend="i">ospedale</hi> des Mendicanti, conservées précieusement par les notaires de l’institution, ont été
           dispersées lors de la chute de la République de Venise, en 1797. Les archives musicales, partitions, solfèges et autres livres de musique,
           ont toutes été perdues, mais les registres et les papiers divers produits et reçus par l’institution durant les deux cents ans de son
@@ -82,9 +85,8 @@
           des sources annexes, en particulier des livrets de motets et d’oratorios, ont été consultées dans diverses bibliothèques vénitiennes, en
           particulier celle du Musée Correr, celle de la Casa di Goldoni et bien entendu la Biblioteca Nazionale Marciana.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Une institution vénitienne spécifique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Une institution vénitienne spécifique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Venise, “ sede della musica ”</head>
           <p>
             <hi rend="i">La chapelle ducale. ¯</hi> L’église de Saint-Marc, chapelle privée du doge, fut le principal centre d’activité musicale
@@ -113,7 +115,7 @@
             patricien. Les cantatrices les plus en vue s’y produisaient, et il n’est pas impossible que les filles des <hi rend="i">ospedali</hi> y
             aient quelque fois chanté.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une institution inspirée des préceptes tridentins</head>
           <p>
             <hi rend="i">La politique de Venise en matière de bienfaisance.</hi>
@@ -132,7 +134,7 @@
             bâtiments financés par des particuliers, notamment certains gouverneurs de l’institution. Le nouveau bâtiment, dont la construction
             s’échelonna de 1601 à 1631, fut conçu et réalisé par plusieurs architectes, parmi lesquels le célèbre Vincenzo Scamozzi.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La structure institutionnelle et le cadre administratif</head>
           <p>
             <hi rend="i">Une structure organisationnelle complexe, inspirée du monachisme et imitée des autres</hi> ospedali <hi rend="i">. ¯</hi>
@@ -151,8 +153,8 @@
             souvent aux familles patriciennes de Venise. A la fin des années 1770, ces rapports devinrent plus étroits encore puisque les quatre <hi rend="i">ospedali</hi> vénitiens, en faillite, furent mis sous la tutelle d’un “ Magistrat de provéditeurs aux Hôpitaux et aux lieux
             pieux ” : c’était dorénavant l’État qui gérait ces institutions.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Lieux et temps de la musique à l’ <hi rend="i">ospedale</hi> des Mendicanti</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Lieux et temps de la musique à l’ <hi rend="i">ospedale</hi> des Mendicanti</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les modèles : les autres <hi rend="i">ospedali</hi> vénitiens</head>
           <p>
             <hi rend="i">La musique à l’</hi> ospedale <hi rend="i">de la Pietà.</hi>
@@ -171,7 +173,7 @@
             qualité des musiciennes est attestée par les témoignages de nombreux mélomanes, dont Giovanni Battista Casotti, Martin Folkes ou Charles
             de Brosses. Le déclin de cette institution puis sa faillite, en 1777, furent à l’origine de la décadence des quatre <hi rend="i">ospedali</hi> vénitiens.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La naissance du chœur de l’ <hi rend="i">ospedale</hi> des mendicanti : la musique au quotidien</head>
           <p>
             <hi rend="i">L</hi>
@@ -192,7 +194,7 @@
             Mendicanti, on célébrait également avec une pompe toute particulière la fête de Marie-Madeleine, pour laquelle un oratorio était également
             composé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Fêtes et cérémonies particulières : lorsque les “ servantes de la musique ” jouaient les divas…</head>
           <p>
             <hi rend="i">L’existence d’un répertoire profane aux Mendicanti ?</hi>
@@ -213,8 +215,8 @@
             Filarmonica en l’honneur du “ Comte et de la Comtesse du Nord ” le 20 janvier 1782, qui mobilisa quatre-vingts musiciennes, fut
             immortalisé par Francesco Guardi et Gabriel Bella.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le personnel lié à la musique : les musiciennes et les professeurs</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le personnel lié à la musique : les musiciennes et les professeurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les filles du choeur, chanteuses et instrumentistes</head>
           <p>Figlie di coro, figlie di spese, figlie di educatione : <hi rend="i">qui sont les musiciennes à l’</hi> ospedale <hi rend="i">des
               Mendicanti ? ¯</hi> Le chœur de l’ <hi rend="i">ospedale</hi> des Mendicanti compta en moyenne soixante-quinze musiciennes, toutes
@@ -236,7 +238,7 @@
             appris la musique à deux petites filles, et à la condition expresse qu’elles ne se produiraient jamais sur les scènes de théâtre. Deux
             musiciennes contrevinrent à cette règle, Lelia Achiappati et Maddalena Lombardini, la seule compositrice issue de l’ <hi rend="i">ospedale</hi> des Mendicanti, et se produisirent dans toute l’Europe.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les musiciens extérieurs : <hi rend="i">maestri</hi> et compositeurs</head>
           <p>
             <hi rend="i">Différents types de professeurs.</hi>
@@ -261,9 +263,7 @@
             du goût des autorités religieuses et civiles de la République, qui tentèrent à plusieurs reprises, mais sans succès, de maintenir la
             musique sacrée exempte de toute influence profane.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Si la chute de la République de Venise sonna la fin des <hi rend="i">ospedali</hi>, qui agonisaient depuis vingt ans, ces institutions
           marquèrent durablement l’histoire de la musique et de son enseignement en Europe. En effet, les <hi rend="i">ospedali</hi> vénitiens furent
           les ancêtres des conservatoires modernes, au même titre que les <hi rend="i">conservatori</hi> napolitains qui leur donnèrent leur nom. Les
@@ -275,8 +275,7 @@
           se concentreraient sur les partitions des œuvres composées pour les <hi rend="i">ospedali</hi> vénitiens éclaireraient certainement le
           sujet, de même qu’une étude systématique de la diffusion de ces œuvres dans l’espace européen.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

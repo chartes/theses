@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les jeux radiophoniques en France (1944-1974)</title>
-        <title type="sub">Étude comparative des radios publiques françaises et de deux stations privées, Radio-Luxembourg et Europe N° 1</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les jeux radiophoniques en France (1944-1974)</title><title xml:lang="fr" type="sub">Étude comparative des radios publiques françaises et de deux stations privées, Radio-Luxembourg et Europe N° 1</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Schmitt, Marie-Paule">Marie-Paule Schmitt</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200524.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les émissions de jeux sont une composante essentielle de l’offre audiovisuelle. Que ce soit à la radio ou à la télévision, elles occupent à
           l’heure actuelle une place importante dans les programmes. Mais cette situation n’est pas apparue récemment, loin s’en faut. Dès la
           naissance de la radio dans l’Entre-deux-guerres, les stations s’appuient en effet sur les jeux pour étoffer leurs grilles de programmes et
@@ -65,7 +68,7 @@
           manque de sources sur le sujet. Il convenait donc de s’intéresser aux émissions diffusées : le choix d’une étude des jeux permet d’approcher
           le domaine du divertissement, populaire auprès d’un grand nombre d’auditeurs.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’aspect institutionnel de l’étude s’appuie en grande partie sur les archives de la Radiodiffusion-télévision française (RTF) puis de
           l’Office de radio-télévision française (ORTF), l’organisme chargé de la gestion de la radio publique. Ce fonds est actuellement conservé au
           Centre des archives contemporaines de Fontainebleau. Il ne reste en revanche pratiquement pas de traces de l’activité des stations privées.
@@ -75,9 +78,8 @@
           pour les stations publiques, fonds privé Paul Robert conservé à l’INA pour Radio-Luxembourg et Europe N° 1). Enfin, le recueil de
           témoignages oraux auprès de six personnes (producteurs, animateurs ou responsables de radios) a permis de compléter les recherches.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les stations de radio et les jeux dans leur programmation</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les stations de radio et les jeux dans leur programmation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation des stations étudiées</head>
           <p>Au lendemain de la Seconde Guerre mondiale, la radiodiffusion en France est régie par le monopole de l’État : seules les stations
             publiques, dépendant d’un organisme unique, sont autorisées à diffuser des émissions. Dans la pratique cependant, ce monopole est
@@ -93,7 +95,7 @@
             vont également évoluer au cours des trente glorieuses : l’augmentation générale du niveau de vie permet aux Français de s’équiper
             largement en postes récepteurs, faisant de la radio un moyen de communication de masse très populaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le jeu dans la programmation des stations</head>
           <p>Qu’elles soient publiques ou privées, les stations comptent des jeux dans leurs grilles de programmes. L’importance accordée à ce genre
             d’émissions est néanmoins très variable en fonction des ambitions des divers postes et des publics qu’ils cherchent à toucher. En effet,
@@ -106,7 +108,7 @@
             Cependant, au cours des années 1960, le nombre d’émissions de jeux tend à diminuer, et ce quelle que soit la station considérée : elles
             sont remplacées par des petits jeux intégrés de façon ponctuelle dans des programmes de variétés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les jeux et leurs mécanismes : grandes formules et déclinaisons</head>
           <p>Les jeux sont régis par un ensemble de règles de base. Temps limité, gains plus ou moins importants en sont des composantes essentielles,
             qui permettent de donner un certain rythme à l’émission et de capter ainsi l’attention des auditeurs. L’élaboration d’une typologie rend
@@ -118,8 +120,8 @@
             au ton plus solennel, avec des gains de valeur relativement faible, tandis que les stations privées n’hésitent pas à offrir des cadeaux
             beaucoup plus importants dans une ambiance détendue et familière.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les jeux et leurs principaux intervenants</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les jeux et leurs principaux intervenants</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’industrie des jeux</head>
           <p>L’étude des conditions de production d’une émission est importante pour comprendre le fonctionnement des stations de radio et les
             principes qui président à la réalisation des programmes. Les stations privées font en général appel à des sociétés de production
@@ -137,7 +139,7 @@
             sont souvent des jeux qui font l’objet d’une compensation. Ainsi, bien que les stations étudiées soient de statut différent, elles
             utilisent pour financer une partie de leurs programmes des moyens similaires.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les animateurs</head>
           <p>L’animateur occupe une place centrale dans le jeu, il en est une figure incontournable. Le recrutement des présentateurs est relativement
             uniforme et évolue peu : beaucoup ont à l’origine une formation artistique ou journalistique, car il faut pouvoir être à l’aise devant un
@@ -148,7 +150,7 @@
             respect des règles. Il arrive qu’il soit assisté dans sa tâche par un animateur subalterne, rôle dans lequel on retrouve notamment les
             femmes, qui occupent rarement des fonctions de premier plan dans l’animation d’un jeu.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les candidats</head>
           <p>Une autre figure importante du jeu est le candidat, personnage clé incarné de façon éphémère par des postulants changeant au fil des
             émissions. Plusieurs aspects sont à étudier : leurs motivations, les modalités de participation, etc. Les candidats sont en effet plus ou
@@ -167,7 +169,7 @@
             l’aise devant le micro qu’un candidat quelconque sélectionné au hasard. Admise plus ou moins ouvertement par les témoins de l’époque,
             cette pratique est vraisemblablement restée peu connue du public.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les auditeurs</head>
           <p>Pour une station, il est essentiel de comprendre et d’évaluer les goûts de ses auditeurs, car cela lui permet de faire évoluer ses
             programmes en fonction de leurs attentes. Il est difficile d’approcher directement le public des jeux radiophoniques, variable selon le
@@ -184,8 +186,8 @@
             qu’ils soient critiqués pour leur faible apport culturel, mais ils n’en restent pas moins un élément clé de la programmation des
             stations.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les jeux du cirque</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les jeux du cirque</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le Radio-Circus : naissance d’une aventure</head>
           <p>L’objet de la troisième partie est d’étudier plus précisément l’utilisation publicitaire des jeux par les stations dans le cadre de
             grandes opérations de propagande menées en association avec des cirques. La première expérience de l’après-guerre de ce type est celle du
@@ -199,7 +201,7 @@
             s’interroger sur l’utilisation de ce genre de programmes comme moyen de publicité, dans un cadre totalement étranger, et de voir quel
             bénéfice en retirent les différents intéressés.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="&#10;        ">une première expérience avec Jean Coupan (1958-1960)</head>
           <p>Le succès populaire rencontré par l’opération de Radio-Luxembourg ne manque pas d’attirer l’attention des stations concurrentes : c’est
             le cas en particulier de la RTF qui, consciente que le Radio-Circus permet au poste luxembourgeois d’aller au contact des auditeurs de
@@ -217,7 +219,7 @@
             tout le territoire français, elles font néanmoins davantage connaître les stations publiques et voient naître des émissions célèbres
             telles que <hi rend="i">Cent mille francs par jour</hi>, ancêtre du <hi rend="i">Jeu des mille francs</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La collaboration de la radio-télévision publique avec Pinder (1961-1969)</head>
           <p>Si la tournée de 1960 se solde par une rupture entre la RTF et Jean Coupan, la radio publique ne souhaite pas interrompre une opération
             de propagande qui semble porter ses fruits, malgré les problèmes financiers rencontrés. Rendue plus populaire auprès des auditeurs de
@@ -237,9 +239,7 @@
             soutien de la radio, dans un contexte de crise, permettait d’être assuré de toucher un certain auditoire, mais la chute est d’autant plus
             dure lorsque les postes cessent de faire appel aux cirques.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Entre 1944 et 1974, la radio connaît de profondes mutations qui ne touchent pas uniquement les institutions, mais concernent également les
           programmes. Postes français et périphériques (Radio-Luxembourg et Europe N° 1) ne relèvent pas des mêmes statuts, les uns se trouvant
           longtemps assimilés à une administration, les autres étant privés et commerciaux ; leurs vocations ne sont pas non plus identiques : si une
@@ -251,11 +251,10 @@
           d’émissions dynamiques et amusantes. Ils s’avèrent ainsi être d’excellents supports de propagande et permettent d’aller au contact du
           public, à Paris et en province.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Organigrammes de la RTF. – Rapports d’écoute d’émissions. – Documents iconographiques concernant le Radio-Circus de Radio-Luxembourg. –
           Choix de notes, rapports, documents iconographiques concernant les opérations de type Radio-Circus menées par la RTF et l’ORTF.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

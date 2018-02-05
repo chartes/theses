@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édition critique des lettres d’Antoine Singlin (1607-1664), supérieur de Port-Royal</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Édition critique des lettres d’Antoine Singlin (1607-1664), supérieur de Port-Royal</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Josse, Anne-Claire">Anne-Claire Josse</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200023.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La fascination exercée par Port-Royal a franchi les siècles sans perdre de sa force, continuant de nourrir la réflexion, l’admiration ou
           l’animosité de ceux qui s’en approchent. Parce qu’il a enfanté le jansénisme, Port-Royal interroge, exaspère, mais ne laisse jamais
           indifférent. Après la Seconde guerre mondiale, l’étude du jansénisme cessa d’être l’apanage des littéraires et des théologiens pour entrer
@@ -79,7 +82,7 @@
           nourrissait et se consumait tout à la fois au service du monastère. A travers la vie de Singlin, c’est moins une nouvelle version qu’une
           autre vision de l’histoire du monastère qu’il faut rechercher.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources manuscrites et imprimées des lettres d’Antoine Singlin sont présentées en détail en introduction à l’édition critique, au début
           de la seconde partie.</p>
         <p>Les principales sources imprimées de la biographie d’Antoine Singlin, outre ses lettres, sont les <hi rend="i">Mémoires</hi> de plusieurs
@@ -91,9 +94,8 @@
         <p>Des actes notariés du Minutier central des notaires de Paris aux Archives nationales ont permis de vérifier ou de préciser certaines
           affirmations des mémorialistes, en particulier sur la famille d’Antoine Singlin.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La vie et la spiritualité d’Antoine Singlin (1607-1664)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La vie et la spiritualité d’Antoine Singlin (1607-1664)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De Saint-Eustache à Port-Royal (1607-1643)</head>
           <p><hi rend="i">Jeunesse (1607-1633) </hi> — La jeunesse d’Antoine Singlin demeure mystérieuse. L’examen des actes notariés permet
             toutefois de mettre en valeur les liens qui unissaient plusieurs membres de la famille de Singlin à Port-Royal : outre son frèreMathieu,
@@ -124,7 +126,7 @@
             la charge du monastère de Port-Royal, des Solitaires et des dirigés laïcs. Sans le savoir, Singlin s’était donc préparé, durant la
             captivité de Saint-Cyran, à assumer un rôle qui lui faisait peur et dont il se sentit toujours indigne, celui de directeur spirituel.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le directeur de Port-Royal (octobre 1643-1648)</head>
           <p><hi rend="i">Singlin et les premières controverses jansénistes (1643-1645) </hi> — Antoine Singlin ne lut jamais <hi rend="i">l’Augustinus</hi>, la somme de Cornélius Jansénius sur saint Augustin, qui réveilla la querelle de la liberté et de la grâce. Lorsque le
             livre <hi rend="i">De la</hi>  <hi rend="i">fréquente communion</hi> d’Antoine Arnauld fut attaqué, ainsi que l’écrit de Martin de Barcos
@@ -146,7 +148,7 @@
             pour ces femmes de se partager entre le monde et le cloître, et sa vision radicale et exigeante de la conversion en ressortit
             renforcée.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les années troublées (1648-16S5)</head>
           <p><hi rend="i">La Fronde parlementaire et le blocus de Paris (mai 1648-mars 1649) </hi> — Singlin fut le lien entre Port-Royal des Champs,
             où une partie des religieuses s’étaient réinstallées en mai 1648, et Port-Royal de Paris. Malgré les troubles de la Fronde, il fit
@@ -167,7 +169,7 @@
             étrangères à Port-Royal qui venaient à lui affaiblirent considérablement la santé de Singlin, qui fut gravement malade de l’été 1653 à
             l’été 1655.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le Supérieur de Port-Royal (1656-1661)</head>
           <p><hi rend="i">Singlin supérieur </hi> — Alors qu’Antoine Arnauld était exclu de la Sorbonne en janvier 1656, et que Port-Royal était
             menacé, le miracle de la Sainte-Epine survenu le 24 mars 1656 ferma la bouche aux détracteurs du monastère. Singlin fut nommé supérieur de
@@ -180,7 +182,7 @@
             vieillissait : en 1658 moururent Antoine, Le Maistre, la mère Marie des Anges et la marquise d’Aumont. Deux dernières brebis se
             présentèrent pourtant encore à Singlin : Renaud de Sévigné et Anne-Geneviève de Bourbon, duchesse de Longueville.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Le temps de la désolation (1661-1664)</head>
           <p><hi rend="i">Le Formulaire, l’exil, les deuils (1661) </hi> — Singlin fut une des premières victimes de la volonté de Louis XIV de
             réduire à néant l’opposition de Port-Royal. Le 5 mai 1661, l’exil de Singlin fut ordonné par Louis XIV. Le dimanche 8 mai, Singlin,
@@ -196,7 +198,7 @@
             des personnes au-dessus du triomphe des idées, il jouit toujours du respect des docteurs jansénistes, qui voyaient en lui l’héritier de
             Saint-Cyran. Sa mort survenue le 17 avril 1664 jeta son entourage dans un profond désarroi.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">La spiritualité de Singlin</head>
           <p><hi rend="i">Le tragique de la condition humaine </hi> — La conception qu’a Singlin de ’homme épouse l’anthropologie augustinienne. Les
             hommes se divisent en deux roupes :sur les uns. Dieu exerce sa justice, sur les autres sa miséricorde. Chez Singlin, la radicalité de la
@@ -217,45 +219,42 @@
           <p><hi rend="i">L’appartenance à l’Eglise </hi> — Respectueux de l’autorité du pape, pénétré de la valeur du sacerdoce comme tous les
             tenants de la Contre-Réforme, Singlin porte cependant un jugement sévère sur l’Eglise de son temps.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Edition des lettres d’Antoine Singlin</head>
-        <p>On conserve cent soixante-seize lettres d’Antoine Singlin : quarante-sept sont autographes, douze ne sont connues que sous forme imprimée,
+      </div><div n="4" type="part"><head n="0" type="chapter">Edition des lettres d’Antoine Singlin</head>
+        <p n="1" type="chapter">On conserve cent soixante-seize lettres d’Antoine Singlin : quarante-sept sont autographes, douze ne sont connues que sous forme imprimée,
           les autres sont des copies effectuées pour la plupart au <num>xviii<hi rend="sup">e</hi></num>  siècle.</p>
-        <p>Les sources manuscrites sont réparties entre cinq dépôts : la majorité des copies de lettres sont conservées à la bibliothèque de la
+        <p n="2" type="chapter">Les sources manuscrites sont réparties entre cinq dépôts : la majorité des copies de lettres sont conservées à la bibliothèque de la
           Société de Port-Royal (mss. PR 15, 16, 18, 47 et 149). Les archives d’Utrecht recèlent dix lettres autographes (inv. 262, 431), la
           bibliothèque de l’Arsenal en compte dix-sept (ms. 6549). Le chartrier de Bosmelet, microfilmé aux archives de la Seine-Maritime, possède dix
           lettres autographes (1 Mi 189). La bibliothèque municipale de Troyes conserve un important fonds janséniste où l’on trouve une lettre
           autographe de Singlin (ms. 2204, pièce 83).</p>
-        <p>Les sources imprimées qui contiennent des lettres de Singlin sont les mémoires et recueils de pièces cités dans les sources de la
+        <p n="3" type="chapter">Les sources imprimées qui contiennent des lettres de Singlin sont les mémoires et recueils de pièces cités dans les sources de la
           biographie de Singlin.</p>
-        <p>Plus de la moitié des lettres de Singlin sont adressées aux mères abbesses Agnès et Angélique Arnauld. Pour le reste, ce sont les hasards
+        <p n="4" type="chapter">Plus de la moitié des lettres de Singlin sont adressées aux mères abbesses Agnès et Angélique Arnauld. Pour le reste, ce sont les hasards
           de la conservation qui ont sélectionné les lettres parvenues jusqu’à nous. A l’exclusion de M. de Pontchâteau pour lequel on possède seize
           lettres de Singlin, tous les autres correspondants du prêtre sont représentés par moins de dix lettres. En outre, des personnes comme
           Antoine Arnauld ou Martin de Barcos ne sont pas représentées dans le corpus, alors qu’ils furent du nombre des correspondants de
           Singlin.</p>
-        <p>Les lettres s’échelonnent sur l’ensemble du ministère de Singlin à Port-Royal, de 1637 à 1661. De 1661, année à partir de laquelle Singlin
+        <p n="5" type="chapter">Les lettres s’échelonnent sur l’ensemble du ministère de Singlin à Port-Royal, de 1637 à 1661. De 1661, année à partir de laquelle Singlin
           vécut caché, à 1664, on ne compte que vingt lettres, adressées non plus aux abbesses mais à ses dirigés. Une vingtaine de lettres, traitant
           exclusivement de matière spirituelle, sont difficiles à dater et ont été rassemblées en fin de corpus.</p>
-        <p>Les diverses formes sous lesquelles certaines lettres de Singlin nous sont parvenues, à la fois autographes et copies, permettaient de
+        <p n="6" type="chapter">Les diverses formes sous lesquelles certaines lettres de Singlin nous sont parvenues, à la fois autographes et copies, permettaient de
           s’interroger sur une éventuelle tendance éditoriale qui aurait pu pousser les Jansénistes à modifier les lettres dans le sens d’une
           justification et d’une défense de la cause de Port-Royal. L’examen révèle que le message délivré par les lettres de Singlin n’a été ni
           faussé ni interprété, en passant de l’autographe à la copie. Les suppressions et amendements sont d’ordre stylistique ou concernent des
           personnes dont on voulait respecter l’anonymat, l’essentiel étant le contenu spirituel de la lettre copiée.</p>
-        <p>La présence de nombreux autographes invitait, jusqu’à un certain point, à respecter le plus possible la graphie de Singlin, malgré son
+        <p n="7" type="chapter">La présence de nombreux autographes invitait, jusqu’à un certain point, à respecter le plus possible la graphie de Singlin, malgré son
           orthographe et sa grammaire souvent approximatives. La ponctuation a été largement introduite, ainsi que les alinéas. Le lieu de rédaction
           de chaque lettre a été précisé, dans la mesure du possible, en particulier lorsque le monastère est partagé entre les deux sites des Champs
           et de Paris, à partir du mois de mai 1648.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’intransigeance des principes de Singlin se heurta à la complexité des âmes, à leur velléité de conversion, à leurs illusions. C’est dans
           ce tiraillement entre le respect des traditions les plus exigeantes et l’adaptation aux demandes de son temps que réside l’intérêt du rôle
           de Singlin. Le regard du directeur de Port-Royal mêla ainsi sévérité et pragmatisme. A son corps défendant, Singlin participa à l’évolution
           de la spiritualité de son temps, en particulier dans son ouverture aux laïcs.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Actes notariés concernant Antoine Singlin et sa famille. ­ Lettres adressées à Antoine Singlin.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La religion du roi</title>
-        <title type="sub">Lieux et expression de la dévotion à la cour de Louis XIV (1643-1682)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La religion du roi</title><title xml:lang="fr" type="sub">Lieux et expression de la dévotion à la cour de Louis XIV (1643-1682)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Alquier, Éléonore">Éléonore Alquier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200902.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>« Très-Chrétien » et « oint du Seigneur », le roi de France appuie en grande partie son autorité sur le caractère religieux de son titre.
           Engagé par le serment du sacre à protéger les chrétiens et les intérêts de l’Église, il doit également incarner au cours de ses dévotions
           quotidiennes un idéal de piété laïque. Ces postulats de base, théoriquement valables au moins pour l’ensemble de la période moderne, et
@@ -77,7 +80,7 @@
           musicologue. Les scènes de dévotion royale révèlent ainsi un pan total de la vie de la cour et mettent en valeur la particularité de ce
           microcosme, dont on a souvent négligé l’existence pré-versaillaise.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources produites par les administrations curiales avant la fin du <num>xvii</num>
 <hi rend="sup">e</hi> siècle ne sont que très partiellement conservées ; si les états des officiers du roi sont bien connus grâce aux copies
           de listes de personnels effectuées au <num>xviii</num>
@@ -113,16 +116,15 @@
           l’accompagne : la richesse de leur production et la récurrence de certains thèmes attestent d’une véritable construction autour de l’image
           du roi pieux.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Préambule">Autour de la chapelle royale : <lb/>les cadres religieux de la cour</head>
-        <p>L’histoire de la chapelle royale, au même titre que toutes les grandes charges de la cour, doit être considérée dans une perspective large
+          <div n="3" type="part"><head n="0" type="chapter">Autour de la chapelle royale : <lb/>les cadres religieux de la cour</head>
+        <p n="1" type="chapter">L’histoire de la chapelle royale, au même titre que toutes les grandes charges de la cour, doit être considérée dans une perspective large
           : les fonctions domestiques rattachées au service privé du roi, apparues depuis le Moyen Âge, voient peu à peu leur champ de compétence
           élargi à l’ensemble du domaine royal, puis au royaume. La charge de grand aumônier du roi connaît cependant un parcours particulièrement
           mouvementé : chargé de célébrer la messe devant le roi et de gérer la caisse des aumônes royales, cet ecclésiastique voit certes ses
           prérogatives s’étendre depuis le <num>xvi</num>
 <hi rend="sup">e</hi> siècle ; mais les changements de titulature de cet office sont les symptômes d’une difficulté à définir son statut,
           tant au niveau de la Maison du roi, qu’à l’échelle du royaume.</p>
-        <p>Les attributions des grandes charges de la chapelle royale sont en effet l’objet de contestations régulières de la part de l’ordinaire
+        <p n="2" type="chapter">Les attributions des grandes charges de la chapelle royale sont en effet l’objet de contestations régulières de la part de l’ordinaire
           ecclésiastique à l’époque moderne : plusieurs tentatives de définition d’une juridiction de la chapelle sont esquissées à partir du
             <num>xvii</num>
 <hi rend="sup">e</hi> siècle et se poursuivent jusqu’aux années 1720, sans que le débat ne trouve de conclusion satisfaisante. Les évolutions
@@ -130,19 +132,19 @@
           la reconnaissance de ses prérogatives, notamment par la production de libelles. Mais l’émergence d’un personnel administratif laïc
           spécialisé entraîne la perte d’autorité de la chapelle royale sur les fondations hospitalières et charitables du roi ; le grand aumônier
           perd sa fonction première de gestionnaire des aumônes royales, désormais confiées à un trésorier des offrandes.</p>
-        <p>La primauté du service religieux à la cour revient certes sans conteste au corps de la chapelle royale, principalement constituée de
+        <p n="3" type="chapter">La primauté du service religieux à la cour revient certes sans conteste au corps de la chapelle royale, principalement constituée de
           chapelains et d’aumôniers chargés d’assister le roi dans ses devoirs religieux ; la chapelle royale occupe même le premier rang au sein de
           la maison du roi. Mais l’organisation du culte à l’intérieur de la cour révèle une plus grande complexité. Outre les domestiques religieux
           attachés aux grands de la cour, d’autres structures se partagent le service du culte, tels les aumôniers de Saint-Roch, chargés de célébrer
           l’office devant les officiers royaux. À l’institution de la chapelle royale, rattachée à la personne du roi, s’ajoutent également les
           personnels des résidences royales : chaque chapelle royale est en effet desservie par un personnel local, qui peut entrer en concurrence
           avec les aumôniers du roi itinérants.</p>
-        <p>Mais malgré son statut ecclésiastique, le personnel qui compose les différentes institutions religieuses de la cour suit les mêmes règles
+        <p n="4" type="chapter">Mais malgré son statut ecclésiastique, le personnel qui compose les différentes institutions religieuses de la cour suit les mêmes règles
           que tout officier du roi, comme le montre une rapide étude du personnel musical de la chapelle royale. Les voies de recrutement et de
           rétribution sont ainsi similaires à celles de tout office royal. Mais pour prestigieux qu’il soit, le titre de membre de la chapelle royale
           offre des revenus insuffisants à ses détenteurs, forcés pour la plupart d’occuper des charges complémentaires en dehors de la cour.</p>
-      </div><div n="2" type="part"><head n="Première partie">La mise en scène d’une dévotion baroque (1643-1660)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La mise en scène d’une dévotion baroque (1643-1660)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La religion du roi au Siècle des saints</head>
           <p>Une étude de la religion royale au <num>xvii</num>
 <hi rend="sup">e</hi> siècle ne saurait commencer abruptement avec l’avènement de Louis XIV. Elle s’ancre au contraire dans la continuité
@@ -163,7 +165,7 @@
             du royaume, ce « miracle dynastique » est suivi de nombreuses fondations et pèlerinages associant la naissance du dauphin au vœu de Louis
             XIII.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les dévotions de la régente</head>
           <p>Dès son mariage, Anne d’Autriche avait fait preuve d’une attitude de grande piété, conforme au rôle traditionnellement dévolu aux reines
             de France. Mais l’ouverture de la régence donne à son action une portée nouvelle. La mort de Louis XIII entraîne en effet le retour de la
@@ -187,7 +189,7 @@
             images de cette fidélité participe également à la construction de la figure de la « reine dévote » : les représentations de la reine en
             prière se multiplient.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Mise en scène d’une piété baroque</head>
           <p>Le rôle joué par la <hi rend="i">Gazette</hi> et les périodiques contemporains dans la diffusion de l’image pieuse de la reine est
             d’autant plus important qu’il ancre les dévotions royales dans un mouvement de continuité et de répétition, créant un phénomène routinier
@@ -207,8 +209,8 @@
             politiques des déplacements royaux. Si la dévotion royale constitue bien un élément majeur de l’imaginaire monarchique, elle n’en reste
             pas moins subordonnée aux enjeux politiques.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">De la dévotion du roi à la religion de la cour (1660-1682)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">De la dévotion du roi à la religion de la cour (1660-1682)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Vers une réorganisation de la religion royale ?</head>
           <p>Les bouleversements politiques des années 1660-1661, la paix des Pyrénées et le mariage de Louis XIV, puis la mort de Mazarin, ne sont
             pas sans conséquence sur l’organisation de la religion royale. Les fondements de celle-ci ne sauraient cependant être remis en question ;
@@ -232,7 +234,7 @@
             d’une volonté fondatrice de grande envergure. Malgré quelques interventions en faveur des établissements de Saint-Germain-en-Laye, où vit
             désormais la cour, la dévotion de Marie-Thérèse ne peut faire oublier celle d’Anne d’Autriche.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les dévotions de Louis XIV</head>
           <p>Réputé n’avoir manqué qu’une seule fois la messe, Louis XIV accomplit avec scrupule les devoirs religieux attachés à sa fonction. Il
             poursuit en de nombreux points les pratiques établies par ses prédécesseurs, notamment en matière de représentations iconographiques ; le
@@ -259,7 +261,7 @@
             détaillés de cérémonie de nature privée (baptême et mariage) ; ces récits, toujours manuscrits, connaissent une énorme publicité, comme
             l’atteste le grand nombre de copies aujourd’hui conservées.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Religion et musique à la cour de Louis XIV</head>
           <p>Élément fondamental de l’apparat monarchique à l’intérieur de la chapelle royale, la chapelle-musique connaît durant les premières années
             du règne personnel de Louis XIV une véritable révolution institutionnelle.</p>
@@ -289,9 +291,7 @@
             cour hors de Paris : désormais éloignée du cadre public de la capitale, la religion du roi est peu à peu assimilée à l’apparat de cour et,
             à ce titre, nécessite de nouveaux moyens de mise en scène, dont la chapelle de Robert de Cotte en 1710 sera la consécration.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les modes d’expression de la dévotion royale au second <num>xvii</num>
 <hi rend="sup">e</hi> siècle se placent ainsi sous l’influence successive d’Anne d’Autriche et de Louis XIV. Alors que la piété baroque de la
           régente avait choisi comme ancrage les églises parisiennes, adoptant des pratiques dévotionnelles presque populaires, Louis XIV, en
@@ -305,7 +305,7 @@
           la période de la régence et du ministériat de Mazarin et leur influence sur le « système de cour », dont Versailles marque l’aboutissement,
           et non l’origine.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Traitement iconographique de la religion du roi : images des dévotions d’Anne d’Autriche ; la Sainte-Famille, la famille royale et la
           Trinité ; la famille royale, les saints et les ordres religieux du royaume.</p>
         <p>Géographie de la religion du roi : tableau synthétique des déplacements de la cour ; cartes de l’implantation religieuses dans les
@@ -314,7 +314,6 @@
           la chapelle-musique.</p>
         <p>Récit et mise en image du cérémonial religieux de la cour : le sacre de Louis XIV ; le baptême du dauphin.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

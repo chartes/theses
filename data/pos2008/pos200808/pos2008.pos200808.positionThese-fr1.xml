@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’administration d’Alphonse de Poitiers en Poitou et en Saintonge</title>
-        <title type="sub">(1241-1271)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’administration d’Alphonse de Poitiers en Poitou et en Saintonge</title><title xml:lang="fr" type="sub">(1241-1271)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chenard, Gaël">Gaël Chenard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200808.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Quatrième fils de Louis VIII et de Blanche de Castille, frère de saint Louis, Alphonse de Poitiers souffre du trop grand éclat de son
           entourage familial. Ses ambitions politiques et religieuses se confondent trop souvent avec celles du roi pour paraître distinctes ou
           originales. Résumé à ses grandes lignes, son gouvernement témoigne surtout du lien organique qui lie le comte à son aîné. En juin 1241,
@@ -78,7 +81,7 @@
           gourmande politique de grandeur. Les éléments de la croissance de l’État du <num>xiv</num>
 <hi rend="sup">e</hi> siècle sont déjà en place.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources de l’administration d’Alphonse de Poitiers sont abondantes et diverses dans leur nature. Le Trésor des chartes a conservé de
           nombreux documents, tout particulièrement un ensemble de comptes, qui ont de ce fait échappé à la destruction des comptes royaux en 1737,
           lors de l’incendie de la Chambre des comptes. La politique de concentration et de conservation des documents, sensible dès l’époque
@@ -102,9 +105,8 @@
           Beaulieu, Guillaume de Saint-Pathus, Jean de Joinville, les Grandes chroniques de France, le Ménestrel de Reims et Mathieu Paris. Tout
           occupés à peindre le roi, il n’ont vu le comte que du coin de l’œil.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Une histoire de l’administration d’Alphonse de Poitiers</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Une histoire de l’administration d’Alphonse de Poitiers</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’intégration du Poitou</head>
           <p>Après la campagne de 1242, les barons poitevins, réputés volages, se révèlent d’une étonnante fidélité aux Capétiens. La fin de l’état
             d’entre-deux princes (plantagenêt et capétien) ne tient pas seulement à la victoire militaire du roi Louis  <num>ix</num>et de son frère,
@@ -126,7 +128,7 @@
             il s’agit d’une véritable remise en ordre sur le modèle du vieux domaine capétien du <num>xii</num>
 <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">De la pacification à la croisade permanente</head>
           <p>Deux éléments périphériques facilitent l’entreprise de pacification et de fidélisation du Poitou. Le premier, paradoxalement, n’est autre
             que la Gascogne anglaise. Alphonse de Poitiers s’efforce de constituer une sorte de marche au sud de la Saintonge. Mais il s’agit surtout
@@ -145,7 +147,7 @@
             structurel, même si peu de barons semblent accepter de partir eux-mêmes pour la croisade. L’important pour le comte de Poitiers est de
             faire cesser leurs attentes du côté des Plantagenêts, ce qui semble acquis dès 1246.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Face au roi</head>
           <p>Auguste Molinier a fait d’Alphonse de Poitiers un prince presque indéfiniment mineur, soumis à l’autorité de sa mère, Blanche de
             Castille, et d’un frère trop charismatique, Louis  <num>ix</num>. Il ne devient, après la croisade, que le relais efficace de la politique
@@ -167,8 +169,8 @@
             vivier traditionnel des Capétiens. La proximité des deux administrations n’a donc rien pour étonner et doit s’analyser en termes de moyens
             mis en commun plutôt qu’en termes de sujétion.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’administration locale</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’administration locale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De l’administration royale à l’administration comtale</head>
           <p>L’administration royale, qui précède l’inféodation du Poitou en 1241, est assez peu connue. Elle est une sorte de prolongement des
             marches instaurées par Philippe Auguste au moment de la conquête, qui doit à la fois accepter le rôle de la noblesse locale à la tête de
@@ -188,7 +190,7 @@
             ces termes doivent donc faire l’objet d’un examen minutieux, pour en dessiner à la fois la polysémie et le niveau de délégation de pouvoir
             que l’administration désigne à travers eux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Mettre en valeur le territoire</head>
           <p>Depuis Edgard Boutaric, les historiens vantent les mérites d’un comte de Poitiers scrupuleux, attentif à la gestion la plus exacte de son
             domaine. On voit en lui un administrateur compétent, voire visionnaire. Les comptes de son administration permettent de saisir, à gros
@@ -215,8 +217,8 @@
             justice, s’avère particulièrement rentable pour l’administration comtale : malgré les désirs de justice d’Alphonse de Poitiers, ce sont
             les besoins financiers de la croisade qui ordonnent les priorités.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les instruments du pouvoir</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les instruments du pouvoir</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Compter</head>
           <p>La comptabilité d’Alphonse de Poitiers, quoique abondante, n’a encore fait l’objet d’aucune véritable étude, du moins en tant que
             documents. Le contenu en a été édité pour partie – les comptes des sénéchaussées – sans être accompagné des nécessaires explications
@@ -243,7 +245,7 @@
             une multitude de noms particuliers. Sans être des budgets, les comptes sont ainsi le support d’une action prévisionnelle, notamment pour
             la distribution des dépenses, directement assises sur les revenus des prévôtés les plus excédentaires.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les rythmes de l’écrit</head>
           <p>La diplomatique des actes d’Alphonse de Poitiers n’a encore fait l’objet que d’études très restreintes. Le sujet mérite un peu plus de
             soin, ne serait-ce que pour établir les critères de la critique des faux et les grandes évolutions de la production. Il est pratiquement
@@ -269,9 +271,7 @@
             répond à ce besoin d’automatismes né de la croisade. Les mandements concernant le financement de celle-ci offrent en effet une belle
             homogénéité de formule, et ce depuis le début des années 1260.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Edgard Boutaric a érigé Alphonse de Poitiers en champion de la centralisation administrative mise au service de l’intégration du Midi au
           Domaine. Les données de la chronologie et du contexte local ou politique viennent fortement nuancer cette affirmation. La croisade est
           effectivement l’aiguillon puissant d’une forme de centralisation. À mesure que croissent les exigences comtales en matière de finances, les
@@ -288,12 +288,11 @@
           représentent une certaine systématisation du prélèvement extraordinaire. Alphonse de Poitiers, comme à reculons, inaugure la politique de
           son successeur, le roi, tant en matière administrative que fiscale.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Catalogue provisoire des actes d’Alphonse de Poitiers, limité au Poitou et à la Saintonge. — Tableau comparatif des caractères
           diplomatiques des actes originaux. — Tableau des documents comptables. — Tables des agents locaux par lieu. — Prosopographie sommaire et
           provisoire des agents locaux. — Cartes. — Planches.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

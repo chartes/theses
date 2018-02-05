@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Liber visionum et miraculorum&lt;/hi&gt;</title>
-        <title type="sub">Édition du manuscrit de Troyes (Bibl. mun., ms. 946).</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le <hi rend="i">Liber visionum et miraculorum</hi></title><title xml:lang="fr" type="sub">Édition du manuscrit de Troyes (Bibl. mun., ms. 946).</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Legendre, Olivier">Olivier Legendre</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200026.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le genre littéraire de l’<hi rend="i">exemplum</hi> présente, pour l’étude de la prédication, du sentiment religieux et plus largement des
           mentalités médiévales, un intérêt qui désormais n’est plus à démontrer. Le rôle que joua, à la fin du <num>xii<hi rend="sup">e</hi></num>  siècle,
           l’ordre de Cîteaux dans le regain de vitalité que connut l’utilisation de l’<hi rend="i">exemplum</hi> est également, depuis quelque temps,
@@ -60,10 +63,9 @@
           par comparaison avec les recueils mieux connus et plus diffusés qui le suivirent, il permet d’apporter un éclairage nouveau sur l’<hi rend="i">exemplum</hi> en tant que genre littéraire, mais aussi sur la vie et les préoccupations de l’ordre de Cîteaux quelques décennies
           après la mort de saint Bernard.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation générale</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Présentation générale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Contenu du manuscrit</head>
           <p>Le manuscrit édité, le n° 946 de la bibliothèque municipale de Troyes, provient de l’abbaye de Clairvaux où il fut compilé à la fin du
             <num>xii<hi rend="sup">e</hi></num>  siècle. Il était vraisemblablement destiné à l’usage interne de l’abbaye, et s’il fut, au début du siècle
@@ -100,7 +102,7 @@
             nombreux exempla issus de l’ordre de Cîteaux ou concernant des moines. S’y trouvent également quelques exempla de sources plus anciennes,
             tirés par exemple des œuvres de saint Augustin et de saint Jean Chrysosthome.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Etude codicologique et datation</head>
           <p>La datation de l’ouvrage nécessite une étude codicologique détaillée, confrontée aux indications livrées par certains des récits. Le
             recueil comporte cent quatre vingt-un feuillets, répartis en vingt-quatre cahiers. A quatre exceptions près, tous les cahiers comportent
@@ -125,9 +127,9 @@
             serait autre que le recueil compilé sur l’ordre du prieur Jean de Clairvaux, lequel était en fonction précisément pendant cette période
             (1171-1179).</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les apports du <hi rend="i">Liber visionum et miraculorum</hi>
+      </div><div n="3" type="part"><head n="0" type="chapter">Les apports du <hi rend="i">Liber visionum et miraculorum</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Méthodologie</head>
           <p>La lecture du <hi rend="i">Liber visionum et miraculorum</hi> a pour mérite essentiel de plonger le lecteur dans les préoccupations et la
             culture des moines cisterciens de la seconde moitié du <num>xii<hi rend="sup">e</hi></num>  siècle. Dans cette optique, l’étude des sources
@@ -145,7 +147,7 @@
             trouve ailleurs dans le <hi rend="i">Liber visionum et miraculorum.</hi> Autant que cela était possible, on a aussi éclairé par des
             identifications, parfois quelques commentaires biographiques, les récits concernant tel ou tel personnage.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les centres d’intérêt des moines cisterciens</head>
           <p>L’étude des sources employées par le compilateur du <hi rend="i">Liber visionum et miraculorum</hi> donne un aperçu significatif des
             centres d’intérêt des moines cisterciens, une trentaine d’années après la mort de saint Bernard. On relèvera notamment le grand nombre de
@@ -162,7 +164,7 @@
             d’Elisabeth de Schönau qui figure dans le <hi rend="i">Liber visionum et miraculorum.</hi> Une collection entière de miracles mariaux fait
             l’objet d’un chapitre dans la quatrième partie (n<hi rend="sup">os</hi> 142-153).</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les liens entre les <hi rend="i">Liber visionum et miraculorum</hi> et le <hi rend="i">Liber
             miraculorum</hi> D’Herbert de Clairvaux</head>
           <p>L’analyse des relations entre le <hi rend="i">Liber visionum et miraculorum</hi> et les recueils ui le suivent est également du plus
@@ -179,7 +181,7 @@
             une hypothétique filiation pour défendre l’identification du <hi rend="i">Liber visionum et miraculorum</hi> au recueil du prieur Jean. Il
             est bien plus opportun de s’interroger sur la raison pour laquelle, alors que le recueil d’Herbert connut une telle diffusion, le <hi rend="i">Liber visionum et miraculorum</hi> demeura un manuscrit unique. A cette question, l’examen de deux recueils du début du XIII <hi rend="sup">e</hi>  siècle permet d’apporter quelques éléments de réponse.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La postérité du <hi rend="i">Liber visionum et miraculorum</hi>
         </head>
           <p>Le plus célèbre des deux est l’<hi rend="i">Exordium magnum Cisterciensis ordinis</hi>, composé dans les premières décennies du XIII
@@ -203,7 +205,7 @@
             accueilli, entre autres éléments, des récits exemplaires, parce qu’ils contribuaient, comme les textes liturgiques et les  récits de
             visions, à l’édification des moines.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">L’actualité au travers du <hi rend="i">Liber visionum et miraculorum :</hi> L’exemple des hérésies</head>
           <p>Un autre intérêt du <hi rend="i">Liber visionum et miraculorum</hi>, et non le moindre, est que son ouverture au récit exemplaire tiré
             d’une expérience monastique récente s’accompagne d’un certain goût pour l’actualité, et de nombreux récits sont l’occasion d’évoquer des
@@ -221,9 +223,7 @@
               miraculorum</hi> et bien d’autres récits permettent d’entrevoir un réseau de relations et de transmission de l’expérience au sein de
             l’ordre de Cîteaux.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>II est difficile de résumer en quelques mots les nombreux apports du <hi rend="i">Liber</hi>
           <hi rend="i">visionum et miraculorum</hi> pour la connaissance de l’ordre de Cîteaux à la fin du <num>xii<hi rend="sup">e</hi></num>  siècle. Ce
           manuscrit est un témoin privilégié des préoccupations de l’Ordre à l’époque où avait lieu la canonisation de saint Bernard. C’est pourquoi
@@ -238,7 +238,7 @@
           le <hi rend="i">Liber visionum et miraculorum</hi> est sans nul doute, par tout ce qu’il donne à entrevoir de l’ordre et de l’époque qui
           l’ont vu naître, un recueil</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="5"><head>Édition</head>
         <p>Compte tenu du caractère unique du manuscrit, l’édition du texte se donne pour objectif d’en respecter, autant que cela est possible, le
           texte et la structure. Il était donc indispensable, en premier lieu, de donner une édition complète du manuscrit, bien que certains de ses
           chapitres fussent déjà connus par ailleurs et édités, en particulier les récits de visions. Le caractère hétéroclite de l’ouvrage n’était
@@ -270,7 +270,6 @@
           entretient avec l’ouvrage du diacre lyonnais : les passages tirés de celui-ci sont repérés et identifiés en note, avec un bref commentaire
           sur le traitement qu’ils ont subi.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

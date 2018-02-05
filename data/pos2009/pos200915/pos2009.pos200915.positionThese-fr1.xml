@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les parcheminiers de Paris au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les parcheminiers de Paris au <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Girold, Élise">Élise Girold</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200915.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>De nombreuses communautés de métier ont fait l’objet de la curiosité des historiens, d’abord à travers des études générales, puis métier
           par métier. Tous les métiers ne sont pas organisés en corps, même à Paris, où l’organisation des métiers en communautés jurées est ancienne.
           Les parcheminiers de Paris, quant à eux, sont organisés en communauté de métier, mais ce n’est pas là leur seule particularité : ils se
@@ -80,7 +83,7 @@
           la Révolution. En définitive, ce sont l’ensemble des conditions qui lui avaient permis se maintenir jusque-là qui ont fini par lui être
           fatales, une fois celles-ci remises en cause par la Révolution.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>En l’absence d’études portant sur les parcheminiers, qu’ils soient de Paris ou de province, il a été nécessaire de bâtir entièrement les
           bases de l’étude de l’histoire des parcheminiers. Si la bibliographie de l’histoire des communautés de métiers est importante, très peu
           d’ouvrages concernent directement l’histoire des parcheminiers. Les sources pour l’histoire des parcheminiers de Paris sont variées. Si les
@@ -104,9 +107,8 @@
           le métier de parcheminier est plutôt bien défini à Paris, il n’en va pas de même en province, où les parcheminiers occupent également
           d’autres activités, ce qui les rend plus difficiles à cerner.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le commerce du parchemin</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le commerce du parchemin</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La fabrication du parchemin</head>
           <p>Il s’avère tout d’abord essentiel de revenir sur les détails techniques de la fabrication du parchemin, en sorte que le métier de
             parcheminier soit précisément défini sur le plan technique dans un premier temps. Celui-ci doit être bien distingué des autres métiers du
@@ -116,7 +118,7 @@
             qui en fait autant des marchands et grossistes que des artisans, bien qu’il y ait une composante de travail manuel importante dans leur
             activité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un marché</head>
           <p>Une des principales questions posées par l’étude des parcheminiers de Paris consiste à comprendre la nature du marché du parchemin, ses
             différentes composantes et ses acteurs, ainsi que ses limites. La Ferme générale prend une place importante dans ce cadre car elle est
@@ -127,7 +129,7 @@
             des bouleversements qui interviennent au cours des siècles et qui auraient pu remettre en cause son commerce bien plus tôt que cela n’est
             arrivé finalement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les circuits économiques : de la province vers Paris</head>
           <p>Les parcheminiers de Paris constituent l’ultime étape de transformation du parchemin. Ils se situent en effet au bout de la chaîne du
             commerce du parchemin ; en tant que tels, ils sont dépendants des parcheminiers provinciaux qui effectuent les étapes de transformation
@@ -136,8 +138,8 @@
             qui contribuent à faire évoluer les rapports de force entre les deux parties, en faveur des parcheminiers parisiens qui profitent de la
             protection de l’Université, toujours en première ligne lorsqu’il s’agit de défendre ses privilèges.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La communauté des parcheminiers</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La communauté des parcheminiers</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’organisation du travail</head>
           <p>La communauté du <num>xviii<hi rend="sup">e</hi></num> siècle se doit d’être replacée dans la continuité de son histoire depuis le
                 <num>xiii<hi rend="sup">e</hi></num> siècle afin d’éclairer un certain nombre des caractéristiques qui la distinguent des autres
@@ -152,7 +154,7 @@
             parcheminiers ne sont cependant pas les seuls à avoir des relations particulières avec celle-ci, d’autres métiers du livre y étant
             également attachés d’ancienneté, mais ce lien prend un tour très particulier dans le cas des parcheminiers de Paris.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La vie de la communauté</head>
           <p>Il convient enfin d’aborder l’ensemble des aspects de la vie de la communauté, afin de comprendre quelles sont les répercussions sociales
             des conditions économiques très particulières qui encadrent le commerce du parchemin. L’étroitesse du marché pourrait conduire la
@@ -164,7 +166,7 @@
             d’empiéter sur le commerce des parcheminiers. Ce dernier est extrêmement encadré par divers règlements, les maîtres ambitieux doivent donc
             se battre pour trouver un espace de liberté dans lequel prospérer, quitte à bafouer certains règlements.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Épilogue"/>
           <p>La Révolution apporte son lot de bouleversements à l’ensemble des composantes de la société française, mais ceux-ci se révèlent
             particulièrement définitifs pour les parcheminiers de Paris : la communauté est bien sûr dissoute au cours de la Révolution, mais
@@ -175,9 +177,7 @@
             Les almanachs cessent aussi de les recenser très rapidement. La question de la reconversion des maîtres de la fin du <num>xviii<hi rend="sup">e</hi></num> siècle se pose : il s’agit là d’une recherche à faire sur chaque maître individuellement. Les prémices en ont
             été tracés, mais nombre de maîtres restent insaisissables dans les méandres des actes du Minutier central des notaires de Paris.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Le commerce du parchemin dans Paris représentait un véritable enjeu pour une communauté ancienne, que seule la protection de monarchie
           ainsi que celle de l’université de Paris a fait se perpétuer jusqu’au <num>xviii<hi rend="sup">e</hi></num> siècle. Les privilèges et
           règlements qui encadrent le commerce du parchemin tendant à créer des tensions aussi bien au sein de la communauté des maîtres qu’envers les
@@ -194,12 +194,11 @@
           serait possible de poursuivre l’étude des parcheminiers de Paris, tant pour la période médiévale que pour la période contemporaine qui suit
           la Révolution et l’Empire.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Le métier de parcheminier : planches de l’<hi rend="i">Encylopédie</hi> détaillant les outils servant à l’exercice du métier ; inventaires
           après décès de parcheminiers.</p>
         <p>Le parchemin timbré : tableaux de tarifs du parchemin timbré ; reproduction de timbres.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

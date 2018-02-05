@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Henri Delescluze à Belle-Île (1850-1853). Écrits de prison</title>
-        <title type="sub">Édition critique</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Henri Delescluze à Belle-Île (1850-1853). Écrits de prison</title><title xml:lang="fr" type="sub">Édition critique</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="d’Anfray, Benjamin">Benjamin d’Anfray</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201202.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction </head>
+          <div type="introduction" n="1"><head>Introduction </head>
     <p>La prison et l’exil sont des thèmes récurrents dans la mémoire républicaine que le <num>xix</num><hi rend="sup">e</hi> siècle a forgée. Victor Hugo construisit depuis Jersey sa renommée de grand écrivain républicain et la prison fait partie de l’itinéraire-type du révolutionnaire entre 1830 et 1870. L’image des nombreux « martyrs de la République » de cette période, honorés plus tard dans la topographie de la III<hi rend="sup">e</hi> République, s’est largement nourrie des emprisonnements qu’ils ont subis. Blanqui « l’enfermé », Barbès, Raspail ou Charles Delescluze, pour n’en citer que quelques-uns, font partie des célèbres opposants qui payèrent ainsi le prix de leur engagement politique. Plusieurs ont laissé des écrits qui racontent leurs années d’enfermement. </p>
     <p>De 1850 à 1857, mis à part les déportés des commissions mixtes de 1852, les principaux condamnés politiques furent regroupés dans la maison de détention et déportation de Belle-Île-en-Mer. Henri Delescluze, frère du célèbre journaliste mort sur une barricade de la Commune, a séjourné dans cette prison.  Arrêté en octobre 1850 pour l’affaire du « complot de Lyon », il a été condamné à dix ans de détention par le conseil de guerre de Lyon, en août 1851. Sa peine commuée en bannissement en avril 1853, il s’est exilé en Angleterre, puis aux États-Unis, après dix-huit mois passés à Belle-Île. S’il n’a publié aucun ouvrage avant la parution de <hi rend="i">La Commune de Paris</hi>, en 1871, son passage en prison fut l’occasion d’une frénésie d’écriture.  </p>
     <p>Notre détenu s’est essayé à tous les genres littéraires : théâtre, roman, nouvelle, poésie, essais ; il a aussi laissé un grand nombre de notes résultant de ses lectures et de l’enseignement que se prodiguaient mutuellement les détenus de Belle-Île. Outre trois carnets de prison, écrits quotidiens de sa détention provisoire (octobre-novembre 1850) et de son passage à Belle-Île (novembre 1851-avril 1853), nous avons choisi d’éditer un récit de voyage de Lyon à Belle-Île, deux essais sur la vie des détenus, et un récit de la « réception » du coup d’État du 2 décembre 1851 dans la prison. </p>
@@ -58,18 +61,17 @@
     
     
      </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
     <p>Les documents édités se trouvent aux Archives nationales (Fonds Charles et Henri Delescluze, 494 AP 1) et à la bibliothèque municipale de Lille (Fonds Delescluze, Ms  283). Les fonds des archives départementales du Morbihan (série Y), du Rhône (série R) et des Archives nationales (notamment la série BB et la sous-série F<hi rend="sup">7</hi>) ont permis de mettre en contexte les détentions successives d’Henri Delescluze, et d’éclairer son rôle dans la complexe affaire du complot de Lyon qui a causé sa condamnation. La Bibliothèque nationale de France conserve les manuscrits d’Auguste Blanqui, qui fut détenu à Belle-Île en même temps que lui ; ils ont été consultés avec profit (NAF 9578 à 9598). </p>
     
     
     
     </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">« Décidément mon nom me sert bien mal » : un républicain « ordinaire » en détention politique </head>
+          <div n="3" type="part"><head n="0" type="chapter">« Décidément mon nom me sert bien mal » : un républicain « ordinaire » en détention politique </head>
     
     
     
-      <div>
+      <div n="1" type="chapter">
 <head n="Chapitre premier">La jeunesse d’Henri Delescluze</head>
     
     <p><hi rend="i">L’ « enfant prodigue ». — </hi>Né en 1819, Henri Delescluze grandit dans une famille de la petite notabilité drouaise qui maintient d’abord un train de vie bourgeois, avant de rencontrer à partir des années 1830, plusieurs difficultés financières. Son père Charles-Étienne Delescluze perd son emploi de commissaire de police ; son oncle maternel, baron d’Empire, se brouille peu à peu avec ses parents, et retire en 1840 la rente qu’il leur octroyait. Quand Charles-Étienne, blessé pendant les guerres de la Révolution, est admis à l’Hôtel des Invalides, la famille s’installe à Paris. Le fils aîné, Charles Delescluze, en devient la figure dominante. Journaliste de talent et républicain engagé – ce qui lui vaut un exil forcé en Belgique de 1836 à 1840 –, il parvient à nourrir sa famille depuis Charleroi, puis Valenciennes. La correspondance familiale donne à voir la frivolité et l’inconstance de la jeunesse d’Henri Delescluze, en nette opposition avec ce frère vertueux et admiré. Il travaille dans les bureaux de l’entreprise générale des services des Invalides, mais est perclus de dettes, et fait l’objet de bien des plaintes de ses parents, avec lesquels il entretient des relations conflictuelles. </p>
@@ -83,7 +85,7 @@
     
     
       </div>
-      <div>
+      <div n="2" type="chapter">
 <head n="Chapitre II">Henri Delescluze et le complot de Lyon</head>
     
     <p><hi rend="i">Le contexte du complot de Lyon. —</hi> Le « complot de Lyon » désigne, aux yeux de l’autorité, un vaste projet d’insurrection qui doit éclater en novembre 1850, œuvre d’une société secrète, la Nouvelle Montagne, ou Jeune Montagne, dirigée par un ancien constituant de 1848, Alphonse Gent. Henri Delescluze est arrêté à Paris le 26 octobre 1850, et rejoint plus de cinquante autres prévenus dans une longue détention provisoire. </p>
@@ -98,7 +100,7 @@
     
     
       </div>
-      <div>
+      <div n="3" type="chapter">
 <head n="Chapitre III">La détention de Belle-Île</head>
     
     <p><hi rend="i">La prison politique sous la II<hi rend="sup">e</hi> République. —</hi> À l’époque de l’enfermement de Delescluze, la prison politique est le fruit d’une longue évolution. Un statut spécifique s’est progressivement défini pour ce type de détenus, conséquence des conceptions libérales de la monarchie de Juillet, et des dures batailles engagées par les prisonniers sous la monarchie constitutionnelle. Par ailleurs, la législation de la II<hi rend="sup">e</hi> République inaugure l’ère des transportations et des déportations massives, après l’insurrection de juin 1848. </p>
@@ -114,27 +116,24 @@
     
      </div>
       
-   <div>
+   <div n="4" type="chapter">
     <head n="Conclusion"/>
     <p>La plupart des témoignages dont on dispose sur la prison de Belle-Île étaient destinés à la publication. Henri Delescluze ne semble pas avoir eu cette volonté. Les manuscrits qu’il a laissés sont un matériau brut, peu retravaillé. C’est ce qui fait leur originalité : plus soucieux de sortir de la prison que de correspondre à la norme du républicain résistant, leur auteur adopte un regard personnel et introspectif. On y rencontre une conscience tiraillée par le choix radical que lui impose la prison, entre idéaux et nécessités matérielles, entre sacrifice et compromissions. </p>
     
     
     
       </div>
-    </div><div n="2" type="part"><head n="Deuxième partie">Édition</head>
+    </div><div n="4" type="part"><head n="0" type="chapter">Édition</head>
     
-    <p>Après un rappel des règles et des principes d’édition adoptés, l’édition débute par trois éphémérides : le carnet de Lyon (26 octobre - 28 novembre 1850) ; le premier carnet de Belle-Île (30 novembre 1851 - 16 octobre 1852) et le second carnet (17 octobre 1852 - 18 avril 1853). Quatre récits et essais complètent le corpus : Voyage de Lyon à Belle-Île (ca. décembre 1851) ; Des mœurs et des habitudes des prisonniers ; De la prison sous le point de vue moral et physiologique ; Émotion !… (v. décembre 1851 - janvier 1852). </p>
+    <p n="1" type="chapter">Après un rappel des règles et des principes d’édition adoptés, l’édition débute par trois éphémérides : le carnet de Lyon (26 octobre - 28 novembre 1850) ; le premier carnet de Belle-Île (30 novembre 1851 - 16 octobre 1852) et le second carnet (17 octobre 1852 - 18 avril 1853). Quatre récits et essais complètent le corpus : Voyage de Lyon à Belle-Île (ca. décembre 1851) ; Des mœurs et des habitudes des prisonniers ; De la prison sous le point de vue moral et physiologique ; Émotion !… (v. décembre 1851 - janvier 1852). </p>
     
     
-    </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+    </div><div type="conclusion" n="5"><head>Annexes</head>
     <p>Index des noms cités dans la première partie. — Index biographique des noms cités dans les textes édités. — Notes du cours d’économie politique de Blanqui. — Photographie d’un dessin répertorié dans un carnet, et de plusieurs pages manuscrites. </p>
     
   
      </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

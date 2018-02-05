@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les mises en scène de Géo Sandry pour le Cirque d’Hiver (1933-1954)</title>
-        <title type="sub">Le grand spectacle, histoire d’un goût</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les mises en scène de Géo Sandry pour le Cirque d’Hiver (1933-1954)</title><title xml:lang="fr" type="sub">Le grand spectacle, histoire d’un goût</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Angleys, Clotilde">Clotilde Angleys</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200701.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire du spectacle de cirque sous sa forme moderne et occidentale prend sa source dans l’Angleterre et l’Europe de la seconde moitié
           du <num>xviii</num>
 <hi rend="sup">e</hi> siècle. C’est alors, et pour les cent cinquante premières années de son histoire, l’élément équestre qui constitue la
@@ -79,7 +82,7 @@
           s’appuie fortement sur la base de données constituée autour du spectacle, qui englobe d’une part les différentes personnes qui y
           participent, et d’autre part leurs critiques, où on peut lire la mise en place d’une critique de cirque dans l’entre-deux-guerres.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le point de départ de cette étude se trouve dans les archives de Géo Sandry, conservées au département des arts du spectacle de la
           Bibliothèque nationale de France. Celles-ci constituent un très rare exemple d’un véritable fonds d’archives, c’est-à-dire issu de l’action
           de leur producteur. En effet, concernant le spectacle de cirque, les sources conservées par diverses institutions proviennent davantage de
@@ -91,9 +94,8 @@
           personnalité de leur producteur ou collecteur, par des documents détachés de la notion de fonds, mais rattachés au spectacle, et collectés
           par la Bibliothèque nationale de France selon leur support, comme les affiches ou les enregistrements sonores.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le spectacle de cirque en 1930. traditions et influences</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le spectacle de cirque en 1930. traditions et influences</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un cirque parisien</head>
           <p>
             <hi rend="i">Les cirques français, état des lieux</hi>. — Le terme de cirque désigne, au début des années 1930, une grande variété
@@ -117,7 +119,7 @@
             un bassin situé en dessous de la piste, qui puisse se remplir d’eau et servir de piste nautique. À cette occasion sont également
             modernisés d’autres éléments, comme l’installation électrique, qui font du Cirque d’Hiver une véritable machine spectaculaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le spectacle narratif au cirque (1780-1914)</head>
           <p>
             <hi rend="i">Naissance et premières évolutions du spectacle de cirque</hi>. — Le spectacle de cirque, né en Angleterre dans la seconde
@@ -141,7 +143,7 @@
             historique. Enfin, tout au long de la période et à mesure que s’améliorent les relations commerciales avec les horizons lointains, la
             présentation d’animaux sauvages est également un élément spectaculaire très prisé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Goûts spectaculaires des années 1930</head>
           <p>
             <hi rend="i">Opérettes, music-hall, cinéma</hi>. — Héritiers d’une longue tradition dans le monde du cirque, les spectacles du Cirque
@@ -164,8 +166,8 @@
             continue cependant à trouver de nombreuses manifestations de ce goût pour l’exotisme, notamment dans la production romanesque et la
             filmographie des années 1930.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les mises en scène de Géo Sandry</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les mises en scène de Géo Sandry</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Cadres de la réapparition</head>
           <p>Avant l’arrivée de Géo Sandry au Cirque d’Hiver, trois spectacles narratifs avaient été créés dans l’établissement parisien, dans le
             contexte d’une certaine émulation avec l’autre cirque stable de Paris, le Cirque Médrano. À cette réapparition d’une forme un peu oubliée
@@ -176,7 +178,7 @@
             le sauvetage du spectacle. Il reste au Cirque d’Hiver jusqu’en 1954, avec une période d’interruption, où il met en scène huit spectacles
             qui connaissent un certain succès.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les spectacles, étude analytique</head>
           <p>
             <hi rend="i">Vedettes de cirque, les Fratellini</hi>. — Les <hi rend="i">Fratellini en Afrique</hi>(1933) et <hi rend="i">Les Diamants du
@@ -215,7 +217,7 @@
             danseuses. Le dernier spectacle amorce la série des spectacles de guerre, généralement fondés sur une reprise d’histoires déjà connues du
             public. On note une certaine diminution des moyens employés, due aux restrictions imposées par la période.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Étude synthétique</head>
           <p>
             <hi rend="i">Mise en piste</hi>. — Le qualificatif le plus employé par Géo Sandry pour décrire sa mise en scène est celui de luxueux. Ce
@@ -249,8 +251,8 @@
             maladroits, dont l’un est joué par Achille Zavatta. D’autres duos de personnages antagonistes sont parfois porteurs également de l’élément
             comique.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Mécanismes de production des spectacles du Cirque d’Hiver</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Mécanismes de production des spectacles du Cirque d’Hiver</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Autour du spectacle, les personnes</head>
           <p>
             <hi rend="i">En coulisses, l’équipe technique</hi>. — Pour permettre la création des spectacles qui mettent en scène plusieurs centaines
@@ -268,7 +270,7 @@
             monde du cinéma, plus encore que du théâtre lyrique. On a pu établir enfin plusieurs catégories à l’intérieur de ce personnel selon la
             fonction occupée dans le spectacle, qui conditionne les critères de leur recrutement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Diffusion, réception</head>
           <p>
             <hi rend="i">Outils de diffusion et de promotion</hi>. — Les spectacles du Cirque d’Hiver utilisent toute la gamme des outils de promotion
@@ -299,19 +301,16 @@
             d’Hiver, mais montre, par comparaison, la place qu’occupe l’établissement dans l’univers des spectacles parisiens, à l’égal de plusieurs
             grandes salles parisiennes.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Pièces justificatives</head>
+      </div><div type="conclusion" n="6"><head>Pièces justificatives</head>
         <p>Dossiers spectacles comportant pour chacun un récapitulatif des dates, le résumé de l’histoire, le résumé de l’intrigue, le programme, les
           photographies et les éventuels autres documents iconographiques qui s’y rapportent (affiches…). — Notes sur la mise en scène de Géo Sandry.
           — La musique des spectacles : échantillon (CD audio).</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Inventaire du fonds Géo Sandry. — Inventaire du fonds Raymond Brunel. — Cartographie. — Iconographie des différents bâtiments de cirque
           parisiens. — Tableau récapitulatif des airs chantés. — Base de données (édition des tables personnes, journalistes et journaux et fichier
           informatique gravé sur CD-ROM). — Croquis de scénographie d’Émile Bertin.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

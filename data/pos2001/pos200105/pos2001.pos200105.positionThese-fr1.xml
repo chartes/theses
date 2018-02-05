@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Culte et iconographie de saint André en France (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;v&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; - &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Culte et iconographie de saint André en France (<num>v<hi rend="sup">e</hi></num> - <num>xv<hi rend="sup">e</hi></num> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Denoël, Charlotte">Charlotte Denoël</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200105.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’étude du culte et de l’iconographie de l’apôtre André au Moyen Âge n’a jamais été envisagée de manière globale. Les historiens se sont le
           plus souvent intéressés à un aspect spécifique du sujet. Or, l’Église romaine a toujours manifesté une dévotion particulière au frère de
           Pierre, crucifié comme le Christ. Au Moyen Âge, plusieurs contrées le désignent comme leur saint patron, de la Grèce à la Russie, en passant
@@ -65,7 +68,7 @@
           nombreuses controverses. L’objectif de cette étude est ainsi de contribuer à mieux intégrer l’iconographie dans l’histoire religieuse et
           artistique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées sont de deux natures, textuelles et iconographiques. Pour bien saisir la signification des représentations de
           l’apôtre au Moyen Âge, les sources littéraires qui ont participé à l’élaboration de sa légende (Actes apocryphes, légendes abrégées,
           sermons, théâtre…) ont fait l’objet d’un bilan. L’étude des manifestations du culte en France, quant à elle, a pu être menée à partir des
@@ -78,9 +81,8 @@
           nécessaires, le cas échéant ­, et dans un cadre chronologique large, l’époque médiévale, qui a été parfois dépassé, notamment pour
           interroger les premiers témoignages de l’Antiquité chrétienne ou les écrits de l’époque moderne.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le culte de saint André</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le culte de saint André</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les sources textuelles</head>
           <p>Les sources textuelles, dont la circulation assure la diffusion du culte d’un saint, constituent la base de tout dossier hagiographique.
             Dans le cas présent, elles se distinguent non seulement par leur abondance, mais encore par leur caractère exclusivement apocryphe. La
@@ -96,7 +98,7 @@
             diffusion de renseignements d’ordre biographique sur saint André. Au <num>xiii<hi rend="sup">e</hi></num> siècle, l’apparition de légendiers abrégés
             a certes contribué à rendre quelques épisodes populaires, mais n’a guère renouvelé la légende du saint.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le culte liturgique</head>
           <p><hi rend="i">Les mentions de saint André au calendrier </hi>— La fête de saint André, célébrée au 30 novembre, est apparue à une date
             très ancienne en Occident, au <num>iv<hi rend="sup">e</hi></num> siècle, comme l’atteste l’examen des principaux manuscrits liturgiques légués par
@@ -110,7 +112,7 @@
             s’efforçaient de resserrer les liens qui unissent Pierre et André et célèbrent l’amour que portait André à la croix du Christ, qu’il
             désira de toute son âme.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’hagiotoponymie</head>
           <p><hi rend="i">Saint André dans la toponymie gauloise au haut Moyen Âge </hi>— Les diverses mentions de reliques ou d’édifices dédiés à
             l’apôtre André au haut Moyen Âge s’inscrivent, pour la plupart, dans l’aire de développement de la piété martyriale au V <hi rend="sup">e</hi> siècle. Parti des régions méditerranéenne et bourguignonne, son culte s’est répandu vers l’ouest et le nord de la Gaule.</p>
@@ -120,13 +122,13 @@
             Languedoc et du Dauphiné (Viennois), qui possèdent plusieurs édifices anciennement dédiés à saint André. Le vocable Saint-André a pu
             pénétrer en France par la Méditerranée, à la faveur des échanges avec l’Orient, pour remonter ensuite le long de l’axe rhôdanien.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’anthroponymie</head>
           <p>Le prénom André, d’origine grecque, est passé dans l’hagiographie chrétienne grâce à l’apôtre André. C’est pourquoi il s’est diffusé dès
             l’Antiquité tardive. Toutefois, il n’a guère bénéficié de la promotion des prénoms chrétiens au Moyen Âge central et a été peu plébiscité
             par les fidèles, malgré une légère progression à la fin de la période médiévale.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Aspects politiques du culte de saint André en Bourgogne au <num>xv<hi rend="sup">e</hi></num> siècle</head>
           <p><hi rend="i">Les origines du culte de saint André en Bourgogne </hi>— Plusieurs facteurs contribuent à expliquer le choix du patronage
             de saint André par le duc Jean sans Peur: le contexte politique troublé par le conflit franco-anglais et les guerres intestines, la valeur
@@ -141,8 +143,8 @@
             leurs monnaies et sur leurs étendards militaires. De ce fait, la double figure du saint et de sa croix devint une composante essentielle
             de la représentation de la maison de Bourgogne, étroitement liée à la célébration de la gloire des ducs.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">’iconographie de saint André</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">’iconographie de saint André</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les rapports entre le texte et les images</head>
           <p><hi rend="i">Le texte et sa traduction picturale </hi>— Les faits saillants de la vie de saint André mis en image et proposés à
             l’édification des fidèles sont empruntés aux récits de sa vocation, de ses miracles et de son martyre. Les premiers témoignages figurés
@@ -163,7 +165,7 @@
             avec le début de l’Avent conduisaient parfois les enlumineurs à lui réserver une place particulière et une mise en page somptueuse à
             l’intérieur des manuscrits.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Approche thématique de l’iconographie de saint André</head>
           <p><hi rend="i">Saint André et le collège apostolique </hi>— Représenté très tôt dans l’art, saint André a reçu des traits physiques bien
             individualisés qui rendent plus aisée son identification dans les images. Son portrait était chargé de refléter la signification
@@ -210,8 +212,8 @@
             commandés par la famille Rolin au service du duc de Bourgogne. Fait remarquable, saint André est systématiquement accompagné de son
             instrument de martyre dans ces portraits, si bien qu’il passe pour l’«apôtre à la croix».</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La croix de saint André</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La croix de saint André</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Historique des recherches</head>
           <p>La forme de la croix de saint André, en X, a longtemps été l’objet de spéculations historiques et artistiques et a suscité de nombreuses
             controverses auxquelles ont pris part des historiens de l’art. Dissertant sur l’origine du motif en X dans l’art français, les uns y ont
@@ -221,7 +223,7 @@
             de Bâgé (Ain), du <num>xii<hi rend="sup">e</hi></num> siècle ou d’une miniature de la Légende dorée, vers 1300. En revanche, la plupart des auteurs
             s’accordent sur l’époque à laquelle ce motif a pris sa forme définitive, entre la fin du <num>xiv<hi rend="sup">e</hi></num> siècle et le XV <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le motif en X</head>
           <p><hi rend="i">Date de l’apparition de la croix en X </hi>— Au Moyen Âge, les artistes semblent avoir eu le choix entre des croix de
             formes très diverses pour représenter l’instrument du martyre de saint André. Son attribut définitif, la croix en X, est apparu
@@ -237,9 +239,7 @@
 <hi rend="sup">e</hi> siècle par l’armature du bouclier, s’est répandue de façon précoce dans les mêmes régions qui ont adopté la croix
             en X.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’examen des formes de la vénération dont saint André a été l’objet durant la période qui s’étend du <num>v<hi rend="sup">e</hi></num> au XV <hi rend="sup">e</hi> siècle permet d’apprécier la place qu’occupe le culte de cet apôtre dans l’histoire du culte des saints. Au sein du
           collège apostolique, saint André est l’un des premiers apôtres à bénéficier des plus grands honneurs. En Gaule, les développements de son
           culte se sont inscrits dans le cadre de la dévotion martyriale. Très vite, il a pris des proportions importantes, dont témoignent aussi bien
@@ -257,12 +257,11 @@
           des théologiens, au Moyen Âge comme à l’époque moderne, mais encore les artistes l’ont soumise à des variations multiples, qui montrent
           comment ils ont réélaboré d’une façon originale les sources hagiographiques et les traditions iconographiques.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Liste des miracles rapportés par Grégoire de Tours. ­ Transcription d’un miracle inédit de saint André (Paris, Ars. 3706, fol. 9-10). ­
           Tableaux: composition des principaux cycles illustrés sur la vie de saint André; répartition chronologique des différentes formes de la
           croix de saint André au Moyen Âge. ­ Schéma: variété des configurations de la croix du Christ.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

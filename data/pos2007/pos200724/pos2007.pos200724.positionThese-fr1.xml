@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les moniales de Saint-Antoine-des-Champs au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub">« &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Velut lucernas in loco caliginoso lucentes&lt;/hi&gt; »</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les moniales de Saint-Antoine-des-Champs au <num>xiii<hi rend="sup">e</hi></num> siècle</title><title xml:lang="fr" type="sub">« <hi rend="i">Velut lucernas in loco caliginoso lucentes</hi> »</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Szollosi, Vanessa">Vanessa Szollosi</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200724.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’abbaye de Saint-Antoine-des-Champs a été fondée aux portes de Paris à l’extrême fin du <num>xii<hi rend="sup">e</hi></num> siècle par le
           prédicateur Foulques de Neuilly. Si l’abbaye acquiert rapidement une grande renommée et intègre l’ordre cistercien dès 1204, la fondation
           elle-même est très peu documentée. Il s’agit donc de chercher quelles ont été les conditions précises de la fondation ainsi que de
@@ -62,7 +65,7 @@
           Voir comment un établissement nouveau se développe et s’adapte aux besoins de la société qui l’entoure, en conciliant idéal religieux et
           gestion pragmatique, est l’objectif de cette étude.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de Saint-Antoine sont conservées pour l’essentiel aux Archives nationales, dans les séries H<hi rend="sup">5</hi>, L et S.
           Les sources prises en compte pour cette étude sont les actes du <num>xiii<hi rend="sup">e</hi></num> siècle, dont l’écrasante majorité est constituée
           d’actes de gestion, à teneur économique : dons, ventes, achats, amortissements ou ratifications. Très peu d’actes permettent d’appréhender
@@ -72,9 +75,8 @@
           cartulaires dans le chartrier permet une étude du statut des archives de l’abbaye, des moyens de conservation et du classement de celles-ci
           par les moniales.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La fondation de Saint-Antoine</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La fondation de Saint-Antoine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les conditions de la fondation</head>
           <p>
             <hi rend="i">Contexte politique et religieux</hi>. — Avant toute étude particulière, il convient de dresser un rapide tableau de l’époque.
@@ -98,7 +100,7 @@
             faubourg encore peu peuplé ? En ce cas, l’attitude du roi à l’égard de Saint-Antoine est à examiner : Saint-Antoine est-elle perçue comme
             un moyen de développer un territoire ?</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les acteurs de la fondation</head>
           <p>
             <hi rend="i">Foulques de Neuilly</hi>. — Le fondateur de Saint-Antoine est connu essentiellement grâce au portrait que dresse de lui
@@ -137,8 +139,8 @@
             le roi, voyant un de ses faubourgs se développer sans qu’il ait à intervenir, ait considéré que la meilleure attitude était une position
             de retrait attentif.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La pérennisation de la fondation (1200-1233)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La pérennisation de la fondation (1200-1233)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les donateurs</head>
           <p>
             <hi rend="i">La dotation initiale</hi>. — Le propriétaire du terrain sur lequel s’élève Saint-Antoine n’est pas connu. Il est ainsi
@@ -169,7 +171,7 @@
             diversité des donateurs, nobles d’Île-de-France (petits ou grands), bourgeois de Paris, simples Parisiens ou encore curés de la région,
             est un facteur certain de pérennisation de la communauté. Elle est aussi gage d’un temporel varié.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le temporel</head>
           <p>
             <hi rend="i">Le premier temporel (1198-1210)</hi>. — Saint-Antoine reçoit des biens dès les premières années de son existence grâce à
@@ -208,8 +210,8 @@
               <hi rend="i">vice domus</hi>, comme c’était le cas à Port-Royal : il semble donc bien que ce sont l’abbesse et ses moniales qui aient
             mené cette politique très fructueuse de développement du temporel.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Évolution de l’abbaye de Saint-Antoine (1234-1303)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Évolution de l’abbaye de Saint-Antoine (1234-1303)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Évolution de la communauté</head>
           <p>
             <hi rend="i">Une relative mixité sociale (1234-1270)</hi>. — Après le premier bouleversement dans le recrutement de l’abbaye, qui a
@@ -235,7 +237,7 @@
             appartenir à une communauté favorisée par leurs familles en raison des origines de la communauté première, les nobles de la fin du siècle
             ne semblent plus avoir aucun lien avec les croisés ou leur rigueur spirituelle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Évolution des donateurs</head>
           <p>
             <hi rend="i">La persistance des familles nobles</hi>. — Quelques familles de donateurs historiques sont présentes dans le chartrier de
@@ -267,20 +269,17 @@
             lointaines. Une autre enquête qu’il faudrait mener est celle des élections de sépultures à Saint-Antoine ou bien des fondations
             d’anniversaires et de messes, qui permettent d’entrevoir tout un réseau de bienfaiteurs distincts des donateurs parents de moniales.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Partir de sources économiques paraissait un handicap, c’est finalement la richesse de ce fonds – dont de nombreux aspects restent à étudier
           – qui est le trait le plus marquant. Saint-Antoine a connu en très peu de temps de profonds bouleversements, une mutation qui montre sa
           grande adaptabilité à la société de son temps, clé de son succès.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Édition d’actes. — Graphiques (répartition des actes par abbatiat, par type ; répartition des différents types de donateurs etc.). —
           Tableaux (listes récapitulatives des dons, des ventes, des conflits ; des moniales et des abbesses rencontrées, des personnes enterrées à
           Saint-Antoine, des fondateurs de messes ; désignation de Saint-Antoine dans les actes ; le culte de saint Antoine ; le rôle de l’évêque de
           Paris dans différents chartriers). — Cartes (évolution du temporel). — Reconstitutions généalogiques.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

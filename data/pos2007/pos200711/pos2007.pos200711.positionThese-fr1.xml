@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Henry Marcel (1854-1926)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Henry Marcel (1854-1926)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dufour, Agathe">Agathe Dufour</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200711.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le personnage d’Henry Marcel jouit d’une historiographie particulièrement positive. Bien qu’il ait fait partie de l’administration des
           Beaux-arts de la Troisième République durant une période très contestée de son histoire, il est généralement présenté comme un homme ouvert
           à la modernité et curieux de nouveauté, qui s’est opposé à l’Institut et aux professeurs de l’École des Beaux-arts. Cette image est due en
@@ -62,7 +65,7 @@
           de 1911, mais aussi celles du déclenchement de la première guerre mondiale qui a éclaté alors qu’Henry Marcel se trouvait à leur tête depuis
           tout juste un an.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Henry Marcel est un homme qui a beaucoup écrit et dont la journée est rythmée par différents travaux d’écriture. Ceci explique l’importance
           de sa correspondance dont ses héritiers ont fait don à la Bibliothèque nationale de France en 1987 et 1988. Les papiers personnels d’Henry
           Marcel font partie d’un fonds plus large, intitulé « fonds Henry et Gabriel Marcel », lequel est essentiellement constitué des archives du
@@ -75,9 +78,8 @@
           nationaux ont également été exploitées, tout comme les dossiers d’actualité sur les Musées nationaux qui sont conservés à la Bibliothèque
           historique de la Ville de Paris.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Henry Marcel ou la vie d’un grand bourgeois <lb/>sous la Troisième République</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Henry Marcel ou la vie d’un grand bourgeois <lb/>sous la Troisième République</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Enfance et adolescence</head>
           <p>Henry Marcel est né le 25 novembre 1854 à Paris, de Pierre-Marie Marcel, architecte, et Clémentine Louise Lucas de Montigny. C’est le
             dernier des trois enfants du couple Marcel. Par sa mère, il est le descendant du grand homme de la Révolution, Mirabeau, et des sculpteurs
@@ -87,7 +89,7 @@
             pousse un temps à envisager la carrière de comédien. Au Conservatoire, il a rencontré Gabriel Hanotaux qui est devenu son ami. Néanmoins,
             il est vite rappelé à l’ordre par ses parents et rejoint les bancs de la faculté de droit où il obtient sa licence en 1877.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Henry Marcel et la République</head>
           <p>En 1878, Henry Marcel est admis au concours d’auditeur de seconde classe du Conseil d’État. L’année suivante, il bénéficie des mesures de
             républicanisation qui touchent cette institution et devient auditeur de première classe moins d’un an après être entré en poste. Au
@@ -103,7 +105,7 @@
             qui défend l’ordre et la tradition. À la suite à cet échec, son ami Hanotaux le prend dans son cabinet ministériel et l’envoie comme
             ministre plénipotentiaire à Stockholm en 1898, mais Henry Marcel ne se plaît pas en Suède et rentre en France dès 1899.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Henry Marcel, un grand bourgeois de Paris</head>
           <p>Henry Marcel est un Parisien de cœur et il est toujours resté fidèle à sa ville natale. Il y a toujours vécu, malgré ses déménagements
             successifs et ses deux mariages. En février 1889, il a épousé Laure Meyer, la fille de Maurice Meyer, ancien directeur de la banque
@@ -116,8 +118,8 @@
             ce dernier ne le porte pas vers les enfants. Malheureux dans son propre foyer, Henry Marcel cherche la paix dans ses nombreux voyages en
             France et en Europe, et une autre famille chez son frère et sa belle-sœur, Jules et Caroline Marcel.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Henry Marcel et les Beaux-arts</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Henry Marcel et les Beaux-arts</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’amateur et le collectionneur</head>
           <p>Parallèlement à ses activités au Conseil d’État et dans les ministères, Henry Marcel tente de percer sur la scène littéraire. Il se
             frotte à divers genres littéraires, le théâtre, la poésie et même le roman, mais il ne rencontre pas le succès qu’il espérait. Ce sont ses
@@ -145,7 +147,7 @@
             rempli des œuvres choisies par le maître de maison. Après sa mort, une grande partie de sa collection a fait l’objet d’un don au musée des
             Beaux-arts de la ville de Reims.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Henry Marcel et l’administration des Beaux-arts</head>
           <p>Dès 1891, alors qu’il était maître des requêtes au Conseil d’État, Henry Marcel a tenté de se rapprocher de l’administration des
             Beaux-arts : il s’est porté candidat à la succession de Gustave Larroumet, le directeur des Beaux-arts, mais son nom a pesé bien peu face
@@ -174,12 +176,12 @@
             anniversaire de l’unité italienne en 1911. Henry Marcel renoue ainsi avec l’administration des Beaux-arts, ce qui explique qu’on fasse
             appel à lui en 1913 quand il s’est agi de trouver un nouveau directeur des Musées nationaux.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les Musées nationaux au temps d’Henry Marcel (1913-1919)</head>
-        <p>Cette troisième partie abandonne le point de vue biographique et se concentre sur la vie des Musées nationaux et sur l’action d’Henry
+      </div><div n="5" type="part"><head n="0" type="chapter">Les Musées nationaux au temps d’Henry Marcel (1913-1919)</head>
+        <p n="1" type="chapter">Cette troisième partie abandonne le point de vue biographique et se concentre sur la vie des Musées nationaux et sur l’action d’Henry
           Marcel quand il s’est trouvé à leur tête. Elle donne une vision assez large des Musées nationaux et offre un bilan de leur gestion pendant
           la période troublée du premier conflit mondial. Henry Marcel a en effet occupé le poste de directeur durant la première guerre mondiale et
           il est évident que ses décisions et sa marge de manœuvre ont été en grande partie limitées par les circonstances.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Le visage des Musées nationaux à l’arrivée d’Henry Marcel</head>
           <p>En 1913, les Musées nationaux sont une vieille institution dont l’histoire remonte aux dernières années de l’Ancien Régime et dont les
             fondements idéologiques et l’organisation remontent à la Révolution française. Au <num>xix<hi rend="sup">e</hi></num> siècle, les Musées nationaux
@@ -204,7 +206,7 @@
             Société des Amis du Louvre dont certains siègent au Conseil des Musées nationaux, qui décide de l’utilisation des fonds gérés par la
             Réunion des Musées nationaux pour acquérir des œuvres destinées aux Musées nationaux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les débuts d’Henry Marcel à la tête des Musées nationaux <lb/>(mai 1913-août 1914)</head>
           <p>L’arrivée d’Henry Marcel au Louvre est saluée avec enthousiasme par la presse et les conservateurs des Musées nationaux. Elle intervient
             alors que ces derniers connaissent une crise sans précédent provoquée par la disparition de la Joconde au mois d’août 1911. Depuis cette
@@ -218,7 +220,7 @@
             avaient perdu dans le scandale. Néanmoins, la déclaration de guerre au mois d’août 1914 empêche Henry Marcel de mener à bien les projets
             qu’il a lancés et de profiter de sa récente renommée.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Les Musées nationaux dans la guerre <lb/>(août 1914-octobre 1919)</head>
           <p>Les Musées nationaux ferment leurs portes le 2 août 1914, au lendemain de la mobilisation générale. Dans un premier temps, Henry Marcel
             donne les ordres nécessaires pour que les œuvres des Musées nationaux soient mises à l’abri dans les caves ou les renfoncements des murs.
@@ -242,9 +244,7 @@
             guise de punition, des toiles et des sculptures. Il n’est cependant pas donné suite à ce projet et les listes établies par Henry Marcel
             n’ont pas été utilisées. Après sept années de bons et loyaux services, Henry Marcel est mis d’office à la retraite à compter du 1 <hi rend="sup">er</hi> octobre 1919. Sa carrière de haut fonctionnaire est terminée.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Sa vie durant, Henry Marcel a cherché la compagnie des artistes. Son entrée au Conseil d’État en 1878 n’a pas sonné tout à fait le glas de
           ses ambitions artistiques et, en fin stratège, il a réussi à orienter sa carrière de haut fonctionnaire de façon à garder un pied dans le
           monde des arts. Grand bourgeois de Paris, érudit et grand collectionneur, Henry Marcel est un homme de son époque, avide de nouveauté tout
@@ -252,13 +252,12 @@
           souvent ingrate, elle lui a promis les plus grandes dignités et les lui a très vite reprises. Il s’éteint en mars 1926, chez lui, au milieu
           de ses tableaux et de ses livres.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Chronologie. — Extraits de ses œuvres littéraires. — Édition de quelques lettres des fonds Henry et Gabriel Marcel de la Bibliothèque
           nationale de France. — Photographies. — Reproduction d’une partie du don Henry Marcel fait au musée des Beaux-arts de la Ville de Reims. —
           Texte réglementaire sur l’administration des Musées nationaux. — Dossier thématique sur le vol de la Joconde. — Documents budgétaires sur
           les Musées nationaux.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les portails roussillonnais en marbre des &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; et &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles</title>
-        <title type="sub">Une renaissance de l’Antiquité</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les portails roussillonnais en marbre des <num>xii<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles</title><title xml:lang="fr" type="sub">Une renaissance de l’Antiquité</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Macquart-Moulin, Irène">Irène Macquart-Moulin</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200618.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le Roussillon doit son nom à l’antique cité romaine de <hi rend="i">Ruscino</hi> dont les limites semblent avoir correspondu, au XII <hi rend="sup">e</hi> siècle, à celles du diocèse d’Elne, cadre de cette étude. Il présente une grande diversité de marbres et de pierres
           marbrières dont certains ont été exploités depuis l’Antiquité jusqu’à l’arrivée des Arabes au <num>viii<hi rend="sup">e</hi></num> siècle. Dès la fin
           du <num>ix<hi rend="sup">e</hi></num> siècle et aux <num>x<hi rend="sup">e</hi></num> et <num>xi<hi rend="sup">e</hi></num> siècles, l’exploitation reprend en lien avec
@@ -69,7 +72,7 @@
           vocabulaire ornemental. Le marbre n’est pas seulement destiné à une production en série mais, dans le contexte de la réforme grégorienne,
           est l’objet de commandes précises dans lesquelles s’illustrent de grandes personnalités artistiques.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les portails en marbre sont l’objet essentiel de l’étude. Ont également été visitées les principales carrières de la région et consultés
           des documents d’archives. Les cartulaires des grandes abbayes ont pour la plupart été détruits, mais leurs chartes sont connues grâce à des
           copies réalisées par des érudits aux <num>xvii<hi rend="sup">e</hi></num>-XIX<hi rend="sup">e</hi> siècles, publiées ou conservées à la Bibliothèque
@@ -77,16 +80,15 @@
           été consultées les archives du service des Monuments historiques, du Laboratoire de recherche des Monuments historiques, du Service
           départemental de l’architecture et du patrimoine à Perpignan et de la Direction régionale des affaires culturelles, à Montpellier</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les portails sculptés roussillonnais : <lb/>une approche formelle de l’Antiquité</head>
-        <p>De modestes églises accueillent parfois de somptueux portails, témoignage du souci de valoriser la porte du lieu saint. De fait, le
+          <div n="3" type="part"><head n="0" type="chapter">Les portails sculptés roussillonnais : <lb/>une approche formelle de l’Antiquité</head>
+        <p n="1" type="chapter">De modestes églises accueillent parfois de somptueux portails, témoignage du souci de valoriser la porte du lieu saint. De fait, le
           caractère sacré que revêtait la porte dans les cités orientales méditerranéennes s’est perpétué dans le sanctuaire chrétien considéré comme
           la porte même du Ciel et le corps du Christ, d’où l’assimilation de la porte au Christ lui-même et les fréquentes représentations du Christ
           bénissant, de l’agneau pascal ou de la croix. Le portail-cadre évoque aussi l’autel, lieu du sacrifice qui donne le Salut. La vierge Marie a
           elle aussi été assimilée à la porte : elle donne le Salut par son Fils, comme en témoigne l’inscription de Corneilla-de-Conflent. On note
           par ailleurs la présence fréquente de plaques funéraires sur la porte ou à proximité. Outre l’inhumation <hi rend="i">in porticu</hi> ou <hi rend="i">ante limina</hi>, la liturgie est souvent associée à la porte lors de la dédicace de l’église, la procession des Rameaux, la
           liturgie des cendres...</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">La promotion de structures complexes : <lb/>les portails à colonnes</head>
           <p>Les portails à colonnes du <num>xii<hi rend="sup">e</hi></num> siècle sont les structures les plus élaborées. On en dénombre au moins quatorze.
             Comme dans l’Antiquité, redécouverte grâce aux vestiges et aux pèlerinages, la colonne magnifie le passage entre le monde profane et
@@ -107,7 +109,7 @@
             colonnes, tores et sculpture qui adoucissaient les lignes de la structure. Cette simplification témoigne d’une recherche de sobriété à
             l’antique où sont promus le grand appareil et les cannelures.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les structures simplifiées</head>
           <p>On a aussi produit des portails simplifiés, parfois pourvus d’un tympan et d’un linteau. Les piédroits aux bords extérieurs rarement
             rectilignes sont appareillés en moyen appareil. À l’exception de celui de Marcevol où la polychromie des matériaux et la stéréotomie sont
@@ -119,18 +121,18 @@
             lettre aux chanoines de Pise pour recommander les moines qu’il envoyait en Italie tailler pierres et colonnes en marbre de Carrare
             destinées au cloître qu’il voulait élever dans son ancienne abbaye.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Les structures mal connues</head>
           <p>Certains portails ont pu disparaître. D’autres n’ont conservé que des fragments parfois très modestes (chapiteaux, bases, tympan-linteau
             de Cabestany…) qui ne nous permettent pas toujours de restituer leur structure d’origine.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les portails sculptés roussillonnais : <lb/>une approche matérielle de l’Antiquité</head>
-        <p>Le travail de la pierre et l’origine des matériaux intéressent géologues, historiens, historiens de l’art et archéologues. De nouvelles
+      </div><div n="4" type="part"><head n="0" type="chapter">Les portails sculptés roussillonnais : <lb/>une approche matérielle de l’Antiquité</head>
+        <p n="1" type="chapter">Le travail de la pierre et l’origine des matériaux intéressent géologues, historiens, historiens de l’art et archéologues. De nouvelles
           techniques d’analyses pétrographiques ont été élaborées. Dans le cas du Roussillon, où l’on a employé des marbres et des pierres marbrières,
           toute difficulté n’est pas pour autant écartée, car ces analyses demeurent souvent longues et coûteuses et les carrières exploitées aux XII
 <hi rend="sup">e</hi> et <num>xiii<hi rend="sup">e</hi></num> siècles ne sont pas toujours identifiées ou bien ont été exploitées bien au-delà de la
           période.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Le marbre : <lb/>perception du matériau depuis l’Antiquité <lb/>et renouveau en Roussillon</head>
           <p>Dans l’Antiquité, le terme «  <hi rend="i">marmor</hi> » désignait toute roche susceptible de prendre un beau poli. La beauté et la
             noblesse du marbre en faisaient un matériau privilégié de l’architecture religieuse et politique. La production roussillonnaise,
@@ -153,7 +155,7 @@
             d’Urgell, dont les travaux de la cathédrale avaient été menés à bien par un maître d’œuvre italien. Le contraste entre les assises
             blanches et les assises noires a été renforcé par une taille décorativehéritière des exemples antiques.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Le travail du marbre : <lb/>occasion de retrouver les techniques antiques</head>
           <p>L’introduction du grand appareil et l’expansion de la production marbrière au <num>xii<hi rend="sup">e</hi></num> siècle ont été rendues possibles
             grâce à l’exploitation du fer du Conflent et à la production après l’an mil d’un outillage adapté au travail du marbre. Les sources
@@ -171,7 +173,7 @@
             intervient dès le début du <num>xii<hi rend="sup">e</hi></num> siècle, soit relativement tôt pour l’Occident ; son emploi fut réservé au marbre,
             sauf à Serrabone où l’on en trouve des traces sur le schiste. Les ciselures périphériques héritent elles aussi de l’Antiquité.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">La sculpture en marbre et l’insertion du portail à la façade</head>
           <p>La dureté du matériau et la difficulté du maniement des outils témoignent en faveur d’une sculpture effectuée avant la pose. Cependant,
             quelques reprises ont pu être réalisées sur place, voire une véritable taille comme pour les dents d’engrenage du portail de Nyer.</p>
@@ -189,11 +191,11 @@
             dans la rareté et les dimensions souvent modestes des ouvertures, dans l’absence fréquente de saillie du portail en façade. Ce soin
             renvoie à un idéal du mur monolithique que l’on trouvait dans les plus belles constructions romaines.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une production antiquisante : <lb/>de la série au particulier</head>
-        <p>Une « production en série », héritée de l’Antiquité, s’observe à l’époque médiévale dans plusieurs domaines géographiques, le plus souvent
+      </div><div n="5" type="part"><head n="0" type="chapter">Une production antiquisante : <lb/>de la série au particulier</head>
+        <p n="1" type="chapter">Une « production en série », héritée de l’Antiquité, s’observe à l’époque médiévale dans plusieurs domaines géographiques, le plus souvent
           pour le travail de matériaux nobles. C’est ainsi que travaillèrent les marbriers de Purbeck, Corfe, Tournai ou encore ceux du
           Roussillon.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Une production en série <lb/>et une permanence des motifs iconographiques</head>
           <p>Les blocs constituant les portails sont souvent très irréguliers. Compte tenu de la qualité de la stéréotomie des marbriers, il est
             néanmoins difficile d’attribuer ces irrégularités à la maladresse des tailleurs. Elles semblent correspondre au mode d’extraction du
@@ -220,7 +222,7 @@
             vie religieuse catalane. Le commanditaire a sans doute souhaité accorder un soin particulier à la porte de l’église destinée aux fidèles
             et les chapiteaux des portails sont souvent plus soignés que ceux que l’on trouve dans les cloîtres.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Une production à la demande</head>
           <p>La floraison des portails en marbre s’est faite dans le cadre de la réforme grégorienne qui permit à l’Église de restaurer son prestige
             temporel et spirituel et dont les chanoines augustins furent les principaux propagateurs en Roussillon. Or les plus grandioses
@@ -251,7 +253,7 @@
             dualistes cathares et être une démonstration d’orthodoxie contre les sectes. Le monachisme y affirme son pouvoir d’intercession et appelle
             à la prière.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Une personnalité artistique : <lb/>le Maître de Cabestany et sa culture antique</head>
           <p>L’appellation de « Maître de Cabestany » est née en 1944. Mais de nombreuses incertitudes demeurent sur l’identité de l’artiste et de
             l’atelier qu’il a peut-être dirigé ou encore sur l’origine de sa formation : il a su avec talent puiser dans le métier et le répertoire
@@ -277,9 +279,7 @@
             et le baptême auquel renvoie le Bain de l’Enfant sur la frise du Boulou. La proximité fréquente de la sculpture du maître avec les <hi rend="i">Beatus</hi> ou les écrits d’Isidore de Séville semble attester une culture de clerc formé à une école monastique ou canoniale,
             indice du rôle des religieux dans la promotion des portails en marbre et de leur sculpture.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La floraison des portails roussillonnais en marbre trouve sa source dans les richesses géologiques de la région et est portée par le
           mouvement européen qui renoue au <num>xii<hi rend="sup">e</hi></num> siècle avec l’exploitation du matériau rendue possible par la promotion d’outils
           adaptés au travail de cette roche dure. Le succès considérable que connut cette production atteste de la valeur symbolique qui lui a été
@@ -288,12 +288,11 @@
           héritiers des temps paléochrétiens et des terres des premiers chrétiens, tout cela pour la promotion de l’Église et l’émerveillement des
           fidèles, instruits par l’un des éléments architecturaux les plus symboliques de l’édifice, le portail.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Les annexes comportent des cartes schématiques présentant la géographie physique et religieuse de la région ainsi que la géographie de
           l’emploi des deux principaux marbres roussillonnais. Elles proposent en outre plus de 400 illustrations de l’emploi du marbre en Roussillon
           et des portails réalisés aux <num>xii<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le Grand insulaire et pilotage d’André Thevet, cosmographe du roi</title>
-        <title type="sub">Édition critique partielle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le Grand insulaire et pilotage d’André Thevet, cosmographe du roi</title><title xml:lang="fr" type="sub">Édition critique partielle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lor, de">de Lor</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200927.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Durant les dernières années d’une vie consacrée aux voyages et à la géographie, André Thevet (1516-1592) chercha à rétablir une autorité
           intellectuelle mise à mal par les éditions successives, à partir de 1578, de l’Histoire d’un voyage fait en terre du Brésil de Jean de Léry.
           À cette fin, il entreprit la réalisation d’un ouvrage de grande ampleur, le Grand Insulaire et Pilotage, véritable tableau cartographique et
@@ -63,7 +66,7 @@
           connaissance des Indiens du Brésil au <num>xvi</num>
 <hi rend="sup">e</hi> siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’édition partielle proposée s’appuie sur le manuscrit de la Bibliothèque nationale de France, fr. 15452-15453 : Le Grand Insulaire et
           Pilotage d’André Thevet, Angoumoisin, Cosmographe du Roy. Dans lequel sont contenus plusieurs plants d’isles habitées et deshabitées, et
           description d’icelles, dont il existe une mise au net, le manuscrit BNF, fr. 17174 : Description de plusieurs isles par M. André Thevet.</p>
@@ -71,9 +74,8 @@
           Roy, de deux voyages par luy faicts aux Indes Australes, et Occidentales, conservé sous la cote BNF, fr. 15454, dont on connaît aussi une
           mise au net : Second voyage d’André Thevet dans les Terres Australes et Occidentales, manuscrit BNF, fr. 17175.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude critique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Étude critique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aspects codicologiques</head>
           <p>Le projet entrepris par Thevet à la fin de sa vie est riche d’enseignements sur cet auteur et sur sa façon de travailler. Il repose sur
             la préparation de deux ouvrages, chacun d’eux connu en deux versions : d’une part, les deux volumes du Grand Insulaire et Pilotage (vers
@@ -93,7 +95,7 @@
             références au Grand Insulaire dans le texte de l’Histoire de deux voyages sont aussi fréquentes que le sont les ajouts effectués dans le
             manuscrit du Grand Insulaire sur le papier utilisé pour le manuscrit de l’Histoire de deux voyages.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Aspects linguistiques</head>
           <p>Le manuscrit du Grand Insulaire constitue un point d’observation privilégié de la langue française de cette époque, dans la mesure où
             cette copie de travail écrite à plusieurs mains livre l’image d’une langue qui n’a pas subi les étapes de relecture et de correction
@@ -112,7 +114,7 @@
             réforme de l’écriture ou du moins aux métamorphoses imposées par l’imprimerie. En outre, les pratiques morphologiques et syntaxiques
             signalent un texte d’écriture renouvelée, dont la liberté par rapport au vocabulaire débouche sur la création de néologismes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Considérations ethnographiques</head>
           <p>La présence de langues étrangères dans l’œuvre de Thevet n’est pas systématique, mais peut prendre la forme de glossaires couvrant
             plusieurs feuillets et de courtes mentions insérées à l’occasion dans son discours. Il est probable que cet artifice visait à apporter un
@@ -137,24 +139,21 @@
             caractères particuliers du dialecte tupinambá par rapport à la langue tupi, comme par exemple la tendance à supprimer la dernière syllabe
             en tupinambá.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">édition partielle</head>
-        <p>Le texte édité correspond aux feuillets 207v à 348v du tome premier du Grand Insulaire. Toute partielle qu’elle soit, cette édition
+      </div><div n="4" type="part"><head n="0" type="chapter">édition partielle</head>
+        <p n="1" type="chapter">Le texte édité correspond aux feuillets 207v à 348v du tome premier du Grand Insulaire. Toute partielle qu’elle soit, cette édition
           prétend donner à voir cet ouvrage dans l’état où l’a laissé l’auteur. <num>à</num>l’option de faire un recueil dont la cohérence aurait été
           reconstruite de manière arbitraire, par exemple selon des critères géographiques, nous avons préféré l’édition d’une séquence de chapitres
           telle qu’elle apparaît dans le manuscrit. Cette édition comprend donc des chapitres successifs portant sur les trois parties du monde
           traitées dans le premier volume du Grand Insulaire, à savoir l’Asie, l’Afrique et l’Amérique.</p>
-        <p>L’apparat critique comporte deux types de notes. Une série de notes porte sur l’état du texte manuscrit, les corrections apportées par
+        <p n="2" type="chapter">L’apparat critique comporte deux types de notes. Une série de notes porte sur l’état du texte manuscrit, les corrections apportées par
           l’auteur, les indications relatives à l’insertion de textes et aux biffures. L’autre signale les sources livresques de Thevet et donne des
           indications sur le processus d’appropriation de ces données par le cosmographe.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="5"><head>Annexes</head>
         <p>Représentation graphique, du point de vue codicologique, des manuscrits étudiés. — Table générale des chapitres et des glossaires du Grand
           Insulaire et Pilotage. — Glossaire des mots en langue tupi présents dans tous les ouvrages de Thevet. — Index des noms de personne et de
           lieu.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

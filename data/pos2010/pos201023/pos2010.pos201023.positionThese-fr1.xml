@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Guillaume de Saint-Lô un prédicateur à l’œuvre au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Guillaume de Saint-Lô un prédicateur à l’œuvre au <num>xiv<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Roger, Cécile">Cécile Roger</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201023.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Guillaume de Saint-Lô fut abbé de Saint-Victor de Paris vers le milieu du <num>xiv<hi rend="sup">e</hi></num> siècle. Il fut donc à la tête
           d’une congrégation importante et prestigieuse par ses origines. Mais on sait peu de choses de lui. Mis à part son titre de docteur en
           théologie et ses dates d’abbatiat, l’essentiel de ce qu’on en a retenu réside en l’existence de sermonnaires de sa main, les manuscrits
@@ -60,10 +63,9 @@
           remaniements, et d’autre part au fait qu’ils mêlent les langues latine et vernaculaire. Ces sermons seront donc abordés moins du point de
           vue théologique que de celui des méthodes de travail et des modalités de la prédication.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude critique</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Étude critique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Étude codicologique</head>
           <p><hi rend="i">Les manuscrits lat.</hi> <hi rend="i">14921 et lat. 14949 de la Bibliothèque nationale de France. —</hi> Les manuscrits
             lat. 14921 et 14949 de la Bibliothèque nationale de France proviennent du fonds de l’abbaye de Saint-Victor de Paris. Ils sont tout deux
@@ -117,7 +119,7 @@
             révélés d’attribution douteuse, ils ont été édités en suivant la version du manuscrit de Guillaume, pour essayer de comprendre pourquoi il
             les avait copiés.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Guillaume de Saint-Lô</head>
           <p><hi rend="i">Les indications des sources. —</hi> L’existence de Guillaume de Saint-Lô est attestée par un certain nombre de documents.
             Les dates de son abbatiat sont connues : il est élu à la mort d’Aubert de Mailly survenue le 12 avril 1345 et il meurt le 8 juin 1349,
@@ -161,7 +163,7 @@
             meilleures sources. Le point central de cette prédication se pose davantage en terme d’influence, d’emprunt, d’intertextualité et
             d’efficacité du discours qu’en terme de propriété intellectuelle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Pour une approche du texte</head>
           <p>Après avoir cherché ce que pouvaient nous apprendre les manuscrits et l’histoire sur les sermons édités, il est bon de s’intéresser au
             texte lui-même, afin de mieux comprendre les méthodes de travail de Guillaume de Saint-Lô, sa manière d’utiliser les Écritures et ses
@@ -262,9 +264,7 @@
             ne sont pas empruntées à des œuvres préexistantes, mais composées spécialement pour le sermon.</p>
           <p/>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="3"><head>Conclusion</head>
         <p>Au cours de cette étude, il a fallu bien vite abandonner la notion de sermons autographes ou d’œuvre originale pour considérer l’ensemble
           des textes de manière globale, même si la quantité importante de sermons contenus ici a conduit à se cantonner à certaines occasions. Ainsi,
           se révèle le travail d’un prédicateur semblable à beaucoup d’autres, qui compile au moins autant qu’il n’écrit.</p>
@@ -279,12 +279,11 @@
           n’a pas d’autre voie de sainteté à proposer aux laïcs que celle de la contemplation, ce qui est particulièrement visible à la manière
           d’utiliser le récit de la Passion en une série de méditations, entrecoupées d’exhortations à vivre droitement.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="4"><head>Édition</head>
         <p>L’édition donne le texte de seize sermons choisis plus haut, selon la version de Guillaume de Saint-Lô. Elle est suivie de quatre index, le
           premier pour les citations bibliques, le deuxième pour les références aux Pères de l’Église et à d’autres auteurs, le troisième pour les
           notions et le dernier pour les mots rares. Suit une liste des <hi rend="i">exempla.</hi></p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -5,9 +5,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
+        <!--
         <title type="main"></title>
         <title type="sub"></title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key=""></author>
       </titleStmt>
       <editionStmt>
@@ -39,28 +41,25 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
+
         <cRefPattern n="Partie" matchPattern="(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
+
         <cRefPattern n="Section" matchPattern="(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr">
-          <div n="1" type="section">
-              <div type="introduction"></div>
-              <div type="sources"></div>
-          </div>
-          <div n="2" type="section"></div>
-          <div n="3" type="section">
-              <div type="conclusion"></div>
-              <div type="appendix"></div>
-          </div>
+          <div type="introduction"></div>
+          <div type="sources"></div>
+          <div type="conclusion"></div>
+          <div type="appendix"></div>
       </body>
   </text>
 </TEI>

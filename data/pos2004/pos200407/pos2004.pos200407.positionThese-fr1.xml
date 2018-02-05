@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’École de cavalerie de Saumur (1814-1914)</title>
-        <title type="sub">La création de l’équitation militaire.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’École de cavalerie de Saumur (1814-1914)</title><title xml:lang="fr" type="sub">La création de l’équitation militaire.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Conraux, Aurélien">Aurélien Conraux</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200407.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’École de cavalerie de Saumur a été fondée en 1814 à Saumur, pour servir d’école d’application aux officiers de la cavalerie française.
           Elle sert également de laboratoire et de banc d’essai pour toutes les innovations introduites dans la cavalerie. L’étude de l’École permet
           donc d’appréhender tous les problèmes rencontrés par la cavalerie au <num>xix<hi rend="sup">e</hi></num> siècle, et plus généralement la manière dont les institutions
@@ -59,7 +62,7 @@
           notamment d’examiner les manières dont la tradition collective intégrée par les individus devient un référent obligé des décisions
           individuelles comme collectives.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Cette étude prend essentiellement appui sur les documents conservés au Service historique de l’Armée de terre à Vincennes, dépositaire des
           archives militaires, et à la bibliothèque de l’actuelle École d’application de l’arme blindée cavalerie à Saumur, qui conserve de nombreux
           registres de l’École de cavalerie du <num>xix<hi rend="sup">e</hi></num> siècle. Au-delà de ces sources directement produites par l’École ou par son administration de
@@ -67,9 +70,8 @@
           utilisation extensive de documents conservés aux Archives départementales de Maine-et-Loire, aux Archives municipales de Saumur et à la
           bibliothèque du château-musée de Saumur.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les héritages</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les héritages</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’héritage historiographique</head>
           <p>L’École de cavalerie de Saumur a été très peu étudiée malgré son importance pour la cavalerie. Un seul ouvrage, monumental, est consacré
             à l’École : les <hi rend="i">Origines de l’École de cavalerie</hi>, publié en 1889 par le capitaine Picard, professeur d’histoire
@@ -78,7 +80,7 @@
             partie la transmission des traditions de l’établissement et d’une histoire dotée de valeurs et de mythes propres à l’École de cavalerie.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Saumur : une ancienne capitale, une mince tradition équestre</head>
           <p>L’installation de l’École de cavalerie à Saumur est une chance pour la ville, mais pas un accident historique. La ville est placée à un
             carrefour stratégique sur la Loire qu’il est important de contrôler, mais a du mal à se développer entre Angers et Tours. Au <num>xvi<hi rend="sup">e</hi></num> siècle,
@@ -88,7 +90,7 @@
             Saumur présente les prémices d’un nouvel essor et cherche à accueillir une école militaire d’officiers, qui assurerait la prospérité de la
             ville.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Carabiniers</head>
           <p>Les Carabiniers de Monsieur qui s’installent à Saumur à la mi-<num>xviii<hi rend="sup">e</hi></num> siècle ne peuvent être considérés comme les précurseurs de l’École
             de cavalerie. S’ils disposent d’une école d’équitation, elle est très différente dans son fonctionnement et dans son organisation de
@@ -96,7 +98,7 @@
             indélébile reprise par la suite par l’École de cavalerie. Le quartier des Carabiniers et les premiers manèges et écuries, en particulier,
             définissent les grandes tendances du cadre architectural militaire à Saumur.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les écoles de cavalerie sous la Révolution et l’Empire</head>
           <p>L’école d’équitation des Carabiniers est supprimée à la Révolution, comme les écuries de Versailles et la plupart des manèges parisiens.
             Une éphémère École nationale d’équitation fonctionne de 1796 à 1809 dans les écuries de Versailles. En 1809, Napoléon créé à Saint-Germain
@@ -104,8 +106,8 @@
             Plusieurs facteurs se conjuguent alors pour expliquer le retour à Saumur d’une École d’application de cavalerie qui apparaît indispensable
             et doit être autonome des corps de troupes à cheval.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">les structures matérielles et intellectuelles</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">les structures matérielles et intellectuelles</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Missions et organisations de l’École de cavalerie (1814-1870)</head>
           <p>La forme institutionnelle de l’École de cavalerie demeure relativement stable tout au long de son histoire. Après la dissolution de
             l’École d’instruction des troupes à cheval créée en 1814 à Saumur et licenciée en 1822 pour cause de complot bonapartiste, l’École est
@@ -113,7 +115,7 @@
             institutionnelle permet un développement rapide de l’École de cavalerie après 1825 mais n’explicite pas le développement des traditions de
             l’École.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Armée dans la ville, au service de l’État ?</head>
           <p>La présence de l’École de cavalerie dans la ville est d’abord mal acceptée par une population majoritairement républicaine. Après les
             troubles de 1822 qui entraînent la suppression temporaire de l’École, l’École et la ville de Saumur adoptent un <hi rend="i">modus
@@ -122,7 +124,7 @@
             devant les impératifs militaires d’état les projets locaux, la municipalité saumuroise agissant comme un catalyseur de l’expansion de
             l’École.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Architectures et urbanisme équestre</head>
           <p>La présence de l’École de cavalerie influe profondément sur l’urbanisme saumurois tant elle est à la fois un espace militaire peu à peu
             interdit aux civils et un espace du cheval ouvert à une circulation aisée vers la ville. Si les premiers architectes de l’École au XVIIIe
@@ -130,7 +132,7 @@
             ingénieurs du Génie du <num>xix<hi rend="sup">e</hi></num> siècle jouent de la disproportion des pouvoirs et des moyens entre Ville et État pour créer une zone militaire
             aussi fermée que possible et étendre progressivement les terrains occupés par l’École de cavalerie.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Esprit de corps et enseignement : pérenniser et transmettre</head>
           <p>L’École de cavalerie est une “ institution totale ” produisant des structures mentales spécifiques tendant à préserver et accroître,
             ensemble, l’importance de la formation chez les élèves, par la création d’un fort esprit de corps, et celle de l’institution dispensant
@@ -138,8 +140,8 @@
             croissante de traditions soigneusement transmises et valorisées par les miracles équestres que sont le carrousel, les courses et les raids
             d’officiers, l’école de dressage.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">la quête de soi</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">la quête de soi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La diversification des activités scientifiques</head>
           <p>L’École de cavalerie ne limite pas ses activités à l’instruction militaire et équestre proprement dite des officiers de cavalerie. Des
             “ annexes ”, soigneusement sélectionnées et développées, servent de laboratoires de recherche à la cavalerie. Au <num>xix<hi rend="sup">e</hi></num> siècle une éphémère
@@ -148,7 +150,7 @@
             en permettant de moduler l’importance de l’École de cavalerie dans le champ sociologique de la formation militaire, selon que les
             circonstances politiques et militaires sont plus ou moins favorables à l’École de cavalerie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’École aux militaires : l’expulsion des civils</head>
           <p>Pourquoi les plus fameux cavaliers civils du <num>xix<hi rend="sup">e</hi></num> siècle ont-ils voulu marquer l’École de cavalerie de leur empreinte, malgré la
             militarisation croissante de l’équitation pratiquée à Saumur ? Avantages matériels et prestige institutionnels se conjuguent pour
@@ -160,7 +162,7 @@
             l’accomplissement de cette mission : le manège devient alors entièrement militaire jusqu’à la création de l’École nationale d’équitation à
             la fin du <num>xx<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les officiers du cadre : un hasard dirigé</head>
           <p>Pour étudier l’influence du cadre institutionnel sur les individus et la question de l’autonomie de leur action, le modèle d’analyse créé
             par Stephen Skowronek a été appliqué sur deux séries d’officiers en poste à Saumur, les commandants de l’École et les écuyers en chef. Ces
@@ -170,8 +172,8 @@
             de réforme possibles pour ces officiers une fois en fonctions, produit une typologie de quatre types d’action dont on a examiné comment
             elles s’appliquaient aux officiers considérés.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">De Sedan aux tranchées : attention, Saumur !</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">De Sedan aux tranchées : attention, Saumur !</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le choc de 1870 dans la cavalerie</head>
           <p>La guerre de 1870 est un désastre pour la cavalerie, qui prend conscience au cours de défaites peu glorieuses du décalage avec
             l’infanterie et l’artillerie, entraîné par les progrès technologiques. La cavalerie doit alors changer de rôle tactique devant
@@ -182,7 +184,7 @@
             prussiennes, est recréée dès 1871 et reprend son enseignement en 1872 sur des bases institutionnelles améliorées qui ne remettent pas en
             cause le fond de l’enseignement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les caractères du changement</head>
           <p>La période 1870-1914 est caractérisée par la reprise en main par l’État d’une autorité auparavant déléguée aux chefs militaires en
             province et par la préparation de la revanche sur l’Allemagne. Cela se marque à Saumur par la présence régulière du ministre de la Guerre
@@ -196,7 +198,7 @@
             dans ses réformes par la volonté de conserver son identité et ses spécificités par rapport aux autres écoles militaires, qui prend le pas
             sur l’œuvre nationale de modernisation de l’armée.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La valorisation du patrimoine</head>
           <p>L’École de cavalerie entame après 1870 plusieurs démarches concomitantes de valorisation de son patrimoine qui ont pour but d’assurer la
             survie d’un certain état de l’École. Elle diffuse un discours egocentré, par la constitution d’une grande histoire de l’École de
@@ -209,9 +211,7 @@
             ainsi par déborder vers la société civile plus large. La Société des lettres, sciences et arts du Saumurois comme le Musée du cheval sont
             ainsi fondés peu après 1900 pour organiser le rayonnement de l’alliance entre la ville, l’armée et le cheval.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Cette thèse s’arrête à la fin de l’ère du cheval de guerre et de travail, en 1914. L’École de cavalerie, déjà étrangement obsolète avant la
           Grande Guerre, reprend pourtant son existence dès la fin de celle-ci, sans devenir “ le lieu de mémoire ” auquel son identité et les progrès
           militaires semblaient devoir la condamner. Le “ lieu institutionnel de l’équitation militaire ” dont nous avons dégagé l’existence à Saumur
@@ -220,12 +220,11 @@
           particulier à l’École de cavalerie. Les mécanismes identifiés à Saumur permettent de penser que toute institution engendre cette “ mémoire
           constituante ” qui crée à la fois la volonté de mémoire caractéristique des “ lieux ” et les moyens de transmission de cette mémoire.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Édition de diverses pièces d’archives relatives au développement de l’École dans Saumur et à ses activités de recherches. ­Diverses
           ordonnances portant organisation de l’École de cavalerie. ­ Reproduction des signatures et “ mains ” des écuyers en chef et commandants de
           l’École de cavalerie de 1814 à 1914.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

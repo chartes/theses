@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Michel Chamillart, ministre et secrétaire d’État de la guerre de Louis XIV (1654-1721)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Michel Chamillart, ministre et secrétaire d’État de la guerre de Louis XIV (1654-1721)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Penicaut, Emmanuel">Emmanuel Penicaut</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200225.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les historiens du siècle de Louis XIV n’ont pas brossé de Chamillart un portrait très flatteur. Accusé de faiblesse et de manque de
           caractère, sinon d’incapacité, ce ministre symboliserait la “ décadence ” des dernières années du règne, l’emprise croissante de Madame de
           Maintenon sur les affaires, les défaites qui ponctuèrent la guerre de Succession d’Espagne ou encore la crise financière que traversait
@@ -63,7 +66,7 @@
           département de la guerre ­ sur ce ministre étonnant, qui ne fut ni Colbert ni Louvois, mais cumula pendant près d’une décennie la plus
           grande partie des attributions de ces deux figures exceptionnelles.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les épaves du fonds privé de la famille Chamillart sont conservées aux Archives départementales de la Sarthe (sous-séries 1 E, 18 J et,
           pour l’essentiel, 28 J 1 à 16). Lacunaires, ces archives jusqu’ici peu connues offrent cependant de nombreuses informations sur l’ensemble
           de la famille. Plus complètes sont les sources parisiennes : aux Archives nationales, les études CIX (1615-1682), LXV (1677-1699) et surtout
@@ -77,9 +80,8 @@
           affaires étrangères, les Archives de Paris (sous-série D.C<hi rend="sup">6</hi> ), ou encore les Archives départementales de l’Yonne et des
           Yvelines (sous-séries 3 E).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Histoire d’un favori (1654-1709)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Histoire d’un favori (1654-1709)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’ascension des Chamillart</head>
           <p>L’ascension de la famille Chamillart fut lente et laborieuse, marquée d’autant d’échecs que de succès. Originaires de Sens, les
             Chamillart apparaissent dans les archives au début du <num>xvi<hi rend="sup">e</hi></num> siècle, en tant que marchands et petits propriétaires. Des
@@ -99,7 +101,7 @@
             de son zèle par l’intendance de Caen, qu’il obtint en 1665 et conserva jusqu’à sa mort, en 1675. S’il laissait à ses cinq enfants une
             fortune honorable, il mourut trop tôt pour assurer à chacun d’eux une position stable.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La carrière de Michel Chamillart</head>
           <p>Fils aîné de Guy Chamillart, né en 1654, Michel Chamillart reçut très tôt la commende du prieuré de L’Isle-Adam. Mais il quitta la voie
             ecclésiastique en 1674 pour acheter un office de conseiller au Parlement de Paris. Sans appuis autres que familiaux, il épousa en 1680 sa
@@ -121,7 +123,7 @@
             guerre. Chefs des deux départements ministériels les plus importants du royaume, le ministre soutint dès lors avec courage le poids des
             difficultés et des défaites qui s’accumulèrent peu à peu.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les faux-semblants de la puissance</head>
           <p>Comparé à ses prédécesseurs, Chamillart n’eut guère l’envergure qui correspondait aux charges qu’il exerçait. Manquant cruellement de
             confiance en lui, il souffrit de l’érosion progressive des clientèles ministérielles, sans réussir à en constituer une à son service. De
@@ -142,8 +144,8 @@
             en juin 1709. Voulue avant tout par l’opinion publique, et sans que nul n’ait de griefs précis contre la victime, la chute de Chamillart
             annonçait l’instabilité ministérielle des deux règnes suivants.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Un ministre au travail</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Un ministre au travail</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Ministre et secrétaire d’État</head>
           <p>Contrôleur général des finances et secrétaire d’État de la guerre, Michel Chamillart fut entre 1699 et 1709 le principal collaborateur de
             Louis XIV. Le poids de ces deux charges exercées avec le soutien sans faille du souverain font de lui un témoin capital pour comprendre la
@@ -164,7 +166,7 @@
             Villars et Vendôme en particulier. Prudent, il haussait rarement le ton, et ne donnait jamais son avis personnel sans de multiples
             précautions préalables.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’administration de la guerre</head>
           <p>Les réformes menées par Chamillart au sein du département de la guerre ne sont pas comparables à celles qu’avaient mises en oeuvre
             Louvois et son père. L’époque n’était plus au grandes réorganisations, et Chamillart se contenta d’utiliser les cadres en place, en y
@@ -184,7 +186,7 @@
             besoin, les simples commis étaient en revanche très attachés à la promotion de leur famille au sein des bureaux eux-mêmes : c’est ainsi
             que se créèrent dans les premières années du <num>xviii<hi rend="sup">e</hi></num> siècle de véritables dynasties de commis, comprenant parents, frères et cousins.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La guerre et la politique étrangère</head>
           <p>La guerre de Succession d’Espagne aurait dû entraîner une étroite collaboration entre les deux départements de la guerre et des affaires
             étrangères. Mais peu d’éléments rapprochaient leurs deux chefs, Chamillart et Torcy. Tous deux s’opposèrent d’abord au sujet des affaires
@@ -204,8 +206,8 @@
             la conduite à Torcy, et Chamillart rentra dans l’ombre, se contentant désormais d’être tenu au courant, sans grandes illusions, de
             l’évolution des pourparlers.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La fortune de Michel Chamillart</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La fortune de Michel Chamillart</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les bases de la fortune de chamillart</head>
           <p>La fortune de Chamillart fut-elle aussi modeste que son envergure politique Fils aîné de Guy Chamillart, le futur ministre reçut une part
             importante de la succession de celui-ci, et l’accrut encore par son mariage avec Élisabeth-Thérèse Le Rebours, fille unique d’un maître
@@ -225,7 +227,7 @@
             grands ministres semblait définitivement passé, il est clair que le service du roi enrichissait toujours, à la fin du règne comme au
             début, ceux qui s’y adonnaient.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La gestion de la fortune de chamillart</head>
           <p>Avec de tels moyens, Chamillart pouvait envisager des opérations de grande envergure. Dans les premières années de sa carrière, il se
             contenta d’acheter puis de revendre les charges successives qui lui furent confiées. Prudent, il prêta peu son argent, et resta
@@ -245,7 +247,7 @@
             fut pas négatif, elles laissent une impression d’échec, ou en tout cas, d’une activité trop désordonnée pour être efficace. Au lendemain
             de sa disgrâce, en effet, Chamillart ne possédait en pleine propriété ni terre ni hôtel.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le déclin (1709-1721)</head>
           <p>Après sa disgrâce, Chamillart visa d’abord des demeures moins ambitieuses : il loua dans un premier temps un hôtel quai Malaquais, et
             acquit finalement, en 1712, un hôtel proche de Saint-Eustache, dans lequel il vécut jusqu’à sa mort. Désireux de s’installer en province,
@@ -264,9 +266,7 @@
             auprès de ses aïeux, dans l’église Saint-Nicolas du Chardonnet. Sa fortune, partagée plus de vingt ans après sa mort par ses héritiers, et
             qui atteignait à peine 350 000 livres, n’était plus que le lointain reflet de la brillante carrière qu’il avait menée.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La seule faveur du roi fit de Chamillart, modeste héritier d’un lignage mal assuré, un ministre chargé pendant presque une décennie des
           deux départements ministériels les plus importants du royaume. Il est donc possible de regarder ce mal aimé de l’histoire comme le type même
           de ministre apprécié de Louis XIV. Certes, il ne fit jamais preuve d’une très forte personnalité, et beaucoup de ses entreprises, tant dans
@@ -278,12 +278,11 @@
           et, surtout, par la façon dont il considéra et exerça ses fonctions, en relation avec les autres secrétaires d’État, Michel Chamillart
           illustre mieux que tout autre les profondes transformations de l’État royal à l’aube du <num>xviii<hi rend="sup">e</hi></num>  siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Inventaire de la bibliothèque des Chamillart. ­ Correspondance échangée entre Chamillart et la maréchale de Noailles. ­ Déclaration
           relative à l’hôtel de Travers. ­ Règlement sur l’organisation des bureaux de la guerre de mars 1708 et différents documents relatifs aux
           commis des bureaux de la guerre.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

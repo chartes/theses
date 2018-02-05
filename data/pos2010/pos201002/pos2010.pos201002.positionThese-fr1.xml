@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le collège de Notre-Dame-de-Bayeux, dit de Maître-Gervais, centre intellectuel et lieu de vie à Paris (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le collège de Notre-Dame-de-Bayeux, dit de Maître-Gervais, centre intellectuel et lieu de vie à Paris (<num>xiv<hi rend="sup">e</hi></num>-<num>xv<hi rend="sup">e</hi></num> siècles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bernard-Schweitzer, Marion">Marion Bernard-Schweitzer</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201002.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le collège de Notre-Dame-de-Bayeux a été fondé à Paris en 1371 par maître Gervais Chrétien, premier médecin du roi Charles V.
           L’institution, située rue Boutebrie, et rapidement désignée sous le nom de son fondateur, participe du dense réseau des collèges parisiens,
           principalement situés sur la rive gauche de la Seine, à proximité des lieux d’enseignement de l’Université de Paris. Si le <num>xiv<hi rend="sup">e</hi></num> siècle a déjà vu la création de nombre de collèges universitaires, la fondation de Gervais Chrétien a su se
@@ -67,7 +70,7 @@
           permet de mettre en relief une évolution particulière aux collèges universitaires, qui les fait progressivement passer d’une fonction
           d’hébergement des étudiants, à un rôle d’enseignement et de formation intellectuelle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives médiévales du collège de Maître-Gervais sont encore actuellement en partie conservées ; très riches en ce qui concerne les
           transactions immobilières et les biens du collège, elles sont en revanche largement lacunaires pour ce qui est des comptes. La plus grande
           partie du chartrier se trouve conservée aux Archives nationales, au sein des séries H, M et S. Le fonds de l’Université, à la bibliothèque
@@ -81,9 +84,8 @@
           patrimoine foncier du collège, que ce soit à Paris même ou en Normandie. Par ailleurs, l’étude des documents d’archives, et notamment des
           cotes successives, a eu pour corollaire celle des conditions de conservation et de classement des actes par les membres du collège.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La fondation et ses enjeux</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La fondation et ses enjeux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le fondateur et son époque</head>
           <p>Depuis son intégration dans l’enceinte de Philippe Auguste à la fin du <num>xii<hi rend="sup">e</hi></num> siècle, la rive gauche de la
             capitale a connu un important développement urbain et est devenue le quartier de prédilection des maîtres et étudiants, ce qui explique
@@ -103,7 +105,7 @@
             1382, il est le détenteur de plusieurs prébendes canoniales, entre autres dans les chapitres cathédraux de Notre-Dame de Paris et de
             Notre-Dame de Bayeux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La fondation</head>
           <p>La fondation d’un collège, comme celle de tout autre établissement, constitue l’aboutissement d’un travail mené souvent depuis plusieurs
             années par le fondateur, du moins lorsque la fondation intervient du vivant de celui-ci, et donne lieu à des opérations immobilières
@@ -126,8 +128,8 @@
             l’établissement et lui confère un caractère bien spécifique en y créant deux bourses réservées à l’étude du <hi rend="i">quadrivium</hi> ;
             les deux <hi rend="i">scolares regis</hi> qui en bénéficient demeurent une exception dans le monde des collèges parisiens.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie ">Administration et gestion du collège</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Administration et gestion du collège</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les biens du collège de Maître-Gervais</head>
           <p>Le patrimoine du collège de Maître-Gervais peut se diviser en deux parties distinctes : la propriété des murs qui accueillent la
             communauté des boursiers, d’une part, et la détention d’un certain nombre de rentes et dîmes, dont le produit permet d’assurer les
@@ -144,7 +146,7 @@
             de la communauté, répond la séparation géographique des biens et des revenus de l’établissement, répartis entre la capitale et la région
             d’origine des boursiers.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La gestion des personnes et des biens</head>
           <p>La gestion du collège, qui constitue une communauté à la fois d’hommes et de biens, est confiée aux mains de plusieurs personnes,
             certaines faisant partie des membres du collège, d’autres restant extérieures à l’institution, tout en ayant un droit de regard sur son
@@ -163,8 +165,8 @@
             au cours du <num>xv<hi rend="sup">e</hi></num> siècle, et qui livre de la sorte une idée assez précise du chartrier de l’établissement.
             L’écrit vient ainsi compléter la gestion des biens mise en œuvre par les <hi rend="i">socii</hi> de la communauté.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">étudier au collège de Maître-Gervais</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">étudier au collège de Maître-Gervais</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La communauté des boursiers</head>
           <p>Un collège, comme l’indique le terme latin de <hi rend="i">collegium</hi>, est avant tout défini par la communauté des membres qui le
             composent ; c’est pourquoi cette dernière partie se trouve consacrée à l’étude des <hi rend="i">socii</hi> du collège de
@@ -184,7 +186,7 @@
             parisiens.</p>
           <p/>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Vie et études</head>
           <p>Le collège de Notre-Dame-de-Bayeux, comme les établissements voisins, assure à ses <hi rend="i">socii</hi> une vie encadrée et
             disciplinée, réglée selon les volontés exprimées par maître Gervais tout au long de l’abondante production de textes statutaires encore
@@ -207,9 +209,7 @@
             enseignement en sciences du <hi rend="i">quadrivium</hi>, mais aussi, conservés dans la bibliothèque, une collection fournie de manuscrits
             sur le sujet et des instruments géométriques.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Cette étude, structurée par trois grands axes porteurs, touche à divers aspects de l’existence du collège de Notre-Dame-de-Bayeux, depuis
           sa fondation jusqu’au début du <num>xvi<hi rend="sup">e</hi></num> siècle, et permet de cerner la personnalité du collège, ainsi que son
           fonctionnement quotidien. On constate que, malgré les aléas de l’époque et les traces inévitablement laissées par le temps, le collège
@@ -222,12 +222,11 @@
           le réseau des solidarités normandes installées dans la capitale.</p>
         <p/>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>édition des textes produits au cours des premières années d’existence de l’institution : acte de fondation et ses confirmations
           successives, créations de bourses ; statuts de 1378 complétés par les additions de 1380 et de 1382. — édition de l’unique rouleau de comptes
           subsistant, datant de 1409.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

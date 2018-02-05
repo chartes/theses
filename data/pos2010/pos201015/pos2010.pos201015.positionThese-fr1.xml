@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Écritures du commerce</title>
-        <title type="sub">La correspondance au fondement des transactions Ruiz-Bonvisi (1580-1590)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Écritures du commerce</title><title xml:lang="fr" type="sub">La correspondance au fondement des transactions Ruiz-Bonvisi (1580-1590)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lambert, Anne">Anne Lambert</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201015.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La correspondance est une des principales sources de l’activité économique d’une compagnie. Des archives Datini au <hi rend="i">parfait
             négociant</hi> de Savary, son apparence formalisée semble pourtant laisser peu de place à l’innovation et aux individualités. Un tel
           constat a contribué à lui donner une réputation de simplicité aux dépens d’autres documents tels que la comptabilité. La clarté de la forme
@@ -68,7 +71,7 @@
           telle situation donne un relief aux rapports entre la correspondance et les transactions et à leur adaptation aux contraintes. L’origine
           géographique des acteurs met en effet en exergue l’évolution de places de dimension européenne.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’essentiel des sources est conservé dans le fonds Simón Ruiz de l’Archivo histórico provincial de Valladolid. Ont été exploitées en
           premier lieu les lettres échangées par Simón Ruiz et les Bonvisi entre 1580 et 1590. Le fonds conserve à la fois des copies de lettres
           envoyées (Cajas 194-199, Caja 202) et les originaux des lettres reçues (Cajas 61-143, Caja 188). L’ensemble forme un corpus de 631 lettres,
@@ -83,10 +86,9 @@
           de notaires lyonnais, conservées aux archives départementales du Rhône (sous-série 3 E), a été possible. Les Bonvisi privilégiaient en effet
           le recours à deux notaires, Pierre Delaforest et François Anyme.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La correspondance Ruiz-Bonvisi : entre matérialisation d’une relation et soumission à des contraintes
+          <div n="3" type="part"><head n="0" type="chapter">La correspondance Ruiz-Bonvisi : entre matérialisation d’une relation et soumission à des contraintes
           extérieures ?</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Des correspondants de cultures et d’origines différentes</head>
           <p><hi rend="i">Simón Ruiz : l’ascension d’un marchand castillan. —</hi> Né dans les années 1520, Simón Ruiz est originaire de la province
             de Burgos. À partir des années 1560, il s’enrichit par le commerce des draps de Basse-Bretagne. Après 1570, son champ d’activités
@@ -115,7 +117,7 @@
             les articuler sur différentes échelles du local à l’international. C’est à ce niveau que leur réseau acquiert une ouverture nouvelle et
             intéresse des personnes d’origine et de qualité variées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La correspondance, lieu de convergence de pratiques communes</head>
           <p><hi rend="i">Les caractères externes, témoignages de pratiques coutumières. —</hi> L’apparence des lettres témoigne du soin apporté à
             leur rédaction. La régularité des usages est notable. Compte tenu de cette constance ils contribuent à l’identification et à
@@ -143,7 +145,7 @@
             Enfin, l’étude de la correspondance active infirme partiellement l’impression de négligence que celle-ci inspire d’ordinaire. Les
             irrégularités s’avèrent notamment moins fortes qu’escompté.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le rôle du courrier dans le maintien d’une correspondance régulière</head>
           <p><hi rend="i">La gestion du temps et de l’espace.</hi> — Le dépouillement des mentions relatives aux lettres au sein de la correspondance
             a permis d’identifier des courriers non conservés. Le nombre total de lettres échangées entre la compagnie et Simón Ruiz s’élève à 797,
@@ -171,8 +173,8 @@
             dernières années semble avoir mis en échec une partie de ces efforts mais la diminution des lettres pourrait aussi s’expliquer
             partiellement par celle des échanges durant les mêmes années.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La correspondance, vecteur d’informations pour l’élaboration des échanges</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La correspondance, vecteur d’informations pour l’élaboration des échanges</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De la genèse à l’utilisation des informations</head>
           <p><hi rend="i">De leur collecte à leur énonciation.</hi> — L’étude des informations révèle plusieurs échelons géographiques. Les données
             locales sont majoritaires mais les marchands se font aussi le relais de certaines nouvelles reçues de l’extérieur. La discrétion qui
@@ -203,7 +205,7 @@
             changes et la différence entre ceux de Lyon et de Madrid ou Medina del Campo. Cette dimension confirme l’importance de ces derniers dans
             les transactions Ruiz-Bonvisi.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La portée des informations</head>
           <p><hi rend="i">Une primauté des informations économiques.</hi> — Les informations concernent en premier lieu les avis et recommandations.
             Ceux donnés par Simón Ruiz sont les plus nombreux, ce qui n’est pas incohérent compte tenu des relations qu’il entretient avec les
@@ -228,7 +230,7 @@
             même son commencement. Un tel résultat influe sur les cours de change, sur le volume de comptant disponible et sur l’articulation entre
             les foires. Il a donc des conséquences directes sur le profit des transactions cambiaires.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’articulation de la lettre et de ses annexes</head>
           <p><hi rend="i">Une diversité irréductible, témoignage de l’adaptation des formes aux besoins.</hi> — Le classement actuel des archives tend
             à faire oublier qu’une grande partie de la documentation économique a transité par la correspondance. Certaines lettres, à l’exemple des
@@ -255,8 +257,8 @@
             il est possible d’effectuer une correction sans qu’il soit nécessaire d’attendre le courrier suivant, une faculté intéressante compte tenu
             des délais liés à l’acheminement du courrier et au contexte des foires.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’élaboration des transactions Ruiz-Bonvisi au travers de la correspondance</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’élaboration des transactions Ruiz-Bonvisi au travers de la correspondance</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un cadre contraignant ? Le contexte et les institutions</head>
           <p><hi rend="i">Le déroulement des changes.</hi> — Le change par lettres est l’instrument fondamental des transactions Ruiz-Bonvisi. Leurs
             lettres ne se distinguent pas du modèle établi depuis le Moyen Âge. Les causes du recours à cet instrument peuvent varier. Change forcé et
@@ -284,7 +286,7 @@
             modalités de change et permet d’expliciter des énoncés portés dans les lettres. Enfin, la relation entre les foires explique les
             conditions nécessaires pour l’obtention d’un bénéfice sur le change et les difficultés résultant de ces contraintes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les transactions entre Simón Ruiz et les Bonvisi</head>
           <p><hi rend="i">Organisation et gestion de la comptabilité.</hi> — Compte tenu de l’organisation des changes entre Lyon et Medina del Campo,
             l’essentiel des profits est réalisé sur le retour de remises pour Lyon. Néanmoins, l’écart des cours doit être le plus élevé possible pour
@@ -314,7 +316,7 @@
             fournisseur et Simón Ruiz. Ils se chargent de la compensation des frais et de l’acheminement du produit. Enfin, principaux correspondants
             de Simón Ruiz à Lyon, les Bonvisi reçoivent de lui quelques commissions ponctuelles qu’ils ont pu, à l’occasion, transférer ailleurs.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La confrontation des années 1580-1588, reflet d’un déclin des échanges ?</head>
           <p><hi rend="i">Les transactions cambiaires, fondement et reflet des échanges.</hi> — La comparaison des années 1580 et 1588 permet de
             constater l’existence d’évolutions avant même la réduction drastique des échanges suscitée par la multiplication des crises en 1589 et
@@ -346,9 +348,7 @@
             stabilité. La diversité des acteurs ne se traduit pas par une fragilisation des transactions. De nombreux mécanismes sont mis en œuvre
             pour assurer leur continuité.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La correspondance marchande est le pivot des échanges entre Simón Ruiz et les Bonvisi. En dépit de la distance, les places connaissent des
           variations qui sont au moins en partie provoquées par celles d’autres places. La correspondance permet la circulation des informations qui
           sont à la fois un vecteur d’anticipation et de création de ces variations. De plus, sa formalisation lui donne un rôle dans l’établissement
@@ -362,11 +362,10 @@
           difficultés et plaintes croissantes. La désorganisation réelle intervient en 1589-1590 et se traduit par une réorientation des échanges en
           faveur de Besançon.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition des lettres échangées par Simón Ruiz et les Bonvisi de Lyon (1580-1581). — Regestes des lettres échangées par Simón Ruiz et les
           Bonvisi de Lyon (1582-1590).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

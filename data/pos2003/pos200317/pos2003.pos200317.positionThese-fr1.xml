@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’Imprimerie nationale de 1870 à 1910</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’Imprimerie nationale de 1870 à 1910</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Longeard, Glwadys">Glwadys Longeard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200317.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’Imprimerie nationale est un établissement prestigieux, figurant parmi les plus grandes imprimeries au monde, fondée en 1640 et attachée
           au service des ministères et des administrations centrales, dont elle est, d’après la loi, l’imprimerie exclusive. Or ses détracteurs sont
           nombreux et remettent en cause autant son fonctionnement que son monopole : entre 1870 et 1910, elle est donc soumise à de vives attaques.
@@ -61,7 +64,7 @@
           est en effet l’une des premières expériences de régie industrielle publique. Pourquoi l’Etat choisit-il d’intervenir directement, par le
           biais de son imprimerie, dans l’activité industrielle, dans la vie sociale mais aussi dans la production culturelle ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La diversité des sources traduit la multiplicité des angles d’approche du sujet. Les « archives d’entreprise », manuscrites ou imprimées,
           conservées essentiellement au Centre historique des Archives nationales (CHAN), dans la sous-série AJ<hi rend="sup">17</hi> , et à la
           bibliothèque de l’Imprimerie nationale, concernent le statut, les finances, le personnel et l’activité de l’établissement. Deuxième type de
@@ -75,9 +78,8 @@
           réglementaires, travaux parlementaires. Enfin, des sources iconographiques (plans et photographies) illustrent l’étude des locaux et du
           personnel.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’évolution administrative de l’Imprimerie nationale (1870-1910)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’évolution administrative de l’Imprimerie nationale (1870-1910)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’évolution du cadre législatif et réglementaire</head>
           <p>Le statut de l’Imprimerie nationale, qui s’est mis en place progressivement à partir de la Révolution et surtout sous la Restauration
             (ordonnance du 23 juillet 1823), met l’établissement sous la tutelle du ministère de la justice et oblige les ministères et les
@@ -93,7 +95,7 @@
             plus menacée mais elle doit se réorganiser. Elle passe en 1910 sous la tutelle du ministre des finances, ce qui augure d’un contrôle plus
             étroit sur sa gestion financière.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’évolution de l’activité économique</head>
           <p>L’activité économique de l’Imprimerie nationale doit être analysée à l’aune des atouts et des limites que lui vaut son statut
             d’établissement public. En effet, si l’Imprimerie nationale a la chance de ne pas avoir de concurrence, elle doit se plier aux règles de
@@ -108,7 +110,7 @@
             manquer d’audace, notamment dans sa politique d’investissement, même si la fin de la période connaît une nouvelle dynamique, grâce à un
             directeur particulièrement actif.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les stratégies directoriales</head>
           <p>L’étude des quatre directeurs qui se succèdent entre 1870 et 1910 permet de comprendre leur personnalité et d’éclairer leur action et
             leurs stratégies directoriales. Ils sont tantôt des érudits, tantôt, parfois en même temps, des administrateurs, serviteurs de l’Etat,
@@ -124,8 +126,8 @@
             politique de grandeur pour l’Imprimerie nationale. Son successeur, Victor Dupré (1906-1911) est moins connu ; il hérite de dossiers
             sensibles (reconstruction et agitation sociale) et gère le passage sous la tutelle du ministère des finances.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le métier</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le métier</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La main-d’œuvre</head>
           <p>L’effectif de l’Imprimerie nationale, constitué de « cols blancs » (personnel d’administration et d’encadrement) et surtout d’ouvriers
             et d’ouvrières, est nombreux et varié, en raison de la diversité des activités de l’établissement. Sa particularité réside dans l’extrême
@@ -141,7 +143,7 @@
             maison. La main-d’œuvre de l’Imprimerie nationale bénéficie donc d’une situation privilégiée à l’aube du <num>xx<hi rend="sup">e</hi></num>  siècle.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les locaux</head>
           <p>La main-d’œuvre travaille dans des ateliers aux fonctions diverses, répartis aux quatre coins de l’hôtel de Rohan et de ses dépendances
             depuis 1808. Or l’étude des locaux fait ressortir les limites de l’Etat entrepreneur : l’Imprimerie nationale doit composer avec les
@@ -151,7 +153,7 @@
             l’usine moderne qui voit le jour progressivement, en dépit d’un scandale financier, augure d’une rationalisation du travail par une
             meilleure occupation de l’espace.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’évolution des techniques et du matériel</head>
           <p>L’Imprimerie nationale se voit souvent reprocher son retard en matière d’équipement, pourtant il faut reconnaître que son parc de
             machines suffit longtemps à la demande des ministères et des administrations centrales ; les rotatives ne font donc leur apparition que
@@ -161,8 +163,8 @@
             français et étrangers. Enfin, la modernisation passe par la diminution de l’empirisme, avec la création de postes d’ingénieurs, et par un
             meilleur contrôle des fournitures, comme l’illustre l’installation d’un laboratoire de contrôle et d’essais.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La production de l’Imprimerie nationale</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La production de l’Imprimerie nationale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une activité conjoncturelle pendant la commune</head>
           <p>Du 18 mars au 25 mai 1871, l’Imprimerie nationale passe sous l’autorité de la Commune de Paris. Mise sous surveillance, elle est
             contrainte d’orienter sa production en fonction des besoins immédiats de la Commune : elle doit ainsi fournir presque exclusivement, en
@@ -171,7 +173,7 @@
             l’afflux de commandes, son ouvrier-directeur la réorganise et met en place un service consacré à l’affichage dans les rues de Paris. Le
             fonctionnement de l’Imprimerie nationale pendant la Commune s’avère donc particulièrement satisfaisant.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La production administrative et officielle</head>
           <p>La production administrative et officielle, qui procure à l’Imprimerie nationale l’essentiel de ses ressources, est bien plus
             diversifiée qu’il n’y paraît. Traditionnellement l’Imprimerie nationale se voit confier les publications officielles périodiques, dont la
@@ -183,7 +185,7 @@
             publications liées à la vie politique, au budget et à la sûreté de l’Etat ; l’exemple des documents relatifs à l’affaire Dreyfus illustre
             l’intérêt pour l’Etat d’avoir une imprimerie dévouée à sa disposition, garantissant toutes les conditions de secret.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La production artistique et savante</head>
           <p>Bien que la production artistique et savante ne représente qu’une faible part de l’activité de l’Imprimerie nationale, elle n’en est pas
             moins importante : il s’agit de la vocation première de l’établissement, qui fait encore sa renommée à la fin du <num>xix<hi rend="sup">e</hi></num>
@@ -199,9 +201,7 @@
             institutions publiques, elle témoigne donc également d’un souci d’ouverture de l’Imprimerie nationale, qui ne l’empêche pas cependant de
             rester attachée à ses privilèges.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’Imprimerie nationale apparaît à la fois comme une grande entreprise industrielle, une sorte d’administration d’Etat, un établissement
           culturel où l’on connaît les langues orientales les plus rares, un laboratoire d’expériences sociales. Entre 1870 et 1910, elle est soumise
           à d’importantes transformations dues aux bouleversements économiques et sociaux mais aussi à la nécessité pour elle de trouver sa place dans
@@ -210,12 +210,11 @@
           régulateur de l’économie en freinant les appétits hégémoniques de quelques imprimeurs de la place parisienne. Enfin, la recherche,
           l’enseignement et l’érudition trouvent en elle un interlocuteur compréhensif.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Textes législatifs et réglementaires. ­ Tableaux et graphiques. ­ Plans des locaux. ­ Photographies des ateliers de Rohan et de l’usine en
           construction. ­ Listes et exemples de caractères gravés entre 1870 et 1910. ­ Affiches et papiers de la Commune. ­ Liste et photographies de
           beaux livres. ­ Etude du jargon des typographes. ­ Chronologie. ­ Index des noms de personnes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

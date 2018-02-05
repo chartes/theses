@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">« Tam Parisius quam alibi »</title>
-        <title type="sub">Unité et pluralité de la chancellerie royale au temps de Charles VII (1418-1461)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">« Tam Parisius quam alibi »</title><title xml:lang="fr" type="sub">Unité et pluralité de la chancellerie royale au temps de Charles VII (1418-1461)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Larcher, Hélène">Hélène Larcher</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200821.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La chancellerie royale a été très étudiée pour le <num>xiv</num>
 <hi rend="sup">e</hi> siècle, par Octave Morel et Robert-Henri Bautier, et pour le <num>xvi</num>
 <hi rend="sup">e</hi> siècle, par Hélène Michaud. Ces travaux laissent entrevoir un vide concernant la chancellerie royale au temps de
@@ -62,7 +65,7 @@
           mais surtout de comparer l’organisation et l’activité de la chancellerie de la Cour, ou grande chancellerie, et celle du Palais, ou petite
           chancellerie, établie auprès du Parlement.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Pour mener à bien ce projet, il ne s’agit pas de retrouver tout ce qui a subsisté de la production de la chancellerie, évaluée au cours du
             <num>xv</num>
 <hi rend="sup">e</hi> siècle à plusieurs dizaines de milliers d’actes par an dont il ne reste bien souvent que des épaves très dispersées,
@@ -75,9 +78,8 @@
           sont révélés indispensables. Au-delà, les traités de l’époque moderne consacrés à la chancellerie et aux chanceliers, les éditions et
           inventaires d’actes, les chroniques et les registres des parlements ont apporté leur pierre à l’édifice.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La chancellerie royale de 1418 à 1461</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La chancellerie royale de 1418 à 1461</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une chancellerie, des chancelleries, de l’expérimentation à l’institutionnalisation (1418-1436)</head>
           <p>
             <hi rend="i">Les précédents</hi>. – Jusqu’au début du <num>xiv</num>
@@ -102,7 +104,7 @@
             de Poitiers : quelques rares indices de l’activité de cette petite chancellerie permettent de prouver son existence. La situation se
             stabilise définitivement sous le cancellariat de Regnault de Chartres, après 1428.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une chancellerie, des chancelleries, un modèle bien rodé</head>
           <p>
             <hi rend="i">1436 : les suites du retour du roi et des cours souveraines à Paris</hi>. – <num>à</num>partir du 20 novembre 1437, quand
@@ -133,7 +135,7 @@
             VII, concernant l’adoption du système des petites chancelleries et leur maintien dans l’orbite de la grande chancellerie, sous l’autorité
             du chancelier.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le chancelier</head>
           <p>
             <hi rend="i">De la désignation à la rémunération</hi>. – Héritiers d’une tradition séculaire, ceux qui se succèdent à la tête de la
@@ -155,8 +157,8 @@
             chancelier autant que leur position sociale. Le rôle primordial de Robert de Rouvres, parfois qualifié de « vice-chancelier » car il tient
             le sceau ordonné en l’absence du chancelier des années 1430 à sa mort en 1453, est analysé en détail.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">De la minute au sceau : l’élaboration des actes en chancellerie</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">De la minute au sceau : l’élaboration des actes en chancellerie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La rédaction des actes</head>
           <p>
             <hi rend="i">Souplesse et rigidité des formules</hi>. – C’est la première fois que les modalités d’écriture des différentes catégories
@@ -188,7 +190,7 @@
             duplication et de réécriture, relativement rares à cette période, ou encore au rôle des messagers à travers l’étude des relations entre la
             Sainte-Chapelle et la chancellerie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les signes de validation</head>
           <p>
             <hi rend="i">Les sceaux</hi>. – Le grand sceau de majesté est un attribut majeur de la royauté et occupe à ce titre une place centrale
@@ -220,7 +222,7 @@
             l’audience du sceau, les lettres, commandées en présence de conseillers du roi parfois longuement mentionnés, passent entre les mains des
             notaires et secrétaires, responsables de la rédaction.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les notaires et secrétaires, responsables de la rédaction des actes</head>
           <p>
             <hi rend="i">Des conditions matérielles variables, parfois inconfortables</hi>. – Il faut rappeler ici que seuls sont observés les
@@ -250,8 +252,8 @@
             notaire et secrétaire ne sont pour certains qu’un tremplin vers de brillantes carrières dans le domaine des finances et favorisent l’accès
             à la noblesse de quelques autres.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’enregistrement et la diffusion des actes</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’enregistrement et la diffusion des actes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’enregistrement</head>
           <p>
             <hi rend="i">L’examen codicologique des registres de la chancellerie</hi>. – L’enregistrement, très partiel puisque seules les lettres
@@ -276,7 +278,7 @@
             depuis Paris d’actes de toutes sortes et si les notaires et secrétaires de la chancellerie du Palais sont aussi compétents que ceux de la
             Cour pour rédiger n’importe quel type de lettre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le rayon d’action des chancelleries</head>
           <p>
             <hi rend="i">« Si donnons en mandement... »</hi>. – C’est aux bénéficiaires des lettres de grâce d’accomplir les démarches nécessaires
@@ -305,7 +307,7 @@
             expédiés par an augmente, le nombre d’actes envoyés vers le sud du royaume par la chancellerie de la Cour stagne, en raison de l’activité
             de la chancellerie établie auprès du parlement de Toulouse en 1444.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un dialogue entre le roi et ses sujets ?</head>
           <p>
             <hi rend="i">Les bénéficiaires de la grâce royale</hi>. – Les requérants peuvent être décrits en fonction de la nature des actes qu’ils
@@ -339,9 +341,7 @@
             délégation du droit de gracier existe et que la chancellerie du Palais soit très sollicitée, le roi reste la seule véritable source de
             grâce.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Dans l’histoire de la chancellerie royale, la période qui s’étend de la fuite du dauphin en 1418 à la mort du roi Charles VII en 1461 est
           d’une importance capitale : c’est au moment de la désorganisation la plus complète du royaume, lors du « Schisme royal », que le
           démembrement de la chancellerie est érigé en principe. En effet, à partir de 1418, des preuves tangibles de l’existence d’au moins deux
@@ -356,7 +356,7 @@
           Palais n’est plus à démontrer : c’est sur ce modèle que sont constituées les petites chancelleries créées par les successeurs de
           Charles VII.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>
           <hi rend="i">Une approche méthodologique.</hi>– Méthode de constitution, de dépouillement et d’exploitation du corpus.</p>
         <p>
@@ -370,7 +370,6 @@
           chancellerie.</p>
         <p>Index général des noms de personnes. – Tables des illustrations, cartes et graphiques du volume principal et des annexes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

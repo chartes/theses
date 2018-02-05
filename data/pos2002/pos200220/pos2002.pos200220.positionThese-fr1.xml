@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les offices de bouche à l’Hôtel du roi de France, de Philippe VI à Charles VI (1328-1422)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les offices de bouche à l’Hôtel du roi de France, de Philippe VI à Charles VI (1328-1422)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Moirez, Pauline">Pauline Moirez</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200220.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’étude des offices de bouche de l’Hôtel du roi se trouve à la croisée de deux courants historiographiques dynamiques : l’histoire des
           institutions royales et princières à la fin du Moyen Âge et l’histoire de l’alimentation, envisagée ici dans ses aspects culturels et
           sociaux. <lb/>Le service de bouche de l’Hôtel du roi est doté d’une double importance symbolique : le souverain doit exalter sa puissance et
@@ -58,7 +61,7 @@
           <lb/>Il convient d’étudier le fonctionnement des quatre offices de bouche de l’Hôtel du roi, paneterie, échansonnerie, cuisine et fruiterie,
           au cours du <num>xiv<hi rend="sup">e</hi></num> siècle, dans une perspective à la fois institutionnelle et prosopographique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources concernant l’Hôtel du roi au <num>xiv<hi rend="sup">e</hi></num> siècle sont inégalement réparties : le règne de Charles VI présente une
           grande abondance de documents, alors que peu d’archives nous sont parvenues pour ses prédécesseurs, notamment pour Charles V. <lb/>Les
           documents produits par l’Hôtel ou par les institutions dont il dépend permettent d’en décrire le cadre institutionnel et d’établir des
@@ -68,9 +71,8 @@
           s’appuie également sur le dépouillement de sources complémentaires, comme les registres du Parlement de Paris et des documents édités :
           registres du Trésor des chartes, rôles d’impôts, œuvres littéraires.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le cadre institutionnel : L’Hôtel royal et les offices de bouche</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le cadre institutionnel : L’Hôtel royal et les offices de bouche</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La structure de l’hôtel au <num>xiv<hi rend="sup">e</hi></num> siècle</head>
           <p><hi rend="i">La mise en place de l’Hôtel du roi au <num>xiii<hi rend="sup">e</hi></num> siècle et sa permanence au <num>xiv<hi rend="sup">e</hi></num>
               siècle </hi> — La structure de l’Hôtel du roi est organisée de manière définitive dans les premières décennies du XIV <hi rend="sup">e</hi> siècle et ne subit plus que des modifications mineures par la suite. Les services chargés du service domestique du souverain
@@ -90,7 +92,7 @@
           <p>La paneterie est chargée du pain et du linge de table ; l’échansonnerie, du vin et des autres boissons ; la cuisine, de la préparation
             des repas ; la fruiterie, des fruits, ainsi que des torches et des chandelles.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La croissance de l’hôtel au <num>xiv<hi rend="sup">e</hi></num> siècle</head>
           <p><hi rend="i">Evolution des effectifs de l’Hôtel et des offices de bouche </hi> — A partir du début du <num>xiv<hi rend="sup">e</hi></num> siècle,
             les officiers de l’Hôtel exercent leur fonction en alternance : de fait, l’effectif réel présent à un moment donné est largement inférieur
@@ -108,8 +110,8 @@
             dépense la plus importante dans le budget de la Chambre aux deniers. Mais il est très difficile d’isoler avec précision, au sein de ce
             compte, les dépenses qui concernent directement les offices de bouche.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le fonctionnement quotidien des offices de bouche</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le fonctionnement quotidien des offices de bouche</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’organisation du service de bouche</head>
           <p><hi rend="i">Les repas et le service de bouche </hi> — Plus de la moitié des officiers de l’Hôtel sont rémunérés en nature, en étant
             nourris aux frais du roi. Cette proportion est beaucoup plus élevée chez les officiers de bouche : presque tous “ mangent en salle ”. A
@@ -124,7 +126,7 @@
             denrée. Les fournisseurs habituels des offices de bouche résident le plus souvent à Paris, mais les officiers s’adressent aussi aux
             marchands et aux artisans des lieux où réside la cour pour l’approvisionnement et les réparations urgentes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les conditions matérielles du fonctionnement des offices de bouche</head>
           <p><hi rend="i">L’équipement des offices de bouche </hi> — Une typologie du matériel utilisé dans les offices de bouche permet d’affiner la
             compréhension des fonctions qui s’y exercent. Il s’agit pour chaque office d’ustensiles de préparation culinaire, ainsi que de sacs et de
@@ -133,7 +135,7 @@
             réservés aux offices de bouche, mais ils sont mal connus : ils semblent être souvent regroupés dans un seul corps de bâtiment, près de la
             salle où sont servis les repas, et au rez-de-chaussée.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Hiérarchie des fonctions dans les offices de bouche</head>
           <p>Les maîtres d’Hôtel sont chargés de la direction de l’Hôtel, et en particulier des offices de bouche. Dans chaque office, plusieurs
             niveaux d’officiers coexistent. Les chefs d’offices, souvent nobles, dirigent le fonctionnement de l’office et assurent la gestion de son
@@ -142,8 +144,8 @@
             les offices de paneterie et de cuisine qui nécessitent des compétences plus particulières. Une hiérarchie de fonctions aux tâches précises
             se dessine ainsi dans chaque office.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les officiers de bouche : carrières et niveau social</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les officiers de bouche : carrières et niveau social</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Approche méthodologique et institutionnelle</head>
           <p><hi rend="i">La méthode prosopographique </hi> — Le corpus prosopographique concerne l’Hôtel du roi et celui du dauphin et comprend tous
             les personnages qui exercent, au moins une fois entre 1328 et 1422, une fonction relevant de deux des offices de bouche, la paneterie et
@@ -154,7 +156,7 @@
             de faibles sommes, ne sont pas des rémunérations pour le travail effectué, mais des indemnisations pour des frais occasionnés pendant leur
             temps de service.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les carrières des officiers de bouche</head>
           <p><hi rend="i">Être officier de bouche à l’Hôtel du roi au <num>xiv<hi rend="sup">e</hi></num> siècle </hi> — Les officiers subalternes, qui ont une
             formation professionnelle spécialisée, font toute leur carrière dans le même office de bouche ; en revanche, les chefs d’offices peuvent
@@ -172,7 +174,7 @@
             charges de capitaine de châteaux ou de baillis dans l’administration locale. Certains officiers subalternes exercent des métiers en dehors
             du service du roi, en particulier des activités artisanales ou commerciales à Paris.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Implantation sociale des officiers de bouche</head>
           <p><hi rend="i">Niveau social des officiers de bouche </hi> — Les panetiers, les valets tranchants et les enfants servants de l’écuelle
             sont généralement nobles. Les valets servants de l’écuelle et les écuyers de cuisine sont d’un niveau social élevé, mais rarement nobles ;
@@ -185,9 +187,7 @@
             siècle vers l’est de Paris. <lb/>Il semble qu’il y ait une nette tendance à l’hérédité, non institutionnelle, mais de fait, dans les
             offices de bouche, et surtout à l’office de cuisine. Mais il n’est possible de formuler que des hypothèses de filiation.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les offices de bouche de l’Hôtel du roi de France connaissent au <num>xiv<hi rend="sup">e</hi></num> siècle un processus de professionnalisation,
           après la période de mise en place institutionnelle du <num>xiii<hi rend="sup">e</hi></num> siècle : la diminution du personnel travaillant dans les
           offices de bouche nécessite un fonctionnement plus rationnel, qui passe par une spécialisation des officiers et par une réglementation
@@ -195,13 +195,12 @@
           de Paris : de nombreux officiers de bouche sont recrutés dans la bourgeoisie parisienne, à laquelle appartiennent par ailleurs les
           fournisseurs privilégiés des offices.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Rôles de gages d’octobre 1402 (Bibl. nat. de Fr., P.O. 380, Du Boessay, n° 3) et d’octobre 1422 (Bibl. nat. de Fr., ms. fr. 7853, p.
           1296-1305). ­ Compte de fournisseurs de 1349-1350 (Bibl. nat. de Fr., fr. 6760, fol. 1-1v et 311-311v). ­ Comptes particuliers de
           fournisseurs inclus dans le compte journalier de la Chambre aux deniers de la Saint-Jean 1417 (Nantes, Arch. dép. Loire-Atlantique, E 235,
           fol. 18-21v).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

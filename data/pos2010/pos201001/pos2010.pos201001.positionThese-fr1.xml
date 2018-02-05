@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La noblesse d’Aunis sous Louis XIV</title>
-        <title type="sub">Des recherches de faux nobles aux conséquences de la Révocation (1661-1715)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La noblesse d’Aunis sous Louis XIV</title><title xml:lang="fr" type="sub">Des recherches de faux nobles aux conséquences de la Révocation (1661-1715)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Artaud, Amandine">Amandine Artaud</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201001.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’Aunis du <num>xvii<hi rend="sup">e</hi></num> siècle est surtout étudiée et connue pour ses marchands et sa société protestante. La
           noblesse, considérée comme très peu nombreuse et sans rôle économique majeur, ne bénéficiait jusqu’ici d’aucune recherche. Il apparaît
           pourtant, à l’issue d’un travail prosopographique, qu’une centaine de familles nobles vivent en Aunis dans la seconde moitié du <num>xvii<hi rend="sup">e</hi></num> siècle, ce qui constitue une densité nobiliaire supérieure à celle de nombreuses autres régions déjà étudiées.
@@ -61,7 +64,7 @@
           prosopographique, qui réunit les informations concernant cent-cinq familles et cent-quatre-vingt-neuf individus nobles qui ont vécu en Aunis
           sous le règne de Louis XIV.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les deux sources majeures sont les recherches de noblesse de l’intendant du Poitou Barentin puis celles de l’intendant de La Rochelle,
           Bégon. Les sentences du premier, rendues en 1667, ont été perdues, il ne reste qu’une liste de noms et de dates ; en revanche, il existe une
           copie des jugements rendus par l’intendant Bégon entre 1698 et 1700, conservée à la Bibliothèque nationale de France (fr. 32610 et 32611) et
@@ -86,9 +89,8 @@
           nobles de manière générale, les seules sources sont les mémoires des intendants rédigés par Colbert de Croissy en 1664 et par Bégon en
           1698.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La noblesse en Aunis dans les années 1660 et le début du règne personnel de Louis XIV</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La noblesse en Aunis dans les années 1660 et le début du règne personnel de Louis XIV</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines de la noblesse d’Aunis</head>
           <p>Les origines sociales des familles nobles sont difficiles à discerner, dans la mesure où les anoblis tentent généralement de dissimuler
             leur ancienne condition. Il existe deux cas de figure : ou bien l’origine roturière est oubliée – volontairement ou non – ou bien la
@@ -111,7 +113,7 @@
             politique, installation pendant la guerre de Cent Ans). La carte ainsi décrite montre un fort tropisme atlantique : La Rochelle et son
             arrière-pays sont en effet au cœur des échanges commerciaux mais aussi humains de la côte océanique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les noblesses en Aunis dans les années 1660</head>
           <p>L’étude de la noblesse d’Aunis sous le règne de Louis XIV montre une grande diversité de situations, tant dans ses activités que dans ses
             choix religieux. Les activités nobiliaires sont envisagées sous l’angle de la carrière, c’est-à-dire de l’engagement au service du roi ou
@@ -138,7 +140,7 @@
             entre La Rochelle, où elle peut écouler ses productions, et sa ou ses seigneuries, où elle doit surveiller les travaux agricoles ; ce
             modèle est commun à la plupart des élites françaises.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les interventions du pouvoir royal</head>
           <p>Le début du règne personnel de Louis XIV marque une volonté de reprise en main du royaume dans de nombreux domaines. Deux d’entre eux
             touchent tout particulièrement la noblesse d’Aunis : la recherche des usurpateurs de noblesse et les premières mesures contre les
@@ -164,8 +166,8 @@
             l’intendant offre des charges au présidial ou des pensions aux nobles qui acceptent de devenir catholiques ; ainsi, une dizaine de nobles
             sont convertis entre les années 1660 et 1685.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Vivre noble en Aunis : analyse des modes de vie d’un groupe social</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Vivre noble en Aunis : analyse des modes de vie d’un groupe social</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Noblesse, famille et réseaux</head>
           <p>L’étude démographique de la noblesse d’Aunis rappelle que puissants et pauvres sont égaux face à la santé à l’époque moderne : moins de
             deux-tiers des nourrissons atteignent l’âge adulte, l’espérance de vie d’un homme adulte est de soixante ans et celle d’une femme, de
@@ -188,7 +190,7 @@
             notamment entre les familles issues du corps de ville : les descendants de maires et d’échevins, anoblis, s’allient, encore à la fin du
                 <num>xvii<hi rend="sup">e</hi></num> siècle, avec les descendants des pairs, restés roturiers et marchands.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Esquisse d’un tableau du patrimoine nobiliaire</head>
           <p>Le patrimoine nobiliaire est étudié à partir d’une source principale : l’inventaire après décès. La vaste publication de Frédéric
             Chassebœuf sur les grandes demeures d’Aunis et de Saintonge contribue également à déterminer la nature des logis nobles. Il existe trois
@@ -214,8 +216,8 @@
             cinq cents livres. Le niveau de vie moyen de la noblesse d’Aunis correspond donc à une demeure et un train de vie sobre, avec un
             domestique et deux ou trois chevaux seulement.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La noblesse d’Aunis face à la volonté de contrôle du pouvoir royal</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La noblesse d’Aunis face à la volonté de contrôle du pouvoir royal</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La noblesse d’Aunis face à la Révocation</head>
           <p>Les mesures prises contre la noblesse protestante d’Aunis, connues grâce à la correspondance d’Arnoul, commencent dès avant la
             Révocation, mais elles ne l’atteignent vraiment qu’après cette décision royale. Ce sont les mêmes qu’ailleurs dans le royaume : des
@@ -232,7 +234,7 @@
             convertis, une nouvelle vague de départs se produit, mais seule une dizaine de noms de familles disparaît entièrement d’Aunis entre 1685
             et 1700, dans la mesure où les fuites sont le plus souvent individuelles ou limitées à quelques personnes d’une même famille.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La noblesse d’Aunis et le pouvoir royal des années 1690 à 1715</head>
           <p>En 1696 a lieu une deuxième recherche des usurpateurs de noblesse, effectuée en Aunis par l’intendant de La Rochelle, Bégon. Ce dernier
             produit trente-quatre jugements entre 1698 et 1700, dont vingt-trois sont des maintenues. Les nobles jugés appartiennent à tous les
@@ -248,9 +250,7 @@
             renouent avec des traditions de service armé parfois abandonné depuis de nombreuses années. Ainsi, une maison noble sur cinq possède des
             membres dans l’armée, et une sur dix perd au moins un membre au combat.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les interactions entre le pouvoir louis-quatorzien et la noblesse d’Aunis ont modifié ce groupe social. Si la démographie ou la densité
           nobiliaire ne changent pas, si les réseaux ne se modifient pas considérablement, si les inégalités de richesse restent constantes, la
           Révocation et les recherches de noblesse notamment ont apporté du changement. Les répercutions sont religieuses mais surtout sociales : les
@@ -262,11 +262,10 @@
           deux vagues de recherche de noblesse. Par conséquent, les deux protagonistes, pouvoir royal et noblesse d’Aunis, sortent du règne de Louis
           XIV changés, mais plus affirmés.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Liste des nobles protestants d’après l’intendant Arnoul (novembre  — édition de deux jugements de maintenue par l’intendant Bégon (1699). —
           édition d’un jugement de condamnation de l’intendant Bégon (1700). — Rôle de capitation des nobles d’Aunis (1716).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

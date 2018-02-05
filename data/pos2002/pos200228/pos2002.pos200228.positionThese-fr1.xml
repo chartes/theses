@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les éditions René Kieffer (1909-1950)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les éditions René Kieffer (1909-1950)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Sanjuan, Agathe">Agathe Sanjuan</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200228.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>René Kieffer (1876-1963) est un relieur d’art qui a exercé son métier pendant toute la première moitié du <num>xx<hi rend="sup">e</hi></num> siècle. D’abord disciple de
           Marius-Michel, il adopte le style Art Déco dans les années vingt. De 1919 à 1923, il exécute les reliures que dessine Pierre Legrain pour
           Jacques Doucet. Dans les années vingt, il est à la tête d’un atelier important, pouvant relier jusqu’à 2082 volumes par an, en 1928. De
@@ -69,7 +72,7 @@
           utilisées, différentes dans l’un et l’autre cas. De plus, elle facilite la lecture du commentaire tiré de l’analyse du catalogue, qui traite
           successivement des éditions en condition brochée, puis des reliures d’édition.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Deux fonds ont servi pour cette étude. Le fonds René Kieffer, conservé à la Réserve des livres rares et précieux de la Bibliothèque
           nationale de France, contient un grand nombre de maquettes de décors de reliures. Le fonds des archives des éditions René Kieffer, fonds
           privé, renferme des maquettes d’édition et de la correspondance. Cependant, les archives des éditions René Kieffer restent très lacunaires :
@@ -78,9 +81,8 @@
           consultés à la Bibliothèque nationale de France (Réserve des livres rares et précieux, département des estampes et de la photographie) et
           dans des collections particulières.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le livre, de la fabrication à la vente</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le livre, de la fabrication à la vente</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La production des éditions rené kieffer</head>
           <p>Le catalogue des éditions René Kieffer comporte 131 éditions illustrées, de 1909 à 1950. La production offre une évolution sans
             surprise. L’activité éditoriale reste modeste de 1909 à 1919 : 9 éditions pour la <hi rend="i">Collection éclectique</hi>. Très ralentie
@@ -90,7 +92,7 @@
             inégale des années vingt. Après la Seconde guerre mondiale, la bibliophilie que pratique René Kieffer est passée de mode. La durée des
             projets est très variable, allant de un an à onze ans, selon les exemples étudiés.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Aspects matériels des éditions rené kieffer</head>
           <p>À l’exception de la collection <hi rend="i">L’amour des livres</hi>, dont les vingt volumes ont des dimensions régulières, les éditions
             René Kieffer sont de tailles variables en nombre de pages et en format. Les tirages vont de 100 à 1050 exemplaires numérotés par édition.
@@ -98,7 +100,7 @@
             les exemplaires de tête, le vélin pour les exemplaires ordinaires. Ces caractéristiques matérielles placent d’emblée les éditions René
             Kieffer dans la catégorie des livres de luxe.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’équipe artistique</head>
           <p>René Kieffer supervise toute la fabrication de l’édition, d’un point de vue artistique aussi bien qu’administratif. Il rassemble le
             travail des nombreux acteurs de l’édition. Il peut déléguer des projets à son fils, Michel Kieffer, mais garde le contrôle final du
@@ -108,7 +110,7 @@
             illustrations de l’édition. Les imprimeurs typographes des éditions René Kieffer sont nombreux et toujours cités dans l’achevé d’imprimer,
             comme acteurs de l’édition. Les imprimeurs en taille-douce et les coloristes le sont plus rarement.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les stratégies éditoriales</head>
           <p>René Kieffer adapte sa production aux exigences de son public. La production évolue donc dans le temps, en fonction des modes
             bibliophiliques, par des changements de présentation et de techniques d’illustrations. Des années dix aux années vingt, les éditions
@@ -127,7 +129,7 @@
             comme l’érotisme, la misogynie, la satire. Les professions libérales, en particulier les médecins, semblent constituer une part importante
             de la clientèle de René Kieffer, d’après le nombre de publications qui semblent leur être dédiées.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">La vente des éditions</head>
           <p>Le prix des exemplaires varie selon la technique d’illustration utilisée et la catégorie de tirage. Le point de vente principal des
             éditions est la librairie René Kieffer. La publicité est assurée par les expositions auxquelles René Kieffer participe et par des
@@ -136,13 +138,13 @@
             long terme. Les premières éditions des années dix sont épuisées dès les années vingt. Par la suite, les éditions se vendent plus ou moins
             bien : les éditions illustrées à l’eau-forte se vendent mieux, ainsi que celles illustrés par des artistes connus comme Joseph Hémard.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">Les projets avortés</head>
           <p>Les projets abandonnés semblent très nombreux. Nous ignorons souvent les raisons de ces échecs. René Kieffer renonce à des projets trop
             chers ou trop risqués ; il apparaît donc comme un éditeur prudent.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Fabrication artistique du livre</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Fabrication artistique du livre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le texte</head>
           <p>René Kieffer a édité des textes d’auteurs de toutes les époques. Deux types de textes dominent : les “ classiques ”, titres connus de
             tous pour lesquels l’illustration donne un éclairage inédit, souvent humoristique, et les auteurs plus contemporains consacrés par la
@@ -165,7 +167,7 @@
             reproduite par un procédé de reproduction photomécanique, à la place du caractère typographique. Ecriture et illustration sont alors
             mêlées l’une à l’autre, comme dans un manuscrit enluminé.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’illustration</head>
           <p>Les illustrateurs des éditions René Kieffer sont très nombreux : on en compte soixante-dix. La plupart sont aujourd’hui inconnus et il
             est difficile de trouver des renseignements sur eux. Artistes de profession, ils exercent souvent plusieurs métiers artistiques ;
@@ -187,8 +189,8 @@
             ajoutées par rapport au tirage le plus ordinaire. Le texte est alors plutôt un prétexte ; l’amateur s’intéresse avant tout à
             l’illustration.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les reliures des éditions René Kieffer</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les reliures des éditions René Kieffer</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Des reliures pour les éditions René Kieffer</head>
           <p>René Kieffer conçoit des reliures pour ses éditions. La production de reliures d’édition suit le rythme de la production des éditions
             René Kieffer ; elle est une activité importante de l’atelier. Les reliures sont faites en série : beaucoup d’exemplaires sont reliés peu
@@ -215,7 +217,7 @@
             de commande, elle donne une cohérence au livre, à la fois édité et relié par René Kieffer. Cependant, les bibliophiles plus exigeants ne
             se satisfont pas d’une reliure trop modeste. René Kieffer propose donc d’aménager la reliure d’édition au goût des collectionneurs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des reliures pour bibliophiles</head>
           <p>La reliure prévue peut être modifiée sur demande du bibliophile : le maroquin peut être substitué au veau, le décor prévu à froid peut
             être doré, mosaïqué. Ces modifications ont lieu, la plupart du temps, sur des exemplaires de tête. Le décor reste pourtant inchangé.
@@ -226,9 +228,7 @@
             proposant de modifier lui-même la reliure initialement prévue pour tous les exemplaires. Les solutions qu’il propose pour personnaliser la
             reliure d’édition satisfont un public hétérogène par ses exigences et ses possibilités financières.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Editeur, René Kieffer est avant tout un coordonnateur entre les différents acteurs de l’édition. Chef d’entreprise avisé, ses choix
           peuvent paraître prudents. Contrairement aux autres petits éditeurs de livres de luxe de l’époque, il résiste au désintérêt des années
           trente pour la bibliophilie qu’il pratique. L’édition est en effet une activité d’appoint de la reliure. <lb/>Le bilan artistique est
@@ -239,7 +239,7 @@
           satisfaire des clientèles différentes, René Kieffer remet en cause la définition de la reliure d’édition et la modifie à la demande des
           collectionneurs.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Le catalogue des éditions René Kieffer (131 éditions illustrées, 4 ouvrages sur la bibliophilie, 16 portefeuilles d’illustrations) est
           composé de deux parties : l’une décrit les éditions, par ordre chronologique, l’autre restitue la reliure d’édition de chaque édition. Un
           même numéro renvoie à la description de l’édition et de sa reliure, dans chaque partie. La description des éditions distingue la zone de
@@ -252,7 +252,6 @@
           <lb/>L’inventaire détaillé des archives des éditions René Kieffer (fonds privé) permet de repérer dans le fonds les pièces dont il est fait
           mention dans le commentaire.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

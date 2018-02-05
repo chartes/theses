@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">De l’or, des hommes et des notaires</title>
-        <title type="sub">épargne et crédit en Moyen-Poitou au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">De l’or, des hommes et des notaires</title><title xml:lang="fr" type="sub">épargne et crédit en Moyen-Poitou au <num>xvi<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Le Gendre, Romain">Romain Le Gendre</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201017.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>« Nature n’a créé l’homme que pour prester et emprunter », dit Panurge à Pantagruel, dans un passage du <hi rend="i">Tiers Livre</hi> de
           Rabelais où il fait l’éloge du prêt et de l’emprunt. S’il n’y a pas de synthèse d’ensemble sur la question, de nombreuses études l’ont en
           effet montré depuis longtemps : à l’époque moderne, le crédit irrigue la société tout entière et « la dette est partout dans les dépôts
@@ -63,7 +66,7 @@
           historiographiques pour mener un travail sur l’épargne et le crédit à partir d’un ensemble de sources notariales jusqu’ici largement
           sous-exploitées, dans une région et à une époque où les bouleversements économiques et religieux sont nombreux.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les précieuses archives des notaires royaux de Saint-Maixent pour le <num>xvi<hi rend="sup">e</hi></num> siècle constituent les principales
           sources de cette étude. Ce corpus documentaire, exceptionnellement bien conservé pour l’époque et pour la région, représente environ 250
           registres de minutes, répartis entre la série E et la sous-série 3 E des archives départementales des Deux-Sèvres et, pour quelques
@@ -84,9 +87,8 @@
           Enfin, un recensement des trouvailles monétaires du <num>xvi<hi rend="sup">e</hi></num> et du début du <num>xvii<hi rend="sup">e</hi></num> siècle dans un rayon de cent cinquante kilomètres autour de Saint-Maixent, établi à partir d’un dépouillement de publications
           numismatiques, a permis d’enrichir les éléments obtenus à partir de ces archives écrites.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le marché et ses rouages</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le marché et ses rouages</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La circulation monétaire en Moyen-Poitou au xvie siècle</head>
           <p>La composition de l’épargne dans la région ne se laisse pas étudier aussi facilement qu’on le souhaiterait : les inventaires après décès,
             qui nous permettraient d’avancer des estimations chiffrées de l’épargne moyenne, sont quasiment inexistants dans les archives notariales.
@@ -98,7 +100,7 @@
             portugaises. Cet or disparaît en revanche de la circulation dans les deux dernières décennies du siècle et ce sont les monnaies françaises
             d’argent (quart d’écu et franc d’argent surtout) qui dominent alors.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les notaires de Saint-Maixent au xvie siècle</head>
           <p>Même s’il ne s’agit pas de dresser un portrait complet et exhaustif de l’institution notariale saint-maixentaise, il n’est pas inutile de
             resituer les sources dans leur contexte de production. Le notariat français est en effet loin d’être unifié au <num>xvi<hi rend="sup">e</hi></num> siècle et les différences d’une région à une autre sont grandes. L’exemple des notaires royaux de Saint-Maixent montre
@@ -115,7 +117,7 @@
             raisonnablement estimer que les onze notaires royaux de Saint-Maixent établissent, dans le dernier tiers du <num>xvi<hi rend="sup">e</hi></num> siècle, environ 6 000 à 7 000 actes par an, pour une population de 10 000 à 12 000 habitants pour la ville et les
             campagnes environnantes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Crédit et instruments écrits</head>
           <p>Parmi les instruments notariés disponibles sur le marché du crédit, l’obligation domine largement. Il est alors légitime de consacrer un
             développement conséquent à cet outil qui peut servir à coucher par écrit tous types de dettes, mais, en pratique, surtout des prêts (la
@@ -141,9 +143,9 @@
             dont les archives notariales ne nous révèlent que d’infimes mais précieuses traces. Une estimation d’une cédule pour quatre obligations
             notariées est avancée.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les dynamiques du marché</head>
-        <p/>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les dynamiques du marché</head>
+        <p n="1" type="chapter"/>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Le temps du crédit</head>
           <p>Sur le marché du crédit, l’influence du temps n’est pas négligeable : le partage de l’épargne entre thésaurisation et prêt est déterminé
             par la perception de la conjoncture économique. Certaines lignes de force et constantes peuvent cependant être dégagées : ainsi, si la
@@ -161,7 +163,7 @@
             Il se traduit en particulier par le recours plus important à certains types d’instruments de crédit secondaires comme les ventes à
             réméré.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les soubresauts du marché du crédit à l’époque des guerres de religion (1559-1600)</head>
           <p>Dans une région qui n’a pas été épargnée par les guerres de Religion, la question des conséquences des troubles politiques et religieux
             sur le marché du crédit mérite d’être posée. La majeure partie des actes notariés ayant trait à des transactions économiques, les
@@ -182,8 +184,8 @@
             dernière détermine le choix entre acte notarié et acte sous seing privé, et le recours au notaire est alors lié aux fluctuations
             politiques. C’est une conséquence directe du délitement des rapports sociaux qui résulte des guerres civiles.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le crédit dans la société</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le crédit dans la société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Créanciers et débiteurs</head>
           <p>L’objet de l’étude nécessite de jouer sur les échelles d’analyse et de combiner les différentes approches. Une étude sociologique des
             participants au marché du crédit est capitale car la dette a un rôle fondamentalement social. Les sources notariales ne permettent pas
@@ -207,7 +209,7 @@
             marché de la terre, dont les revenus ont une position dominante dans l’économie de l’époque moderne, est fortement lié à celui du
             crédit.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Crédit et réseaux : étude de quatre figures de prêteurs</head>
           <p>Le recours à la notion de réseau pour l’étude du crédit permet d’appréhender les stratégies mises en place par différents créanciers et
             l’utilisation qu’ils font du crédit. Quatre portefeuilles de créances sont successivement examinés : ceux de Michel Le Riche, avocat du
@@ -222,7 +224,7 @@
             L’exemple de Louis de Harlay, très spécifique, laisse enfin apparaître un réseau de crédit fondé en grande partie sur l’appartenance
             religieuse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le crédit, une affaire de confiance</head>
           <p>L’étymologie du mot le montre bien : le crédit est intimement lié à la confiance et il est impossible de bâtir une réflexion sur cette
             notion sans y rapporter intrinsèquement celle de crédit personnel, d’honneur et de réputation. L’étude des prêts consentis par certains
@@ -237,7 +239,7 @@
             que le recours à la prison pour dettes, moyen pour faire pression sur le débiteur récalcitrant, est fréquent. Dans ces affaires, l’honneur
             et la réputation sont aussi en jeu : accorder un délai pour le paiement d’une dette signe le pouvoir sur les hommes.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le notaire au sein du marché du crédit : greffier ou entremetteur ?</head>
           <p>Au final, c’est le travail du notaire et son rôle dans ce marché qu’il faut scruter. Contrairement à ce que de récentes études ont
             démontré pour les <num>xviii<hi rend="sup">e</hi></num> et <num>xix<hi rend="sup">e</hi></num> siècles, le notaire du <num>xvi<hi rend="sup">e</hi></num> siècle n’apparaît pas, dans la région en tout cas, comme un intermédiaire ou un courtier de l’épargne. Tout
@@ -253,9 +255,7 @@
             notariale peut alors être qualifiée de « proto-institution » de crédit et ces premiers signes semblent annoncer le rôle accru que joueront
             les notaires des siècles postérieurs.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le crédit est assurément un mécanisme qui laisse de nombreuses traces dans la documentation mais dont, dans le même temps, les formes sont
           diverses et les logiques difficiles à décrypter. Aussi abondantes et aussi riches en informations soient-elles, les sources notariales ne
           nous permettent de prendre la mesure de ces phénomènes qu’au prix de variations sur l’échelle d’analyse.</p>
@@ -270,12 +270,11 @@
           mesure où cette dernière atteint toutes les couches de la société dans la région, n’a pas lieu d’être car l’évolution religieuse ne semble
           pas avoir modifié les pratiques en matière de taux d’intérêts ou induit une fracture au sein des participants au marché.</p>
       </div>
-              <div type="appendix"><head>Appendice</head>
+          <div type="appendix" n="7"><head>Appendice</head>
         <p>Exploitation informatique des archives notariales – Le caractère sériel des actes notariés a été à l’origine d’une réflexion sur l’encodage
           des informations contenues dans les actes de crédit. La construction de la base de données mise au point pour le dépouillement des sources
           est détaillée.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

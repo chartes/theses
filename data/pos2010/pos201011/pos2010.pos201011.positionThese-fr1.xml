@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La France face aux initiatives économiques de la Commission européenne dans le cadre de la politique industrielle commune sous la
-        Présidence de Georges Pompidou (1969-1974)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La France face aux initiatives économiques de la Commission européenne dans le cadre de la politique industrielle commune sous la
+        Présidence de Georges Pompidou (1969-1974)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Derboule, Aloïs">Aloïs Derboule</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201011.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
           <p>Lorsque Georges Pompidou parvint à la magistrature suprême, en 1969, la construction économique initiée par le Traité de Rome de 1957
             souffrait de lacunes importantes. D’une part, l’élimination de tous les types d’entraves techniques aux échanges n’était pas terminée.
             L’attitude de la France du général de Gaulle qui abordait le problème de la Communauté économique européenne (CEE) sous un angle politique
@@ -73,7 +76,7 @@
             européenne. La seconde de cerner précisément les raisons d’accord et de désaccord des partenaires européens par l’examen des propositions
             de la Commission européenne relatives à la politique industrielle commune.</p>
         </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
           <p>Les sources examinées sont nombreuses et diversifiées. Les archives de la Commission européenne, conservées à Bruxelles, d’une part, et
             les archives de la Présidence de la République française, conservées aux Archives nationales à Paris, plus précisément les fonds 5AG2 pour
             les archives de la présidence de Georges Pompidou et 86AJ pour les archives de Jean-René Bernard, ont livré des indications sur les
@@ -89,9 +92,8 @@
             celles de l’Institut universitaire européen, ont livré des témoignages d’acteurs européens d’une grande richesse qui se sont révélés
             nécessaires pour appréhender l’histoire de la construction européenne plus concrètement et plus humainement.</p>
         </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’idée de politique industrielle durant la présidence de Georges Pompidou (1969-1974)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’idée de politique industrielle durant la présidence de Georges Pompidou (1969-1974)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La situation de l’industrie communautaire à la fin des années 1960 et les défis lancés par les pays
             tiers</head>
           <p><hi rend="i">La situation de l’industrie nationale des différents pays de la CEE.</hi> — À la fin des années 1960, l’industrie des pays
@@ -113,7 +115,7 @@
             industrielle, qui signifiait pour elle des interventions des États dans le libre jeu économique. Elle était soutenue par les Pays-Bas,
             tandis que l’Italie se rangeait aux côtés de la France, la Belgique et la Commission occupant une position intermédiaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La réflexion d’ensemble de la Commission européenne sur l’idée de politique industrielle européenne</head>
           <p><hi rend="i">Les hommes de la politique industrielle</hi> : <hi rend="i">éléments prosopographiques.</hi> — Au sommet de la hiérarchie,
             l’engagement des commissaires européens en charge des affaires industrielles, d’une part, et de leur directeur général, de l’autre, ainsi
@@ -130,7 +132,7 @@
             d’ensemble de l’économie européenne. Une ambitieuse politique industrielle commune pouvait impliquer des avancées sur le terrain politique
             européen, que la France craignait et rejetait.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les propositions d’action concrètes dans le domaine industriel et le développement de la politique industrielle
             européenne à partir de 1970</head>
           <p><hi rend="i">Les propositions de la France et de la Commission</hi> : <hi rend="i">les deux mémorandums sur la politique industrielle
@@ -159,9 +161,9 @@
           <p>La conjoncture économique mondiale, ainsi que les réticences des pays européens de la CEE à appliquer le programme de politique
             industrielle de la Commission, signèrent dès lors la fin de la politique industrielle commune.</p>
         </div>
-      </div><div n="2" type="part"><head n="deuxième partie">Les réalisations effectives de la politique industrielle à travers plusieurs exemples de travaux :
+      </div><div n="4" type="part"><head n="0" type="chapter">Les réalisations effectives de la politique industrielle à travers plusieurs exemples de travaux :
           applications sectorielles, rapprochement des entreprises et politique commune</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les tentatives de mise en place d’une coopération des entreprises publiques par l’intermédiaire des
             États</head>
           <p><hi rend="i">Les notions d’entreprise commune, de contrats communautaires de développement et de coordination des achats publics.</hi> —
@@ -175,7 +177,7 @@
             de contrecarrer l’hégémonie américaine. Toutefois, la divergence des objectifs politico-économiques de chaque État dans le cadre d’une
             simple coopération horizontale entre pays participant à l’accord fut à l’origine de son éclatement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Favoriser le rapprochement des entreprises de la Communauté</head>
           <p><hi rend="i">Le regroupement d’intérêt économique européen (GIEE).</hi> — Le GIEE était un instrument dont le but était un élément du
             projet de coopération des entreprises, essentiellement privées, des États membres. Cette notion étant encore floue au début des années
@@ -197,7 +199,7 @@
             et juridique que puissent utiliser les entreprises européennes et celles des pays tiers pour se développer dans la CEE, révélait
             l’impossibilité d’une réponse européenne aux enjeux économiques mondiaux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La politique de concurrence de la CEE</head>
           <p><hi rend="i">La politique de concurrence à la fin des années 1960.</hi> — Alors que la législation américaine semblait favoriser les
             entreprises de même nationalité, la réglementation de la Commission européenne était critiquée pour son manque de souplesse, la lourdeur
@@ -218,9 +220,7 @@
             économiquement souhaitables passées entre les entreprises de la CEE, en les soustrayant à la législation communautaire qui sanctionnait
             les concentrations.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
           <p>L’instauration d’une véritable politique industrielle européenne a été victime de l’insuffisance des réalisations qui avaient été
             envisagées par la Commission européenne. Cet échec est essentiellement dû au défaut d’engagement ou à la réticence des États de la CEE,
             notamment de la France, qui soutenait originellement une politique industrielle européenne. Une politique industrielle commune ne pouvait
@@ -230,7 +230,7 @@
             années 1960. La France, dont les réactions et les choix s’inscrivaient au cœur des travaux de ce que furent les tentatives d’instauration
             de la politique industrielle commune, symbolisait et incarnait les contradictions de cette politique.</p>
         </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
           <p>Mémorandum français sur les modalités d’un renforcement de la coopération européenne en matière de développement industriel et
             scientifique. — Tableau comparatif des mémorandums de la France et de la Commission. — Projet d’une coopération européenne
             franco-allemande. — Projet de loi portant création d’une entreprise d’intérêt européen. — Règlement communautaire sur l’arrangement de
@@ -238,7 +238,6 @@
             Indicateurs statistiques sur le capital des filiales des entreprises américaines dans la CEE (origine, montant, composition). —
             Indicateurs statistiques sur la différence des prix à l’intérieur de la CEE.</p>
         </div>
-          </div>
       </body>
   </text>
 </TEI>

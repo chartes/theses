@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Guizot et la Grèce</title>
-        <title type="sub">Questions d’influences</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Guizot et la Grèce</title><title xml:lang="fr" type="sub">Questions d’influences</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Pierangelo, Marion">Marion Pierangelo</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200719.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les années 1840 sont pour la Grèce celles de la recherche d’un régime politique stable pérennisant le nouvel État reconnu dix ans
           auparavant par les puissances européennes. En 1833, le prince bavarois Othon Ier, premier roi de Grèce, débarquait à Nauplie. Il tente de
           mettre en place une monarchie absolue, jamais acceptée par les Grecs : en septembre 1843, une révolution non sanglante le contraint à
@@ -66,7 +69,7 @@
           problématique plus générale interrogeant à toutes les échelles les mécanismes d’influence, de contre-influence et enfin de transfert
           d’idées.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’histoire diplomatique traditionnelle telle qu’elle fut écrite par Éd. Driault et M. Lhéritier au début du <num>xx<hi rend="sup">e</hi></num>
           siècle est centrée sur la problématique des intérêts contradictoires des États-nations. Placer les acteurs de la diplomatie (ministres des
           Affaires étrangères et ambassadeurs) au cœur du raisonnement permet une autre approche. François Guizot fut particulièrement soigneux de ses
@@ -91,9 +94,8 @@
           parlementaires et comités philhellènes). Ces sources offrent en outre un précieux éclairage sur l’arrière plan culturel du jeu diplomatique,
           encore dominé, au moins dans les premières années de la monarchie de Juillet, par le philhellénisme.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La conception de la relation franco-grecque chez Guizot <lb/>continuité ou rupture ?</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La conception de la relation franco-grecque chez Guizot <lb/>continuité ou rupture ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les premières interventions françaises en Grèce</head>
           <p>À la veille de la révolution grecque, la présence française dans la péninsule est numériquement faible : elle se résume à quelques
             missionnaires, consuls et marchands. L’épopée napoléonienne a certes conduit des soldats de l’Empire en Morée (l’actuel Péloponnèse), mais
@@ -114,7 +116,7 @@
           <p>Toutefois, l’intervention française aux côtés des insurgés ne s’explique pas sans le vaste mouvement d’opinion favorable aux Grecs qui
             parcourut alors la France et l’Europe : le philhellénisme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le philhellénisme dans la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle</head>
           <p>L’ampleur du philhellénisme en France n’est guère à démontrer. On en trouve des traces aussi bien dans la littérature et le théâtre que
             sur des objets de la vie quotidienne. En outre, de nombreux Français, en particulier Théobald Piscatory, partirent se battre aux côtés des
@@ -141,7 +143,7 @@
             que les revendications de « bienveillance » de la France doivent être interprétées comme une marque du philhellénisme, rien n’autorise
             donc à suivre la même piste.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La relation Guizot-Colettis</head>
           <p>Dès lors que Guizot se refuse à inscrire la relation franco-grecque dans le cadre symbolique du philhellénisme, selon lequel la Grèce
             serait le berceau de la culture européenne et donc française, il lui faut se forger une représentation de la Grèce sur d’autres bases. Les
@@ -163,8 +165,8 @@
             Grèce et celle des grandes étapes de la relation Guizot-Colettis. C’est donc la chronologie de l’action diplomatique de Guizot en Grèce
             dans les années 1840 qu’il faut maintenant analyser.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’action de Guizot en Grèce</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’action de Guizot en Grèce</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les intérêts de la France en Grèce, selon Guizot</head>
           <p>Pour Guizot, la Grèce apparaît très tôt comme une voie privilégiée pour sortir la France de l’isolement diplomatique où l’a reléguée la
             fameuse « crise d’Orient » de 1840-1841 et les propos belliqueux d’Adolphe Thiers, puisque aucune affaire ne peut y être réglée sans la
@@ -175,7 +177,7 @@
             France en Grèce ayant quelque importance est de nature financière : il découle du prêt de 60 millions de francs consenti à la Grèce par
             les trois « puissances protectrices ».</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les projets politiques de Guizot pour la Grèce entre européanisation et défense de l’influence française (1841-1844)</head>
           <p>Pour sortir son pays de l’isolement, Guizot conçoit d’adresser, sur l’initiative de la France, une lettre circulaire à Othon, roi de
             Grèce, signée par l’ensemble des « puissances protectrices ». Pour obtenir l’adhésion de la Russie et de l’Angleterre, mais aussi de la
@@ -201,7 +203,7 @@
             avoir laissé son rival Mavrocordatos essuyer les plâtres du premier gouvernement constitutionnel de la Grèce et s’user en quelques mois à
             cette tâche.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Du désengagement à la débâcle (1844-1848)</head>
           <p>À partir du moment où Colettis prend en Grèce la tête des affaires, la politique française, tout en demeurant, sur le fond, semblable à
             ce qu’elle avait été auparavant, change du tout au tout dans la forme. Comme nous l’avons déjà évoqué, la France s’en remet entièrement à
@@ -220,8 +222,8 @@
             à l’un des objectifs de Guizot. Aussi est-il nécessaire d’en évaluer la portée. Une étude comparative de Guizot et de Colettis en tant que
             chefs de gouvernement permet une approche précise de ce problème.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Essai d’étude comparative : de Guizot à Colettis</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Essai d’étude comparative : de Guizot à Colettis</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le style et l’image</head>
           <p>Si l’on se rapporte à la bibliographie existante, force est d’admettre que beaucoup de traits opposent Guizot et Colettis. Le costume
             noir et la pose austère de Guizot portraituré par Paul Delaroche vers 1878 contrastent étrangement avec la veste colorée de Colettis peint
@@ -235,7 +237,7 @@
             marche vers la démocratie. L’historiographie incite donc à donner du crédit à l’hypothèse selon laquelle il est possible d’établir une
             parenté, ou une analogie, entre les pratiques politiques des deux hommes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La pratique gouvernementale et ses fondements</head>
           <p>Les pratiques gouvernementales de Guizot et de Colettis présentent en effet de réelles similitudes qui ne sont pas imputables au hasard.
             Malgré des différences majeures qui s’expliquent aisément par les différences de contextes dans lesquels il faut replacer l’action de
@@ -262,7 +264,7 @@
             n’y paraît à première vue. Toutefois, si Guizot donne force conseils, apparemment suivis, sur la manière de gouverner, il est loin
             d’influencer Colettis dans tous les domaines.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les deux hommes face aux grandes questions de leur époque</head>
           <p>Les questions de portée internationale qui agitent l’Europe postnapoléonienne, aussi bien la question des nationalités que celle des
             révolutions, ou que celle du paupérisme, apparaissent relativement peu dans la correspondance dépouillée. Ce sont pourtant des points
@@ -278,9 +280,7 @@
             chercher à en accroître l’étendue, s’en tient strictement aux mots. Néanmoins, c’est là un désaccord de fond entre Guizot et Colettis dont
             Guizot ne semble parfois pas mesurer tous les enjeux.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La politique de Guizot en Grèce est certes dictée, d’abord et avant tout, par les intérêts diplomatiques de la France. Nous en voulons pour
           preuve la dépêche de Guizot de mars 1841 qui provient de la volonté de faire sortir la France de l’isolement. Cependant, la défense des
           intérêts français par Guizot, pour être bien comprise, doit être replacée dans son contexte. La France a en effet trop peu d’intérêts
@@ -294,10 +294,9 @@
           yeux de certains historiens. C’est au nom de cette complexité qu’une réévaluation de la réussite politique de Guizot en Grèce sur le long
           terme est sans doute possible.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Cartographie. — Tableaux d’analyse. — Iconographie. — Pièces justificatives. — Index.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

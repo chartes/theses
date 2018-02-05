@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les “ vergers ” de la papauté d’Avignon : Avignon, Pont-de-Sorgues et Villeneuve (1316-1378)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les “ vergers ” de la papauté d’Avignon : Avignon, Pont-de-Sorgues et Villeneuve (1316-1378)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Barret, Élydia">Élydia Barret</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200401.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le tracé des jardins aménagés aux abords du palais des papes d’Avignon, matérialisé à l’origine par d’imposantes murailles dont il reste
           aujourd’hui quelques pans, se lit encore dans la topographie de la ville. En revanche, les jardins des résidences pontificales de
           Pont-de-Sorgues et de Villeneuve ont entièrement disparu. La médiocrité, sinon l’absence des vestiges expliquent que ces espaces ne furent
@@ -60,7 +63,7 @@
           “ vergers ” de la papauté d’Avignon, permettant de préciser et d’affiner l’image uniforme et stéréotypée de ces espaces transmise par
           l’iconographie et la littérature de la fin du Moyen Âge.</p>
       </div>
-              <div type="sources"><head>Historiographie</head>
+          <div type="sources" n="2"><head>Historiographie</head>
         <p>
           <hi rend="i">L’histoire des jardins en France. ­</hi> L’histoire des jardins naquit en France dans les dernières décennies du xix <hi rend="sup">e</hi>  siècle. Les premières synthèses historiques furent alors l’œuvre de praticiens, architectes et paysagistes, avant de
           devenir, dans la première moitié du <num>xx<hi rend="sup">e</hi></num>  siècle, celle des historiens de l’art. À l’horizon des années 1960, l’histoire
@@ -80,10 +83,9 @@
           et travaux universitaires récents, ces jardins n’ont ainsi jamais fait l’objet d’une étude spécifique. Une plus grande attention a néanmoins
           été accordée à ceux du palais d’Avignon où des sondages archéologiques ont été réalisés en 1994 sous la direction de Dominique Carru.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Partie liminaire">Réalité comptable et réalité archéologique : les jardins vus à travers le prisme des archives de la Chambre
+          <div n="3" type="part"><head n="0" type="chapter">Réalité comptable et réalité archéologique : les jardins vus à travers le prisme des archives de la Chambre
           apostolique</head>
-        <p>Le fonds de la Chambre apostolique, dont la formation date du début du <num>xiv<hi rend="sup">e</hi></num>  siècle et qui ne présente que de rares
+        <p n="1" type="chapter">Le fonds de la Chambre apostolique, dont la formation date du début du <num>xiv<hi rend="sup">e</hi></num>  siècle et qui ne présente que de rares
           lacunes chronologiques, est d’une richesse exceptionnelle en raison de son volume et de sa diversité. En effet, à la hiérarchie pyramidale
           de la Chambre apostolique, organisée en bureaux et supervisée par le camérier et le trésorier, correspond toute une série de pièces et de
           registres comptables qui constituent chacun un rouage dans un mécanisme d’enregistrement complexe, lequel évolue considérablement de 1316 à
@@ -92,8 +94,8 @@
           perte d’information accrue par les exigences comptables et les aléas de la conservation. La comptabilité ne fournit donc ni un état complet
           ni un reflet fidèle de la réalité : elle aboutit nécessairement à une vision partielle, déformée et recomposée de la réalité, appelée à être
           confrontée aux données livrées par l’archéologie.</p>
-      </div><div n="2" type="part"><head n="Première partie">Création et développement des jardins des résidences pontificales d’Avignon, de Pont-de-Sorgues et de Villeneuve</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Création et développement des jardins des résidences pontificales d’Avignon, de Pont-de-Sorgues et de Villeneuve</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le palais d’Avignon et ses jardins</head>
           <p>L’ancien palais épiscopal d’Avignon où Jean XXII choisit de s’établir en 1316 fut aussitôt agrandi et réorganisé. Les travaux réalisés
             sous son pontificat furent limités en comparaison à ceux engagés sous Benoît XII et Clément VI. Forts de l’acquisition du palais épiscopal
@@ -107,7 +109,7 @@
             développement graduel s’explique en partie par la nature du site qui alliait les contraintes d’une implantation en contexte urbain et
             d’une localisation sur un éperon rocheux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le palais de Pont-de-Sorgues et ses jardins</head>
           <p>Alors qu’à Avignon, Jean XXII avait dû se contenter de remodeler et de réaménager le palais épiscopal qui ne pouvait se prêter en l’état
             aux besoins de la curie, il entreprit à Pont-de-Sorgues, dans le Comtat Venaissin, la construction d’un véritable palais pontifical. Les
@@ -116,7 +118,7 @@
             cette date, le jardin avait donc acquis son extension maximale, ce qu’avaient facilité l’implantation du palais en contexte semi-urbain et
             les prédispositions favorables du terrain.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le palais de Villeneuve et ses jardins</head>
           <p>Avant d’entreprendre la construction du “ palais neuf ” à Avignon, Clément VI fit l’acquisition de la livrée du cardinal Napoléon Orsini,
             située en territoire français. La vente fut officiellement conclue en 1344, mais dès 1342, le pape y ordonna des travaux, faisant
@@ -126,8 +128,8 @@
             semble-t-il, plus vaste que le précédent ; il fut aménagé de 1342 à 1343. Comme les jardins du palais de Pont-de-Sorgues, ces jardins,
             implantés en contexte rural, acquirent d’emblée leur extension définitive.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Un espace organisé et administré : essai de reconstitution</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Un espace organisé et administré : essai de reconstitution</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Constructions et aménagements</head>
           <p>Les jardins des palais d’Avignon, de Pont-de-Sorgues et de Villeneuve se présentaient tous sous la forme d’espaces fermés d’épaisses et
             de hautes murailles dont la construction était longue et coûteuse. Ils pouvaient être subdivisés par des clôtures plus légères de bois,
@@ -138,7 +140,7 @@
             matériaux tels que le gazon, utilisé pour la réalisation de prairies ornementales et de bancs de gazon, et la vigne, employée à la
             confection de fabriques de treillage, treilles, tonnelles et pavillons.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Couvert végétal et travaux horticoles</head>
           <p>Le couvert végétal des jardins pontificaux était composé de vigne, d’arbres, le plus souvent fruitiers, et de plantes herbacées (plantes
             potagères et condimentaires, plantes à fleurs, légumineuses et céréales) dont l’inventaire se révèle assez classique pour le xiv <hi rend="sup">e</hi>  siècle. La comptabilité ne permet pas d’en restituer précisément la distribution mais seulement d’observer que chacun
@@ -146,7 +148,7 @@
             le calendrier était imposé par le cycle végétatif de la plante. Certaines façons culturales requéraient un savoir-faire particulier,
             notamment en matière de viticulture et d’arboriculture.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Personnel et administration des jardins</head>
           <p>Si au palais de Pont-de-Sorgues, l’administration du “ grand verger ” incombait au gardien du palais, dans les résidences d’Avignon et de
             Villeneuve, elle était confiée à un jardinier, qualifié de “ jardinier du pape ”, qui était à la fois un praticien et un administrateur.
@@ -154,15 +156,15 @@
             travail à effectuer et des périodes de l’année. Les salaires perçus par les ouvriers dépendaient de la nature de la tâche exécutée et du
             degré de qualification qu’elle supposait.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">Le jardin pontifical : essai de définition</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Le jardin pontifical : essai de définition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’utile et l’agréable</head>
           <p>Les jardins établis aux abords des résidences pontificales mêlaient l’utile et l’agréable. Non seulement ils contribuaient au
             ravitaillement des cuisines pontificales, mais ils prolongeaient en outre le bâti par un espace salubre et plaisant, propice à la “  <hi rend="i">recreatio corporis</hi> ” conçue comme une nécessité par la papauté du <num>xiii<hi rend="sup">e</hi></num> siècle. La place occupée par
             les jardins dans la topographie palatiale et les décors naturalistes des appartements personnels du pape révèlent qu’un lien privilégié
             existait entre ces espaces et l’habitation du souverain pontife, dont ils constituaient peut-être un retrait privé.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un modèle unique de jardins ?</head>
           <p>La comparaison des différents jardins de la papauté d’Avignon avec les modèles théoriques proposés par Pietro de’Crescenzi dans l’<hi rend="i">Opus ruralium commodorum</hi> montrent que les jardins élaborés sur ordre des papes correspondaient globalement au type de
             jardin princier défini par l’agronome bolonais. Mais l’ampleur et le degré d’agrément de ces jardins variaient en fonction de
@@ -170,7 +172,7 @@
             cour reçurent respectivement un vaste jardin et un parc, alors que des jardins plus réduits furent associés à la résidence officielle
             qu’était le palais apostolique d’Avignon.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une expression du pouvoir</head>
           <p>Les “ vergers ” pontificaux, par la faune exotique qu’ils abritaient, par certaines espèces végétales telles que le melon ou l’oranger
             que les papes ont, semble-t-il, introduites et acclimatées, ainsi que par la maîtrise de la nature qu’ils exprimaient, étaient une
@@ -179,21 +181,18 @@
             incarnation d’un idéal seigneurial sous Clément VI et témoins d’une nouvelle sensibilité sous Urbain V, ils reflétaient en outre la
             personnalité des différents papes d’Avignon.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>La détermination des papes à établir des jardins et à les développer, même lorsque le site ne s’y prêtait guère, démontre qu’au xiv <hi rend="sup">e</hi>  siècle, ces espaces extérieurs constituaient un complément obligé du bâti. Ils répondaient tout autant à des besoins de
           représentation qu’à une recherche de confort et d’intimité dont le <num>xiv<hi rend="sup">e</hi></num>  siècle vit le développement. Démonstration de
           luxe, témoins d’une aptitude à modeler le paysage, ils étaient une manifestation du pouvoir et l’expression d’un art de vivre
           aristocratique.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Schéma d’évolution du mécanisme d’enregistrement comptable. ­ Extraits des comptes des jardiniers d’Avignon et de Villeneuve. ­ Extraits
           de l’<hi rend="i">Opus ruralium commodorum</hi> de Pietro de’Crescenzi ­ Tableaux synoptiques des sources. ­ Tableau des plantes recensées
           dans les jardins pontificaux. ­ Tableau recensant les animaux de la ménagerie. ­ Tableaux de la fréquentation des résidences pontificales
           établis d’après les lieux d’émission des lettres apostoliques. ­ Carte, plans, peintures.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

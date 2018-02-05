@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Naissance et affirmation d’une collégiale</title>
-        <title type="sub">Notre-Dame de Saint-Omer, du début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;ix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; au début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Naissance et affirmation d’une collégiale</title><title xml:lang="fr" type="sub">Notre-Dame de Saint-Omer, du début du <num>ix<hi rend="sup">e</hi></num> au début du <num>xiii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bédague, Jean-Charles">Jean-Charles Bédague</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200905.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si la collégiale de Saint-Omer, devenue cathédrale au milieu du <num>xvi</num>
 <hi rend="sup">e</hi> siècle après la chute de Thérouanne, symbolise aujourd’hui pour beaucoup d’Audomarois le passé médiéval de la ville,
           elle n’a pas suscité chez les historiens l’intérêt qu’elle mérite. L’existence d’un important fonds d’archives semble avoir plutôt découragé
@@ -91,7 +94,7 @@
           la place de cette collégiale : son environnement monastique, son contexte d’apparition relativement ambigu en ont-ils fait un établissement
           particulier ou est-elle devenue une collégiale comme les autres ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sollicitées présentent, à l’image du monastère de Sithiu, un double visage. La documentation proprement audomaroise ne remonte
           guère au-delà du <num>xi</num>
 <hi rend="sup">e</hi> siècle. Elle est surtout constituée par l’important fonds d’archives formant la sous-série 2 G des archives
@@ -109,9 +112,8 @@
 <hi rend="sup">e</hi> siècle (Saint-Omer, bibliothèque d’agglomération, ms. 803) ; elles ont été pour la plupart éditées.</p>
         <p>On dispose enfin, pour toute la période, d’une série importante de textes hagiographiques, eux aussi bien repérés et édités.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Prolégomènes <num> </num> : le poids de l’histoire, des sources et de la tradition</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Prolégomènes <num> </num> : le poids de l’histoire, des sources et de la tradition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un bilan historiographique contrasté</head>
           <p>La recherche historique sur le passé de la collégiale de Saint-Omer et de l’abbaye de Saint-Bertin est d’abord l’œuvre des communautés
             elles-mêmes. Au milieu du <num>xviii</num>
@@ -131,7 +133,7 @@
             prévôts et des doyens, de la règle et de la réforme, du temporel n’ont jamais été directement abordées et ne permettent pas de se rendre
             compte de ce que représentait la collégiale de Saint-Omer pendant une longue partie du Moyen Âge.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les sources et leurs problèmes</head>
           <p>Compte tenu des nombreux problèmes posés par les sources, tant narratives que diplomatiques, il a été nécessaire d’en donner un tableau
             d’ensemble : leur richesse montre le large éventail des recherches qu’il est possible de mener autour de la collégiale. On s’est
@@ -147,7 +149,7 @@
           <p>D’autre part, les sources provenant de l’abbaye de Saint-Bertin étant tellement abondantes, on en a donné une présentation générale, en
             précisant chaque fois les diverses entreprises d’édition dont elles ont fait l’objet.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un récit des origines : <lb/>la <hi rend="i">divisio</hi> de Fridugise (vers 820) vue par Folcuin (962)</head>
           <p>L’étude de la collégiale de Saint-Omer nécessite de se pencher préalablement sur le seul récit de fondation que l’on possède, celui de
             Folcuin ; l’étude critique de ce témoignage met en lumière le contexte d’apparition de la communauté audomaroise. Malgré le parti pris de
@@ -166,8 +168,8 @@
             communautés, n’a pas pu ne pas poser de problème ; le critère ici n’est pas tant celui de l’hostilité que celui des rapports de pouvoir.
             La question est désormais de savoir comment chacune des deux communautés se satisfait de l’héritage ambigu légué par Fridugise.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La recherche d’un statut</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La recherche d’un statut</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Diriger Saint-Omer</head>
           <p>L’étude de la direction de Sithiu, puis de Saint-Omer, du <num>ix</num>
 <hi rend="sup">e</hi> au <num>xiii</num>
@@ -192,7 +194,7 @@
             encore. Malgré la réforme grégorienne, son ombre pèse incontestablement dans le choix des prévôts, surtout au <num>xii</num>
 <hi rend="sup">e</hi> siècle au cours duquel chacun d’entre eux est issu de l’entourage comtal.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les chartes et le chartrier, reflets du statut de Saint-Omer ?</head>
           <p>La question des origines du chartrier audomarois est rendue particulièrement complexe par l’absence de chartes avant le début du
               <num>xi</num>
@@ -221,7 +223,7 @@
 <hi rend="sup">e</hi> siècle dont la composition ou l’écriture peut être attribuée au chapitre. Il apparaît même que Saint-Omer a
             participé à la réalisation d’actes dont elle est le bénéficiaire.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les liens avec Rome</head>
           <p>On connaît l’existence de cinq privilèges pontificaux pour Saint-Omer, octroyés par Grégoire VII (1076), Calixte II (1122), Innocent II
             (1140), Adrien IV (1159) et Alexandre III (1179). L’étude comparée de chacun d’entre eux, confrontée avec celle, plus générale, de ses
@@ -244,8 +246,8 @@
             notamment de l’ordinaire, mais celui où la communauté des chanoines affirme ses droits au sein de la collégiale, détaille son
             fonctionnement interne et essaie de s’imposer face au prévôt.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La constitution d’un temporel</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La constitution d’un temporel</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le temporel de Saint-Omer aux <num>xi</num>
 <hi rend="sup">e</hi> et <num>xii</num>
 <hi rend="sup">e</hi> siècles : <lb/>état, répartition, composition</head>
@@ -265,7 +267,7 @@
             d’églises et d’autels et des dizaines de terres, ne paraît pas négligeable. Un autre point à souligner est le nombre d’intérêts communs
             que la collégiale avait, sur certains domaines, avec l’abbaye de Saint-Bertin.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le temporel audomarois, un temporel hérité ( <num>vii</num>e- <num>x</num>e siècle) ?</head>
           <p>Disposant désormais d’un état du patrimoine audomarois pour les <num>xi</num>
 <hi rend="sup">e</hi> et <num>xii</num>
@@ -288,7 +290,7 @@
             individualisation n’est pas parfaite et que chanoines et moines ont gardé des biens en communs, probablement en raison de leur éloignement
             – en Rhénanie – ou de leur nature – les dîmes autour de Saint-Omer.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Agrandir, défendre, administrer le temporel</head>
           <p>La vie du temporel audomarois ne se laisse analyser que pour les derniers siècles considérés ici. Dans la mesure où les sources
             permettent de l’observer, on se rend compte que les <num>xii</num>
@@ -308,8 +310,8 @@
             chanoine qui en était investi. Ce système cherchait probablement à concilier les impératifs de la vie en commun au sein du chapitre et les
             aspirations de chacun des chanoines.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La construction d’une identité</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">La construction d’une identité</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Désigner Sithiu</head>
           <p>La réforme de Fridugise n’a pas d’effets immédiats sur les modes de désignation du monastère de Sithiu : Omer et Bertin continuent
             d’être associés comme protecteurs de Sithiu jusqu’à la fin du <num>ix</num>
@@ -327,7 +329,7 @@
             acquiert d’ailleurs à la même époque une place à part puisqu’il tend de plus en plus à désigner la ville qui s’est formée autour des deux
             établissements religieux, en raison du lien qui unit alors les associations d’entraide urbaines et le chapitre canonial.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Être chanoine à Saint-Omer</head>
           <p>La question de l’état canonial à Saint-Omer ne se laisse pas étudier aussi facilement qu’on l’aimerait. On peut formuler quelques
             hypothèses à partir des <num>xi</num>
@@ -349,9 +351,7 @@
 <hi rend="sup">e</hi> siècle ou la suppression de certains offices devenus obsolètes au début du <num>xiii</num>
 <hi rend="sup">e</hi> siècle. Ce n’est cependant qu’au cours de ce siècle que cette situation fera place à d’autres réalités.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Fridugise avait créé un rapport de force inconfortable au sein de Sithiu entre Saint-Bertin et Saint-Omer. Si la <hi rend="i">divisio</hi>
           opérée par cet abbé avait distendu les liens entre les deux noyaux de la communauté, elle ne les avait pas rompus. Les choses changent en
           fait au tournant des <num>ix</num>
@@ -391,7 +391,7 @@
           lient depuis toujours à l’abbaye voisine de Saint-Bertin constituent une originalité incontestable et empêchent de voir en la collégiale de
           Saint-Omer une collégiale parmi les autres.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p> Édition et présentation des différents inventaires des archives du chapitre de Saint-Omer, de la fin du <num>xv</num>
 <hi rend="sup">e</hi> siècle à la fin du <num>xx</num>
 <hi rend="sup">e</hi> siècle.</p>
@@ -402,7 +402,6 @@
           Saint-Bertin et du prévôt de Saint-Omer (1<hi rend="sup">er</hi> mars 1042), notice de l’élévation des reliques de saint Omer (3 mai 1052).
        </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

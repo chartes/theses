@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Louis II de la Trémoille ou la découverte de l’Italie (1480-1525)</title>
-        <title type="sub">Étude historique et édition de correspondance.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Louis II de la Trémoille ou la découverte de l’Italie (1480-1525)</title><title xml:lang="fr" type="sub">Étude historique et édition de correspondance.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Vissière, Laurent">Laurent Vissière</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200035.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Louis II de La Trémoille (1460-1525) représente à lui seul une époque, celle d’une France conquérante, encore chevaleresque et déjà
           moderne. Au service de Charles VIII, de Louis XII et de François I<hi rend="sup">er</hi> , pendant près de cinquante ans, il occupa sans la
           moindre interruption ou éclipse un rôle de premier plan à la cour et aux armées. On a choisi de privilégier ici ses rapports avec l’Italie.
@@ -66,7 +69,7 @@
           français parfaitement représentatif d’un milieu et d’une époque C’est à ces questions que ce travail, en présentant l’édition de plusieurs
           centaines de lettres et de documents, cherche à répondre.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Sous la cote 1 AP, les Archives nationales conservent le chartrier des La Trémoille, aussi connu sous le nom de chartrier de Thouars. Ce
           fonds prodigieux, mais dont le classement reste très incertain, contient à la fois des séries de correspondance, des documents fonciers,
           financiers, judiciaires et quelques comptes de l’hôtel de Louis de La Trémoille. On arrive ainsi à reconstituer en partie l’itinéraire de La
@@ -77,9 +80,8 @@
           quelques lettres de la correspondance de La Trémoille à Anne de Montmorency proviennent du fonds français de la Bibliothèque nationale de
           France. Au total, ce sont trois cent quarante lettres et documents qui composent le corpus édité dans ce travail.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Représentation</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Représentation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Emblématique</head>
           <p>Comme tout grand seigneur de la fin du Moyen Age, La Trémoille éprouvait un besoin vital de se faire connaître et reconnaître dans les
             différentes sphères de ses activités, que ce fût chez lui, dans ses domaines, ou chez le roi, à la cour et, bien sûr, à la guerre. Il
@@ -104,7 +106,7 @@
             fouet. Louis II fut surnommé « le Chevalier sans reproche », mais à ce surnom très noble s’en ajoutait un autre, plus curieux : « La
             Vraye-corps-Dieu », d’après son juron favori, une expression qui semble avoir marqué ses contemporains.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un portrait littéraire</head>
           <p>L’emblématique représente sous différentes formes un homme idéal : sans reproche, et idéel : l’homme d’une lignée, avec son nom et son
             blason ; l’homme d’une fonction, qu’évoquent les emblèmes de cour et de guerre. Mais derrière le masque, il y a encore l’homme de chair.
@@ -113,7 +115,7 @@
               <hi rend="i">Panégyric du Chevallier sans reproche</hi>, publié en 1527. Dans ce texte fondamental, Bouchet donne une description
             physique et morale du jeune Louis, précieuse, malgré le style ampoulé du rhétoriqueur.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les portraits peints et la statuaire</head>
           <p>Au même titre que les différents emblèmes déjà étudiés, le portrait revêt une fonction sociale et aulique non négligeable. Le peintre
             vise avant tout à une ressemblance absolue entre le portrait et son modèle ; mais en même temps, l’œuvre doit affirmer quelque chose de
@@ -144,8 +146,8 @@
             car le cimier du cavalier représente une sorte de roue dentée, qui rappelle sa devise. Mais cette identification relève de la plus haute
             fantaisie et ne peut être retenue.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Action</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Action</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La route de Naples (1494-1495)</head>
           <p>Comme bien des seigneurs français de son temps. La Trémoille découvrit l’Italie lors du Voyage de Naples. Il accompagnait Charles VIII en
             tant que chambellan, et ne semble pas avoir eu, du moins au départ, de fonction militaire particulière. Mais le roi lui confia plusieurs
@@ -160,7 +162,7 @@
             victoire de Fornoue (6 juillet 1495), et il semble avoir pris une part importante dans les négociations qui conduisirent à la paix de
             Verceil (9 octobre).</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les débuts de l’aventure milanaise (1499)</head>
           <p>Louis XII ne tint pas rigueur à La Trémoille de l’avoir vaincu à Saint-Aubin-du-Cormier (« ce n’estoit à un roy de France de venger les
             injures faictes à un duc d’Orléans »), et il le maintint dans toutes ses charges à la cour. La Trémoille n’eut aucune part à la conquête
@@ -168,7 +170,7 @@
             (septembre-novembre). A Milan, il nouait de nouveaux contacts avec les princes italiens, et notamment le marquis de Mantoue, Gian
             Francesco Gonzaga.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La reconquête de Milan (1500)</head>
           <p>En janvier 1500, Ludovic le More, grâce au soutien de Maximilien, entreprit de reconquérir son duché perdu. Louis XII désigna alors La
             Trémoille comme son lieutenant-général en Milanais, et celui-ci passa les monts en mars à la tête d’une puissante armée. Au siège de
@@ -180,7 +182,7 @@
             de Louis XII, qui lui proposait de devenir vice-roi ou gouverneur de la nouvelle province, et celles de Florence qui aurait aimé l’engager
             comme condottiere dans sa guerre contre Pisé.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Une Italie troublée (1501-1502)</head>
           <p>Par un effet pervers de l’alliance de Louis XII et d’Alexandre VI, la victoire française en Italie avait favorisé l’ambition démesurée de
             César Borgia. Celui-ci cherchait à se tailler un empire dans l’Italie centrale, et les alliés du roi appelaient la France à l’aide. A
@@ -188,7 +190,7 @@
             affolé, vint trouver Louis XII et réussit, contre toute attente, à le convaincre de ses bonnes intentions. L’expédition tournait
             court.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Une expédition perdue (1503)</head>
           <p>En mai 1503, l’armée française qui luttait depuis deux ans dans le royaume de Naples fut battue par les Espagnols de Gonzalve de Cordoue.
             Louis XII se hâta d’envoyer des secours, sous la conduite de son meilleur général, Louis de La Trémoille. Mais le 13 juillet, alors qu’il
@@ -199,7 +201,7 @@
             l’élection du cardinal d’Amboise. La Trémoille, un peu remis, rejoignit l’armée dans la banlieue de Rome, mais en septembre, décidément
             trop malade, il regagna la France à petites étapes, tandis que l’expédition finissait sur un nouveau désastre.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">Nouveaux combats en Italie du Nord (1507-1512)</head>
           <p>L’Italie ne constituait qu’une facette du champ d’action de La Trémoille : il était amiral de Bretagne et de Guyenne depuis 1502, il
             devint gouverneur de Bourgogne en 1506. Il ne semble pas avoir participé à l’expédition de Gênes en 1507, mais son fils Charles s’y
@@ -207,7 +209,7 @@
             Agnadel. Durant l’été 1512, les Français perdirent le Milanais. La Trémoille partit en Suisse afin de renégocier une alliance, qui s’avéra
             en fin de compte impossible.</p>
         </div>
-        <div>
+        <div n="7" type="chapter">
           <head n="Chapitre VII">Un long automne (1513-1525)</head>
           <p>Après l’échec des négociations, Louis XII envoya en Lombardie une nouvelle armée française avec La Trémoille et Trivulce. Mais alors
             qu’ils avaient commencé à investir Novare, où s’était enfermé le duc Massimiliano Sforza, les Français se firent surprendre par une
@@ -227,8 +229,8 @@
             La Trémoille, il lança la bataille désastreuse, où au terme d’une charge aussi héroïque qu’inutile, il allait être fait prisonnier, tandis
             que la chevalerie de France était fauchée par le feu des arquebusiers espagnols. La Trémoille y laissait la vie.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Relations</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Relations</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Louis II de la Trémoille et le marquis de Mantoue</head>
           <p>Grâce aux exceptionnelles archives de Mantoue, on arrive à restituer la quasi-totalité de la correspondance de Gian Francesco Gonzaga et
             de Louis de La Trémoille, durant les quelques années de leur relation (1495 et 1499-1503). Cette correspondance constitue la moitié de
@@ -251,7 +253,7 @@
             les incessantes volte-face du marquis ne pouvaient guère s’accorder avec la morale austère de service que La Trémoille suivit sans faille
             jusqu’à la mort.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Relations avec la papauté</head>
           <p>La piété de La Trémoille ne fait aucun doute. Mais il ne semble pas avoir éprouvé de respect particulier envers la papauté, perçue comme
             un Etat temporel semblable aux autres. A plusieurs reprises, il pénétra dans les Etats de l’Eglise sans grand ménagement : en décembre
@@ -259,7 +261,7 @@
             soutint par ailleurs la carrière ecclésiastique de son frère Jean, archevêque d’Auch, et s’efforça notamment de l’aider à obtenir un
             chapeau de cardinal. Jules II finit par le lui accorder en 1507, mais Jean mourut à Milan en allant le chercher.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Louise de Valentinois</head>
           <p>Après la mort de Gabrielle de Bourbon, en novembre 1516, La Trémoille chercha à se remarier et il jeta son dévolu sur la très jeune
             Louise de Valentinois, fille du défunt César Borgia et petite-fille d’Alexandre VI. Un des plus riches partis de France. Il hâta tant le
@@ -267,9 +269,7 @@
             correspondance des ambassadeurs italiens. Ce mariage apparentait La Trémoille à de grandes familles italiennes, notamment les Este, mais
             Louise semble avoir été en fait de culture essentiellement française.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les La Trémoille ont payé un très lourd tribut aux rêves italiens des rois de France : Jean mourait de maladie à Milan ; Charles tombait à
           Marignan et Louis II, à Pavie. Louis avait eu de précoces contacts avec la culture italienne, notamment par l’intermédiaire de la cour
           d’Aigueperse. Mais ses rapports avec l’Italie s’estompèrent ensuite, sans doute à cause de sa première défaite à Novare (1513) et de la mort
@@ -280,10 +280,9 @@
           aulique française. Même son mariage avec Louise de Valentinois, à demi-italienne pourtant, ne fut pas l’occasion de renouer avec les
           puissances de la Péninsule. L’Italie appartenait à son passé.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="7"><head>Édition</head>
         <p>Édition de la correspondance italienne de Louis de la Trémoille</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

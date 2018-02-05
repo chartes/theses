@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">« En pur et vray don »</title>
-        <title type="sub">Donateurs et donations pieuses aux Célestins de Paris à la fin du Moyen Âge</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">« En pur et vray don »</title><title xml:lang="fr" type="sub">Donateurs et donations pieuses aux Célestins de Paris à la fin du Moyen Âge</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Roussel, Stéphanie">Stéphanie Roussel</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200825.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le couvent des Célestins de Paris et, plus généralement, l’ordre des Célestins, présente ce paradoxe difficilement compréhensible d’être à
           la fois en mal d’histoire tout en livrant au chercheur des sources relativement abondantes et variées. Dernière maison monastique à s’être
           implantée dans la capitale du royaume de France au Moyen Âge, les Célestins méritent pourtant une étude détaillée, tant parce qu’ils
@@ -69,10 +72,9 @@
           décline d’autre part en une multitude de pratiques, variant non seulement en fonction du profil social de l’individu mais également selon la
           raison pour laquelle il donne.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le substrat</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Le substrat</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Repères historiques sur les Célestins de Paris</head>
           <p>L’ordre des Célestins naît autour de Pierre de Morone, ermite des Abruzzes (Italie centrale) dans la première moitié du XIII <hi rend="sup">e</hi> siècle. La réputation de sainteté entourant Pierre ainsi que son élection au Saint-Siège sous le nom de Célestin V
             permettent à l’ordre de connaître un premier essor remarquable dans la péninsule, notamment sous la protection des rois de Naples.
@@ -96,7 +98,7 @@
             jusqu’à Louis XII. Les relations avec la royauté se distendent ensuite et l’ordre ne connaît plus ni éclat ni dynamisme, ce qui conduit à
             sa suppression en 1778.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le corpus et son exploitation</head>
           <p>La majeure partie des sources utilisées se trouve dans les séries S (S 3743 à S 3871), K et LL des Archives nationales, auxquelles il
             faut ajouter quelques registres de la bibliothèque Mazarine, de la Bibliothèque de l’Arsenal et de la Bibliothèque nationale.</p>
@@ -113,13 +115,13 @@
             La base de données a été exploitée à l’aide de requêtes qui, après traitement, ont permis d’obtenir des résultats statistiques, dont la
             majeure partie a pu être représentée sous forme graphique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Bibliographie commentée</head>
           <p>La bibliographie et son commentaire s’articulent autour de trois grands axes : l’historiographie des Célestins, le don et la mort
             (aspects liturgiques et spirituels).</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les donateurs</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Les donateurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les donateurs des Célestins de Paris, profil</head>
           <p>Ce sont 464 donateurs qui ont été recensés au total. Il s’avère donc assez difficile de dresser un portrait-robot de ceux-ci qui ne soit
             pas réducteur. Cependant, la population des donateurs des Célestins de Paris présente une homogénéité digne d’être remarquée et révèle au
@@ -142,7 +144,7 @@
             d’éclairer les catégories de donateurs moins nombreuses et souvent moins prestigieuses : bourgeois de Paris (les Le Comte), paysans,
             artisans (François Barbier), etc.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des réseaux de donateurs</head>
           <p>L’étude des réseaux est un élément essentiel dans la description des individus médiévaux aussi bien qu’un facteur important pour
             comprendre comment un donateur peut être amené à se tourner vers les Célestins. La démonstration est particulièrement efficace en ce qui
@@ -161,7 +163,7 @@
             – notamment en ce qui concerne les réseaux constitués par l’appartenance au Parlement de Paris. La famille de Nanterre ou la famille
             Moulins-Paillard en sont des exemples particulièrement parlants.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Conserver la mémoire, une sélection</head>
           <p>Le grand nombre de sources utilisées et croisées pour l’étude prosopographique a permis de mettre en évidence un certain nombre de
             discordances entre elles qu’il a paru intéressant d’étudier. Ce biais a d’ailleurs été l’occasion de procéder à une critique approfondie
@@ -195,11 +197,11 @@
             laisser une trace de leur passage sur terre, ceux des moines qui ont besoin d’un « stock » de donateurs pour assurer leur réputation,
             alimenter le moulin des donations et ainsi s’efforcer eux aussi de durer.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les donations</head>
-        <p>La troisième partie est consacrée aux pratiques de la donation pieuse que l’on peut observer à travers les documents des XIV <hi rend="sup">e</hi> et <num>xv<hi rend="sup">e</hi></num> siècles du chartrier célestin. Il est important de souligner qu’on s’intéresse ici aux
+      </div><div n="4" type="part"><head n="0" type="chapter">Les donations</head>
+        <p n="1" type="chapter">La troisième partie est consacrée aux pratiques de la donation pieuse que l’on peut observer à travers les documents des XIV <hi rend="sup">e</hi> et <num>xv<hi rend="sup">e</hi></num> siècles du chartrier célestin. Il est important de souligner qu’on s’intéresse ici aux
           pratiques dans leurs aspects concrets et non au don en général, phénomène d’interprétation difficile que l’on réservera pour des travaux
           ultérieurs.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">La donation en acte, débroussaillage documentaire</head>
           <p>En matière de donation pieuse à la fin du Moyen Âge, on pense le plus souvent au testament, forme documentaire alors en plein essor, la
             charte de donation étant pour la plupart des auteurs définitivement abandonnée au <num>xiii<hi rend="sup">e</hi></num> siècle. Or c’est tout le
@@ -214,7 +216,7 @@
             floues entre donations et ventes ou entre donations et amortissements. Ces cas limites illustrent bien à quel point le don est resté
             pendant des siècles un modèle qui irrigue ou inspire la forme de bon nombre d’actes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Donation perpétuelle</head>
           <p>Pour éclairer au mieux la multiplicité des pratiques du don à la fin du Moyen Âge, il a semblé nécessaire d’étudier séparément les
             donations mises en acte, au caractère perpétuel, des donations que l’on trouve dans les comptes des Célestins, généralement éphémères et
@@ -243,7 +245,7 @@
             fondations sur d’autres couvents de la province, écrits théoriques justifiant ces procédés. Les redistributions sont en outre un moyen
             d’équilibrer les revenus des différents monastères de la province, nettement dominés par les grands couvents de Paris et d’Avignon.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Donation éphémère</head>
           <p>Les livres de comptes des Célestins de Paris sont quant à eux des révélateurs de pratiques multiformes de la donation : donations
             personnelles faites à titre individuel, donations anonymes relevant d’offrandes variées, donations effectuées à l’occasion de l’entrée en
@@ -256,9 +258,7 @@
             elle varie : elle dépasse rarement l’année et dans de nombreux cas est de l’ordre d’un mois. Enfin, ces donations sont marquées par un
             caractère individualiste, puisque le donateur est très souvent le bénéficiaire de sa propre fondation.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Nul doute que, dans le paysage monastique parisien de la fin du Moyen Âge, les Célestins occupent une place particulière. La population des
           donateurs qu’ils drainent est avant tout celle des grands serviteurs de l’État, appartenant à la noblesse ou à la bonne bourgeoisie. Mais
           les grandes figures systématiquement mises en avant par les sources ne doivent cependant pas tromper : bien des gens modestes donnent aussi
@@ -271,14 +271,13 @@
           est à noter que ces pratiques ne sont nullement exclusives les unes des autres et se prolongent même parfois, comme dans le cas de Jean Budé
           qui transforme au seuil de la mort ses donations hebdomadaires habituelles en charte de donation.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>1. Fiches prosopographiques des donateurs des Célestins de Paris. — 2. Listes nominatives de catégories de donateurs spécifiques : rois et
           princes ; dignitaires ecclésiastiques et chanoines ; détenteurs d’offices, serviteurs de l’État et notaires et secrétaires ; donateurs du
           livre des fondations ; personnes inhumées dans l’église des Célestins et non répertoriées comme donatrices. — 3. Dossiers de donations par
           ordre chronologique. — 4. Présentation détaillée de quelques documents : documents nécrologiques, livre des fondations, livre de comptes. —
           5. Éditions de vingt-deux actes. — 6. <hi rend="i">Index nominum et locorum</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

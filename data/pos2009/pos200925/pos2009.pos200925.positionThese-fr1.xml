@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Pierre Gringore (v. 1475-v. 1538), homme de lettres, de théâtre et de cour</title>
-        <title type="sub">Être auteur au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Pierre Gringore (v. 1475-v. 1538), homme de lettres, de théâtre et de cour</title><title xml:lang="fr" type="sub">Être auteur au <num>xvi<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Stankiewicz, Florine">Florine Stankiewicz</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200925.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Il semble inévitable, avant d’entreprendre une étude de type biographique, de réfléchir à cette manière d’écrire l’histoire, et les
           dangers qu’elle comporte : tentation de surestimer l’importance du personnage étudié, de céder au romanesque lorsque les sources se font
           rares, de chercher à reconstituer à tout prix un individu cohérent au parcours linéaire, pour ne citer que les principaux risques. Pour
@@ -68,7 +71,7 @@
           d’un homme de plume, à la fois poète et entrepreneur de spectacles, et sur les modalités de diffusion de ses textes, dans la civilisation du
           livre imprimé qui vient de naître.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Comme pour toute biographie, les sources archivistiques sont nombreuses, éparpillées au fil des pérégrinations du sujet, et certainement
           peu exhaustives. Sur les origines normandes de Gringore, ont été consultés prioritairement les papiers du duché d’Harcourt – comptes
           seigneuriaux et registres du tabellionage de Thury –, conservés aux archives départementales du Calvados. Les sources relatives à la minière
@@ -92,9 +95,8 @@
           vingt-cinq œuvres dont l’attribution à Gringore ne fait aucun doute. Ils offrent accès aux textes de Gringore et permettent de mesurer leur
           diffusion.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le berceau : la Normandie</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le berceau : la Normandie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le théâtre en Normandie à la fin du Moyen Âge</head>
           <p>
             <hi rend="i">La Normandie au <num>xv<hi rend="sup">e</hi></num> siècle</hi>. — Ce premier chapitre s’attache à décrire la Normandie du
@@ -120,7 +122,7 @@
 <hi rend="sup">e</hi> siècle. Un siècle plus tard, Rouen sera considéré comme le premier centre de l’impression théâtrale. Il est
             vraisemblable que ces conditions privilégiées ont joué un rôle décisif dans la vocation théâtrale de Pierre Gringore.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Thury et la seigneurie de Ferrières</head>
           <p>
             <hi rend="i">La seigneurie de Thury</hi>. — Les registres des comptes de la seigneurie de Ferrières, bien tenus et à peu près complets,
@@ -138,7 +140,7 @@
             titres universitaires. Quelques noms se détachent pour leur exceptionnelle longévité, dont on peut deviner à la fois l’expertise technique
             et la notoriété, à l’instar de Robert Gringore, qui occupa successivement chacune des fonctions comptables.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La minière de Beaumont</head>
           <p>
             <hi rend="i">Le registre des plaids de la minière de Beaumont</hi>. — Le même Robert Gringore était également actif au sein de la
@@ -157,7 +159,7 @@
             peut le considérer comme un spécialiste du droit de la minière, et certainement comme un légiste professionnel. Ses compétences
             juridiques, accompagnées d’une forte expérience pratique, l’ont rendu indispensable au fonctionnement du tribunal de la mine.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les serviteurs de la seigneurie de Ferrières. Portraits et conclusions</head>
           <p>Le dernier chapitre de cette première partie a pour ambition de reconstituer le groupe des serviteurs de Ferrières, pour mieux situer en
             leur sein la famille Gringore. Ont donc été relevées dans les différentes sources étudiées toutes les indications concernant des familles
@@ -175,8 +177,8 @@
             son activité, et semble être parvenu, au fil des années, au premier rang de ses serviteurs. Il va sans dire que toute la famille Gringore
             a dû largement bénéficier de sa position.   </p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">De Paris à la Lorraine : les conditions de travail</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">De Paris à la Lorraine : les conditions de travail</head>
+        <div n="1" type="chapter">
           <head n="Chapitre V">Les collaborateurs parisiens</head>
           <p>
             <hi rend="i">Jean Marchand.</hi>— Au cours de sa carrière parisienne, Pierre Gringore partagea ses succès avec d’autres individus, acteurs
@@ -207,7 +209,7 @@
             rapide panorama, que la frontière entre collaborateurs et concurrents était moins nette qu’il n’y paraît, et qu’il est fort probable que
             tous ont stimulé la carrière de Gringore.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre VI">Commanditaires et œuvres de commande</head>
           <p>
             <hi rend="i">Les œuvres polémiques : propagande ou textes de circonstance ?</hi>— L’activité de Gringore fut, tout au long de sa carrière,
@@ -230,7 +232,7 @@
 <hi rend="sup">e</hi> siècle, sujet de sa pièce, et Louis XII. On peut voir dans le saint Louis de Gringore une image publicitaire de Louis
             XII, que l’auteur lui renverrait en espérant obtenir en échange la pension qu’il recherche depuis longtemps.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre VII">Pierre Gringore et les entrées royales parisiennes</head>
           <p>
             <hi rend="i">Les entrées royales et princières à Paris au début du<num>xvi<hi rend="sup">e</hi></num> siècle</hi>. — Les commandes passées
@@ -254,7 +256,7 @@
             décrites dans l’un, et la grande unité des thèmes abordés pour l’autre, peuvent faire penser que son activité se serait étendue, pour ces
             deux seules entrées, au-delà de la place du Châtelet.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre VIII">À la cour de Lorraine</head>
           <p>
             <hi rend="i">Le duc Antoine et la cour de Lorraine</hi>. — À partir de 1517, Gringore quitte Paris pour la cour de Lorraine. Il semble
@@ -276,8 +278,8 @@
             plus exigeante, et demande à être enterré dans une église collégiale voisine du palais ducal – et non, comme on a parfois cherché à le
             faire croire, à Notre-Dame de Paris.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La diffusion imprimée de l’œuvre de Pierre Gringore</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La diffusion imprimée de l’œuvre de Pierre Gringore</head>
+        <div n="1" type="chapter">
           <head n="Chapitre IX">La diffusion des œuvres de Gringore. Bilan</head>
           <p>
             <hi rend="i">Les œuvres de Pierre Gringore : panorama</hi>. — Si on considère l’ensemble de sa carrière, on se rend compte que Gringore a
@@ -298,7 +300,7 @@
             sans doute y voir l’intervention de François I<hi rend="sup">er</hi>, moins par sympathie pour le poète que par égards pour son cousin
             lorrain, qui a commandé la traduction.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre X">Gringore et le monde de la librairie parisienne</head>
           <p>
             <hi rend="i">Les débuts difficiles de Gringore sur le marché du livre parisien</hi>. — L’entrée de Gringore sur le marché du livre
@@ -320,9 +322,7 @@
             l’appui. Une fois en Lorraine, la dynamique s’inverse : il dédie ses œuvres à son patron pour l’honorer et justifier les bienfaits qu’il
             en reçoit.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Au final, si plusieurs questions restent en suspens concernant des points ponctuels de sa vie, on peut proposer plusieurs explications au
           formidable succès que remporta Gringore en son temps. On peut y voir l’effet d’un certain professionnalisme, tant dans le choix de ses
           sujets, qui correspondaient aux attentes du public – œuvres polémiques, de circonstances, ou œuvres morales – que dans la maîtrise de la
@@ -333,12 +333,11 @@
           posthume dans les bibliothèques. Il est, en ce sens, pleinement auteur, parce que vivant de sa plume et parce que conscient de son autorité
           sur son texte.</p>
       </div>
-              <div type="appendix"><head>Annexes et pièces justificatives</head>
+          <div type="appendix" n="7"><head>Annexes et pièces justificatives</head>
         <p>Extraits du tabellionage de Thury. — Comptes des entrées royales parisiennes. — Lettres patentes du 5 avril 1518. — Comptes lorrains. —
           Testament de Pierre Gringore. — Répertoire des œuvres de Gringore, éditions et manuscrits, encodé en langage EAD, sur CD-Rom et en ligne : <ref target="http://theses.enc.sorbonne.fr/Pierre-Gringore/gringore.html">http://theses.enc.sorbonne.fr/Pierre-Gringore/gringore.html</ref>
         </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

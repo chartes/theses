@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Un affrontement de papier</title>
-        <title type="sub">La place de l’imprimé dans la guerre entre François I&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;er&lt;/hi&gt; et Charles Quint (1542-1544)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Un affrontement de papier</title><title xml:lang="fr" type="sub">La place de l’imprimé dans la guerre entre François I<hi rend="sup">er</hi> et Charles Quint (1542-1544)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Astier, Sophie">Sophie Astier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200903.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le 12 juillet 1542, François I<hi rend="sup">er</hi> déclare la guerre à Charles Quint, l’accusant d’avoir fait assassiner deux de ses
           ambassadeurs, dont l’un partait à Venise et l’autre à Constantinople auprès de Soliman le Magnifique. En réalité, depuis quelques années,
           les tensions autour du Milanais étaient devenues telles que la guerre semblait inévitable. Les opérations se déroulent essentiellement à la
@@ -68,7 +71,7 @@
           sont pas en faveur du roi : une production abondante a également existé du côté impérial, même s’il est difficile de l’évaluer. C’est
           l’étude de cette production, dans sa diversité et sa complexité, qui fait l’objet du présent travail.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sur lesquelles s’appuient les conclusions ici avancées sont exclusivement des imprimés parus durant la guerre qui se déroule
           entre juillet 1542 et septembre 1544. Malgré un certain nombre de témoignages montrant que de tels textes ont pu également circuler sous
           forme manuscrite, le choix de l’imprimé a été fait en raison de sa relativement large diffusion, qui change les enjeux d’un texte. D’autre
@@ -81,9 +84,8 @@
           bibliothèque Méjanes à Aix-en-Provence possède également un très riche fonds en la matière ; et un certain nombre de bibliothèques
           anglaises, au premier rang desquelles la British Library à Londres, ont été mises à profit.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Typologie des textes et des auteurs</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Typologie des textes et des auteurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De la propagande proprement dite : les Du Bellay et leur activité d’apologistes</head>
           <p>
             <hi rend="i">Les frères du Bellay au service du roi.</hi>— Guillaume et Jean du Bellay sont les représentants les plus éminents d’une
@@ -115,7 +117,7 @@
             correspondance entre lui, les frères du Bellay et le roi le montre. Cependant, fait qui peut sembler curieux, le récit qu’il en a tiré,
             largement publié et diffusé, n’est en rien un ouvrage de propagande en faveur du roi de France.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Chansons et textes poétiques. Les vers dans la mêlée</head>
           <p>
             <hi rend="i">Poésie politique, poésie de circonstance.</hi>— Poésie politique comme poésie de circonstance ont été longtemps ignorées et
@@ -143,7 +145,7 @@
             l’assassinat des ambassadeurs royaux et même celui du dauphin François, mort en 1536. Seul François Sagon se distingue de l’ensemble en
             défendant frontalement l’alliance avec le « Grand Turc », présenté comme un bon Samaritain prêt à défendre le bon droit du roi.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le foisonnement des feuilles de nouvelles, vraies ou fausses</head>
           <p>
             <hi rend="i">Moyens d’information avant l’apparition de la presse périodique.</hi>— Avant l’apparition d’une véritable presse au sens
@@ -172,7 +174,7 @@
             temps à d’autres objectifs rhétoriques que la simple information, donnant très souvent l’impression qu’il s’agit plus de rassurer ou de
             divertir le lecteur que de l’informer véritablement, ce qu’il fait par d’autres canaux.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La responsabilité des textes</head>
           <p>
             <hi rend="i">Noms d’emprunt, documents authentiques ?</hi>— La question de l’identification des auteurs se pose bien souvent : en effet,
@@ -208,8 +210,8 @@
             del Vasto, qui ont trouvé commode de dissimuler ainsi leur nom, mais qui devaient très certainement être connus des lecteurs du temps.
          </p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La diffusion</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La diffusion</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le foisonnement lyonnais</head>
           <p>
             <hi rend="i">L’activité éditoriale à Lyon à l’époque du Grand Tric.</hi>— Lyon est dans les années 1540 une prospère cité marchande, qui
@@ -238,7 +240,7 @@
             nombre de « plaquettes gothiques », dont plusieurs entrent dans le champ de cette étude, mais dont la plupart sont perdues. Quant à Jean
             Brotot, à qui on connaît une brève feuille de nouvelles, il n’est guère connu que pour avoir publié nombre d’ouvrages de Nostradamus.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une pièce lyonnaise inédite</head>
           <p>
             <hi rend="i">Un ouvrage inconnu.</hi>— La bibliothèque Méjanes, à Aix-en-Provence, compte dans ses collections un curieux ouvrage qui
@@ -265,7 +267,7 @@
             Jean Canappe. Il y a là manifestement un lien avec l’humanisme lyonnais, et c’est sans doute de ce côté que des contacts ont pu se créer
             avec l’atelier de François Juste. En tout état de cause, la question mérite d’être approfondie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La prédominance parisienne</head>
           <p>
             <hi rend="i">Paris, premier centre de diffusion du royaume.</hi>— Paris, dans les années 1540, est elle aussi une cité prospère, siège
@@ -297,7 +299,7 @@
             Gaultier, Jean du Pin, ou encore Félix Guybert. Enfin, un certain nombre d’éditions parisiennes restent anonymes, quand leurs éditeurs ne
             sont pas tout simplement très mal connus ou difficilement identifiables, comme J. Noyon et Gilles Prévost.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Robert Estienne et les commandes du roi</head>
           <p>
             <hi rend="i">Robert Estienne imprimeur de l’apologétique royale.</hi>— Robert Estienne, le fait est bien connu, est un humaniste de haut
@@ -328,7 +330,7 @@
               Jacobii Omphalii maledicta</hi>. Une hypothèse probable peut être avancée : il pourrait s’agir de tirages destinés à faire circuler sous
             le manteau la propagande royale en dehors du royaume, par exemple à travers les réseaux de Jean du Bellay en Allemagne.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">La circulation des nouvelles en dehors de Paris et de Lyon</head>
           <p>
             <hi rend="i">Rappel sur la géographie des ateliers typographiques de province dans les années 1540.</hi>— Dans les années 1540, Rouen
@@ -370,9 +372,7 @@
             imprimeurs qui publient aussi ce genre de textes : Servatius van Sassen à Louvain, Johann Petreius à Nuremberg, Windelin Rihel à
             Strasbourg – qui pencherait, lui, plus pour le roi de France –, et Guillaume Cordier à Binches sont les noms qu’on a pu repérer.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Plusieurs lignes fortes se dégagent du corpus. La production envisagée constitue d’abord un ensemble d’une grande diversité, voire d’une
           certaine hétérogénéité, qui rassemble à la fois des textes relevant de la meilleure poésie de l’époque et du vers de mirliton, des
           constructions rhétoriques savantes et de la prose médiocre. À ce sujet, il y a certainement des réévaluations et des redécouvertes à faire,
@@ -383,11 +383,10 @@
           passant certainement beaucoup plus par l’intermédiaire de la rumeur et du bouche-à-oreille. Cependant, on distingue d’autres finalités dans
           leur écriture, essentiellement d’ordre pédagogique et sur le mode du divertissement.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Catalogue détaillé des sources consultées. — édition critique des textes étudiés dont un exemplaire est conservé à la bibliothèque du musée
           Condé à Chantilly.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

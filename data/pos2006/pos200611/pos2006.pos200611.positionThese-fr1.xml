@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Images de presse. Production et usages de la photographie dans un quotidien d’information : &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Le Journal&lt;/hi&gt;(1929-1935)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Images de presse. Production et usages de la photographie dans un quotidien d’information : <hi rend="i">Le Journal</hi>(1929-1935)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chermette, Myriam">Myriam Chermette</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200611.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La photographie dans la presse quotidienne n’est pas le terrain le plus fouillé en histoire des médias. En effet, les études se sont
           surtout concentrées sur des périodiques illustrés, faisant un usage plus large et plus moderne de la photographie. Pourtant, la presse
           quotidienne touche un très grand nombre de lecteurs et son analyse présente un grand intérêt du point de vue de l’histoire sociale et de
@@ -58,16 +61,15 @@
           renouvelle son utilisation de la photographie. Il convient de montrer l’ampleur réelle de ce changement, ainsi que la complexité des
           facteurs qui y ont mené.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude de la photographie dans le quotidien <hi rend="i">Le Journal</hi> s’appuie sur un corpus de sources variées et volumineuses, à
           savoir, pour l’essentiel, le fonds archivistique de ce quotidien, conservé aux Archives nationales ; le fonds iconographique de <hi rend="i">L’Aurore</hi>, conservé au département des estampes et de la photographie de la Bibliothèque nationale de France, et qui contient les
           photographies du <hi rend="i">Journal </hi>; la collection imprimée du <hi rend="i">Journal</hi>, consultable à la Bibliothèque nationale de
           France. Le fait de posséder ces sources de nature différente, même si elles sont pour une part lacunaires, de pouvoir les croiser, est une
           chance et permet d’enrichir les connaissances sur la photographie de presse.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Contextes</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Contextes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Histoire du <hi rend="i">Journal</hi>
         </head>
           <p>
@@ -92,7 +94,7 @@
             titres comme <hi rend="i">Paris-Soir</hi> et <hi rend="i">L’Echo des Sports</hi>. En 1929, le quotidien a retrouvé sa prospérité,
             affichant le troisième tirage de la presse quotidienne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La photographie dans une entreprise de presse</head>
           <p>
             <hi rend="i">La gestion d’une entreprise de presse.</hi>– La stratégie commerciale suivie par un quotidien comme <hi rend="i">Le
@@ -106,7 +108,7 @@
             communes au texte et à la photographie. Celle-ci représente aussi un coût indirect lié à la superficie de papier qu’elle occupe. Au total,
             elle peut représenter 10 % des dépenses de rédaction.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les usages de la photographie (1929-1933)</head>
           <p>
             <hi rend="i">La photographie et la presse. –</hi> Il convient de rappeler les étapes de l’introduction de la photographie dans la presse
@@ -122,8 +124,8 @@
             photographies est publié, ce qui permet au <hi rend="i">Journal</hi> de rattraper ses concurrents en matière d’iconographie. Mais il reste
             marqué par une forte culture du texte.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Evolution ou révolution ?</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Evolution ou révolution ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les facteurs du changement</head>
           <p>
             <hi rend="i">La crise économique</hi>. – Cette lente évolution est remise en question par la crise économique, à partir de 1933. <hi rend="i">Le Journal</hi> peine à assurer sa rentabilité, voit ses ventes baisser et a dû se séparer des titres qu’il contrôlait. Il ne
@@ -140,7 +142,7 @@
             instantanée.</p>
           <p/>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le choix de la photographie</head>
           <p>
             <hi rend="i">La photographie au secours du</hi> Journal. – Pour toutes ces raisons, et sans réviser ses jugements sévères sur la
@@ -158,7 +160,7 @@
             participent au choix de la photographie, qui n’est pas confiée à un spécialiste. De plus, en l’absence d’un renouvellement du personnel,
             les traditions semblent peser fortement sur les choix de la rédaction.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les usages de la photographie (1933-1935)</head>
           <p>
             <hi rend="i">La tentation du changement. –</hi> Du point de vue des usages, les principales innovations concernent un renforcement de la
@@ -173,8 +175,8 @@
             accordé à la photographie les moyens que lui attribue <hi rend="i">Paris-Soir</hi>, et la différence entre ces deux quotidiens est
             visible.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">De la prise de vue à la publication</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">De la prise de vue à la publication</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’adaptation des services de photographie</head>
           <p>
             <hi rend="i">L’organisation du service</hi>. – Le service de photographie du <hi rend="i">Journal</hi> comprend une dizaine de personnes
@@ -198,7 +200,7 @@
             <hi rend="i">Le service des illustrations</hi>. – Ce service essentiel gère les collections iconographiques du <hi rend="i">Journal </hi> : il fait le lien entre la rédaction, le service de photographie et les fournisseurs d’images extérieurs au <hi rend="i">Journal</hi>. Il fournit à la rédaction les clichés dont elle a besoin et reçoit les nouvelles photographies acquises par le quotidien.
         </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les fournisseurs d’images</head>
           <p>
             <hi rend="i">La diversité</hi>. – Une grande partie des photographies publiées par <hi rend="i">Le Journal</hi> proviennent de
@@ -215,7 +217,7 @@
             fournisseurs dépendent du statut du chacun : avec les grandes agences, des contrats régissent ces relations, tandis que les choses sont
             beaucoup plus empiriques avec les petits fournisseurs.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La technique au service de la photographie</head>
           <p>
             <hi rend="i">La circulation des images.</hi> – Les années 1930 sont encore largement marquées par une circulation traditionnelle des
@@ -230,9 +232,7 @@
             <hi rend="i">La photogravure</hi> — Après la retouche, la photographie passe par l’atelier de similigravure, qui permet sa reproduction
             sur métal, puis son intégration à la maquette d’ensemble du quotidien.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les années 1929-1935 voient donc des modifications importantes dans l’utilisation de l’image par <hi rend="i">Le Journal</hi>.
           L’augmentation du nombre de photographies publiées est très nette ; on peut souligner une évolution de la mise en page, des types de
           photographies et de la qualité des reproductions. Néanmoins, ces différents changements n’ont pas révolutionné l’esthétique du quotidien,
@@ -241,7 +241,7 @@
           réussite commerciale escomptée n’est pas au rendez-vous, mais cet échec relatif permet le développement d’une nouvelle réflexion sur l’usage
           de la photographie dans les années qui suivent.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Répertoire des fournisseurs d’image du <hi rend="i">Journal</hi>  : ce répertoire, fondé sur l’étude du « Journal d’entrée et de sortie
           des photographies », recense l’ensemble des fournisseurs extérieurs mentionnés et en identifie plus précisément plus de la moitié ; il
           permet d’établir une typologie à travers laquelle transparaît la structure du marché de la photographie de presse. – Résultats
@@ -256,7 +256,6 @@
           intérieures (1929-1935). – Le Tour de France 1934 dans <hi rend="i">Le Journal, Paris-Soir</hi> et <hi rend="i">Le</hi>
           <hi rend="i">Matin</hi>. <hi rend="i">–</hi> Violette Nozière dans <hi rend="i">Le Journal</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

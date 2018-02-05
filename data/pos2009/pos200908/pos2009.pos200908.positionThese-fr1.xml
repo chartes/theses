@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La musique à la cour du roi de France (1461-1515)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La musique à la cour du roi de France (1461-1515)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Depeyrot, Bertrand">Bertrand Depeyrot</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200908.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Depuis un demi-siècle, de multiples travaux se sont intéressé à la vie musicale à la cour de France au tournant du Moyen Âge et de l’époque
           moderne, à travers l’étude des institutions musicales, du répertoire ou de rares documents d’archives concernant la carrière ou le séjour
           d’un musicien. Mais jamais une étude globale n’a donné à voir, dans son ensemble, le fonctionnement de cette vie musicale. Cette remarque
@@ -69,7 +72,7 @@
           à chaque institution, ainsi que des conditions d’exécution des œuvres, a dû s’accommoder du silence de la plupart des partitions manuscrites
           conservées sur les auteurs et sur l’exécution des œuvres.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>D’un point de vue archivistique, les règnes de Louis XI, Charles VIII et Louis XII présentent une certaine cohérence et continuité dans le
           volume de sources disponible pour chacun d’eux : entre 1461 et 1515, il n’existe aucune série d’archives complète pour la Chapelle, l’Écurie
           ou la Chambre, et aucun des trois règnes n’est mieux documenté que les autres. Aucun compte de la Chapelle de musique n’a ainsi été conservé
@@ -90,9 +93,8 @@
           d’entrée royale, correspondances), dont la conservation au fil des siècles s’est manifestement mieux faite que pour les documents
           administratifs.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le contexte historique et musical des règnes <lb/>de Louis XI, Charles VIII et Louis XII</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le contexte historique et musical des règnes <lb/>de Louis XI, Charles VIII et Louis XII</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le roi de France et la musique (1461-1515)</head>
           <p>Il ne s’agissait pas là d’énumérer des faits chronologiques destinés à illustrer et caractériser les règnes de Louis XI, Charles VIII et
             Louis XII, mais d’appréhender la formation intellectuelle et l’environnement culturel des trois rois, ainsi que de leur entourage
@@ -102,7 +104,7 @@
             ont sans doute été uniformisées à cause du caractère essentiellement comptable et financier des sources aujourd’hui disponibles, qui sont
             avares de renseignements autres qu’administratifs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les institutions musicales de la cour : histoire et description</head>
           <p>À la fin du Moyen Âge, le roi de France possédait trois institutions pour pourvoir aux besoins musicaux de sa cour : la Chapelle, la
             Chambre et l’Écurie. Toutes trois possédaient une raison d’être, une organisation et une histoire différentes. La Chapelle était, des
@@ -128,7 +130,7 @@
             musicale, quoique peu formalisée par le pouvoir royal, était courante au Moyen Âge – Louis X le Hutin possédait déjà, en 1315, quelques
             joueurs de psaltérion – et accordait une place plus grande à la notion de musicien soliste que l’Écurie ou la Chapelle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le contexte musical à la veille de la Renaissance</head>
           <p>L’apport de la Renaissance ne fut pas aussi décisif dans le domaine musical qu’il le fut en littérature, en architecture ou en sciences,
             à cause de la difficulté, pour les musiciens des <num>xv</num>
@@ -151,8 +153,8 @@
             du succès de ces musiciens étaient liées à leur maîtrise des techniques vocales, en particulier pour le chant de compositions
             polyphoniques, et d’écriture contrapunctique, ce qui en faisait des interprètes et des compositeurs très recherchés.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Musique et musiciens à la cour de France (1461-1515)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Musique et musiciens à la cour de France (1461-1515)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La Chapelle de musique</head>
           <p>La direction de la Chapelle de musique était toujours confiée à un musicien, qui recevait la titulature de « maître et premier chapelain
             de la Chapelle ». Cette fonction n’était en aucun cas honorifique ou dégagée de toute obligation : même s’il pouvait se faire aider, le
@@ -178,7 +180,7 @@
             suscitaient, favorisaient les voyages, et certains mariages princiers entraînaient le personnel musical d’une cour à l’autre, souvent de
             manière définitive.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Écurie et la Chambre</head>
           <p>L’Écurie était une institution moins prestigieuse que la Chapelle de musique, d’une part parce que ses fonctions n’étaient pas liées à la
             sphère religieuse, mais aussi parce que, d’un point de vue musical, ses musiciens ne faisaient qu’égayer le tumulte des bals et des
@@ -209,7 +211,7 @@
             permettait d’être en contact permanent avec la personne royale et d’être ainsi en mesure de jouer lorsque le roi en manifestait le désir.
          </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les musiciens de la famille royale</head>
           <p>Il convient de ne pas sous-estimer le rôle de l’entourage royal dans la pratique musicale à la cour de France. Non seulement, ses membres
             disposaient de services liées à leur personne et susceptibles de favoriser le mécénat musical, mais ils pouvaient aussi être amenés à se
@@ -226,8 +228,8 @@
             modèle culturel à la cour, mais le résultat des hasards généalogiques : ni Louis XI, ni Charles VIII, ni Louis XII n’eurent de frères, de
             fils ou d’oncles qui auraient pu occuper une telle place.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Musique et mise en scène de la royauté</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Musique et mise en scène de la royauté</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La mise en musique des rites de la royauté</head>
           <p>Le Moyen Âge vit se développer et se préciser le cérémonial entourant les événements majeurs de la vie et du règne du roi de France :
             naissance, baptême, mariage, sacre et funérailles ; tous les rites étaient propices à une exaltation de la personne et de la famille
@@ -238,7 +240,7 @@
             renseignements ponctuels, glanés ça et là, qui permettent de reconstituer l’ambiance musicale des cérémonies les plus importantes de la
             royauté.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les entrées royales</head>
           <p>C’est au milieu du <num>xiv</num>
 <hi rend="sup">e</hi>  siècle, vers 1355, lors de l’entrée de Jean le Bon à Tournai qu’apparurent les « hystoires » ou « mystères »
@@ -261,7 +263,7 @@
             à travers le luxe de ces cérémonies. En effet, il fallait avoir des ressources financières suffisantes pour pouvoir engager les
             instrumentistes les plus talentueux, ceux qui appartenaient aux confréries de ménétriers et formaient l’élite de la profession.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Musique et politique</head>
           <p>Il est difficile de prétendre résumer en quelques phrases le rapport qu’entretenait la musique avec l’exercice du pouvoir par la royauté.
             En effet, dans une société où l’État était représenté par la personne royale, les mises en scènes musicales et le faste entourant le roi
@@ -281,9 +283,7 @@
             roi et leurs collègues au service des princes italiens, à insérer la vie musicale de la cour de France dans un cadre géographique plus
             large.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La cour de Louis XI, Charles VIII et Louis XII abrita quelques-unes des grandes figures musicales de la fin du Moyen Âge et des débuts de
           la Renaissance : Jean Ockeghem, Josquin des Prés, Antoine Févin, Claudin de Sermizy ou Loyset Compère. Il reste néanmoins difficile de juger
           de l’intérêt personnel que portaient ces trois rois à la musique, même si la période entre 1461 et 1515 vit une croissance des effectifs et
@@ -305,11 +305,10 @@
           Longueval, d’Elzéar Genet, de Jean Braconnier, d’Antoine de Févin, et des musiciens suisses et italiens engagés par Charles VIII et Louis
           XII.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Hommage de Jean Ockeghem au roi Charles VIII pour les fiefs de Donnemarie-en-Montois et Chasteauneuf (avril 1487). — Lettres de naturalité
           octroyées à Loyset Compère en avril 1494. — Extrait de compte et d’état de la Chapelle (1513-1515).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

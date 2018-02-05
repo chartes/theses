@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Aspects du clientélisme monarchique sous François I&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;er&lt;/hi&gt;(1515-1547)</title>
-        <title type="sub">Les Italiens du Roi</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Aspects du clientélisme monarchique sous François I<hi rend="sup">er</hi>(1515-1547)</title><title xml:lang="fr" type="sub">Les Italiens du Roi</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Durrande, Marguerite">Marguerite Durrande</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200614.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le <hi rend="i">Catalogue des actes de François I</hi>
           <hi rend="i">
 <hi rend="sup">er</hi>
@@ -73,7 +76,7 @@
           Dans l’observation de cette réalité sociale mouvante, les tentatives vaines et les échecs ont retenu l’attention tout autant que les
           « relations positives », dans la mesure où ils les éclairent.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Reconstituer la genèse du socle de cette étude, le <hi rend="i">Catalogue des Actes de François I</hi>
           <hi rend="i">
 <hi rend="sup">er</hi>
@@ -111,9 +114,8 @@
           sont toutes les démarches accomplies en amont de l’acte qui apparaissent, et quelques tranches de vie de la clientèle italienne du roi de
           France saisies sur le vif.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le cadre, l’héritage</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le cadre, l’héritage</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le Très Chrétien, l’Italie et les Italiens</head>
           <p>Les guerres d’Italie sont un facteur essentiel pour expliquer l’affluence des Italiens qui offrent leurs services au roi. Alimentées par
             la double revendication napolitaine et milanaise, elles attirent vers le souverain des guerriers, des informateurs, mais aussi des hommes
@@ -133,7 +135,7 @@
             peut rester indifférente au phénomène italien : des grands seigneurs comme les Guise aux serviteurs de l’État comme Florimond Robertet,
             tous s’ouvrent à l’italianisme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les cadres nationaux</head>
           <p>Puisqu’on étudiait un groupe d’hommes défini par sa nationalité, la perception de l’étranger dans la France du <num>xvi<hi rend="sup">e</hi></num>
             siècle était une question d’importance, dont l’examen demandait le rappel des débats historiographiques sur l’élaboration des identités
@@ -146,7 +148,7 @@
             le droit d’aubaine, principale sanction de l’étrangeté, devient une prérogative souveraine ; à l’égard des étrangers, une législation en
             dents-de-scie alterne mesures de répression et tentatives de séduction.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Présentation du vivier italien</head>
           <p>Un premier survol des Italiens du <hi rend="i">Catalogue</hi> a permis de confirmer qu’il s’agissait d’une population socialement
             favorisée ; avec 1494 Italiens et 3195 actes les concernant, la présence italienne dans le <hi rend="i">Catalogue</hi> n’a rien
@@ -164,8 +166,8 @@
             répartition des actes par matières, et enfin un premier survol des 181 familles italiennes présentes dans le <hi rend="i">Catalogue</hi>.
          </p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Entrer dans le cercle magique</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Entrer dans le cercle magique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Communiquer à distance</head>
           <p>Les premiers intermédiaires entre le roi et ses Italiens sont les agents du souverain en Italie et les diplomates italiens qui suivent
             la cour de France. La régularité des relations diplomatiques de François I<hi rend="sup">er</hi> avec les gouvernements italiens est très
@@ -182,7 +184,7 @@
             font figure de liens entre la Péninsule et les Italiens expatriés ; c’est pourquoi ceux qui échouent à trouver du service à la cour de
             France viennent régulièrement les solliciter.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Réseaux familiaux et extra-familiaux</head>
           <p>On a ensuite cherché à mesurer l’ampleur du phénomène des réseaux dans l’approche du pouvoir royal, à travers une analyse des réseaux
             qui apparaissent dans les <hi rend="i">Actes de François I</hi>
@@ -206,7 +208,7 @@
             fonctionnement concret des réseaux et des intermédiaires. Au <num>xvi<hi rend="sup">e</hi></num> siècle en effet, les gouvernements des villes, mais
             aussi les marchands et intellectuels, voire certains artistes, s’intéressent à la promotion des artistes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Stratégies d’approches</head>
           <p>On aurait voulu comprendre pourquoi l’approche du roi débouche sur des degrés d’engagements italiens si disparates. On a donc examiné les
             stratégies mises en œuvre par les Italiens pour retenir l’attention et la bienveillance royales (comme les dédicaces ou les dons au roi)
@@ -220,8 +222,8 @@
             ambition d’influer sur le cours des événements italiens ; il lui faut aussi pouvoir s’appuyer sur des réseaux solides. Il semble enfin que
             le facteur social soit un élément déterminant qui favorise grandement le succès des Italiens auprès du roi.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Servir le roi</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Servir le roi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le service du roi</head>
           <p>Sans doute, davantage que le nombre des Italiens qui sont parvenus à s’insérer à la cour de France, plus encore que leur niveau social,
             est-ce la diversité des fonctions exercées par des Italiens qui a contribué à donner l’impression de leur omniprésence à la cour de France
@@ -234,7 +236,7 @@
             service du monarque qu’à exposer les données du <hi rend="i">Catalogue</hi> essentiellement, qui mettent l’accent sur des aspects parfois
             moins connus des emplois des Italiens pour le service du roi.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les relations du roi avec ses Italiens</head>
           <p>Les schémas mentaux sur lesquels reposent les relations du roi avec ses Italiens véhiculent une image idéalisée du souverain, que ce
             soit celle du mécène idéal que reconstruit Benvenuto Cellini dans sa <hi rend="i">Vita</hi>, ou celle du roi chevalier vers lequel
@@ -252,9 +254,7 @@
             mort de ses Italiens semble indiquer que le lien de fidélité établi avec un Italien ou une famille italienne est subordonné à la
             préoccupation plus urgente du roi d’attirer et de garder à lui de nouveaux serviteurs.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>En définitive, lorsqu’on tente un bilan de l’exploitation qui a été faite dans cette étude des trois sources principales, on constate que
           ce sont les <hi rend="i">Actes de François I</hi>
           <hi rend="i">
@@ -278,11 +278,10 @@
           s’agit encore d’attitudes humaines individuelles qui ne se sont pas encore inscrites sous François I<hi rend="sup">er</hi> dans des
           comportements sociaux d’ensemble et qu’elles échappent à la matière des <hi rend="i">Actes</hi>.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Vingt-quatre lettres de François I<hi rend="sup">er</hi> et cinq lettres du dauphin Henri conservées dans les archives des ducs de
           Ferrare. — Vingt-cinq extraits de la correspondance des ambassadeurs ferrarrais.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les relations diplomatiques entre la Norvège et les Îles britanniques (1249-1319)</title>
-        <title type="sub">Les ambassadeurs et le service diplomatique du roi.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les relations diplomatiques entre la Norvège et les Îles britanniques (1249-1319)</title><title xml:lang="fr" type="sub">Les ambassadeurs et le service diplomatique du roi.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lenègre, Florent">Florent Lenègre</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200214.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>À la fin du <num>xiii<hi rend="sup">e</hi></num> et au début du <num>xiv<hi rend="sup">e</hi></num> siècle, les Etats de la Chrétienté occidentale voient
           leurs administrations se diversifier et se spécialiser. Les fondements d’une administration diplomatique se mettent alors en place, surtout
           en Angleterre, mais cette administration n’est pas encore bien individualisée : elle reste fondue dans le service général du roi. La
@@ -65,10 +68,9 @@
           éléments de réponse à la question de l’interpénétration des cultures dans l’ensemble que forment les royaumes d’Ecosse, de Norvège et
           d’Angleterre.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Sources et méthodologie</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Sources et méthodologie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Typologie et présentation des sources</head>
           <p><hi rend="i">Les sources de l’histoire diplomatique. </hi> — Les sources ayant servi à reconstituer l’histoire des relations entre la
             Norvège et les Îles britanniques sont conservées en grande partie à Londres, au Public Record Office. La British Library à Londres, le
@@ -99,7 +101,7 @@
             littéraires présentent la façon dont il est perçu par ses contemporains ou le souvenir qu’il a laissé. La variété et l’éparpillement de
             ces données sont tels que seules les sources imprimées ont été dépouillées.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Problèmes archivistiques</head>
           <p><hi rend="i">Norvège et Ecosse : des “ archives en creux ” </hi> — L’étude des sources fait apparaître un déséquilibre dans leur
             conservation : l’essentiel du corpus étudié se trouve en Angleterre, au Public Record Office, et les rares documents écossais et
@@ -122,7 +124,7 @@
             chroniques monastiques. Certains de ces récits sont toutefois rédigés à partir de documents d’archives et on peut vérifier leur fiabilité
             en opérant des recoupements avec les rares textes parvenus jusqu’à nous.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Problèmes philologiques</head>
           <p><hi rend="i">Géographie linguistique des Îles Britanniques et de la Norvège. </hi> — S’ils utilisent tous le latin pour communiquer
             entre eux, les Anglais, les Norvégiens et les Ecossais baignent pourtant dans une atmosphère où se côtoient plusieurs cultures et
@@ -140,7 +142,7 @@
             courtoise française et anglo-normande et au souci du souverain de mieux affirmer l’intégration de son pays à l’Occident. Les <hi rend="i">lendmenn</hi> prennent le titre de baron et les <hi rend="i">skutilsveiner</hi>, celui de chevalier, sans pour autant devenir
             semblables à leurs homologues anglais ou écossais.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Un outil pour la prosopographie : la base de données</head>
           <p>La création et la mise en œuvre d’une base de données sont indispensable sà la réalisation d’une étude prosopographique. Les objectifs
             en sont définis par la problématique du sujet. Une base biographique et une base chronologique ont été réalisées pour ce travail. Elles
@@ -150,8 +152,8 @@
             chronologique permet d’évaluer l’intensité de l’activité diplomatique de chaque pays étudié. Il faut cependant savoir critiquer ces
             résultats, car le contenu des deux bases reflète les lacunes des sources.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les événements</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Les événements</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Géopolitique de l’Europe du Nord en 1249</head>
           <p><hi rend="i">La colonisation scandinave dans les Îles britanniques. </hi> — À partir de la fin du <num>viii<hi rend="sup">e</hi></num> siècle, les
             vikings norvégiens et danois multiplient les raids contre les Îles britanniques, avant que des colons scandinaves ne s’installent le long
@@ -168,7 +170,7 @@
             cette île est également convoitée par les rois d’Ecosse, car elle commande l’accès en Irlande et fournit une base stratégique en cas de
             conflit avec l’Angleterre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les contacts diplomatiques et leurs enjeux (1249-1299)</head>
           <p><hi rend="i">L’affermissement d’un Northern Commonwealth (1249-1286). </hi> — La période 1249-1286 voit le règlement des conflits
             territoriaux issus de la colonisation scandinave, préalable indispensable à l’organisation d’un espace de collaboration et d’échange en
@@ -195,7 +197,7 @@
             dernière depuis 1293, elle hésite à prendre position dans le conflit anglo-écossais et se perd, dès lors, en alliances lucratives mais
             contradictoires, comme celle qu’elle conclut avec la France et indirectement avec l’Ecosse, contre l’Angleterre en octobre 1295.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le déclin des contacts (1299-1319)</head>
           <p><hi rend="i">La diplomatie contentieuse : les conflits maritimes. </hi> — Les relations diplomatiques entre la Norvège et l’Angleterre
             se résument à partir de 1299 à l’envoi de lettres de protestation contre des pillages réciproques : les guerres contre l’Ecosse et la
@@ -209,8 +211,8 @@
             petit-fils, Magnus Eriksson, héritier au trône de Suède. L’union de la Suède et de la Norvège, effective en 1321, achève de rompre le lien
             politique qui unissait la Norvège aux Îles britanniques, mais les échanges commerciaux demeurent.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les ambassadeurs norvégiens, anglais et écossais et le service diplomatique du roi</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les ambassadeurs norvégiens, anglais et écossais et le service diplomatique du roi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le milieu social des ambassadeurs</head>
           <p><hi rend="i">L’importance hiérarchique des ambassadeurs. </hi> — Parmi les ambassadeurs, il faut distinguer procureurs et messagers,
             dont les profils diffèrent. Les premiers sont chargés d’agir à la place du roi devant un souverain étranger, les seconds doivent lui
@@ -234,7 +236,7 @@
             duquel ils sont envoyés et avec son entourage, alors que l’appartenance à des réseaux monastiques ou marchands peut justifier la
             désignation de tel ou tel messager.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La compétence des ambassadeurs</head>
           <p><hi rend="i">La compétence théorique. </hi> — Les compétences d’argumentation que garantit une formation universitaire peuvent être
             mises à profit par les rois dans leur service diplomatique. Les universitaires sont surtout utilisés comme procureurs, lorsqu’il faut
@@ -254,7 +256,7 @@
             chez les messagers. <lb/>La prise en compte par les rois d’Angleterre et de Norvège de l’expérience administrative et des intérêts
             professionnels de leurs représentants souligne le caractère pragmatique de la diplomatie aux <num>xiii<hi rend="sup">e</hi></num> et XIV <hi rend="sup">e</hi> siècles en Europe du Nord.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le milieu géographique des ambassadeurs</head>
           <p><hi rend="i">L’origine nationale. </hi> — L’origine nationale est un facteur qui est pris en compte dans le recrutement des procureurs
             et des messagers, surtout en ce qui concerne les messagers anglais. Le fait de connaître le royaume où l’on se rend en mission permet, en
@@ -268,9 +270,7 @@
           <p><hi rend="i">Les intérêts territoriaux des ambassadeurs. </hi> — Il est avéré que quelques ambassadeurs sont envoyés à l’étranger pour
             défendre leurs intérêts patrimoniaux, souvent des terres situées dans des régions frontalières, en même temps que ceux du roi.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’étude des ambassadeurs qui ont participé aux relations diplomatiques entre la Norvège et les Îles britanniques fait apparaître à la fin
           du <num>xiii<hi rend="sup">e</hi></num> et au début du <num>xiv<hi rend="sup">e</hi></num> siècle une diplomatie qui présente les signes avant-coureurs de son
           détachement du service général du roi et de la mise en place d’un personnel spécialisé. Les messagers sont souvent des personnages qui
@@ -286,12 +286,11 @@
           du moins scandinave, assez forte sur la côte est de l’Angleterre, dans l’ancien Danelaw. Il semble donc qu’il faille réévaluer la place de
           l’Angleterre dans l’ensemble culturel britannico-scandinave.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Lettre de procuration du 3 octobre 1289, adressée à Edouard I<hi rend="sup">er</hi> par les gardiens d’Ecosse, à l’occasion de la réunion
           du sommet de Salisbury. ­ Lettre des ambassadeurs écossais présents au sommet de Brigham, qui s’engagent à respecter les clauses du traité
           conclu.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

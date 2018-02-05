@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La politique du patrimoine monumental d’André Malraux à Michel Guy (1958-1974)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La politique du patrimoine monumental d’André Malraux à Michel Guy (1958-1974)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Laurent, Xavier">Xavier Laurent</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200212.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Une vingtaine d’années a suffi pour que l’étude des politiques culturelles s’impose à l’attention des historiens de la France
           contemporaine. Plusieurs voies ont été suivies pour explorer ce nouveau champ de recherche. La question des interactions entre les
           initiatives locales et celles de l’état a été abordée dans des monographies prenant pour cadre une ville ou une région. Des ouvrages
@@ -64,7 +67,7 @@
           est resté à la marge de ses préoccupations. Il convenait de prolonger cette enquête en l’élargissant au secteur du patrimoine monumental.
        </p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les Archives nationales conservent au centre des archives contemporaines de Fontainebleau l’essentiel des versements effectués par la
           direction de l’Architecture, le service de l’Inventaire général et la Caisse nationale des monuments historiques et des sites. Il ne reste
           presque rien de l’activité des cabinets ministériels. L’élaboration et l’application de la loi sur les secteurs sauvegardés ont été suivies
@@ -78,9 +81,8 @@
           d’une de ces entrevues, Michel Denieul, directeur de l’Architecture de 1969 à 1971, a accepté de mettre à disposition ses papiers personnels
           aujourd’hui en cours de classement aux archives départementales de l’Essonne.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Nouveau ministère, nouveaux moyens</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Nouveau ministère, nouveaux moyens</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le renouvellement des cadres</head>
           <p>
             <hi rend="i">Le rôle des ministres et de leur entourage.</hi>
@@ -108,7 +110,7 @@
             Jalouse de son autonomie, elle n’apprécie pas le contrôle qu’exerce sur elle la direction de l’Administration générale et entretient peu
             de relations avec les autres services patrimoniaux du ministère.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les instances consultatives et les architectes</head>
           <p>
             <hi rend="i">La commission supérieure entre tradition et modernité</hi>. -- La commission supérieure des monuments historiques est chargée
@@ -134,7 +136,7 @@
             fruits. Les premières directions régionales des Affaires culturelles créées en 1969 fonctionnent avec le personnel des services extérieurs
             de la direction de l’Architecture.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">De la politique du faste à la doctrine de la transmission</head>
           <p>
             <hi rend="i">La planification</hi>. -- André Malraux et son équipe veulent légitimer leur action en l’inscrivant dans la logique de la
@@ -158,8 +160,8 @@
             de troisième loi de programme. Jacques Duhamel assume cette décision qui lui permet de se démarquer de l’héritage du fondateur du
             ministère des Affaires culturelles.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Monuments historiques, sites et urbanisme</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Monuments historiques, sites et urbanisme</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La politique des sites en France</head>
           <p>
             <hi rend="i">Améliorer la loi</hi>. -- La loi du 2 mai 1930 permet de classer ou d’inscrire des sites pour en contrôler l’évolution. Mais
@@ -180,7 +182,7 @@
             sensibiliser les acteurs du remembrement à l’importance des haies et des chemins creux. À sa création en 1971, le ministère de
             l’Environnement s’approprie cette politique en même temps qu’il hérite de la responsabilité des sites naturels.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les abords</head>
           <p>
             <hi rend="i">Un nouvel organisme consultatif</hi>. -- La loi du 25 février 1943 a instauré un périmètre de protection de 500 mètres autour
@@ -198,7 +200,7 @@
             rares occasions, et surtout quand les Affaires culturelles financent la plus grande part de l’équipement concerné. Ces conditions sont
             réunies pour la galerie nationale de la tapisserie de Beauvais et le musée de la civilisation gallo-romaine de Lyon.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les secteurs sauvegardés</head>
           <p>
             <hi rend="i">Une nouvelle approche de la ville</hi>-- Le service des Monuments historiques se préoccupe du sort des quartiers anciens
@@ -222,8 +224,8 @@
             l’étude. Le service des Monuments historiques affine son analyse des ensembles urbains et s’oriente vers un traitement moins radical du
             cœur des îlots.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’élargissement du champ du patrimoine</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’élargissement du champ du patrimoine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’état : gendarme ou partenaire</head>
           <p>
             <hi rend="i">Le rôle des collectivités locales.</hi>-- Les discussions préalables à la seconde loi de programme font apparaître l’intérêt
@@ -245,7 +247,7 @@
             bénévoles qui sont mis en avant. Michel Denieul en profite pour inviter les principaux animateurs de chantiers à se rapprocher du service
             des Monuments historiques.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’évolution de la politique de classement et d’inscription</head>
           <p>
             <hi rend="i">L’Inventaire général</hi>. -- La direction de l’Architecture s’est dotée depuis la Seconde guerre mondiale d’un service lui
@@ -280,7 +282,7 @@
             l’arrivée de Michel Guy en 1974 pour que les tentatives de réhabilitation dispersées prennent la forme d’une véritable campagne de
             protection.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une nouvelle vie pour les monuments</head>
           <p>
             <hi rend="i">L’animation des monuments historiques</hi>.-- Créée en 1914 pour percevoir le droit d’entrée dans les édifices appartenant à
@@ -299,9 +301,7 @@
             du théâtre. Le développement du tourisme de masse pose le problème de l’usure des monuments historiques, mise en évidence à l’occasion de
             la fermeture de la grotte de Lascaux.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Dans les années soixante, le ministère des Affaires culturelles participe au relèvement national en restaurant les joyaux du patrimoine
           français. Cette politique, accordée aux grands desseins du général de Gaulle, relègue au second plan les efforts déployés pour protéger des
           monuments plus mineurs. À travers l’Inventaire, les secteurs sauvegardés et les campagnes de protection thématique, l’administration
@@ -312,12 +312,11 @@
           secrétaire d’état à la Culture Michel Guy annonce un changement d’orientation. Il décide d’accorder davantage de protections et de favoriser
           les architectes qui, revenus du modernisme, veulent renouer avec la tradition.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Choix de notes, de lettres et de procès-verbaux de réunions concernant les moyens financiers alloués à la conservation du patrimoine
           monumental, l’intégration de l’architecture contemporaine dans les quartiers anciens, la protection des œuvres des <num>xix<hi rend="sup">e</hi></num>
           et <num>xx<hi rend="sup">e</hi></num> siècles et l’animation des monuments historiques.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

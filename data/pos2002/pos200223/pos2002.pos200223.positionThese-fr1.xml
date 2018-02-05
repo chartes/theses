@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La correspondance générale de Louise de Vilmorin jusqu’en 1949</title>
-        <title type="sub">Édition critique.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La correspondance générale de Louise de Vilmorin jusqu’en 1949</title><title xml:lang="fr" type="sub">Édition critique.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Muth, Olivier">Olivier Muth</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200223.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Issue d’une famille dont la notoriété remonte à Philippe-Victoire (1746-1804), le fameux grainetier, Louise de Vilmorin (4 avril 1902 ­ 26
           décembre 1969) est un auteur encore méconnu, dont l’œuvre a été aujourd’hui un peu oubliée et dont on a surtout retenu le caractère frivole,
           les frasques sentimentales et les bons mots. Pourtant, elle fut une épistolière de grand talent. Les lettres qu’elle a écrites et qu’elle a
@@ -67,7 +70,7 @@
           ici au problème de l’annotation. Une fois éditée, comment analyser la correspondance Il convient de s’intéresser à la forme et au contenu
           des lettres.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La correspondance passive et une partie de la correspondance active de Louise de Vilmorin sont conservées à la Bibliothèque littéraire
           Jacques-Doucet. D’autres lettres de Louise de Vilmorin se trouvent à la Bibliothèque nationale de France, au département des manuscrits,
           dans les fonds Porto-Riche et Valéry ; à la Bibliothèque historique de la Ville de Paris, dans le fonds Jean Cocteau ; à la Villa I Tati à
@@ -76,9 +79,8 @@
           de Vilmorin et les témoignages oraux que l’on a pu recueillir auprès de personnes qui l’ont connue ou qui ont fréquenté ses
           correspondants.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Analyse</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Analyse</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Louise de Vilmorin (4 avril 1902 ­ 26 décembre 1969)</head>
           <p>Issue d’une ancienne famille de Lorraine qui s’est illustrée dans le commerce des graines, Louise de Vilmorin est née à
             Verrières-le-Buisson le 4 avril 1902. Elle resta toujours attachée au château de Verrières, où elle devait s’installer définitivement
@@ -107,7 +109,7 @@
             intense. En revanche, elle n’écrivit plus guère de 1960 à sa mort ; Verrières vécut alors sous l’ombre tutélaire et encombrante d’André
             Malraux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Principes de l’édition du texte</head>
           <p>La première nécessité est de définir avec précision un corpus. Il convient de prendre en compte la correspondance passive et active de
             l’auteur que l’on étudie lorsque cela est possible, de s’interroger sur la définition même de la lettre et de savoir s’il faut tout
@@ -132,7 +134,7 @@
             œuvres de Louise de Vilmorin citées, ainsi qu’un dossier iconographique contenant les fac-similés des lettres et les photographies des
             personnages.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les correspondants : notices biographiques.</head>
           <p>Pour ne pas alourdir l’annotation de bas de page, les principaux correspondants de Louise de Vilmorin font l’objet de notices
             biographiques qui ont été rejetées dans l’analyse. Elles donnent leur nom complet, leur état civil, leur formation, leur profession, les
@@ -150,7 +152,7 @@
             Henri Pourrat, Paul Reboux, Maurice Sachs, Saint-John Perse, Armand Salacrou, Jean Schlumberger, Marcel Thiébaut, Roland et Denise Tual,
             Paul Valéry) et des hommes d’Eglise (l’abbé Mugnier).</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Commentaire des lettres éditées</head>
           <p>Contrairement à ce que l’on pourrait penser au premier abord, les lettres éditées sont riches de renseignements. Elles permettent tout
             un travail sur la topographie et la temporalité de l’écrit : l’étude des lieux de rédaction et de destination, notamment à partir des
@@ -184,19 +186,16 @@
             correspondance peut être utilisée pour fonder des études de sources et de genèse d’une œuvre : ainsi, les lettres de Louise de Vilmorin
             témoignent de sa création littéraire.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>La particularité des lettres écrites et reçues par Louise de Vilmorin tient au fait qu’elles relèvent à la fois de correspondance familiale
           et littéraire. En tant qu’éléments d’un patrimoine familial, elles peuvent être considérées comme des “ lieux de mémoire ” et se distinguent
           par leur finalité qui en fait un instrument de solidarité, de contrôle et d’union renforçant le culte de la famille. En tant qu’éléments
           constitutifs d’une esthétique, elles apparaissent comme un “ laboratoire ” de l’œuvre. L’organisation progressive d’un réseau de
           correspondants montre d’une part la force et la solidité du groupe familial, d’autre part la réussite de l’écrivain.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="5"><head>Édition</head>
         <p>(1911-1949)</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les sociétés Chauvet</title>
-        <title type="sub">Négoce et révolutions entre Marseille et les Antilles (1785-1805)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les sociétés Chauvet</title><title xml:lang="fr" type="sub">Négoce et révolutions entre Marseille et les Antilles (1785-1805)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Deschanel, Boris">Boris Deschanel</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200909.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les révolutions de la fin du <num>xviii</num>
 <hi rend="sup">e</hi> siècle, en France et à Haïti, n’ont pas seulement eu des conséquences politiques, à une échelle régionale. Leurs
           répercussions sont également d’ordre social et économique. Les milieux d’affaires ont particulièrement été concernés par les mutations de
@@ -63,7 +66,7 @@
           du rapport entre négoce et révolutions, envisagé sous l’angle de l’histoire des entreprises. Plus spécifiquement, le sujet renvoie aussi à
           la question de la mobilité sociale et à la redéfinition du milieu négociant, dans la France révolutionnaire.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le fonds Chauvet et Lafaye, conservé par le service des archives de la Chambre du commerce et de l’industrie de Marseille-Provence,
           constitue l’essentiel des sources utilisées. Ce fonds, acquis dans les années 2000, rassemble la correspondance active et une partie de la
           comptabilité de plusieurs sociétés successives, placées sous la responsabilité de Jean-Jacques Chauvet. Seuls quelques travaux récents ont
@@ -77,9 +80,8 @@
           d’éclairer le domaine, encore relativement délaissé des franges inférieures ou intermédiaires du négoce, et renvoient par conséquent à des
           problématiques plus générales.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le séjour dans les Antilles et l’accumulation des capitaux</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le séjour dans les Antilles et l’accumulation des capitaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Familles et origines</head>
           <p>L’organisation familiale est étroitement liée à l’histoire des sociétés marchandes. De sa naissance à sa disparition, l’entreprise a été
             dominée par quatre familles : celle de Jean-Jacques Chauvet, qui donne son nom à la maison de commerce, mais aussi celles de ses
@@ -90,7 +92,7 @@
             Hautes-Alpes ou de l’Isère. Cet ancrage social, familial et spatial s’avère déterminant, pour la formation des négociants, leur promotion
             professionnelle et la création de liens de solidarité entre eux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le voyage aux Antilles <lb/>(1785-1789)</head>
           <p>L’installation d’une première société Chauvet et Lafaye dans les Îles, au Cap-Français, permet d’interroger les mécanismes d’accumulation
             des capitaux et les opportunités offertes par le commerce colonial à de jeunes marchands. Les marchés antillais constituent un ensemble
@@ -99,7 +101,7 @@
             société coloniale. Ce séjour à Saint-Domingue fit des deux jeunes marchands des négociants à part entière ; les contacts noués sur place
             et les gains financiers constituent autant de capitaux, réutilisés ensuite, au retour de l’entreprise en France, en 1789.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des Alpes à l’Océan : la consolidation du réseau européen</head>
           <p>Parallèlement à l’implantation dans les Antilles, la société Chauvet et Lafaye disposait de plusieurs contacts en métropole. À l’origine,
             il s’agit d’un nombre relativement limité de négociants, auxquels les deux associés étaient liés. Cette organisation les plaçait
@@ -109,7 +111,7 @@
             économiques (Marseille, Lyon et Bordeaux) ainsi que sur certaines régions de production textile (dans les Flandres, l’Ouest de la France
             ou le Bas-Languedoc).</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Organisation et pratiques marchandes</head>
           <p>La consolidation de l’entreprise, qui apparaît avec éclat dans ses succès financiers et dans l’extension de sa surface sociale et
             commerciale, s’explique aussi par sa constitution intérieure. L’organisation des sociétés Chauvet n’est pas facile à appréhender, à cause
@@ -119,8 +121,8 @@
             son chef, Jean-Jacques Chauvet. Il en découle à la fois des conséquences positives, une bonne capacité d’adaptation aux évolutions à court
             terme des marchés, et des effets potentiellement négatifs, une grande dépendance de l’entreprise vis-à-vis d’un seul individu.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’époque révolutionnaire</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’époque révolutionnaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Face aux débuts de la Révolution</head>
           <p>Chauvet revient à Marseille, où il fixe son entreprise, en 1789. Parallèlement, les révoltes et les événements politiques de l’été
             retiennent, pour la première fois, son attention. La conjonction d’une nouvelle implantation géographique et de l’évocation des premiers
@@ -131,7 +133,7 @@
             révolution d’essence libérale, dans le prolongement des Lumières. Cependant, il reste à l’écart de l’action politique proprement dite.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La révolution haïtienne et ses effets <lb/>(1791-1794)</head>
           <p>Entre 1788 et 1791, les contacts avec les partenaires antillais ont connu une forte rationalisation. Alors que l’entreprise entretenait
             des relations multiples avec divers correspondants, elle se recentra ensuite sur la ville du Cap, et ses associés Philippon Lauret et Cie.
@@ -141,7 +143,7 @@
             Chauvet ne disposait pas de tous les moyens matériels nécessaires à un redéploiement complet de ses activités. Dès lors, le négociant
             subit les événements sans pouvoir en infléchir le cours.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Guerre et négoce</head>
           <p>La guerre, et plus particulièrement la guerre maritime, est l’un des trois grands phénomènes déstabilisateurs de la décennie 1790, avec
             la révolution haïtienne et la radicalisation de la révolution en France. Jusqu’en 1792, la perspective du conflit avait fortement imprégné
@@ -152,7 +154,7 @@
             va en être considérablement perturbée. Les alternatives développées d’ordinaire pour y remédier s’avèrent insuffisantes, de sorte que le
             bilan de la guerre maritime semble très nettement négatif pour l’entreprise.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Politisation et dépolitisation : l’« orage révolutionnaire » <lb/>(1793-1794)</head>
           <p>Le retrait politique revendiqué par Chauvet et de nombreux négociants se heurte rapidement à la dynamique révolutionnaire. La montée en
             puissance du mouvement sans-culotte et la crise économique (inflation, dévaluation des assignats) alimentent une critique acerbe des
@@ -165,8 +167,8 @@
             Ce que les négociants, absorbés par leurs intérêts à court terme, ne comprennent pas, c’est précisément que la passivité politique est
             progressivement rejetée dans le champ de l’activité contre-révolutionnaire.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une reconstruction inachevée (1795-1805)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Une reconstruction inachevée (1795-1805)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Rebâtir <lb/>(1795-1796)</head>
           <p>La reconstruction de l’entreprise commence en 1795, lorsque les poursuites contre Chauvet sont abandonnées. À la faveur de la réaction
             thermidorienne puis du Directoire, c’est d’abord une reconstruction silencieuse qui s’initie, à Ribiers, dans le Dauphiné, puis à
@@ -177,7 +179,7 @@
             de dettes contractées par d’anciens partenaires antillais. Néanmoins, les avancées des révolutionnaires haïtiens avaient amputé de
             nombreuses fortunes coloniales, alors que la guerre maritime gênait encore la circulation des capitaux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">De nouvelles politiques <lb/>(1794-1805)</head>
           <p>La politique menée sous Thermidor, le Directoire puis le Consulat a eu la réputation d’avoir avantagé les cercles d’affaires. Par
             opposition à la Terreur, il est vrai que les mesures de libéralisation ont été appréciées des négociants. De même que la politique
@@ -187,7 +189,7 @@
             proximité rétablie entre milieux négociants et politiques, ne pouvaient que satisfaire Chauvet et ses partenaires. Du point de vue de
             nombreux entrepreneurs, les années 1794-1805 ne constituent pas un retour à la prospérité, mais elles en posent les jalons.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’intégration aux milieux d’affaires dauphinois <lb/>(1797-1801)</head>
           <p>Devenue quasi inexistante en 1795, l’entreprise dut, pour se rétablir, s’appuyer tant sur les ressources personnelles de Chauvet que sur
             d’anciens contacts. De fortes solidarités s’expriment encore dans les milieux d’affaires, qui sont accentuées par des proximités
@@ -199,7 +201,7 @@
             ce qui la dote d’indéniables atouts. Néanmoins, cette réintégration dans les réseaux d’affaires revêt aussi une dimension contraignante,
             dans la mesure où Chauvet est relativement dépendant de sa belle-famille.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Vingt ans après : quel héritage ? <lb/>(1801-1805)</head>
           <p>Jean-Jacques Chauvet était tombé malade vers 1798. À la fin de son existence, à partir de 1801, une analyse quantitative de la
             correspondance démontre que les activités de l’entreprise connurent une forte perturbation. L’association avec Louis Henry Tivollier
@@ -212,9 +214,7 @@
             famille à l’élite économique du pays ou même de la région. En somme, le succès personnel de Chauvet n’a pas signifié un succès familial
             durable, et les capitaux qu’il avait accumulés furent vraisemblablement réinvestis en majorité dans des biens fonciers ou immeubles.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’activité du négociant s’effectue le plus souvent à court terme. Elle s’inscrit dans une période brève et dans une logique d’adaptation.
           En revanche, la dynamique révolutionnaire impose des changements structuraux, selon des rythmes très différents. N’est-ce pas ce décalage
           qui, fondamentalement, rejette les négociants aux marges du processus révolutionnaire, contrairement à d’autres groupes sociaux ?</p>
@@ -231,14 +231,13 @@
           de second rang s’avère désormais beaucoup moins autonome. C’est du moins le cas dans l’entourage de Chauvet. Parallèlement, les difficultés
           éprouvées ont aussi favorisé une spécialisation croissante, qui contribue à remodeler, à terme, les milieux d’affaires français.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Documents relatifs à la famille Chauvet. — Extraits de la correspondance active des sociétés Chauvet. — Documents administratifs de la
           période révolutionnaire concernant l’entreprise et son dirigeant : photographies et édition de textes. — Contrat de mariage. — Extraits de
           documents comptables. — Dispositions de dernières volontés de Jean-Jacques Chauvet. — Chronologie. — Cartes. — Évolution quantitative de la
           correspondance active. — Évolution des prix du café et du coton (1789-1793). — Analyse factorielle des correspondances appliquée au réseau
           commercial de la société, d’après son courrier (1789-1794).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

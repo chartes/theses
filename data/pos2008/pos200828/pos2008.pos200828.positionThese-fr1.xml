@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édouard Reuss (1804-1891), &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Erinnerungen aus meinem Leben&lt;/hi&gt;</title>
-        <title type="sub">Édition partielle (1846-1872) et commentaire</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Édouard Reuss (1804-1891), <hi rend="i">Erinnerungen aus meinem Leben</hi></title><title xml:lang="fr" type="sub">Édition partielle (1846-1872) et commentaire</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Woessner, Caroline">Caroline Woessner</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200828.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Édouard Reuss est aujourd’hui un personnage bien ancré dans l’histoire de la théologie. Son nom est en particulier associé aux travaux
           d’exégèse du Pentateuque et à l’hypothèse « Reuss-Graf-Kuenen-Wellhausen » sur la composition du Pentateuque. Édouard Reuss développe en
           effet la thèse que le Pentateuque a eu pour source trois ou quatre documents et est postérieur aux prophètes, que le rédacteur du
@@ -81,7 +84,7 @@
 <hi rend="sup">e</hi> siècle que sont la Révolution de 1848 et la guerre de 1870. Par ailleurs, elle correspond dans l’existence d’Édouard
           Reuss à une période où ses travaux sont davantage tournés vers la France.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources relatives à Édouard Reuss sont abondantes et variées. La plume d’Édouard Reuss a en effet été féconde, en particulier durant
           la seconde partie de sa vie, alors qu’il se plaint de manière paradoxale que ses forces l’abandonnent. Ces sources sont cependant dispersées
           dans différents lieux de conservation, parmi lesquels les deux principaux sont la médiathèque protestante de Strasbourg, où est conservé
@@ -113,10 +116,9 @@
           correspondance avec son élève Charles Henri Graf par Karl Budde et Julius Heinrich Holtzmann publiée à l’occasion du centenaire de la
           naissance de Reuss en 1904.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le texte des <hi rend="i">Erinnerungen aus meinem Leben</hi>
+          <div n="3" type="part"><head n="0" type="chapter">Le texte des <hi rend="i">Erinnerungen aus meinem Leben</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Description du manuscrit</head>
           <p>Édouard Reus a commencé le récit de sa vie le 8 mai 1850, alors qu’il était âgé de quarante-six ans. Le manuscrit se compose de
             vingt-cinq livres numérotés en chiffres romains, divisés chacun en chapitres numérotés en chiffres arabes, et s’étend sur 2297 pages,
@@ -135,7 +137,7 @@
             livre 21 du siège de Strasbourg. D’autres thèmes sont repris de façon récurrente à travers les différents livres, comme les événements
             familiaux ou les visiteurs et correspondants.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le genre des Erinnerungen aus meinem Leben</head>
           <p>Les <hi rend="i">Erinnerungen aus meinem Leben</hi> ne sont, selon Édouard Reuss, pas destinées, du moins dans l’immédiat, à être portées
             à la connaissance d’un public autre que sa femme et ses enfants. Quant au destinataire principal de ce texte, il s’agit d’Édouard Reuss
@@ -159,9 +161,9 @@
             l’esprit certaines caractéristiques des récits mis au point avec le recul que sont la mise en relief des problèmes récents, la réécriture
             du passé à la lumière de l’expérience et des événements postérieurs, l’introduction d’un plaidoyer personnel.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le contexte de la rédaction des <hi rend="i">Erinnerungen aus meinem Leben</hi>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le contexte de la rédaction des <hi rend="i">Erinnerungen aus meinem Leben</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Contexte religieux et linguistique</head>
           <p>Au début du <num>xix</num>
 <hi rend="sup">e</hi> siècle, le protestantisme est marqué par le rationalisme. Dans les années 1815 à 1820, les mouvements de Réveil venus
@@ -183,7 +185,7 @@
             alsacien. Il exprime notamment cette position en faveur de la langue allemande dans un article paru en 1838 dans la revue <hi rend="i">Erwinia</hi>, intitulé  <hi rend="i">Wir reden deutsch</hi>. En 1870, Édouard Reuss voit d’ailleurs sans déplaisir la victoire
             allemande et accepte une chaire au sein de la nouvelle université allemande.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les institutions</head>
           <p>L’Église luthérienne est organisée en 1802 par les articles organiques pour les cultes protestants du 18 germinal an X (8 avril 1802). Le
             décret du 26 mars 1852 modifie le statut légal de l’Église luthérienne et la composition des organes dirigeants : le consistoire supérieur
@@ -195,7 +197,7 @@
             l’incendie des bâtiments survenu en 1860. En 1863, il est nommé délégué du séminaire protestant au Consistoire supérieur, dont il est
             membre jusqu’en 1889.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Biographie d’Édouard Reuss</head>
           <p>Édouard Reuss est issu d’une famille d’origine allemande installée en Alsace ; il est le fils d’un négociant en tissus aisé. Il est
             imprégné d’une double culture à l’instar des élites alsaciennes de son temps. Les <hi rend="i">Erinnerungen aus meinem Leben</hi> en
@@ -227,21 +229,18 @@
             pédagogiques, ainsi qu’un ardent défenseur des spécificités alsaciennes et de la langue allemande. Doté d’une grande rigueur scientifique,
             il sait préserver son indépendance vis-à-vis des partis.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Édition</head>
+      </div><div type="conclusion" n="5"><head>Édition</head>
         <p>L’édition porte sur les tomes cinq et six des <hi rend="i">Erinnerungen aus meinem Leben</hi>, qui couvrent la période 1846-1872. Les
           principes retenus pour l’édition sont conformes à ceux enseignés à l’École des Chartes. La graphie employée par Édouard Reuss, qui peut
           varier au cours du texte, est ainsi respectée fidèlement. Chaque chapitre, qui forme l’unité de base du récit d’Édouard Reuss, est
           accompagné d’un chapeau introducteur indiquant les sujets abordés.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>
           <hi rend="i">Erinnerungen aus meinem Leben</hi>, chapitres 1 et 2. — Tableaux généalogiques. — Les professeurs de la faculté de théologie et
           du séminaire protestant de Strasbourg de 1846 à 1872. — Liste des maires de Strasbourg. — Portraits et planches. — Cartes. — Index des noms
           de personnes. — Index des noms de lieux.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

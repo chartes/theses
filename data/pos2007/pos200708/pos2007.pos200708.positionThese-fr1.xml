@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La Grande Guerre dans les images de presse en France (1919-1939)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La Grande Guerre dans les images de presse en France (1919-1939)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Christophe, Anne">Anne Christophe</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200708.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le premier conflit mondial constitue un épisode décisif de l’histoire européenne, souvent considéré comme la matrice des violences des
           années 1930 puis de la seconde guerre mondiale. Du côté français, son importance est perçue d’emblée : la « Grande Guerre » fait pendant les
           combats l’objet d’un fort investissement symbolique et idéologique. Une fois la paix signée, le culte du souvenir de 1914-1918, entretenu
@@ -77,7 +80,7 @@
           et violente. Que vont montrer les différents journaux de ces traces bien visibles ? Sur quels modes dépeint-on le conflit lui-même, et à
           quelles fonctions répondent les images qui le représentent ?</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées sont de différentes natures. Tout d’abord, dans la mesure où l’étude se base sur l’iconographie de quatre
           périodiques : <hi rend="i">Le Journal</hi>, <hi rend="i">L’Humanité</hi>, <hi rend="i">L’Illustration</hi> et <hi rend="i">Vu</hi>, ces
           titres, consultables dans diverses bibliothèques parisiennes telles que la bibliothèque de l’Arsenal et la Bibliothèque de documentation
@@ -89,9 +92,8 @@
           historique des Archives nationales, où est conservé le fonds du <hi rend="i">Journal</hi>. Le fonds iconographique d’un autre titre a pu
           être consulté : celui de <hi rend="i">L’Illustration</hi>, détenu par un particulier. Enfin, le fils d’un des principaux dessinateurs de <hi rend="i">L’Humanité</hi> a aimablement consenti à fournir des renseignements sur son père.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le contexte de production et de publication des images</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le contexte de production et de publication des images</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les difficultés de la presse dans l’immédiat après-guerre</head>
           <p>En plus des difficultés d’ordre conjoncturel, liées à la reconversion de l’économie entraînée par la fin du conflit, puis à la crise de
             1929, les journaux doivent faire face à l’essoufflement général du marché de la presse. Dès lors, le recours à l’iconographie peut
@@ -99,7 +101,7 @@
             journaux souffrent d’une mauvaise image dans l’opinion publique. On leur reproche notamment d’avoir sciemment contribué au conditionnement
             idéologique des masses en 1914-1918, tandis que plusieurs scandales défraient la chronique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La production d’images de presse de 1919 à 1939</head>
           <p>
             <hi rend="i">La place de l’image dans les journaux de l’entre-deux-guerres</hi>. — L’image gagne du terrain dans l’ensemble de la presse,
@@ -131,14 +133,14 @@
             suivante et émergent durant les années 1920. Enfin, les plus jeunes, qui débutent à la veille de la seconde guerre mondiale, étaient
             enfants en 1914-1918 et ne sont guère représentés dans le corpus étudié.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Présentation du corpus</head>
           <p>Les quatre titres étudiés : <hi rend="i">L’Illustration</hi>, <hi rend="i">Le Journal</hi>, <hi rend="i">L’Humanité</hi> et <hi rend="i">Vu</hi>, possèdent des profils fort différents. Alors que les deux premiers sont orientés à droite, les deux autres sont orientés à
             gauche, <hi rend="i">L’Humanité</hi> représentant même le porte-parole privilégié du PCF à partir de 1920. <hi rend="i">L’Illustration</hi> et <hi rend="i">Vu</hi> constituent deux hebdomadaires illustrés, <hi rend="i">Le Journal</hi> et <hi rend="i">L’Humanité</hi> deux quotidiens d’information. Enfin, <hi rend="i">Vu</hi> se distingue du reste du corpus dans la mesure où il est
             créé longtemps après la guerre et où il a recours quasi exclusivement aux illustrations photographiques.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Comment sortir de la guerre : le rapport problématique à un legs iconographique contesté</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Comment sortir de la guerre : le rapport problématique à un legs iconographique contesté</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’héritage iconographique du conflit</head>
           <p>
             <hi rend="i">Le développement d’une iconographie spécifique au cours de la guerre</hi>. — Une imagerie abondante se développe en
@@ -154,7 +156,7 @@
             plus jeunes, sont les plus nombreux à avoir combattu, et ont sans doute été les plus marqués par le conflit ; l’équipe de <hi rend="i">L’Illustration</hi> comporte des peintres aux armées, qui ont pu voir la réalité du combat. Quant à la participation à l’iconographie
             de guerre, elle concerne surtout les membres de <hi rend="i">L’Illustration</hi> et du <hi rend="i">Journal</hi>.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les filiations avec l’iconographie de 1914-1918 <lb/>quelles résurgences dans l’entre-deux-guerres ?</head>
           <p>
             <hi rend="i">Le patriotisme</hi>. – Les résurgences de l’inspiration patriotique, des stéréotypes, du vocabulaire et des symboles qui
@@ -179,7 +181,7 @@
             l’impérialisme fauteur de guerre », sans plus mettre en cause l’impérialisme allemand, mais celui des classes dirigeantes et des
             capitalistes des différents pays occidentaux, pour mieux se démarquer du substrat iconographique de 1914-1918.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Voir la guerre en temps de paix <lb/>le cas des photographies d’archive de la guerre</head>
           <p>
             <hi rend="i">Les clichés du conflit en circulation dans l’entre-deux-guerres</hi>. — Globalement, les images prises durant la guerre
@@ -213,8 +215,8 @@
             se rallier au communisme. Les images pacifistes possèdent leurs propres caractéristiques : décontextualisation, généralisation à partir
             d’un exemple, ironie, photomontage.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le spectre de la Grande Guerre <lb/>une présence diffuse et indirecte</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le spectre de la Grande Guerre <lb/>une présence diffuse et indirecte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’empreinte de la guerre</head>
           <p>
             <hi rend="i">Les traces matérielles de 1914-1918</hi>. — Les ruines et les difficultés des populations sinistrées apparaissent peu dans
@@ -238,7 +240,7 @@
             combattants sont surtout montrés dans le cadre cérémoniel et sont de plus en plus visibles ; toutefois, les mutilés, symboles dérangeants
             du gâchis humain causé par la guerre, restent largement sous-représentés, surtout lorsque leur blessure est laide à voir.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’ombre de la Grande Guerre <lb/>un conflit toujours évoqué, mais rarement représenté</head>
           <p>
             <hi rend="i">Où est la guerre ? Où est la mort ?</hi>– Très peu d’images figurent la guerre en elle-même, alors que beaucoup l’évoquent.
@@ -258,9 +260,7 @@
             caution à toutes les causes. Enfin, le rappel des quatre années de lutte révèle surtout les désillusions sur la victoire, qui n’est même
             pas jugée capable d’assurer une paix stable.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les différences d’interprétation de la Grande Guerre suivant les sensibilités idéologiques et politiques des journaux soulignent combien
           elle constitue un enjeu mémoriel fort, revendiqué par tous. Un certain malaise est perceptible par rapport à l’iconographie si décriée de
           1914-1918 : alors que <hi rend="i">L’Humanité</hi> la réinvestit pour mieux s’en démarquer, <hi rend="i">Le Journal</hi> et <hi rend="i">L’Illustration</hi> font profil bas, reniant leur ancien triomphalisme bleu horizon, ce qui ne les empêche pas de conserver des accents
@@ -274,11 +274,10 @@
           1914-1918. Les journaux oscillent donc entre une attitude de fuite face aux images des violences et des souffrances nées de l’affrontement,
           et leur volonté d’invoquer sans cesse le souvenir d’une expérience qui fait autorité.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Les annexes comportent principalement un index biographique des dessinateurs et des photographes considérés dans le corpus, ainsi que des
           exemples d’images auxquelles le texte se réfère.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

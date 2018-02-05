@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Michel Butor et ses artistes : livres manuscrits (1968-1998)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Michel Butor et ses artistes : livres manuscrits (1968-1998)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chamonard, Marie">Marie Chamonard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200009.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Michel Butor présente la particularité d’être à la fois très connu et mal connu. En effet, il est l’un des écrivains du Nouveau Roman les
           plus célèbres dans le monde, et en même temps le plus mal interprété. L’étiquette de « Nouveau Romancier » qui lui fut appliquée dès ses
           débuts est réductrice. On oublie que l’écrivain est aussi l’auteur d’essais, de poésie et de livres d’artistes, dont des livres manuscrits,
@@ -69,7 +72,7 @@
           représente une telle collaboration pour chacun des partenaires. Il convient également de s’interroger sur la place des livres manuscrits de
           Michel Butor dans le paysage des livres d’artistes contemporains.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La quasi totalité des quelque trois cents livres manuscrits se trouve encore chez l’écrivain et chez les artistes. Leur étude a donc
           nécessité l’autorisation des uns et des autres de consulter ces livres à leur domicile. Certains artistes n’ayant pas encore fait l’objet
           d’une bibliographie abondante, un certain nombre d’entretiens avec eux ont permis de reconstituer leur parcours artistique.</p>
@@ -79,9 +82,8 @@
         <p>Enfin, les nombreuses réflexions de Michel Butor sur le livre, publiées notamment dans la série des <hi rend="i">Répertoires</hi>, aident à
           mieux comprendre ce qui a poussé l’écrivain à réaliser ce genre de livres.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Michel Butor à la rencontre de ses livres manuscrits</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Michel Butor à la rencontre de ses livres manuscrits</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Biograhie intellectuelle de Michel Butor</head>
           <p>Michel Butor est né le 14 septembre 1926 à Mons-en-Barœul, dans le nord de la France, dans une famille de huit enfants. Attiré par la
             musique et la peinture, il montre cependant des dons précoces pour l’écriture et passe une grande partie de son adolescence à écrire des
@@ -104,7 +106,7 @@
             illustrés, des livres manuscrits, qui lui permettent de se passer d’éditeur. Le nombre de ses collaborations ne cesse de croître, au point
             que le livre manuscrit devient chez Michel Butor une véritable spécialité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les artistes de michel Butor : Présentation générale</head>
           <p>De 1968 à 1998, quarante-neuf artistes ont réalisé des livres manuscrits avec Michel Butor. Si ces artistes sont divers du point de vue
             de leur discipline artistique (peinture, gravure, sculpture, photographie, collages), de leur notoriété et de leur nationalité, ils sont
@@ -135,7 +137,7 @@
             de dialoguer avec eux par le biais du livre manuscrit. Cela ne signifie pas forcément que leur histoire s’arrête là. Bien souvent, ils
             continuent leur collaboration avec Michel Butor sous d’autres formes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Présentation des livres manuscrits de Michel Butor</head>
           <p>Les deux cent quatre-vingt-trois livres manuscrits de Michel Butor s’apparentent par beaucoup de leurs traits au livre illustré de luxe
             traditionnel ­ notion par ailleurs problématique ­, tout en l’enrichissant et le nuançant par un certain nombre d’aspects. Tout d’abord,
@@ -154,8 +156,8 @@
             certains, obéissent à l’esthétique de l’assemblage, à la Duchamp, et les livres aux formes originales, comme le livre-rouleau ou le livre
             en forme d’éventail.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’écriture dans la peinture</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’écriture dans la peinture</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etude des rapports entre texte et image</head>
           <p><hi rend="i">Processus </hi> — Le livre manuscrit est une œuvre de commande de la part de l’artiste qui invite Michel Butor à écrire à
             côté de la gravure, de la photographie, des collages, mais aussi, dans certains cas, directement sur la peinture même. Plusieurs raisons
@@ -178,7 +180,7 @@
             œuvre est toujours à l’œuvre, toujours en train de s’accomplir, et que le texte ne saurait être confiné aux limites étouffantes d’un
             livre. Le texte est sans cesse en mutation, comme s’il échappait au créateur lui-même.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Donnant donnant</head>
           <p><hi rend="i">Apports pour les artistes </hi> — Si beaucoup d’artistes affirment qu’ils ne voient pas un grand changement dans leur art
             depuis qu’ils travaillent avec Michel Butor, certains reconnaissent cependant que cette manière de travailler, qui les incite à anticiper
@@ -195,7 +197,7 @@
             grâce à un travail de combinatoire. Elle relève de l’esthétique du catalogue, où le mot a un pouvoir incantatoire très fort. Non rimée,
             elle célèbre le quotidien dans toute sa banalité et sa beauté nue, avec ses heurs et ses malheurs.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les sources des livres de Michel Butor : le spectre du surréalisme</head>
           <p><hi rend="i">Une source principale : le surréalisme </hi> — La collaboration entre écrivains et peintres et la célébration de la
             correspondance entre les arts rappellent naturellement la période du surréalisme où de telles pratiques et idées se sont épanouies avec le
@@ -207,8 +209,8 @@
             toutes les hésitations que trahit l’écriture. Dans le choix de la mise en page, le modèle de Mallarmé se profile, tandis que les formes
             des livres révèlent l’influence de Duchamp et des livres japonais.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le livre en mouvement</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le livre en mouvement</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Hors des circuits traditionnels de l’édition et de la distribution</head>
           <p><hi rend="i">Une édition quasi clandestine </hi> — Pour le livre manuscrit, l’artiste est lui-même son propre éditeur et s’inscrit de ce
             fait dans un circuit parallèle, quasi clandestin. La réalisation de ces livres n’obéit guère à des motivations financières, car les
@@ -219,7 +221,7 @@
             réponse à la crise actuelle de l’édition du livre de luxe. De plus, face à la pusillanimité des éditeurs, les artistes ont trouvé là une
             manière d’exercer leurs talents en toute liberté. Les règles n’existent plus, seuls comptent l’envie, la fantaisie et le plaisir.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les métamorphoses du livre</head>
           <p><hi rend="i">Michel Butor et son rêve du livre </hi> — Dès 1964, Michel Butor avait annoncé la fin du livre traditionnel, concurrencé
             par les nouveaux moyens de conservation du texte, beaucoup plus efficaces, tel que l’ordinateur. Mais, au lieu de s’en lamenter,
@@ -234,9 +236,7 @@
             singulier, comme un tout inséparable. Cet exercice suppose de la part du lecteur de Michel Butor une grande disponibilité et un certain
             loisir.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Parmi les écrivains d’aujourd’hui qui réalisent des livres d’artistes, Michel Butor est sans doute le plus ancien. Il n’est donc pas exclu
           qu’il ait un tant soit peu influencé ses émules. Mais ce qui distingue Michel Butor des autres écrivains est assurément le nombre
           impressionnant de ses partenaires, aux personnalités et aux esthétiques différentes, et la constance, voire la boulimie, qui caractérisent
@@ -245,12 +245,11 @@
           heureux bibliophiles, et enfin, à quelques bibliothèques. Sont-ils destinés à rester dans une stricte confidentialité ? Pour le bonheur des
           chercheurs et du grand public, il faut fermement espérer que non.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Extraits de la correspondance adressée à Michel Butor par Ania Staritsky (1971-1973) concernant <hi rend="i">Une chanson pour Don
             Juan</hi>(Bibliothèque nationale de France, département des manuscrits). ­ Deux poèmes de jeunesse de Michel Butor. ­ Brouillon autographe
           de <hi rend="i">Hé</hi>, texte écrit pour Julius Baltazar en 1980 (bibliothèque municipale de Nice).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

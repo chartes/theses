@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Japonisme et érudition : le livre japonais dans les collections d’Auguste Lesouëf (1829-1906)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Japonisme et érudition : le livre japonais dans les collections d’Auguste Lesouëf (1829-1906)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Béranger, Véronique">Véronique Béranger</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200002.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les expositions de la Bibliothèque nationale de France sur l’histoire du livre manuscrit ou imprimé présentent parfois au public les
           trésors d’une collection rassemblée par Auguste Lesouëf, surtout connu par l’association de son nom avec celui de ses nièces, Jeanne et
           Madeleine Smith, qui ont légué la collection à la Bibliothèque nationale en 1913. Jusqu’en 1980, cette collection était conservée dans un
@@ -64,7 +67,7 @@
           entouraient le collectionneur. A travers les thèmes représentés et les pratiques de sociabilité et d’érudition qu’elle révèle, la collection
           japonaise Smith-Lesouëf apporte des éléments nouveaux à la connaissance du japonisme et de l’érudition japonisante au XIX <hi rend="sup">e</hi>  siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La plupart des sources de notre travail sont conservées à la Bibliothèque nationale de France. La source principale est constituée par la
           collection de livres, de peintures et d’objets japonais cotés Smith-Lesouëf, partagée entre les différents départements de l’établissement :
           les livres et les objets d’art décoratifs sont conservés au département des manuscrits orientaux ; le département des estampes et de la
@@ -80,9 +83,8 @@
           dans la collection japonaise et les méthodes d’acquisition du collectionneur. Les particularités d’exemplaires donnent notamment des
           indications sur le réseau de sociabilité dans lequel s’insérait la collection.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le Japon vu depuis la France au temps de Lesouëf</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le Japon vu depuis la France au temps de Lesouëf</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Japonismes</head>
           <p>La place du Japon dans l’univers personnel d’Auguste Lesouëf, l’élaboration de sa collection japonaise ne sauraient être envisagées
             indépendamment du mouvement général de curiosité suscité par le Japon en France dans la deuxième moitié du <num>xix<hi rend="sup">e</hi></num>
@@ -103,7 +105,7 @@
             fructueux, tantôt réduits à la simple polémique, entre érudits et amateurs, que s’approfondirent l’intérêt et les connaissances de Lesouëf
             sur le Japon et que s’élaborèrent les critères de formation de sa collection japonaise.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’accès au document original et son approche</head>
           <p>L’accent mis sur les arts décoratifs du Japon lors des grandes expositions laisse dans l’ombre tout un pan de cette civilisation qui se
             trouve au cœur de la collection Lesouëf : le livre. Un des intérêts de cette collection, qui se reflète dans un éclectisme parfois
@@ -125,7 +127,7 @@
             de la Société des études japonaises montrent que ces clivages ne sont pas aussi profonds que les écrits polémiques du temps pouvaient le
             laisser paraître.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n=" Chapitre III">Sociablité ou érudition ? Lesouëf et la société d’etnhographie</head>
           <p>Fils de fondeur d’or et d’argent, le jeune Auguste se passionna pour l’histoire et les langues, révélant peu d’aptitudes pour le négoce.
             Il n’ira pas au-delà d’une licence en droit, se formant surtout avec la riche bibliothèque paternelle. L’héritage de son père en 1857 lui
@@ -146,8 +148,8 @@
           <p>Lesouëf joua finalement un rôle scientifique actif au sein de la Société des études japonaises à partir des années 1880, alors que
             celle-ci tentait d’attirer en son sein un public de collectionneurs japonistes.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Formation et mise ne valeur de la collection japonaise</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Formation et mise ne valeur de la collection japonaise</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’élaboration de la collection japonaise</head>
           <p>La collection d’Auguste Lesouëf est étroitement liée au milieu de la Société des études japonaises, où étaient formulées les orientations
             relatives à la composition des collections, dans une optique érudite et philologique. L’interaction entre le contexte général du japonisme
@@ -165,7 +167,7 @@
             capital de la constitution de la collection, alors que la définition de cette bibliothèque se fixe et qu’elle revêt un caractère
             public.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une collection d’intérêt artistique et documentaire</head>
           <p>Cette collection d’ouvrages imprimés et d’albums enluminés japonais couvre une longue période, qui s’étend de la fin du XVII <hi rend="sup">e</hi>  siècle à 1895. La part la plus importante des imprimés est constituée d’ouvrages de la deuxième moitié du XIX <hi rend="sup">e</hi>  siècle. Quant aux genres représentés, deux ensembles se distinguent particulièrement par leur importance : l’histoire
             de l’art et la géographie.</p>
@@ -186,7 +188,7 @@
             qui permette de reconstituer une histoire de l’orientalisme et de ses méthodes. En ce sens, la présence des ouvrages japonais, sources des
             publications scientifiques, ne peut être comprise indépendamment du fonds occidental.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La mise en valeur de la collection japonaise</head>
           <p>Le faible rayonnement de la collection Lesouëf, le rôle surtout bibliographique et non topographique du catalogue nous indiquent les
             limites à établir dans l’assimilation de la collection au projet de la Société d’ethnographie : le poids de l’histoire de l’art, genre
@@ -207,9 +209,7 @@
             l’Instruction publique pour la distribution de ce catalogue parmi les bibliothèques publiques préfigure en quelque sorte le legs décidé
             par ses nièces en 1913.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Témoignage d’une histoire de l’orientalisme français et du japonisme, la collection japonaise réunie par Lesouëf doit être considérée dans
           son fonctionnement à l’intérieur de l’ensemble des collections Smith-Lesouëf, dans la mesure où elle dessine des rapports entre bibliophilie
           occidentale et bibliophilie japonaise. Point de rencontre de pratiques liées à l’érudition, à la sociabilité et au goût artistique, elle
@@ -222,7 +222,7 @@
           bibliophilique qu’elle exprimait, et les usages des livres auxquels elle donna lieu, caractérise finalement bien la complexité de l’approche
           de la civilisation japonaise au <num>xix<hi rend="sup">e</hi></num>  siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Extraits de correspondance et actes relatifs au legs de 1913 et à la Fondation Smith-Lesouëf. ­ Témoignages de Pierre Champion sur le
           collectionneur. ­ Bibliothèque du père d’Auguste Lesouëf. ­ Diplômes des sociétés savantes. ­ Correspondance de voyage. ­ Publications
           d’Auguste Lesouëf et correspondance à leur sujet. ­ Factures de libraires et de relieurs. ­ Extraits de catalogues de ventes de livres
@@ -232,7 +232,6 @@
           du catalogue japonais aux bibliothèques. ­ Correspondance relative à l’envoi des catalogues. ­ Liste des bibliothèques municipales, classées
           par ordre de mérite.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

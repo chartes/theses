@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Travaux publics sous le ministère de Marcel Sembat (1914-1916)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les Travaux publics sous le ministère de Marcel Sembat (1914-1916)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chancerel, Pierre">Pierre Chancerel</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200807.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’économie française a connu des bouleversements importants pendant la Première Guerre mondiale. La lutte contre l’Allemagne conduisait à
           une guerre « totale » et à orienter tout le système productif français vers la guerre. La situation rendait nécessaire le recours plus
           important à l’État, le seul à même de financer et d’organiser l’effort de guerre. L’administration a ainsi connu pendant le conflit
@@ -67,7 +70,7 @@
           vient ainsi d’éditer ses <hi rend="i">Cahiers noirs</hi>, tandis que les Archives nationales, qui ont reçu ses archives privées en 2003, lui
           consacrent une exposition au printemps 2008.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le fonds Marcel Sembat représente la plus grande partie des sources consultées. Il est constitué des papiers que le ministre des Travaux
           publics a emportés chez lui après son départ du gouvernement. Restés longtemps dans la maison de Sembat, ceux-ci sont conservés aux Archives
           nationales depuis 2003 (637 AP). Le fonds comprend une importante correspondance mais ce sont surtout les dossiers de travail avec le
@@ -77,9 +80,8 @@
           conflit. Enfin, l’étude détaillée de plusieurs textes législatifs a rendu nécessaire la consultation des archives du Parlement, à savoir les
           procès-verbaux des commissions parlementaires compétentes et des séances de la Chambre et du Sénat.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le ministère des Travaux publics et le début de la guerre</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le ministère des Travaux publics et le début de la guerre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le ministère des Travaux publics avant la guerre</head>
           <p>Le ministère des Travaux publics comprend principalement l’administration des Ponts et Chaussées et celle des Mines. Le développement de
             l’industrie et des techniques au <num>xix</num>
@@ -91,7 +93,7 @@
             administrateurs, le fonctionnement de ce ministère est sans cesse débattu. On discute de la place que doivent tenir chacun de ces éléments
             dans les décisions.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’adaptation du ministère à la guerre</head>
           <p>La guerre entraîne d’importants bouleversements dans l’organisation du ministère. Tout d’abord, un nouveau ministre est nommé le 26 août
             1914. Fait important, Marcel Sembat est socialiste et représente la SFIO au gouvernement, en vertu de l’Union sacrée. Son chef de cabinet
@@ -103,7 +105,7 @@
             transports sont donc gérés de façon mixte, à la fois par le ministère de la Guerre et celui des Travaux publics. Ce dernier voit donc son
             activité principale se recentrer autour du service des mines et de la fourniture en charbon.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’irruption du ministère dans l’économie de guerre</head>
           <p>Dès la fin de l’année 1914, l’approvisionnement en combustible de la France se trouve dans une situation difficile. La moitié des mines
             du Pas-de-Calais, le principal bassin houiller français, est envahie. Les autres zones de production ont vu de nombreux mineurs partir au
@@ -113,8 +115,8 @@
             capacités de réception et d’évacuation vers l’intérieur du territoire. Conjointement avec l’autorité militaire, le ministre des Travaux
             publics se préoccupe donc de fournir aux compagnies de transport ferroviaire et de navigation des hommes et du matériel.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La crise des prix et la mise en place d’un système général pour l’approvisionnement en combustibles</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La crise des prix et la mise en place d’un système général pour l’approvisionnement en combustibles</head>
+        <div n="1" type="chapter">
           <head n="Chapitre IV">La réglementation du marché intérieur du charbon</head>
           <p>La moitié de l’approvisionnement en combustible provient de charbon français, tandis que l’autre moitié se fait en houille anglaise. En
             août 1915, Marcel Sembat obtient des houillères françaises qu’elles n’augmentent pas leur prix de vente. En revanche, le prix du charbon
@@ -135,7 +137,7 @@
             privilégiés pour la consommation familiale ont été abandonnés. Pour parvenir à ce résultat, un accord avec le Royaume-Uni s’est avéré
             nécessaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre V">L’accord Sembat-Runciman : la taxation du fret et du charbon anglais</head>
           <p>Le prix du charbon anglais se compose, pour l’essentiel, du prix de la tonne sur le carreau de la mine anglaise et du prix du transport,
             assuré essentiellement par des armateurs britanniques et neutres. Pour limiter arbitrairement les prix de la houille anglaise, c’est donc
@@ -151,7 +153,7 @@
             chaque district houiller britannique, un comité local répartit les demandes françaises entre les houillères, avant qu’un autre comité
             n’accorde des licences d’affrètement pour le transport vers la France.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre VI">La crise des transports et ses remèdes</head>
           <p>L’appareil productif français fonctionnant au ralenti du fait de la guerre, le volume général des importations augmente dans des
             proportions considérables. D’autre part, les besoins nés de la guerre et de la production d’armement entraînent des perturbations
@@ -163,8 +165,8 @@
             des fonds pour compléter l’équipement en matériel de levage, augmenter la longueur des quais et développer les connexions avec le chemin
             de fer et la voie fluviale, afin de diminuer les ruptures de charge.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La crise de quantité et la chute de Sembat</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La crise de quantité et la chute de Sembat</head>
+        <div n="1" type="chapter">
           <head n="Chapitre VII">Des conditions nouvelles</head>
           <p>Le tonnage annuel des ports double presque entre 1913 et 1916. Les mesures prises au printemps 1916 ont permis aux importations
             britanniques d’atteindre leur optimum en août. Mais au cours de l’automne la situation évolue défavorablement. Au plan intérieur tout
@@ -181,7 +183,7 @@
             constituent leurs stocks de céréales. Les navires charbonniers sont donc utilisés à ce trafic et les livraisons de céréales concurrencent
             celles de charbon dans les ports.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre VIII">Les solutions envisagées</head>
           <p>À la fin de l’année 1916, l’action du ministère des Travaux publics vise trois objectifs. Il faut tout d’abord assurer les importations
             de charbon pour limiter la pénurie et faire baisser les prix. Sembat est ainsi amené à constituer une flotte d’État, afin d’assurer les
@@ -205,7 +207,7 @@
             la production houillère. Par ailleurs, malgré les appels de certains députés, il ne voit pas les avantages qu’il y aurait à développer le
             potentiel hydroélectrique de la France.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre IX">Les critiques et la chute</head>
           <p>Dès le mois de novembre, la pénurie de charbon s’installe. Elle est d’autant plus cruellement ressentie que l’hiver est particulièrement
             rude. Marcel Sembat sert de bouc émissaire à cette situation. La Chambre le met en difficulté au cours d’une interpellation les 13 et 14
@@ -214,9 +216,7 @@
             socialistes remettent en cause la participation ministérielle. C’est, finalement, à la faveur du remaniement ministériel du 12 décembre
             qu’il laisse le portefeuille des Travaux publics à Edouard Herriot.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Albert Thomas, l’autre socialiste au gouvernement, symbolise la réussite. Il est, en effet, parvenu à réorganiser complètement l’industrie
           de l’armement pendant le conflit. Au contraire, l’image laissée par Sembat est celle d’un échec. Arrivé au gouvernement au début de la
           guerre, à la faveur de l’Union sacrée, il ne s’attendait certainement pas à être confronté à des dossiers aussi complexes et à ce que la
@@ -226,14 +226,13 @@
           l’instauration d’un nouveau régime commercial pour le charbon pendant la guerre. Ses projets de péréquation et de centralisation par
           l’administration sont également repris par Louis Loucheur, ministre de l’Armement à partir de septembre 1917.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Textes préparatoires à la loi du 22 avril 1916. — Accord franco-anglais du 25 mai 1916 concernant la fourniture de charbon à la France. —
           Accord du 3 décembre 1916 entre les gouvernements anglais et français réglementant la question du tonnage entre les deux pays. — Projets de
           loi de taxation de la vente de charbon au détail. — Dossier statistique. — État des travaux réalisés dans les ports français entre 1914 et
           1916. — Ballade pour déplorer la pénurie de charbon par quoi l’auteur est incommodé. — Chronologie. — Composition des gouvernements Viviani
           et Briand. — Organigrammes. — Cartes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La cinquième mise en prose du &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Roman de Troie&lt;/hi&gt; de Benoît de Sainte-Maure</title>
-        <title type="sub">Édition partielle et commentaire</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La cinquième mise en prose du <hi rend="i">Roman de Troie</hi> de Benoît de Sainte-Maure</title><title xml:lang="fr" type="sub">Édition partielle et commentaire</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Rochebouet, Anne">Anne Rochebouet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200522.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’histoire de la guerre de Troie, considérée au Moyen Age comme une réalité historique, a inspiré de nombreuses œuvres médiévales, tant
           historiques que littéraires, dont la plus connue est sans doute le <hi rend="i">Roman de Troie</hi> de Benoît de Sainte-Maure, composé par
           un clerc de la cour d’Henri II Plantagenêt vers le milieu du <num>xii<hi rend="sup">e</hi></num> siècle. Ce poème, au succès considérable, a été à son
@@ -66,10 +69,9 @@
           L’ampleur du texte, comparable à celle de son modèle originel, a obligé à n’en donner qu’une édition critique partielle afin de privilégier
           l’étude des sources et notamment les relations avec les autres mises en prose.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La traduction manuscrite de Prose 5</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">La traduction manuscrite de Prose 5</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Description des manuscrits</head>
           <p>Comme l’accent a été mis sur l’étude de la tradition manuscrite de Prose 5, il a paru nécessaire de faire figurer une description
             détaillée des différents manuscrits la renfermant pour éclairer les études ultérieures. Prose 5 a été conservée par quinze manuscrits,
@@ -81,7 +83,7 @@
             du <num>xiv<hi rend="sup">e</hi></num> siècle (vers 1335-40, d’après son iconographie), les autres s’échelonnant des toutes premières années du XV
 <hi rend="sup">e</hi> siècle au tout début du <num>xvi<hi rend="sup">e</hi></num> siècle. Presque tous sont illustrés, souvent richement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Prose 5, la section Troie insérée dans l’<hi rend="i">Histoire ancienne jusqu’à César</hi>
         </head>
           <p>
@@ -114,7 +116,7 @@
             modifications particulières à cette rédaction (suppression des portraits des Troyens) qui ne semblent pas dues à la perspective d’ensemble
             de l’ouvrage.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les rapports entre les manuscrits</head>
           <p>L’étude de la mise en page, des cycles iconographiques et des rubriques a permis d’établir de premiers rapprochements qui ont été
             précisés ensuite par l’analyse du texte. Cinq extraits, répartis tout au long du roman, ont été retenus : le récit de la conquête de la
@@ -130,8 +132,8 @@
             rubrique mentionnant Charles V et un roi d’Espagne, est très proche du manuscrit qui serait la source de tous les manuscrits postérieurs.
             Ces trois manuscrits ont donc été choisis pour contrôler le manuscrit de base.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les sources de Prose 5</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Les sources de Prose 5</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">D’une mise en prose à l’autre : <lb/>les différentes sources de Prose 5</head>
           <p>
             <hi rend="i">Le</hi> Roman <hi rend="i">en vers et ses mises en prose</hi>. – Il existe cinq mises en prose différentes du poème, dont
@@ -155,7 +157,7 @@
             Prose 5 se tourne ensuite de nouveau vers Prose 3, plus proche alors de la trame du poème, en la complétant d’abord avec des ajouts
             provenant du <hi rend="i">Roman de Troie</hi>, puis en une copie fidèle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Compilation, réécriture et création</head>
           <p>
             <hi rend="i">La maîtrise de la compilation. –</hi> L’étude d’un passage précis, le récit de l’enlèvement d’Hélène, a permis de mieux
@@ -173,7 +175,7 @@
             celle de Darès, considérée comme historique. Mais cette perspective historique ne doit pas faire oublier l’évident goût du romanesque qui
             transparaît dans Prose 5, et ces deux angles de lecture seront à considérer dans une étude ultérieure.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les manuscrits de la troisième rédaction : <lb/>une version particulière de Prose 5 ?</head>
           <p>On a pu constater que les manuscrits de la troisième rédaction comportaient des modifications qui leur étaient propres. Certaines sont
             dues à l’insertion de l’ensemble du texte dans une compilation historique plus vaste que l’<hi rend="i">Histoire ancienne</hi> et qui
@@ -186,8 +188,8 @@
             projet défini. Il s’agit d’une version à part entière de Prose 5, et c’est pourquoi les passages variants des parties éditées ont été
             présentés en annexe.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Remarques sur la langue du texte</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Remarques sur la langue du texte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Remarques graphiques et phonétiques, morphologiques, syntaxiques et lexicologiques sur le manuscrit de base</head>
           <p>Ces remarques cherchent à mieux appréhender la date d’écriture et l’origine régionale du manuscrit de base choisi, ainsi qu’à faciliter
             la lecture de l’édition. On a constaté que, si la langue du manuscrit Royal, de manière générale, est visiblement de la France du Nord,
@@ -196,29 +198,26 @@
             à l’extrême fin du <num>xiii<hi rend="sup">e</hi></num> siècle ou au début du <num>xiv<hi rend="sup">e</hi></num> siècle. Il est cependant évident qu’il
             s’agit d’un copiste conservant des usages archaïsants.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Remarques linguistiques diverses sur les manuscrits de contrôle</head>
           <p>Certaines analyses ont été faites sur les manuscrits de contrôle afin de mieux comprendre notamment la logique des variantes
             apportées.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Édition partielle de Prose 5</head>
-        <p>L’édition suit comme manuscrit de base le manuscrit London, British Library, Royal 20 D I contrôlé par les manuscrits Paris, Bibl. nat.
+      </div><div n="5" type="part"><head n="0" type="chapter">Édition partielle de Prose 5</head>
+        <p n="1" type="chapter">L’édition suit comme manuscrit de base le manuscrit London, British Library, Royal 20 D I contrôlé par les manuscrits Paris, Bibl. nat.
           France, fr. 301, London, British Library, Stowe 0054 et Chantilly, Musée Condé, 727. Le relevé des variantes est exhaustif, mis à part les
           variantes orthographiques.</p>
-        <p>Cette édition, vu la longueur de Prose 5, est une édition partielle. On a ainsi préféré éditer le début et la fin du texte, plutôt que
+        <p n="2" type="chapter">Cette édition, vu la longueur de Prose 5, est une édition partielle. On a ainsi préféré éditer le début et la fin du texte, plutôt que
           plusieurs passages sans continuité. L’édition s’arrête ainsi avec l’échec de l’ambassade d’Ulysse et Diomède à Troie avant le début des
           hostilités et reprend avec la mort de Pâris et l’arrivée des Amazones, dernier sursaut avant la chute finale. On a ainsi un aperçu des
           scènes de bataille qui forment la majeure partie de l’œuvre.</p>
-        <p>L’édition est suivie d’un glossaire et d’un index des noms propres.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+        <p n="3" type="chapter">L’édition est suivie d’un glossaire et d’un index des noms propres.</p>
+      </div><div type="conclusion" n="6"><head>Annexes</head>
         <p>Relevé des corrections et ajouts marginaux du manuscrit de base London, British Library, Royal 20 D I. – Relevé des rubriques des treize
           manuscrits de Prose 5 utilisés. – Description des cinq manuscrits de la première rédaction de l’<hi rend="i">Histoire ancienne jusqu’à
             César</hi> contenant le début de Prose 5. – Description des manuscrits contenant tout ou partie de la traduction des <hi rend="i">Héroïdes</hi>. – Édition des passages variants de la troisième rédaction. – Sources des ajouts de Prose 5.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

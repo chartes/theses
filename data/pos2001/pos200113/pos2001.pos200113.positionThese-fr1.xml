@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Tristan Tzara et le livre : ses éditeurs et ses illustrateurs</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Tristan Tzara et le livre : ses éditeurs et ses illustrateurs</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lévy-Bruhl, Hélène">Hélène Lévy-Bruhl</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200113.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si le nom de Tristan Tzara (1889-1963) est indéfectiblement lié au mouvement Dada, dont il a été l’un des principaux animateurs à Zurich
           dès 1916, puis à Paris à partir de 1920, le poète demeure étonnamment méconnu, alors même que son activité a continué après la fin de Dada.
           Certes de nombreuses monographies consacrées au surréalisme évoquent Tristan Tzara; des articles s’intéressent à sa poésie dadaïste et
@@ -76,7 +79,7 @@
           peuvent autoriser quelques hypothèses sur les succès et les échecs des livres du poète; mais le succès se mesure aussi au nombre de
           rééditions, d’anthologies et de traductions.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La correspondance reçue par Tristan Tzara constitue la principale sourcede cette étude ; elle est intégralement conservée, avec les
           manuscrits du poète, à Paris, à la Bibliothèque littéraire Jacques Doucet, et compte plus de quatre mille lettres. Elle a été complétée par
           la consultation des lettres adressées par Tristan Tzara à Pablo Picasso (Paris, Musée Picasso), à Joan Miró (Barcelone, Fondation Miró), à
@@ -88,9 +91,8 @@
           de la vente De la bibliothèque Tristan Tzara: Importante partie de la bibliothèque de Tristan Tzara (1989) est aussi une source importante
           d’information sur les livres du poète.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Tristan Tzara et le livre</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Tristan Tzara et le livre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aperçu sur les livres de Tristan Tzara</head>
           <p>Tristan Tzara a publié cinquante-quatre livres entre 1916 (La Première aventure céleste de M.Antipyrine) et 1963, année de sa mort,
             (Lampisteries, précédées de Sept manifestes Dada). Le rythme d’édition du poète est assez régulier; deux périodes lui sont cependant moins
@@ -99,7 +101,7 @@
             passion qu’il a vouée à une étude de l’œuvre de François Villon. Cette apparente régularité dans la publication ne correspond cependant
             pas tout à fait au rythme d’écriture.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Ecriture et édition des œuvres de Tristan Tzara</head>
           <p>Dans son édition des uvres complètes de Tristan Tzara, Henri Béhar a établi le rythme d’écriture du poète: ce dernier écrit de manière
             régulière de 1916 à 1950, puis son activité s’effondre et devient nulle à partir de 1960. De fait, le rythme d’écriture ne coïncide donc
@@ -124,7 +126,7 @@
             (1916) ,et le recueil posthume, 40 chansons et déchansons. Pour la majorité de ces œuvres non publiées sous forme de volume, Tristan Tzara
             a vainement cherché un éditeur; les efforts sont surtout manifestes pour Faites vos jeux et les textes critiques.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La connaissance du livre et de l’art par Tristan Tzara</head>
           <p>Tristan Tzara n’a pas reçu de formation scolaire qui lui aurait fait connaître les aspects matériels du livre; il acquiert et développe
             ses capacités dans ce domaine en animant des revues, dont Dada, aidé par Marcel Janco et Hans Arp. La «Collection Dada», où le poète édite
@@ -138,8 +140,8 @@
             d’œuvres graphiques aux côtés de ses textes poétiques.</p>
           <p/>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Tristan Tzara et ses peintres</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Tristan Tzara et ses peintres</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Tristan Tzara et le choix de ses illustrateurs</head>
           <p>Les critères qui conditionnent le choix des vingt-trois artistes qui ont «illustré» les livres de Tristan Tzara, parmi lesquels il faut
             citer Hans Arp, Sonia Delaunay, Max Ernst, Louis Marcoussis, Henri Matisse, Joan Miró, Pablo Picasso…, sont variés. La nature du texte à
@@ -156,7 +158,7 @@
             des collaborations entre Tristan Tzara et ses peintres, même si certains artistes, amis du poète, n’ont jamais illustré ses livres, Marc
             Chagall ou Robert Delaunay par exemple.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les voies de la collaboration</head>
           <p>En général, Tristan Tzara est l’instigateur du choix du peintre, mais, dans quelques rares cas (Juan Gris pour Mouchoir de nuages, Jean
             Hugo pour Frère bois), l’éditeur joue un rôle notable. De même Tristan Tzara sert le plus souvent d’intermédiaire entre le peintre et
@@ -175,7 +177,7 @@
             Tristan Tzara sait en général s’adapter à la personnalité et aux envies de ses collaborateurs. C’est en tout cas ce que montre l’examen
             détaillé de ses travaux avec Hans Arp, Joan Miró et Pablo Picasso.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Texte et illustrations: des rapports complexes</head>
           <p>Le terme d’illustration semble relativement impropre à qualifier les œuvres graphiques présentes dans les livres de Tristan Tzara. Les
             gravures et les dessins ne sont d’ailleurs même pas toujours réalisés pour le livre et peuvent préexister. De plus, la diversité des
@@ -201,8 +203,8 @@
             préalable avec l’artiste le programme iconographique. Sans cette liberté de l’artiste, des livres comme Parler seul, illustré par Joan
             Miró, n’auraient jamais pu voir le jour.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Tristan Tzara et le monde de l’édition</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Tristan Tzara et le monde de l’édition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les éditeurs de Tristan Tzara</head>
           <p>Les éditeurs de Tristan Tzara sont nombreux. Si ses trois premiers livres sont à compte d’auteur sous le titre «Collection Dada», les
             recueils suivants sont publiés par des éditeurs. La majorité d’entre eux sont des petits éditeurs spécialisés ou des galeries (Jeanne
@@ -219,7 +221,7 @@
             André Breton lui interdisent de publier aux Editions surréalistes. Après la seconde guerre mondiale, une autre édition échoue, celle de La
             Face intérieure, aux Editions du Sagittaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les voies de la collaboration</head>
           <p>La rencontre entre l’éditeur et le poète ne suit pas systématiquement le même schéma. Tristan Tzara sollicite régulièrement les maisons
             d’édition, mais il arrive aussi que les éditeurs cherchent à inscrire Tristan Tzara à leur catalogue. Il en est ainsi des Cahiers Libres,
@@ -240,7 +242,7 @@
             essaie d’éviter la présence de clauses de préférence dans les contrats. Enfin Tristan Tzara aide parfois ses éditeurs en trouvant des
             souscripteurs ou en servant d’intermédiaire entre les auteurs et les éditeurs, comme chez Bordas.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Deux éditeurs de Tristan Tzara: Pierre Bordas et Pierre-André Benoit</head>
           <p>Pierre Bordas et Pierre-André Benoit ont publié des livres de Tristan Tzara après la seconde guerre mondiale. Les relations de Pierre
             Bordas avec Tristan Tzara sont assez «classiques», bien que marquées par l’amitié, et les entreprises d’édition demeurent commerciales.
@@ -252,8 +254,8 @@
             imprimé sur des volvelles, met un terme à leur collaboration. Ce livre, illustré par Pablo Picasso, est sans doute le volume le plus
             original de Tristan Tzara.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">La diffusion des oeuvres de Tristan Tzara</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">La diffusion des oeuvres de Tristan Tzara</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La diffusion des œuvres de Tristan Tzara</head>
           <p>Les publics de Tristan Tzara dépendent de la nature des livres. Le caractère rare et précieux de certains volumes en font des livres de
             bibliophilie, réservés à des amateurs éclairés et fortunés. Parmi ceux-ci on dénombre des livres de toutes les périodes: de Mouchoir de
@@ -274,7 +276,7 @@
             aussi par le biais de la radiodiffusion. Enfin, par deux fois, le poète organise des expositions, lors de la publication de L’Antitête en
             1949 et celle de De mémoire d’homme en 1950.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La réception des livres et la vie des textes après la publication</head>
           <p>Il est difficile de mesurer le succès des livres de Tristan Tzara. En l’absence de documents financiers, il faut se résigner à utiliser
             les mentions «épuisé» figurant dans les livres. Les recueils de Tristan Tzara se vendent relativement vite. Trois recueils font exception:
@@ -293,9 +295,7 @@
             la diffusion de ses œuvres vers l’étranger. A l’exception de l’édition des Premiers poèmes, en 1933, il ne participe pas à l’élaboration
             des livres édités en langue étrangère, mais se montre sensible aux problèmes de traduction.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>On savait Tristan Tzara poète, il se révèle aussi un fin tacticien et un habile gestionnaire. Toute l’activité qui touche au livre et à sa
           fabrication semble raisonnée, préméditée, voire rationalisée. En effet, il est apparu que Tristan Tzara s’investissait personnellement dans
           la vie du livre. Il crée d’abord autour de lui et du mouvement Dada une véritable dynamique qu’il exploite ensuite à son arrivée à Paris.
@@ -317,10 +317,9 @@
           mort.  Tristan Tzara est donc un excellent «tacticien de la poésie», qui est parvenu à mener une carrière régulière et diversifiée. Il reste
           cependant étonnement méconnu et il serait souhaitable que de nouvelles études lui soient rapidement consacrées.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Catalogue des livres de Tristan Tzara. ­ Tableau des prix et des tirages. ­ Entretien avec Christophe Tzara.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

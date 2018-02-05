@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La maison des écoliers de Laon : étude d’un collège parisien aux &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; et &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La maison des écoliers de Laon : étude d’un collège parisien aux <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num> siècles</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Fabris, Cécile">Cécile Fabris</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200205.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’étude des collèges a participé au renouvellement de l’historiographie universitaire de la seconde moitié du <num>xx<hi rend="sup">e</hi></num>
           siècle ; elle a bénéficié notamment de nouveaux questionnements plus diversifiés, touchant à l’histoire intellectuelle au travers d’une
           meilleure connaissance des bibliothèques, ou à l’histoire sociale par une approche prosopographique. Les monographies, cependant, restent
@@ -61,7 +64,7 @@
           régi par un cadre institutionnel ; un bâtiment doté de revenus qu’il faut gérer ; enfin une communauté de boursiers, dont les activités se
           déroulent surtout hors de la maison.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Plusieurs réorganisations importantes du collège ­ séparation de la fondation primitive en 1324 ou bien réunion à Louis-le-Grand au XVIII
 <hi rend="sup">e</hi> siècle ­ peuvent contribuer à expliquer des lacunes, parfois importantes, dans les archives du collège. Le fonds,
           conservé aux Archives nationales dans les séries H, M, et S pour l’essentiel, reste malgré tout assez riche et diversifié pour permettre
@@ -74,9 +77,8 @@
           fichiers est aussi indispensable, et les rôles de suppliques conservés aux Archives vaticanes représentent notamment une source essentielle.
        </p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Formation d’une institution universitaire</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Formation d’une institution universitaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La lente mise en place d’un nouveau collège</head>
           <p>Comme nombre d’autres établissements du même type fondés au <num>xiv<hi rend="sup">e</hi></num> siècle, le collège de Laon doit son existence à
             des personnages proches du pouvoir royal : un clerc, Guy de Laon, trésorier de la Sainte-Chapelle, et un laïc, Raoul de Presles, seigneur
@@ -88,7 +90,7 @@
             Laon se replie sur la rue du Clos-Bruneau. Il n’y reste cependant que quelques années car en 1340 il s’installe deux rues plus loin dans
             la maison au Lion d’or, léguée par Gérard de Montaigu.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Structure institutionnelle</head>
           <p>En 1327, Guy de Laon dote son collège d’un texte de statuts, relativement concis, mais suffisamment clair et équilibré pour rester en
             vigueur jusqu’à l’époque moderne, avec quelques ajustements, et servir de modèle à d’autres collèges. Lui-même s’inspire largement de
@@ -100,7 +102,7 @@
             collège ont souvent un rôle important, est dotée d’un règlement, destiné surtout à assurer son intégration dans l’établissement. Ce
             dernier n’en a pas moins désormais un visage tout différent, assez original dans l’ensemble des collèges parisiens.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le cadre administratif</head>
           <p>La communauté est placée sous l’autorité directe d’un maître ou principal, chargé du contrôle de la discipline, du suivi des études des
             boursiers, de la représentation de l’établissement dans les affaires de justice, ainsi que du contrôle de la gestion. Cette dernière, dans
@@ -112,8 +114,8 @@
             est introduite au <num>xv<hi rend="sup">e</hi></num> siècle. La communauté elle-même, en la personne de ses boursiers les plus âgés, déjà maîtres
             ès-arts le plus souvent, semble alors acquérir progressivement un pouvoir de décision et de contrôle non négligeable.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Gestion et vie de l’établissement</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Gestion et vie de l’établissement</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Constitution et évolution du patrimoine</head>
           <p>Initialement constitué de 100 livres parisis de rente et de la maison sur la rue du Clos-Bruneau, le patrimoine du collège de Laon - à
             distinguer de la première dotation en faveur des écoliers de Laon et de Presles - s’enrichit rapidement et connaît un perpétuel
@@ -124,7 +126,7 @@
             que des terres. La place des biens au sein du patrimoine est très variable et ils peuvent changer plusieurs fois de statut : assise d’une
             rente, une maison peut ensuite être possédée en propre, avant d’être à nouveau baillée à rente.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Gestion et défense des revenus</head>
           <p>La gestion est une activité essentielle pour le collège car c’est elle qui assure les revenus nécessaires au fonctionnement de la
             maison. Le procureur y consacre une grande partie de son temps, que ce soit pour la tenue des comptes, qui fait l’objet d’une procédure
@@ -136,7 +138,7 @@
             la maison et l’accomplissement de sa mission apparaît aussi dans les pratiques judiciaires. Nombreuses et très fréquentes, les démarches
             auprès du Châtelet et du Parlement visent toujours à défendre les revenus.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Vivre au collège</head>
           <p>Les comptes permettent d’appréhender la vie quotidienne au sein de la maison, même si certains de ses aspects restent difficiles à
             cerner. Les conditions matérielles elles-mêmes, organisation des bâtiments ou répartition des chambres par exemple, ne sont pas toujours
@@ -147,8 +149,8 @@
             complément des leçons suivies à l’extérieur, et l’on ne peut exclure que certaines se déroulent dans le collège même comme le donne à
             penser une mention des comptes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La communauté des boursiers</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La communauté des boursiers</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le maître et les écoliers du diocèse de Laon à Paris</head>
           <p>
             <hi rend="i">Composition de la communauté</hi>. ­ Le recrutement des boursiers est le fait de l’évêque de Laon, supérieur de la maison, et
@@ -174,7 +176,7 @@
             place est mieux définie dans la seconde moitié du <num>xv<hi rend="sup">e</hi></num> siècle, sont souvent des étudiants, mais peuvent aussi être des
             Laonnois qui, sans poursuivre d’études, considèrent le collège comme un “ relais ” à Paris.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les boursiers hors de la maison : études et carrières</head>
           <p>Reflet de la diversité des bourses, les études des boursiers se répartissent entre toutes les facultés parisiennes, celle des arts
             prédominant largement. Lorsqu’il est possible de calculer les “ taux de réussite ” des boursiers, il apparaissent très élevés : plus de
@@ -183,7 +185,7 @@
             surtout carrière bénéficiale pour la plupart d’entre eux. Mais d’autres mettent en valeur la formation plus spécifique qu’ils ont reçue,
             et les médecins ont souvent des parcours particuliers, au service du roi ou des princes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le réseau de relations du collège</head>
           <p>Le collège ne vit pas replié sur lui-même et se trouve au contraire au centre d’un réseau de relations assez vaste, bien que centré sur
             quelques points forts. Après l’avoir quitté, les boursiers maintiennent souvent un lien avec l’établissement, qui peut être
@@ -193,20 +195,17 @@
             bourgeois parisiens. Les boursiers peuvent aussi à titre individuel participer à d’autres réseaux, particulièrement profitables lorsqu’ils
             se trouvent sous la protection d’un prince ou d’un prélat.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Tout en conservant une part d’irréductible originalité liée à son histoire propre, le collège de Laon apparaît comme un établissement “
           ordinaire ”. Bien organisé tout en sachant s’adapter aux circonstances, suffisamment solide pour surmonter la crise du premier XV <hi rend="sup">e</hi> siècle, il est également capable de modifier son rôle lorsque la communauté évolue. La plupart des facettes de son
           existence sont très comparables à ce qui existe ailleurs, certains aspects ­ en particulier sur le fonctionnement interne de la communauté ­
           étant plus originaux. Cependant, on peut penser qu’ils n’apparaissent tels qu’en raison du manque de points de comparaison, et qu’une
           meilleure connaissance des autres petits collèges ramènerait ces questions au même constat de “ relative banalité ”.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Séparation des communautés. ­ Statuts. ­ Textes des fondations ultérieures. ­ Modification des statuts. ­ Lettres de commission. ­ Le
           déménagement. ­ Comptes pour 1351-1352, 1374-1375, 1456-1457, 1475-1476, 1476.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

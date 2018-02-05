@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le sceptre contre la crosse</title>
-        <title type="sub">La production favorable à la régale (1673-1682)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le sceptre contre la crosse</title><title xml:lang="fr" type="sub">La production favorable à la régale (1673-1682)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Wagner, Blandine">Blandine Wagner</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200929.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Quand la querelle de la régale a troublé les relations entre le roi de France et le Saint-Siège, elle a offert aux chantres de l’autorité
           royale l’occasion de préciser les limites qu’ils plaçaient entre le pouvoir du pape et celui du roi. Au nom du droit de régale, le roi
           percevait les revenus d’un évêché vacant et nommait aux bénéfices sans charge d’âmes qui en dépendaient. Grâce aux travaux des pères
@@ -66,7 +69,7 @@
           terrain diplomatique, et les controverses autour de la production favorable à la régale ne sont plus que des échos assez affaiblis de la
           querelle qui a agité les années 1673-1682.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’histoire de la littérature régaliste peut s’appuyer sur des sources variées et abondantes. La Bibliothèque nationale de France conserve
           plusieurs textes favorables à la régale, manuscrits et imprimés. D’autres ont été repérés aux Archives nationales, dans les sous-séries G
 <hi rend="sup">8</hi> 82 et 83 qui abritent des papiers de Charles Maurice Le Tellier, et aux archives Vaticanes (fonds de la nonciature
@@ -80,9 +83,8 @@
           ensemble de sources privilégiées pour mesurer la portée des interventions des congrégations romaines dans l’histoire de la production
           régaliste.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Auteurs régalistes et pouvoir royal</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Auteurs régalistes et pouvoir royal</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’influence du pouvoir royal sur la production favorable à la régale</head>
           <p>La production régaliste compte à peine une dizaine d’imprimés dans les années 1673-1682. La plupart des textes, même quand ils semblaient
             promis à la publication, sont restés manuscrits. Cette situation trahit une intervention royale : après avoir dans un premier temps
@@ -93,7 +95,7 @@
             second lieu, les Français ne veulent pas remettre au pape un texte officiel en défense du droit de régale, de peur que le pape n’en tire
             occasion pour prétendre exercer une quelconque juridiction sur les affaires de France.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">1673-1680 : soutenue par la cour de Versailles, la production régaliste <lb/>milite pour l’extension de la régale aux
             abbayes</head>
           <p>L’histoire de la production favorable à la régale, qui se calque sur les événements diplomatiques, peut se diviser en deux grandes
@@ -105,7 +107,7 @@
             obtenir du roi un édit imposant la régale aux abbayes et non plus aux seuls évêchés. Derrière cette campagne, la présence des ministres du
             roi, et particulièrement celle de Colbert, se fait clairement sentir.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">1680-1682 : l’enjeu représenté à Rome par la régale <lb/>mobilise les efforts des Français</head>
           <p>À partir de 1680, la situation s’envenime sur le plan diplomatique : Rome menace Louis XIV de sanctions ecclésiastiques et la
             congrégation du Saint-Office multiplie les condamnations. Pour la production régaliste également, la date de 1680 marque une rupture et
@@ -117,7 +119,7 @@
             d’encourager l’extension de ce droit en considérant son établissement comme acquis, mais il leur faut en défendre les fondements
             mêmes.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les relais : magistrats et clergé</head>
           <p>À l’origine des traités ou des mémoires sur la régale, on trouve la plupart du temps l’initiative des ministres de Louis XIV, en France
             ou à Rome. Ils peuvent s’appuyer sur des relais efficaces constitués par la magistrature et le clergé. Les magistrats ont toujours été les
@@ -131,8 +133,8 @@
             diplomatique. Il compte sur l’opposition de ses magistrats à tout accommodement avant de donner son propre accord aux propositions de
             l’assemblée, dans le but de souligner la valeur de la concession faite au clergé.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Étude de la littérature régaliste</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Étude de la littérature régaliste</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aperçu général</head>
           <p>La production régaliste est constituée, dans sa très grande majorité, de manuscrits. Sur cent dix-neuf textes recensés, à peine une
             demi-douzaine sont des imprimés : les directives données par le pouvoir royal pour empêcher les publications sur le sujet ont été
@@ -151,7 +153,7 @@
             se situe au sein même de la collation des bénéfices, entre la nomination du roi, qui ne touche que le domaine temporel, et la mission
             ecclésiastique donnée par l’évêque qui relève pour sa part du spirituel.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Prouver le bien-fondé d’un droit royal : <lb/>l’argumentation « parlementaire » en faveur de la régale</head>
           <p>La distinction établie entre la pensée des évêques et celle des magistrats comporte une part d’arbitraire, puisqu’il n’est pas exclu que
             certains évêques comme le cardinal d’Estrées partagent des théories dont la substance s’est formée au sein du Parlement, ou que quelques
@@ -166,7 +168,7 @@
             Comme toutes les églises du royaume sans exception relèvent de ces quatre droits, la régale s’étend de manière universelle sur les
             diocèses de France.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Évêques et magistrats, deux visions opposées ?</head>
           <p>Alors que les théories des magistrats sur les fondements de la régale présentent un ensemble plutôt homogène, les avis des évêques
             offrent davantage de divergences. Les membres du clergé abordent en effet la question sous un angle moins juridique et plus pratique que
@@ -182,7 +184,7 @@
             plupart des prélats acceptent par exemple la nouvelle distinction établie à la fin du <num>xvi</num>
 <hi rend="sup">e</hi> siècle entre le domaine spirituel et le domaine temporel dans le droit de régale.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La rhétorique au service de l’autorité royale</head>
           <p>Pour les magistrats, la querelle de la régale est surtout l’occasion d’aborder la délicate question des relations entre le pouvoir royal
             et le pouvoir pontifical. Dans un premier temps, les régalistes se penchent sur l’autorité du pape et affirment que l’intervention du pape
@@ -193,8 +195,8 @@
             subordonné à l’Église, de même en tout ce qui n’est pas de foi, l’Église est subordonnée à l’État » ( <hi rend="i">Dissertations de
               l’autorité légitime des rois en matière de régale</hi>, Cologne, 1682, p. 149).</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Diffusion et réception des écrits régalistes</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Diffusion et réception des écrits régalistes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Diffusion et circulation des écrits et des thèmes régalistes</head>
           <p>Les Français comme les Italiens manifestent un vif intérêt pour une littérature qui met en jeu le pouvoir du pape et celui du roi : les
             livres qui parviennent à l’impression connaissent une bonne diffusion. En revanche, à peine un quart des textes manuscrits ont circulé à
@@ -206,7 +208,7 @@
             n’avait donc aucune raison d’intervenir en France. De leur côté, les Anglais considèrent la question avec intérêt puisqu’ils s’interrogent
             sur les possibilités de schisme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les réactions suscitées par la production régaliste</head>
           <p>Si les auteurs favorables à la régale citent sans cesse les juristes du <num>xvi</num>
 <hi rend="sup">e</hi> et de la première moitié du <num>xvii</num>
@@ -217,7 +219,7 @@
             cardinal De Luca. À Rome, la majeure partie des polémiques sur la régale se sont limitées à ces deux textes : pour le reste, les débats
             ont la plupart du temps pu être étouffés dans l’œuf grâce à la politique mise en œuvre par le pouvoir royal.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les condamnations de l’Index et du Saint-Office</head>
           <p>Cependant, outre l’outil classique de la réfutation, la cour pontificale dispose d’autres moyens éprouvés pour faire entendre sa voix
             dans les différents débats : les censures infligées par les congrégations romaines, principalement celles du Saint-Office et de l’Index,
@@ -241,9 +243,7 @@
             qui règle les affaires de la régale, sur le plan diplomatique – rédaction et envoi des brefs – comme sur le plan plus théologique que
             constitue la condamnation des ouvrages régalistes.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Louis XIV et son entourage ont tout fait pour empêcher l’éclosion d’une guerre de plumes. En fin de compte, les débats provoqués par les
           écrits régalistes ont été beaucoup plus sereins que la déclaration de 1673 et les brefs du pape ne le laissaient prévoir. Comme la politique
           royale, la politique pontificale à l’égard de la production régaliste est restée essentiellement liée aux aléas diplomatiques et c’est
@@ -257,11 +257,10 @@
         <p>La querelle a pu exercer une influence durable sur les réflexions sur le pouvoir spirituel et le pouvoir temporel. Par la suite, les
           auteurs qui s’intéressent à la question de l’autorité aiment à s’inspirer des idées développées à la faveur du conflit de la régale.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édits royaux sur la régale. — Propositions tirées de l’arrêt du Parlement du 2 août 1679 et qualifications des censeurs du Saint-Office. —
           Avis d’Achille de Harlay, Chrétien François de Lamoignon et Denis Talon sur les propositions de l’assemblée du clergé (janvier 1682).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Poésie française et métrique latine chez Michel de Boteauville ( &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;ca.&lt;/hi&gt;1435-ap. 1500)</title>
-        <title type="sub">Édition critique bilingue latin-français du poème &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Les Misères de la guerre&lt;/hi&gt;( &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Carmen de miseriis
-          guerre&lt;/hi&gt;).</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Poésie française et métrique latine chez Michel de Boteauville ( <hi rend="i">ca.</hi>1435-ap. 1500)</title><title xml:lang="fr" type="sub">Édition critique bilingue latin-français du poème <hi rend="i">Les Misères de la guerre</hi>( <hi rend="i">Carmen de miseriis
+          guerre</hi>).</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Pairault, Louis-Gilles">Louis-Gilles Pairault</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200030.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Lorsque l’on évoque les vers mesurés en français, on pense généralement à cette période riche en inventions littéraires de toutes sortes
           que fut la Renaissance, et particulièrement au poète de la Pléiade Jean-Antoine de Baïf, qui s’y essaya dans plusieurs œuvres. S’il fut le
           plus célèbre, Baïf ne fut néanmoins pas le seul à écrire des vers métriques français : on peut citer aussi Etienne Jodelle, autre poète de
@@ -68,10 +71,9 @@
           l’appréciation de chacun, il n’en demeure pas moins que sa cohérence théorique et systémique en fait, plus qu’une élucubration passagère,
           une véritable tentative de réforme poétique, qui mérite une place particulière dans l’histoire de notre littérature.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Michel de Boteauville et son œuvre</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Michel de Boteauville et son œuvre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’auteur</head>
           <p>On sait bien peu de choses de Michel de Boteauville et nos connaissances découlent principalement de ce que le poète a bien voulu nous
             dévoiler dans ses œuvres. Probablement d’origine normande, Boteauville était fils d’un vigneron aisé installé en Ile-de-France. Il fit ses
@@ -82,7 +84,7 @@
             traces de lui après cette date, ce qui incite à supposer qu’il mourût sans doute peu de temps après sans avoir pu faire une publicité
             efficace de son œuvre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’œuvre</head>
           <p>L’œuvre de Michel de Boteauville se compose du poème <hi rend="i">De</hi>
             <hi rend="i">miseriis guerre</hi>
@@ -99,7 +101,7 @@
             la guerre, que l’auteur attribue à l’inspiration divine, et les avantages qui en découlent pour tous, et s’achève sur un éloge de la paix
             destiné aux jeunes gens qui n’auraient pas connu la guerre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les manuscrits</head>
           <p>Les œuvres de Michel de Boteauville sont transmises par cinq manuscrits. Quatre manuscrits conservent le poème latin, mais l’un des
             quatre ne livre qu’un bref extrait ; le poème français et le traité introductif ne sont connus que par un seul manuscrit. Quatre de ces
@@ -124,8 +126,8 @@
             quelqu’un qui ignorait certainement l’existence de <hi rend="i">A</hi> et de <hi rend="i">B</hi>. Quant à <hi rend="i">P</hi>, il semble
             que personne avant Antoine Thomas en 1883 n’ait songé à le rapprocher du poème latin dont il est une traduction originale.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Commentaire</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La Guerre de Cent ans dans l’œuvre de Michel de Boteauville</head>
           <p>On peut remarquer que le texte français est souvent plus disert en ce qui concerne les références historiques : il donne plus de noms
             propres et raconte plus d’événements car il a été écrit vingt ans après le poème latin. Comme Michel de Boteauville n’a jamais connu les
@@ -139,7 +141,7 @@
             anglaise plus pénible encore. Boteauville fut donc un témoin des horreurs de la guerre, qu’il décrit par accumulation de détails souvent
             cruels et parfois crus. Sans doute excessive, partiale et partielle, cette description garde la valeur d’un témoignage.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La langue et l’inspiration de Michel de Boteauville</head>
           <p>Michel de Boteauville écrivit à la fin du <num>xv<hi rend="sup">e</hi></num>  siècle, mais ses études intervinrent dans un contexte intellectuel
             différent : il semble ignorer totalement les derniers événements intellectuels et littéraires et ses références demeurent largement <hi rend="i">médiévales</hi>, celles de l’écolier parisien du milieu du <num>xv<hi rend="sup">e</hi></num>  siècle. On pourrait dire bien du mal de la
@@ -163,7 +165,7 @@
             états du royaume. Plus globalement, on peut inscrire Les <hi rend="i">Misères de la guerre</hi> de Boteauville dans une longue tradition de
             complaintes et de récriminations contre la guerre, du <hi rend="i">Tragicum argumentum</hi> de François de Montebelluna aux <hi rend="i">Tragiques</hi> d’Agrippa d’Aubigné, en passant par Jean Régnier ou le <hi rend="i">Discours des misères de ce temps</hi> de Ronsard.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’art poétique de michel de Boteauville</head>
           <p>On peut dire de la nouvelle poétique de Michel de Boteauville qu’elle est <hi rend="i">révolutionnaire</hi>, et en même temps
             parfaitement réactionnaire au sens exact du mot : il ignore ou refuse en effet le fait que les langues vulgaires puissent être régies par
@@ -190,16 +192,14 @@
             classique alternance régulière des rimes masculines et féminines n’est-elle pas très éloignée de celle de vers accentués sur la pénultième
             (dans le cas de l’hexamètre) et sur la dernière syllabe (dans le cas du pentamètre).</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>Michel de Boteauville a ainsi le mérite d’avoir rendu possible ou du moins envisageable une poésie rythmique française, à l’instar de ce
           que sont les poésies modernes de plusieurs autres langues européennes, une poésie affranchie de la tyrannie de la rime mais tout de même
           quelque peu réglementée, et qui aurait peut-être pu se faire une place, entre poésie <hi rend="i">classique</hi> et vers libres. Michel de
           Boteauville fut un précurseur oublié de notre littérature dans un projet à la fois inaccessible et fascinant auquel on s’essaya depuis très
           souvent.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="5"><head>Édition</head>
         <p>Le texte français suit fidèlement le manuscrit <hi rend="i">P</hi>. L’établissement du texte latin repose sur <hi rend="i">A</hi>, qui est
           plus complet et plus fidèle par rapport au texte français de <hi rend="i">P</hi> et qui présente des mentions marginales d’un grand intérêt
           pour la compréhension et le découpage du texte.</p>
@@ -213,7 +213,6 @@
           opposition aux syllabes brèves ou indéterminées, ceci afin que la lecture mesurée se fasse pour ainsi dire de <hi rend="i">soi-même</hi> au
           premier coup d’œil.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le féminisme de Cécile Brunschvicg (1877-1946)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le féminisme de Cécile Brunschvicg (1877-1946)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Formaglio, Cécile">Cécile Formaglio</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200615.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Ces dernières années, portées par le développement de l’histoire des femmes et par une demande sociale et politique forte, les études en
           histoire du féminisme se sont multipliées, nées de la volonté de rendre visible le rôle des femmes dans l’histoire, qu’ont manifestée les
           féministes des années 1970, dans leur recherche d’une identité et d’une légitimité pour leur mouvement, même si on peut déplorer
@@ -82,7 +85,7 @@
           Brunschvicg ne se veut donc pas biographique, une approche chronologique y sera présente aussi, car elle est primordiale pour expliquer les
           origines et l’évolution de l’engagement féministe de celle-ci, ainsi que l’influence de son milieu et de ses origines bourgeoises.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les principales sources manuscrites de cette étude sont constituées par le fonds Brunschvicg, conservé au Centre des archives du féminisme
           d’Angers. Ces archives font partie des archives d’institutions et de particuliers français, pillées par les Allemands durant l’Occupation,
           puis récupérées par les Russes, qui les considérèrent comme des réparations de guerre en 1945 et les conservèrent à Moscou. Ces fonds, dits
@@ -101,14 +104,13 @@
           constituent les archives Marie-Louise Bouglé à la Bibliothèque historique de la Ville de Paris, le fonds Marcelle Legrand-Falco au Musée
           social, le fonds Jane Misme à la Bibliothèque Marguerite Durand.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La doctrine de l’égalité des sexes : <lb/>aux origines d’un engagement public</head>
-        <p>Il convient en premier lieu de s’attarder sur les origines et les fondements de l’engagement féministe de Cécile Brunschvicg. Il existe en
+          <div n="3" type="part"><head n="0" type="chapter">La doctrine de l’égalité des sexes : <lb/>aux origines d’un engagement public</head>
+        <p n="1" type="chapter">Il convient en premier lieu de s’attarder sur les origines et les fondements de l’engagement féministe de Cécile Brunschvicg. Il existe en
           effet différentes façons d’être féministe. Cela implique d’étudier tout d’abord la façon dont elle a été amenée à adhérer au mouvement,
           comment elle a adopté et orienté les principes d’action et les moyens de propagande qui étaient ceux du féminisme réformiste. Tout
           engagement féministe présuppose par ailleurs l’adhésion à la doctrine de l’égalité des sexes et il est important de comprendre la façon dont
           Cécile Brunschvicg concevait les relations entre les sexes au sein de la société pour saisir la portée de ses autres revendications.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Les racines d’un engagement féministe durable</head>
           <p>Les origines sociales et l’éducation traditionnelle de Cécile Brunschvicg ne la destinaient pas à adhérer au mouvement féministe. C’est
             son expérience philanthropique et sa prise de conscience des difficultés particulières rencontrées par les femmes qui l’amènent à se
@@ -122,7 +124,7 @@
             et patriote, qui n’est pas antithétique avec une forte conscience internationale, élaborée au sein des associations féministes
             internationales comme le Conseil International des Femmes et l’Alliance Internationale des Femmes pour le Suffrage des Femmes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Un féminisme intégrateur et consensuel</head>
           <p>Les réseaux de relations où figurent en bonne place les plus hauts dirigeants de la République et les méthodes de propagande prudentes et
             légalistes, le refus de toute action directe de Cécile Brunschvicg sont en parfaite adéquation avec un mouvement féministe réformiste,
@@ -131,7 +133,7 @@
             défendu malgré les dissensions qui se faisaient jour à ce sujet au sein du mouvement —, est tactique mais constitue surtout pour Cécile
             Brunschvicg un des éléments constitutifs du projet éducatif féministe.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Construire une nouvelle identité féminine</head>
           <p>La conscience de genre est au fondement même de tout engagement féministe. La nouvelle identité féminine souhaitée par Cécile
             Brunschvicg est porteuse à la fois de changements susceptibles de bouleverser l’organisation de la société, mais aussi de représentations
@@ -145,8 +147,8 @@
             auprès des militantes en tant que présidente de l’UFSF, mais aussi en tant que directrice de <hi rend="i">La Française</hi>à partir de
             1926.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Accéder à la citoyenneté sociale</head>
-        <p>Les revendications sociales de Cécile Brunschvicg ont aussi directement été influencées par la doctrine féministe. Le mouvement féministe
+      </div><div n="4" type="part"><head n="0" type="chapter">Accéder à la citoyenneté sociale</head>
+        <p n="1" type="chapter">Les revendications sociales de Cécile Brunschvicg ont aussi directement été influencées par la doctrine féministe. Le mouvement féministe
           et le mouvement social entretiennent en effet des rapports très étroits. La conquête des droits sociaux par le développement d’une
           législation spécifique, par la défense du droit au travail des femmes ou par l’amélioration des conditions de travail, a été au cœur même
           des revendications féministes. Puisque les droits politiques leur étaient inaccessibles, l’acquisition ou la préservation de leurs droits
@@ -156,7 +158,7 @@
           droits sociaux, comme celui du droit au travail, l’élaboration d’une législation sociale à même d’aider et de protéger les femmes, mais
           aussi par la conquête d’un champ d’action : celui de la lutte contre les fléaux sociaux. L’engagement pacifiste enfin de Cécile Brunschvicg
           obéit à la même volonté de proposer à la société une nouvelle orientation et constitue une forme d’accès à la sphère publique.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Défendre la liberté économique des femmes : <lb/>le droit au travail</head>
           <p>La défense du droit au travail des femmes est une des revendications centrales du féminisme de Cécile Brunschvicg. En tant que présidente
             de la section Travail du CNFF, elle a été amenée à définir les rôles respectifs des associations féministes et des organisations
@@ -166,7 +168,7 @@
             féministes, à une législation protectrice du travail féminin, à condition que celle-ci ne constitue pas une atteinte à la liberté du
             travail.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Améliorer la situation sociale des femmes</head>
           <p>Cécile Brunschvicg a montré très tôt un intérêt pour l’action sociale en participant à des œuvres philanthropiques. Son expérience de
             visiteuse sociale, qui lui a montré la nécessité d’agir de manière plus rationnelle et à l’échelle nationale, lui a rapidement donné la
@@ -177,7 +179,7 @@
             en soutenant le développement d’une législation destinée à protéger la maternité ; leur condition de femmes colonisées, en cherchant à
             faire progresser la situation de la femme indigène.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Lutter contre les fléaux sociaux</head>
           <p>Lutter contre les « fléaux sociaux » est un des principaux objectifs des féministes à partir du début de la première guerre mondiale. Il
             s’agit aussi pour elles de démontrer une nouvelle fois ce que pourrait être l’apport des femmes à la vie publique et de mettre en pratique
@@ -188,7 +190,7 @@
             ce qu’elle conçoit la moralité aussi comme une question politique, fondement de la résolution du problème social, inséparable dans les
             années trente de la défense de la démocratie.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Pacifier le monde : une revendication utopiste ?</head>
           <p>Ce n’est qu’après la première guerre mondiale que Cécile Brunschvicg s’investit dans le mouvement pacifiste, à partir de juillet 1919
             lorsqu’elle participe à la création de l’Union Féminine pour la Société des Nations. Le pacifisme qu’elle y développe, pacifisme prudent
@@ -202,8 +204,8 @@
             n’est donc véritablement qu’à partir de 1938 qu’elle se résout à une remise en cause profonde de ses revendications pacifistes et à
             participer à l’organisation des femmes dans l’optique d’un conflit.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les droits politiques : <lb/>de la revendication à la participation</head>
-        <p>La conquête des droits politiques est au cœur de l’engagement féministe. En distinguant une citoyenneté sociale et une citoyenneté
+      </div><div n="5" type="part"><head n="0" type="chapter">Les droits politiques : <lb/>de la revendication à la participation</head>
+        <p n="1" type="chapter">La conquête des droits politiques est au cœur de l’engagement féministe. En distinguant une citoyenneté sociale et une citoyenneté
           politique, la Révolution française a contribué à exclure les femmes de cette dernière, phénomène qui s’est accentué en 1848 avec
           l’instauration du suffrage universel, tandis qu’en contrepartie le rôle social des femmes était de plus en plus reconnu. De ce fait, en
           raison de cette exclusion, et même si les femmes avaient la possibilité de jouer un rôle politique au sens le plus étroit du terme, dans les
@@ -213,7 +215,7 @@
           étiquettes différentes et à tous les niveaux de la vie publique : en tant que féministe, secrétaire générale puis présidente de la plus
           importante association suffragiste de son époque, en tant que membre du Parti radical à partir de 1924 et en tant que membre du gouvernement
           de Front populaire de Léon Blum.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">« De l’opportunité du suffrage des femmes »</head>
           <p>Les arguments développés par Cécile Brunschvicg en faveur du suffrage des femmes n’ont rien d’original dans le contexte d’un mouvement
             féministe réformiste bien implanté et qui s’est plus investi dans l’action que dans le renouvellement de sa doctrine. C’est surtout sur la
@@ -225,7 +227,7 @@
             renforcement de l’exécutif et la constatation d’un certain échec de la démocratie représentative, Cécile Brunschvicg reste cependant
             fidèle jusqu’à la Libération à la revendication du suffrage universel.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Féministe dans un parti anti-féministe : <lb/>Cécile Brunschvicg au Parti radical</head>
           <p>L’adhésion de Cécile Brunschvicg au Parti radical en 1924 obéit surtout à des considérations stratégiques, même si les radicaux
             constituent sa famille politique naturelle : il s’agit à la fois pour les femmes de faire leur apprentissage politique, mais aussi de
@@ -237,7 +239,7 @@
             qu’elle montre à l’égard de son succès électoral, les jugements qu’elle porte sur l’inefficacité de l’organisation française des partis
             montrent que c’est avant tout pour servir la cause féministe qu’elle est entrée au Parti radical.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Cécile Brunschvicg au cœur de l’État</head>
           <p>L’activité de Cécile Brunschvicg au gouvernement, au delà de son action au sous-secrétariat d’État à l’Éducation nationale de juin 1936 à
             juin 1937, se déploie jusqu’aux premiers mois de la seconde guerre mondiale au sein du Conseil supérieur de la protection de l’enfance et
@@ -247,9 +249,7 @@
             révèlent aujourd’hui ses réticences, les difficultés qu’elle a rencontrées pour mener de front son activité féministe et son activité de
             ministre.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Absent longtemps de l’histoire institutionnelle, le féminisme l’est à plus forte raison de la mémoire collective. Le cas de Cécile
           Brunschvicg, relativement méconnue, victime peut être plus que certaines autres militantes de la neutralisation qui a touché le féminisme,
           est particulièrement symptomatique de ce phénomène. Les raisons de cet oubli sont intéressantes à interroger. Cécile Brunschvicg est certes
@@ -257,10 +257,9 @@
           des mesures d’ordre juridique, mais sa présence, sa voix écoutée, la variété de ses engagements en font une figure importante de la vie
           politique et sociale de la première moitié du <num>xx<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition de quelques textes de conférence et d’un choix de correspondance de Cécile Brunschvicg.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

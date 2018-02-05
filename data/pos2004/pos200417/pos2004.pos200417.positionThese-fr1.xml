@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les saluts du Saint-Sacrement. Liturgie et musique en France (1600-1774)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les saluts du Saint-Sacrement. Liturgie et musique en France (1600-1774)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Meunier, Clément">Clément Meunier</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200417.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Exercices de dévotion comprenant des chants en présence du Saint-Sacrement exposé, les saluts du Saint-Sacrement n’apparaissent pas en
           France sous leur forme moderne avant le début du <num>xvii<hi rend="sup">e</hi></num> siècle. Emblématiques du grand essor de la piété eucharistique
           qui fait suite au concile de Trente, ils rencontrent un succès et une diffusion considérable qui en font une des cérémonies les plus
@@ -64,7 +67,7 @@
           de délimiter son répertoire et de la replacer dans le paysage dévotionnel de l’époque moderne. Il devient ainsi possible d’expliquer les
           raisons du succès durable des saluts du Saint-Sacrement.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Pour une étude historique, religieuse et musicale des saluts du Saint-Sacrement, il convient de multiplier et de confronter des types de
           sources très différents. Les sources manuscrites consultées sont issues pour la plupart de fonds d’archives et de bibliothèques parisiennes.
           Au Centre historique des Archives nationales, le dépouillement des registres de la série LL (monuments ecclésiastiques) a été
@@ -76,9 +79,8 @@
           d’érudition ecclésiastique, mémoires et journaux que biographies de dévots célèbres, almanachs, récits de voyages ou martyrologes de
           paroisses.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La diffusion des saluts (1600 ­ vers 1670)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La diffusion des saluts (1600 ­ vers 1670)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Origine des saluts et des dévotions eucharistiques</head>
           <p>Les origines médiévales des saluts du Saint-Sacrement sont complexes. Jusqu’au <num>xvii<hi rend="sup">e</hi></num> siècle, les différentes
             parties constitutives de la cérémonie existent sans être réunies. Liée à la diffusion de la célébration de la Fête-Dieu, l’exposition du
@@ -91,7 +93,7 @@
             l’ostensoir, vase liturgique apparu au <num>xiv<hi rend="sup">e</hi></num> siècle, prend de plus en plus souvent la forme caractéristique du soleil.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Norme et rituel</head>
           <p>Les livres liturgiques et les décrets romains n’imposent pas de norme pour le déroulement des saluts du Saint-Sacrement. Ils donnent
             cependant de nombreuses règles concernant l’exposition et la bénédiction du Saint-Sacrement. En France, les cérémonials et les rituels
@@ -99,7 +101,7 @@
             Le déroulement, la durée et les chants qui les composent varient considérablement en fonction des lieux. On en célèbre partout à la
             Fête-Dieu et durant son Octave, ainsi que lors des prières des Quarante-heures.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Diffusion à Paris et en France</head>
           <p>L’étude de quelques cas précis, tels que les paroisses parisiennes de Saint-Sulpice et de Saint-Jacques-de-la-Boucherie, permet de
             montrer qu’en dépit de rythmes différents de diffusion des saluts du Saint-Sacrement, ceux-ci prennent au cours du XVII <hi rend="sup">e</hi> siècle une importance fondamentale dans la vie religieuse des paroisses et des couvents, surtout dans les villes. Ils tiennent
@@ -110,15 +112,15 @@
             essentiel dans ce mouvement. Pour les nombreux saluts qui y sont célébrés, il est besoin d’un nouveau répertoire adapté aux capacités
             techniques des chanteuses : les petits motets remplissent ce rôle.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Fastes et polémiques (vers 1670 ­ vers 1720)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Fastes et polémiques (vers 1670 ­ vers 1720)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Réticences et polémiques</head>
           <p>La multiplication des expositions du Saint-Sacrement suscite de fréquentes oppositions de la part de certains évêques et de nombreux
             ecclésiastiques. Le principal détracteur de ces pratiques, le curé Jean-Baptiste Thiers, s’indigne des nombreux abus qui y sont liés.
             Jansénistes et gallicans partagent largement ces idées dont l’influence se fait largement sentir dans nombre de diocèses. La virulence de
             cette réaction témoigne cependant du succès que remportent alors les cérémonies d’exposition du Saint-Sacrement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Norme et réalité</head>
           <p>À la fin du <num>xvii<hi rend="sup">e</hi></num> siècle et au début du siècle suivant, la diffusion des saluts se poursuit largement, notamment
             dans les campagnes. Les sources normatives concernant la cérémonie se diversifient. Le répertoire des saluts s’élargit considérablement.
@@ -129,7 +131,7 @@
             parisien, les saluts de la composition de Paolo Lorenzani suscitent même le scandale à la fin du siècle. Un concert de reproches s’élève
             contre ces cérémonies jugées trop proches des fastes de l’opéra.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les saluts à la Chapelle royale</head>
           <p>À Versailles, la communauté des Lazaristes qui dessert le château est chargée de la célébration des nombreux saluts chantés en
             plain-chant. Lors de la Fête-Dieu et de son Octave, les musiciens de la Chapelle-Musique du roi se joignent à eux et exécutent au cours de
@@ -137,8 +139,8 @@
             XIV assiste très régulièrement aux saluts du Saint-Sacrement célébrés à la Chapelle, en présence d’un public de cour nombreux et désireux
             d’être vu du roi.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Liturgie et concert (vers 1720 ­ 1774)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Liturgie et concert (vers 1720 ­ 1774)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Continuités et changements</head>
           <p>Au cours du <num>xviii<hi rend="sup">e</hi></num> siècle, malgré la poursuite de la diversification des sources normatives concernant les saluts,
             le déroulement de la cérémonie n’évolue guère et connaît toujours la même diversité. Les querelles autour de l’exposition fréquente
@@ -146,7 +148,7 @@
             fondations. Faisant l’objet de moins en moins de fondations de la part des fidèles, les saluts continuent pourtant d’être célébrés au
             frais des fabriques et des confréries des églises.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Musique religieuse, musique de concert</head>
           <p>A la suite du mouvement amorcé à la fin du <num>xvii<hi rend="sup">e</hi></num> siècle, la musique religieuse se sécularise largement au cours du
             <num>xviii<hi rend="sup">e</hi></num> siècle. L’épisode parisien de la Régence, qui met à la disposition du public la Chapelle-Musique au cours des
@@ -155,7 +157,7 @@
             un répertoire spécifique aux saluts se maintient, destiné avant tout aux couvents de religieuses. À Saint-Cyr par exemple, Nicolas
             Clérambault ajoute ses compositions à celles de Nivers.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La Chapelle royale sous Louis XV</head>
           <p>À Versailles, Louis XV et Marie Leckzinska se montrent aussi assidus aux saluts que Louis XIV. Si les Lazaristes continuent de les
             célébrer durant l’année, les musiciens de la Chapelle-Musique y interviennent de plus en plus souvent, aussi bien pour la Fête-Dieu que
@@ -165,9 +167,7 @@
             sous-maîtres composent alors des petits motets pour cette occasion. Le rôle de la reine dans ces modifications ne doit pas être négligé :
             fine mélomane, elle participe sans doute à l’évolution musicale des saluts.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Particulièrement appréciés des fidèles, les saluts du Saint-Sacrement connaissent un succès qui ne se démentit jamais au cours de l’Ancien
           Régime. Cérémonies d’une grande diversité, ils ne connaissent pas de modèle unique. Si les saluts mondains ont certainement favorisé le
           changement de l’écoute musicale et joué un rôle important dans la sécularisation de la musique religieuse, les saluts célébrés dans les
@@ -175,13 +175,12 @@
           religieux. Les saluts apparaissent donc aussi bien comme des cérémonies dévotes qu’indévotes, qui traversent les <num>xvii<hi rend="sup">e</hi></num>
           et <num>xviii<hi rend="sup">e</hi></num> siècles en s’adaptant à toutes les formes de piété et de religiosité.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Extraits de livres normatifs concernant l’exposition et les saluts du Saint-Sacrement. ­ Textes de l’office de la Fête-Dieu. ­ Tableaux de
           la fonction et de la destination liturgique des motets composés par Guillaume-Gabriel Nivers pour les saluts. ­ Extrait du <hi rend="i">Mercure galant</hi>. ­ Tableau de l’assistance de Louis XV au salut (1716-1722). ­ Extraits du <hi rend="i">Cérémonial historique</hi> de
           l’abbé Chuperelle. ­ Tableau des motets composés par Nicolas Clérambault pour les saluts de la Maison royale de Saint-Cyr. ­ Gravures et
           photographies. ­ Index des noms de personne.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

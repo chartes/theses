@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le grand maréchal du Palais et son service : le rôle de Géraud-Christophe-Michel Duroc (1804-1813)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le grand maréchal du Palais et son service : le rôle de Géraud-Christophe-Michel Duroc (1804-1813)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Rondeau, Nathalie">Nathalie Rondeau</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200421.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le sénatus-consulte organique du 28 floréal an XII (18 mai 1804), texte fondateur de l’Empire, prévoyait une “ organisation du palais
           impérial conforme à la dignité du trône et à la grandeur de la nation ” (tit. III, art. 14). Les cadres en sont définis dans le décret du 28
           messidor an XII (17 juillet 1804), intitulé “ Organisation et administration du Palais impérial ”. Dans ce texte, figure la description de
@@ -64,7 +67,7 @@
           Ce proche de Napoléon Bonaparte reçoit en effet de multiples missions sous le Consulat puis sous l’Empire, ce qu’il convient de mettre en
           valeur, afin de définir les contours d’un cercle restreint d’intimes qui occupent plusieurs postes et bénéficient d’un grand crédit.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les très riches archives produites dans le cadre du fonctionnement de la Maison de l’Empereur et conservées aux Archives nationales dans
           la sous-série O<hi rend="sup">2</hi> , n’avaient pas encore été exploitées dans le but de décrire l’organisation et le fonctionnement de
           cette institution. Les archives relatives au grand maréchal du Palais et à son service ne représentent qu’une petite partie de cette masse
@@ -87,9 +90,8 @@
           maréchal du Palais, sa place dans la construction du régime impérial et ses relations avec Napoléon Bonaparte. Seul son dossier personnel
           conservé au Service historique de l’armée de terre a ainsi été consulté.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le grand maréchal du Palais et son service : cadres et contexte</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le grand maréchal du Palais et son service : cadres et contexte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une cour sur le modèle de l’Ancien Régime</head>
           <p>Dès le Consulat, l’ébauche d’étiquette et d’organisation domestique qui caractérise l’entourage du Premier Consul n’est pas sans faire
             penser à un mode de vie de type curial, ce qui a conduit les contemporains et les historiens de la période à parler de “ cour
@@ -104,7 +106,7 @@
             l’Empereur doivent gérer ces ressources et pourvoir à l’organisation du quotidien de l’empereur et des événements qui jalonnent
             l’Empire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La Maison de l’Empereur dans l’organisation et l’administration du Palais impérial</head>
           <p>La Maison de l’Empereur ne constitue que l’un des aspects d’une organisation du Palais impérial qui fait également intervenir la Maison
             de l’Impératrice, la Maison des Enfants de France et les Maisons princières. En outre, ce terme désigne l’aspect civil de la Maison de
@@ -116,7 +118,7 @@
             attributions entre les différents services est relayé à l’intérieur même de ces services, par une définition précise des fonctions de
             chacun. Ainsi la Maison de l’Empereur reçoit une organisation hiérarchisée et structurée.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’organisation du service du grand maréchal du Palais : règlements et acteurs</head>
           <p>Le grand maréchal du Palais reçoit deux types d’attributions : des attributions militaires et policières de commandement et de
             surveillance des palais impériaux, des attributions domestiques, qui touchent à l’approvisionnement, à l’entretien et à l’embellissement
@@ -136,8 +138,8 @@
             à se stabiliser ensuite, conformément à une évolution caractéristique du personnel de la Maison de l’Empereur de manière plus
             générale.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le fonctionnement du service du grand maréchal du Palais</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le fonctionnement du service du grand maréchal du Palais</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’administration des palais</head>
           <p>Au sein du service du grand maréchal du Palais, des services spécialisés, dont le nombre varie, sont chargés des objets relevant des
             attributions du grand maréchal du Palais, dont ils doivent assurer les fournitures et l’entretien, le cas échéant : il s’agit des services
@@ -168,7 +170,7 @@
             les membres de son service restés à Paris et continue à en contrôler le fonctionnement. Le grand maréchal du Palais et son service
             remplissent ainsi des fonctions diverses et considérables.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’“ administration du personnel ”</head>
           <p>Pour remplir les fonctions qui lui reviennent, le grand maréchal du Palais est à la tête d’un personnel conséquent. Le quartier-maître du
             Palais est chargé d’administrer et de contrôler ce personnel. Il tient à cet effet des registres, destinés à en enregistrer les
@@ -189,7 +191,7 @@
             en nature et peuvent être logés et nourris. Il reste néanmoins difficile d’évaluer l’adéquation entre ces revenus et les besoins des
             différents membres du service du grand maréchal du Palais, à quelque niveau que ce soit.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les finances du service du grand maréchal du Palais</head>
           <p>Le service du grand maréchal du Palais reçoit un budget propre dans le budget général de la Maison de l’Empereur. Celui-ci est discuté et
             arrêté en présence de l’empereur, dans le cadre du conseil d’administration de la Maison de l’Empereur, en fin ou en tout début d’année,
@@ -206,8 +208,8 @@
             Dans le budget, les dépenses les plus importantes sont celles relatives au “ matériel ” et notamment à la bouche. Le budget n’en reste pas
             moins moyen et ne représente qu’un dixième environ du budget général de la Maison de l’Empereur.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’importance du grand maréchal du Palais, le rôle de la personnalité de Duroc</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’importance du grand maréchal du Palais, le rôle de la personnalité de Duroc</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’importance du grand maréchal du Palais dans la Maison de l’Empereur</head>
           <p>Le grand maréchal du Palais occupe une place importante dans la Maison de l’Empereur, en raison des attributions qui sont les siennes, à
             la fois étendues et délicates. En outre, il est chargé de présider le conseil d’administration de la Maison de l’Empereur, ce qui l’amène
@@ -220,7 +222,7 @@
             confiance manifestes semblent bien davantage liées à la personne de Duroc, titulaire de cette fonction de sa nomination le 21 messidor an
             XII (10 juillet 1804) à sa mort le 23 mai 1813.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Duroc : une vie de services</head>
           <p>Géraud-Christophe-Michel Duroc est né le 25 octobre 1772, dans une famille de petite noblesse, originaire du Gévaudan. Il embrasse très
             jeune la carrière des armes. C’est elle qui fait sa fortune, puisqu’elle l’amène à rencontrer le général Bonaparte dont il devient
@@ -234,7 +236,7 @@
             immobiliers et quelques dettes, ce qui ne laisse pas d’étonner au vu des services rendus et en regard des fortunes accumulées par certains
             dignitaires.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les collaborateurs de Napoléon, l’exemple de Duroc</head>
           <p>La carrière de Duroc et les services rendus ne sont pas isolés dans l’entourage de Napoléon. Il s’est ainsi appuyé sur des collaborateurs
             civils et militaires dont le dévouement, la compétence et la capacité de travail ont permis la construction et la consolidation du régime
@@ -249,9 +251,7 @@
             circonstances. Reste à souligner que Napoléon sut parfaitement déceler les talents et les dévouements dès les premières heures de sa
             carrière militaire.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le grand maréchal du Palais occupe une place prépondérante dans la Maison de l’Empereur en raison de ses attributions mais également en
           raison de l’importance de Géraud-Christophe-Michel Duroc au sein de l’entourage de Napoléon Bonaparte. Il est en effet l’un de ces intimes
           qui reçurent de multiples missions et bénéficièrent de la confiance de l’empereur. Ce cercle restreint s’inscrit dans celui, plus large, de
@@ -264,11 +264,10 @@
           au-delà, dans la représentation et la mise en scène du pouvoir. L’organisation de cette institution ne laisse pas d’alimenter le débat
           autour de la nature et des fondements du régime impérial.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Nombreuses copies de textes de lois relatifs à l’organisation de la Maison de l’Empereur et du service du grand maréchal du Palais. ­
           Lettres du grand maréchal du Palais. ­ Documents liés à la carrière et à la vie de Géraud-Christophe-Michel Duroc.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La reconfiguration du latin mérovingien sous les Carolingiens</title>
-        <title type="sub">Étude socio-linguistique des diplômes royaux et des réécritures hagiographiques (viie-ixe siècle)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La reconfiguration du latin mérovingien sous les Carolingiens</title><title xml:lang="fr" type="sub">Étude socio-linguistique des diplômes royaux et des réécritures hagiographiques (viie-ixe siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Verdo, Rémy">Rémy Verdo</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201026.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Du latin mérovingien, les romanistes avaient, au cours du <num>xix<hi rend="sup">e</hi></num> siècle, fait un objet d’études où se mêlait
           une forme de fascination et de mépris qui constituait un écho direct aux conceptions positivistes appliquées à cette période dans le domaine
           de l’histoire politique et culturelle. Des études pionnières ont finalement, à partir de la seconde moitié du <num>xx<hi rend="sup">e</hi></num> siècle, suscité un intérêt croissant pour une approche transdisciplinaire des innombrables faits linguistiques qui, trop à
@@ -66,10 +69,9 @@
             romana.</hi> À cet effet, il est indispensable de dégager des niveaux de langue plus ou moins marqués par une interférence latine ou
           romane.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Comment appréhender les textes ?</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Comment appréhender les textes ?</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Grille de lecture : la « sociolinguistique diachronique romane »</head>
           <p>Étudier les fluctuations quantitatives et qualitatives du langage en fonction de la situation d’énonciation implique la mise en œuvre
             d’une méthode rigoureuse où s’articulent de multiples disciplines au sein d’une problématique transversale : l’histoire est associée à la
@@ -82,7 +84,7 @@
             (« diachronie »), l’espace (« diatopie »), l’insertion sociale (« diastratie ») et l’usage (« diaphasie »). Pour éviter les risques liés à
             des concepts très controversés comme celui de « latin vulgaire », il semble opportun de recourir à un métalangage.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La latinité des viie-viiie siècles : bilan des connaissances</head>
           <p>Le latin mérovingien forme une entité au sein du latin tardif (<num>iii<hi rend="sup">e</hi></num>-<num>vii<hi rend="sup">e</hi></num> siècle) dont il constitue, pour l’espace où apparaîtront les parlers de langue d’oïl, l’ultime grande étape (<num>vi<hi rend="sup">e</hi></num>-<num>vii<hi rend="sup">e</hi></num> siècles) avant l’apparition du protofrançais, phénomène devenu
             suffisamment net au cours du <num>viii<hi rend="sup">e</hi></num> siècle. Le latin mérovingien se caractérise par une grande variété des
@@ -96,7 +98,7 @@
             de réforme dans la prédication se heurtent à l’incompréhension du grand public ; le concile de Tours entérine en 813 la résignation à
             prêcher en <hi rend="i">lingua romana rustica</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des appels à études</head>
           <p>La langue des diplômes mérovingiens a été l’objet de multiples études dont Jeanne Vielliard a publié la plus fameuse en 1927. Très
             descriptive, comme le voulait la tradition, elle a longtemps semblé régler la question. Néanmoins, si elle permet de faire ici l’économie
@@ -113,7 +115,7 @@
             aspects morphologiques, lexicaux, syntaxiques et topologiques des phrases, qui sont placées sur une échelle reliant le pôle latin (état
             traditionnel de la langue) au pôle roman (état innovant).</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Présentation du corpus</head>
           <p>Par nécessité de cohérence et de prudence, les diplômes royaux ont été choisis dans le corpus des originaux de l’abbaye de Saint-Denis,
             qui permet un échantillonnage de bonne qualité remontant jusqu’au milieu du <num>vii<hi rend="sup">e</hi></num> siècle. Les diplômes de
@@ -132,8 +134,8 @@
             fiches préparatoires de la toute prochaine édition des diplômes de Louis le Pieux, préparée par l’équipe de Theo Kölzer ; l’établissement
             des textes a été fait à partir des fac-similés des <hi rend="i">Diplomata Karolinorum</hi>.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La langue des diplômes royaux (viie-ixe siècle)</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">La langue des diplômes royaux (viie-ixe siècle)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Introduction</head>
           <p>Les diplômes mérovingiens sont étudiés selon un plan type qui enchaîne les éléments suivants : le texte et sa traduction en regard ; la
             présentation de la situation d’énonciation (objet et protagonistes) ; l’étude de tous les syntagmes nominaux (sauf régime direct et sujet)
@@ -144,13 +146,13 @@
             très « littéraire » des grammaires disponibles, a été rendue possible par l’édition des <hi rend="i">Chartes en langue française
               antérieures à 1271</hi>, coordonnée par Jacques Monfrin.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La constance mérovingienne (660-717)</head>
           <p>Les sept jugements royaux étudiés s’échelonnent de 660 à 717, date au-delà de laquelle on n’a plus d’originaux. Structurellement, la
             langue latine s’y révèle de bonne tenue : les fluctuations de niveaux sont faibles ou limitées ; les éléments traditionnels de la langue
             latine tardive se raréfient sans pour autant laisser trop le champ aux structures nouvelles (protoromanes).</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les hésitations carolingiennes (751-868)</head>
           <p>La période envisagée marque une évolution en deux temps. Les six diplômes émis entre 751 et 790 étudiés ici seraient presque redevables
             de la qualification de <hi rend="i">Chartae romanae antiquiores</hi>, tant leur structure s’enrichit d’éléments innovants, en même temps
@@ -163,7 +165,7 @@
             qui fait exception dans ce corpus, présente un état de langue extrêmement évolué, sous un vêtement latin qui semble mal cacher des traits
             saisissants de phonétique picarde.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Conclusion</head>
           <p>L’idée d’une amélioration régulière de la langue des chartes à partir de 750 reçoit donc un démenti formel : mieux encore, c’est l’époque
             mérovingienne qui, malgré un désordre apparent lié à l’assouplissement extrême des normes graphiques traditionnelles, présente la plus
@@ -172,8 +174,8 @@
             un échantillon large d’éléments langagiers en fonction de leur fréquence d’apparition. Les conclusions rassemblées ici s’articulent avec
             les réflexions récentes portées sur la sémiologie graphique des actes, dont elles éclairent la genèse autant que la réception.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La langue hagiographique (viie-ixe siècle)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La langue hagiographique (viie-ixe siècle)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les <hi rend="i">Vitae</hi> de saint Riquier</head>
           <p>Les <hi rend="i">Vitae</hi> de saint Riquier racontent la vie d’un prédicateur de talent, fils d’humbles paysans de la région
             d’Abbeville. Entre le texte mérovingien, vraisemblablement écrit à l’époque de Charles Martel, maire du Palais de 717 à 741, et celui
@@ -182,7 +184,7 @@
             sur le fond que sur la forme, la reconfiguration carolingienne remplace un texte redevable d’une lecture folklorique par un nouveau texte
             de référence de tenue nettement plus abstraite et aristocratique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les <hi rend="i">Vitae</hi> de sainte Bathilde</head>
           <p>Sur la <hi rend="i">Vita</hi> mérovingienne de celle qui fut régente du royaume franc entre 657 à 664, les pires jugements avaient été
             formulés. Un examen attentif du texte révèle pourtant un niveau de langue sensiblement conservateur pour l’époque, qui explique
@@ -192,7 +194,7 @@
             texte adressé aux masses illettrées, l’attitude du réécriveur carolingien plaide en faveur d’un auditoire déjà aristocratique du texte à
             l’époque mérovingienne.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les <hi rend="i">Vitae</hi> de saint Gall</head>
           <p>L’originalité du dossier est de comporter deux réécritures, offrant ainsi trois versions successives du même récit. Si la datation des
             différentes parties du texte primitif restent en débat, on observe un décalage langagier très net avec la première réécriture réalisée
@@ -202,7 +204,7 @@
             est marquée par une plus grande fidélité à la source, ce qui explique des fluctuations de niveau un peu plus importantes que chez
             Wettinus.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Conclusion sur les trois dossiers</head>
           <p>Les dossiers se distinguent d’abord par l’ampleur des fluctuations de niveaux au sein des textes mérovingiens, écrits pour des publics
             précis ; ensuite, c’est par le degré variable de fidélité des réécritures vis-à-vis de la langue de leur source.</p>
@@ -221,8 +223,8 @@
             articulée aux pratiques populaires à l’époque mérovingienne, est ramenée sous les Carolingiens à une dimension beaucoup plus
             aristocratique.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Confrontation des deux corpus</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Confrontation des deux corpus</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Forces centrifuges et centripètes : rapports et apports</head>
           <p>La langue des diplômes royaux et celle des réécritures sont plus proches l’une de l’autre au <num>ix<hi rend="sup">e</hi></num> siècle
             que précédemment : les réformes contribuent à une plus grande homogénéité des deux corpus. Au niveau des épidictiques et de l’ordre des
@@ -233,29 +235,27 @@
             compétences passives de la masse des auditeurs illettrés, tandis que celle des diplômes reflète les compétences actives en acrolecte de
             l’aristocratie neustrienne qu’ils concernent presque exclusivement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Vers une modélisation d’ensemble</head>
           <p>Modéliser la latinité telle que la laissent entrevoir les textes est une gageure ancienne. Ici, on a choisi d’y placer les fluctuations
             langagières de chaque texte du corpus, lesquelles s’articulent avec la périodisation sociolinguistique existante : elles mettent en relief
             la diffraction de la langue à partir de la fin du <num>viii<hi rend="sup">e</hi></num> siècle.</p>
           <p/>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Plasticité et porosité du diasystème</head>
           <p>La notion de diasystème est illustrée par les importantes fluctuations observées, dont le caractère presque naturel n’avait pas
             particulièrement suscité l’attention. Le brouillage phonétique observable entre certains mots sémantiquement proches contribue même, dans
             quelque cas, à assurer une apparente continuité graphique et phonétique là où se produisent des changements lexicaux.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Typologie contrastive des latinités mérovingienne et carolingienne</head>
           <p>Une typologie illustrée par des exemples issus des deux corpus propose finalement une confrontation synthétique des situations avant et
             après les réformes carolingiennes. Cependant, il serait illusoire d’y voir une liste de procédés de réécriture, car les correcteurs
             carolingiens ne corrigent pas systématiquement de front les écarts à la nouvelle norme selon laquelle ils sont formés : les contournements
             sont au moins aussi nombreux.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Débrouiller le fonctionnement du langage du milieu du <num>vii<hi rend="sup">e</hi></num> au milieu du <num>ix<hi rend="sup">e</hi></num> siècle ne peut qu’orienter la recherche vers les siècles ultérieurs : l’on songe à la réception de la langue diplomatique
           mérovingienne dans les cartulaires ou sous la forme de diplômes falsifiés, au texte des nouvelles réécritures hagiographiques en prose qui
           apparaissent vers le <num>xi<hi rend="sup">e</hi></num> siècle, ou encore aux textes épigraphiques encore très peu étudiés dans une telle
@@ -263,12 +263,11 @@
           représente un formidable potentiel en partie d’ores et déjà exploitable. L’étude des niveaux de langue en ancien français constitue une
           autre voie dans le prolongement naturel du sujet traité ici.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Les trois dossiers hagiographiques avec les textes intégraux en regard. — Essai de situation diachronique d’un extrait du jugement de 861.
           — Carte du domaine picard. — Échantillonnage lexical des <hi rend="i">Vitae.</hi> — Exemples de textes carolingiens en niveau 1 (protoroman
           direct).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

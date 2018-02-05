@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Carmes déchaussés de Paris et de Charenton, aux &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; et &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les Carmes déchaussés de Paris et de Charenton, aux <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Crevoisier De Vomécour, De">De Crevoisier De Vomécour</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200013.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les Carmes déchaussés se sont installés à Paris et à Charenton au début du <num>xvii<hi rend="sup">e</hi></num>  siècle, respectivement en 1611 et
           1617. Ces deux communautés monastiques connurent une rapide expansion et restèrent actives jusqu’à la Révolution. Leur étude tout d’abord
           repose sur l’histoire des deux établissements, depuis leur fondation jusqu’à leur fermeture. Elle analyse précisément leur vie quotidienne,
@@ -58,15 +61,14 @@
           des relations entre les Carmes déchaussés et la société, proche ou plus lointaine, permet de considérer leur recrutement, mais surtout les
           services que les moines pouvaient rendre à la société locale.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’essentiel des archives des couvents de Paris et de Charenton sont aujourd’hui conservées aux Archives nationales, principalement dans les
           séries L et S. En outre, on retrouve des documents importants pour l’histoire des Carmes déchaussés au département des manuscrits de la
           Bibliothèque nationale de France et à la bibliothèque de l’Arsenal, qui détient notamment un volume, coté 1155, recensant les profès entrés
           dans l’ordre des Carmes déchaussés.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Histoire des communautés de 1611 à la Révolution</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Histoire des communautés de 1611 à la Révolution</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’ordre des Carmes déchaussés</head>
           <p>Les Carmes déchaussés sont issus de la réforme des Carmes mise en œuvre par sainte Thérèse d’Avila et saint Jean de la Croix, au XVI <hi rend="sup">e</hi>  siècle. Cette réforme visait à restaurer l’idéal primitif des ermites qui avaient vécu sur le mont Carmel au XII <hi rend="sup">e</hi>  siècle, idéal perverti par l’insertion des moines dans le monde. Elle aboutit le 20 décembre 1593 à une scission
             officielle entre Grands Carmes et Carmes déchaussés, désormais érigés en un ordre à part entière. Les Carmes déchaussés furent ensuite
@@ -75,7 +77,7 @@
             couvents de Paris et de Charenton. Malgré ce partage géographique, les Carmes déchaussés suivaient tous une seule et même règle qui
             prônait le respect de trois vœux : obéissance, chasteté et pauvreté, et régissait leur vie quotidienne dans les moindres détails.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’installation à Paris et à Charenton</head>
           <p>Les Carmes déchaussés de la congrégation d’Italie décidèrent peu après leur création de s’implanter dans le royaume de France. Après
             avoir fondé un premier couvent à Avignon en 1608, ils entreprirent de s’installer à Paris et à Lyon. Thomas de Jésus, Denis de la Mère de
@@ -87,7 +89,7 @@
             religieux purent installer un nouveau couvent à Charenton, sur un terrain dont ils prirent possession le 2 avril 1617. Le but de cette
             fondation était de servir de noviciat aux Carmes déchaussés pour l’ensemble de la province de Paris, qui était créée la même année.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Histoire des couvents (1650-1793)</head>
           <p>Tout au long de leur existence, les monastères de Paris et de Charenton ne connurent que très peu de difficultés. Les principaux
             conflits qui les agitèrent eurent lieu dans la deuxième moitié du <num>xvi<hi rend="sup">e</hi></num>  siècle  et portèrent surtout sur le
@@ -99,8 +101,8 @@
             dramatique pour les Carmes déchaussés de Paris et de Charenton, puisqu’elle fut à l’origine de la fermeture définitive des deux couvents
             et de la dispersion des moines.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Les couvents vus de l’intérieur</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les couvents vus de l’intérieur</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’église et les bâtiments conventuels</head>
           <p>Après s’être installés rue Cassette à Paris, les Carmes déchaussés entreprirent la construction d’une grande église, consacrée à saint
             Joseph. La première messe y fut célébrée le 19 mars 1620, avant même l’achèvement de l’édifice en 1629. Toutes les chapelles de l’église
@@ -111,7 +113,7 @@
             ainsi une destination précise : la préparation et la consommation des repas, l’étude, les soins aux malades, etc. Les Carmes déchaussés
             réussirent à financer ces coûteuses constructions grâce à l’appui de nombreux bienfaiteurs qui les aidèrent, chacun à leur manière.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Vie quotidienne</head>
           <p>Dès leur arrivée à Paris et à Charenton, les Carmes déchaussés durent faire face à différents problèmes, notamment à celui de
             l’approvisionnement en eau. Les religieux parisiens bénéficièrent de l’appui du prévôt et des échevins de Paris qui les autorisèrent à
@@ -120,7 +122,7 @@
             alléger ces charges. S’il est difficile de cerner avec précision la façon dont les moines se nourrissaient, on peut cependant affirmer
             qu’ils respectaient leurs constitutions qui prônaient la modération et la frugalité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Vie matérielle</head>
           <p>Les communautés de Paris et de Charenton devaient faire face à de nombreuses autres dépenses : entretien de leur église et de leurs
             bâtiments, décimes et impositions royales, rentes constituées. Tout cela les poussa à rechercher des revenus fixes et réguliers. Si le
@@ -130,7 +132,7 @@
             Cherche-Midi. L’argent que les moines tiraient de leurs locations représentait l’essentiel de leurs revenus, que complétaient des rentes
             sur l’hôtel de ville de Paris et le produit de la vente de l’eau de mélisse qui avait fait leur réputation.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Vie intellectuelle et spirituelle</head>
           <p>Les Carmes déchaussés de Paris et de Charenton menaient une vie partagée entre la prière et l’étude. La présence de très riches
             bibliothèques à l’intérieur de leurs couvents prouve l’importance de leurs activités intellectuelles. Après de très longues années
@@ -140,8 +142,8 @@
             Carmes déchaussés réussirent ainsi à se distinguer : Louis de Sainte-Thérèse, Cyprien de la Nativité ou encore Dominique de la
             Trinité.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Carmes déchaussés et société</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Carmes déchaussés et société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le recrutement des novices</head>
           <p>Le recrutement des novices conditionnait le développement des couvents de Paris et de Charenton. C’est pour cette raison que les Carmes
             déchaussés prenaient grand soin de recevoir en religion des postulants aptes à supporter les rigueurs de la vie monastique et à devenir de
@@ -152,7 +154,7 @@
             convers : les convers prononçaient en effet leurs vœux à l’âge de 27 ans, tandis que les choristes avaient en moyenne seulement 21 ans.
             Des différences existaient aussi quant à l’origine géographique des novices.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La place des carmes déchaussés dans la société locale</head>
           <p>Les religieux de Paris et de Charenton entretenaient de bonnes relations avec leur voisinage, auquel ils s’efforçaient, dans la mesure de
             leur possible, de rendre divers services. L’un de ces services était l’accueil des morts et leur commémoration. Les religieux acceptaient
@@ -164,7 +166,7 @@
             différentes églises lors des périodes du Carême et de l’Avent. Ils eurent également l’occasion de participer, bien que de façon assez
             modeste, à la réforme de plusieurs autres ordres monastiques.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’activité missionnaire des Carmes déchaussés</head>
           <p>Les Carmes déchaussés de Paris et de Charenton eurent également l’occasion de rendre des services à des catholiques qui ne résidaient pas
             dans leur diocèse, mais dans des régions beaucoup plus lointaines. Ils n’hésitèrent pas en effet à entreprendre parfois de très longs
@@ -172,21 +174,18 @@
             habitaient dans des pays étrangers. Ils participèrent ainsi à des missions en Inde et dans les pays du Levant, mais surtout en Hollande,
             où ils ouvrirent successivement trois postes à La Haye, Leyde et Amsterdam.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>De nombreux témoignages contemporains incitent fortement à penser que les Carmes déchaussés de Paris et de Charenton furent de tout temps
           très appréciés par leur entourage, pour leur piété et leur dévotion. Ils surent en effet se rendre utiles et apporter aide et soutien à ceux
           qui en avaient besoin. Quelques critiques virent cependant le jour à partir de la seconde moitié du <num>xviii<hi rend="sup">e</hi></num>  siècle,
           mais elles restèrent ponctuelles et assez peu nombreuses. On peut ainsi affirmer que les Carmes déchaussés de Paris et de Charenton surent
           se distinguer par leur vie exemplaire à une époque où les communautés religieuses étaient fort décriées par les milieux « éclairés ».</p>
       </div>
-              <div type="appendix"><head>Annexe</head>
+          <div type="appendix" n="7"><head>Annexe</head>
         <p>Un dictionnaire biographique recense les moines ayant accompli leur noviciat à Charenton et fait profession dans le couvent de Paris. Pour
           chaque moine, figurent le nom de famille, les noms des parents, les date et lieu de naissance, les dates de prise d’habit et des vœux, et
           enfin les date et lieu de décès.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Histoire d’un organe de diffusion de la culture allemande en France</title>
-        <title type="sub">La Revue germanique (1905-1939)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Histoire d’un organe de diffusion de la culture allemande en France</title><title xml:lang="fr" type="sub">La Revue germanique (1905-1939)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Boillot, Cécile">Cécile Boillot</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200604.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La discipline des transferts culturels, qui a vu le jour dans le milieu des années 1980, se consacre à l’étude des phénomènes de
           circulation, de réception et d’échange des idées entre plusieurs cultures. Dès ses débuts, la discipline a fait de l’espace franco-allemand
           un domaine de recherche privilégié. Elle porte une attention particulière aux multiples vecteurs des échanges : universités, professeurs,
@@ -74,7 +77,7 @@
         <p>de dresser un tableau général des attitudes des germanistes français face à la crise de Weimar et à l’arrivée du nazisme au pouvoir et
           d’observer ces réactions dans un corpus de revues comparables à la <hi rend="i">Revue germanique</hi>.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Source à part entière, la revue est rarement étudiée pour elle-même. Issue d’un modèle anglo-saxon, elle se situe à mi-chemin entre le
           quotidien et la monographie et « participe à la fois du caractère actuel des journaux et de la discussion grave des livres » ( <hi rend="i">Revue des deux mondes</hi>, 1832). Cette formule, qui rencontre un vif succès tout au long du <num>xix<hi rend="sup">e</hi></num> siècle avec des
           revues de culture et d’information générale aux centres d’intérêt très vastes, se diversifie dans les années 1880. La fin du XIX <hi rend="sup">e</hi> siècle voit notamment l’émergence d’un pôle de revues qui accompagnent la segmentation croissante du savoir. Ces revues,
@@ -103,14 +106,13 @@
           (nouv. acq. fr.). La démarche comparative adoptée pour ce travail a nécessité en outre la consultation de nombreuses revues, revues de
           littératures étrangères ou revues sur l’Allemagne, conservées pour la plupart à la Bibliothèque nationale de France.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La <hi rend="i">Revue germanique</hi> : <lb/>Une revue d’intellectuels germanistes</head>
-        <p>Il s’agit de répondre aux interrogations que suscite habituellement une étude de revue. De quel type de création s’agit-il ? Est-elle
+          <div n="3" type="part"><head n="0" type="chapter">La <hi rend="i">Revue germanique</hi> : <lb/>Une revue d’intellectuels germanistes</head>
+        <p n="1" type="chapter">Il s’agit de répondre aux interrogations que suscite habituellement une étude de revue. De quel type de création s’agit-il ? Est-elle
           individuelle ou collective ? Quel est le public touché par la publication (nombre et qualité des abonnés) ? Les collaborateurs doivent faire
           l’objet d’une enquête approfondie : qui sont-ils ? Combien sont-ils ? Sont-ils réguliers ou occasionnels ? Sont-ils rémunérés ou bénévoles ?
           Quels sont leurs nationalités et leurs domaines d’activité dans la vie intellectuelle ? Afin de mieux cerner l’identité de la <hi rend="i">Revue germanique</hi>, il faut donc dans un premier temps situer la création de la revue dans le contexte intellectuel et
           éditorial de l’époque, s’intéresser aux acteurs de cette publication et dégager les éventuelles évolutions de la revue.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre Premier">La fondation de la <hi rend="i">Revue germanique</hi>
         </head>
           <p>
@@ -142,7 +144,7 @@
             subventions dans l’équilibre financier de la revue. Comme le montrent les lettres envoyées par le rectorat de Lille aux établissements de
             l’académie afin de les inciter à s’abonner, la <hi rend="i">Revue germanique</hi> est avant tout destinée à un milieu d’enseignants.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les acteurs de la <hi rend="i">Revue germanique</hi>
         </head>
           <p>L’étude du noyau des premiers collaborateurs gagnés au projet, connus grâce à une liste dressée par Félix Piquet, permet de formuler
@@ -174,7 +176,7 @@
             commencent à participer à la revue dans l’entre-deux-guerres. La nouvelle génération des germanistes prend donc le relais de l’ancienne
             dans l’animation de la <hi rend="i">Revue germanique</hi>. On peut en conclure qu’il s’agit véritablement d’une revue disciplinaire.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Une revue hors du temps ?</head>
           <p>
             <hi rend="i">Stabilité de la revue</hi>. – La <hi rend="i">Revue germanique</hi> se caractérise par de forts éléments de continuité : une
@@ -197,9 +199,9 @@
             1910, elles sont exclusivement consacrées aux parutions de l’année et sont ainsi la rubrique qui accorde le plus d’importance à
             l’actualité littéraire.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La <hi rend="i">Revue germanique</hi>
+      </div><div n="4" type="part"><head n="0" type="chapter">La <hi rend="i">Revue germanique</hi>
           <lb/> confrontée au national-socialisme</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">1933-1939 : hommes et revues <lb/>face au phénomène national-socialiste</head>
           <p>Il s’agit de dresser un panorama global des réactions des germanistes français face aux bouleversements que connaît l’Allemagne entre
             1933 et 1939. Les efforts de coopération intellectuelle entrepris par les germanistes français à la suite du traité de Locarno sont
@@ -214,7 +216,7 @@
             comparative permet ainsi d’appréhender la spécificité du positionnement de la <hi rend="i">Revue germanique</hi> face au phénomène
             national-socialiste.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les échos de l’actualité <lb/>dans la <hi rend="i">Revue germanique</hi>
         </head>
           <p>Les échos de l’actualité dans la <hi rend="i">Revue germanique</hi> semblent à première vue assez limités. La revue n’a en effet pas
@@ -229,7 +231,7 @@
             adoptent un ton volontairement narratif qui leur évite de prendre position face aux événements. L’attitude des chroniqueurs est très
             ambivalente : leur prétendue neutralité est plus souvent un prétexte pour masquer un certain embarras.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La <hi rend="i">Revue germanique</hi>, <lb/>témoin des hésitations des germanistes français</head>
           <p>
             <hi rend="i">L’évolution intellectuelle de Félix Piquet</hi>. – Pour mieux comprendre le positionnement de la <hi rend="i">Revue
@@ -258,9 +260,7 @@
             allemandes du <num>iii<hi rend="sup">e</hi></num> Reich, dont ne bénéficie aucune autre revue française, confère à la <hi rend="i">Revue
               germanique</hi> une place marginale.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Pendant presque un demi-siècle, la <hi rend="i">Revue germanique</hi> joue un rôle de médiation entre la France et l’Allemagne en
           participant à la diffusion auprès du public lettré des productions de l’esprit en Allemagne. Le corpus de ses collaborateurs témoigne des
           efforts d’un certain nombre de germanistes français pour œuvrer à la collaboration intellectuelle entre les deux pays. Cette revue savante,
@@ -271,10 +271,9 @@
           ainsi un éclairage nouveau à la question du positionnement de la germanistique française à l’égard du <num>iii<hi rend="sup">e</hi></num> Reich, en
           donnant une idée plus globale du malaise ressenti par une majorité silencieuse de germanistes français entre 1933 et 1939.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Vingt pièces d’archives ayant trait aux débuts de la revue (Arch. dép. du Nord, sous-série 2T) . – Correspondances.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

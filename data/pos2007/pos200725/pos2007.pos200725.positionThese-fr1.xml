@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le port d’armes en France et la législation royale du milieu du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; au milieu du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le port d’armes en France et la législation royale du milieu du <num>xiii<hi rend="sup">e</hi></num> au milieu du <num>xiv<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Wenz, Romain">Romain Wenz</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200725.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>« Le port d’armes » : les termes du sujet évoquent à la fois une pratique sociale et une incrimination juridique ; une pratique
           incontestablement habituelle à la fin du Moyen Âge et une incrimination mise en place en France à partir de la seconde moitié du XIII <hi rend="sup">e</hi> siècle, au travers de multiples interdictions royales, urbaines et ecclésiastiques.</p>
         <p>L’objectif de cette thèse est donc d’étudier à la fois l’élaboration de l’interdiction du port d’armes et la pratique sociale prohibée, en
@@ -70,19 +73,18 @@
           construction, à la fois rationnelle et tâtonnante, liée à des interventions ponctuelles de la royauté et à des références à des textes
           antérieurs, en particulier au droit romain, mais dans un sens considérablement adapté.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Présentation des sources</head>
-        <p>Cette recherche s’appuie sur des sources très variées : il convenait donc de commencer par présenter les dépouillements effectués pour
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Présentation des sources</head>
+        <p n="1" type="chapter">Cette recherche s’appuie sur des sources très variées : il convenait donc de commencer par présenter les dépouillements effectués pour
           montrer le cadre et les limites du travail.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Le droit romain</head>
           <p>Le corpus du droit civil constitue la première source à prendre en compte, et ce pour deux raisons : d’une part, il livre un dispositif
             normatif complet en matière de réglementation des armes et, d’autre part, il s’agit d’un héritage dont se réclame la royauté française du
             bas Moyen Âge. La référence au droit romain, qui justifie la reprise d’interdictions comme le crime de lèse-majesté ou le port d’armes,
             inscrit la législation royale dans la continuité de l’Antiquité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Le droit canonique</head>
           <p>Les premières mesures interdisant le port d’armes trouvent leur origine dans la trêve de Dieu. Ainsi, les mesures contre les armes sont
             au départ une sorte d’interdiction religieuse, au même titre que les lois sur le blasphème. Cet aspect du contrôle de la violence, mis en
@@ -90,21 +92,21 @@
             posent un problème essentiel. En effet, les clercs armés enfreignent ces dispositions et peuvent donc logiquement être réclamés par les
             justices ecclésiastiques, qui disposent de l’appareil juridique nécessaire pour juger ces personnes.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Le droit coutumier</head>
           <p>On n’a cherché ici qu’à observer comment la mise en place de la législation royale du port d’armes a été perçue par les justiciers
             locaux. Par conséquent, l’objectif est surtout de rechercher un échantillon des développements concernant le port d’armes entre le milieu
             du <num>xiii<hi rend="sup">e</hi></num> et la fin du <num>xiv<hi rend="sup">e</hi></num> siècle, puisque c’est à cette période que se met en place
             l’incrimination de port d’armes, réservée au roi et échappant donc à la coutume.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Les textes normatifs royaux et les documents <lb/>de la pratique émanant de la justice royale</head>
           <p>Les textes royaux (ordonnances générales, privilèges particuliers, mandements ponctuels) et les documents émanant de l’activité de la
             justice royale (registres du Parlement de Paris, lettres de rémission) ont fait l’objet d’un dépouillement complet dont les résultats
             figurent en annexe.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La création d’un cas réservé au roi</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">La création d’un cas réservé au roi</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La chronologie de l’interdiction au cours du <num>xiii<hi rend="sup">e</hi></num> siècle <lb/>dates et tradition juridique</head>
           <p>L’interdiction du port d’armes ne naît pas au <num>xiii<hi rend="sup">e</hi></num> siècle de la seule volonté du roi : la prohibition est déjà
             présente dans les textes des conciles de paix aux <num>xi<hi rend="sup">e</hi></num> et <num>xii<hi rend="sup">e</hi></num> siècles et elle apparaît au siècle
@@ -118,7 +120,7 @@
             justiciers, l’artifice juridique du « cas réservé au roi » permet de les condamner quand même, ce qui est nécessaire si le roi veut
             acquérir le monopole de la violence légitime.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Lexique de l’interdiction mise en place au Parlement</head>
           <p>Dans la seconde moitié du siècle, à partir des enquêtes de 1247-1248 et surtout grâce aux <hi rend="i">Olim</hi>, on peut observer le
             sens exact de l’interdiction, à la fois parce que les sources permettent cette étude et parce que la présence de ces sources laisse
@@ -133,8 +135,8 @@
             matériels liés au coût et à la perception des amendes et des autres aspects techniques de la mise en place de l’interdiction de port
             d’armes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Aspects sociaux</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Aspects sociaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les populations et les armes</head>
           <p>Les aspects sociaux posent tout d’abord le problème de l’encadrement des populations et de la perception morale des armes, selon ce qui
             est acceptable ou inacceptable, et non seulement licite ou illicite. Deux enjeux sont au cœur de cette approche sociale : le port d’armes
@@ -147,7 +149,7 @@
             légitimité du port d’armes – permet de voir comment le pouvoir royal compose avec le corps social et adapte aux sujets l’interdiction du
             port d’armes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les difficultés au cours de la période</head>
           <p>Dans tous les permis de porter les armes, ce privilège apparaît comme un droit délégué par le roi, voire comme un don « de grace especial
             ». Ces exceptions au principe général de prohibition révèle les difficultés rencontrées par la justice royale, qui doit adopter des
@@ -161,9 +163,7 @@
             des menaces proférées par un adversaire porteur d’armes, dont l’équipement déloyal est susceptible de donner lieu à une condamnation en
             justice.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>À l’issue de ce travail, il semble évident que pendant la période étudiée, le port d’armes ne définit pas une opposition simple entre des
           gens armés ou non, mais que le problème est au contraire de contrôler une société dont presque tous les membres le sont plus ou moins. La
           question de la légalité est donc fluctuante malgré l’interdiction globale.</p>
@@ -195,7 +195,7 @@
           licite et de l’illicite aboutit à l’ordonnance du 25 novembre 1487 qui défend à tous de porter des armes, à l’exception des officiers du
           roi, des nobles et de l’armée.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Glossaire des termes de droit romain utilisés dans les <hi rend="i">Olim</hi>. — Liste des textes normatifs royaux, compilés à partir d’un
           dépouillement systématique des treize premiers volumes des <hi rend="i">Ordonnances des rois de France</hi> : ordonnances générales sur la
           guerre et les tournois, ordonnances dont la portée est limitée géographiquement, mandements à des baillis ou à des justiciers inférieurs,
@@ -203,7 +203,6 @@
           armées, d’« armes prohibées », d’« armes offensives », d’« épées dégainées » dans les enquêtes de 1247 et 1248, parmi les <hi rend="i">Olim</hi>(1254-1317) et les actes suivants du Parlement (1317-1394), parmi les actes conservés au Trésor des chartes (jusqu’en 1350). —
           Index des matières et des personnes.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

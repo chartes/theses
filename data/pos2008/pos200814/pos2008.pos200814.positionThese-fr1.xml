@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La tradition gréco-latine de l’optique médiévale, de Calcidius jusqu’au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La tradition gréco-latine de l’optique médiévale, de Calcidius jusqu’au <num>xii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dufossé, Colette">Colette Dufossé</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200814.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Retracer l’histoire de l’optique du <num>iv</num>
 <hi rend="sup">e</hi> au <num>xii</num>
 <hi rend="sup">e</hi> siècle, c’est moins mettre en évidence l’évolution d’une science que montrer la constance d’un intérêt pour une
@@ -73,10 +76,9 @@
           n’a pas été créée ex nihilo à partir d’un corpus d’œuvres traduites de l’arabe ; ces œuvres nouvellement découvertes ne font que se
           surimposer à un ensemble de traditions intellectuelles de haute culture transmis avec continuité tout au long du Moyen Âge.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La tradition gréco-latine de l’optique médiévale : l’impact de l’œuvre de Calcidius</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">La tradition gréco-latine de l’optique médiévale : l’impact de l’œuvre de Calcidius</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’optique dans la traduction et le commentaire du <hi rend="i">Timée</hi> par Calcidius</head>
           <p>La théorie visuelle de Platon, exposée pour l’essentiel au paragraphe 45b-47c du <hi rend="i">Timée</hi>, défend l’idée d’une émission
             par l’œil d’un courant visuel qui, soutenu par la lumière du jour, rencontre le rayonnement émanant de l’objet. Cette émanation de l’objet
@@ -103,7 +105,7 @@
             et repose sur une réelle connaissance des théories d’optique grecque, il est en cela bien supérieur aux manuels scolaires qui circulent
             dans l’Occident latin.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’étude du <hi rend="i">Timée</hi> durant le haut Moyen Âge : la tradition manuscrite et les gloses</head>
           <p>Le <hi rend="i">Timée</hi> de Platon, traduit et expliqué par Calcidius, est l’un des piliers du néo-platonisme médiéval aux côtés des
               <hi rend="i">Noces de Mercure et Philologie</hi> de Martianus Capella, du <hi rend="i">Commentaire au songe de Scipion</hi> de Macrobe
@@ -136,7 +138,7 @@
 <hi rend="sup">e</hi> siècle, texte de Platon et commentaire de Calcidius sont encore copiés, mais ils ne reçoivent plus que des gloses
             éparses : le grand moment de ferveur platonicienne est passé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les théories de la vision et la lecture du <hi rend="i">Timée</hi>( <num>iv</num>
 <hi rend="sup">e</hi>- <num>xii</num>
 <hi rend="sup">e</hi> siècles)</head>
@@ -166,8 +168,8 @@
             se déploie donc de préférence dans des œuvres écrites en prosi-mètres, forme reprise de la <hi rend="i">Consolation de Philosophie</hi> de
             Boèce. Ainsi, il faut replacer l’intérêt chartrain pour la théorie visuelle dans le cadre de cette posture philosophique.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les développements alti-médiévaux de la théorie de la vision : l’application noétique</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Les développements alti-médiévaux de la théorie de la vision : l’application noétique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">De la vision à la pensée : le <hi rend="i">continuum</hi> noétique</head>
           <p>La théorie platonicienne de la vision, telle qu’elle a été transmise par Calcidius, laisse inexpliquée la réalisation effective de
             l’image visuelle dans l’âme. La traduction du <hi rend="i">Timée</hi> n’est pas complète ; elle ne transmet que la première partie du
@@ -201,7 +203,7 @@
             et surtout pensant. La notion d’image mentale extrêmement élargie et englobant toute forme de pensée et de conscience est la seule forme
             possible d’analyse de l’intériorité du sujet. Durant le haut Moyen Âge, tout phénomène psychique, toute pensée est image.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La fragmentation du <hi rend="i">continuum</hi> noétique : retour à la gnoséologie</head>
           <p>L’Occident latin doit à Boèce sa première classification des puissances de l’âme en tant que telles : <hi rend="i">sensus, imaginatio,
               ratio, intellectus, intelligentia</hi>. Isolant les diverses facultés de l’âme, cette classification, en se superposant à la théorie
@@ -246,7 +248,7 @@
             de fait à l’<hi rend="i">intellectus</hi>, réservant l’<hi rend="i">intelligentia</hi> aux anges et aux saints. L’ultime degré de la
             connaissance, celle de Dieu, est donc isolé de la théorie de la formation du concept par l’abstraction naissante.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Du sensible à l’intelligible : la vision <hi rend="i">in aenigmate</hi>
          </head>
           <p>C’est par la vision et par elle seule que l’homme peut accéder à la connaissance de Dieu, c’est-à-dire passer du plan sensible à celui
@@ -287,8 +289,8 @@
             théophanique de la vision <hi rend="i">in aenigmate</hi>, qui, fruit tardif de la vision intellectuelle de saint Augustin, conduit à Dieu.
          </p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">D’une théologie de la lumière à une physique de la lumière : vers une optique latine</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">D’une théologie de la lumière à une physique de la lumière : vers une optique latine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Lumière et ténèbres dans le discours théologique</head>
           <p>Les conceptions alti-médiévales de la nature de la lumière reposent sur le fait qu’elle est avant tout considérée comme manifestation la
             plus claire de l’essence de Dieu dans l’ordre des créatures. Plus profondément qu’une métaphore, la définition de Dieu comme lumière est
@@ -327,7 +329,7 @@
             la lumière, sagesse de Dieu, est réinvestie par le <num>xii</num>
 <hi rend="sup">e</hi> siècle dans le champ de la physique.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La nature de la lumière : rencontre des modèles métaphysique et physique</head>
           <p>La rencontre des modèles métaphysique et physique dans la conception de la lumière se fait sous les auspices de la théorie calcidienne
             des <hi rend="i">tria necessaria</hi>. En effet, la reprise du motif déjà présent chez saint Augustin et Jean Scot Erigène de l’<hi rend="i">obstaculum rei</hi>, qui perd progressivement sa connotation péjorative pour ne garder que sa capacité de nature physique à
@@ -364,7 +366,7 @@
             manière cohérente un certain nombre de phénomènes visuels en englobant observation directe des phénomènes et lecture des encyclopédies. À
             cette occasion, un petit noyau de vocabulaire spécialisé a commencé à se constituer.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Vers une optique latine : les traductions du grec</head>
           <p>Il est commun de voir dans le grand mouvement de traductions de la renaissance du <num>xii</num>
 <hi rend="sup">e</hi> siècle le point de départ de la réapparition de diverses disciplines, notamment en science et en philosophie. Les
@@ -408,9 +410,7 @@
             philosophie et de la science grecque et arabe est en réalité double ; elle commence par une adaptation des textes traduits par la reprise
             d’un lexique déjà façonné par des siècles de tradition culturelle.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>La période longue retenue, huit siècles, a permis de souligner des continuités, dans l’étude des textes, dans les traditions culturelles
           et interprétatives, dans la persistance d’un intérêt pour l’optique, comprise comme une théorie de la vision très élargie. La vision, en
           effet, tout comme la nature de la lumière, atteint une résonnance qui dépasse de loin les bornes du phénomène physique ou physiologique.
@@ -427,7 +427,7 @@
 <hi rend="sup">e</hi> siècle. Il n’y a donc avec l’arrivée des traductions du grec et de l’arabe ni rupture complète avec les traditions
           intellectuelles du haut Moyen Âge, ni création ex nihilo d’une science, l’optique, à partir d’un corpus d’œuvres traduites.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Planches reproduisant certaines pages des manuscrits glosés du Timée. — Transcription synoptique des gloses du <num>xii</num>
 <hi rend="sup">e</hi> siècle aux paragraphes traitant d’optique du texte du Timée traduit par Calcidius (manuscrits BnF, lat. 16579 ;
           Vienne, Österreichische Nationalbibliothek 287 ; BnF lat. 6281 ; Londres, British Library, Royal 12. B. xxii, en parallèle avec le texte des
@@ -435,7 +435,6 @@
             nova</hi> du passage du traité de l’âme d’Aristote où celui-ci expose sa théorie optique, à partir des manuscrits BnF, lat. 6569 et 16088.
           — Tableau de chiffres et statistiques lexicales.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

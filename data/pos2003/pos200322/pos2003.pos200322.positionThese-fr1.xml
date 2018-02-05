@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’engagement résistant d’Alexandre Parodi (1940-1944)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’engagement résistant d’Alexandre Parodi (1940-1944)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Studer, Sébastien">Sébastien Studer</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200322.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si, du fait de l’engouement scientifique pour la Résistance française, la question des institutions clandestines a été étudiée par
           plusieurs historiens et si la figure de Jean Moulin a alimenté une abondante littérature, force est de constater que son successeur à la
           tête de la Délégation générale de la France combattante sur le sol métropolitain, Alexandre Parodi, demeure un personnage relativement peu
@@ -80,7 +83,7 @@
           fraction de la Résistance métropolitaine la plus proche de la France combattante ; ses actes, surtout une fois qu’il fut désigné comme
           Délégué général, furent parfois lourd de conséquences, et c’est pourquoi ils méritent d’être étudiés dans le détail.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’essentiel du présent travail repose sur le dépouillement d’une source presque inédite, le fonds Alexandre Parodi, déposé à sa mort en
           1979, par les soins de son fils, au Centre d’histoire de l’Europe du vingtième siècle (C.H.E.V.S.) dépendant de la Fondation nationale des
           sciences politiques. Les lacunes de ce fonds ont été comblées par des recherches complémentaires au Centre historique des Archives
@@ -92,9 +95,8 @@
           d’Alexandre Parodi. Parmi ceux de ces derniers qui sont toujours en vie, seuls ont répondu à nos sollicitations des membres de sa famille,
           en l’occurrence son fils, M. Jean-Luc Parodi, et sa sœur, Mme Jacqueline Chatenet, qui ont accepté de livrer leur témoignage.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">Mise à l’épreuve d’un haut fonctionnaire républicain</head>
-        <p><hi rend="i">Une tradition d’engagement et de service de l’Etat. </hi> — Alexandre Parodi naquit en plein cœur d’une époque qui marque
+          <div n="3" type="part"><head n="0" type="chapter">Mise à l’épreuve d’un haut fonctionnaire républicain</head>
+        <p n="1" type="chapter"><hi rend="i">Une tradition d’engagement et de service de l’Etat. </hi> — Alexandre Parodi naquit en plein cœur d’une époque qui marque
           l’âge d’or du « modèle républicain ». Les quelques proches qui se sont essayés, après sa mort, à retracer son itinéraire personnel,
           soulignent tous l’influence décisive de l’éducation que lui a prodiguée une famille résolument républicaine et patriote. Alexandre Parodi
           était issu d’une famille certes très attachée à la France, mais dont les origines italiennes étaient encore toutes proches : son grand-père,
@@ -103,13 +105,13 @@
           dreyfusards. Par sa mère, Alexandre Parodi descendait également de l’homme politique Alexis Vavin. Manifestant très jeune une vocation de
           serviteur de l’Etat, Alexandre Parodi fréquenta l’Ecole des sciences politiques et intégra le Conseil d’Etat où il fut reçu auditeur le 1
 <hi rend="sup">er</hi> janvier 1926.</p>
-        <p><hi rend="i">Parcours d’un haut fonctionnaire. </hi> — Alexandre Parodi effectua toute sa carrière au sein du Palais-Royal, non seulement
+        <p n="2" type="chapter"><hi rend="i">Parcours d’un haut fonctionnaire. </hi> — Alexandre Parodi effectua toute sa carrière au sein du Palais-Royal, non seulement
           au Conseil d’Etat où il atteignit le rang de maître des requêtes, mais aussi comme secrétaire général adjoint du Conseil national
           économique, tâche à laquelle il se consacra à plein temps à partir de 1936. Deux ans plus tard, il fut mis à la disposition du ministre du
           travail, Charles Pomaret, comme membre de son cabinet, puis comme directeur du travail et de la main d’œuvre ; à ce titre, ce furent bientôt
           les problèmes de mobilisation de la main-d’œuvre disponible sur le territoire national que l’évolution diplomatique mit au premier rang de
           ses préoccupations, jusqu’à l’éclatement de la guerre et au-delà.</p>
-        <p><hi rend="i">Une « religion de la démocratie ». </hi> — Les témoignages sont unanimes pour voir en Alexandre Parodi un homme discret et
+        <p n="3" type="chapter"><hi rend="i">Une « religion de la démocratie ». </hi> — Les témoignages sont unanimes pour voir en Alexandre Parodi un homme discret et
           réservé, extrêmement pudique. Le fond de sa personnalité résidait semble-t-il dans les principes moraux dont il était imprégné, une morale
           rationaliste, fondée sur la foi dans l’homme, le respect de soi-même et le respect des autres. L’ensemble des valeurs auxquelles il croyait
           était issu de l’héritage idéologique paternel, si bien que les convictions d’Alexandre Parodi étaient celles d’un patriote pour qui
@@ -118,7 +120,7 @@
           respecter le devoir de réserve auquel il était astreint. Pour autant, il n’était pas, à la veille du second conflit mondial, tout le
           contraire d’un homme engagé, puisqu’il travaillait en coopération avec des institutions à caractère social, suivant en cela, une fois de
           plus, la tradition familiale.</p>
-        <p><hi rend="i">Les expériences douloureuses de l’été 1940. </hi> — Alexandre Parodi ressentit d’autant plus cruellement la défaite qu’il
+        <p n="4" type="chapter"><hi rend="i">Les expériences douloureuses de l’été 1940. </hi> — Alexandre Parodi ressentit d’autant plus cruellement la défaite qu’il
           avait pris part à l’effort de défense nationale, depuis sa direction au ministère du travail. L’annonce de l’armistice, loin s’en faut, ne
           provoqua pas en lui le moindre sentiment de soulagement et les tous premiers actes du Gouvernement de Vichy le mirent, selon Michel Debré,
           « en état de rébellion intime ». Un passage éphémère au sein de la Délégation générale du gouvernement français dans les territoires occupés
@@ -128,7 +130,7 @@
           septembre 1940, ce haut fonctionnaire que servir le gouvernement mettait désormais mal à l’aise jeta au visage du Garde des sceaux, Raphaël
           Alibert, qu’il était gaulliste : catalogué, dès lors, comme dissident probable, il ne tarda pas à être « remis à la disposition du Conseil
           d’Etat ».</p>
-        <p><hi rend="i">L’heure du choix : quel Etat servir ? </hi> — Le gaullisme de 1940, c’était avant tout le refus de la défaite et de
+        <p n="5" type="chapter"><hi rend="i">L’heure du choix : quel Etat servir ? </hi> — Le gaullisme de 1940, c’était avant tout le refus de la défaite et de
           l’armistice qui l’avait consacrée ; mais la Révolution nationale joua aussi, dans la conscience d’Alexandre Parodi, un rôle de repoussoir,
           le « redressement intellectuel et moral » annoncé par Pétain étant destiné à se faire sur des bases opposées aux valeurs de la République. A
           rebours de l’immense majorité des Français, Alexandre Parodi connaissait le nom du général de Gaulle dont il avait lu les livres et fait
@@ -139,8 +141,8 @@
           résistance « intérieure », celle des mouvements clandestins, parallèlement à un retour au Conseil d’Etat qui lui permit d’exercer un métier
           moins ingrat moralement qu’au ministère du travail, en dépit de l’atmosphère désagréablement changée de Royat et de quelques écueils comme
           le serment qu’il dut prêter à Pétain le 19 août 1941.</p>
-      </div><div n="2" type="part"><head n="Chapitre II">Un « expert » au service de la Résistance</head>
-        <p><hi rend="i">L’entrée dans la Résistance active. </hi> — Parmi les personnalités qui précipitèrent l’entrée de Parodi dans la Résistance
+      </div><div n="4" type="part"><head n="0" type="chapter">Un « expert » au service de la Résistance</head>
+        <p n="1" type="chapter"><hi rend="i">L’entrée dans la Résistance active. </hi> — Parmi les personnalités qui précipitèrent l’entrée de Parodi dans la Résistance
           active, il faut citer non seulement son cousin Andlauer, son ami Etienne Bauer, mais surtout son frère René, pionnier de la Résistance en
           zone Nord, membre fondateur du mouvement « Libération-Nord », assassiné par les Allemands en avril 1942. Installé à Clermont-Ferrand, une
           pépinière de résistants, à l’automne 1940, Alexandre Parodi adhéra pour sa part au mouvement « Libération-Sud » ; mais il s’illustra surtout
@@ -150,7 +152,7 @@
           il se rendait dans la capitale des Gaules, devenue capitale de la Résistance en zone Sud, à l’occasion des visites qu’il rendait à sa femme
           malade en Suisse. S’il est loin d’être démontré que Parodi bénéficia de la protection de la haute hiérarchie du Conseil d’Etat, il demeure
           qu’il appartint à l’équipe restreinte qui demeura à Royat en juin 1942, au moment où le Conseil retrouva le Palais-Royal.</p>
-        <p><hi rend="i">La formation du « Comité des experts ». </hi> — Par l’intermédiaire de François de Menthon, la jonction se fit entre Jean
+        <p n="2" type="chapter"><hi rend="i">La formation du « Comité des experts ». </hi> — Par l’intermédiaire de François de Menthon, la jonction se fit entre Jean
           Moulin et le « groupe de Lyon » fréquenté par Parodi. La constitution du « Comité des experts », futur Comité général d’études (C.G.E.),
           remonte au 1<hi rend="sup">er</hi> juillet 1942. Ce Comité, organisme clandestin officiel chargé de préparer les mesures législatives à
           prendre à la Libération, devait incarner dans l’esprit de l’envoyé de la France libre les principales tendances politiques de la Résistance
@@ -160,7 +162,7 @@
           eut lieu en octobre 1942 ; il devait y tenir toutes ses réunions jusqu’à la suppression de la ligne de démarcation en avril 1943, date à
           laquelle il suivit le mouvement de translation des organismes centraux de la Résistance intérieure vers Paris. Parodi, dès la seconde moitié
           de l’année 1942, était un proche de Moulin et de Bidault, bien intégré à l’élite la plus influente de la Résistance française.</p>
-        <p><hi rend="i">Au cœur de l’unification de la Résistance. </hi> — Le début de l’année 1943 vit le Comité des experts, devenu le Comité
+        <p n="3" type="chapter"><hi rend="i">Au cœur de l’unification de la Résistance. </hi> — Le début de l’année 1943 vit le Comité des experts, devenu le Comité
           général d’études, énormément gagner en importance, en activité et en efficacité. Ses études politiques, connues à Londres par les courriers
           de Moulin, sortaient de par leur qualité et leur clarté du lot des innombrables textes qui parvenaient au Commissariat à l’Intérieur. Mais
           les rapports que le C.G.E., « service central » placé sous l’égide du Délégué gaulliste, entretenait avec des mouvements de Résistance
@@ -168,7 +170,7 @@
           coloration politique des « experts », les mouvements reprochèrent au Comité ce qu’ils considéraient comme un assujettissement croissant à
           Londres, alors qu’il devait être le centre de réflexion de la Résistance intérieure. Après l’installation du C.G.E. à Paris, des résistants
           de zone Nord de premier plan se joignirent à Parodi et à ses pairs : Debré, Charpentier, Lefaucheux.</p>
-        <p><hi rend="i">Orphelins de Jean Moulin. </hi> — Au moment où Moulin sortait tragiquement de la scène, Parodi, une des personnalités les
+        <p n="4" type="chapter"><hi rend="i">Orphelins de Jean Moulin. </hi> — Au moment où Moulin sortait tragiquement de la scène, Parodi, une des personnalités les
           plus en vue de la Résistance, avait conscience des enjeux très importants de la succession du délégué de Londres et président du Conseil
           national de la Résistance. Au lendemain du drame de Caluire, la plupart des chefs de mouvements voulaient attribuer au C.N.R. un rôle accru
           au détriment de la Délégation, et de nouveaux venus dans le débat, les communistes, renchérissaient. Claude Serreulles, chargé de mission
@@ -180,7 +182,7 @@
           une Délégation affaiblie, coiffée par un leader manifestement mal choisi et divisée par des rivalités : Bingen et Serreulles, désormais
           adjoints de Bollaert, étaient compétents mais mal vus par les services londoniens du colonel Passy qui très rapidement prétextèrent des
           raisons de sécurité pour tenter de les écarter des responsabilités.</p>
-        <p><hi rend="i">La Commission de la presse et autres travaux. </hi> — Après un an et demi de travail, le C.G.E. avait pris une extension et
+        <p n="5" type="chapter"><hi rend="i">La Commission de la presse et autres travaux. </hi> — Après un an et demi de travail, le C.G.E. avait pris une extension et
           une importance croissantes, constituant une équipe homogène, disposant de méthodes efficaces de travail et disposant désormais de nombreux
           contacts dans l’administration, l’industrie, la banque et surtout parmi les cadres de la Résistance et dans les milieux politiques. Cette
           ouverture du C.G.E., dont on a vu qu’à l’origine il fonctionnait presque en vase clos, était conforme à l’évolution de la Résistance
@@ -191,7 +193,7 @@
           presse » ; dans ce domaine, le débat, très animé, achoppait sur trois questions : l’élimination des journaux compromis, la reconstitution
           d’une nouvelle presse et l’élaboration de son statut juridique. Tout un plan de rénovation fut mis au point, inspiré par un double souci de
           moralisation et d’efficacité, et synthétisé dans une circulaire générale demeurée célèbre sous le nom de « Cahier Bleu ».</p>
-        <p><hi rend="i">Successeur de Jean Moulin. </hi> — Le B.C.R.A. exploita contre Serreulles et Bingen une vague d’arrestations, « l’affaire de
+        <p n="6" type="chapter"><hi rend="i">Successeur de Jean Moulin. </hi> — Le B.C.R.A. exploita contre Serreulles et Bingen une vague d’arrestations, « l’affaire de
           la rue de la Pompe », ce qui aboutit, au terme d’une « guerre des télégrammes » entre Londres et la Délégation, au rappel non seulement de
           Serreulles, mais aussi de Brossolette et de Bollaert. Le départ de ce dernier, sans cesse différé, se solda par son arrestation. Parodi
           avait été désigné par la France combattante pour assurer l’intérim de Bollaert, puis pour lui succéder ; il demanda sans l’obtenir le
@@ -200,13 +202,13 @@
           Rachline dans le cadre de la mission « Clé » ­ et eurent raison de ses hésitations. L’accession de Parodi à la tête de la Délégation
           générale s’inscrivait dans un contexte nouveau : après la crise morale de l’hiver 1943-1944, il apparaissait de plus en plus évident que
           l’heure de la Libération approchait, et il s’agissait désormais, pour la France combattante, de la préparer.</p>
-      </div><div n="3" type="part"><head n="Chapitre III">Délégué général de la France combattante</head>
-        <p><hi rend="i">Une existence de résistant. </hi> — Peu avant sa nomination à la tête de la Délégation générale, Alexandre Parodi était entré
+      </div><div n="5" type="part"><head n="0" type="chapter">Délégué général de la France combattante</head>
+        <p n="1" type="chapter"><hi rend="i">Une existence de résistant. </hi> — Peu avant sa nomination à la tête de la Délégation générale, Alexandre Parodi était entré
           en clandestinité complète. Si le versement de son traitement de maître des requêtes au Conseil d’Etat, jusqu’à la fin de l’Occupation,
           facilita sans nul doute les conditions de son existence matérielle, il n’en était pas moins soumis aux mêmes difficultés que ses compagnons
           de combat en ce qui concernait le logement, la subsistance, les liaisons à assurer et l’anonymat à maintenir vis-à-vis de la police
           allemande.</p>
-        <p><hi rend="i">Les services de la Délégation. </hi> — La Délégation générale du C.F.L.N., si fragile qu’elle fût à l’été 1943, s’était
+        <p n="2" type="chapter"><hi rend="i">Les services de la Délégation. </hi> — La Délégation générale du C.F.L.N., si fragile qu’elle fût à l’été 1943, s’était
           consolidée et étoffée, finissant par s’imposer comme l’émanation de l’Etat et exercer pleinement l’autorité gouvernementale au moment de la
           Libération. Au printemps 1944 se fixèrent définitivement les contours de l’Etat clandestin que le personnel de Londres et d’Alger, relayé
           par l’équipe de la Délégation et avec l’appui des mouvements de résistance, tendait à mettre en place depuis des mois. Alexandre Parodi se
@@ -219,7 +221,7 @@
           militaire, confiée à Jacques Chaban-Delmas, était subordonnée à la Délégation civile, qui avait aussi une antenne en zone Sud, confiée à
           Bingen dont la disparition tragique ouvrit une crise de succession ­ que Parodi parvint à résoudre en imposant son candidat, Jacques
           Maillet.</p>
-        <p><hi rend="i">Une mission, préparer les cadres de la France libérée. </hi> — La France combattante prévoyait de prendre le pouvoir dans le
+        <p n="3" type="chapter"><hi rend="i">Une mission, préparer les cadres de la France libérée. </hi> — La France combattante prévoyait de prendre le pouvoir dans le
           dos des Allemands, tandis que l’insurrection se développerait et que s’effondrerait l’armature politique de Vichy. Bien entendu, les
           responsables de l’Etat français en déliquescence constituaient toujours une relative menace contre l’avènement du président du C.F.L.N. De
           surcroît, les Alliés n’avaient pas accepté de reconnaître le gouvernement provisoire de la France, ce qui laissait supposer des projets
@@ -227,25 +229,25 @@
           territoires occupés » (A.M.G.O.T.). Pour éviter que l’administration américaine ne remplaçât celle de Vichy, Parodi s’appuya sur un « Comité
           des mises en place administratives » qui fonctionnait sous l’autorité de la Délégation avec l’assistance de représentants des organisations
           de Résistance.</p>
-        <p><hi rend="i">Le « grand mouvement préfectoral ». </hi> — La Commission des désignations administratives, sous la direction de Michel Debré
+        <p n="4" type="chapter"><hi rend="i">Le « grand mouvement préfectoral ». </hi> — La Commission des désignations administratives, sous la direction de Michel Debré
           et Emile Laffon, désigna les préfets de la France combattante et ceux qui devaient les chapeauter dans le cadre régional, les commissaires
           de la République. La Délégation ne se sentait pas le droit de définir une politique d’ensemble et attendait des directives qui ne vinrent
           pas : ce fut donc bien en métropole que furent faites, au bout du compte, les désignations effectives.</p>
-        <p><hi rend="i">Les Comités départementaux de la Libération. </hi> — Parallèlement à la mise en place des préfets furent constitués des
+        <p n="5" type="chapter"><hi rend="i">Les Comités départementaux de la Libération. </hi> — Parallèlement à la mise en place des préfets furent constitués des
           Comités départementaux de Libération chargés de représenter les différentes tendances de base de la Résistance. Francis-Louis Closon et son
           adjoint Jean Mons animaient la commission ad hoc.</p>
-        <p><hi rend="i">La nomination des secrétaires généraux provisoires. </hi> — Au sommet de cette hiérarchie, les secrétaires généraux
+        <p n="6" type="chapter"><hi rend="i">La nomination des secrétaires généraux provisoires. </hi> — Au sommet de cette hiérarchie, les secrétaires généraux
           provisoires avaient pour mission d’assurer, sur le sol métropolitain, l’intérim des ministères en attendant le retour d’Alger du
           gouvernement provisoire présidé par de Gaulle. Alexandre Parodi joua un rôle essentiel non seulement dans le choix des personnalités qui
           formeraient cette manière de gouvernement provisoire parallèle, qu’il devait présider lui-même le moment venu. L’existence du conseil des
           secrétaires généraux contribua à rendre définitivement caducs les projets des Américains.</p>
-        <p><hi rend="i">Le débarquement et ses suites. </hi> — La nouvelle du débarquement parvint très vite aux responsables de la Délégation,
+        <p n="7" type="chapter"><hi rend="i">Le débarquement et ses suites. </hi> — La nouvelle du débarquement parvint très vite aux responsables de la Délégation,
           ouvrant un nouveau débat entre partisans de « l’action immédiate » ­ les communistes et leurs alliés ­ et ceux qui, à la suite de Parodi,
           rappelaient que l’insurrection nationale devait être déclenchée seulement sur décision du gouvernement d’Alger. Dans la suite des événements
           et notamment au cours des combats de la libération de Paris, Alexandre Parodi fit preuve de pragmatisme. Beaucoup d’encre a coulé à propos
           des intentions du P.C.F. en 1944, qui méritent une analyse approfondie.</p>
-      </div><div n="4" type="part"><head n="Chapitre IV">Alexandre Parodi face à l’insurrection de la libération de Paris</head>
-        <p><hi rend="i">Le Délégué général du G.P.R.F. aux prises avec la Résistance intérieure. </hi> — Après le déclenchement des opérations
+      </div><div n="6" type="part"><head n="0" type="chapter">Alexandre Parodi face à l’insurrection de la libération de Paris</head>
+        <p n="1" type="chapter"><hi rend="i">Le Délégué général du G.P.R.F. aux prises avec la Résistance intérieure. </hi> — Après le déclenchement des opérations
           militaires en métropole, la politique reprit ses droits. La Résistance intérieure, dans une certaine mesure, entendait ne pas se laisser
           déposséder de ses prérogatives, au jour de la Libération, par les gaullistes dont Alexandre Parodi était l’agent et le porte-parole ; d’où
           la création abusive de commissions ministérielles au sein du C.N.R., la volonté affichée par le Comité parisien de Libération de désigner
@@ -254,7 +256,7 @@
           Gouvernement provisoire tout en ménageant l’unité de la Résistance. Le soutien de de Gaulle ne lui fit pas défaut et se manifesta notamment
           par les consignes secrètes du 31 juillet 1944 ­ que Parodi, en fait, ne reçut pas ­ et par sa nomination, à la veille de la Libération de
           Paris, comme membre à part entière du gouvernement d’Alger.</p>
-        <p><hi rend="i">Le déclenchement de l’insurrection parisienne et ses lourdes conséquences. </hi> — Lorsque la Résistance s’empara de la
+        <p n="2" type="chapter"><hi rend="i">Le déclenchement de l’insurrection parisienne et ses lourdes conséquences. </hi> — Lorsque la Résistance s’empara de la
           Préfecture de Police, le 19 août 1944 à l’aube, l’insurrection parisienne venait bel et bien d’éclater, mais la décision d’avaliser cette
           situation ne fut pas facile à prendre pour le Délégué général : informé de la faiblesse de l’armement des forces résistantes, il redoutait
           une répétition du drame de Varsovie. Parodi se résolut finalement à ne pas attendre le feu vert du général de Gaulle, qui serait de toute
@@ -262,26 +264,24 @@
           opposer aurait sonné le glas de l’unité de la Résistance. Parodi chercha dès lors à gagner du temps, dans l’attente des troupes de Leclerc
           qu’il appelait depuis longtemps, dans des câbles adressés à Kœnig, à foncer sur la capitale. La trêve négociée le lendemain avec le
           commandement allemand, s’il n’en fut pas à l’origine, tombait à ses yeux à point nommé.</p>
-        <p><hi rend="i">Prisonnier du général von Choltitz. </hi> — Dans l’après-midi du 20 août, alors qu’il circulait dans Paris pour vérifier
+        <p n="3" type="chapter"><hi rend="i">Prisonnier du général von Choltitz. </hi> — Dans l’après-midi du 20 août, alors qu’il circulait dans Paris pour vérifier
           l’application de la trêve, Parodi fut capturé par les Allemands et traduit devant le commandant du Gross Paris, le général von Choltitz, qui
           le libéra finalement ; l’épisode a été raconté par les différents protagonistes, dont les récits divergent parfois.</p>
-        <p><hi rend="i">L’affaire de la trêve. </hi> — Après la libération de Parodi, le débat sur la trêve s’envenima, d’aucuns, communistes en
+        <p n="4" type="chapter"><hi rend="i">L’affaire de la trêve. </hi> — Après la libération de Parodi, le débat sur la trêve s’envenima, d’aucuns, communistes en
           tête, voyant en elle une « trahison ». Le Délégué général, qui cherchait par tous les moyens à gagner du temps pour éviter des pertes, sut
           néanmoins, au lendemain de la houleuse séance plénière du C.N.R. le 21 août, dénoncer la trêve avant son échéance initialement prévue et
           relancer l’ensemble des forces résistantes dans la bataille en signant l’ordre de reprise des combats.</p>
-        <p><hi rend="i">De la reprise des combats à l’arrivée du général de Gaulle. </hi> — Dès lors, l’insurrection fut généralisée ; la prise à
+        <p n="5" type="chapter"><hi rend="i">De la reprise des combats à l’arrivée du général de Gaulle. </hi> — Dès lors, l’insurrection fut généralisée ; la prise à
           l’ennemi des bâtiments officiels s’acheva et Parodi présida, à l’hôtel Matignon, le premier conseil des secrétaires généraux provisoires. A
           la Préfecture de Police où il installa une partie de ses services, il accueillit le capitaine Dronne, premier homme de la 2 <hi rend="sup">e</hi> D.B. à gagner la capitale au soir du 24 août 1944.</p>
-        <p><hi rend="i">Fin de la mission du Délégué général. </hi> — L’arrivée dans la capitale du général de Gaulle, président du Gouvernement
+        <p n="6" type="chapter"><hi rend="i">Fin de la mission du Délégué général. </hi> — L’arrivée dans la capitale du général de Gaulle, président du Gouvernement
           provisoire de la République française, le 25 août, marque la fin de l’existence de la Délégation générale. Parodi joua encore un rôle
           politique certain dans les heures décisives, puis dans les jours qui suivirent. Il convainquit de Gaulle de se rendre auprès des
           représentants de la Résistance intérieure, à l’Hôtel de Ville, à son arrivée ; le lendemain, il participa aux côtés du Général au défilé de
           la victoire, et c’est lui qui avait prévenu Monseigneur Suhard, l’archevêque de Paris compromis avec Vichy, que sa présence n’était pas
           souhaitée lors du <hi rend="i">Te Deum</hi> qui clôturerait la célébration. Avant d’être nommé ministre du travail et de la sécurité
           sociale, Parodi fut encore quelques jours durant Commissaire, puis ministre d’Etat aux territoires occupés.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>La culture politique qui était celle d’Alexandre Parodi avait fixé dans une large mesure les termes mêmes de son engagement. Sa
           participation à des groupes de réflexions sur l’après-guerre, son activité en tant que membre du C.G.E., puis l’action menée comme Délégué
           général de la France combattante, de même que les circonstances dans lesquelles tout ceci intervint ­ et notamment la mort de son frère ­ en
@@ -293,11 +293,10 @@
           déroulement du processus qui mena à un tel résultat, conformément aux plans de Londres et d’Alger et aux initiatives de son illustre
           prédécesseur.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives et annexes</head>
+          <div type="appendix" n="8"><head>Pièces justificatives et annexes</head>
         <p>Documents relatifs à Alexandre Parodi, à sa famille et à son action dans la Résistance. ­ Articles et brouillons d’articles d’Alexandre
           Parodi. ­ Choix de photographies. ­ Index des noms propres.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

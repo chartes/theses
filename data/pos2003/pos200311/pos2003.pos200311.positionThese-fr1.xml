@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">François-Henri de Montmorency-Bouteville, maréchal de Luxembourg (1628-1695)</title>
-        <title type="sub">Commander les armées pour Louis XIV.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">François-Henri de Montmorency-Bouteville, maréchal de Luxembourg (1628-1695)</title><title xml:lang="fr" type="sub">Commander les armées pour Louis XIV.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Fonck, Bertrand">Bertrand Fonck</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200311.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le maréchal de Luxembourg fut l’un des plus fameux chefs d’armée du <num>xvii<hi rend="sup">e</hi></num>  siècle et le général le plus en vue de la
           partie centrale du règne de Louis XIV. Or, si son nom reste bien connu, associé à ceux de ses victoires, l’homme et son parcours le sont
           beaucoup moins. Fils posthume de François de Montmorency-Bouteville, duelliste exécuté sur l’ordre de Louis XIII, cousin du duc Henri II de
@@ -64,7 +67,7 @@
           l’homme de guerre, qui tend à attirer tous les regards, se cache enfin un grand seigneur, un courtisan dont la personnalité, les relations
           et la fortune restaient à dévoiler et à mettre en perspective.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Malgré l’absence de papiers de famille, les sources disponibles ont permis une étude approfondie de la vie et de l’action de Luxembourg et
           un renouvellement de la documentation touchant le sujet. Avec les Mémoires des contemporains, ce sont les archives du Service historique de
           l’armée de Terre qui ont été les plus exploitées, et principalement, dans la série A<hi rend="sup">1</hi> , la correspondance qu’entretint
@@ -83,9 +86,8 @@
           Luxembourg, sa sœur la duchesse de Mecklembourg et son mari le duc Christian-Louis, conservées à Schwerin, ont constitué un apport
           intéressant.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La carrière des armes</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La carrière des armes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le devoir de révolte</head>
           <p>Fils et parent de deux criminels de lèse-majesté exécutés, le comte de Bouteville, dans sa jeunesse, semblait ne pas devoir échapper au
             contexte de lutte pour le maintien de l’ordre socio-politique ancien et pour le pouvoir qui marqua la première moitié du XVII <hi rend="sup">e</hi>  siècle. Le nom même de Montmorency était désormais associé à la désobéissance et à la résistance de la société
@@ -99,7 +101,7 @@
             sacrifices consentis pour son protecteur ne furent pas vains : si le comte passa à côté des récompenses offertes par Mazarin à ceux qui
             savaient négocier leur ralliement, Condé n’oublia pas la fidélité de son ami durant ces dix années de lutte.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La soumission récompensée</head>
           <p>Alors que la Fronde aurait pu anéantir tous les espoirs de Bouteville et l’enfermer dans une disgrâce sans fin, il n’en fut rien. En
             effet, Condé, qui regagnait peu à peu pouvoir et crédit, obtint pour son protégé, en 1661, la main de Charlotte-Madeleine de
@@ -115,7 +117,7 @@
             la protection de Louvois, dont Luxembourg devint l’ami, furent pour beaucoup. Turenne mort et Condé retiré des champs de bataille, la
             place était libre pour un homme ambitieux qui ne comptait pas en rester là.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les illusions de la gloire</head>
           <p>Duc de Luxembourg, pair et maréchal de France, commandant de l’armée de Flandre et capitaine des gardes du corps du roi : l’ancien comte
             de Bouteville avait en 1675 obtenu tout ce qu’une carrière militaire réussie pouvait lui offrir. Malgré l’échec du secours de
@@ -132,8 +134,8 @@
             l’exercice du pouvoir n’ayant jamais été autant réduit aux seules décisions d’un souverain qui n’acceptait plus de voir ses ministres ou
             les grands faire de l’ombre au soleil.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">De la conduite de la guerre</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">De la conduite de la guerre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’art du commandement</head>
           <p>Le déroulement des guerres de Hollande et de la Ligue d’Augsbourg, durant lesquelles Luxembourg exerça ses principaux commandements, est
             bien connu, mais il n’en est pas de même des ressorts de l’action des chefs d’armée qui en furent des acteurs décisifs. Les sources
@@ -151,7 +153,7 @@
             immobilisme, tantôt accepté voire entretenu par Luxembourg, tantôt combattu par lui lorsqu’il désirait exploiter la mobilité de ses
             troupes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le maréchal en action</head>
           <p>Luxembourg passa une grande partie de sa vie dans les camps : l’étude de cet univers et du rôle du chef d’armée au quotidien était
             nécessaire pour comprendre le personnage et, à travers lui, les conditions dans lesquelles la guerre était alors menée. Le maréchal
@@ -168,7 +170,7 @@
             l’usage privilégié de la cavalerie, la charge à l’arme blanche et l’exploitation des capacités morales de soldats conquis par un chef qui
             n’hésitait pas à participer au combat.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Luxembourg dans la guerre de la Ligue d’Augsbourg</head>
           <p>La guerre de la Ligue d’Augsbourg imposa aux militaires des conditions nouvelles, dont un accroissement important des effectifs, auquel
             le maréchal sut s’adapter puisqu’il compensa la perte de mobilité qui en résulta par une concentration des forces lui permettant de
@@ -184,8 +186,8 @@
             il disposait. La frilosité de Louis XIV, adepte d’une guerre de sièges plus économe, contribua aussi à la perpétuation d’une guerre
             d’usure.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les fruits de la gloire</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les fruits de la gloire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le premier baron chrétien</head>
           <p>Gentilhomme accompli, apprécié des femmes, bon vivant, courtisan, tel fut le maréchal de Luxembourg, dont la personnalité comme la
             silhouette contrefaite ne laissaient personne indifférent. Homme d’esprit, ami de Racine, il sut aussi par son affabilité se ménager de
@@ -201,7 +203,7 @@
             notamment l’aîné, Charles-François-Frédéric (le père du second maréchal de Luxembourg) et le dernier, Christian-Louis, qui devint le
             maréchal de Montmorency.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La fortune du maréchal de Luxembourg</head>
           <p>L’étude de la fortune d’un personnage aussi considérable que Luxembourg était essentielle pour comprendre son statut social, ses moyens
             d’action, son crédit et son train de vie. Les terres familiales des Montmorency-Bouteville, dont Précy-sur-Oise, près de Chantilly,
@@ -219,7 +221,7 @@
             ferme de maintenir intacts et même d’accroître les domaines hérités de la maison de Luxembourg, dont il parvint à affermir l’assise
             économique, même s’il laissa à sa mort d’énormes dettes et une succession difficile.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une image contrastée</head>
           <p>Luxembourg connut, à partir de ses campagnes en Hollande, une renommée européenne due autant aux dévastations perpétrées par ses troupes
             qu’à ses victoires. Les récits de ses campagnes véhiculés par les périodiques, les chansons à sa gloire, mais aussi la haine qu’il
@@ -235,9 +237,7 @@
             d’un roi : Luxembourg devint finalement un symbole de la collaboration à la monarchie louis-quatorzienne et des profits que la noblesse la
             plus avisée pouvait en tirer.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Orphelin de père par la volonté du roi, privé de son protecteur naturel, le duc de Montmorency, lui aussi exécuté par la monarchie, le
           comte de Bouteville fut expulsé d’un corps politique convulsé par la naissance dramatique de l’absolutisme. Il hérita d’un nom fameux entre
           tous, mais devenu synonyme de résistance aux attaques portées par la couronne aux libertés nobiliaires. Chef de guerre hors pair, sa
@@ -251,14 +251,13 @@
           Luxembourg, par sa détermination, sut forcer le destin les armes à la main, mais dut finalement accepter de renoncer à certaines de ses
           ambitions qui étaient celles d’une époque révolue.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Discours de François de Bouteville devant le Parlement. ­ Confirmation du duché et pairie de Piney en mars 1661. ­ Provisions de capitaine
           des gardes du corps de 1673, et pouvoir de commander l’armée de Flandre de 1675. ­ Exemple de pacte avec le diable et requête de la duchesse
           de Luxembourg en 1680. ­ Edition de la correspondance conservée entre les Luxembourg et le duc et la duchesse de Mecklembourg en 1671-1672
           et 1688 (28 lettres). ­ Instructions du maréchal à ses troupes pour les fourrages et la disposition à respecter durant les combats. ­
           Relations des batailles des Dunes, de Fleurus, Leuze et Neerwinden. ­ Testament de Luxembourg et extraits de son oraison funèbre.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

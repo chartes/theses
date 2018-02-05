@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La boîte à Perrette : approche des finances du mouvement janséniste au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La boîte à Perrette : approche des finances du mouvement janséniste au <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lyon-Caen, Nicolas">Nicolas Lyon-Caen</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200217.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le renouveau déjà ancien de l’histoire politique est tel qu’elle n’a plus à justifier la pertinence de son objet d’étude, au prix
           cependant du déplacement de celui-ci. La restitution de la trame événementielle a cessé d’être son objectif essentiel. Elle est devenue une
           histoire du politique, s’efforçant de décrire et d’analyser les modalités et les expressions des relations des hommes à la chose publique,
@@ -71,7 +74,7 @@
           Parlement, financement indépendant. Serait-ce là la réponse du berger à la bergère, un parti créé par la société civile pour défendre les
           droits de Dieu face à l’état monarchique et administrateur</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources de cette étude se composent de trois ensembles principaux. Les archives de la Bastille, conservées à la bibliothèque de
           l’Arsenal, ont fourni un grand nombre de pièces, de lettres et de documents de travail, saisies par les agents du lieutenant général de
           police qui ont également rédigé quelques rapports instructifs. La même bibliothèque abrite également des fonds de correspondance d’origine
@@ -81,14 +84,13 @@
           constituée par les minutes de quelques notaires de Paris qui instrumentent pour le compte de la boîte à Perrette, ainsi que pour les
           familles des militants.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les archives de la boîte à Perrette</head>
-        <p>Avant de s’interroger sur la nature des “ institutions jansénistes ”, il convient de poser quelques préalables. L’existence de la boîte à
+          <div n="3" type="part"><head n="0" type="chapter">Les archives de la boîte à Perrette</head>
+        <p n="1" type="chapter">Avant de s’interroger sur la nature des “ institutions jansénistes ”, il convient de poser quelques préalables. L’existence de la boîte à
           Perrette tient en effet largement au choix d’une méthodologie et à une lecture des sources selon un présupposé qui n’aurait sans doute pas
           entièrement convaincu tous les contemporains de l’affaire. La boîte à Perrette tient en partie du fantasme de l’historien-enquêteur avide de
           percer un mystère au final peut-être inexistant. Les jansénistes ne cherchaient pas spontanément à cacher ce qui est à nos yeux le plus
           compromettant, les affaires de financement.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Existence et nature des sources</head>
           <p>À l’instar de la grande majorité des multiples regroupements de particuliers sous l’Ancien Régime ­ autant dire de la vie associative
             des confréries et des corporations ­, la boîte à Perrette n’a pas laissé d’archives comme aurait pu le faire une institution ordinaire.
@@ -105,7 +107,7 @@
             détails pratiques de la gestion des fonds. Le dépouillement des registres et des minutes des études concernées permet d’établir le
             déroulement des très nombreuses opérations financières.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les rentes, utilisation et signification</head>
           <p>La principale différence entre les rentes et le compte bancaire actuel tient au fait que ce sont des particuliers qui tiennent le rôle
             de l’institution de crédit. Ce type de gestion suppose donc un monde de confiance au sein duquel l’argent puisse circuler sans risque. Le
@@ -121,12 +123,12 @@
             que ce soit un legs ou une donation, s’est avérée très problématique. Il n’en reste pas moins que l’ensemble des actes passés par les
             trésoriers dans l’exercice de leurs fonctions est assimilable aux archives de la boîte à Perrette.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’appareil militant</head>
-        <p>Une fois collectés et réunis de manière cohérente, les actes notariés permettent d’esquisser les principales caractéristiques des
+      </div><div n="4" type="part"><head n="0" type="chapter">L’appareil militant</head>
+        <p n="1" type="chapter">Une fois collectés et réunis de manière cohérente, les actes notariés permettent d’esquisser les principales caractéristiques des
           institutions pilotées ou contrôlées par le parti, parfois même d’en offrir une histoire détaillée. Les différentes branches de la caisse et
           leurs trésoriers se répartissent les tâches et les activités financées selon une distribution due au hasard des événements et des fractures
           internes au courant janséniste, à l’histoire duquel la boîte à Perrette est liée de très près.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Le fonctionnement de la boîte à Perrette</head>
           <p>La boîte à Perrette n’est pas une unité institutionnelle bien qu’on ne puisse nier la tendance à la simplification et à la concentration
             des fonds au fil du siècle. Si toutefois on consent à la décrire suivant une grille de lecture administrative, il apparaît qu’elle se
@@ -140,7 +142,7 @@
 <hi rend="sup">e</hi> siècle, à environ trois millions de livres produisant plus de 100 000 livres de revenu annuel, ce qui ne
             correspond somme toute qu’à la fortune d’un honnête fermier général.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Les différents emplois des fonds</head>
           <p>Comme le laisse entendre la présentation de la structure de la caisse, le mouvement janséniste entretient plusieurs œuvres. Les détails
             du fonctionnement des <hi rend="i">Nouvelles ecclésiastiques</hi> et des publications des appelants restent assez énigmatiques, en dehors
@@ -153,13 +155,13 @@
             marchands parisiens en linges et tissus qui financent les écoles et font travailler et mettre en apprentissage quelques jeunes filles de
             Villiers-le-Bel.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Un parti janséniste</head>
-        <p>Les origines sociales et professionnelles des militants et de leurs amis qui se désignent eux-mêmes par le vocable d’ “ amis de la vérité ”
+      </div><div n="5" type="part"><head n="0" type="chapter">Un parti janséniste</head>
+        <p n="1" type="chapter">Les origines sociales et professionnelles des militants et de leurs amis qui se désignent eux-mêmes par le vocable d’ “ amis de la vérité ”
           se répartissent en deux groupes assez distincts : d’un côté des clercs et de l’autre des élites parisiennes, même si la séparation n’est pas
           toujours aussi stricte. Les gestionnaires et fonctionnaires du parti sont en fait très largement issus d’un même milieu suffisamment solide
           et cohérent pour pouvoir se passer des soutiens ecclésiastiques et se permettre de s’appuyer uniquement sur ses relations personnelles avec
           les gens de pouvoir de la capitale. Qu’il existe une relation très particulière entre Paris et le jansénisme n’est pas contestable.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Un parti dans l’église</head>
           <p>Le jansénisme s’enracine dans les disputes théologiques du premier <num>xvii<hi rend="sup">e</hi></num> siècle. Il naît dans l’église et ne
             déborde que très progressivement le cadre de celle-ci, restant longtemps confiné au sein du clergé séculier ou de certains ordres très
@@ -176,7 +178,7 @@
             légitime, car ils se refusent à exposer publiquement leur sentiment sur la bulle. Pour le reste, leur attitude pastorale est celle
             d’évêques tridentins ordinaires : le jansénisme clérical se fond progressivement dans la masse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">La France janséniste</head>
           <p>Le jansénisme français n’est pas un phénomène spatialement homogène. Il se rencontre dans les diocèses dont les évêques ont eu des
             penchants assez affirmés pour la doctrine de l’ <hi rend="i">Augustinus</hi> ou dans certaines villes dont l’histoire récente - par
@@ -204,9 +206,7 @@
             par ailleurs. Les liens entre ce milieu et certains représentants de l’Eglise constitutionnelle sont assez nombreux pour mériter d’être
             soulignés.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Si à bien des égards la boîte à Perrette peut à bon droit passer pour un pré-parti politique dont elle présente déjà plusieurs
           caractéristiques organisationnelles et si les militants qui la gèrent ne différent pas substantiellement de ce que notre époque met sous ce
           terme, son lien avec la société civile et le système politique de son époque interdisent de l’y assimiler complètement. L’appareil militant
@@ -220,14 +220,13 @@
           encore plus vrai des laïcs que des clercs. L’étude de la “ société janséniste ” relève du même arbitraire que celle de la boîte à Perrette :
           elle n’existe comme objet historique cohérent que par le statut que l’historien veut bien lui accorder.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives et Annexes</head>
+          <div type="appendix" n="7"><head>Pièces justificatives et Annexes</head>
         <p>Cette recherche n’a pas eu l’heur de mettre à jour une masse textuelle conséquente ni même très significative. Les pièces justificatives
           sont donc d’un intérêt très ponctuel. D’autre part, elle ne prend pas appui sur des données numériques suffisantes pour donner une réelle
           pertinence à une étude statistique. Aussi n’ont été établies qu’une rapide prosopographie des gestionnaires, la liste des dépositaires de
           fonds et les renseignements recueillis sur leur possible orientation religieuse ainsi qu’une recension exhaustive, présentée par fonds, des
           rentes prises en compte dans l’étude.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

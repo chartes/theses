@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La maison Fourdinois : néo-styles et néo-Renaissance dans les arts décoratifs en France dans la seconde moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La maison Fourdinois : néo-styles et néo-Renaissance dans les arts décoratifs en France dans la seconde moitié du <num>xix<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gabet, Olivier">Olivier Gabet</author>
       </titleStmt>
       <editionStmt>
@@ -38,26 +40,27 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200020.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Longtemps dénigrée, la florissante ébénisterie française des années 1830 à 1880 fut mal connue jusqu’à l’exposition consacrée en 1979 à
             <hi rend="i">L’Art en France sous le Second Empire.</hi> Etudier la maison parisienne Fourdinois peut permettre de cerner le contexte et
           les raisons du succès des néo-styles et du néo-Renaissance, qui demeure encore trop souvent incompris. Au cœur de cette aventure familiale,
           il y a aussi deux personnalités riches et attachantes qu’il convient d’examiner : Alexandre-Georges Fourdinois et son fils Henri-Auguste.
        </p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude de la production de la maison Fourdinois repose avant tout sur des sources iconographiques qui sont conservées, pour l’essentiel,
           à la bibliothèque Forney, à Paris : croquis et dessins (Fol. Rés. 5581 à 5586), photographies regroupées dans des recueils factices (Fol.
           Rés. 5587 à 5589). Ce corpus iconographique doit être complété par des pièces conservées dans plusieurs séries des Archives nationales, dont
@@ -69,29 +72,28 @@
           avec le baron et la baronne du Sendat) et, de manière plus ponctuelle, les archives municipales de Valenciennes et les Archives de la marine
           à Toulon.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Préambule typologique, lexical et historique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Préambule typologique, lexical et historique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le fonds Fourdinois de la bibliothèque Forney</head>
           <p>Le fonds de dessins et de photographies de la maison Fourdinois se trouvait à la bibliothèque Forney dès l’ouverture, sans que l’on
             connaisse précisément la date ni les circonstances de son entrée dans les collections. C’est sur une analyse détaillée, tant quantitative
             que qualitative, de cette collection que reposent les hypothèses de travail, les axes de recherche et la méthodologie retenus.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Lexicologie</head>
           <p>Il convient de relever les termes récurrents sous la plume de ceux qui ont étudié et critiqué les arts décoratifs de la période concernée
             et d’en donner la définition la plus claire et la plus dense possible. Il ressort de cette étude lexicale que toute étude sur la maison
             Fourdinois doit au préalable définir les notions de néo-styles et de néo-Renaissance, souvent attachées à leur production.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">Les débuts de la maison Fourdinois : Le règne d’Alexandre-Georges (1835-v. 1860)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les débuts de la maison Fourdinois : Le règne d’Alexandre-Georges (1835-v. 1860)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une personnalité difficile à cerner</head>
           <p>Les renseignements sur les origines familiales d’Alexandre-Georges Fourdinois (1799-1871) sont minces : il descendrait d’une famille de
             sculpteurs sur bois parisiens. Il commence sa carrière dans les ateliers de Jacob-Desmalter. Sans doute y est-il sensible aux premiers pas
             du néo-rococo, son passage devant être contemporain de la production de la copie du bureau à cylindre de Louis XV par Riesener, exécutée à
             la demande du roi George IV d’Angleterre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les origines : la maison Fourdinois et Fossey</head>
           <p>La décision d’une association entre Alexandre-Georges Fourdinois et Jules Fossey (1806-1858) n’est pas éclaircie, excepté le fait qu’elle
             date de l’année 1835. Le contexte de leur rencontre n’est pas plus connu.. La personnalité de Fossey est riche à bien des égards : il
@@ -106,7 +108,7 @@
             séparent en 1848, sans que la raison soit bien connue, peut-être par jalousie et par dissensions personnelles. Fourdinois père reste dans
             les ateliers de la rue Amelot, à Paris, et continue seul l’aventure.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le développement la maison Fourdinois dans le contexte des premières expositions universelles</head>
           <p>L’idée d’exposition universelle est française et les Anglais, qu’ils l’ont reprise et matérialisée, le reconnaissent volontiers. Le rôle
             de sir Henry Cole, érudit pétri de l’idée de progrès, est particulièrement important dans ce domaine. Fondateur du South Kensington
@@ -124,8 +126,8 @@
             Compiègne réaménagés pour la visite des souverains britanniques et vend à l’administration du South Kensington Muséum l’armoire présentée
             à l’Exposition.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’apogée de la maison Fourdinois : La direction d’Henri-Auguste (v. 1860-1887)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’apogée de la maison Fourdinois : La direction d’Henri-Auguste (v. 1860-1887)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une formation diversifiée</head>
           <p>Les débuts d’Henri-Auguste Fourdinois se déroulent de 1846 à 1848 sous les auspices bienveillants de l’architecte Félix Duban, promoteur
             du néo-Renaissance et restaurateur du château de Blois. Les circonstances qui ont présidé à cette rencontre sont inconnues, mais Duban
@@ -141,7 +143,7 @@
             Son activité en la matière reste peu connue, mais elle a influencé son travail ultérieur, comme le montrent certains dessins de motifs
             ornementaux en bronze d’ameublement réalisés au cours de sa carrière d’ébéniste.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La succession à la tête de la maison Fourdinois</head>
           <p>La chronologie de la succession à la tête de la maison Fourdinois est très difficile à dégager en l’absence d’informations précises. La
             date de 1860 est généralement retenue, mais sans preuve formelle, pour l’entrée de Henri-Auguste Fourdinois dans la maison paternelle. Il
@@ -152,7 +154,7 @@
             de restauration de meubles anciens (pour le comte de Nieuwerkerke), la constitution d’une collection personnelle d’œuvres d’art et de
             meubles, et dans l’invention de la marqueterie en plein qui modifie profondément une certaine conception de l’ébénisterie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Des succès manifeste mais controversés aux expositions universelles</head>
           <p>La participation de la maison Fourdinois aux différentes expositions universelles de Londres en 1862 et de Paris en 1867 et 1878, ainsi
             qu’à de nombreuses autres expositions européennes, sont autant de succès remarqués par les critiques et couronnés par les récompenses
@@ -164,8 +166,8 @@
             de controverses en France, au sujet de la paternité de la marqueterie en plein, et en Angleterre, où certains, comme Christopher Dresser,
             lui reprochent ses choix esthétiques et le coût de ses créations.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Vie et mort d’une grande maison d’ébénisterie parisienne</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Vie et mort d’une grande maison d’ébénisterie parisienne</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etude économique et sociale de la maison Fourdinois</head>
           <p>Dans ses écrits. De <hi rend="i">l’état actuel de l’industrie du mobilier</hi>(1885) et <hi rend="i">Etude économique et sociale sur
               l’ameublement</hi>(1894), Henri-Auguste Fourdinois offre une vision personnelle des industries d’art et du bois et développe des idées
@@ -182,7 +184,7 @@
             essentielle de l’ameublement. Le passage d’une production de luxe à une production de demi-luxe destinée aux classes moyennes marque aussi
             l’évolution de cette politique commerciale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La clientèle de la maison Fourdinois</head>
           <p>II importe de mener l’étude la plus exhaustive possible de la clientèle et des commandes passées à la maison Fourdinois. La typologie
             établie permet de dégager différentes catégories : commandes officielles, achats institutionnels, clientèle de particuliers, française et
@@ -202,7 +204,7 @@
             l’exemple de l’appartement Louis XIII du château de Fontainebleau ou l’aménagement du yacht impérial <hi rend="i">L’Aigle.</hi>
          </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le constat d’un échec</head>
           <p>Henri-Auguste Fourdinois avoue lui-même utiliser toujours les mêmes motifs dans son œuvre et être acculé à une impasse. A ce manque de
             renouvellement dans la création, s’ajoute les critiques essuyées au sein de l’Union centrale des arts décoratifs, dont il est membre du
@@ -222,7 +224,7 @@
             d’architectes comme Duban, Lefuel, Vaudoyer, Viollet-le-Duc, Paul Sédille, ou de peintres comme Bonnat et Galland. Les arts majeurs
             saluent les arts mineurs au travers de la maison Fourdinois et les traitent enfin sur un pied d’égalité.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Influence et fortune critique de la maison Fourdinois</head>
           <p>L’influence exercée par les créations et par l’esprit de la maison Fourdinois est grandes sur les productions d’autres ébénistes
             français, mais aussi anglais et américains. La maison Herter Brothers va jusqu’à copier purement et simplement des chaises dues à la plume
@@ -237,18 +239,15 @@
             attentive chez Eileen Gray ou Charlotte Perriand. Discrédité par sa diffusion progressive dans les classes plus populaires, le style
             néo-Renaissance redevient peu à peu digne d’intérêt, après avoir fait la réussite de la maison Fourdinois.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Saisir les aspirations et les désirs d’une époque permet de comprendre la fortune critique des néo-styles et du néo-Renaissance, tels
           qu’ils se manifestent dans l’œuvre des Fourdinois, la plus originale et la plus singulière de son temps. L’idée de modernité devient
           paradoxalement indissociable d’une étude des néo-styles, instrument indispensable pour élaborer une archéologie de la modernité.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Actes de naissance d’Henri-Auguste Fourdinois. ­ Préface de Louis de Fourcaud au catalogue de la vente de Fourdinois de janvier 1887. ­
           Lettre d’Henri-Auguste Fourdinois à Antonin Proust, expliquant sa conception du rôle de l’Union centrale des arts décoratifs.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

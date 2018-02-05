@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Promptuarium exemplorum&lt;/hi&gt; de Martin le Polonais, O.P. († 1278)</title>
-        <title type="sub">Édition critique et commentaire.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le <hi rend="i">Promptuarium exemplorum</hi> de Martin le Polonais, O.P. († 1278)</title><title xml:lang="fr" type="sub">Édition critique et commentaire.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lebourgeois, Anne-Élyse">Anne-Élyse Lebourgeois</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200213.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Au cours du <num>xiii<hi rend="sup">e</hi></num> siècle, un vaste mouvement d’élaboration et de diffusion d’ouvrages destinés à aider les
           prédicateurs dans la composition de leurs sermons, animé en particulier par les membres des ordres mendiants, donna lieu à la rédaction de
           nombreux recueils d’anecdotes édifiantes, désignées par le terme d’ <hi rend="i">exempla</hi>. Parmi ces recueils, le <hi rend="i">Promptuarium exemplorum</hi> ne suscita pendant longtemps qu’un intérêt modéré de la part des historiens. Il n’apparaissait que comme un
@@ -68,11 +71,10 @@
           recueil au dominicain Martin le Polonais († 1278), explicite dans les éditions du <num>xv<hi rend="sup">e</hi></num> siècle mais absente des témoins
           manuscrits, pose également quelques questions.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La tradition du <hi rend="i">Promptuarium exemplorum</hi>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">La tradition du <hi rend="i">Promptuarium exemplorum</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une tradition décevante</head>
           <p>
             <hi rend="i">La tradition manuscrite</hi>. ­ Seuls trois témoins comportent le texte manuscrit du <hi rend="i">Promptuarium
@@ -92,7 +94,7 @@
             <hi rend="i">Un rejeton du</hi> Promptuarium exemplorum. ­ Le manuscrit de Donaueschingen, Fürst.-Hofbibl., 271, livre un témoignage
             intéressant de la postérité du <hi rend="i">Promptuarium exemplorum</hi>, par le biais d’un fragment de compilation d’ <hi rend="i">exempla</hi>, au nombre desquels sont réutilisés, parfois réécrits, des extraits du <hi rend="i">Promptuarium</hi>.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le système de renvois et la numérotation des <hi rend="i">exempla</hi>
          </head>
           <p>
@@ -112,7 +114,7 @@
             applique au recueil, à partir d’un manuscrit comportant encore un système proche de l’original, ou s’il l’a repris d’un manuscrit dont le
             copiste avait déjà effectué ce travail.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’attribution du recueil à Martin le Polonais</head>
           <p>
             <hi rend="i">Éléments de biographie</hi>. ­ Martin le Polonais, connu également sous le nom de Martin de Troppau, serait originaire
@@ -133,7 +135,7 @@
             avec l’existence du <hi rend="i">Promptuarium exemplorum</hi> de Jean Hérolt O.P. († 1468), imprimé à Strasbourg à peine quelques années
             auparavant.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Datation du <hi rend="i">Promptuarium exemplorum</hi>
          </head>
           <p>Le recueil ne contient aucune mention explicite d’ordre chronologique ou biographique. L’époque de rédaction du <hi rend="i">Promptuarium exemplorum</hi> est cependant déterminée par deux termes <hi rend="i"> </hi> : elle est postérieure à 1261, date de la
@@ -141,9 +143,9 @@
             Paris, Bibl. nat. de Fr <hi rend="i">.</hi>, lat. 3301<hi rend="sup">A</hi> . Ceci place nécessairement la rédaction du texte pendant la
             période où Martin le Polonais était en fonction auprès du souverain pontife et élaborait successivement sa chronique et sa table du <hi rend="i">Décret</hi> de Gratien.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Présentation du <hi rend="i">Promptuarium exemplorum</hi>
+      </div><div n="3" type="part"><head n="0" type="chapter">Présentation du <hi rend="i">Promptuarium exemplorum</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les sources</head>
           <p>
             <hi rend="i">La principale source directe : le</hi> Tractatus de diversis materiis predicabilibus <hi rend="i">d’Étienne de Bourbon</hi>.
@@ -173,7 +175,7 @@
             déterminer l’appartenance ou non de cette dernière série au <hi rend="i">Promptuarium exemplorum</hi> ; néanmoins l’existence dans ce
             manuscrit de renvois marginaux des sermons vers ces <hi rend="i">exempla</hi> ne doit pas être négligée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les liens avec le recueil de sermons</head>
           <p>
             <hi rend="i">Les</hi> exempla <hi rend="i">des sermons</hi>. ­ Sur les quelque 325 sermons modèles - encore inédits - que compte le
@@ -195,7 +197,7 @@
             d’illustration, les <hi rend="i">exempla</hi> proposés par les renvois jouent souvent un rôle modérateur dans la condamnation du pécheur,
             en soulignant l’importance de la confession et de la pénitence que récompense le pardon de Dieu.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Vers une définition de l’ <hi rend="i">exemplum</hi> dans ce recueil</head>
           <p>
             <hi rend="i">Narrativité</hi>­ L’élément narratif qui constitue le fondement de la définition générique de l’ <hi rend="i">exemplum</hi>
@@ -210,16 +212,14 @@
             source. Il faut se tourner vers les sermons pour mieux appréhender les particularités du recueil. Sans parler de qualités littéraires au
             sens strict, le style y est indéniablement vif, précis, direct, en un mot efficace.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>Le <hi rend="i">Promptuarium exemplorum</hi> témoigne d’une étape importante dans l’évolution du genre exemplaire, à savoir le passage de
           la phase de collecte de récits originaux à la phase d’assimilation et d’appropriation de ces récits par les prédicateurs. Possédant toutes
           les caractéristiques des œuvres produites au <num>xiii<hi rend="sup">e</hi></num> siècle, et ce jusque dans l’incertitude qui peut encore peser quant
           à l’identité de son auteur, ce recueil remplit son rôle de modèle à la perfection, à la fois pour les prédicateurs médiévaux et pour tous
           ceux qui s’intéressent aujourd’hui à ce que fut la vie religieuse quotidienne des hommes de ce siècle.</p>
       </div>
-              <div type="appendix"><head>Édition du <hi rend="i">Promptuarium exemplorum</hi> de Martin le Polonais</head>
+          <div type="appendix" n="5"><head>Édition du <hi rend="i">Promptuarium exemplorum</hi> de Martin le Polonais</head>
         <p>Deux manuscrits ont été retenus pour l’établissement du texte de l’édition, Paris, Bibl. nat. de Fr., lat. 3301<hi rend="sup">A</hi> et
           Colmar, Bibl. mun., 100 (210), ainsi que les deux éditions incunables de 1484 et 1488. Le texte du <hi rend="i">Tractatus de diversis
             materiis predicabilibus</hi> d’Étienne de Bourbon a également été pris en compte dans l’apparat critique, à partir de l’édition de Jacques
@@ -227,7 +227,6 @@
           été normalisée. L’apparat critique indique la source des citations non bibliques et signale les variantes orthographiques des noms propres
           ainsi que les variantes textuelles. Les citations bibliques sont identifiées dans le corps du texte.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

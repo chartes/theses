@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La tradition manuscrite de l’&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Image du monde&lt;/hi&gt;</title>
-        <title type="sub">Fortune et diffusion d’une encyclopédie du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La tradition manuscrite de l’<hi rend="i">Image du monde</hi></title><title xml:lang="fr" type="sub">Fortune et diffusion d’une encyclopédie du <num>xiii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Centili, Sara">Sara Centili</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200504.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le <num>xiii</num>
 <hi rend="sup">e</hi> siècle a été défini par Jacques Le Goff comme le « siècle de l’encyclopédisme ». Il fut en effet une période
           d’incroyable essor pour les encyclopédies latines, mais vit aussi en même temps la naissance de l’encyclopédisme vulgaire. La fondation du
@@ -59,11 +62,10 @@
           public, laïc et non scolarisé. Pour comprendre le texte, il est donc fondamental de comprendre le rapport qu’il entretint avec ses lecteurs.
       </p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La genèse de l’<hi rend="i">Image du monde</hi>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">La genèse de l’<hi rend="i">Image du monde</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’état de la question : <lb/>l’<hi rend="i">Image du monde</hi> et ses rédactions</head>
           <p>L’<hi rend="i">Image du monde</hi> est un livre de clergie en langue française. Composé originellement en couplets d’octosyllabes
             – mais il en existe aussi une version en prose –, sa structure s’articule en parties, chapitres et sous-chapitres, scandés par rubriques
@@ -90,7 +92,7 @@
             <hi rend="i">La Réd. P, ou rédaction en prose</hi>. – Le texte original fut enfin objet d’un dérimage particulièrement fidèle : la
             rédaction en prose reproduit ainsi exactement la structure et le contenu de la Réd. A.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les procédés de remaniement dans les rédactions en vers</head>
           <p>Les rédactions remaniées (Réd. B et H) modifient en profondeur la Réd. A en intervenant à trois niveaux du texte : sur la structure, sur
             la disposition des matières et sur le contenu. La comparaison des rédactions en vers montre que la Réd. H n’est qu’un état primitif de la
@@ -117,7 +119,7 @@
             généralement d’ampleur réduite. Les interpolations propres à la Réd. B, donc absentes de la Réd. H, semblent liées à un voyage en Terre
             sainte que l’auteur aurait pu effectuer à côté de Robert d’Artois.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Datation et paternité des différentes rédactions</head>
           <p>La critique s’est beaucoup interrogée sur la possibilité d’attribuer les rédactions en vers à un seul et même auteur. Il est difficile de
             trancher la question, mais la proximité géographique et chronologique des rédactions en vers, comme leur consonance de ton et de style,
@@ -147,7 +149,7 @@
             Réd. A (Amsterdam, Bibl. Hermetica, 108). La fiabilité de ces attributions, minoritaires et situées dans la tradition manuscrite à des
             points de contact entre des rédactions différentes, est difficile à apprécier.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’<hi rend="i">Image du monde</hi> et son public</head>
           <p>Le remaniement de l’<hi rend="i">Image du monde</hi> fut entrepris à quelques années à peine de distance de l’achèvement de la
             rédaction originale, dans la même région. L’analyse des textes montre que si les intentions de l’auteur et la classe sociale visée comme
@@ -176,18 +178,18 @@
             d’effort – par un autodidacte. Quelques détails pourraient au contraire suggérer que la rédaction originale ait été conçue pour un usage
             de type scolaire.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La tradition manuscrite de l’<hi rend="i">Image du monde</hi>
+      </div><div n="3" type="part"><head n="0" type="chapter">La tradition manuscrite de l’<hi rend="i">Image du monde</hi>
       </head>
-        <p>Les quatre-vingt-dix-huit témoins des rédactions en vers de l’<hi rend="i">Image du monde</hi> sont présentés à travers des fiches
+        <p n="1" type="chapter">Les quatre-vingt-dix-huit témoins des rédactions en vers de l’<hi rend="i">Image du monde</hi> sont présentés à travers des fiches
           descriptives schématiques articulées en sept points : datation et localisation du manuscrit, description codicologique, mise en page et
           décoration, particularités du texte de l’<hi rend="i">Image du monde</hi>, histoire du manuscrit, pièces contenues dans les recueils,
           bibliographie. Sont d’abord envisagés les soixante-treize témoins de la Réd. A, regroupés par siècle d’origine et par typologie
           codicologique, puis sont décrits, en suivant les mêmes critères, les vingt-quatre témoins de la Réd. B et le témoin unique de la Réd. H.
           Enfin, une liste des pièces françaises copiées dans les recueils du corpus offre une brève description, avec indications
           bibliographiques de base, des ouvrages qui ont circulé et ont été lus à côté de l’<hi rend="i">Image du monde</hi>.</p>
-      </div><div n="3" type="part"><head n="Troisième partie">Fortune et diffusion de l’<hi rend="i">Image du monde</hi>
+      </div><div n="4" type="part"><head n="0" type="chapter">Fortune et diffusion de l’<hi rend="i">Image du monde</hi>
       </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La tradition manuscrite : <lb/>un aperçu général</head>
           <p>La fortune de l’<hi rend="i">Image du monde</hi> fut immédiate et durable, même si elle fut relativement limitée dans l’espace. Il est
             intéressant de remarquer que si les rédactions en vers présentent quelques traits distinctifs du point de vue des caractéristiques
@@ -222,7 +224,7 @@
             soin, issus sûrement d’ateliers marchands de bon niveau ; leur nombre montre que le rôle joué par l’industrie de la copie dans la
             diffusion de l’<hi rend="i">Image du monde</hi> fut considérable.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La position intellectuelle <lb/>de l’<hi rend="i">Image du monde</hi>
         </head>
           <p/>
@@ -251,7 +253,7 @@
             religieuses.</p>
           <p/>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Lecteurs et lecture de l’<hi rend="i">Image du monde</hi>
         </head>
           <p/>
@@ -284,9 +286,7 @@
             bibliothèque.</p>
           <p/>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p/>
         <p>La richesse de la tradition manuscrite de l’<hi rend="i">Image du monde</hi> en fait l’un des textes les plus répandus au Moyen Age. Sa
           diffusion rapide et capillaire indique que le besoin de culture scientifique en français était, dans la seconde moitié du <num>xiii</num>
@@ -295,8 +295,7 @@
           l’encyclopédie. Les rédactions en vers, bien que différentes dans le contenu et dans les intentions, circulèrent surtout en parallèle,
           apparemment en synergie plutôt qu’en concurrence, dans la propagation d’un programme d’instruction et d’édification destiné aux laïcs.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

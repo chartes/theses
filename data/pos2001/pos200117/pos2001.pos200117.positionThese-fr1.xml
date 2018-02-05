@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les plaidoiries des gens du roi aux parlements de Paris et de Poitiers (1418-1436)</title>
-        <title type="sub">« Que le droit du roi soit gardé ».</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les plaidoiries des gens du roi aux parlements de Paris et de Poitiers (1418-1436)</title><title xml:lang="fr" type="sub">« Que le droit du roi soit gardé ».</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Ratel, Guillaume">Guillaume Ratel</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200117.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si la connaissance de l’organisation et du personnel du Parlement de Paris est aujourd’hui relativement bien établie, la définition du rôle
           de l’institution a le plus souvent été déduite par les historiens des préambules stéréotypés des sources normatives (ordonnances royales et
           arrêts de règlement) et de quelques procès politiques fameux. Les actes de la pratique judiciaire du Parlement suggèrent quant à eux que la
@@ -71,7 +74,7 @@
           exigences d’une négociation avec des sujets et des pouvoirs, religieux et locaux, dont l’un et l’autre camp cherchaient à s’assurer le
           soutien et la fidélité.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Naturellement, une telle étude fait un usage abondant des archives des deux cours, aujourd’hui conservées aux Archives nationales. Le fonds
           du parlement de Poitiers a en effet rejoint celui de la cour parisienne dès décembre 1436 et se trouve donc à présent conservé au sein de la
           série X. Les avantages que présente l’unité du lieu de conservation pour la recherche ont pour contrepartie le manque de précision des
@@ -91,9 +94,8 @@
           nat. de France, fr. 16.397), conservés à la Bibliothèque nationale de France, se sont révélés d’une grande utilité pour remédier au peu
           d’informations que livrent les registres conservés aux Archives nationales sur les gens du roi en tant qu’individus.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les cadres et les mécanismes du discours</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les cadres et les mécanismes du discours</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le cadre institutionnel et l’auditoire du discours: les parlements de Paris et Poitiers et leurs juges</head>
           <p>Pour comprendre le fonctionnement de l’argumentation développée par les gens du roi, il convient tout d’abord de connaître
             l’environnement immédiat et l’auditoire de leurs plaidoiries. La présentation des parlements de Paris et de Poitiers et de leurs juges est
@@ -143,7 +145,7 @@
             siège à Paris et à Poitiers, savait manier les définitions théoriques, mais savait aussi, par expérience, ce que l’adhésion à ces théories
             pouvait avoir de contingent.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les auteurs et les acteurs du discours : les gens du roi aux parlements de Paris et de Poitiers</head>
           <p>Après avoir défini le cadre institutionnel et précisé ce que pouvait être les idées et les valeurs de l’auditoire, il reste à présenter
             les acteurs du discours, les gens du roi eux-mêmes. Cet exposé a aussi pour but d’expliquer les ressorts de ce discours, en mettant en
@@ -199,7 +201,7 @@
             témoigne d’une volonté de créer au sein du Parlement un équilibre entre la représentation des intérêts du parti bourguignon et de ceux
             d’un parti que l’on pourrait appeler “ parisien ”.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La plaidoirie : mécanismes d’un discours rhétorique</head>
           <p>Après avoir établi le contexte général du discours, l’identité de l’auditoire auquel il s’adresse et celle de ceux qui l’élaborent et le
             prononcent, l’étude peut se concentrer sur l’analyse des plaidoiries. Il convient de fonder cette étude sur une présentation de la
@@ -249,8 +251,8 @@
             qui permet d’identifier et de caractériser au mieux la stratégie mise en œuvre pour maintenir, affirmer et étendre les droits royaux dans
             le débat auquel chaque procès donne lieu.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les fonctions du discours</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les fonctions du discours</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aspects statistiques</head>
           <p>L’étude statistique des plaidoiries permet une première caractérisation générale de l’action des gens du roi. En analysant la fréquence
             de leurs plaidoiries, la répartition de leurs interventions entre appel et première instance, entre demandes et défenses, entre
@@ -284,7 +286,7 @@
             comparable dans ses lignes générales à celle d’un ministère public s’adjoignant aux parties et prononçant des réquisitoires. Cette étude
             statistique suggère donc l’existence de deux fonctions différentes du discours à Paris et à Poitiers.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les mécanismes du discours en action: études de cas</head>
           <p>Les conclusions de l’étude statistique doivent être mises à l’épreuve de l’analyse du texte des plaidoiries. Ainsi la méthode établie en
             première partie se doit d’être appliquée à des plaidoiries envisagées comme parties intégrantes d’une même affaire. Le choix s’est porté
@@ -314,9 +316,7 @@
             deux cours, cette fonction discursive est assurée par la mise en œuvre d’une même dialectique qui fait usage d’un fonds d’éléments communs
             : déclinaisons d’identité des plaideurs, ordonnances royales, droit romain, poncifs sur l’état du royaume.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’étude des plaidoiries révèle la nature complexe de la rhétorique qu’elles déploient. Non seulement judiciaire, tour à tour accusatoire et
           défensif, ce discours est aussi épidictique ­ il loue et, plus souvent, blâme des catégories de sujets du roi ­ et délibératif ­ il
           conseille ou déconseille des mesures à prendre pour le bien du royaume. L’action des gens du roi soutient et prolonge l’activité législative
@@ -333,13 +333,12 @@
           des principes que défendaient ces praticiens et ces orateurs de talent devant l’une et l’autre cour explique en partie qu’à la fin de
           l’année 1436 la fusion des deux institutions ait été rendue possible et même souhaitable aux yeux de Charles VII.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Extraits de plaidoiries prononcées par les avocats du roi aux parlements de Paris et de Poitiers. ­ Extraits de séances de conseil,
           d’arrêts et d’accords relatifs aux gens du roi. ­ Lettres patentes restituant à Jean Rapiout des biens qui lui avaient été confisqués par le
           gouvernement armagnac. ­ Lettres confirmant Pierre Cousinot dans l’exercice de ses fonctions de procureur général du roi. ­ Quittances des
           gens du roi pour paiement de leurs gages. ­</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

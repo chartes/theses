@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Tractatus de spirituali aedificio&lt;/hi&gt;</title>
-        <title type="sub">Édition critique princeps.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le <hi rend="i">Tractatus de spirituali aedificio</hi></title><title xml:lang="fr" type="sub">Édition critique princeps.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Riamond, Pierre-Jean">Pierre-Jean Riamond</author>
       </titleStmt>
       <editionStmt>
@@ -38,27 +40,27 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200119.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le <hi rend="i">Tractatus de spirituali aedificio</hi> est un traité spirituel vraisemblablement composé en milieu cistercien dans la
           seconde moitié du <num>xii<hi rend="sup">e</hi></num> siècle. L’identité de son auteur n’est pas clairement établie, même si la tradition attribue ce
           texte à Odon de Morimond (1116-1161). L’édition de la totalité du traité s’accompagne donc d’un essai de critique d’authenticité.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Commentaire</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation du <hi rend="i">De spirituali aedificio</hi>
         </head>
           <p><hi rend="i">Nature et finalité </hi>— Le <hi rend="i">De spirituali aedificio</hi> s’ouvre sur un lemme biblique (Deut. 27, 4-7),
@@ -96,7 +98,7 @@
             homilétique avec le <hi rend="i">De spirituali aedificio</hi> permet d’établir qu’Hermann de Reun s’est servi du traité lors de la
             rédaction de ses <hi rend="i">Sermones festivales</hi>: ces derniers constituent donc un témoin indirect de la diffusion du <hi rend="i">De spirituali aedificio</hi> et fournissent un <hi rend="i">terminus ante quem</hi> irréfutable pour sa date de composition.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’auteur du <hi rend="i">De spirituali aedificio</hi>
         </head>
           <p>L’attribution du <hi rend="i">De spirituali aedificio</hi>à un Odon que la critique a identifié avec Odon de Morimond est le fait des
@@ -122,7 +124,7 @@
             abélardien de catégorie, celui de “ <hi rend="i">clausula</hi>” au sens de livre, partie d’ouvrage, peuvent inciter à faire d’Odon de
             Morimond l’auteur du traité. Toutefois, ces seuls éléments de critique interne ne peuvent suffire à asseoir l’authenticité du <hi rend="i">De spirituali aedificio</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La tradition manuscrite du <hi rend="i">De spirituali aedificio</hi>
         </head>
           <p>Subsistent aujourd’hui trois manuscrits complets du <hi rend="i">De spirituali aedificio</hi>, tous datés de la fin du XII <hi rend="sup">e</hi> siècle et conservés dans des bibliothèques monastiques autrichiennes.</p>
@@ -150,8 +152,8 @@
               aedificio</hi> pourrait donc tout aussi bien avoir été composé par un auteur cistercien, lui aussi prénommé Odon, actif en zone
             germanique au milieu du <num>xii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition</head>
-        <p>Z étant le manuscrit de base de cette édition, son orthographe a été scrupuleusement respectée, sauf lorsque certaines particularités
+      </div><div n="3" type="part"><head n="0" type="chapter">Édition</head>
+        <p n="1" type="chapter">Z étant le manuscrit de base de cette édition, son orthographe a été scrupuleusement respectée, sauf lorsque certaines particularités
           risquaient de nuire à la bonne compréhension du texte. L’apparat critique a été voulu aussi exhaustif que possible : il recense un certain
           nombre de variantes orthographiques, en particulier sur les noms propres, ainsi que de corrections immédiates. Le foisonnement et la
           diversité des sources mises en œuvre dans le <hi rend="i">De spirituali aedificio</hi> ont amené à signaler toutes les citations, qu’elles
@@ -165,14 +167,11 @@
           évident de la part de l’auteur (changement de genre, de temps, dans l’ordre des phrases ou des vers) entre guillemets anglais simples (` ’)
           ; enfin, les passages qui peuvent être rapprochés d’autres textes sans qu’on puisse affirmer qu’il s’agit bien d’un emprunt ont été laissés
           tels quels dans le corps du texte et signalés par cf. dans l’apparat des sources.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="4"><head>Annexes</head>
         <p>Glossaire. ­ Index des termes définis dans le <hi rend="i">De spirituali aedificio</hi>. ­ Index des citations bibliques, des citations
           non-bibliques.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

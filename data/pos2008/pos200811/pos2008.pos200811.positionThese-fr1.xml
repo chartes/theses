@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Rendre la justice au parlement de paris sous la ligue (1589-1594)</title>
-        <title type="sub">Procédure civile et conciliation</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Rendre la justice au parlement de paris sous la ligue (1589-1594)</title><title xml:lang="fr" type="sub">Procédure civile et conciliation</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dalsorg, Émeline">Émeline Dalsorg</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200811.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le parlement de Paris a fait l’objet de nombreuses études historiques, tant institutionnelles, politiques, juridiques que judiciaires.
           L’intérêt des historiens sur tel ou tel aspect a cependant varié au cours du temps et selon les périodes étudiées. Celle de la Ligue a
           suscité de nombreux ouvrages sur les réactions politiques du Parlement, face à la nouvelle religion et aux troubles religieux qui suivirent,
@@ -67,7 +70,7 @@
           d’affaires, afin de déterminer leur attitude devant des situations où ils doivent rendre plus un jugement en équité qu’en droit et où le
           rôle d’arbitre et de médiateur du Parlement est mis en avant, mais soumis aux luttes d’influences et aux pressions diverses.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources manuscrites consultées viennent exclusivement de la série X des Archives nationales. Ce sont les registres de transcription
           des minutes, de 1589 à mars 1594, présents dans la sous-série X<hi rend="sup">1A</hi>, qui ont été utilisés pour servir de base à cette
           étude. Ils sont divisés en trois types principaux : les Jugés, le Conseil et les Plaidoiries. Dans la mesure où les minutes n’apportent que
@@ -82,9 +85,8 @@
           particulier. Pour rappeler le contexte historique, la lecture des <hi rend="i">Mémoires-journaux</hi> de Pierre de l’Estoile est un
           préalable, ceci d’autant plus qu’il exerce une charge au sein du Parlement.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La procédure civile</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La procédure civile</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les textes législatifs, réglementaires et juridiques</head>
           <p>
             <hi rend="i">Les textes législatifs et réglementaires.</hi>— La fin du <num>xvi</num>
@@ -114,7 +116,7 @@
             ces ouvrages pour avoir une idée plus exacte de la procédure et de les consulter avec prudence. Ils ne sont, en effet, pas exempts de
             partialité et parfois d’imprécision.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le déroulement d’un procès</head>
           <p>Le déroulement normal d’un procès est assez régulièrement perturbé par toutes sortes de voies de recours et d’incidents de procédure.
             C’est pour cette raison que la procédure telle qu’elle doit se dérouler est mise en avant, afin de démêler lors de la consultation des
@@ -130,7 +132,7 @@
             que les arrêts de la cour soient exécutés, il faut qu’ils soient prononcés. Quant à l’exécution, elle relève des juridictions inférieures
             et elle n’apparaît dans les registres du Parlement que lorsqu’il y a eu un problème à ce sujet.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Incidents de procédure et voies de recours</head>
           <p>L’intérêt de la plupart des parties ayant un procès devant le Parlement est parfois de le faire durer aussi longtemps que possible, dans
             l’espérance que la partie adverse abandonne, ruinée ou morte. Pour ce faire, elles multiplient incidents de procédure et voies de recours,
@@ -147,8 +149,8 @@
             proposition d’erreur et la requête civile, dans la pratique, les différences semblent ténues. En effet, il arrive de temps en temps que
             les instances de proposition d’erreur se transforment en requête civile à la demande de la partie requérante.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Un parlement bouleversé</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Un parlement bouleversé</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les greffes</head>
           <p>Étudier les greffes du Parlement sous la Ligue consiste à envisager deux époques différentes : celle de la Ligue avec les minutes et les
             registres du greffe, et une époque postérieure, celle de la confection des registres. Ces deux époques forment un tout pour appréhender le
@@ -160,7 +162,7 @@
             occupant même cette fonction, comme Blanc Dumans. Certaines places du greffe sont au contraire très disputées, comme celle qu’occupait
             Gabriel Breuillet, clerc au greffe en charge du conseil, demandée par quatre personnes, dont Hugues Lemasson et Pierre Senault.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les cadres du jugement</head>
           <p>
             <hi rend="i">Les chambres, les présidents et les conseillers.</hi>— Ainsi que la procédure civile, l’organisation des chambres et leur
@@ -199,7 +201,7 @@
             Hotman, ont tendance à se désolidariser de leurs amis politiques. Cela ne les empêchera tout de même pas, en mars 1594, de devoir quitter
             la France.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un espace et un temps difficiles à maîtriser</head>
           <p>
             <hi rend="i">Géographie de l’appel.</hi>— À la mort d’Henri III, un sixième seulement du territoire reconnaît Henri IV comme son
@@ -215,8 +217,8 @@
             Barricades en particulier, et même la mémoire de Brisson, avec la Saint Barnabé. Surtout le Parlement doit suivre les nombreuses
             processions religieuses faites pour sauver la France des royalistes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Rendre la justice au temps de la ligue</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Rendre la justice au temps de la ligue</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le rôle régulateur du parlement</head>
           <p>
             <hi rend="i">Règlements de métiers.</hi>— La réglementation des métiers est normalement le fait des municipalités, des prévôts royaux,
@@ -254,7 +256,7 @@
             la note d’infamie, peine qui n’apparaît pas dans les registres de l’époque. Le plus souvent, celui qui injurie est condamné à une amende
             pécuniaire, à une amende honorable ou à l’obligation de demander pardon à l’offensé.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Quelle influence de la ligue et des ligueurs sur les décisions prises ?</head>
           <p>
             <hi rend="i">Le problème particulier des offices.</hi>— Les conflits concernant les offices de judicature naissent à cette période dans un
@@ -301,7 +303,7 @@
             facile d’accuser quelqu’un d’être du parti contraire. C’est pour cette raison que le Parlement ne refuse pas d’entendre une partie
             « accusée », tant que n’a pas été faite la preuve des accusations.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les troubles, la misère et la calamité du temps</head>
           <p>
             <hi rend="i">Une excuse alléguée.</hi>— La misère et la calamité du temps ne sont ni propres ni consécutives aux troubles de la Ligue et
@@ -325,21 +327,18 @@
             accorde est souvent moindre que ce qui était demandé et ne tire pas à conséquence pour l’avenir. De plus, dès qu’il s’agit d’une demande
             de congé ou de défaut, interrompant le cours normal de la procédure ou le ralentissant, le Parlement la refuse généralement.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Lorsque Henri IV fait son entrée à Paris, les parlementaires l’accueillent avec joie comme signe de rétablissement prochain de l’ordre. De
           fait, la réunion des parlements se fait facilement, le parlement de Paris ayant fait en sorte de conserver une normalité malgré tout. En
           effet, en refusant de remplacer les absents, il a permis leur retour sans conflit, sauf au greffe civil. Faire comme si de rien n’était a
           été une sorte d’obsession de la part du Parlement dans tous les domaines et tout ce qui pouvait nuire à l’harmonie sociale qu’il était censé
           préserver a été mis de côté ou a fait l’objet de mesures transitoires.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition d’actes tirés des registres du parlement de Paris regroupés en dossiers suivant les thèmes abordés dans cette thèse : les cadres du
           jugement, les affaires matrimoniales et les offices de judicature. Dans la mesure du possible, tous les actes d’un même procès ont été
           édités.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

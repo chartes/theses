@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les derniers feux des concerts spirituels parisiens (1816-1831)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les derniers feux des concerts spirituels parisiens (1816-1831)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Morand, Olivier">Olivier Morand</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200221.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Avant la Révolution française, le Concert spirituel a fait connaître aux Parisiens le concert public et payant. Les événements
           révolutionnaires ont mis fin à cette institution mais l’Empire l’a remise au goût du jour. Situé entre l’époque de Rameau et les succès de
           Berlioz, ce moment de l’histoire de la musique fait l’objet d’un intérêt récent, après avoir longtemps été perçu comme une période de
@@ -61,7 +64,7 @@
           diverses que l’organisation de ces manifestations, leur fréquentation, leur rôle dans la diffusion et dans la réception des œuvres et leur
           spécificité par rapport aux autres activités musicales.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les premières sources intéressantes sont celles des organisateurs. À ce titre, les archives de l’Opéra et du Théâtre italien qui lui était
           associé, qui constituent la sous-série AJ XIII des Archives nationales, ont donné des renseignements importants, même si ce type de concert
           représente une part marginale de l’activité habituelle de ces théâtres. Pour les compléter, ont été consultés des registres conservés à la
@@ -73,9 +76,8 @@
             volant</hi> et ses avatars successifs, ainsi que, à partir de 1827, la <hi rend="i">Revue musicale</hi> de Fétis. Les affiches
           typographiques conservées à la Bibliothèque-musée de l’Opéra ont permis de compléter l’information sur les programmes.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les concerts spirituels dans leur tradition et dans la vie musicale</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les concerts spirituels dans leur tradition et dans la vie musicale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Naissance, disparition et renaissance du concert spirituel</head>
           <p>De l’ancien Concert spirituel, fondé en 1725, plusieurs traits se retrouvent dans les nouveaux concerts spirituels. D’abord les concerts
             apparaissent non comme un spectacle donné pour lui-même, mais plutôt comme un substitut de l’Opéra, interdit pendant les jours de fête
@@ -90,7 +92,7 @@
             spirituels reprennent vraiment en 1805, à l’initiative du Théâtre italien, à peu près au moment où le calendrier grégorien redevient
             officiel.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La place des concerts spirituels</head>
           <p>L’époque de la Restauration est fort propice au divertissement et à la culture. Chaque catégorie sociale peut trouver des lieux à son
             goût. À côté du Théâtre français et de l’Odéon, il existe des théâtres fréquentés par un public populaire. Les formes de concerts sont
@@ -100,7 +102,7 @@
             d’offrir plus fréquemment des soirées musicales, qui demeurent toutefois intimistes. Les concerts apparaissent plus nombreux dans le
             premier semestre de l’année civile. La plupart ont lieu le soir, mais on en rencontre aussi en matinée, c’est-à-dire l’après-midi.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Evolution et décadence des concerts spirituels</head>
           <p>Les premiers concerts spirituels de la période sont ceux donnés au Théâtre royal italien, de 1816 à 1818 : en 1816 et 1817, les concerts
             spirituels sont au nombre de six chaque année, alors que l’année 1818 marque un sommet dans la programmation, avec neuf concerts
@@ -118,8 +120,8 @@
             l’Académie royale les vendredi saint et dimanche de Pâques avec Paganini ne sont pas présentés comme spirituels, mais sont simplement
             extraordinaires. Cette désaffection progressive n’est pas sans rappeler celle qu’avait subi le Concert spirituel à la Révolution.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les concerts spirituels, des coulisses à la salle</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les concerts spirituels, des coulisses à la salle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les institutions organisatrices</head>
           <p>Pas moins de cinq institutions musicales ont assuré les concerts spirituels de la Restauration. Toutefois, le rôle du ministère de la
             Maison du Roi ou des organismes administratifs équivalents est primordial, la vie artistique parisienne étant fortement contrôlée par
@@ -132,7 +134,7 @@
             indépendante du Conservatoire, fonctionne différemment puisqu’elle est formée de sociétaires égaux. Cependant, la personnalité de son
             fondateur et vice-président, Habeneck, semble prépondérante.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’information du public et la fréquentation des concerts</head>
           <p>À part les rumeurs, sans doute préparées, qui mettent l’accent sur certains points particuliers, les concerts spirituels sont annoncés
             assez tardivement. Le programme paraît généralement dans la presse le jour même du concert. Les autres moyens d’information sont les
@@ -143,7 +145,7 @@
             imprévisible et les surprises ne sont pas rares en la matière. La météorologie et le programme jouent bien sûr un rôle important dans les
             variations de la fréquentation.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La salle et le spectacle</head>
           <p>Parmi les aspects matériels, ce sont les salles qui sont les mieux connues. Il ne s’agit pas de salles spécifiques, mais de théâtres
             lyriques qui accueillent à titre exceptionnel un concert. Presque tous ces lieux ont disparu ; ne subsiste que la salle des
@@ -153,7 +155,7 @@
             au chœur étaient vêtues de noir le vendredi saint et de blanc les autres jours. Quant au public, il manifestait parfois son approbation
             mais pouvait aussi s’ennuyer ou lorgner les chanteuses plutôt qu’écouter.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le budget des concerts</head>
           <p>L’organisation des concerts suppose deux grands types de dépenses : les frais de personnel et l’acquisition des partitions. Les artistes
             ordinaires de l’Opéra ne sont pas rémunérés, mais peuvent percevoir une indemnité, assez modeste du reste ; de manière générale, les
@@ -166,8 +168,8 @@
             concerts peut laisser espérer, en fin de compte, un bénéfice annuel de 4 000 francs minimum, qui a pu monter jusqu’à plus de 12 000
             francs.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La musique des concerts spirituels</head>
-        <p>Les programmes, en deux parties, sont toujours vocaux et instrumentaux. La musique instrumentale mêle ouvertures, symphonies, pièces
+      </div><div n="5" type="part"><head n="0" type="chapter">La musique des concerts spirituels</head>
+        <p n="1" type="chapter">Les programmes, en deux parties, sont toujours vocaux et instrumentaux. La musique instrumentale mêle ouvertures, symphonies, pièces
           concertantes et musique de chambre. Les concerts spirituels sont pratiquement les seuls à donner de la musique sacrée, sans pourtant autant
           négliger la musique vocale profane : les airs et les chœurs d’opéras tiennent une place non négligeable dans la programmation. Les œuvres
           religieuses sont déterminées par la liturgie du jour. Pour le reste, la sélection des œuvres tient compte des suggestions des autorités, en
@@ -179,17 +181,14 @@
           susciter des plaintes sur la faible place laissée à la musique française. Certains interprètes sont issus de grands théâtres, alors que
           d’autres, étrangers ou musiciens indépendants, viennent se faire connaître sur la scène parisienne. <lb/>La critique musicale se met peu à
           peu en place, mais reste encore le fait de journalistes qui ne sont pas musiciens.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Malgré les critiques dont ils ont fait l’objet, les concerts spirituels de la Restauration ont été assez brillants, notamment par les
           grandes figures qu’ils ont accueillies. Ils ont toutefois souffert de la création de la Société des concerts du Conservatoire, de la volonté
           de l’administration d’en faire une opération commerciale, sans y mettre le prix, et certainement aussi de la sécularisation des mœurs.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Contrats avec des solistes. <hi rend="i">­</hi> Correspondance administrative. <hi rend="i">­</hi> Relevés de fournitures de musique. <hi rend="i">­</hi> Pièces comptables.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

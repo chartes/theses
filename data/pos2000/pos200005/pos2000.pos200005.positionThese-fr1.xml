@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Contribution à l’étude de l’Église en Crète vénitienne (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Contribution à l’étude de l’Église en Crète vénitienne (<num>xiii<hi rend="sup">e</hi></num>-<num>xiv<hi rend="sup">e</hi></num> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bonnélie, Claire">Claire Bonnélie</author>
       </titleStmt>
       <editionStmt>
@@ -38,26 +40,27 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200005.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le détournement de la quatrième croisade sur Constantinople aboutit en 1204 à la prise de la capitale et au partage de l’Empire byzantin
           par les croisés. Les Vénitiens commencent effectivement la conquête de l’île de Crète en 1211 ; cette conquête est accomplie en un
           demi-siècle. L’administration de la colonie est centralisée : le duc de Crète, à la tête du gouvernement de l’île <hi rend="i">(regimen)</hi>, est mandaté par la métropole vénitienne. La conquête entraîne l’expropriation de l’essentiel des terres Crétoises au
           profit de l’Eglise catholique romaine, qui s’établit alors dans l’île, et de la Commune. Cette dernière redistribue une partie de ces terres
           à titre de fief aux feudataires vénitiens envoyés par la métropole pour assurer la défense du territoire crétois.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Outre les sources narratives, l’étude de la Crète à l’époque vénitienne se fonde sur quatre types de sources diplomatiques : les archives
           pontificales, conservées aux Archives vaticanes ; les archives des conseils et des assemblées de la République vénitienne <hi rend="i">(Consilium rogatorum, Maggior Consiglio, Collegio, Consiglio dei Dieci, Quarantia)</hi>, conservées à l’Archivio di Stato de Venise ; les
           archives de la chancellerie du duc de Candie <hi rend="i">(Archivio del duca di Candia)</hi> et les sources notariales de la série <hi rend="i">Notai di Candia.</hi> Ces deux derniers fonds ont été rapatriés à Venise en 1669 à la suite de la capitulation des Vénitiens à
@@ -82,9 +85,8 @@
           registre 1), les registres de Bartolomeo Francisci et Donato Fontanella (b. 97), de Giovanni Gerardo (b. 100 et 101), de Nicole da Milano
           (b. 144), d’Angelo de Cartura, Andréa Pantaleo et Marco de Placentia (b. 146) et de Giorgio Pazo (b. 189).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les conséquences de la conquête vénitienne sur l’organisation de l’Eglise orthodoxe de Crète</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les conséquences de la conquête vénitienne sur l’organisation de l’Eglise orthodoxe de Crète</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La disparition des évêques orthodoxes au cours de la première moitié du <num>xiii<hi rend="sup">e</hi></num>  siècle</head>
           <p>La carte ecclésiastique de la Crète subit peu de modifications à la suite de la conquête vénitienne. Neuf évêchés dépendent de
             l’archevêque de Crète, qui est évêque du diocèse de Candie.</p>
@@ -92,12 +94,12 @@
             titulaire ou par sa fuite hors de Crète, les Vénitiens remplacent progressivement les évêques orthodoxes par des évêques catholiques. A la
             fin du <num>xiii<hi rend="sup">e</hi></num>  siècle, plus aucun évêché Crétois n’est occupé par un prélat orthodoxe.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les nouvelles institutions de l’Eglise orthodoxe de Crète</head>
           <p>Dans le cadre des diocèses fut créée l’institution des <hi rend="i">protopapates</hi>, nommés par le <hi rend="i">regimen</hi>. Leurs
             revenus viennent de prébendes, que leur alloue l’Eglise catholique de Crète.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les relations entre le clergé orthodoxe crétois et l’Eglise catholique romaine</head>
           <p>Les papes d’Avignon, en particulier Jean XXII, Urbain V et Grégoire XI, promurent une politique uniate, visant à construire en Crète une
             Eglise grecque catholique, ou plus exactement une Eglise grecque dont le rite orthodoxe serait aménagé, à l’instar du modèle chypriote.
@@ -110,21 +112,21 @@
             juridictions civiles.</p>
           <p>Tous les prêtres orthodoxes <hi rend="i">(papates)</hi> Cretois sont soumis au paiement d’une redevance annuelle à l’archevêque, l’ <hi rend="i">exenium</hi>, dont le montant s’élève à 6 gros.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’ordination sacerdotale des prêtres orthodoxes</head>
           <p>Les orthodoxes candidats à la prêtrise doivent obtenir une autorisation du <hi rend="i">regimen</hi> pour recevoir le sacrement de
             l’ordination, mais cette autorisation semble être accordée facilement, dès lors que le candidat est un loyal serviteur de la République de
             Venise. L’ordination des prêtres Crétois est assurée soit par des évêques venus d’autres terres orthodoxes de passage dans l’île, soit
             hors de Crète, en particulier par l’évêque orthodoxe de la colonie vénitienne de Coron-Modon.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le régime de l’occupation des églises par le clergé orthodoxe</head>
-        <p>Au cours de la première moitié du <num>xiii<hi rend="sup">e</hi></num>  siècle, presque toutes les églises orthodoxes ont été confisquées par les
+      </div><div n="4" type="part"><head n="0" type="chapter">Le régime de l’occupation des églises par le clergé orthodoxe</head>
+        <p n="1" type="chapter">Au cours de la première moitié du <num>xiii<hi rend="sup">e</hi></num>  siècle, presque toutes les églises orthodoxes ont été confisquées par les
           conquérants latins : elles appartiennent désormais à la Commune, à l’Eglise catholique de Crète ou au patriarche latin de Constantinople ;
           certaines églises de la Commune font partie des tenures qui sont cédées à titre de fief aux feudataires. Seuls les <hi rend="i">metochia</hi> des monastères Saint-Jean le Théologien de Patmos et Sainte-Catherine du Mont Sinaï, ainsi que quelques archontes de Crète
           occidentale, détiennent des églises en pleine propriété. Les églises dont le propriétaire est grec sont très peu nombreuses.</p>
-        <p>L’exercice du culte orthodoxe est le plus souvent libre dans les églises confisquées par les conquérants latins. Il s’agit donc d’étudier à
+        <p n="2" type="chapter">L’exercice du culte orthodoxe est le plus souvent libre dans les églises confisquées par les conquérants latins. Il s’agit donc d’étudier à
           quel titre le clergé orthodoxe occupe et dessert ces églises.</p>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre premier">Approche méthodologique</head>
           <p>Cette étude se fonde sur un catalogue de notices monographiques d’églises orthodoxes, établi essentiellement à partir des sources
             notariales (actes de concession, de location ou de sous-location de biens ecclésiastiques, quittances de loyer, testaments) et du
@@ -136,12 +138,12 @@
             renvoyer à plusieurs églises, alors qu’une église peut être désignée de multiples manières (vocable de l’église, nom du propriétaire, date
             de construction, localisation topographique).</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre II">Les fondations d’églises orthodoxes</head>
           <p>La construction d’églises orthodoxes reste entièrement libre. Les fondations, très nombreuses, sont le fait de prêtres orthodoxes, de
             particuliers laïcs, de communautés villageoises ou, même, parfois des maîtres vénitiens des villages (par exemple, des feudataires).</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre III">Des patrimoines immobiliers d’importance variable</head>
           <p>Les douze monastères anciennement impériaux, confisqués par la Commune, semblent avoir conservé, en dépit de quelques démembrements, des
             possessions très vastes, qui peuvent compter plusieurs villages entiers.</p>
@@ -150,7 +152,7 @@
             sont réservé la propriété de la quasi totalité du territoire. La majorité des patrimoines immobiliers de quelque importance datent de
             l’époque byzantine.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre IV">Les différents modes de concession des églises au clergé orthodoxe</head>
           <p>La location est le mode de concession le plus courant. Il concerne les églises appartenant à des Grecs, comme les églises dépendant de
             propriétaires latins. Les églises peuvent être adjugées en location par voie d’enchères. Ce sont le plus souvent les prêtres qui les
@@ -174,12 +176,12 @@
             par lequel le prêtre s’engage auprès du tenancier de l’église à desservir celle-ci pour une durée déterminée. Le formulaire de ce type de
             contrat est identique à celui de tout autre contrat de travail.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le prêtre orthodoxe dans la société crétoise du XIV<hi rend="sup">e siècle</hi>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le prêtre orthodoxe dans la société crétoise du XIV<hi rend="sup">e siècle</hi>
       </head>
-        <p>Cette étude se fonde sur un catalogue de 300 notices biographiques de prêtres orthodoxes. Les informations proviennent essentiellement des
+        <p n="1" type="chapter">Cette étude se fonde sur un catalogue de 300 notices biographiques de prêtres orthodoxes. Les informations proviennent essentiellement des
           sources notariales, où les prêtres apparaissent fréquemment, en tant que parties ou sous la forme d’une simple mention. Ces sources
           éclairent autant leur exercice pastoral que leurs activités privées.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Statut juridique et niveau social des prêtres orthodoxes</head>
           <p>Aux yeux des Vénitiens, les <hi rend="i">papates</hi> ne constituent pas une catégorie particulière dans la population grecque et n’ont
             pas de statut juridique propre. Comme l’ensemble de la population grecque, ils sont libres ou vilains. Il est impossible de déterminer la
@@ -194,7 +196,7 @@
           <p>L’Eglise orthodoxe de Crète étant privée de ses cadres épiscopaux, la formation des ordinands s’effectue communément auprès d’un prêtre
             orthodoxe que le jeune clerc sert plusieurs années. Cette formation empirique semble porter ses fruits puisque la majorité des <hi rend="i">papates</hi> semblent lettrés, même dans les villages, où ils se chargent de l’enseignement de la population laïque.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Revenus et charges des <hi rend="i">papates</hi>
         </head>
           <p>Les <hi rend="i">papates</hi> disposent de trois types de revenus : les revenus de la sous-location du patrimoine immobilier de l’église
@@ -205,7 +207,7 @@
             s’acquitter de redevances envers l’Eglise catholique : <hi rend="i">exenium</hi> annuel envers l’Eglise catholique de Crète, décimes
             extraordinaires envers la papauté pour contribuer au financement de la croisade.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Les <hi rend="i">papates</hi> crétois entre Byzance et Venise</head>
           <p>Les efforts constants des autorités vénitiennes pour empêcher les contacts entre le clergé orthodoxe Crétois et le clergé orthodoxe
             extérieur à l’île, en particulier avec le patriarcat œcuménique de Constantinople, sont vains. Bien que les autorités civiles aient
@@ -217,23 +219,20 @@
             de procuration et les testaments. Néanmoins, la majorité d’entre eux sont de loyaux serviteurs de la République de Venise : leur fidélité
             conditionne en effet l’autorisation par le <hi rend="i">regimen</hi> de leur ordination.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La politique envers l’Eglise orthodoxe de Crète est conduite par les autorités civiles vénitiennes et non par l’Eglise catholique de
           Crète. En dépit de la suppression du cadre épiscopal orthodoxe, la vie de l’Eglise orthodoxe Crétoise (l’exercice du culte orthodoxe, la
           construction d’églises, l’ordination de <hi rend="i">papates)</hi> est libre pourvu qu’elle ne contrarie pas les visées politiques de
           Venise. Le régime des quelques églises orthodoxes qui sont restées propriétés de Grecs s’est aligné sur le régime auquel sont soumises les
           églises appartenant aux Latins.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Documents de l’ <hi rend="i">Archivio del duca di Candia. ­</hi> Documents du fonds <hi rend="i">Notai di</hi>
           <hi rend="i">Candia :</hi> actes notariés de concession de biens ecclésiastiques, de construction d’église, d’engagement de desservants
           orthodoxes ; contrats d’apprentissage, de prêt maritime, d’association de capitaux pour des activités commerciales auxquels prennent part
           des <hi rend="i">papates.</hi>
       </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

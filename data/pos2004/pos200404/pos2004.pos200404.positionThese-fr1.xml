@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Germain Louis Chauvelin (1685-1762), ministre de Louis XV</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Germain Louis Chauvelin (1685-1762), ministre de Louis XV</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Bréban, Alix">Alix Bréban</author>
       </titleStmt>
       <editionStmt>
@@ -38,26 +40,27 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200404.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Germain Louis Chauvelin fut le seul ministre de l’Ancien Régime à occuper simultanément les charges de garde des sceaux et de secrétaire
           d’Etat des Affaires étrangères de 1727 à 1737. D’autres circonstances particulières marquèrent son passage au sommet de l’Etat. Qualifié de
           “ sous-ministre ” par le marquis d’Argenson, Chauvelin eut à vivre la situation, rare sous l’Ancien Régime, de ministre sous un principal
           ministre : en effet, le cardinal de Fleury fut principal ministre de fait depuis 1726 et le resta jusqu’à sa mort en 1743. Chauvelin exerça
           par ailleurs les fonctions de garde des sceaux, en même temps que d’Aguesseau était chancelier.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives de la chancellerie ayant en grande partie disparu, on a surtout exploité les ressources des Archives du ministère des Affaires
           étrangères : la série des “ Mémoires et Documents France ” contient la correspondance reçue de Fleury et Chauvelin sur de nombreuses
           affaires intérieures. En dehors de la correspondance politique conservée au Quai d’Orsay, les lettres de la main de Chauvelin sont rares. Le
@@ -68,9 +71,8 @@
           l’histoire de la famille Chauvelin et de la fortune de Germain Louis en particulier. Il reste en revanche très peu d’archives chez les
           descendants du ministre.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La carrière de Chauvelin</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La carrière de Chauvelin</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les Chauvelin</head>
           <p>
             <hi rend="i">Les Chauvelin avant Chauvelin</hi>.­ Au <num>xvi<hi rend="sup">e</hi></num> siècle, les Chauvelin sont une famille d’avocats au
@@ -89,7 +91,7 @@
             Billard six enfants : Louis IV, Germain Louis, et quatre filles dont l’une épouse Claude de Bissy, neveu du cardinal du même nom, et deux
             entrent à la Visitation-Sainte-Marie à Paris.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les premières armes (1706-1727)</head>
           <p>
             <hi rend="i">Les premières charges</hi>.­ Le 1<hi rend="sup">er</hi> novembre 1706, Germain Louis Chauvelin est pourvu des offices
@@ -108,7 +110,7 @@
             du clan Louvois dont faisaient aussi partie les Chauvelin. La mort du Régent fait manquer à Chauvelin une occasion de devenir premier
             président du parlement de Paris. Huxelles présente alors Chauvelin au cardinal de Fleury.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le ministère (1727-1737)</head>
           <p>
             <hi rend="i">La nomination de Chauvelin (août 1727).­</hi> Pendant la première moitié de l’année 1727, Chauvelin travaille dans l’ombre
@@ -123,8 +125,8 @@
             se constitue un réseau de fidèles, au premier rang desquels figurent Louis V Chauvelin, son neveu, et Jacques Bernard Chauvelin de
             Beauséjour, son cousin, qu’il emploiera successivement à la direction de la Librairie.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le ministère de Chauvelin</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le ministère de Chauvelin</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un ministre au travail</head>
           <p>
             <hi rend="i">Formation et méthodes de travail.­</hi> Chauvelin étudia l’histoire des relations internationales dans les papiers cédés par
@@ -142,7 +144,7 @@
             une étape importante de la distinction entre papiers publics et papiers privés. Chauvelin encouragea les ambassadeurs à déposer leurs
             papiers à leur retour.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Chauvelin, garde des sceaux</head>
           <p>
             <hi rend="i">La charge de garde des sceaux.­</hi> Chauvelin exerça la charge de garde des sceaux sans que le chancelier soit exilé ou
@@ -158,7 +160,7 @@
             commerciales : la création de la permission tacite d’imprimer en est une preuve. De l’action de Chauvelin dans les autres domaines qui lui
             étaient réservés, il ne reste que quelques traces, qui concernent notamment les petites chancelleries.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Chauvelin, ministre</head>
           <p>
             <hi rend="i">Chauvelin et Fleury.­</hi> Au début de son ministère, Chauvelin assura qu’il n’avait pas d’autres idées que celles de Fleury.
@@ -176,7 +178,7 @@
             Chauvelin de s’ingérer dans les affaires militaires ; à partir de 1736, il prit en main la réforme de l’armée après la guerre de
             Succession de Pologne.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La disgrâce et l’exil</head>
           <p>
             <hi rend="i">La disgrâce.­</hi> Le 21 février 1737, Chauvelin est renvoyé : il est conduit à son château de Grosbois, puis à Bourges le 6
@@ -191,8 +193,8 @@
             Chauvelin fuit intendant de province puis des finances, le second conseiller clerc au parlement de Paris et le troisième lieutenant
             général des armées du roi, ambassadeur et enfin maître de la garde-robe du roi.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La fortune de Chauvelin</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La fortune de Chauvelin</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La constitution de la fortune de Chauvelin</head>
           <p>La base de la fortune de Chauvelin repose sur des successions, celles de ses parents et de sa tante, Marthe Billard, épouse de Jérôme
             Bignon, en 1746. La majeure partie des apports vint de sa femme, Anne Cahouet de Beauvais, dont la dot était constituée des biens issus
@@ -203,7 +205,7 @@
             des époux Chauvelin reçut 300 000 livres de dot. En 1751, le bien des Chauvelin s’élevait à 3 134 834 livres de capital, dont 1 536 000
             livres de biens fonciers.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La politique foncière de Chauvelin</head>
           <p>
             <hi rend="i">Ampleur et diversité des biens fonciers de Chauvelin.­</hi> Le patrimoine foncier de Chauvelin repose sur trois grands
@@ -221,7 +223,7 @@
             pratiquait de manière classique l’affermage de ses terres. Grosbois était avant tout un vaste domaine forestier dans lequel il faisait
             régulièrement des coupes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Cadre de vie</head>
           <p>
             <hi rend="i">Les demeures de Chauvelin.</hi>­ Chauvelin abandonna l’hôtel de la rue de Richelieu pour le faubourg Saint-Germain où il
@@ -237,17 +239,14 @@
             l’époque, parmi lesquelles on remarque le fameux recueil Jullienne de l’œuvre de Watteau. On trouve aussi des cartes manuscrites et
             imprimées. Livres et tableaux furent vendus à la mort de Chauvelin en 1762.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Pièces justificatives</head>
+      </div><div type="conclusion" n="6"><head>Pièces justificatives</head>
         <p>Contrat de mariage (12 janvier 1718). ­ Edit de création de la charge de garde des sceaux de France (août 1727). ­ Règlement d’attributions
           du chancelier et du garde des sceaux (2 septembre 1727). ­ Lettres patentes d’érection de la terre de Grosbois en marquisat (mars 1734). ­
           Lettre de Fleury à Chauvelin (21 février 1737). ­ Testaments (1756, 1760 et 1761). ­ Catalogue des tableaux et estampes (1762).</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Généalogies.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

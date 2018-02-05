@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De vanitate mundi&lt;/hi&gt; d’Hugues de Saint-Victor († 1141)</title>
-        <title type="sub">Édition critique et commentaire.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le <hi rend="i">De vanitate mundi</hi> d’Hugues de Saint-Victor († 1141)</title><title xml:lang="fr" type="sub">Édition critique et commentaire.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Giraud, Cédric">Cédric Giraud</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200207.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Représentant majeur de la “ Renaissance du <num>xii<hi rend="sup">e</hi></num> siècle ” en même temps que de la réforme de l’Église, Hugues de
           Saint-Victor († 1141) est également l’auteur d’une œuvre foisonnante allant des arts libéraux jusqu’aux sommets de la vie spirituelle, en
           passant par les subtilités de l’exégèse et de la <hi rend="i">divinitas</hi>. Entré dans les années 1115-1118 à l’abbaye de Saint-Victor de
@@ -66,11 +69,10 @@
           saisir les enjeux littéraires et doctrinaux, il convient au préalable d’en restaurer la <hi rend="i">littera</hi>, seule à même d’enrichir
           notre connaissance de la pédagogie d’Hugues de Saint-Victor.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Édition du <hi rend="i">De vanitate mundi</hi>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Édition du <hi rend="i">De vanitate mundi</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les témoins manuscrits</head>
           <p>L’établissement par R. Goy d’un répertoire des manuscrits transmettant des textes hugoniens, la consultation de l’incipitaire
             électronique <hi rend="i">In principio</hi>, l’avancée des recherches liées à l’édition des <hi rend="i">opera omnia</hi> d’Hugues, ainsi
@@ -90,7 +92,7 @@
             les feuillets qui précèdent, contiennent et suivent notre traité et une description matérielle dépendant largement des informations
             fournies par les catalogues. Ces notices plus courtes concernent majoritairement les corpus hugoniens et les manuscrits tardifs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les principaux problèmes d’histoire littéraire</head>
           <p>
             <hi rend="i">La transmission du texte : contenu, personnages et fin</hi>. ­ Aux deux premiers siècles de la diffusion du <hi rend="i">De
@@ -122,7 +124,7 @@
             chronologie relative et absolue permettent de dégager la série suivante entre différentes œuvres d’Hugues de Saint-Victor : vers
             1126-1127 : rédaction du <hi rend="i">De archa Noe </hi>; 1128-1129 : <hi rend="i">Libellus de formatione arche</hi>(1 <hi rend="sup">re</hi> recension) ; <hi rend="i">De vanitate mundi</hi>(livres I-II) (1<hi rend="sup">re</hi> recension) ; <hi rend="i">Dialogus de sacramentis </hi>; <hi rend="i">De vanitate mundi</hi>(livres III-IV) ; 1130-1131 : <hi rend="i">Chronicon</hi>.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Discussion stemmatique</head>
           <p>Les observations faites par les précédents éditeurs d’Hugues de Saint-Victor ont été mises à profit pour définir une méthode et étudier
             la tradition manuscrite. Si procéder <hi rend="i">a priori</hi> en imitant des démarches adoptées pour des textes différents eût été
@@ -149,7 +151,7 @@
             relative stabilité du texte et la bonne tenue des différentes copies, on est fondé à proposer un <hi rend="i">stemma</hi> rendant compte
             des relations entre les plus anciens manuscrits.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’histoire du <hi rend="i">De</hi>
             <hi rend="i">vanitate</hi>
             <hi rend="i">mundi</hi>
@@ -185,7 +187,7 @@
             du rameau issu de Pm<hi rend="sup">1</hi> . L’édition des deux premiers livres donnée en 1913 par Karl Müller d’après le seul P <hi rend="sup">27</hi> consiste en l’édition d’un manuscrit de base corrigé. Du fait de l’apport philologique assez faible des différentes
             éditions, il a été choisi de ne pas les faire figurer en apparat.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Principes d’édition et édition du texte</head>
           <p>Avec les résultats auxquels est parvenue la discussion stemmatique, il semble difficile d’établir une double recension : en effet cette
             notion implique la volonté d’un auteur de réviser un texte pour en donner une version qu’il juge meilleure. Dans le cas du <hi rend="i">De
@@ -211,9 +213,9 @@
             <lb/>Comme Hugues mentionne rarement ses sources, le parti adopté a été de ne faire figurer dans l’apparat que les sources bien attestées
             et de privilégier les parallèles hugoniens.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Commentaire du <hi rend="i">De vanitate mundi</hi>
+      </div><div n="3" type="part"><head n="0" type="chapter">Commentaire du <hi rend="i">De vanitate mundi</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Introduction littéraire et stylistique</head>
           <p>
             <hi rend="i">Personnages, genre littéraire et composition</hi>. ­ L’édition a choisi de privilégier comme protagonistes <hi rend="i">Anima</hi> et <hi rend="i">Ratio</hi> : ces noms rendent mieux compte des préoccupations de l’auteur et indiquent avec clarté l’origine
@@ -232,7 +234,7 @@
             s’exprime pleinement dans un style “ sublime ” dont les principales ressources résident dans l’usage de la relance syntaxique, de la
             saturation stylistique (rime, tropes) ainsi que de la description participiale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Hugues de Saint-Victor et la pédagogie du salut</head>
           <p>
             <hi rend="i">L’enseignement de la vanité du monde</hi>. ­ L’appréciation portée sur le monde est à replacer dans la pédagogie spirituelle
@@ -258,7 +260,7 @@
             <hi rend="i">media</hi> qui fait concorder la foi chrétienne comme les exigences logiques d’intelligibilité avec un canon littéraire de
             conformité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’école de Laon et Hugues de Saint-Victor</head>
           <p>Pour mieux comprendre les rapports du <hi rend="i">De vanitate mundi</hi> et du <hi rend="i">Dialogus</hi>, ce dernier est rapproché des
             écrits d’Anselme de Laon et de Guillaume de Champeaux, ainsi que de ceux de leur “ école ”. Le plan même du <hi rend="i">Dialogus</hi> qui
@@ -273,21 +275,18 @@
             parmi d’autres, qui n’est pas tant celui d’une “ école ” <hi rend="i">stricto</hi>
             <hi rend="i">sensu</hi> que d’une “ génération ” de Laon.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>uvre de transition, le <hi rend="i">De vanitate mundi</hi> demeure fidèle aux leçons spirituelles des ouvrages antérieurs consacrés à
           l’arche, en même temps qu’il annonce avec le <hi rend="i">Dialogus</hi> la synthèse théologique du <hi rend="i">De sacramentis</hi>. Le <hi rend="i">De vanitate mundi</hi> illustre par là même toute la richesse de l’ordre canonial voué à la vie contemplative comme à la
           prédication. Ce texte offre également le moyen de pratiquer une approche tentant de ne sacrifier ni les subtilités de la philologie ni les
           vastes perspectives de l’histoire doctrinale. Une telle démarche a pour ambition de rendre aux auteurs médiévaux la première place qui leur
           revient dans l’histoire des réalisations littéraires et de la vie de l’esprit.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="5"><head>Annexes</head>
         <p>Présentation du <hi rend="i">Dialogus</hi>. ­ Notices sommaires de manuscrits contenant le <hi rend="i">Dialogus</hi>. ­ Édition du texte.
           ­ <hi rend="i">Index locorum sacrae Scripturae. ­ Index scriptorum.</hi>
        </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">“ Par devant moy, Martin Destourbe, tabellion et clerc juré ”</title>
-        <title type="sub">édition et étude de deux registres de tabellionage de Puisaye (XIV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt;-XV&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup"&gt;e&lt;/hi&gt; siècles)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">“ Par devant moy, Martin Destourbe, tabellion et clerc juré ”</title><title xml:lang="fr" type="sub">édition et étude de deux registres de tabellionage de Puisaye (XIV<hi rend="sup">e</hi>-XV<hi rend="sup">e</hi> siècles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Raze, Jean-Baptiste">Jean-Baptiste Raze</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200519.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Depuis le <num>xix<hi rend="sup">e</hi></num> siècle, l’attrait des historiens pour les archives notariales est un fait incontestable, ainsi qu’en
           témoignent les très nombreux ouvrages ou articles publiés à ce sujet. À l’intérieur de cette immense production, il convient de distinguer
           deux orientations historiographiques : l’une visant à étudier les archives notariales comme document diplomatique et comme source d’histoire
@@ -65,7 +68,7 @@
           1392 ; celui de Jeannin du Meix, tabellion de Mézilles, est un cahier de 22 feuillets couvrant les années 1398 à 1400. L’édition critique
           est précédée d’une étude du contenu des actes, tant sous l’aspect diplomatique que sous l’angle économique et social.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le fonds de Saint-Fargeau, déposé aux Archives nationales en 1966, a fourni matière à la plus grande partie des dépouillements.
           Parallèlement à l’édition et à l’analyse des deux registres médiévaux de tabellionage qu’il contient, ont été recherchés dans le fonds tous
           les documents susceptibles de se rapporter de près ou de loin à la production écrite des juridictions gracieuses en général et de nos deux
@@ -79,9 +82,8 @@
           registres que renferment les Archives départementales de la Nièvre et de la Côte-d’Or. Le registre de Philippe Laboche, tabellion à Decize
           (Nièvre), qui couvre les années 1386 à 1393, a été consulté, ainsi que neuf registres dijonnais des années 1311-1408.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La juridiction gracieuse en Puisaye (XIV<hi rend="sup">e</hi>-XV<hi rend="sup">e</hi> siècles)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La juridiction gracieuse en Puisaye (XIV<hi rend="sup">e</hi>-XV<hi rend="sup">e</hi> siècles)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Gardes du sceau, tabellions et jurés dans la Puisaye des <num>xiv<hi rend="sup">e</hi></num> et <num>xv<hi rend="sup">e</hi></num>
             siècles</head>
           <p>
@@ -112,7 +114,7 @@
             d’autres fonctions lucratives. Leur formation juridique, acquise sur le tas ou sur les bancs de l’université, nous est en revanche
             inconnue.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La production documentaire des tabellions</head>
           <p>
             <hi rend="i">Les registres de tabellionage</hi>. – Si la comparaison des écritures entre registres et grosses semble montrer que la tenue
@@ -145,8 +147,8 @@
             faut-il donner aux actes reçus par les juridictions voisines, aux contrats sous seing privé ou aux conventions demeurées orales ? La
             réponse, en ce domaine comme en d’autres, se heurte à l’écueil documentaire et au problème de la conservation des documents.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Quelques aspects de l’économie poyaudine au tournant du <num>xv<hi rend="sup">e</hi></num> siècle</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Quelques aspects de l’économie poyaudine au tournant du <num>xv<hi rend="sup">e</hi></num> siècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La seigneurie de Puisaye sous le duc Robert de Bar</head>
           <p>
             <hi rend="i">Les contours géopolitiques</hi>. – Notion avant tout géographique, la Puisaye n’a que rarement coïncidé avec une entité
@@ -170,7 +172,7 @@
             séquelles laissées par la guerre en Puisaye et des efforts entrepris par ses habitants pour les effacer, avant que le conflit entre
             Armagnacs et Bourguignons ne vienne à nouveau plonger la région dans une crise profonde et durable.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’économie rurale en Puisaye à la fin du <num>xiv<hi rend="sup">e</hi></num> siècle</head>
           <p>
             <hi rend="i">Le paysage rural</hi>. – Pays de bocage, au sol ingrat, sillonné de nombreux cours d’eau et pourvu d’une ample couverture
@@ -192,7 +194,7 @@
             d’aides importantes de la part du bailleur, qui fournit semences et matériel agricole, tandis que les profits sont partagés par moitié
             entre bailleur et preneur. Il semble que ce type de bail “ doux ”, quoique largement minoritaire encore dans la Puisaye du XIV <hi rend="sup">e</hi> siècle, commence dès cette époque à pénétrer les autres modes de faire-valoir.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une activité importante : la métallurgie</head>
           <p>
             <hi rend="i">Mines, forges et ferriers</hi>. – La vigueur de l’activité métallurgique en Puisaye est attestée par la multitude de
@@ -215,8 +217,8 @@
             Concernant l’organisation de la production, quelques indications brèves, éparses et confuses témoignent de l’existence dans la région de
             normes de production et d’une institution de contrôle de ces normes : la juridiction des fèvres de Puisaye.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La clientèle des tabellions, un échantillon de la société poyaudine</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La clientèle des tabellions, un échantillon de la société poyaudine</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Panorama de la clientèle des tabellions</head>
           <p>
             <hi rend="i">Les comparants : qui sont-ils</hi> ? – Parmi les quelque 662 individus pouvant être qualifiés de comparants, les hommes sont
@@ -236,7 +238,7 @@
             généralement solide, par une participation active à l’administration seigneuriale et par une position dominante dans les rapports entre
             parties révélés par les registres de tabellionage.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le motif des comparutions</head>
           <p>
             <hi rend="i">Le déroulement de la “ confessio in jure ”</hi>. – La venue des parties au siège de la prévôté dans le cadre des assises de
@@ -258,7 +260,7 @@
             origine tout à la fois dans l’environnement géographique et social des tabellions, dans la composition de leur clientèle et dans la
             relativité des besoins d’écrit selon les types d’actes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les parties entre elles : des relations à divers degrés</head>
           <p>
             <hi rend="i">Les relations familiales</hi>. – Si le mariage et la succession sont des événements-clés de l’histoire des familles, celle-ci
@@ -281,23 +283,20 @@
             tels que les ventes d’immeubles : dans au moins treize des quarante-deux actes de ce type, on constate que l’acheteur n’est autre qu’un
             des voisins du vendeur.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Cette recherche, essentiellement fondée sur des registres de tabellionage, a subi les contraintes liées aux caractères propres à ce type de
           sources : on peut en effet définir les registres comme le reflet d’une civilisation de l’écrit allié à la subjectivité du producteur
           d’actes, lui-même influencé par le milieu ambiant. Il en résulte une étude fondée avant tout sur la vision du tabellion, parfois revue et
           corrigée par la comparaison critique entre les actes d’une part, entre les registres et les autres sources d’autre part, mais toujours
           accompagnée de son lot d’incertitudes et de questions non résolues.</p>
       </div>
-              <div type="appendix"><head>é</head>
+          <div type="appendix" n="7"><head>é</head>
         <p>L’édition comprend l’ensemble des actes des registres de Martin Destourbe et de Jeannin du Meix (Arch. nat., 90 AP 172), auxquels ont été
           adjoints les quelques actes authentiques se rapportant à la production écrite de ces deux tabellions retrouvés dans le fonds de
           Saint-Fargeau. Chaque acte est pourvu d’un sigle (M ou J, redoublé dans le cas des actes authentiques) et d’un numéro d’ordre correspondant
           à celui dans lequel chacun apparaît dans les registres. Suivent la datation contemporaine restituée, un regeste aussi précis que possible,
           le tableau de la tradition et le texte de l’acte, muni autant que de besoin de notes d’apparat critique.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

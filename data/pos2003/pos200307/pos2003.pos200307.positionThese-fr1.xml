@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Copier au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle du français déjà ancien : l’exemple de l’&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Estoire del saint Graal&lt;/hi&gt;</title>
-        <title type="sub">Commentaire linguistique et édition partielle du ms. b.r. brux. 9246.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Copier au <num>xv<hi rend="sup">e</hi></num> siècle du français déjà ancien : l’exemple de l’<hi rend="i">Estoire del saint Graal</hi></title><title xml:lang="fr" type="sub">Commentaire linguistique et édition partielle du ms. b.r. brux. 9246.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Delamarre, Aurélie">Aurélie Delamarre</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200307.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Comment copier à la fin du <num>xv<hi rend="sup">e</hi></num>  siècle un texte qui prend pour modèle un manuscrit vieux de deux siècles, dont la
           langue n’est plus celle du copiste ni de ses lecteurs ? S’agit-il simplement de la copie d’un manuscrit au sens courant du terme, ou le
           copiste joue-t-il un rôle plus important d’adaptateur, voire de véritable traducteur du texte ancien ? Ces questions se posent très vite à
@@ -96,10 +99,9 @@
           la Bibliothèque royale, à Paris, lors de la guerre de Succession d’Autriche en 1748 puis pendant la Révolution en 1794, avant d’être
           définitivement restitué à la Belgique en 1814.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Commentaire linguistique du manuscrit de Bruxelles</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Commentaire linguistique du manuscrit de Bruxelles</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une traduction fidèle à son modèle</head>
           <p><hi rend="i">Evaluer le travail du traducteur. </hi> — Guillaume de la Pierre indique dans le colophon qu’il veut « metre en françoiz »
             un texte écrit « en langage ancien et le plus en langue picarde ». L’usage de l’expression « metre en françoiz » illustre bien le fait que
@@ -153,7 +155,7 @@
             traduire un état ancien de la langue ne l’entraîne pas à conserver certains archaïsmes ; cette interrogation fait l’objet du deuxième
             chapitre du commentaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une langue du <num>xv<hi rend="sup">e</hi></num>  siècle</head>
           <p><hi rend="i">Phonétique-graphie. </hi> — Pour ce qui est de la notation des voyelles, la graphie du manuscrit de Bruxelles présente
             certains traits qui tendent à disparaître ou ont déjà disparu dans d’autres textes de la même époque, notamment dans le traitement des
@@ -178,9 +180,7 @@
             logique. En ce qui concerne la syntaxe de phrase, l’étude de la position du sujet par rapport au verbe montre que le manuscrit de
             Bruxelles est tout à fait représentatif des usages et des évolutions syntaxiques du moyen français.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="3"><head>Conclusion</head>
         <p>On peut donc considérer Guillaume de la Pierre comme un véritable traducteur : si la progression du récit n’est pas remise en question par
           le copiste, le texte a incontestablement été traduit d’un point de vue linguistique. Le manuscrit de Bruxelles apparaît ainsi comme un
           témoin caractéristique du moyen français, étape intermédiaire de l’évolution de la langue entre l’ancien français auquel il ne peut plus
@@ -188,7 +188,7 @@
           typique du moyen français : aucun des textes écrits pendant cette période n’apparaît totalement archaïque ni totalement moderne ou
           modernisé. La seule constante semble bien être la modernisation graphique, qui facilite la reconnaissance des unités de lecture.</p>
       </div>
-              <div type="appendix"><head>Édition partielle</head>
+          <div type="appendix" n="4"><head>Édition partielle</head>
         <p>Seuls les feuillets 1-114, sur un total de 185, ont été édités ici. Dans cette première partie, le manuscrit de Bruxelles suit en effet
           une version longue de l’<hi rend="i">Estoire del saint Graal</hi>, et la cohérence générale du texte est donc assurée. La fin du manuscrit
           présente toutefois une version courte du roman, dans laquelle des passages entiers nécessaires à la progression logique du récit sont omis.
@@ -204,7 +204,6 @@
           texte. Les manuscrits présentés dans le commentaire (mss. BnF fr. 105 et 9123, ms. Ars. 3349), ainsi que l’édition critique du texte, ont
           été retenus comme textes de contrôle.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

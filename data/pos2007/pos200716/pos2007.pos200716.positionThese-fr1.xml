@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Simon Arnauld de Pomponne</title>
-        <title type="sub">Secrétaire d’État des Affaires étrangères de Louis XIV (1618-1699)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Simon Arnauld de Pomponne</title><title xml:lang="fr" type="sub">Secrétaire d’État des Affaires étrangères de Louis XIV (1618-1699)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Mathis, Rémi">Rémi Mathis</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200716.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le renouveau de l’histoire politique et diplomatique durant les vingt dernières années a considérablement renouvelé les approches et mis en
           valeur de nouveaux enjeux. Elle a notamment entraîné la floraison d’un grand nombre de travaux, dont les moindres ne sont certainement pas
           les biographies de ministres et de grands commis de l’État afin de « donner de nouvelles bases à l’histoire des rapports entre les
@@ -69,7 +72,7 @@
         <p>Il était donc du plus sensible intérêt de s’interroger sur le parcours et l’action d’un homme qui est parvenu aux plus hautes charges en
           étant janséniste, et de comprendre quel peut être le rôle et l’action d’un ministre-diplomate en pleine guerre de Hollande.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’étude des diverses facettes de Pomponne nécessite de recourir à des sources très dispersées. Ses papiers personnels sont répartis entre
           la bibliothèque de l’Arsenal (ms 6034 à 6041 et 6626) et les archives du château du Fayel (Oise, fonds privé). Ces archives – entre autres
           la correspondance de Pomponne – sont à la base de l’étude : elles permettent d’éclairer son parcours politique et personnel, d’étudier son
@@ -90,9 +93,8 @@
           nationale, bibliothèque de l’Institut, bibliothèque Mazarine, Archives départementales de l’Essonne, archives de l’Assistance publique et
           des Hôpitaux de Paris, etc.).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Janséniste mondain, serviteur de Dieu et du roi <lb/>les ambiguïtés intellectuelles de Pomponne (1618-1671)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Janséniste mondain, serviteur de Dieu et du roi <lb/>les ambiguïtés intellectuelles de Pomponne (1618-1671)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’arrière-plan familial</head>
           <p>L’ascension de la famille Arnauld est bien connue mais on n’en mesure pas toujours l’originalité. Les Arnauld sont originaires de
             Basse-Auvergne : le <num>xvi<hi rend="sup">e</hi></num> siècle est le temps de l’ascension sociale selon un modèle classique. Finalement, Antoine
@@ -109,7 +111,7 @@
             change quand son frère aîné, Antoine, dit l’abbé Arnauld, décide de se retirer du monde : en 1643, Simon Arnauld devient le chef de sa
             famille, ce qui ouvre pour lui de nouvelles perspectives.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Au carrefour de divers réseaux sociaux</head>
           <p>L’influence de Port-Royal sur la famille Arnauld a des conséquences contradictoires sur le réseau social de Simon Arnauld. D’une part,
             les liens avec le jansénisme déciment son réseau : la quasi-totalité de ses oncles et tantes se retirent du monde et ne lui offrent pas
@@ -126,7 +128,7 @@
             cependant pas Simon Arnauld de nouer des liens particuliers avec Hugues de Lionne, ami de son oncle Henri Arnauld. Il possède également le
             soutien de grands personnages tels que le duc de Gramont ou Turenne, qui n’hésitent pas à prendre parti pour lui.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un début de carrière difficile</head>
           <p>Malgré l’ensemble de ces soutiens, Simon Arnauld peine à se faire une place au sein du personnel royal. Il commence d’abord une carrière
             d’intendant dans des places fortes comme Casal (1642-1647) et auprès d’armées. On lui confie quatre courtes missions en 1648-1649, en
@@ -142,8 +144,8 @@
           <p>C’est alors que Simon Arnauld se rapproche de Fouquet, espérant profiter du soutien du puissant surintendant pour obtenir grâces et
             emplois. Mais ce dernier entraîne au contraire Pomponne dans sa chute, lequel est exilé à Verdun, puis à Pomponne de 1662 à 1665.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Au cœur de l’État <lb/>(1665-1699)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Au cœur de l’État <lb/>(1665-1699)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">M. de Pomponne, ministre et secrétaire d’État de Louis XIV</head>
           <p>Toutefois, grâce au soutien de ses amis – principalement de Le Peletier, Le Tellier et Lionne – Pomponne est rappelé et se voit même
             rapidement confier des emplois prestigieux : il enchaîne trois missions d’ambassadeur dans le contexte difficile de l’apparition de la
@@ -162,7 +164,7 @@
             politique agressive et n’est pas toujours écouté. Le fait que le secrétaire d’État des Affaires étrangères ne possède que peu de bureaux
             sous ses ordres contribue encore à en faire un ministre faible.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le chef de la diplomatie française (1672-1679)</head>
           <p>Mais le secrétaire d’État n’agit pas seulement au sein du Conseil, afin de déterminer la politique à suivre. Il est également chargé de
             l’appliquer, en relation avec le personnel diplomatique. Il dirige donc des bureaux où travaille un personnel spécialisé, chargé
@@ -191,7 +193,7 @@
             son avis personnel. Mais le secrétaire d’État des Affaires étrangères, par nature ministre faible, perd peu à peu le soutien de son
             souverain et finit par être disgracié en 1679.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">De la disgrâce au retour en grâce <lb/>Saint-Germain – Pomponne – Versailles (1679-1699)</head>
           <p>La disgrâce de Pomponne a été largement commentée par les contemporains. Elle constitue une surprise, source de bien des suppositions. On
             a soupçonné Pomponne d’avoir favorisé les jansénistes et l’on a surtout mis en cause les autres secrétaires d’État, désireux d’obtenir son
@@ -209,7 +211,7 @@
             bicéphale qui se met en place, avec une répartition stricte des tâches. Pomponne se voit en plus confier la surintendance des postes en
             1697.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Un janséniste à Versailles ? <lb/>Entre service du roi, service de Dieu et fidélité familiale</head>
           <p>La présence d’un membre de la famille Arnauld au sein du conseil d’En haut n’a pas manqué d’étonner contemporains et historiens. Il est
             indéniable que Simon Arnauld est un homme à la spiritualité profonde et exigeante, qui se définit lui-même comme janséniste.</p>
@@ -226,8 +228,8 @@
             qui leur sont très défavorables. Sa position est d’autant plus ambiguë que Louis XIV l’emploie parfois lui-même comme médiateur avec les
             jansénistes, en dehors des missions normalement confiées au secrétaire d’État des Affaires étrangères.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’homme privé</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’homme privé</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Formation et gestion d’un patrimoine</head>
           <p>Simon Arnauld passe pendant toute sa vie pour un homme pauvre. Le retrait du monde de son frère en 1643 fait certes de lui l’unique
             héritier de ses parents mais leur fortune est modeste et essentiellement immobilière.</p>
@@ -248,7 +250,7 @@
           <p>Sa succession se passe sans problème particulier après la mort de son épouse (1712). Le partage des biens permet d’avoir une idée de sa
             fortune à son décès : elle est estimée à environ 1 100 000 livres, ce qui le place dans la moyenne basse des secrétaires d’État.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les terres et le patrimoine immobilier</head>
           <p>Le patrimoine immobilier de Simon Arnauld représente donc la plus grande part de ses richesses. Mais son importance symbolique est elle
             aussi très grande. Simon Arnauld obtient le domaine de Pomponne sur renonciation de son frère, à l’occasion de son mariage en 1660. Ce
@@ -266,7 +268,7 @@
             Normandie, composant la baronnie de Chambrais. Bien qu’il y construise un nouveau château, il ne faut y voir qu’un placement et le moyen
             de gagner en prestige.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Père de famille, chef de clan ?</head>
           <p>Pomponne est le chef de la famille Arnauld mais, en raison du retrait du monde de la plupart de ses membres, son réseau social se trouve
             bien limité. À la différence de certains des autres ministres de Louis XIV, Pomponne ne tente jamais de se constituer une véritable
@@ -283,9 +285,7 @@
             autre se fait religieuse ; seule la dernière, Catherine-Félicité, se marie, mais par la volonté expresse du roi, et devient marquise de
             Torcy.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Pomponne meurt regretté par le roi au terme d’une carrière traversée par biens des difficultés. Son parcours n’a rien de linéaire :
           Pomponne connaît successivement des périodes de grâce et de disgrâce, de gloire et d’inactivité en fonction du contexte politique et
           religieux du royaume. Il paraît certes un ministre faible par rapport à Colbert ou à Louvois mais ce sont plutôt ces deux hommes qui font
@@ -300,12 +300,11 @@
           domaine de la diplomatie, par son statut d’expert, Pomponne annonce certains traits des ministres du <num>xviii<hi rend="sup">e</hi></num>, voire du
           <num>xix<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Édition de la correspondance complète entre Simon Arnauld de Pomponne et Robert Arnauld d’Andilly (1642-1673). — Édition des œuvres
           diplomatiques inédites de Pomponne (Journal de son voyage en Suède, Discours sur la Suède, Relation de sa deuxième ambassade de Suède). —
           Édition de correspondance, d’actes officiels, d’actes notariés. — Index des noms de lieux et de personnes des pièces justificatives.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

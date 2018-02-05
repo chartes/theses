@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Français acteurs et spectateurs de l’histoire de Hawaii (1837-1898)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les Français acteurs et spectateurs de l’histoire de Hawaii (1837-1898)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Huetz De Lemps, Paul">Paul Huetz De Lemps</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200110.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les îles Hawaii, autrefois appelées Sandwich, sont considérées aujourd’hui comme la tête de pont des Etats-Unis dans le Pacifique, comme
           la vitrine de leur réussite et de leur influence dans cette région. Leur domination sur cet archipel distant de plus de 4 000 kilomètres de
           leurs côtes, souvent décrite comme le résultat d’une <hi rend="i">manifest destiny</hi>, ne date pourtant que de 1898. Durant tout le XIX
@@ -65,7 +68,7 @@
           celle qu’elle a pu mener dans des territoires aujourd’hui français, Tahiti notamment, peuvent permettre d’éclairer d’un jour nouveau les
           origines de sa présence en Océanie et dans le Pacifique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le principal fonds utilisé, le plus riche aussi, est celui du ministère des Affaires étrangères, dans les deux dépôts de Paris et de
           Nantes. Les archives conservées à Paris permettent de reconstituer les relations diplomatiques entre la France et les Sandwich et la manière
           dont les événements d’Hawaii et de Polynésie sont perçus par les autorités françaises. Les archives du centre deNantes, rapatriées du
@@ -76,9 +79,8 @@
           conservés à la bibliothèque municipale de Rochefort. Enfin, une vingtaine de récits de voyage publiés rendent bien toute la diversité du
           regard porté par les Français sur les transformations rapides de l’archipel hawaiien.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’Océanie, Hawaii et la France en 1837</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’Océanie, Hawaii et la France en 1837</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’espace Pacifique à la fin des années 1830</head>
           <p>Deux puissances paraissent dominantes dans le Pacifique depuis que l’Espagne a perdu ses colonies américaines : la Russie, forte de sa
             double façade sur le Grand Océan, et l’Angleterre, qui dispose du Canada au nord et de l’Australie au sud. Les Etats-Unis, forts présents
@@ -86,7 +88,7 @@
             presque paraît encore possible : le partage colonial de l’Océanie n’a pas commencé, même s’il paraît imminent à de nombreux observateurs
             et souhaitable à une partie des quelques Occidentaux établis en Polynésie, aventuriers, marchands ou missionnaires.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’archipel hawaiien en 1837</head>
           <p>Découvert par James Cook en 1778, l’archipel hawaiien connaît dans les soixante années suivantes des changements prodigieux qui en font
             le point le plus développé d’Océanie. Unifié par Kaméhaméha I<hi rend="sup">er</hi> au début du <num>xix<hi rend="sup">e</hi></num> siècle, il est
@@ -95,7 +97,7 @@
             provoquer des tensions et des conflits avec les autres blancs établis dans ce groupe d’îles. Sa situation stratégique exceptionnelle
             attire l’attention des puissances qui hésitent toutefois à prendre possession de territoires aussi éloignés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les premiers contacts français avec Hawaii (1786-1837)</head>
           <p>Après le passage de Lapérouse à Mauï en 1786, les Français, écartés des mers pendant la période révolutionnaire et impériale, n’ont que
             des contacts sporadiques avec Hawaii, comme avec le reste de l’Océanie. Le gouvernement de la Restauration tente de rattraper ce retard en
@@ -110,8 +112,8 @@
             demi-mesures, mais nomme un agent consulaire à Honolulu, Jules Dudoit. C’est l’ouverture des relations diplomatiques entre la France et
             Hawaii. Au même moment, à Paris, le gouvernement décide de soutenir plus activement l’œuvre des missions.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Vers le désengagement: six décennies de relations diplomatiques franco-hawaiiennes (1837-1898)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Vers le désengagement: six décennies de relations diplomatiques franco-hawaiiennes (1837-1898)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’entrée du royaume d’Hawaii dans le concert des nations (1839-1843)</head>
           <p>En 1839, le capitaine Laplace impose la liberté de culte et de religion aux îles Sandwich, ainsi que des tarifs douaniers favorables aux
             produits français, notamment aux vins et spiritueux, à la fureur des puritains qui en combattent l’introduction. Son action est saluée par
@@ -127,7 +129,7 @@
             donnant de leur côté des garanties comparables, refusent de s’associer à cet acte international. La France et l’Angleterre ont désormais
             les mains liées ; les Etats-Unis restent libres.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Traités et canonnières (1843-1859)</head>
           <p>De 1843 à 1859, la France est extrêmement présente aux îles Hawaii où elle protège les intérêts de ses missionnaires, toujours victimes
             de tracasseries de la part des autorités locales, et de ses baleiniers, nombreux mais nettement moins toutefois que les Américains. Elle
@@ -139,7 +141,7 @@
             démonstrations de force intempestives avaient, du reste, en partie suscitées. Préserver Hawaii de son puissant voisin, maître de la
             Californie depuis 1848, reste encore à cette époque l’une des priorités de l’action de la France en Polynésie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le retrait de la France (1859-1876)</head>
           <p>De 1859 à 1876, la France est de moins en moins impliquée dans l’évolution du royaume de Hawaii qu’elle continue cependant d’observer
             avec attention. Les missionnaires de Picpus, désormais bien établis, n’ont guère besoin de soutien. Les intérêts économiques français sont
@@ -150,7 +152,7 @@
             dans l’archipel des Sandwich et dans l’Océanie en général : la période de « recueillement » a commencé, au moment où l’annexion des Fidji
             par l’Angleterre en 1874 paraît devoir relancer le partage colonial.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La France et la fin de l’indépendance hawaiienne</head>
           <p>Le traité de réciprocité de 1876 entraîne une croissance rapide de l’exploitation sucrière qui renforce encore la mainmise des blancs sur
             l’économie de l’archipel hawaiien. L’existence d’une royauté indigène paraît de plus en plus incongrue aux véritables maîtres du pays :
@@ -167,8 +169,8 @@
             océan qui, de plus en plus, apparaît comme un « lac américain » et où seule la puissance montante du Japon paraît pouvoir concurrencer la
             suprématie yankee.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Présence et regards français</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Présence et regards français</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les représentants de la France</head>
           <p>Deux catégories de Français servent leur pays à Honolulu : les consuls et les officiers de marine, les premiers de manière permanente,
             les seconds lors de leurs escales, généralement fort brèves. Les uns et les autres ont à exercer une triple fonction de représentation
@@ -179,7 +181,7 @@
             l’occasion d’un incident de protocole en 1856, leurs attributions respectives ont été clairement redéfinies : l’initiative, en matière
             politique et diplomatique, revient désormais aux agents du ministère des Affaires étrangères, du moins en principe.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les résidents français de Hawaii</head>
           <p>Deux groupes doivent être distingués parmi les Français qui résident à Hawaii : les religieux et les laïcs. Les premiers, après des
             débuts difficiles, et quoique peu nombreux, réussissent à faire du catholicisme, à la fin du siècle, la première confession de l’archipel
@@ -197,7 +199,7 @@
             trop peu nombreux pour ne pas se fondre dans les autres groupes, indigènes et étrangers. Le caractère national disparaît vite, dès la
             deuxième génération.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Français de passage</head>
           <p>Là encore, on trouve parmi les Français de passage la plus grande variété de situations. Les baleiniers constituent un ensemble
             important, de plusieurs centaines de personnes par an, au cours des années 1845-1865. La relâche est, pour eux, l’occasion de réparer le
@@ -212,7 +214,7 @@
             société hawaiienne qui a perdu, à leurs yeux, sa « sauvagerie » originelle sans acquérir tous les raffinements de la «civilisation »
             suscite un sentiment de déception chez ces Français en mal d’exotisme.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Regards français sur l’histoire de Hawaii</head>
           <p>En un siècle les Hawaii passent de l’âge de la pierre polie à celui du capitalisme triomphant. Une mutation si rapide, pour les hommes
             du <num>xix<hi rend="sup">e</hi></num> siècle, ne peut être que l’œuvre de la Providence, mais chacun la conçoit différemment selon ses convictions
@@ -226,9 +228,7 @@
             mais ils disparaissent, victimes des nouvelles maladies introduites par les marins européens et américains, et de ce « mal de vivre » que
             tant d’observateurs remarquent. Tel est le «sanglot de l’homme blanc » aux Sandwich : la civilisation n’apporte pas le bonheur.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head n="Conclusion">Cent ans après</head>
+      </div><div type="conclusion" n="6"><head n="Conclusion">Cent ans après</head>
         <p>Les Hawaii restent le territoire le plus riche d’une l’Océanie marginale par rapport aux grands courants d’échanges mondiaux. Elles jouent
           le rôle de tête de pont des Etats-Unis non seulement en Polynésie, mais jusqu’en Asie, en raison notamment de la très forte proportion
           d’Asiatiques au sein de sa population. Sur le long terme, la part de la France à cette extraordinaire réussite apparaît bien modeste. Sur un
@@ -236,11 +236,10 @@
           l’archipel, même si la mission de Picpus, et avec elle son caractère français d’ailleurs ambigu, ont disparu en 1941, date de la création du
           diocèse d’Honolulu.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Traités et conventions de 1839, 1846 et 1857. ­ Manifeste de Laplace en 1839. ­ Manifeste de l’amiral de Tromelin et de Dillon en 1849. ­
           Déclaration franco-anglaise de 1843.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

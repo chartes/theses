@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Commentaire&lt;/hi&gt; des Psaumes de saint Thomas d’Aquin</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le <hi rend="i">Commentaire</hi> des Psaumes de saint Thomas d’Aquin</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Morard, Martin">Martin Morard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200222.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La <hi rend="i">Postilla super Psalmos</hi> de saint Thomas d’Aquin, abrégée <hi rend="i">Super Psalmos</hi>, n’a encore fait l’objet ni
           d’une édition critique, ni d’une étude qui prenne en compte les problèmes philologiques, historiques et théologiques qu’elle soulève. Ses
           particularités rendent son édition complexe mais jettent un jour nouveau sur l’histoire de l’enseignement biblique au Moyen Âge. Elles
@@ -60,10 +63,9 @@
           analyses concernant la langue, les sources et la datation de l’œuvre, une édition critique partielle du commentaire, que complètent des
           documents annexes ayant trait à l’exégèse des Psaumes, édités pour la première fois ici.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les commentaires des Psaumes au Moyen Âge</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Les commentaires des Psaumes au Moyen Âge</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Panorama des commentaires des psaumes, de Pierre Lombard à Nicolas de Lyre</head>
           <p>La <hi rend="i">Postilla super Psalmos</hi> de Thomas d’Aquin ne peut être lue avec pertinence si on ne cherche au préalable à évaluer
             l’importance qu’ont pris au Moyen Âge les commentaires des Psaumes, entendus au sens large comme l’ensemble des écrits, complets ou non,
@@ -81,7 +83,7 @@
             Bonaventure n’ayant pas laissé de commentaires authentiques, Thomas est de surcroît le seul grand scolastique à être l’auteur d’un
             commentaire des Psaumes écrit et diffusé.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Mise en page et mise en texte des commentaires des Psaumes</head>
           <p>Afin de mieux saisir la finalité de la postille de saint Thomas et son contexte, la question se posait de savoir s’il existe une
             relation entre la mise en page des commentaires des Psaumes et leur statut scolaire. <lb/>L’examen de quelque cent dix manuscrits, datés
@@ -129,8 +131,8 @@
             premières éditions, où le texte sacré est intégralement reproduit, n’est donc qu’un artifice imposé par les modes du XVI <hi rend="sup">e</hi> siècle. Thomas d’Aquin n’a jamais voulu entreprendre un commentaire-outil destiné à faire école. Que sa postille soit l’humble
             reflet d’un enseignement ordinaire dispensé dans un <hi rend="i">studium</hi> provincial n’est pas le moindre de ses intérêts.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Préface de l’édition critique</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Préface de l’édition critique</head>
+        <div n="1" type="chapter">
           <head n="Première section">Histoire de la tradition manuscrite et critique textuelle</head>
           <p><hi rend="i">La transmission du texte </hi> — Thomas d’Aquin a commenté les Psaumes 1 à 54,16. L’authenticité de cette postille est
             attestée par la plupart des bibliographes depuis la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. Ceux-ci ne la présentent cependant pas comme
@@ -211,7 +213,7 @@
             “ prototype d’Humbert de Romans ” (Rome, Arch. Gen. O.P., XIV-L-1). Cette édition parallèle a permis de constater la très grande proximité
             du texte de la Bible de la Sorbonne (W<hi rend="sup">S</hi> ) avec celui du Psautier dominicain.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Seconde section">Langue, sources et datation</head>
           <p><hi rend="i">La langue du</hi> Super Psalmos  — A peine mis au propre, sans doute resté dans les cartons de Raynald jusqu’à sa mort, le
               <hi rend="i">Commentaire des Psaumes</hi> de saint Thomas a été privé du travail littéraire et théologique par lequel l’enseignement
@@ -287,15 +289,13 @@
             s’interdire parfois certaines envolées où Raynald, manifestement, peine à le suivre, comme par exemple dans le <hi rend="i">Super
               Psalmos</hi>17, n°5 à 11. Cette hypothèse achève de rendre plausible à nos yeux la datation napolitaine du commentaire.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Édition critique partielle</head>
-        <p>L’édition proposée comprend le prologue du <hi rend="i">Super Psalmos</hi> et les commentaires des Psaumes 1, 2, 21, 44, 52,
+      </div><div n="4" type="part"><head n="0" type="chapter">Édition critique partielle</head>
+        <p n="1" type="chapter">L’édition proposée comprend le prologue du <hi rend="i">Super Psalmos</hi> et les commentaires des Psaumes 1, 2, 21, 44, 52,
           53 et 54, ainsi que de passages choisis ( <hi rend="i">Super Psalmos</hi>9, n° 14 ; 16, n° 6 ; 17, n° 5 à 11 et 17 ; 18, n° 3 à 5 ; 26, n°
           1, 2 et 6 ; 28, n° 2 ; 33, n° 8 ; 36, n° 1 ; 39, n° 4 ; 48, n° 1, selon les divisions en usage depuis l’édition <hi rend="i">princeps</hi>).
           On y a ajouté une édition partielle des tables thématiques qui figurent dans <hi rend="i">V<hi rend="sup">1</hi>
           </hi> et <hi rend="i">F</hi>, révélatrices des intérêts des lecteurs médiévaux.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="5"><head>Annexes</head>
         <p>Les pièces qui constituent cette dernière partie sont destinées à illustrer l’histoire de l’exégèse médiévale des Psaumes en général et
           l’édition du <hi rend="i">Super Psalmos</hi> en particulier. Les principales sont des extraits de commentaires anonymes, des scolies glanées
           dans les marges de la Glose de Pierre Lombard, ainsi que des œuvres de Gilbert de Poitiers, Pierre le Chantre ( <hi rend="i">Notule et Glose
@@ -311,8 +311,7 @@
           ­ caractéristique du phénomène des écoles ­ mais aussi des infléchissements qui ont progressivement marqué le développement de l’exégèse des
           Psaumes. L’ensemble ne se suffit évidemment pas à lui seul ; il appelle des compléments et des analyses qui restent à élaborer.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

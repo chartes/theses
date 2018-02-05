@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Un manuscrit arthurien et son commanditaire : le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Guiron le Courtois&lt;/hi&gt; de Bernabò Visconti (Bibl. Nat. de Fr., n. a. f.
-        5243)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Un manuscrit arthurien et son commanditaire : le <hi rend="i">Guiron le Courtois</hi> de Bernabò Visconti (Bibl. Nat. de Fr., n. a. f.
+        5243)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lauby, Aurélie">Aurélie Lauby</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200025.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le manuscrit de <hi rend="i">Guiron le Courtois</hi> conservé à la Bibliothèque nationale de France, illustré de cent-dix dessins
           aquarelles, est souvent considéré comme l’un des chefs-d’œuvre de l’art du <num>xiv<hi rend="sup">e</hi></num>  siècle en Europe. L’identité de son
           commanditaire n’a été révélée que récemment : il s’agit de Bernabò Visconti, grand seigneur qui régna sur Milan et son territoire de 1354 à
@@ -69,14 +72,13 @@
           Lombardie à la fin du <num>xiv<hi rend="sup">e</hi></num>  siècle et de mieux comprendre les relations ambiguës que le manuscrit entretient avec la
           réalité.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La connaissance et la compréhension du texte du roman de <hi rend="i">Guiron le Courtois</hi> repose sur la version du manuscrit de
           Bernabò. Son iconographie est comparée, d’une part, à celle des autres livres enluminés réalisés en Italie du nord au XIV <hi rend="sup">e</hi>  siècle et, d’autre part, à celle des manuscrits illustrés de <hi rend="i">Guiron le Courtois</hi> qui sont antérieurs, comme les
           manuscrits de la Biblioteca Marciana de Venise et de la British Library, datés respectivement des années 1340-1380 et 1350-1360.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le contexte politique et culturel : Berenabò Visconti en Lombardie au milieu du <num>xiv<hi rend="sup">e</hi></num>  siècle</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le contexte politique et culturel : Berenabò Visconti en Lombardie au milieu du <num>xiv<hi rend="sup">e</hi></num>  siècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La situation politique en Lombardie au milieu du <num>xiv<hi rend="sup">e</hi></num>  siècle</head>
           <p>L’Etat milanais naît en tant que puissance italienne et européenne sous la seigneurie de l’archevêque Giovanni (1349-1354), oncle de
             Bernabò. Ses trois neveux lui succèdent et se partagent ses territoires, mais très vite Bernabò et son frère Galeazzo II sont seuls à
@@ -89,7 +91,7 @@
             plus grandes familles d’Europe sèment craintes et jalousies. Par peur de se voir évincé de la seigneurie lombarde, son neveu,
             Giangaleazzo, le fait arrêter en 1385 et organise un procès contre lui et ses enfants.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le milieu culturel de la cour des Visconti</head>
           <p>Bernabò mène la vie d’un grand prince. Comme tous les souverains de son temps, il organise des tournois, des fêtes et des cérémonies de
             mariage qui impressionnent ses contemporains. Ces manifestations de faste sont caractéristiques de la société courtoise de l’époque.</p>
@@ -101,7 +103,7 @@
             ménestrels toscans diffusent la littérature florentine et où l’on goûte les romans de chevalerie français. La bibliothèque rassemblée à
             partir de Galeazzo II à Pavie traduit bien la diversité des goûts littéraires des Visconti.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le personnage de Bernabo Visconti</head>
           <p>Bernabò est certes un homme politique avisé, mais aussi un guerrier insatiable. La terreur et la cruauté sont pour lui des moyens de
             gouvernement. S’il mène une vie sentimentale assez dissolue, il éprouve un réel attachement pour sa femme, Regina délia Scala, à qui il
@@ -113,9 +115,9 @@
             d’affirmer sa puissance, alors que ses manuscrits, objets de luxe privé montrés aux hôtes avec une certaine ostentation, révèlent la
             finesse de ses goûts esthétiques.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le texte et les manuscrits de <hi rend="i">Guiron le Courtois</hi>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le texte et les manuscrits de <hi rend="i">Guiron le Courtois</hi>
        </head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les romans arthuriens, leur développement et leur réception en Italie</head>
           <p>Le roman arthurien s’est développé dès le <num>xii<hi rend="sup">e</hi></num>  siècle à partir de thèmes celtiques et bretons. Les romans en vers
             de Chrétien de Troyes, dont certains sont inachevés, suscitent l’intérêt des écrivains pour la matière arthurienne. Le début du XIII <hi rend="sup">e</hi>  siècle voit naître le roman arthurien en prose, avec <hi rend="i">Lancelot et Tristan</hi>.</p>
@@ -125,7 +127,7 @@
           <p>La légende arthurienne a été adoptée en Italie par tous les milieux sociaux, mais plus particulièrement par la noblesse, pour qui la
             connaissance du français est un signe de distinction.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le roman de <hi rend="i">Guiron le Courtois</hi>
          </head>
           <p>Le titre de <hi rend="i">Guiron le Courtois</hi>, même s’il n’est pas celui que l’auteur avait choisi pour son roman, est celui qui
@@ -145,7 +147,7 @@
             de ses ancêtres, devient un roman autonome, qui est traduit en italien. Enfin, le roman connaît plusieurs éditions imprimées à la
             Renaissance et influence Boiardo et l’Arioste.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La diffusion de <hi rend="i">Guiron le Courtois</hi>
          </head>
           <p>Trente-cinq manuscrits de <hi rend="i">Guiron le Courtois</hi> sont conservés, ce qui démontre une diffusion assez importante. Tous ne
@@ -155,8 +157,8 @@
           <p>Les éditions imprimées de <hi rend="i">Guiron le Courtois</hi> ont toutes eu lieu au début du <num>xvi<hi rend="sup">e</hi></num>  siècle. Elles
             ont transmis le roman en deux parties, sous deux titres différents : <hi rend="i">Gyron le Courtois</hi> pour la première partie et <hi rend="i">Meliadus</hi> pour la seconde.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le Maître du Guiron</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le Maître du Guiron</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le milieu de formation du Maître du Guiron et les sources de son style</head>
           <p>Le passage de Giotto à Milan au temps du gouvernement d’Azzone a durablement marqué la peinture à fresque en Lombardie, qui en intègre
             très rapidement les innovations. Le florentin Giovanni da Milano y apporte une tradition giottesque « dissidente » et Giusto de’Menabuoi
@@ -167,7 +169,7 @@
           <p>Un rapide aperçu des manuscrits de chevalerie enluminés en Italie depuis le début du <num>xiv<hi rend="sup">e</hi></num>  siècle permet de rendre
             compte de l’évolution du genre et de l’originalité du Maître du Guiron.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les manuscrits de l’atelier du Maître du Guiron et leur influence</head>
           <p>Deux autres manuscrits peuvent être rapprochés directement du manuscrit réalisé pour Bernabò vers 1370-1380. On retrouve en effet les
             mêmes caractéristiques originales dans la mise en page et la même technique du dessin aquarelle dans une miniature isolée et dans un
@@ -177,7 +179,7 @@
             aucun n’est d’une qualité comparable. Parmi les manuscrits de luxe réalisés dans la région de Vérone et de Padoue, certains sont assez
             proches du Guiron, mais leur différence stylistique confirme toutefois la formation lombarde de l’atelier du Maître du Guiron.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La production des ateliers lombards influencés par le Maître du Guiron</head>
           <p>Le Maître du Guiron a influencé d’autres ateliers lombards. Ainsi, le manuscrit de <hi rend="i">Lancelot</hi> de la Bibliothèque
             nationale de France est-il directement inspiré du manuscrit de Bernabò. L’atelier du <hi rend="i">Missel-livre d’heures franciscain</hi> a
@@ -188,8 +190,8 @@
           <p>Les <hi rend="i">Tacuinum sanitatis</hi> réalisés entre 1390 et 1400 dénotent encore la connaissance du Maître du Guiron et de
             Giovannino de’Grassi.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Etude iconographique du manuscrit de <hi rend="i">Guiron le Courtois</hi>, Bibl. Nat. de Fr., n. a. f. 5243</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Etude iconographique du manuscrit de <hi rend="i">Guiron le Courtois</hi>, Bibl. Nat. de Fr., n. a. f. 5243</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’élaboration de l’image</head>
           <p>L’atelier du Maître du Guiron emploie la technique du dessin à la plume rehaussé de lavis ou d’aquarelle. La mise en page adoptée par le
             Maître du Guiron se distingue de la pratique ordinaire : le texte entretient physiquement un rapport étroit avec l’image, il se déroule en
@@ -201,7 +203,7 @@
             propre au roman est incontestable. Les choix par le Maître du Guiron des scènes illustrées s’écartent peu de cette tradition, mais son
             originalité apparaît nettement dans leur traduction picturale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les codes de représentation utilisés par le Maître du Guiron</head>
           <p>Le Maître du Guiron utilise des codes iconographiques qui permettent de comprendre le sens de l’image. A chaque position du corps et à
             chaque geste correspond une signification bien définie dans l’image. Les silhouettes et les physionomies  des personnages permettent de
@@ -212,7 +214,7 @@
             scène. Le rapport étroit entretenu avec le texte empêche cependant la reproduction de scènes exactement similaires. Le Maître du Guiron ou
             ses aides ont utilisé des modèles pour ces scènes, mais savent éviter les poncifs qui impliquent une reproduction identique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une représentation réaliste du milieu de cour</head>
           <p>L’architecture des châteaux représentés dans <hi rend="i">Guiron le Courtois</hi> reprend des éléments réels, sans toutefois se
             conformer totalement à la configuration typique des châteaux des Visconti dans la seconde moitié du <num>xiv<hi rend="sup">e</hi></num>  siècle.
@@ -229,9 +231,7 @@
           <p>Le réalisme des images de <hi rend="i">Guiron le Courtois</hi> n’est toutefois qu’apparent. Il permet au lecteur, et en premier lieu à
             Bernabò, de se sentir plus proche des héros de la Table ronde.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>L’étude stylistique du manuscrit de Bernabò a permis de confirmer avec certitude la formation lombarde de son créateur et de lui attribuer
           une miniature isolée et un autre exemplaire du <hi rend="i">Guiron le Courtois.</hi>
        </p>
@@ -239,12 +239,11 @@
           de ce personnage : par l’intermédiaire du Maître du <hi rend="i">Guiron</hi>, il est en contact avec les grands artistes, les commanditaires
           et les lettrés de son temps, comme Pétrarque.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Généalogies des Visconti. ­ Tableau synoptique du contenu des manuscrits illustrés de <hi rend="i">Guiron le Courtois. ­</hi> Analyse
           codicologique et iconographique du manuscrit de <hi rend="i">Guiron le Courtois</hi>, Bibl. nat. de Fr., n. a. f.. 5243. ­ Notices et
           légendes des manuscrits illustrés de <hi rend="i">Cuiron le Courtois . ­</hi> Notices des manuscrits utilisés à titre de comparaison.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le Collectionneur François-Roger de Gaignières (1642-1715)</title>
-        <title type="sub">Biographie et méthodes de collection Catalogue de ses manuscrits</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le Collectionneur François-Roger de Gaignières (1642-1715)</title><title xml:lang="fr" type="sub">Biographie et méthodes de collection Catalogue de ses manuscrits</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Romet, Clotilde">Clotilde Romet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200722.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les collections Gaignières de la Bibliothèque nationale de France sont bien connues des chercheurs ; elles comprennent des centaines de
           manuscrits (copies d’actes et de chartriers, œuvres littéraires, recueils sur des familles, des offices ou des provinces, armoriaux,
           généalogies) et de dessins (portraits, topographie, tombeaux). Elles ont sans cesse été utilisées pour des recherches en histoire, en
@@ -69,7 +72,7 @@
           de leur méthode et de leurs ouvrages, nous avons également voulu avoir une approche globale du sujet en étudiant à la fois l’homme qui
           rassemble la collection ainsi que tous les objets la composant, sans en exclure aucune catégorie.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>
           <hi rend="i">Les documents de la collection Gaignières</hi>. — Il était évident qu’il fallait repérer les documents qui constituaient cette
           collection et qui sont dans leur très grande majorité conservés aujourd’hui à la Bibliothèque nationale de France. En revanche, les
@@ -94,9 +97,8 @@
           par des acquisitions ponctuelles, le vol de recueils de tombeaux dans les années 1780 et une nouvelle redistribution entre les différents
           départements de la bibliothèque ; enfin la situation actuelle.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les origines et la formation de Gaignières</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les origines et la formation de Gaignières</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La famille Gaignières</head>
           <p>La famille paternelle est issue de Lyon où on la retrouve dans les métiers de la marchandise et de l’écrit à la fin du XVI <hi rend="sup">e</hi> siècle et au début du <num>xvii<hi rend="sup">e</hi></num> siècle. C’est le père de François-Roger, Aimé de Gaignières, qui est
             le premier de sa lignée à être anobli à l’occasion de son mariage avec Jacqueline de Blanchefort en 1642. Le secrétaire du duc de
@@ -105,7 +107,7 @@
             Blanchefort et les Salazar ont donné l’archevêque de Sens, Tristan de Salazar († 1519), deux grands maîtres de l’ordre de Saint-Jean de
             Jérusalem, un évêque de Senlis. Par mariage, ils sont liés aux grandes familles qui servent la royauté, notamment les Créqui.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’éducation de Gaignières</head>
           <p>L’éducation du jeune François-Roger se fit sans doute à l’hôtel de Mayenne à Paris, lorsque son père se mit au service du duc d’Harcourt
             après la mort du duc de Bellegarde en 1646. Le rôle du père fut sans aucun doute important : Aimé de Gaignières possédait une bibliothèque
@@ -114,7 +116,7 @@
             intellectuels, notamment sur l’héraldique et la généalogie : il est cité par Michel de Marolles ou Pierre Borel comme une jeune homme très
             précoce.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Gaignières et sa généalogie. Gaignières et sa noblesse</head>
           <p>Le fait d’avoir des ancêtres prestigieux dans son ascendance maternelle, même s’ils sont éloignés, est très important pour Gaignières.
             Cette filiation lui donne une légitimité et une certaine gloire à laquelle il ne pourrait prétendre avec le seul nom de Gaignières ; elle
@@ -122,8 +124,8 @@
             les Guise. En 1696, Gaignières fit rapidement enregistrer sa noblesse et ses armes pour l’Armorial général du royaume confié par le roi à
             d’Hozier. La généalogie et l’héraldique constituent la base de ses collections, tout comme les portraits des grands hommes du royaume.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’honnête homme, serviteur des Guise</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’honnête homme, serviteur des Guise</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La clientèle des Guise</head>
           <p>Le clientélisme et le patronage structurent la société d’Ancien Régime. Parmi les clientèles des grandes familles, on distingue les
             clientèles administrative, militaire et domestique. Très hétérogène, le monde de la domesticité peut être réparti en trois catégories :
@@ -133,7 +135,7 @@
             de la livrée, surveille le personnel d’écurie et planifie les déplacements du duc. Comme tous les officiers domestiques, il reçoit les
             suppliques et les demandes de faveurs et redistribue une partie des bienfaits du prince.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les récompenses et les services rendus</head>
           <p>Gaignières conserve son titre d’écuyer jusqu’à la mort de la duchesse en 1688. Il fait partie des officiers couchés sur le testament de
             Marie de Lorraine, qui lui lègue 1200 livres. La seule récompense royale dont on trouve trace est une pension sur l’évêché de
@@ -144,7 +146,7 @@
             suffisent pas à expliquer comment Gaignières a pu rassembler une collection aussi importante, question qui reste insoluble en raison de la
             disparition de son livre de comptes pour les années 1688-1699, le seul qui nous avait été conservé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’hôtel de Guise, rue du Chaume</head>
           <p>L’hôtel de Guise tire son origine d’une demeure construite pour le connétable de Clisson à la fin du <num>xiv<hi rend="sup">e</hi></num> siècle.
             L’hôtel change plusieurs fois de mains, mais appartient toujours à des proches du roi. En juin 1553, il est acquis par Anne d’Este, femme
@@ -156,7 +158,7 @@
             Guise continue cette tradition en s’entourant de personnages comme Philippe Goibaut Du Bois, Marc-Antoine Charpentier, Etienne Loulié ou
             Gaignières, qui lui fournit des documents sur sa famille et est également le garde du chartrier de Joinville.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Se faire connaître dans les milieux savants de Paris</head>
           <p>Le voisinage de l’hôtel de Guise permettait à Gaignières de rencontrer beaucoup de grands nobles et d’érudits qui résidaient notamment
             dans des hôtels rue des Francs-Bourgeois (Le Camus, la marquise de Sévigné, Caumartin, d’Argouges, Coulanges, tous correspondants de
@@ -167,7 +169,7 @@
             avec des pièces généalogiques et des portraits gravés : ce cabinet est connu dès 1675 parmi les curieux d’estampes et il échange déjà une
             importante correspondance.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Les relations de l’écuyer de Mademoiselle de Guise</head>
           <p>Contrairement à la plupart des collectionneurs de son temps, Gaignières n’entretient pas de réseau européen avec les érudits de la
             République des Lettres. Il limite ses contacts à la France, mais ses correspondants représentent toutes les catégories sociales.</p>
@@ -186,7 +188,7 @@
             de se tourner vers l’histoire médiévale de la France. Gaignières correspond enfin avec d’autres érudits comme Du Cange, d’Hozier ou
             Clairambault.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">La cour royale et Gaignières</head>
           <p>Gaignières était en relation avec Madame de Montespan ; tous deux partageaient un goût commun pour les gravures de costumes. Grâce à
             elle, il entre également en contact avec l’abbesse de Fontevraud, sœur de madame de Montespan, et avec le duc d’Antin. Son principal ami à
@@ -202,8 +204,8 @@
             les membres de la famille Silvestre qui occupent traditionnellement cet emploi.</p>
           <p> </p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le collectionneur</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le collectionneur</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La collection</head>
           <p>La collection Gaignières comporte des centaines de manuscrits, des milliers d’estampes et de dessins. Les médailles et jetons ainsi que
             les porcelaines ont été entièrement vendus : on n’en possède qu’une estimation globale. Les portraits peints et tableaux l’ont également
@@ -222,7 +224,7 @@
             Gaignières puisque l’aspect historique prime sur l’esthétique. L’achat reste relativement rare chez lui, même si on conserve quelques
             mentions de prix sur des manuscrits. Mais les copies priment largement, car elles sont peu coûteuses et le satisfont entièrement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Autour de la collection</head>
           <p>Pour abriter ses collections, Gaignières fait construire dès 1685 un hôtel au 95 rue de Sèvres. Il n’y habite qu’à partir de 1701 quand
             l’hôtel de Guise est vendu aux Rohan-Soubise. Les actes notariés passés avec l’hospice des Incurables, qui possédaient le terrain, ont été
@@ -238,7 +240,7 @@
             Ouest, à la Picardie et au Poitou. Sa correspondance est très abondante car elle est un moyen de maintenir une présence sociale quand il
             est physiquement absent.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les objectifs</head>
           <p>Dans le contexte de la fin du <num>xvii<hi rend="sup">e</hi></num> siècle, Gaignières est un des premiers à se consacrer exclusivement au Moyen
             Âge, non seulement pour les documents de cette époque, qui intéressaient aussi les mauristes, mais également pour son architecture.
@@ -271,7 +273,7 @@
             des matériaux pour les autres érudits. Gaignières n’est pas un historien mais plutôt un antiquaire : il rassemble tout un ensemble de
             matériaux et de documents sans définir de problématique rigoureuse.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le destin de la collection</head>
           <p>À la fin de sa vie, Gaignières reçoit plusieurs propositions pour la vente de sa collection de la part de Guillaume III d’Angleterre ou
             du duc d’Orléans, mais son souci est que tout reste en France et ne soit pas dispersé. D’où la donation de sa collection complète au roi
@@ -291,8 +293,8 @@
             protestent et cherchent à discréditer les domestiques. Une enquête est lancée sur la santé mentale de Gaignières au moment où il a testé.
             Tout est réglé par un arrêt du Conseil en octobre 1717, qui répartit les 20 000 livres entre les domestiques et Barbe de Blanchefort.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrieme partie">Gaignières réutilisé</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Gaignières réutilisé</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Montfaucon : la réutilisation immédiate</head>
           <p>La réutilisation la plus connue des dessins de Gaignières est celle qu’en a fait un de ses amis bénédictins mauristes, dom Bernard de
             Montfaucon (1655-1741). Dans les <hi rend="i">Monumens de la Monarchie françoise</hi>(1729-1733), Montfaucon innove en utilisant les
@@ -301,7 +303,7 @@
             revanche, il n’accorde aucun intérêt esthétique aux œuvres du Moyen Âge et insiste au contraire sur leur caractère barbare et grossier ;
             c’est là sa principale différence avec Gaignières.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>Le nom de Gaignières est désormais associé à celui de la Bibliothèque du roi. Une partie de sa collection est plus populaire que les
             autres : les recueils de Modes. Les prêts sont autorisés et on voit des femmes et des actrices, comme la Clairon, les emprunter pour se
@@ -315,7 +317,7 @@
             circonstances de leur disparition restent obscures mais l’abbé Gevigney, garde des titres et généalogies du roi, semble impliqué et doit
             quitter son poste. L’affaire ne sera jamais vraiment élucidée.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le <num>xix<hi rend="sup">e</hi></num> siècle</head>
           <p>Avec l’essor de l’archéologie, le mouvement de protection des Monuments historiques, toutes les séries iconographiques de Gaignières vont
             prendre une nouvelle importance. La première étape de ce renouveau est la redécouverte des portefeuilles de tombeaux d’Oxford en 1843 ;
@@ -325,9 +327,7 @@
             faire restituer ces portefeuilles. On décide alors d’envoyer le peintre Jules Frappaz à la Bibliothèque Bodléienne pour réaliser des
             calques de ces dessins qui sont déposés au département des estampes de la Bibliothèque nationale de France.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>François-Roger de Gaignières se révèle bien être un homme extrêmement original pour son époque. Comme être social, il est typique du XVII
 <hi rend="sup">e</hi> siècle : fier de ses origines, de sa noblesse, de sa charge d’écuyer des Guise, il se plaît à côtoyer les grands et
           le milieu mondain. En tant qu’érudit, il reste en revanche inclassable. Certaines de ses conceptions sont très proches de celles des
@@ -337,13 +337,12 @@
           qu’effleurer, mais il ne faut pas voir en lui un précurseur des Lumières. Son outillage mental, sa culture et sa conception de l’histoire
           restent liés au second <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>I. Catalogue des manuscrits de Gaignières conservés à la Bibliothèque nationale de France. — Table de concordance entre les anciens numéros
           du petit fonds Gaignières et les numéros actuels du département des manuscrits.</p>
         <p>II. Chronologie. — Reconstitutions généalogiques des familles Gaignières, Blanchefort Saint-Janvrin et Blanchefort-Beauregard. — Provinces
           visitées par Gaignières : carte et itinéraire. — Liste des tableaux ayant appartenu à Gaignières avec leur localisation actuelle.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

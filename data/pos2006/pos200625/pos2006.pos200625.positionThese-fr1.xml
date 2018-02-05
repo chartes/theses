@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Léon Bourgeois, père spirituel de la Société des Nations</title>
-        <title type="sub">Solidarité internationale et service de la France (1899-1919)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Léon Bourgeois, père spirituel de la Société des Nations</title><title xml:lang="fr" type="sub">Solidarité internationale et service de la France (1899-1919)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Zeyer, Marie-Adélaïde">Marie-Adélaïde Zeyer</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200625.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Entre 1899, date de la première conférence de la paix de La Haye, et 1919, date de la signature du Pacte de la Société des Nations, Léon
           Bourgeois (1851-1925), une figure éminente de la <num>iii<hi rend="sup">e</hi></num> République, a pensé une « Société des Nations civilisées » et
           conçu un système de sécurité collective original, dont on peut voir encore les traces aujourd’hui dans certains articles de la Charte de
@@ -58,13 +61,12 @@
           éléments les plus importants de son activité avant et après la signature du Pacte de la Société des Nations. Cette étude a pour objet de
           rendre compte de l’évolution de sa pensée et d’éclairer son action en faveur de l’ancêtre de notre ONU actuelle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Cette étude s’appuie pour l’essentiel sur les écrits et les papiers personnels de Léon Bourgeois. Ses archives constituent un fonds
           particulier dans la série des Papiers d’agents aux Archives du Ministère des Affaires étrangères.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’homme un personnage et un caractère</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’homme un personnage et un caractère</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une jeunesse faite d’ascension rapide et d’engagements précoces</head>
           <p>
             <hi rend="i">Une enfance parisienne</hi>. — Léon Bourgeois grandit à Paris, au sein d’une famille de la petite bourgeoisie et de sympathie
@@ -80,7 +82,7 @@
             rétabli le calme lors d’une grève. Sa carrière administrative est fulgurante. En 1888, il est élu député dans la Marne contre le général
             Boulanger.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Léon Bourgeois, figure montante du radicalisme</head>
           <p>
             <hi rend="i">Le rôle de Léon Bourgeois dans la constitution du parti radical. —</hi> Léon Bourgeois a joué un rôle moteur dans
@@ -97,7 +99,7 @@
             sur le revenu était de plus en plus réclamé. Léon Bourgeois avait-il ainsi fait l’expérience du gouvernement de la France, mais sans doute
             jugea t-il la tâche bien lourde et fastidieuse, puisqu’il se refusa toujours par la suite à assumer une telle fonction.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Léon Bourgeois franc-maçon</head>
           <p>
             <hi rend="i">Un maçon engagé. —</hi> Léon Bourgeois fut initié à l’âge de 31 ans dans une loge châlonnaise. Il reçut à 40 ans le grade
@@ -109,7 +111,7 @@
             marquante de la Maçonnerie française, tout spécialement au titre de son rôle sur la scène internationale. Le Grand Orient de France lui a
             rendu hommage en 2001 à l’occasion du 150<hi rend="sup">e</hi> anniversaire de sa naissance.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Léon Bourgeois, le philosophe et théoricien de la solidarité</head>
           <p>
             <hi rend="i">Le  « solidarisme » avant Léon Bourgeois. -</hi> Avant Léon Bourgeois, quelques théoriciens ont réfléchi sur le concept de «
@@ -131,9 +133,9 @@
             résolution des maux sociaux que dans les relations internationales. Il devait se produire un passage de l’état de concurrence à l’état de
             solidarité, et c’est à cette cause que Léon Bourgeois s’est consacré entre 1899 et 1925.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les conférences internationales de la paix de La Hay : <lb/>l’émergence d’un nouveau concept <lb/>et l’essor d’une
+      </div><div n="4" type="part"><head n="0" type="chapter">Les conférences internationales de la paix de La Hay : <lb/>l’émergence d’un nouveau concept <lb/>et l’essor d’une
           nouvelle figure de la conciliation internationale.</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Léon Bourgeois et la conférence de 1899</head>
           <p>Peur d’un conflit généralisé et persistance des anciennes mœurs diplomatiques : les raisons de la convocation d’une conférence de la
             paix, les raisons de son peu d’ampleur. —  Le programme initial de la première conférence de la paix était le désarmement, ou plus
@@ -172,7 +174,7 @@
             être portés ces différends. Elle a fait adopter par la Conférence un ensemble de dispositions qui rendraient, espérait la délégation
             française, le règlement pacifique des conflits singulièrement plus facile et fréquent.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Léon Bourgeois et la conférence de 1907</head>
           <p>
             <hi rend="i">La convocation difficile d’une seconde assemblée de la paix</hi>. — Trois années s’écoulèrent entre le moment où les
@@ -198,9 +200,9 @@
             française constatait aussi qu’en 1907, on avait des solutions plus concrètes pour contraindre les nations à respecter leurs engagements.
             Enfin, elle était persuadée que ces conférences étaient appelées à devenir plus régulières et à entrer complètement dans les mœurs.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Quinze années pour mûrir la théorie de la solidarité des peuples <lb/>et en définir l’expression la plus parfaite,
+      </div><div n="5" type="part"><head n="0" type="chapter">Quinze années pour mûrir la théorie de la solidarité des peuples <lb/>et en définir l’expression la plus parfaite,
           la Société des Nations</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Quelle suite donner aux conférences de La Haye ?</head>
           <p>
             <hi rend="i">Léon Bourgeois conférencier</hi>. — Léon Bourgeois se fit en France le défenseur des travaux de La Haye, tant auprès de
@@ -219,7 +221,7 @@
             du conflit, une commission interministérielle de préparation de la troisième conférence de La Haye. Mais la guerre interrompit ses
             travaux, mettant fin à l’espoir de voir se réunir une troisième assemblée de la paix.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’arbitrage international à l’épreuve des faits : <lb/>la conférence navale de Londres</head>
           <p>
             <hi rend="i">Une initiative anglaise</hi>. — La convention de La Haye de 1907 relative à l’établissement d’une Cour internationale des
@@ -237,7 +239,7 @@
             dernier ressort, d’une façon obligatoire, sur les jugements des tribunaux nationaux », et c’était la « première acceptation par les
             souverainetés nationales d’une certaine subordination à l’idée supérieure de justice et de solidarité internationale. »</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une idée de plus en plus précise de ce que pourrait être la Société des Nations</head>
           <p>
             <hi rend="i">L’apparition du terme de « Société des Nations »</hi>. — Dans ses premiers emplois du terme « Société des Nations », dès 1899
@@ -250,9 +252,9 @@
             Bourgeois n’en voulait pas moins la voir armée face aux incertitudes des relations internationales, forte d’une juridiction reconnue par
             les nations civilisées, et pouvant éventuellement prononcer des sanctions à l’encontre des états rebelles au droit.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">L’expérience de la guerre, <lb/>ou comment le conflit apporte sa dernière touche au projet de Société des Nations
+      </div><div n="6" type="part"><head n="0" type="chapter">L’expérience de la guerre, <lb/>ou comment le conflit apporte sa dernière touche au projet de Société des Nations
           <lb/>conçu par Léon Bourgeois</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Léon Bourgeois sur tous les fronts</head>
           <p>
             <hi rend="i">Léon Bourgeois, spectateur du malheur français</hi>. — Dès 1914, Léon Bourgeois, politicien expérimenté, se vit proposer une
@@ -265,7 +267,7 @@
             Léon Bourgeois s’est associé dès le début du conflit à l’intérêt des milieux parlementaires pour les opérations militaires et la bonne
             direction des offensives.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Nationalisme et défense de la patrie</head>
           <p>
             <hi rend="i">Léon Bourgeois président d’une commission interministérielle de droit maritime</hi>. — En ces années de conflit, Léon
@@ -282,7 +284,7 @@
             tout ce qu’il y avait de patriote dans son caractère. Léon Bourgeois s’affirmait pendant cette guerre comme le défenseur des intérêts
             nationaux.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Que faire de l’Allemagne et des nations de proie ?</head>
           <p>
             <hi rend="i">L’Allemagne, archétype des nations de proie</hi>. — Au sortir du conflit, Léon Bourgeois répartissait les nations en deux
@@ -295,8 +297,8 @@
             L’appareil des sanctions devait être, dans la conception de Léon Bourgeois, l’instrument de sa crédibilité et donc de sa pérennité. Il
             devait aussi et surtout protéger la France de la volonté de revanche de l’Allemagne.</p>
         </div>
-      </div><div n="5" type="part"><head n="Cinquième partie">Concevoir concrètement la Société des Nations</head>
-        <div>
+      </div><div n="7" type="part"><head n="0" type="chapter">Concevoir concrètement la Société des Nations</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Léon Bourgeois, président du comité interministériel d’études <lb/>pour la Société des Nations</head>
           <p>
             <hi rend="i">La question de la Société des Nations à partir de 1916 : premiers gestes du gouvernement et premières inquiétudes</hi>. — Les
@@ -319,7 +321,7 @@
             l’arbitrage, la limitation des armements et l’utilité de sanctions efficaces en cas d’agression. Le projet admettait la nécessité de
             former un « Conseil international » et une « Délégation permanente » pour coordonner l’action de la Société des Nations.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Combattre pour une Société des Nations forte et efficace</head>
           <p>
             <hi rend="i">Un climat défavorable</hi>. — Avant même que la Conférence de la paix ne s’ouvre, plusieurs éléments indiquaient que Léon
@@ -336,7 +338,7 @@
             Léon Bourgeois devait se contenter de la constitution d’une Commission permanente consultative chargée de conseiller le Conseil de la
              Société des Nations pour toutes les questions militaires et navales.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Quel avenir pour la Société des Nations ?</head>
           <p>
             <hi rend="i">Un bilan mitigé</hi>.— Léon Bourgeois était satisfait que la Société des Nations voie le jour, il en approuvait les principes
@@ -353,22 +355,19 @@
             reçut le titre de délégué permanent de la France à la Société des Nations. Il fut le premier président du Conseil de la Société des
             Nations.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="8"><head>Conclusion</head>
         <p>Léon Bourgeois n’est pas parvenu à imposer pendant la Conférence de la paix sa vision d’une Société des Nations vigoureuse et armée, issue
           de vingt années de réflexion, d’observation et d’action comme acteur à la fois de la vie nationale et de la conciliation internationale. Il
           avait tenté de marier dans ce nouveau concept la promotion de la solidarité internationale et les impératifs de la sécurité collective. Plus
           de vingt-cinq ans plus tard, la Charte des Nations-Unies répondait à ses attentes, quoique le chapitre VII relatif à l’action en cas de
           menace contre la paix, de rupture de la paix et d’acte d’agression soit encore loin d’être appliqué dans les faits.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="9"><head>Pièces justificatives</head>
         <p>Les pièces justificatives ont été choisies pour éclairer les aspects les plus méconnus de l’activité de Léon Bourgeois et pour illustrer sa
           vision d’une Société des Nations vigoureuse et armée. À noter en particulier le procès-verbal d’une séance de la commission de la Société
           des Nations de Conférence de la paix, comprenant un échange très révélateur entre Léon Bourgeois et Wilson, et un extrait de la Charte des
           Nations-Unies venant à l’appui de notre thèse selon laquelle les idées de Léon Bourgeois ont transpiré dans la Charte de l’ONU.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

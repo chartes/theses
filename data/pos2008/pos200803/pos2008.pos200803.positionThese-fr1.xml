@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Commissaires du quartier du Louvre (1751-1791)</title>
-        <title type="sub">Contribution à une histoire de la praxis policière dans le Paris du second &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les Commissaires du quartier du Louvre (1751-1791)</title><title xml:lang="fr" type="sub">Contribution à une histoire de la praxis policière dans le Paris du second <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Berlière, Justine">Justine Berlière</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200803.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Comme le déplorait Steven Kaplan au début des années 1980, les historiens se sont longtemps désintéressés de la police de l’Ancien Régime.
           On se servait éventuellement des sources policières pour étudier la justice, la criminalité, la société, la ville et ses bouleversements, la
           librairie, le théâtre…, mais on ne s’intéressait pas à ceux qui les produisaient. Seuls les lieutenants généraux de police parisiens –
@@ -73,7 +76,7 @@
           semblé indispensable d’étudier en parallèle l’activité du second commissaire du quartier du Louvre. Trois hommes ont successivement occupé
           cette charge : Louis Cadot, Hubert Mutel, et enfin, Marie-Joseph Chénon, le fils de Pierre.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Parallèlement au fonds « Bastille » de la bibliothèque de l’Arsenal, les archives des commissaires au Châtelet sont conservées dans la
           série Y des Archives nationales. Toutes n’ont pu être analysées. Seules quelques années – correspondant aux changements de lieutenant
           général de police – ont été retenues afin de procéder à des comparaisons statistiques : nombre d’actes, types d’affaires et leur répartition
@@ -84,14 +87,13 @@
           affaires traitées. Malheureusement, les fonds des trois autres commissaires ne sont pas aussi complets et les archives professionnelles du
           commissaire Mutel manquent pour la période qui nous intéresse.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Enquête sur des enquêteurs : quatre commissaires en leur quartier</head>
-        <p>Nos recherches nous permettent de comparer trois familles et quatre parcours de commissaires à la même période. C’est peu, si l’on compare
+          <div n="3" type="part"><head n="0" type="chapter">Enquête sur des enquêteurs : quatre commissaires en leur quartier</head>
+        <p n="1" type="chapter">Nos recherches nous permettent de comparer trois familles et quatre parcours de commissaires à la même période. C’est peu, si l’on compare
           ce chiffre aux quarante-huit commissaires au Châtelet en poste. C’est beaucoup, si l’on prend en compte que, jusqu’à présent, très rares
           avaient été les études consacrées à ces questions. Comment devient-on commissaire ? Pourquoi ? Y a-t-il une « vocation », une volonté
           d’ascension sociale, ou s’agit-il, comme Louis-Sébastien Mercier l’affirmait, d’un « clerc qui balance entre une étude de notaire, de
           procureur, ou une charge d’huissier-priseur » ?</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">Stratégies familiales et réseaux de sociabilités</head>
           <p>L’étude des généalogies inégalement reconstituées des Cadot, Chénon et Mutel fait apparaître nettement les solidarités familiales mises
             en jeu au moment de leur achat d’office. Ces familles sont issues de milieux très différents, et les futurs commissaires n’ont pas les
@@ -111,7 +113,7 @@
             nombreux huissiers. Leur fils, Marie-Joseph Chénon, devient commissaire en 1773. Comme son père, il paraît avoir une « vocation
             policière » et achète très jeune son propre office de commissaire. Le père et le fils continuent d’exercer jusqu’en janvier 1791.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Itinéraires professionnels : formation et carrière</head>
           <p>À quoi ressemblait la carrière d’un commissaire au Châtelet ? Son office était-il prestigieux ? Sans archives personnelles, il est très
             difficile de reconstituer leur formation. Certaines sources nous apportent néanmoins des renseignements, ainsi en va-t-il des commentaires
@@ -127,7 +129,7 @@
             de Pierre Chénon ralentisse – presque mécaniquement – la carrière de son confrère. Seul son fils réussit à collaborer avantageusement avec
             lui.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Soucis pécuniaires d’un commissaire au Châtelet</head>
           <p>Les différences de carrière, de zèle et d’activité, se retrouvent-elles dans les revenus des commissaires ? Ces offices très recherchés
             devaient rapporter des sommes non négligeables à leur détenteur, mais il est difficile aujourd’hui de calculer leurs produits. Les
@@ -139,7 +141,7 @@
           <p>Il n’est guère possible de tirer des conclusions fermes : les revenus varient énormément, selon l’année, le mois et le commissaire ; ce
             sont les scellés après décès qui rapportent le plus, ce qui explique qu’ils soient très convoités.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Le quartier du Louvre, quatrième quartier de police</head>
           <p>Le quartier du Louvre-Saint-Germain-l’Auxerrois a une image ambivalente chez les contemporains comme Restif de la Bretonne. Derrière les
             façades de la rue Saint-Honoré, ses boutiquiers respectables et ses honnêtes bourgeois, se cachent des petites rues où abondent
@@ -149,12 +151,12 @@
             « l’ancien » pour le tirage de la milice en 1743, ou pour la création de « cantons » et d’« arrondissements » à l’occasion de la réforme
             de Turgot en 1776.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Des commissaires et leurs pratiques</head>
-        <p>Que faisait au juste un commissaire au Châtelet ? L’édit de création de la lieutenance de police à Paris, en mars 1667, confirmait la
+      </div><div n="4" type="part"><head n="0" type="chapter">Des commissaires et leurs pratiques</head>
+        <p n="1" type="chapter">Que faisait au juste un commissaire au Châtelet ? L’édit de création de la lieutenance de police à Paris, en mars 1667, confirmait la
           diversité des tâches attribuées à la police, chargée tout à la fois d’« assurer le repos du public et des particuliers, purger la ville de
           ce qui peut causer les désordres, procurer l’abondance et faire vivre chacun selon sa condition et son devoir ». Comment les commissaires
           s’acquittaient-ils de fonctions aussi diverses ? Comment pratiquaient-ils quotidiennement leur métier ?</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre V">Des tâches multiples et diverses</head>
           <p>Les traités des commissaires Delamare et Lemaire, au début et à la fin du xviiie siècle, énumèrent la longue liste de leurs sphères
             d’intervention : religion, mœurs, sûreté, santé publique, approvisionnement, marchés, denrées, voirie, cimetières, sciences et arts,
@@ -171,7 +173,7 @@
             indicatrices. Louis Cadot, lui, reçoit surtout des plaintes. On remarque parmi les affaires traitées par Chénon fils davantage de morts
             violentes que chez ses confrères.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre VI">La pratique quotidienne</head>
           <p>Pour faire face à la multiplicité de ses tâches, un commissaire efficace s’appuie sur un emploi du temps et surtout un hôtel bien
             organisés. La pratique quotidienne repose en premier lieu sur ses clercs. Ceux-ci ne sont pas uniquement des « petites mains » chargées de
@@ -180,7 +182,7 @@
             anonymes, l’étude des archives de Pierre Chénon permet de sortir l’un d’entre eux de l’ombre. Cheirouze, son maître clerc, est une pièce
             maîtresse dans sa réussite professionnelle.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre VII">Derrière le policier, le magistrat ?</head>
           <p>L’écrit tient une place considérable dans la pratique du métier. Un bon magistrat doit savoir faire parler et écouter ses visiteurs,
             qu’ils soient venus volontairement ou non. Certes, les mots sont figés, et la parole filtrée par l’écrit. Mais la lecture de ces sources
@@ -190,7 +192,7 @@
             par exemple souvent utilisé par les femmes séduites et abandonnées. Le commissaire joue pour ainsi dire le rôle d’un médiateur et incarne
             une figure tutélaire dans son quartier.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre VIII">Aire et sphère d’influence des commissaires du Louvre</head>
           <p>Les lieutenants généraux de police, dans un souci d’efficacité et de rationalisation de l’administration, souhaitent que les Parisiens
             se rendent chez le commissaire le plus proche de leur domicile, à savoir un des commissaires de leur quartier. Pourtant, les exceptions
@@ -205,25 +207,25 @@
             aussi au fait que ces quartiers sont en sous-effectif policier par rapport à leur densité. La réputation des magistrats joue aussi pour
             beaucoup, comme le montrent les nombreuses lettres que conservent les Chénon.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Des commissaires dans la machine policière et judiciaire</head>
-        <p>Si les commissaires au Châtelet sont chargés de maintenir le bon ordre dans leur quartier, de recevoir les plaintes des habitants, ce ne
+      </div><div n="5" type="part"><head n="0" type="chapter">Des commissaires dans la machine policière et judiciaire</head>
+        <p n="1" type="chapter">Si les commissaires au Châtelet sont chargés de maintenir le bon ordre dans leur quartier, de recevoir les plaintes des habitants, ce ne
           sont pas là leurs seuls rôles. Procéduriers plutôt qu’enquêteurs, ils sont des rouages d’une machine judiciaire fort complexe et bien rôdée,
           un maillon dans une chaîne. Dans ce cadre, ils agissent au nom du procureur du roi et du lieutenant général.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre IX">Un auxiliaire de la machine judiciaire</head>
           <p>Chargée de la sûreté et de l’ordre publics, du respect et de la bonne application des lois et règlements, la police est liée à la justice
             dont elle constitue en quelque sorte le bras séculier. Pierre Chénon, puis son fils, sont ceux qui procèdent le plus souvent à des
             informations à la requête du procureur du roi au Châtelet. Ils ne font pas cependant preuve d’un grand zèle pour ces missions, préférant
             consacrer leur temps aux affaires criminelles ou à leurs nombreuses spécialités.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre X">Un rouage de la machine policière</head>
           <p>Les Chénon sont en réalité des hommes de confiance du lieutenant général, surtout Sartine puis Lenoir. Leurs relations semblent
             excellentes. Les deux hommes sont régulièrement chargés de missions délicates. En outre, le père et le fils sont, à la fin de l’Ancien
             Régime, des commissaires « spécialisés » dans des questions sensibles : un temps les prêts sur gages, mais surtout la librairie et la
             Bastille pour le père, la mendicité pour le fils.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre XI">Les relations entre commissaires</head>
           <p>Concrètement, à quoi ressemblaient les relations entre les commissaires au Châtelet ? Gardaient-ils jalousement leurs affaires et leurs
             clients ? De véritables solidarités, voire des amitiés, pouvaient-elles naître et se développer au-delà du cercle de la Compagnie et des
@@ -234,7 +236,7 @@
             consécutives comme syndic et comme receveur de leur Compagnie. Les lieutenants généraux de police, quant à eux, s’efforcent de réunir les
             quarante-huit commissaires parisiens autour d’un idéal commun, à savoir le maintien de l’ordre public.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre XII">Les relations avec les autres acteurs de l’ordre public</head>
           <p>Vu leur excellente connaissance du terrain et leurs liens directs avec le lieutenant général de police, les inspecteurs étaient des
             acteurs de première importance, ce sont eux les véritables enquêteurs. La coopération avec un commissaire pouvait être très poussée :
@@ -243,16 +245,14 @@
           <p>La collaboration entre commissaires et Guet fut en revanche parfois très tendue. Chénon fils, par exemple, ne cesse de déplorer le manque
             d’efficacité de ces escouades, s’appliquant à mettre en lumière leur lâcheté en cas de conflit avec la population.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre XIII">L’image de la police, gage de son efficacité ?</head>
           <p>C’est le commissaire du quartier, figure généralement respectée par les habitants, qui, le premier, intervient lors des émotions
             populaires pour tenter de rétablir le calme. Si les Parisiens ont une image positive de Chénon père, ils n’ont que mépris pour les hommes
             du Guet et de la Garde. Les commissaires Cadot et Chénon fils n’ont pas le même entregent que l’« ancien » du quartier, et ne réussissent
             pas aussi bien à s’imposer et à calmer les esprits échauffés.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Un constat s’impose : il n’y a pas « un modèle » de commissaire de police à Paris dans la seconde moitié du XVIII <hi rend="sup">e</hi> siècle. Aucun de nos quatre magistrats n’a le même parcours social et professionnel, la même « vocation », la même activité, les
           mêmes clients, les mêmes informateurs, la même conception du métier, la même manière d’exercer son art, le même talent, les mêmes qualités.
           Ils n’entretiennent pas les mêmes contacts avec leurs administrés, leur hiérarchie, leurs collègues ou les autres officiers de la machine
@@ -260,7 +260,7 @@
           complétant l’un l’autre, à une plus grande efficacité, et ainsi répondre aux demandes du bien commun, l’idéal de cette « bonne police »
           qu’ils partagent avec un Delamare, un Lemaire, un Sartine ou un Lenoir.</p>
       </div>
-              <div type="appendix"><head>Annexes et pièces justificatives</head>
+          <div type="appendix" n="7"><head>Annexes et pièces justificatives</head>
         <p>Reconstitutions généalogiques et extraits d’actes notariés. — Liste des faire-part reçus et conservés par le commissaire Chénon père.
           Tableaux récapitulatifs : carrières, estimations des revenus.</p>
         <p>Le quartier du Louvre vu par ses commissaires : le tirage de la milice (1743) ; les échoppes du quai de l’École (1783) ; le découpage du
@@ -272,7 +272,6 @@
           mendicité dans l’activité de Chénon père et Chénon fils. Liste des personnes « travaillant à la police » citées par les commissaires ;
           tableau des remplacements des commissaires du Louvre par un confrère.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

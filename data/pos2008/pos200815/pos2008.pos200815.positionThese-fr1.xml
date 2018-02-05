@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Cartographier la Louisiane française au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Cartographier la Louisiane française au <num>xviii<hi rend="sup">e</hi></num> siècle</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Dujardin, Justine">Justine Dujardin</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200815.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La cartographie de la Louisiane française, déjà partiellement étudiée dans les historiographies française, canadienne et américaine, est
           abordée au travers d’un fonds encore largement inexploité, déposé en partie à la Bibliothèque nationale de France, celui du Service
           hydrographique de la Marine. Il s’agit de l’ancien Dépôt des cartes, plans et journaux de la Marine, qui a géré une bonne partie de la
@@ -100,7 +103,7 @@
         <p>Est donc privilégiée ici une approche politique du processus d’implantation coloniale et sa matérialisation dans tous les aspects de la
           production et de la vie des cartes, replacées dans leur contexte politique, scientifique et humain.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sont principalement de deux natures, écrites et cartographiques. Les unes et les autres sont très éclatées et réparties dans
           les différents établissements français qui conservent des archives anciennes des colonies.</p>
         <p>C’est l’approche de la source cartographique qui est au centre de l’étude. Le noyau de ce corpus sont les portefeuilles 138 et 138bis
@@ -115,9 +118,8 @@
         <p>Devant leur ampleur, les sources ont été volontairement restreintes ; un travail préliminaire d’identification et d’indexation, notamment
           pour les cartes, a été nécessaire, avant leur traitement pour la rédaction d’une synthèse.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Délimiter le corpus</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Délimiter le corpus</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Délimiter la Louisiane française</head>
           <p>La délimitation du corpus demande la compréhension de l’espace étudié. Or la notion de Louisiane pose problème. Fruit d’une volonté
             politique plus que d’une logique géographique, prise dans les feux de l’ambition coloniale des grandes nations européennes en Amérique du
@@ -153,7 +155,7 @@
             le reste durant une bonne partie de son histoire et de son occupation. Consciemment ou non, en est présentée une image déformée, par les
             écrits et les récits notamment, et non uniquement sur les cartes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Définir le corpus des cartes de la Louisiane française : <lb/>une approche critique et archivistique des sources
             cartographiques</head>
           <p>La carte possède plusieurs niveaux de compréhension, étant déjà par nature une représentation de la réalité et son impact historique et
@@ -195,8 +197,8 @@
 <hi rend="sup">e</hi> siècle. Enfin on a distingué cartes de cabinet, qui sont des travaux de copie ou de synthèse, et cartes faites sur
             le terrain.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Dresser les cartes de la Louisiane française</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Dresser les cartes de la Louisiane française</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les étapes de la fabrication de la carte manuscrite : conventions et originalités</head>
           <p>
             <hi rend="i">Les cartes de la Louisiane française dans le contexte de la production cartographique française et coloniale au <num>xviii<hi rend="sup">e</hi></num> siècle.</hi>— Le corpus, même s’il est forgé par les particularités de l’espace colonial représenté qu’est
@@ -224,7 +226,7 @@
             du fait de leur précision et de l’admiration qu’elles suscitent, les cartes sont des objets de prestige dont la propriété ou la
             transmission ont une portée politique et sociale. La décoration n’échappe pas à ce qui est parfois appelé un « art maritime ».</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Étude toponymique des premières cartes de l’installation française en Louisiane (1698-1702)</head>
           <p>Les toponymes présents sur les cartes de la Louisiane sont un des principaux indices de l’appropriation progressive du territoire
             colonisé par les Français. Outre les rapports de force et les modalités d’occupation du territoire qu’elle traduit de la part des
@@ -249,8 +251,8 @@
             plus commodes ou par des noms pris avec l’usage. La continuité des toponymes français résiste également aux changements de régime et de
             langues. Ainsi, les cartes sont-elles de bons indicateurs du niveau d’implantation d’une colonie sur un territoire.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Cartes et implantation coloniale en Louisiane française (1698-1722)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Cartes et implantation coloniale en Louisiane française (1698-1722)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les premières cartes de la Louisiane française, découverte et installation (1698-1702)</head>
           <p>
             <hi rend="i">Les expéditions de Pierre Lemoyne d’Iberville et la première installation dans la colonie (1698-1702).</hi>— Les années
@@ -272,7 +274,7 @@
 <hi rend="sup">e</hi> siècle. Cette dernière se remarque surtout, sur les différentes cartes, dans le tracé des côtes, pour lesquelles on
             ne disposait que de quelques points de référence aux débuts de la Louisiane.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’impulsion donnée à l’entreprise de colonisation au début du règne de Louis XV : <lb/>cartes, projets, aménagements
             (1716-1722)</head>
           <p>  <hi rend="i">L’île Dauphine et la reprise en main du Conseil de Marine : premières manifestations de l’intérêt accru pour la Louisiane
@@ -299,8 +301,8 @@
             Elle est en cela exemplaire de l’ensemble de la période, où l’on remarque une adéquation importante entre la production cartographique et
             les hauts et les bas de la politique louisianaise.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Hommes et institutions. <lb/>Les cartes au centre des dynamiques individuelles et de groupe</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Hommes et institutions. <lb/>Les cartes au centre des dynamiques individuelles et de groupe</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Approche typologique et dynamique : <lb/>l’hétérogénéité des cartographes à l’image de leur production et leurs
             conditions de travail</head>
           <p>La qualité d’une carte, le choix des éléments représentés, la reprise éventuelle d’autres cartes dépendent des connaissances du
@@ -320,7 +322,7 @@
             trouvent alors au centre de conflits d’intérêts ou d’influences autour de la recherche d’une nouvelle capitale ou du recensement des
             concessions, par exemple.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le Dépôt des cartes, plans et journaux de la Marine et les cartes de la Louisiane française</head>
           <p>Le fonds qui conserve la plupart des cartes de la Louisiane française et une bonne part des cartes des colonies françaises de cette
             période s’avère, à l’examen des archives, tenir une place de plus en plus importante dans le système mis en place par le pouvoir central
@@ -346,9 +348,7 @@
             le <hi rend="i">Neptune américo-septentrional.</hi>
          </p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>La production cartographique de la Louisiane française au <num>xviii</num>
 <hi rend="sup">e</hi> siècle s’inscrit naturellement dans son contexte politique, stratégique, économique et commercial. Elle reflète avec
           beaucoup de justesse les attentes des colons et des hommes de pouvoir, comme la formation d’un territoire en fonction de la conception qu’on
@@ -358,13 +358,12 @@
           développement d’une institution qui prend de plus en plus de place dans le monde de la marine tout au long du <num>xviii</num>
 <hi rend="sup">e</hi> siècle : le Dépôt des cartes, plans et journaux de la Marine.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>Des extraits d’inventaires, des documents d’archive complètent ou élargissent le propos abordé dans le texte, en suivant la structure de
           ce dernier. Ont surtout été édités des extraits des papiers du Dépôt des cartes, plans et journaux de la Marine (1JJ 1, 1JJ 2), encore peu
           exploités et extrêmement riches sur l’histoire de la cartographie au <num>xviii</num>
 <hi rend="sup">e</hi> siècle.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

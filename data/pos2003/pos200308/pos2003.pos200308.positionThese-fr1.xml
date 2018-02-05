@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’apostolat par le livre dans l’Extrême-Orient des missions-étrangères au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle, d’après la correspondance</title>
-        <title type="sub">Livre et mission.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’apostolat par le livre dans l’Extrême-Orient des missions-étrangères au <num>xix<hi rend="sup">e</hi></num> siècle, d’après la correspondance</title><title xml:lang="fr" type="sub">Livre et mission.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Delcourt, Véronique">Véronique Delcourt</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200308.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Méthode d’apostolat missionnaire privilégiée, la diffusion des livres permettait de satisfaire à ces deux exigences de l’évangélisation
           que sont le soin des fidèles et la conversion des païens. La Société des Missions-Etrangères a largement fait usage de ce vecteur de la foi
           au <num>xix<hi rend="sup">e</hi></num>  siècle. Société importante qui envoya quelque 1 400 prêtres en Extrême-Orient pendant cette période, elle
@@ -64,7 +67,7 @@
           d’amont en aval le circuit du livre ­ conception, production, diffusion ­ permet de souligner toutes les facettes et tous les enjeux de ce
           type d’évangélisation.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p><hi rend="i">Les archives missionnaires </hi> — A partir de la seule correspondance, il est possible de retracer les différentes étapes de
           l’apostolat par le livre. Certes, il n’existe pas de sources manuscrites spécifiques à ce sujet au Séminaire des Missions-Etrangères : ni
           coutumier d’imprimerie, ni grand mémoire sur l’œuvre des livres. Il faut se contenter de la correspondance qui donne des renseignements
@@ -97,9 +100,8 @@
           envoyés par les prêtres des Missions-Etrangères ou réalisés sous leur direction ; pour chaque collection de types existe un dossier qui en
           donne un rapide historique.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les missionnaires et leur conception de l’apostolat par le livre</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les missionnaires et leur conception de l’apostolat par le livre</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les missionnaires</head>
           <p><hi rend="i">Les acteurs : les prêtres des Missions-Etrangères et leur esprit apostolique </hi> — La formation apostolique des prêtres
             explique en grande partie les choix qu’ils ont pris. Si les cours suivis aux Missions-Etrangères étaient ceux d’un séminaire diocésain
@@ -126,7 +128,7 @@
             méthodes d’apostolat par le livre : du synode du Se-tchoan en 1803 à la fin du <num>xix<hi rend="sup">e</hi></num>  siècle, les décisions ont été
             mûries et ratifiées par de grandes réunions missionnaires contrôlées par la Propagande.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La place du livre dans l’apostolat</head>
           <p><hi rend="i">Le rôle du livre selon les missionnaires </hi> — L’attention portée au livre résultait de différents facteurs : l’habitude
             de l’utiliser dans les missions, l’importance qui lui a été accordée lors du renouveau catholique en France au <num>xix<hi rend="sup">e</hi></num>
@@ -145,7 +147,7 @@
             relecture et les imprimeurs laïques, mais aussi payer le matériel nécessaire à l’impression. Si la vente des livres pouvait couvrir en
             partie les frais de publication, tous ces frais pesaient lourd sur le budget des missions.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La conception du livre d’apostolat</head>
           <p><hi rend="i">Le choix d’une langue </hi> — Dans la lignée des Maunoir et des Montfort, les missionnaires ont adopté la langue
             vernaculaire comme vecteur de la foi. Ils avaient le choix entre la langue écrite, celle des lettrés, et la langue parlée, celle de
@@ -183,8 +185,8 @@
             fil directeur de la tradition sur les terrains mouvants des rites chinois. Cependant, c’est la position que tenait la Société des
             Missions-Etrangères qui s’est progressivement imposée.</p>
         </div>
-      </div><div n="2" type="part"><head n="Seconde partie">La production des livres</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La production des livres</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Du manuscrit à l’imprimé, la composition et la correction des textes</head>
           <p><hi rend="i">La composition des textes </hi> — La composition de textes était délicate pour les missionnaires du fait que le génie des
             langues orientales n’était pas du tout adapté à l’expression de la pensée occidentale. Les missionnaires ont donc souvent pris le parti de
@@ -208,7 +210,7 @@
             l’objet de corrections soignées : il était indispensable de respecter le génie de la langue et de donner aux fidèles des ouvrages
             agréables à lire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’impression des livres</head>
           <p>Pour publier leurs ouvrages, les missionnaires ont généralement commencé par s’adresser à des imprimeurs extérieurs, puis ils ont mis en
             place des ateliers d’imprimerie dans presque tous les vicariats apostoliques. Le système était beaucoup plus sûr lors des persécutions et,
@@ -245,7 +247,7 @@
             imprimeries en 1894, tandis que les protestants en recensaient dix en 1895. La comparaison des chiffres illustre que l’œuvre des livres
             était aussi importante chez les premiers que chez les seconds.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La diffusion</head>
           <p><hi rend="i">La diffusion des textes chrétiens </hi> — Une fois les textes imprimés, il fallait les faire connaître. Certains prêtres se
             plaignaient d’ignorer les nouveaux travaux publiés. Pour y remédier, des circulaires ou un journal imprimé informaient le vicariat des
@@ -276,8 +278,8 @@
             Occident. En revanche, il existait des bibliothèques de livres chrétiens chinois, mais il n’existe pas de documents sur leur mode
             d’organisation.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les livres produits et leur utilisation</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les livres produits et leur utilisation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Invention de la source</head>
           <p><hi rend="i">Problèmes de méthode </hi> — Pour étudier les ouvrages utilisés par les Missions-Etrangères ­ et non seulement écrits ou
             imprimés ­, il faut se reporter à deux types de sources. D’une part, les bibliographies. Dans son Mémorial, dictionnaire
@@ -310,7 +312,7 @@
             avérée mais ne se suffit pas à elle-même. On constate que les missionnaires recherchaient positivement les ouvrages anciens, non seulement
             pour leur valeur intrinsèque, mais en raison de leur ancienneté : pour eux comme pour Rome, la tradition était un critère de valeur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Typologie des ouvrages</head>
           <p><hi rend="i">Les ouvrages de doctrine </hi> — Du catéchisme à la <hi rend="i">Vie de Jésus</hi>, les missionnaires ont diffusé un
             ensemble de textes doctrinaux assez diversifié. La transposition des ouvrages occidentaux leur était facile car les missions d’Orient
@@ -347,7 +349,7 @@
             employés montre que le modèle occidental a été transféré en grande partie en Asie. Cependant, les missionnaires y ont ajouté une empreinte
             typiquement orientale ; il serait très intéressant de se reporter à l’étude des textes eu-mêmes pour affiner ce constat.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’utilisation des livres</head>
           <p><hi rend="i">Les chrétiens : quelle place faisaient-ils au livre dans la vie chrétienne ? </hi> — Le livre étati employé dans les écoles
             chrétiennes, lors de la catéchisation des adultes et lors des assemblées chrétiennes. Il était dons le support obligé de la vie
@@ -383,9 +385,7 @@
             culture chinoise et que les missionnaires ont reprise à leur compte. Ce mode de lecture donne la mesure de l’imprégnation que le
             christianisme a pu avoir par le biais des livres.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Pour résumer l’œuvre d’évangélisation par le livre des Missions-étrangères, il n’est qu’à prendre comme référence la grande entreprise de
           traduction de la bulle <hi rend="i">Ineffabilis</hi> dans toutes les langues de la terre. Elle met en valeur la modernité du XIX <hi rend="sup">e</hi>  siècle en matière de linguistique et d’imprimerie et montre que, contrairement à ce qu’avance l’historiographie
           traditionnelle, l’évangélisation a été très active à cette époque. Les grandes imprimeries, les décisions en matière de livre et
@@ -401,13 +401,12 @@
           alors que l’on ne comptait que quelque 50 000 chrétiens au début du <num>xix<hi rend="sup">e</hi></num>  siècle, leur nombre avait décuplé à la fin du
           siècle. On ne peut nier que les méthodes d’apostolat par le livre y aient contribué pour une part importante.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Dictionnaire biographique des vicaires et préfets apostoliques des Missions-Etrangères ayant joué un rôle dans l’apostolat par le livre au
           <num>xix<hi rend="sup">e</hi></num>  siècle. ­ Réponses faites au questionnaire de 1869 par les vicaires apostoliques d’Extrême-Orient au XIX <hi rend="sup">e</hi>  siècle. ­ Tableau des catégories d’ouvrages communs à l’Extrême-Orient au <num>xix<hi rend="sup">e</hi></num>  siècle. ­ Jalons
           de l’histoire des imprimeries des Missions-Etrangères au <num>xix<hi rend="sup">e</hi></num>  siècle. ­ Liste de quelques bibliothèques occidentales
           conservant des livres imprimés par les Missions-Etrangères.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

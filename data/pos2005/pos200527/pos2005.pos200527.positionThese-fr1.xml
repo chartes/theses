@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Missionnaires et chrétientés en Chine dans la deuxième moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle.</title>
-        <title type="sub">L’exemple de la mission du Sichuan (1746-1769)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Missionnaires et chrétientés en Chine dans la deuxième moitié du <num>xviii<hi rend="sup">e</hi></num> siècle.</title><title xml:lang="fr" type="sub">L’exemple de la mission du Sichuan (1746-1769)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Weber, Anne">Anne Weber</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200527.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Un sujet sur la mission du Sichuan de 1746 à 1769 n’est pas aussi limité dans le temps et dans l’espace qu’il n’y paraît de prime abord. Il
           permet de s’intéresser aux rapports de la Chine avec la France, aux rivalités entre missionnaires, et à l’histoire de l’empire de Qianlong.
           Il permet aussi de sortir des sentiers battus d’une historiographie missionnaire principalement axée sur les jésuites, pour étudier un
@@ -63,7 +66,7 @@
           depuis les véritables débuts de la mission, dans les toutes premières années du <num>xviii<hi rend="sup">e</hi></num> siècle. Malgré les persécutions
           et les difficultés, tout au long de la période 1746-1769, les missionnaires réussirent à maintenir cette mission.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La source principale de cette étude est le <hi rend="i">Journal d’André Li</hi>, conservé aux Archives des Missions étrangères de Paris.
           Ecrit en latin, ce document couvre la période 1747-1764. Il retrace tous les faits concernant l’apostolat des missionnaires, les conditions
           de leur existence ainsi que la vie religieuse des chrétiens du Sichuan et les persécutions dont ils furent victimes. Bien plus, il donne
@@ -75,9 +78,8 @@
           variés que ceux du <hi rend="i">Journal d’André Li</hi>. Elles sont elles aussi conservées aux Archives de la Société des Missions
           étrangères de Paris, dans les volumes 433 à 437.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Dans la Chine des Qing, naissance de la mission du Sichuan</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Dans la Chine des Qing, naissance de la mission du Sichuan</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La découverte et l’apprentissage par le missionnaire de la Chine impériale et du Sichuan au milieu du XVIII <hi rend="sup">e</hi> siècle</head>
           <p>
             <hi rend="i">Un empereur lointain en un empire toujours plus vaste</hi>. – Le règne de l’empereur Qianlong (1735-1796), considéré comme
@@ -103,7 +105,7 @@
             quotidienne assez rude. Sillonnant des routes difficiles de chrétienté en chrétienté, ils séjournaient peu souvent dans la principale
             demeure de la mission, située à Chengdu, capitale de la province.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Constitution de la mission du Sichuan</head>
           <p>
             <hi rend="i">Congrégations et nations en Chine aux XVII</hi>
@@ -147,8 +149,8 @@
             à leurs dispositions sur les rites, montre combien le problème, officiellement résolu depuis 1742, continuait à faire polémique dans les
             missions de Chine.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les conditions d’existence de la mission</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les conditions d’existence de la mission</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le pouvoir contre les chrétiens : l’exemple du Sichuan</head>
           <p>
             <hi rend="i">Les acteurs et leurs motivations</hi>. – La persécution fut décrétée en 1724 puis renouvelée. Au Sichuan, comme dans les
@@ -170,7 +172,7 @@
             compréhensible quoique coupable, et qu’une trop grande sévérité risquait de les décourager de revenir dans le giron de l’Eglise. Par
             ailleurs, les missionnaires tinrent compte de la menace des persécutions pour organiser leurs conditions d’existence.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le fonctionnement de la mission du Sichuan : les hommes</head>
           <p>
             <hi rend="i">Les cadres de la mission</hi>. – Les cadres de la mission dépassaient les limites même de la province. La
@@ -195,7 +197,7 @@
             de missionnaires débordés de travail. Cependant, ces auxiliaires étaient eux aussi trop peu nombreux et, qui plus est, parfois de
             médiocres enseignants, mal préparés à leur fonction.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Organisation matérielle de la mission</head>
           <p>
             <hi rend="i">Des difficultés structurelles difficilement surmontables</hi>. – Les 6 à 8 000 chrétiens de la province ne représentaient
@@ -221,8 +223,8 @@
             cimetière. Au Sichuan, les édifices de culte, peu nombreux, remplissaient souvent plusieurs fonctions pour mieux se dissimuler aux yeux
             des autorités. Le cimetière constituait au contraire un élément visible de la présence chrétienne dans le paysage de la province.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Apostolat et vie des chrétientés</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Apostolat et vie des chrétientés</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le missionnaire à la rencontre des chrétiens du Sichuan</head>
           <p>
             <hi rend="i">La communauté chrétienne du Sichuan</hi>. – Quand on survole le <hi rend="i">Journal d’André Li</hi> et, dans une moindre
@@ -247,7 +249,7 @@
             remaniaient sans cesse pour les adapter à ceux qui en recevraient l’enseignement. Ils en complétaient l’action en distribuant des images
             pieuses, qui avaient parfois une valeur pédagogique plus directe.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Vie religieuse de la communauté chrétienne du Sichuan</head>
           <p>
             <hi rend="i">Temps forts de la vie religieuse des chrétiens du Sichuan</hi>. – Dans une vaste province, évangélisée par des missionnaires
@@ -265,7 +267,7 @@
             revêtaient une grande importance aux yeux des missionnaires. Par ailleurs, ces événements renforçaient chez les chrétiens le sentiment de
             former une communauté.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Résultats de l’apostolat des missionnaires</head>
           <p>
             <hi rend="i">Statistiques</hi>. – Le travail fastidieux de la collecte des statistiques dans les différents documents concernant la
@@ -288,19 +290,16 @@
             superstitieux. Ces tiraillements entre tradition chinoise et pratique de la religion chrétienne montrent les difficultés que rencontrait,
             au Sichuan, un catholicisme sur la voie de l’acculturation mais animé par une véritable dynamique.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>A juste titre, l’histoire a retenu les noms de missionnaires français comme François Pottier. C’est à non moins juste titre qu’elle devrait
           retenir ceux des prêtres autochtones du Sichuan, au premier rang desquels figure André Li, dont l’action fut vitale pour la mission. Les
           années 1757-1758, avec l’arrivée de nouveaux missionnaires, marquèrent un tournant dans l’histoire des chrétientés du Sichuan. Entravée dans
           son essor par l’hostilité du milieu, la mission du Sichuan a survécu en s’adaptant aux conditions que lui imposait la société chinoise,
           donnant naissance à un catholicisme original à bien des égards.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Lettres de missionnaires. – Édition et traduction d’extraits du <hi rend="i">Journal d’André Li</hi>.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

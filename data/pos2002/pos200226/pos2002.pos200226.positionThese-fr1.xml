@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les chasses impériales de Napoléon III</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les chasses impériales de Napoléon III</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Peoc’h, Géraldine">Géraldine Peoc’h</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200226.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La chasse connut une démocratisation considérable au <num>xix<hi rend="sup">e</hi></num> siècle, tout en subsistant sous la forme d’une pratique
           propre aux souverains. Peut-être occultées par la grande tradition des chasses royales de l’Ancien Régime, leurs héritières du XIX <hi rend="sup">e</hi> siècle n’ont pourtant jusqu’à présent donné lieu à aucune étude, alors que cette transposition même d’un symbole
           régalien donne à réfléchir, en particulier dans le cadre d’un empire, comme ce fut le cas pour celui de Napoléon III. Une telle étude se
@@ -58,14 +61,13 @@
           donner, mais aussi sur leur organisation cynégétique, sans oublier un aspect souvent négligé, à savoir leur relation avec l’environnement.
        </p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Ce travail s’appuie principalement sur les archives de la Maison de l’Empereur du Second Empire, dont celles du service du Grand Veneur,
           conservées aux Archives nationales (série O/5), ainsi que sur de nombreux ouvrages de l’époque consacrés entre autres choses à la cour, aux
           forêts et aux chasses.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les fondements des chasses impériales</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les fondements des chasses impériales</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’empereur et ses chasses</head>
           <p>A chacune des étapes qui le conduisirent à l’Empire, Louis-Napoléon eut ses chasses. On peut légitimement s’interroger sur les raisons
             qui le poussèrent à les instaurer, alors même qu’il n’entretenait pas une passion démesurée pour cette activité. De fait, ses motivations
@@ -83,7 +85,7 @@
             l’étranger une image relativement positive, en dépit de certaines critiques le plus souvent injustifiées et dues particulièrement aux
             opposants du régime et aux chasseurs les plus attachés à la tradition.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Organisation administrative et budgétaire des chasses imperiales</head>
           <p>Les chasses impériales ne furent pas une création <hi rend="i">ex nihilo</hi>, pas plus dans leur principe que dans leur organisation.
             Celle-ci se structura par étapes, parallèlement au renforcement du pouvoir de Louis-Napoléon, pour aboutir à la restauration d’un service
@@ -103,8 +105,8 @@
             puisque les dépenses relatives aux chasses impériales qui relevaient d’autres services que celui du Grand Veneur étaient bien souvent
             englobées dans des dépenses d’autres natures.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les caractéristiques cynégétiques des chasses impériales</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les caractéristiques cynégétiques des chasses impériales</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les chasses impériales dans leur diversité</head>
           <p>Sous le terme générique de chasses impériales se cachent en réalité plusieurs types de pratiques cynégétiques, principalement chasse à
             courre et chasse à tir ; chacune présente des caractéristiques propres, qu’il s’agisse du gibier, des modalités de la chasse ou du
@@ -123,7 +125,7 @@
             pratiquaient en forêt ; les chasses de la Saint-Hubert qui se déroulaient une fois l’an en l’honneur du saint patron des chasseurs ou
             diverses chasses occasionnelles.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Chiens et chevaux, auxiliaires du veneur</head>
           <p>L’entretien des chiens, de meute ou courants, et des chevaux tenait une grande place dans l’activité du service de la Vénerie impériale.
             Un personnel spécialisé avait la charge du chenil et de l’écurie, composés en majeure partie d’animaux achetés en Angleterre du fait de
@@ -132,8 +134,8 @@
             sûr de ne pas déprécier un investissement, ni de dégrader un outil de travail, mais il ne faudrait pas sous-estimer le véritable
             attachement qui liait les hommes à leurs compagnons de tous les jours.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les chasses impériales et l’environnement</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les chasses impériales et l’environnement</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Chasse et gibier</head>
           <p>Les pratiques de la chasse dans leur diversité se traduisent par un réel impact de l’homme sur l’environnement, sur le gibier en
             particulier. En effet, pas de chasse sans gibier ; selon ses besoins, variables selon les modalités des différentes chasses, l’homme a
@@ -149,7 +151,7 @@
             appelés faisanderies. <lb/>Les besoins des chasses impériales tendirent donc à renforcer le passage d’une chasse par prélèvement à une
             chasse impliquant une gestion prévisionnelle du gibier.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La gestion du gibier : repeuplement, protection et prélèvements</head>
           <p>Comme cela s’était déjà produit avec les révolutions antérieures, celle de 1848 n’épargna pas les forêts, ni le gibier. Le
             rétablissement des chasses impériales nécessitait certes de restaurer une administration et un équipage, mais avant tout peut-être des
@@ -162,7 +164,7 @@
             destruction des nuisibles, il était nécessaire de prévoir un peuplement permanent. C’est ce qui explique le rôle fondamental des
             faisanderies, auxquelles on s’employa à rendre leur grandeur de la Restauration et dont on améliorera le fonctionnement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’impact des chasses sur le paysage</head>
           <p>La chasse en règle générale, et plus encore dans le cadre impérial, ne se limitait pas à une intervention concernant le gibier. Elle
             avait un impact indirect sur le milieu naturel : en effet, le gibier contribuait à dégrader le couvert végétal et sa régénération, en
@@ -178,9 +180,7 @@
             faisanderies et l’implantation des tirés, avec l’aménagement d’allées, le long desquelles progressaient les tireurs, et de remises boisées
             maintenues à un mètre de hauteur environ.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Au même titre que Napoléon III, les chasses impériales ont été victimes d’une certaine légende noire, qui n’était pas étrangère à
           l’identité de leur instigateur. Mais cette mauvaise image est finalement à relativiser à plus d’un titre. En effet, si les chasses ont pu
           servir d’argument aux opposants du régime pour dénigrer l’Empereur, elles ont par ailleurs rempli leur rôle d’instrument de communication au
@@ -193,10 +193,9 @@
           vénerie une publicité et un éclat qui ont conforté le renouveau de cette pratique et l’équipage impérial, en réunissant ce qui se faisait de
           mieux chez les veneurs de l’époque, a contribué à perpétuer les traditions de cet art séculaire.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Règlement du service du Grand Veneur. ­ Budgets des faisanderies. ­ Dossier iconographique.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’homme et l’environnement dans le Marais poitevin (seconde moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvi&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle- début du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xx&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’homme et l’environnement dans le Marais poitevin (seconde moitié du <num>xvi<hi rend="sup">e</hi></num> siècle- début du <num>xx<hi rend="sup">e</hi></num> siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Suire, Yannis">Yannis Suire</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200230.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction, sources et méthodologie</head>
+          <div type="introduction" n="1"><head>Introduction, sources et méthodologie</head>
         <p>L’histoire de l’environnement, c’est-à-dire des relations entre l’homme et son milieu naturel, est une branche assez neuve de
           l’historiographie. Riche par son approche interdisciplinaire, empruntant à l’histoire sociale, économique, culturelle, politique mais aussi
           à la géographie, à la biologie et à l’ethnologie, elle innove aussi par son emprise sur la longue durée. Elle a cependant tendance à oublier
@@ -63,10 +66,9 @@
           telle approche permet de confirmer le fait que l’histoire de l’environnement est proche de l’histoire dite “ totale ” vers laquelle tend
           l’historiographie.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La seconde ère des dessèchements : deuxième moitié du <num>xvi<hi rend="sup">e</hi></num> siècle ­ fin du XVII <hi rend="sup">e</hi> siècle</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">La seconde ère des dessèchements : deuxième moitié du <num>xvi<hi rend="sup">e</hi></num> siècle ­ fin du XVII <hi rend="sup">e</hi> siècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les marais avant les dessèchements : une vie en équilibre avec la nature</head>
           <p>Le Marais poitevin dans la deuxième moitié du <num>xvi<hi rend="sup">e</hi></num> siècle apparaît bien vite comme un espace porteur de nombreux
             atouts, alliant tradition et promesses de développement. D’un côté, les Maraîchins vivent certes modestement dans un milieu hostile formé
@@ -78,7 +80,7 @@
             terres basses, avec des techniques de dessèchement mises en œuvre de façon individuelle. Elevage, coupe du bois, commerce sont donc actifs
             dès avant les dessèchements modernes. Les Maraîchins savent déjà contourner les dangers des éléments naturels pour en tirer parti.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’intrusion des sociétés de dessèchement à partir de la fin du <num>xvi<hi rend="sup">e</hi></num> siècle</head>
           <p>Fort de ses atouts, le Marais poitevin suscite très tôt de nouvelles motivations chez les investisseurs désireux de prendre le relais des
             dessiccateurs médiévaux. Le pouvoir royal voit son intérêt économique et fiscal dans cette seconde ère des dessèchements, et est poussé
@@ -91,7 +93,7 @@
             Un processus réfléchi se développe alors, des accords avec les propriétaires d’origine et de la rédaction de statuts, au creusement des
             canaux et aux partages finaux entre associés.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les débuts chaotiques des dessèchements dans la seconde moitié du <num>xvii<hi rend="sup">e</hi></num> siècle</head>
           <p>Cette mise en place raisonnée n’évite pas de nombreux écueils techniques, financiers et juridiques. Dès les premières années des travaux,
             les inondations continuelles, parfois amplifiées par les effets pervers de l’entreprise, forcent les dessiccateurs à retarder leurs
@@ -103,9 +105,9 @@
             eux-mêmes. Certaines faillites retentissantes se produisent, les clans se disputent la direction des sociétés qui évitent de peu la
             banqueroute grâce à l’action de personnes charismatiques comme le duc de Roannez.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La nouvelle vie des marais, entre nouvelles conquêtes et crises <lb/>(Deuxième moitié du <num>xvii<hi rend="sup">e</hi></num>
+      </div><div n="3" type="part"><head n="0" type="chapter">La nouvelle vie des marais, entre nouvelles conquêtes et crises <lb/>(Deuxième moitié du <num>xvii<hi rend="sup">e</hi></num>
           siècle ­ fin du <num>xviii<hi rend="sup">e</hi></num> siècle)</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les nouvelles conditions environnementales</head>
           <p>En dépit des difficultés rencontrées par les dessiccateurs du <num>xvii<hi rend="sup">e</hi></num> siècle, leur œuvre marque fondamentalement la
             physionomie du Marais. La répartition des paysages est modelée par les nouveaux dessèchements qui distinguent désormais terres hautes,
@@ -116,7 +118,7 @@
             difficultés de circulation terrestre. Les sociétés créées au <num>xvii<hi rend="sup">e</hi></num> siècle préfèrent donc rester sur leurs acquis
             fragiles mais réels et qui font leur puissance.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les tentatives d’amélioration des dessèchements au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>Encouragés par les succès, malgré tout, de leurs prédécesseurs, par le sursaut scientifique et philanthropique des Lumières, et à
             nouveau par l’Etat, d’autres investisseurs créent alors de nouvelles sociétés pour agir là où les premières ont échoué. Notables
@@ -128,7 +130,7 @@
             Cette concurrence est illustrée par quelques grandes affaires comme le projet de canal entre Niort et La Rochelle ou l’entretien du
             Contrebot de Vix. Comme avant, les échecs alimentent la psychose et les conflits.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un développement étroitement lié aux conditions naturelles</head>
           <p>Cet équilibre entre succès et échecs des dessèchements des <num>xvii<hi rend="sup">e</hi></num> et <num>xviii<hi rend="sup">e</hi></num> siècles se traduit
             par un développement économique, social et culturel réel à condition que ses acteurs n’oublient jamais le contexte environnemental. Ce
@@ -141,9 +143,9 @@
             particularisme culturel et spirituel des Maraîchins, et définit leur répartition en catégories socio-géographiques, notion essentielle en
             histoire de l’environnement.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Succès et échecs de la troisième ère des dessèchements <lb/>(Fin du <num>xviii<hi rend="sup">e</hi></num> siècle ­ début du
+      </div><div n="4" type="part"><head n="0" type="chapter">Succès et échecs de la troisième ère des dessèchements <lb/>(Fin du <num>xviii<hi rend="sup">e</hi></num> siècle ­ début du
           <num>xx<hi rend="sup">e</hi></num> siècle)</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les marais de 1789 à 1815 : quels changements</head>
           <p>La spécificité des habitants du Marais poitevin s’illustre particulièrement pendant la Révolution, dans le contexte des guerres de Vendée
             voisines. Les Maraîchins confirment leur différence de comportement social, religieux et politique. Mais la Révolution et l’Empire
@@ -154,7 +156,7 @@
             notables urbains et ruraux de la région. Surtout la Révolution et l’Empire offrent un nouveau cadre législatif aux dessèchements. L’Etat
             passe alors du simple encouragement au contrôle étroit des sociétés, et fixe les lignes directrices des travaux à venir.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La relance des travaux au <num>xix<hi rend="sup">e</hi></num> siècle</head>
           <p>S’appuyant sur ce nouveau contexte, la troisième ère des dessèchements commence véritablement sous la Restauration et surtout la
             monarchie de Juillet, le Second Empire n’apparaissant que comme une continuité. Après 1815, de nouvelles conditions favorables permettent
@@ -166,7 +168,7 @@
             porte enfin sur les conditions de circulation, sur les voies terrestres comme pour la navigation. Il se poursuit sans relâche jusqu’à la
             veille de la Grande Guerre.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les conséquences directes des travaux du <num>xix<hi rend="sup">e</hi></num> siècle : <lb/>entre succès et échecs</head>
           <p>L’impact de cette troisième ère des dessèchements est de deux ordres, avec à chaque fois un bilan contrasté. Les premiers effets des
             travaux sont directement visibles dans les marais. Ils concernent d’abord les conditions naturelles : les travaux dans les marais mouillés
@@ -178,7 +180,7 @@
             relations sociales et institutionnelles dans les marais, et relancent des conflits parfois vieux de deux siècles. La méfiance des sociétés
             et des Maraîchins envers l’Etat et ses ingénieurs accentue ces querelles soulevées par la peur des inondations.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La vie économique, sociale et quotidienne des marais au <num>xix<hi rend="sup">e</hi></num> siècle</head>
           <p>Un tel contraste se retrouve dans les conséquences plus diffuses et à plus long terme sur les activités humaines dans les marais. D’un
             côté, les conditions foncières, économiques et sociales sont transformées. Le mouvement de mutation des propriétés est désormais bien
@@ -190,9 +192,7 @@
             pourtant à la veille de la Grande Guerre : venue de l’extérieur avec la fin relative de l’isolement, la modernité commence à atténuer ces
             particularismes matériels et culturels, sans jamais toutefois les annihiler puisque la nature les rappelle régulièrement.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Les phases successives des dessèchements modèlent ainsi en profondeur le Marais poitevin, selon un système encore largement en place
           aujourd’hui. Cette empreinte de l’homme se manifeste aussi bien par ses échecs que par ses succès. Le bilan de ces trois siècles
           d’intervention dans un tel milieu est donc très contrasté, entre les transformations des conditions paysagères, économiques et foncières et
@@ -204,12 +204,11 @@
           ces sources montre aussi que, interdisciplinaire et inscrite dans la longue durée, l’histoire des relations entre l’homme et le milieu des
           marais est une branche à part entière de l’histoire de l’environnement.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="6"><head>Pièces justificatives</head>
         <p>Les huit pièces justificatives ont été choisies de façon à illustrer équitablement chaque partie de l’étude et à aborder tous ses enjeux :
           elles comprennent des documents relatifs à la vie des marais avant les dessèchements, à la formation et au fonctionnement des sociétés, aux
           structures d’exploitation des marais et à la vie quotidienne des Maraîchins.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

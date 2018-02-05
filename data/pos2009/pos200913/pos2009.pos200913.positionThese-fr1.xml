@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La pratique de l’épigraphie dans l’ordre de Cluny (909-1300)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La pratique de l’épigraphie dans l’ordre de Cluny (909-1300)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Fogielman-Curley, Charles-Antoine">Charles-Antoine Fogielman-Curley</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200913.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les recherches épigraphiques, quelles qu’elles soient, sont en grande partie tributaires des corpus publiés ; jusqu’ici, le souci
           d’exhaustivité a surtout poussé les chercheurs à constituer des corpus géographiques, visant à recenser l’intégralité des inscriptions d’une
           période donnée dans un cadre donné. L’ambition de cette thèse est au contraire de recenser l’ensemble des témoignages subsistant, à
@@ -71,22 +74,21 @@
           de nouvelles maisons au sein de l’ordre. Un point important dans cette étude a été la comparaison des pratiques scripturaires dans le
           domaine des inscriptions et dans celui du livre manuscrit.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources de cette thèse comprennent d’une part les divers corpus, recueils et articles contenant des éditions d’inscriptions
           clunisiennes antérieures à 1300, et d’autre part les relevés, effectués sur place, d’inscriptions inédites. D’autre part, dans l’optique de
           l’étude comparée des écritures lapidaires et manuscrites, les manuscrits du fonds de Cluny de la Bibliothèque nationale de France ont été
           mis à contribution.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Archéologie des inscriptions</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Archéologie des inscriptions</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Typologie des inscriptions</head>
           <p>Avant de définir les caractéristiques externes des inscriptions conservées du domaine clunisien, il est nécessaire de tenter une
             typologie des différentes inscriptions dont nous conservons le texte. Ont donc été distinguées les épitaphes d’abord, consacrées aux
             défunts prestigieux ou aux bienfaiteurs de l’ordre, dignes en tout cas de voir leur <hi rend="i">memoria</hi> honorée, des inscriptions
             commémoratives de divers événements ensuite, et enfin des légendes de peintures murales ou de chapiteaux historiés.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Rôle de l’inscription dans l’espace monastique</head>
           <p>L’inscription médiévale n’est pas à étudier comme objet isolé, voire comme un texte dépourvu de matérialité ; elle ne peut se comprendre
             entièrement que dans le contexte où elle a été placée pour être lue et comprise, et souvent sa signification s’éclaire lorsque l’on
@@ -94,7 +96,7 @@
             cadre généralement bien conservé d’un bâtiment ecclésial, une étude de l’archéologie des inscriptions est un passage obligé de notre
             analyse.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le texte des inscriptions</head>
           <p>Le texte des inscriptions fournit un aperçu d’un domaine de l’écrit que les textes manuscrits ne permettent pas de connaître ; dans le
             meilleur des cas, celui des épitaphes, il nous permet de percevoir le quotidien de petites gens dont nous n’aurions pas connaissance à
@@ -103,15 +105,15 @@
             étaient, au début de la période étudiée, aussi bien l’un que l’autre exclusivement l’apanage des moines, à l’exclusion de tout autre
             élément de la société.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Paléographie des écritures d’apparat</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Paléographie des écritures d’apparat</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Historique de l’étude comparée des écritures</head>
           <p>La possibilité d’une étude comparative des pratiques livresques et lapidaires a fait l’objet d’un colloque en 1997, mais, jusqu’à
             présent, d’aucune monographie. L’idée de comparer écritures livresques ou documentaires et écritures épigraphiques n’est pourtant pas
             entièrement nouvelle, puisqu’elle a déjà été évoquée dans le cadre notamment de recherches sur le haut Moyen Âge, en particulier sur
             l’Italie lombarde, et, avec moins de travaux publiés mais des articles de grande qualité, sur l’Irlande et les îles avoisinantes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Caractéristiques globales</head>
           <p>Au cours de l’histoire de l’écrit depuis les papyrus antiques écrits exclusivement dans un seul type de lettre, d’un seul module et sans
             espace, jusqu’aux éditions modernes qui multiplient les distinctions de police, de couleurs et de taille de lettres entre les titres, le
@@ -122,22 +124,22 @@
             manuscrit, imitent surtout les lettres employées dans les titres et rubriques, destinées à attirer l’attention, puisque tel est justement
             le but fondamental de toute inscription.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Analyse individuelle des lettres</head>
           <p>Après les remarques portant sur les critères et les modes d’analyse qui permettent d’étudier l’aspect général de l’écriture du corpus
             livresque sélectionné, les lettres ont été envisagées dans leur individualité, faisant chacune l’objet d’une analyse morphologique tant
             synchronique que diachronique ; les traits discernés dans chaque cas ont été mis en rapport avec la contrepartie lapidaire de chaque
             individu.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Paléographie des écritures lapidaires</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Paléographie des écritures lapidaires</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’inscription considérée globalement</head>
           <p>L’inscription est à tous les sens du terme un monument ; elle est conçue pour avertir le passant du nom du défunt dont il
             foule la tombe, de la signification de la scène qu’il contemple, du caractère sacré des lieux où il se trouve. Elle se doit donc de
             frapper d’abord le regard, avant même que l’on ait pu la déchiffrer et comprendre son sens exact. Ainsi, dans une certaine mesure, le
             lettré comme l’illettré peuvent en profiter : la seule présence d’un texte écrit suffit à avertir et inviter à la componction exigée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le style des lettres lapidaires : un conservatisme systématique ?</head>
           <p>Les inscriptions, mode d’expression prestigieux, se doivent d’imiter des types d’écriture prestigieux. Dans ce but, on a largement eu
             recours à des écritures de prestige telles que l’onciale, considérée à juste titre comme antiquisante puisque elle est utilisée dans les
@@ -157,9 +159,7 @@
 <hi rend="sup">e</hi>- <num>xiii</num>
 <hi rend="sup">e</hi> siècles.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’ordre de Cluny a été un centre culturel de premier plan depuis sa fondation jusqu’à la fin du Moyen Âge central. Pour cette raison et à
           cause du grand nombre d’établissements rattachés à sa mouvance, la production épigraphique de l’ordre de Cluny ne pouvait qu’être d’une
           ampleur et d’une variété exceptionnelles, et les efforts investis dans cette production furent considérable. En effet, ce domaine
@@ -168,11 +168,10 @@
           au long du Moyen Âge central. D’autre part, Cluny est à la tête d’un ordre où le culte des morts prend une place prépondérante, et
           l’épitaphe des défunts, préservant leur <hi rend="i">memoria</hi>, a un rôle essentiel à jouer dans le cadre de ce culte.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Corpus des inscriptions clunisiennes d’Europe, Italie exclue, antérieures à 1300. — Échantillon de relevés de lettres d’apparat tirées des
           manuscrits du fonds de Cluny de la Bibliothèque nationale de France.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

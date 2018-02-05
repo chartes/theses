@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">De l’agent seigneurial au fonctionnaire</title>
-        <title type="sub">Notaires, notariat et société en bas-Dauphiné (1770-1820)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">De l’agent seigneurial au fonctionnaire</title><title xml:lang="fr" type="sub">Notaires, notariat et société en bas-Dauphiné (1770-1820)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Falconet, François">François Falconet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200911.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les archives notariales ont depuis longtemps conquis leurs lettres de noblesse en tant que source privilégiée dans de nombreux travaux
           historiques. Cette étude est en quelque sorte une tentative d’intégration des trois composantes successivement redécouvertes et à la base de
           l’histoire notariale : les notaires en tant que groupe défini dans le cadre de leur organisation corporative, les actes notariés, et enfin
@@ -76,7 +79,7 @@
           manière globale les changements intervenus, à la fois du fait des différents gouvernements révolutionnaires, mais aussi après le retour des
           souverains dont la Révolution avait justement renversé le régime et détruit la société.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Un éventail large de sources a pu être exploité, ces dernières différant tant par leur nature que par leur localisation. Les trois grands
           axes de recherche ont dans l’ensemble chacun fait appel à de grandes catégories. C’est aux Archives nationales qu’ont été retrouvées les
           lettres de provision d’offices, les dossiers de nomination, ou encore la correspondance entre les instances locales et le ministère de la
@@ -87,9 +90,8 @@
           événements de l’époque, ainsi que des sources, témoignages et autres procès-verbaux édités ou conservés notamment à la bibliothèque
           municipale de Grenoble.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre liminaire">La terre, les cadres institutionnels et les hommes</head>
-        <p>Au sein d’une province aux caractères composites comme le Dauphiné, la partie orientale du Viennois où résident les notaires étudiés
+          <div n="3" type="part"><head n="0" type="chapter">La terre, les cadres institutionnels et les hommes</head>
+        <p n="1" type="chapter">Au sein d’une province aux caractères composites comme le Dauphiné, la partie orientale du Viennois où résident les notaires étudiés
           présente une relative unité. Le climat y est plutôt continental, avec des saisons bien marquées, et le relief constitué de vallons aux
           pentes douces et de quelques plateaux. La géographie humaine fait apparaître un maillage rural assez serré de petits villages avec quelques
           bourgs dont deux, Bourgoin et Crémieu, peuvent entrer raisonnablement dans la catégorie des petites villes. Entre 1770 et 1820, la
@@ -100,8 +102,8 @@
           auparavant particulièrement hétérogènes. Une continuité relative des centres peut être notée entre les quatre bureaux du contrôle des actes
           de l’Ancien Régime et les quatre nouveaux cantons du nord de l’arrondissement, dans lesquels tous les notaires étudiés ont leur
           résidence.</p>
-      </div><div n="2" type="part"><head n="Première partie">Devenir notaire</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Devenir notaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Devenir notaire en bas-Dauphiné : <lb/>l’évolution des conditions d’accession (1770-1820)</head>
           <p>Sous l’Ancien Régime, dans la moitié est de Viennois, l’accession au notariat suit le cours assez classique de l’acquisition d’un office
             royal, avec l’obtention de lettres de provision et la réception devant le parlement de Grenoble ou, dans quelques cas, devant le bailliage
@@ -125,7 +127,7 @@
             le cadre local est assuré par une application pragmatique. Dans l’ensemble, les autorités se sont montrées tour à tour fermes et
             permissives, allant jusqu’à momentanément transgresser elles-mêmes certaines dispositions pour faciliter la transition.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Étude de quelques caractéristiques générales</head>
           <p>La prise en considération de quelques caractéristiques tout au long de la période étudiée permet de mesurer l’existence de fractures ou,
             au contraire, d’évolutions sur le long terme.</p>
@@ -149,7 +151,7 @@
             massivement répandus dans la région, les jeunes aspirants privilégiant les formations chez des procureurs et le plus souvent à
             Grenoble.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Ressorts et implantation des résidences</head>
           <p>Toute création d’office, à l’époque moderne, lie celui-ci à une résidence stipulée dans les lettres de provision. Le notaire a
             théoriquement la possibilité d’exercer dans le ressort de l’institution auprès de laquelle a eu lieu sa réception. Dans la présente étude,
@@ -175,8 +177,8 @@
             rationalisée effectuée par la chambre, même si elle n’est pas encore aboutie en 1820, a permis la constitution d’un réseau notarial plus
             efficace.</p>
         </div>
-      </div><div n="3" type="part"><head n="Deuxième partie">Exercer au quotidien</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Exercer au quotidien</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La pratique notariale au quotidien</head>
           <p>L’étude indispensable des caractéristiques et de l’évolution de la pratique notariale quotidienne imposait des choix méthodologiques. La
             masse des sources à exploiter a conduit à la sélection des vingt notaires ayant exercé dans le cadre du canton de Crémieu, selon les
@@ -203,7 +205,7 @@
             extrêmement faible avant la Révolution. En revanche, de nouveaux actes sont apparus au fil des réformes et des événements, comme les
             remplacements militaires ou les actes respectueux.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les Chambres des notaires</head>
           <p>Chez les notaires de cette partie orientale du Viennois, le manque de codification des formations, ou l’absence d’un quelconque
             règlement, peuvent s’expliquer par l’inexistence de corporations ou de confréries. En dehors de leur résidence et des environs où ils
@@ -223,8 +225,8 @@
             l’interlocuteur local incontournable du procureur impérial, puis royal, et comme un médiateur entre les notaires et l’administration
             publique.</p>
         </div>
-      </div><div n="4" type="part"><head n="Troisième partie">Vivre en société</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Vivre en société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les notaires au sein de la société</head>
           <p>Le notariat n’est pas à l’époque une activité à plein temps. Quasiment tous les individus étudiés sont propriétaires de biens fonciers,
             notamment agricoles, loués, quand ils ne les exploitent pas eux-mêmes. Surtout, leur position sociale, leurs relations, leur savoir en
@@ -246,7 +248,7 @@
             relative au sein d’une élite plus large que dans un village, les notaires s’imposent durablement comme des notables particulièrement
             attirés par les responsabilités publiques locales.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Sociabilité notariale et stratégies familiales</head>
           <p>L’appartenance des notaires de cette partie du Dauphiné à l’élite sociale locale ne fait aucun doute au regard des diverses sources. Leur
             seule signature au bas des actes des registres paroissiaux puis d’état civil, en tant que premiers concernés ou témoins requis, les
@@ -269,9 +271,7 @@
             possibilités offertes par les nouvelles institutions. Un lent mouvement d’exode rural est décelable. Leur position sociale permet à leur
             famille d’être moins éprouvée par les campagnes militaires alors si dévoreuses de nombre de leurs compatriotes.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Sans grande surprise, il est impossible de s’accorder sur une année qui permettrait de fixer précisément une ligne de fracture entre le
           notaire de l’époque moderne et celui de l’époque contemporaine. De manière générale, les réformes révolutionnaires, si elles posent les
           nouveaux principes théoriques, souffrent de leur peu d’application. La présence administrative et son efficacité ne vont réapparaître pour
@@ -299,11 +299,10 @@
           l’évaluation de la mise en œuvre des nouveaux codes régissant la vie publique, le comportement de la majorité des Français, qui se
           retrouvent au fil des sources. Les notaires sont bien au centre de la société.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Cartes géographiques. — Données démographiques. — Analyses quantitative et typologique des actes : données et calculs détaillés par
           notaire. — Correspondance d’étienne Antoine Lacroix. — Dictionnaire prosopographique des notaires.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

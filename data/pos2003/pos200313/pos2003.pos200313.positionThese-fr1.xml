@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">López de Gómara dans les controverses sur le Nouveau Monde : les traductions françaises de la &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Historia general de las Indias
-          y conquista de Mexico&lt;/hi&gt;</title>
-        <title type="sub">Édition critique et commentaire comparé.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">López de Gómara dans les controverses sur le Nouveau Monde : les traductions françaises de la <hi rend="i">Historia general de las Indias
+          y conquista de Mexico</hi></title><title xml:lang="fr" type="sub">Édition critique et commentaire comparé.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gerbault, Matthieu">Matthieu Gerbault</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200313.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Si le texte espagnol de la <hi rend="i">Historia general de las Indias</hi>(1552) de Gómara est considéré comme une source de premier
           ordre sur la conquête du Nouveau Monde, les traductions que cette œuvre a suscitées sont encore méconnues. Pourtant, elles ont rencontré un
           véritable succès éditorial au <num>xvi<hi rend="sup">e</hi></num>  siècle et méritent une attention approfondie : de nombreux lecteurs ont découvert
@@ -64,7 +67,7 @@
           favorable à la conquête que celle de Gómara ? Les traducteurs eux-mêmes sont-ils influencés par l’antihispanisme de la fin du XVI <hi rend="sup">e</hi>  siècle ? Cette étude permettra ainsi de voir si les traductions ont pu alimenter l’ensemble des controverses
           géographiques et politico-religieuses sur le Nouveau Monde ou si elles sont restées en marge de ces polémiques.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les éditions espagnoles et anversoises du texte de Gómara (1552, 1553, 1554, 1555), les éditions parisiennes de la version de Fumée (1568,
           1569, 1577, 1580, 1584, 1587, 1605), l’édition parisienne de la traduction de Le Breton (1588) et les éditions des traductions italiennes et
           anglaises sont les principales sources utilisées. Les imprimés français du <num>xvi<hi rend="sup">e</hi></num>  siècle sur l’Amérique ont permis de
@@ -72,9 +75,8 @@
           nationale de France, à la bibliothèque municipale de Tours, ainsi qu’aux Archives nationales (Minutier central des notaires et série P).
       </p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">López de Gómara et ses traducteurs</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">López de Gómara et ses traducteurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">López de Gómara et son œuvre</head>
           <p>Gómara (1511-1559), d’abord chapelain de la collégiale de Soria, a l’occasion de fréquenter d’importants humanistes de son temps en
             Italie, où il séjourne pendant dix ans. Revenu en Espagne, il entreprend la rédaction de grandes compilations historiques, dont la <hi rend="i">Historia general de las Indias</hi>. Sans être jamais allé en Amérique, il rédige cette œuvre à partir d’abondantes lectures
@@ -88,7 +90,7 @@
             lecteurs français de la fin du <num>xvi<hi rend="sup">e</hi></num>  siècle lisent les versions italiennes et françaises, et non la version
             originale : c’est pourquoi il est important d’étudier la teneur de ces traductions.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les traducteurs français</head>
           <p>Deux traducteurs publient une version française de Gómara. Le premier, Martin Fumée (1540-1601), seigneur de Marly-la-Ville puis de
             Genillé, est au service de François de Montmorency, puis du duc d’Anjou. Sa version de Gómara, dédiée à Montmorency, est la première
@@ -100,7 +102,7 @@
             Pierre de Larivey et de François d’Amboise, avec lesquels il collabore à de nombreuses traductions. Il reste à savoir comment ces deux
             personnages, qui sont assez différents, ont été conduits à choisir l’œuvre de Gómara pour leur production écrite.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le contexte politique et littéraire français (1560-1600)</head>
           <p>L’étude des pièces liminaires des deux traductions permet de comprendre l’intérêt que Fumée et Le Breton ont porté au texte de Gómara,
             en un temps où les ouvrages sur l’Amérique sont jugés moins importants que la connaissance des auteurs de l’Antiquité. Lorsqu’il traduit
@@ -117,9 +119,9 @@
             les fausses citations de Chauveton viennent du fait qu’il a utilisé la traduction erronée de Fumée. Un regard critique s’impose donc pour
             étudier les versions françaises.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Ecrire et traduire le Nouveau Monde au <num>xvi<hi rend="sup">e</hi></num>  siècle : étude comparée des traductions
+      </div><div n="4" type="part"><head n="0" type="chapter">Ecrire et traduire le Nouveau Monde au <num>xvi<hi rend="sup">e</hi></num>  siècle : étude comparée des traductions
           françaises</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les traductions de Martin Fumée</head>
           <p>Fumée traduit l’œuvre de Gómara en deux temps. Il ne publie en 1568 que la première partie de la <hi rend="i">Historia general de las
               Indias</hi>, qu’il complète en 1584 par la traduction de la seconde partie (la <hi rend="i">Conquista de Mexico</hi>). Son travail
@@ -134,7 +136,7 @@
             d’origine exotique révèle une réticence à adopter la nouveauté des réalités américaines. Au total, sa traduction se présente comme un
             ensemble concis, mettant surtout l’accent sur les caractères purement géographiques du texte de Gómara.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La traduction de Guillaume le Breton</head>
           <p>Quatre ans après Martin Fumée, Guillaume Le Breton publie une nouvelle version de la <hi rend="i">Conquista de Mexico</hi>, qu’il
             intitule <hi rend="i">Voyages et conquestes du capitaine Ferdinand Courtois</hi>. Il veut fournir un travail plus complet que celui de son
@@ -159,7 +161,7 @@
             Casas. Loin d’adopter une distance critique vis-à-vis du texte de départ, le traducteur reprend et amplifie la justification gomarienne de
             la conquête.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Epilogue : lectures de Gómara en France</head>
           <p>Martin Fumée et Guillaume Le Breton insistent sur des aspects différents du texte original : tandis que le premier met en valeur le
             savoir géographique de l’œuvre espagnole, le second y voit un récit narratif, exotique et militaire. Il reste à savoir si leurs
@@ -181,24 +183,21 @@
             orienter une critique de leur action. <hi rend="i">La Historia general de las Indias</hi> est lue comme une compilation savante, non comme
             une source pamphlétaire.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Edition critique des versions de Fumée et Le Breton</head>
-        <p>Seule la traduction de la <hi rend="i">Conquista de Mexico</hi> est commune aux deux traducteurs. Le texte édité correspond à la première
+      </div><div n="5" type="part"><head n="0" type="chapter">Edition critique des versions de Fumée et Le Breton</head>
+        <p n="1" type="chapter">Seule la traduction de la <hi rend="i">Conquista de Mexico</hi> est commune aux deux traducteurs. Le texte édité correspond à la première
           partie de ce volume, depuis la naissance de Cortés jusqu’à son arrivée aux portes de Mexico. Les deux versions françaises sont présentées en
           regard sur la même page. L’édition de base, pour le texte de Martin Fumée, est celle de 1584, tandis que l’unique édition de 1588 a été
           utilisée pour le texte de Guillaume Le Breton. L’apparat critique comporte deux types de note. Les notes de bas de page, en premier lieu,
           indiquent les variantes apportées à la traduction de Fumée lors des éditions de 1587 et 1605-1606, et font apparaître l’ensemble des leçons
           rejetées. Les notes de fin concernent les procédés de traduction, la comparaison avec les textes de Gómara ou avec les traductions
           italiennes et anglaises, ainsi que des commentaires d’ordre historique.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="6"><head>Annexes</head>
         <p>Catalogue des éditions espagnoles et françaises, liste des exemplaires conservés et commentaire des exemplaires consultés. ­ Notes
           critiques. ­ Glossaire. ­ Index des noms de personne et de lieux.</p>
       </div>
-              <div type="appendix"><head>Iconographie</head>
+          <div type="appendix" n="7"><head>Iconographie</head>
         <p>Pages de titre des éditions de 1569, 1584, et 1588. ­ Privilège pour Martin Fumée (1568). ­ Privilège pour Abel L’Angelier (1588).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

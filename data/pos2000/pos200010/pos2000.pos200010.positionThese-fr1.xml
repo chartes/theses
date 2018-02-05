@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’abolition des capitulations et la suppression des tribunaux mixtes en Egypte (1937)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’abolition des capitulations et la suppression des tribunaux mixtes en Egypte (1937)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chevrant-Breton, Philippe">Philippe Chevrant-Breton</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200010.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les capitulations, ensemble de dispositions juridiques réglant le séjour des Européens dans les échelles du Levant et de Barbarie, ont été
           mises en forme à l’époque moderne. En Egypte, elles ont paradoxalement survécu à l’Empire ottoman pendant quelques années, et elles n’ont
           définitivement disparu qu’en 1937 du pourtour méditerranéen : durant les mois d’avril et mai de cette année se réunit la conférence de
@@ -67,7 +70,7 @@
           question suppose d’étudier le processus des négociations conduites avant et pendant la conférence de Montreux, à la lumière des différents
           états de la question capitulaire en Egypte.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Institution égyptienne de composition internationale, les tribunaux mixtes ont laissé leur trace dans les archives diplomatiques des
           puissances capitulaires, qui, en 1937, sont au nombre de douze. Mais l’intérêt de la documentation est proportionnel au poids politique et
           économique de la présence de ces nations : outre la Grande-Bretagne, prépondérante en Egypte, la France, l’Italie, la Grèce, les États-Unis
@@ -83,9 +86,8 @@
           donc également été utilisés : en particulier, aux archives de la Société des Nations, à Genève, les papiers de la conférence des
           Capitulations ainsi que le fonds du Secrétariat, section politique.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les sources du droit capitulaire</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les sources du droit capitulaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les échelles du Levant</head>
           <p>Le droit islamique règle la vie religieuse et sociale du musulman : dans le vaste Empire ottoman, que caractérisaient une forte
             diversité religieuse et notamment l’existence d’importantes minorités chrétiennes, l’auto-administration des communautés non musulmanes a
@@ -106,7 +108,7 @@
           <p>Les bouleversements politiques de la Révolution, et même l’expédition de Bonaparte, n’influèrent pas sur l’ordre capitulaire, qui se
             maintint tel quel jusqu’à la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’expansion européenne et la réforme judiciaire en Egypte</head>
           <p>La suppression du cautionnement des étrangers capitulaires, en 1835, ainsi que l’érosion progressive du mode de vie communautaire des
             Européens des échelles accompagnèrent la pénétration économique européenne croissante : ce furent les éléments décisifs d’une mutation du
@@ -132,8 +134,8 @@
             vigueur. C’est pourquoi, sur le modèle des tribunaux mixtes, mais sans le contrôle international qui s’y attachait, furent institués des
             tribunaux indigènes égyptiens en 1883.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Tribunaux mixtes et organisation judiciaire dans l’Egypte indépendante</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Tribunaux mixtes et organisation judiciaire dans l’Egypte indépendante</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’organisation et l’administration de la justice mixte</head>
           <p>Les projets d’unification des juridictions mixtes et indigènes n’ayant pas abouti, les tribunaux mixtes perdurent après la première
             guerre mondiale sans altération majeure. De 1918 à 1937, ils atteignent même leur apogée et deviennent la clé de voûte du système
@@ -162,7 +164,7 @@
             maintien d’usages anciens et l’adaptation du droit international privé aux évolutions du droit de la nationalité en Europe, qu’a impliquée
             l’expansion coloniale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les tribunaux mixtes et leurs rapports avec les autres juridictions</head>
           <p>La théorie de l’intérêt mixte justifie la place centrale des tribunaux mixtes au sein de l’organisation judiciaire égyptienne. Celle-ci
             est caractérisée par l’unité de juridiction, au sens où il n’existe pas de juridictions administratives distinctes des juridictions
@@ -175,7 +177,7 @@
             mode de fonctionnement et le nombre des cas qu’ils traitent, ces tribunaux sont parfois dotés d’un barreau qui leur est propre. En vertu
             de son caractère international, la jurisprudence mixte est le principal facteur de régulation des conflits de juridictions en Egypte.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La réforme judiciaire et les débats politiques en Egypte</head>
           <p>Parce qu’ils les percevaient comme une entrave à leur contrôle sur l’Egypte, les Britanniques ont essayé de mettre fin aux tribunaux
             mixtes : lors de la déclaration du protectorat, durant la première guerre mondiale, il fut envisagé de les supprimer ou de les réformer.
@@ -191,8 +193,8 @@
             tribunaux mixtes, mais les étrangers résidents, les gouvernements européens et les Egyptiens divergent sur l’ampleur des changements à
             apporter à l’institution.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’abolition des capitulations et la suppression des tribunaux mixtes</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’abolition des capitulations et la suppression des tribunaux mixtes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le volet capitulaire dans le traité anglo-égyptien de 1936</head>
           <p>Trois étapes se distinguent dans le processus qui aboutit à la suppression des capitulations. La première est la négociation du traité
             anglo-égyptien de 1936. Alors que les projets de traité antérieurs prévoyaient bien la suppression des capitulations, ou en tout cas de
@@ -206,7 +208,7 @@
             intention de mettre fin au régime capitulaire en Egypte. Les annexes de l’article 13 prévoient notamment, au terme d’une période
             transitoire, la disparition des tribunaux mixtes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les négociations préalables à la conférence des capitulations</head>
           <p>Après l’accord intervenu sur les principes, la diplomatie britannique s’efforce, dans la discussion du contenu et des modalités de la
             période transitoire, de sauvegarder ses intérêts. Quelques points ont été réservés lors de la discussion du traité et doivent faire
@@ -229,7 +231,7 @@
             conférence n’est pas menacée d’échouer ; ils consultent les puissances capitulaires amies et les représentants des intérêts britanniques
             en Egypte.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La conférence de Montreux et ses conséquences</head>
           <p>Les risques d’échec sont, à la veille de l’ouverture de la conférence de Montreux, largement maîtrisés. La principale inconnue est
             l’attitude que prendront respectivement la France et l’Italie. Une relative détente avec l’Italie ainsi que la composition de sa
@@ -259,9 +261,7 @@
             Montreux était, du point de vue britannique, en deçà du compromis négocié en janvier 1937 et formalisé dans le “ document A ” : mais, plus
             que de la pugnacité égyptienne, cette concession résulte d’une défaillance accidentelle dans la coordination anglo-égyptienne.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Evoquée en 1875 lors de la réforme judiciaire, la suppression des capitulations en Egypte fut repoussée jusqu’en 1937. Si, aux yeux des
           commentateurs de l’époque, il est mis fin à un régime séculaire de rapports entre l’Europe et l’Orient, en réalité, l’apparente stabilité du
           droit capitulaire dissimule de profonds changements.</p>
@@ -280,11 +280,10 @@
           occidentalisation du droit dans ce pays. La manière dont les hommes politiques égyptiens en ont négocié l’abolition est même en soi une
           preuve de leur familiarité avec les normes et les concepts juridiques européens.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Traités capitulaires en vigueur en Egypte avant la conférence de Montreux. ­ Article 13 du traité anglo-égyptien et ses annexes. ­
           Convention de Montreux. ­ Ancien et nouveau règlements d’organisation judiciaire.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

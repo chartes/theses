@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le bailliage de Malesherbes pratiques et évolutions d’une justice seigneuriale au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xvii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle
-        (1630-1700)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le bailliage de Malesherbes pratiques et évolutions d’une justice seigneuriale au <num>xvii<hi rend="sup">e</hi></num> siècle
+        (1630-1700)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Wagner, Olivier">Olivier Wagner</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201028.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Plus que toute autre institution de la France d’Ancien Régime, la justice seigneuriale a concentré sur elle les critiques les plus sévères,
           de la part des historiens comme des juristes des deux derniers siècles. Ce type bien particulier de justice avait en effet contre lui de
           cumuler à la fois les reproches associés en général aux institutions de la France moderne (multiplication d’institutions concurrentes, flou
@@ -86,7 +89,7 @@
           justice du royaume par les grands codes de procédure du <num>xvii<hi rend="sup">e</hi></num> siècle et de mesurer l’impact réel de ces
           derniers dans l’exercice quotidien de la justice.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Du fait de la destruction des archives départementales du Loiret en 1940, l’essentiel des sources utilisées pour l’étude de la justice
           seigneuriale de Malesherbes provient du fonds Malesherbes (399 AP), entré par dation en 2000 aux Archives nationales. Parmi ce vaste fonds,
           deux parties concernent particulièrement cette étude : d’une part, le chartrier de la seigneurie qui permet d’en étudier l’étendue, les
@@ -94,9 +97,8 @@
           période s’étendant de 1630 à 1730. Registres du greffe et pièces de procédures représentent une masse totale équivalente à cinq mètres
           linéaires d’archives.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La justice de Malesherbes dans son contexte</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La justice de Malesherbes dans son contexte</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Seigneurs et seigneurie de Malesherbes</head>
           <p><hi rend="i">Avant le <num>xvii<hi rend="sup">e</hi></num> siècle : les étapes de la formation d’une seigneurie. —</hi> La seigneurie est
             une institution qui dispose d’un certain nombre de pouvoirs sur ses habitants et censitaires. Elle est aussi une possession patrimoniale
@@ -111,7 +113,7 @@
             progressif de ses membres. Dans l’ensemble, on peut dire que les seigneurs de Malesherbes se trouvent dans un processus de
             dégénérescence.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Situation géographique et revenus de la seigneurie de Malesherbes</head>
           <p><hi rend="i">Situation géographique. —</hi> À mi-chemin de Paris et d’Orléans, Malesherbes se situe plus précisément au centre d’un
             quadrilatère formé par les villes d’Étampes, Fontainebleau, Pithiviers et Nemours, sur les bords de l’Essonne. Cette situation
@@ -121,7 +123,7 @@
             revenus pour ses propriétaires. Au cours du siècle, ses seigneurs peuvent compter sur un revenu net annuel oscillant entre 10 000 et
             12 000 livres. Plus des deux-tiers de ces revenus proviennent des monopoles seigneuriaux : bois, marché, banalités.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une situation institutionnelle complexe</head>
           <p><hi rend="i">Les mouvances féodales. —</hi> Dans la hiérarchie féodale de l’Ancien Régime, la seigneurie de Malesherbes dépend pour une
             partie du duché d’Orléans et pour l’autre du temporel de l’évêque d’Orléans par sa seigneurie de Pithiviers, auxquels les seigneurs de
@@ -138,8 +140,8 @@
             À l’inverse, il est possible de trouver de nombreux cas de conflits entre la justice de Malesherbes et les juridictions seigneuriales
             voisines.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’organisation de la justice de Malesherbes</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’organisation de la justice de Malesherbes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Origines, fondements et organisation des droits de la justice de Malesherbes</head>
           <p><hi rend="i">Les étapes de la constitution de la justice de Malesherbes. —</hi> Le droit de justice est une des principales
             caractéristiques de la seigneurie, elle en suit donc de près les évolutions. Il y a un parallèle entre l’évolution géographique de la
@@ -152,7 +154,7 @@
             offices, par un auditoire unique et par une seule série de registres. La situation de la justice est en ce sens ambigüe, puisqu’elle
             rassemble dans les faits un certain nombre de droits de justice séparés en droit.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une organisation atypique de la justice</head>
           <p><hi rend="i">Les lieux de justice. —</hi> La justice n’est pas qu’un droit théorique, elle s’exprime également dans l’espace publique
             autour de certains lieux. L’auditoire de la justice de Malesherbes est l’endroit où se rend la justice ; il s’agit d’une modeste maison
@@ -179,7 +181,7 @@
             préjudicier au résultat de l’appel, et les « demandes en désertion d’appel », ayant pour but de s’assurer que l’appel interjeté est bien
             soutenu par la partie appelante de la décision.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Juges, procureurs, témoins et experts</head>
           <p><hi rend="i">Le personnel judiciaire. —</hi> Le personnel de la justice de Malesherbes est un milieu réduit et stable de praticiens
             locaux, avec cependant une forte distinction sociale entre les baillis et le reste de la communauté judiciaire. Sur la période envisagée
@@ -195,8 +197,8 @@
           <p><hi rend="i">Les témoins. —</hi> Sociologiquement, les témoins interrogés par la justice de Malesherbes forment une image déformée de la
             société rurale, avec une forte prépondérance des propriétaires de terre et une absence marquée des femmes.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">L’activité de la justice de Malesherbes</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">L’activité de la justice de Malesherbes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le recours à la justice : aspects quantitatifs</head>
           <p><hi rend="i">Une activité en net déclin sur la période. —</hi> Sur la période envisagée (1630-1700), il a été possible de recenser plus
             de 26 000 actes produits par la justice de Malesherbes. Cette production est cependant très inégalement répartie dans le temps et le
@@ -214,7 +216,7 @@
             fondamentalement, cette baisse tend à montrer un désintérêt des membres de la communauté pour un recours judiciaire systématique dans la
             régulation de leurs conflits internes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La pratique de la justice</head>
           <p><hi rend="i">La justice civile contentieuse. —</hi> La justice contentieuse occupe une place écrasante dans le recours à la justice, soit
             environ 90 % des actes produits. Par leur nature, les causes les plus traitées concernent des affaires de dette et d’exécution
@@ -257,9 +259,7 @@
             charge, tant par la gestion des catastrophes naturelles, la régulation de la vie économique, la protection des voiries et de la morale
             publique. En cela, la justice seigneuriale de Malesherbes peut également être considérée comme autorité administrative de proximité.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>La justice seigneuriale de Malesherbes est, au <num>xvii<hi rend="sup">e</hi></num> siècle, une institution paradoxale. Dotée de moyens
           humains très faibles, elle s’étend également sur un territoire réduit et des populations peu nombreuses. En revanche, par sa situation
           géographique isolée et ses droits immémoriaux, le bailliage de Malesherbes se trouve en situation d’être le tribunal compétent pour juger de
@@ -269,10 +269,9 @@
           sa nature, son emplacement et son organisation, le bailliage de Malesherbes offre à des populations une possibilité rare d’un recours à une
           institution judiciaire pour la régulation des conflits du quotidien d’une communauté rurale.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Cartes et plans. — édition de plusieurs actes représentatifs de l’activité de la justice de Malesherbes. — Tableaux de données.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

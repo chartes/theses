@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’art diplomatique</title>
-        <title type="sub">Les expositions d’art français organisées par la France à l’étranger pendant l’entre-deux-guerres</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’art diplomatique</title><title xml:lang="fr" type="sub">Les expositions d’art français organisées par la France à l’étranger pendant l’entre-deux-guerres</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chougnet, Pauline">Pauline Chougnet</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201007.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>À partir de la Première Guerre mondiale, la France s’est dotée de structures administratives pour l’organisation de manifestations
           artistiques (représentations théâtrales, concerts et expositions) afin de servir ses intérêts diplomatiques à l’étranger. La naissance de ce
           nouveau mode de communication officielle entre les nations, la diplomatie culturelle, a fait l’objet de recherches par les historiens dès
@@ -68,7 +71,7 @@
           choisis pour figurer dans ces expositions et quels sont ceux qui en ont été exclus, le sujet choisi est l’occasion d’aborder sous un angle
           international l’histoire du goût et des politiques artistiques de la <num>iii<hi rend="sup">e</hi></num> République.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>On a pu aborder l’étude de ces expositions par de nombreuses sources. Les archives du service des œuvres françaises à l’étranger (SOFE),
           conservées au centre des archives diplomatiques de Nantes, ont constitué le socle de cette thèse puisqu’elles ont gardé la trace de toutes
           les expositions organisées pendant l’entre-deux-guerres ainsi que les comptes rendus des conseils d’administration de l’AFAA. Les archives
@@ -77,9 +80,8 @@
         <p>Enfin, il était indispensable de recourir aux nombreux documents imprimés qui accompagnèrent l’action artistique ou la commentèrent :
           catalogues d’exposition, articles de presse, essais et mémoires.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La naissance des expositions « diplomatiques » françaises jusqu’au début des années 1920</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La naissance des expositions « diplomatiques » françaises jusqu’au début des années 1920</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les expositions d’art français à l’étranger au tournant du siècle et jusqu’à la Première Guerre mondiale</head>
           <p>La mise en œuvre d’une politique artistique à l’étranger, fût-elle un simple accompagnement financier d’initiatives privées, demande un
             lien solide et assumé entre art et État. Avant la guerre, un lien fort entre art et diplomatie est assimilé à une tradition monarchique
@@ -97,7 +99,7 @@
             mais aussi et surtout, partant de recherches précises et rigoureuses en histoire de l’art. Ils sont un vivier où se créent des vocations
             et des carrières ponctuées par l’organisation d’expositions d’art français dans le monde, bien après 1918.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La Première Guerre mondiale et la naissance d’un débat sur l’intervention gouvernementale en matière d’expansion de
             l’art français</head>
           <p>Même lorsque fut admise la mise en place d’une diplomatie culturelle, au début des années 1910, l’utilisation des arts plastiques n’est
@@ -114,7 +116,7 @@
             alliés. Ainsi, la Scandinavie et les États-Unis sont deux destinations privilégiées de l’action artistique de la France pendant cette
             période.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les débuts de la diplomatie artistique : la création de services officiels</head>
           <p>La politique artistique à l’étranger, liée depuis sa naissance à la culture de guerre par ses buts – le maintien ou la préparation
             d’alliances militaires – et par sa forme – des expositions au profit des victimes de guerre, etc. — s’en éloigne et s’adapte à la
@@ -139,8 +141,8 @@
             mais sur aucun de ces deux plans elle n’est radicale. En effet, l’AFEEA est subventionnée pour la moitié de son budget par les Affaires
             étrangères, et une structure officielle est conservée au ministère de l’Instruction publique pour l’action artistique.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La diplomatie artistique de l’entre-deux-guerres</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La diplomatie artistique de l’entre-deux-guerres</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un nouvel ordre artistique international comme cadre de l’organisation française : le système d’échanges
             d’expositions nationales dans les années 1920</head>
           <p>Phénomènes incontournables et obligatoires, les expositions d’art officielles se multiplient, auxquelles les États, et, de ce fait, les
@@ -170,7 +172,7 @@
             des dizaines de milliers de francs. À ce budget ordinaire, partagé entre les organisateurs français et étrangers, s’ajoute pour les musées
             nationaux le coût des assurances, très élevé pour les expositions d’art ancien, comme celle de Londres en 1932.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les expositions officielles face aux crises économique et politique des années 1930</head>
           <p>La crise de 1929 a inévitablement des répercussions sur l’organisation des expositions françaises à l’étranger. D’une part, elles ont
             pour objet un secteur particulièrement touché par la crise : l’art, et d’autre part, elles nécessitent des échanges commerciaux entre
@@ -200,7 +202,7 @@
             artistique de tous les pays. En Belgique, en Allemagne, pour des raisons évidemment différentes, on observe même le mouvement inverse.
         </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III ">La répartition géographique et sociale des expositions d’art français : clientèles ou publics visés</head>
           <p>On trouve difficilement une analyse contemporaine sur la répartition d’ensemble des expositions d’art français et sur sa
             pertinence. « L’étranger » était souvent conçu comme un bloc monolithe, où l’art français devait exercer sa domination. Les expositions de
@@ -232,8 +234,8 @@
             grandes expositions visant un public plus large. L’exposition de Londres, présentant les « Splendeurs de l’art français » en 1932 en est
             le point de départ, elle qui attire plusieurs dizaines de milliers de visiteurs.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Qu’est-ce que l’art français ? La question des choix artistiques</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Qu’est-ce que l’art français ? La question des choix artistiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Une diversité d’actions en faveur de l’art français</head>
           <p>Quelques expositions organisées ou patronnées par le gouvernement contiennent des sections qui ne concernent pas les arts plastiques,
             mais sont destinées plutôt à présenter la production française dans le secteur du livre, de la mode et des cosmétiques ou les efforts
@@ -245,7 +247,7 @@
             d’académies, l’envoi de conférenciers et la diffusion d’imprimés comme autant de vecteurs d’un discours sur l’art français sur lesquels
             s’appuient les services artistiques.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La présentation de l’art français dans toutes ses expressions</head>
           <p>Il est intéressant de se pencher sur la « présentation » de ces expositions d’un point de vue matériel et visuel. La muséographie devint,
             dans l’entre-deux-guerres, un instrument de prestige, à déployer lors d’expositions internationales, de colloques ou de publications. Les
@@ -275,7 +277,7 @@
             expositions d’art ancien à la France, la préférence accordée à l’art vivant est nette pendant la période de l’entre-deux-guerres : plus de
             la moitié des expositions ne montrent que de l’« art moderne », et moins d’un quart se consacre exclusivement à l’art ancien.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le choix des artistes à exposer</head>
           <p>Il faut s’intéresser aussi aux différents paramètres qui influencent les responsables des expositions pour le choix des artistes : le
             rôle des organisateurs étrangers, les pressions internes de la part des milieux artistiques français, et la définition de l’art français
@@ -301,9 +303,7 @@
             librement dans leur contenu par des acteurs privés comme les sociétés d’artistes ou les galeries, les expositions « orientalistes »
             émanent d’un pouvoir fort et désireux de se faire reconnaître comme tel par le public.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Avant de questionner l’efficacité de ces expositions artistiques, on doit insister sur l’importance accrue qu’elles ont gagnée au sein de
           la diplomatie culturelle, en rattrapant, du moins symboliquement, les efforts faits pour la diffusion de la langue française. Le
           système « d’accompagnement culturel » pensé au début des années 1920, en favorisant l’intervention de particuliers, en permettant des
@@ -319,12 +319,11 @@
           conformisme, l’action artistique à l’étranger témoigne d’une ouverture raisonnable aux artistes de la modernité et d’une attention portée à
           des artistes largement négligés par l’État et qui sont loin d’avoir « l’âme officielle ».</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Liste des expositions d’art français et leur répartition. — Liste des artistes les plus représentés. — Catalogue iconographique (ving-sept
           artistes). — Vues d’expositions. — Répertoires des peintres et illustrateurs, des architectes et ingénieurs, des sculpteurs, des arts
           décoratifs.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La Bible de Saint-André-au-Bois</title>
-        <title type="sub">(Boulogne-sur-Mer, BM, ms. 2)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La Bible de Saint-André-au-Bois</title><title xml:lang="fr" type="sub">(Boulogne-sur-Mer, BM, ms. 2)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Rioust, Laure">Laure Rioust</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200721.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La Bible dite de Saint-André-au-Bois a été redécouverte à l’occasion de l’exposition <hi rend="i">L’Art du Moyen Âge en Artois</hi>,
           organisée par le Musée d’Arras en 1951. Sa présence parmi les œuvres exposées ne se justifiait que par l’origine artésienne de l’abbaye
           prémontrée à qui elle doit son nom, et où elle a été conservée jusqu’à la Révolution. Ayant intégré le fonds de la bibliothèque municipale
@@ -71,10 +74,9 @@
           son contexte de production, ce dernier constitue un exemple privilégié pour aborder des questions récurrentes dans l’étude de l’enluminure
           romane, tels le rôle de l’image par rapport au texte biblique ou la signification des formes ornementales.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La Bible de Saint-André-au-Bois <lb/>aspects historiques, codicologiques et philologiques</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">La Bible de Saint-André-au-Bois <lb/>aspects historiques, codicologiques et philologiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’abbaye et la Bible de Saint-André-au-Bois à travers les sources</head>
           <p>Comme toutes les séries anciennes des Archives départementales du Pas-de-Calais, et notamment celles affectées aux fonds ecclésiastiques,
             la sous-série 22H relative à l’abbaye de Saint-André-au-Bois a été quasiment anéantie en 1915. Le fonds subsistant conserve le cartulaire
@@ -105,7 +107,7 @@
             et seul Charles-Louis Hugo, dans le premier tiers du <num>xviii<hi rend="sup">e</hi></num> siècle, mentionne, parmi les reliques, une « <hi rend="i">Biblia sacra manuscripta caractere majusculo, summa arte et elegantia, opus duodecimo seculo exaratum</hi>», dans laquelle il est
             permis de reconnaître notre manuscrit.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le manuscrit Boulogne-sur-Mer, BM, ms. 2 <lb/>particularités codicologiques et paléographiques</head>
           <p>La Bible de Saint-André-au-Bois se compose actuellement de deux tomes, depuis la fin du Livre de Josué (tome I, fol. 2, Jos.) jusqu’aux
             Actes des Apôtres (t. II, fol. 299v, Act. VIII, 12-13). Le manuscrit originel comportait trois volumes, le premier allant du Livre de la
@@ -128,7 +130,7 @@
             derniers et de dater les graffitis. Ils constituent les plus anciens marqueurs chronologiques rattachant le manuscrit à l’abbaye de
             Saint-André et attestent de son usage à l’abbaye dans le premier quart du <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le texte de la Bible de Saint-André-au-Bois</head>
           <p>Le trait le plus caractéristique de ce texte est la présence, au début du second volume actuel, du Quatrième Livre des Macabées.
             L’ensemble des témoins de ce texte rare se concentrent entre les <num>xi<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles, et les
@@ -167,8 +169,8 @@
             et se distingue notamment du groupe de bibles datant de la fin du <num>xii<hi rend="sup">e</hi></num> siècle, voisines de celle de Souvigny, dont
             les tables sont réparties selon un ordre commun en cinq feuillets.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Étude iconographique et stylistique</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Étude iconographique et stylistique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le décor peint</head>
           <p>La distribution des initiales historiées et des lettres ornées n’est pas homogène et se fait aux dépens de la première catégorie. Cinq
             lettres mettent en scène un épisode ou un personnage tiré du texte, tandis que dix autres figurent l’auteur de ce dernier ou un personnage
@@ -218,7 +220,7 @@
             inédites, ainsi que par une iconographie extrêmement inventive. Un ornemaniste, à qui revient l’exécution des initiales champies, complète
             l’équipe qui a participé à la décoration de cette bible.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’enluminure à Paris et Sens dans la seconde moitié du <num>xii<hi rend="sup">e</hi></num> siècle <lb/>et la Bible de
             Saint-André-au-Bois</head>
           <p>Le débat historiographique sur les développements du <hi rend="i">Channel style</hi> s’est focalisé sur la région de Sens et de Paris,
@@ -262,8 +264,8 @@
             l’objet de pillages incessants au cours de son histoire. Le manuscrit de Boulogne-sur-Mer aurait pu avoir accompagné l’abbé Denis Daviau,
             depuis Clermont jusqu’en Artois.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le Verbe en représentation</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le Verbe en représentation</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Animer le Verbe : syntaxe générale de l’espace pictural</head>
           <p>Les lettrines qui ornent les livres bibliques « présentifient » le Verbe dont elles sont les supports visuels. Toutes les représentations
             qui jalonnent le Livre de Parole concourent ainsi à dire l’action du Logos à travers l’histoire humaine. Au sein même de la Bible de
@@ -295,7 +297,7 @@
             habitué à une répartition réglée de la couleur sur la structure d’ensemble. Ces quelques principes de construction de l’image rappellent
             que l’ornement est avant tout un véhicule de dynamisme.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Signifier le Verbe : Parole de Vie et fracas du monde</head>
           <p>Si toutes les lettrines historiées se rattachent selon des modalités diverses à la Parole divine, reste à déterminer comment les formes
             ornementales s’articulent avec ce contexte scripturaire pour mieux en définir le sens éventuel. L’ornement s’impose comme une entité
@@ -321,7 +323,7 @@
             semble remplir une fonction de repoussoir pour la représentation sacrée, les scènes de combat ou les créatures animales incarnant
             l’agitation terrestre que le juste doit fuir en trouvant refuge sous le manteau de l’Écriture.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Actualiser le Verbe : image, <hi rend="i">lectio</hi> et <hi rend="i">memoria</hi>
          </head>
           <p>Si ces formes peuvent jouer un rôle sémantique par rapport à la représentation ou au texte qu’elles accompagnent, il ne faut pas oublier
@@ -355,9 +357,7 @@
             rhétorique antique pour mémoriser un discours. L’exubérance des formes dessine un panorama unique pour chaque livre biblique et vient
             marquer la mémoire du lecteur.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Réalisée à Sens dans les années 1180, la Bible de Saint-André-au-Bois est un exemple de la production hors <hi rend="i">scriptorium</hi>
           qui se met en place sous le règne de Philippe Auguste. Le caractère septentrional de son contenu témoigne de la circulation des textes entre
           les régions du Nord et Sens ou Paris, ainsi que le révèle également la présence de manuscrits sénonais à l’abbaye cistercienne de
@@ -375,12 +375,11 @@
           méditation, elles constituent alors le creuset dans lequel le lecteur s’approprie l’histoire sainte, exerce sa propre capacité d’invention
           et se lance dans la quête de l’infini.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Catalogue de l’ensemble des lettrines de la Bible de Saint-André-au-Bois. — Transcription du texte de la Passion des Macabées et stemma. —
           Tableau des préfaces et des sommaires. — Catalogue des principaux manuscrits parisiens et sénonais cités. — Répertoires iconographique et
           ornemental.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

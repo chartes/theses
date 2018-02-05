@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’Exposition universelle de 1867 : apothéose du Second Empire et de la génération de 1830</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’Exposition universelle de 1867 : apothéose du Second Empire et de la génération de 1830</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Vasseur, Edouard">Edouard Vasseur</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200123.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Phénomène majeur du <num>xix<hi rend="sup">e</hi></num> siècle, les Expositions universelles n’ont jusqu’à aujourd’hui guère fait l’objet d’une
           analyse historique approfondie, notamment dans leur rapport avec le contexte qui les a vu naître et avec l’état d’esprit des hommes qui les
           ont organisées. Une telle étude exige de prendre en compte trois facteurs, essentiels à toute manifestation de ce type: son organisation, le
@@ -58,14 +61,13 @@
           particulièrement intéressant, puisque sa tenue n’a pas dépendu directement de circonstances politiques fortes, mais qu’elle constitue
           l’aboutissement de la réflexion d’une génération: celle de 1830.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives déposées aux Archives nationales par la Commission impériale chargée de l’organisation de l’Exposition constituent le
           fondement de ce travail, qui s’est également appuyé sur les nombreux documents publiés à l’occasion de la manifestation, notamment sur les
           rapports du jury international.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’organisation de l’exposition</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’organisation de l’exposition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les débuts de l’exposition universelle de 1867</head>
           <p>Héritière d’une longue tradition d’expositions publiques entamée avec les salons artistiques de l’Académie royale de peinture et de
             sculpture et avec les expositions industrielles nationales mises en place à partir du Directoire, l’Exposition universelle de 1867
@@ -83,7 +85,7 @@
             général instaurant une procédure stricte de sélection des exposants, prévoyant une classification évolutive des produits, fondée non sur
             leur production mais sur leur consommation, et assurant à l’exposition une finalité sociale.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">«Le chaudron de monsieur Le Play»: Le palais du Champ de Mars et ses annexes</head>
           <p>La construction du palais de l’Exposition universelle constitua le premier test pour la Commission impériale. Le Play, tirant une
             nouvelle fois la leçon des difficultés rencontrées lors des Expositions universelles précédentes ­ incohérence du classement,
@@ -102,7 +104,7 @@
             la Commission impériale, soucieuse d’étendre le programme de l’Exposition, instaura sur l’île Saint-Germain de Billancourt un champ
             d’expérimentation agricole, qui contribua à rompre l’unité de l’espace d’exposition.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’installation de l’Exposition</head>
           <p>La volonté de Le Play de tirer les leçons des échecs précédents est également sensible du point de vue de l’organisation des services
             annexes de l’Exposition. Deux principes forts furent appliqués. Dans le souci de préserver les capitaux privés engagés dans l’Association
@@ -125,8 +127,8 @@
             commissions exécutives étrangères, des syndicats d’installation ou du jury -, l’Exposition universelle de 1867 put ouvrir ses portes et
             être officiellement inaugurée par le couple impérial à la date fixée, le 1<hi rend="sup">er</hi> avril.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le bilan économique de l’exposition</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le bilan économique de l’exposition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le contexte économique et psychologique</head>
           <p>Si l’Exposition universelle de 1867 ne répond à aucun objectif politique fort, elle s’inscrit en revanche dans un contexte marqué par la
             convergence de trois évolutions entamées unsiècle plus tôt: la libéralisation des échanges; la réforme de l’enseignement professionnel et
@@ -149,7 +151,7 @@
             critiques qui intervinrent à l’occasion de ces débats, l’Exposition universelle de 1867 constituait un moteur et une étape décisive pour
             vérifier le bien-fondé et l’efficacité des réformes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Bilan général de l’Exposition</head>
           <p>Plus qu’une révolution, l’Exposition universelle de 1867 fut le reflet de la situation économique mondiale. Au point de vue purement
             technique, la production d’acier fondu d’après le procédé Bessemer et l’industrie des couleurs artificielles confirmèrent les espoirs que
@@ -169,7 +171,7 @@
             commentateurs un développement économique à l’occidentale. Dans le même temps, l’Orient musulman ne demeurait, aux yeux des Européens,
             qu’un terrain d’étude esthétique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Quel bilan pour la France</head>
           <p>Première nation par le nombre d’exposants, la France tint vaillamment sa place de seconde puissance économique. La conclusion des traités
             de commerce ne lui paraissait aucunement néfaste puisqu’en dépit de difficultés conjoncturelles ­ guerre de Sécession, maladie du ver à
@@ -186,8 +188,8 @@
             qu’ils savaient faire preuve de qualité: c’était particulièrement le cas dans l’ingénierie civile et dans les arts décoratifs, où
             l’adoption pionnière du vocabulaire décoratif japonisant marquait le renouveau esthétique de la faïence.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le bilan social de l’exposition</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le bilan social de l’exposition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le regard de l’Exposition sur les ouvriers</head>
           <p>La principale nouveauté de l’Exposition universelle de 1867 fut de comporter un important volet social, comprenant une exposition de
             produits et une enquête ouvrière. Ces innovations traduisaient les idées du commissaire général, Frédéric Le Play, qui, dans la lignée de
@@ -206,7 +208,7 @@
             intolérante. Le succès du concours, mettant particulièrement en valeur les résultats obtenus par le patronat calviniste alsacien,
             constitua le succès de Frédéric Le Play, dont il révéla la perspicacité.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le regard des ouvriers sur l’Exposition … et sur leur condition</head>
           <p>Dans sa volonté de transformer l’Exposition universelle de 1867 en véritables états généraux de l’industrie et du monde du travail, la
             Commission impériale, encouragée par un pouvoir qui y voyait un moyen de valoriser sa politique sociale, veilla à ce que la population
@@ -233,7 +235,7 @@
             délégation, de reprendre pied après les deux procès successifs qui la frappèrent en 1868. Le processus qui devait conduire à la Commune
             était en marche.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Épilogue"/>
           <p>Ouverte le 1<hi rend="sup">er</hi> avril 1867, l’Exposition universelle connut des débuts difficiles, autant en raison de la poursuite
             des travaux d’installation, d’un contexte politique agité avec l’affaire du Luxembourg que des intempéries persistantes. Mais avec le mois
@@ -244,20 +246,17 @@
             victime de la part de ses concessionnaires. La dissolution de la Commission impériale ne put avoir lieu qu’au mois de juillet 1872, après
             une dernière réunion nostalgique à Versailles, le 4 août 1871.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’Exposition universelle de 1867 constitue un moment clé de l’histoire de ces grandes réunions commerciales et du Second Empire.
           Aboutissement des recherches menées par la génération de 1830, notamment par Frédéric Le Play, elle marque une transition avec les
           Expositions de la fin dusiècle, tout en introduisant une rupture avec l’irruption du spectaculaire. Il reste néanmoins de nombreuses
           questions à explorer, afin de mieux connaître les Expositions universelles mais aussi d’approfondir l’histoire des mentalités au XIX <hi rend="sup">e</hi> siècle.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Listes des membres de la Commission impériale, des comités d’admission, des syndicats d’installation, des commissions et commissariats
           exécutifs nationaux, du jury international, de la commission d’encouragement pour les études des ouvriers. ­ Répartition de l’espace entre
           nations dans le Palais du Champ de Mars. ­ Notices biographiques.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Édition de sermons d’Adémar de Chabannes et du compte rendu du concile de Limoges (novembre 1031)</title>
-        <title type="sub">(BnF lat. 2469, fol. 76-112v)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Édition de sermons d’Adémar de Chabannes et du compte rendu du concile de Limoges (novembre 1031)</title><title xml:lang="fr" type="sub">(BnF lat. 2469, fol. 76-112v)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Romaneix, Zénaïde">Zénaïde Romaneix</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200523.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>
           <hi rend="i">Adémar de Chabannes</hi>. — La vie et l’œuvre d’Adémar de Chabannes sont désormais bien connues. Un aspect important de son
           œuvre concerne son combat pour établir durablement l’apostolicité de saint Martial, premier évêque de Limoges et évangélisateur d’une partie
@@ -76,20 +79,19 @@
           sermons dont il existe une copie, dans le ms BnF lat. 5347, rédigé aux <num>xii<hi rend="sup">e</hi></num> et <num>xiii<hi rend="sup">e</hi></num> siècles, a
           été édité avec indication des variantes.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Objet et résumé des sermons</head>
-        <p>Les sermons 24 à 37 ont pour objet la deuxième translation des reliques de saint Martial conservées à Saint-Martial de Limoges. Celle-ci
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Objet et résumé des sermons</head>
+        <p n="1" type="chapter">Les sermons 24 à 37 ont pour objet la deuxième translation des reliques de saint Martial conservées à Saint-Martial de Limoges. Celle-ci
           eut lieu le 12 novembre 994 afin de mettre fin à une épidémie de mal des ardents. Parallèlement à cette translation une assemblée d’évêques
           se réunit pour prendre des mesures de paix.</p>
-        <p>Les sermons 38 à 46 ont été écrits pour commémorer la dédicace de la basilique du Sauveur, église abbatiale de Saint-Martial, reconstruite
+        <p n="2" type="chapter">Les sermons 38 à 46 ont été écrits pour commémorer la dédicace de la basilique du Sauveur, église abbatiale de Saint-Martial, reconstruite
           au début du <num>xi<hi rend="sup">e</hi></num> siècle et consacrée par une assemblée d’évêques le 18 novembre 1028. Ce sont ces neufs sermons qui
           contiennent le plus d’informations sur les événements du début du <num>xi<hi rend="sup">e</hi></num> siècle : un contexte troublé, les mesures prises
           par les évêques et les assemblées de paix.</p>
-        <p>Les vingt-trois sermons édités ici font l’objet d’un résumé en français assez détaillé pour pouvoir donner un aperçu du style d’Adémar, de
+        <p n="3" type="chapter">Les vingt-trois sermons édités ici font l’objet d’un résumé en français assez détaillé pour pouvoir donner un aperçu du style d’Adémar, de
           sa méthode de raisonnement, des renseignements historiques qui y sont contenus.</p>
-      </div><div n="2" type="part"><head n="Deuxième partie">La prédication au <num>xi<hi rend="sup">e</hi></num> siècle : l’exemple d’Adémar de Chabannes</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">La prédication au <num>xi<hi rend="sup">e</hi></num> siècle : l’exemple d’Adémar de Chabannes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La prédication en général</head>
           <p>La prédication est un genre littéraire à part entière, dont il convient de définir les caractéristiques et les différents types au terme
             d’une évolution qui prend sa source dans un modèle néo-testamentaire. La prédication des Pères de l’Église, très abondante et consistant
@@ -98,7 +100,7 @@
             vont se débarrasser de l’emprise de la prédication patristique pour laisser plus de place à une réflexion davantage personnelle. Les
             sermons d’Adémar de Chabannes annoncent déjà ce changement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les sermons du ms BnF lat. 2469</head>
           <p>
             <hi rend="i">Critique textuelle</hi>. — Adémar écrit en un latin classique, aisément compréhensible, tout en utilisant quelquefois des
@@ -126,7 +128,7 @@
             des événements qui concernent tous l’histoire de Limoges. Enfin, les derniers sermons se rapportent à un moment précis : ils ont été
             prononcés, ou du moins écrits, au moment même de la tenue à Limoges du concile de novembre 1031.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Intérêt théologique des sermons d’Adémar de Chabannes</head>
           <p>On ne peut réduire les sermons d’Adémar à une simple apologie, souvent exagérée, de l’apostolicité de saint Martial. Leur contenu
             présente également un réel intérêt sur le plan de la théologie, par l’utilisation des textes bibliques et leur exégèse. Adémar sait
@@ -134,8 +136,8 @@
             théologie chrétienne du salut. Plusieurs thèmes ont été ainsi dégagés de l’étude de ses sermons et de leur contenu théologique : la vision
             de Dieu et des personnes divines, celle de l’Église, la vie sacramentaire, la vision de l’homme et de son salut.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les conciles de Bourges et de Limoges en 1031 : un problème d’authenticité</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les conciles de Bourges et de Limoges en 1031 : un problème d’authenticité</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le problème des sources</head>
           <p>
             <hi rend="i">Adémar, source principale</hi>. — L’authenticité de ce compte rendu du concile de Limoges de novembre 1031 peut déjà être
@@ -150,7 +152,7 @@
             <hi rend="i">Les autres sources</hi>. — Les autres sources faisant mention des conciles de Bourges ou Limoges ne peuvent être mises au
             compte de l’authenticité des conciles. En effet, elles sont toutes postérieures à Adémar et découlent de ses écrits.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les conciles de Bourges et de Limoges et l’historiographie</head>
           <p>
             <hi rend="i">L’historiographie de la Paix de Dieu</hi>. — Avant de voir quelle utilisation a été faite du compte rendu du concile de
@@ -167,7 +169,7 @@
             locale. Cependant, il reste d’une authenticité douteuse et trop nombreux sont les historiens qui ont considéré cette source comme
             véridique.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une tâche difficile : démêler le faux du vrai chez Adémar</head>
           <p>
             <hi rend="i">Méthodes de critique</hi>. — En l’absence de sources contemporaines indépendantes d’Adémar, la seule méthode de critique,
@@ -192,8 +194,8 @@
             silence les discours des différents intervenants pour accréditer sa thèse. C’est la démarche qu’il avait déjà suivie lors de la rédaction
             de sa lettre en faveur de l’apostolicité de saint Martial.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Étude historique</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Étude historique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Adémar et saint Martial</head>
           <p>
             <hi rend="i">Affirmation de l’apostolicité de saint Martial</hi>. — La volonté d’Adémar d’affirmer clairement l’apostolicité de saint
@@ -218,7 +220,7 @@
             enluminé faisant figurer saint Martial à la suite des autres apôtres et la dédicace dans la basilique Saint-Pierre de Rome d’un autel
             consacré à saint Martial.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le mal des ardents et la deuxième translation de saint Martial</head>
           <p>
             <hi rend="i">Les sources</hi>. — L’épidémie de mal des ardents qui toucha l’Aquitaine en 994 est un événement qui figure dans de
@@ -239,7 +241,7 @@
             Christ à ses apôtres au moment de leur envoi en mission. À l’inverse, les ennemis de saint Martial et de son apostolicité se retrouvent
             aussitôt qualifiés d’ennemis de la paix et de la justice.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Législation de paix et pré-réforme grégorienne</head>
           <p>
             <hi rend="i">L’établissement de la paix</hi>. — Le principal obstacle à la paix, selon Adémar qui le répète dans ses sermons comme dans le
@@ -259,7 +261,7 @@
             affranchissements, de la prédication et des prières publiques (jeûnes et litanies), de la célébration de la messe et des offices. Enfin,
             des précisions sont apportées sur le déroulement des dépositions de prêtres et des ordinations sacerdotales.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Éléments d’histoire régionale</head>
           <p>
             <hi rend="i">La basilique du Sauveur</hi>. — Les neuf derniers sermons du ms BnF lat. 2469 ont été composés pour commémorer la dédicace de
@@ -273,15 +275,13 @@
             de nombreux monastères du Limousin. De plus, à partir des récits d’Adémar, on peut établir une chronologie plus ou moins exacte des
             épidémies et des famines du début du <num>xi<hi rend="sup">e</hi></num> siècle et des réponses religieuses qui y ont été apportées.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Édition</head>
+      </div><div type="conclusion" n="6"><head>Édition</head>
         <p>La présente édition prend en compte les fol. 76 à 112v du ms BnF lat. 2469, la première moitié du manuscrit (fol. 1-76) ayant déjà été
           éditée. Les fol. 76 à 96 contiennent vingt-trois sermons d’Adémar, numérotés de 24 à 46, et découpés en paragraphes. L’édition du compte
           rendu distingue les deux premières journées du concile de Limoges. Chaque journée a été divisée en une soixantaine de chapitres dont une
           liste des intitulés est donnée en annexe.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Chronologie des différents événements relatés et datés selon Adémar dans ses sermons et dans le compte rendu du concile de Limoges. –
           Table des incipit des vingt-trois sermons édités et des intitulés des chapitres du concile de Limoges. – Cartes de Limoges et de l’Aquitaine
           en l’an mil.. – Édition de quatre documents relatifs à la question de l’apostolicité de saint Martial : une liste dressée par Adémar des
@@ -291,7 +291,6 @@
             Sacrae Scripturae</hi>, <hi rend="i">index fontium</hi>(pour les citations explicites d’autres auteurs), <hi rend="i">index
             doctrinalis</hi>(pour les occurrences de termes théologiques).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

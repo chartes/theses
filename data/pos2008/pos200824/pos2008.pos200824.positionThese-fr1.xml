@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Imprimer et illustrer le théâtre sous Louis XIV</title>
-        <title type="sub">Étude sur les frontispices des Éditions de france, des pays-bas et des provinces-unies</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Imprimer et illustrer le théâtre sous Louis XIV</title><title xml:lang="fr" type="sub">Étude sur les frontispices des Éditions de france, des pays-bas et des provinces-unies</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Naud, Mariette">Mariette Naud</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200824.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Souvent assimilé, à tort, au titre gravé, le frontispice est l’une des parties liminaires d’un livre imprimé. Il consiste en une
           illustration peinte ou gravée en pleine page, placée en vis-à-vis du titre typographique ou, parfois, avant ou après ce dernier. Les pièces
           de théâtre françaises imprimées présentent la particularité d’être très fréquemment ornées de telles images, contrairement à d’autres pays
@@ -67,7 +70,7 @@
           de ces illustrations, de repérer les liens existant entre le texte et l’image, et de s’interroger sur l’adéquation de l’image et de la
           réalité scénique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Bien étudiés pour la première moitié du siècle, les frontispices de pièces de théâtre n’ont fait l’objet que d’études ponctuelles pour le
           règne de Louis XIV. Il a donc fallu travailler avec les quelques articles existants et avec des travaux plus généraux portant sur l’histoire
           de l’illustration, du théâtre, ou encore de l’édition à l’époque moderne.</p>
@@ -89,9 +92,8 @@
           métier de graveur ou bien encore des mémoires biographiques. Peu de sources manuscrites se sont révélées pertinentes : aucun contrat entre
           libraires, auteurs et illustrateurs n’a éclairé cette étude, malgré nos recherches.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Imprimer le théâtre au second <num>xvii<hi rend="sup">e</hi></num> siècle</head>
-        <p>Pour tenter de comprendre l’originalité française, il fallait raisonner non seulement sur la production illustrée, mais plus généralement
+          <div n="3" type="part"><head n="0" type="chapter">Imprimer le théâtre au second <num>xvii<hi rend="sup">e</hi></num> siècle</head>
+        <p n="1" type="chapter">Pour tenter de comprendre l’originalité française, il fallait raisonner non seulement sur la production illustrée, mais plus généralement
           sur l’ensemble des éditions, étudier les ouvrages qui reçoivent des frontispices et les comparer à ceux qui en sont privés. Il fallait
           préserver le lien unissant image, texte de la pièce et représentation elle-même, et tenter de comprendre les procédés permettant le passage
           de la scène à la page, ainsi que la réception de ces ouvrages, dans le contexte très particulier de l’édition au <num>xvii<hi rend="sup">e</hi></num>
@@ -102,7 +104,7 @@
           et Provinces-Unies, en revanche, connaissent une prospérité sans précédent et constituent le centre d’un nouvel équilibre éditorial en
           Europe. Dans ce contexte, la prédominance d’ouvrages religieux est notable, mais la littérature, et notamment le théâtre, sont très en vogue
           depuis les années 1630.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">De la scène à la page</head>
           <p>Au <num>xvii<hi rend="sup">e</hi></num> siècle, et plus précisément à partir des années 1630, le théâtre, genre par nature oral et fait pour la
             représentation, prend son essor en tant que genre imprimé. Mais à la frénésie qui entoure le théâtre, sur scène comme sur papier, succède
@@ -130,7 +132,7 @@
             avec peu d’attention. De plus, jamais le texte écrit ne supplante la représentation et le frontispice n’est que l’un des moyens mis en
             œuvre par le libraire pour évoquer la pièce en action et atténuer la perte de sens inhérente au passage de la scène à la page.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">La production imprimée de pièces de théâtre</head>
           <p>On ne peut évaluer la part de pièces effectivement rédigées au cours de la période. Il faut se contenter d’analyser le corpus imprimé,
             sans pouvoir estimer quelle proportion de pièces se voyait honorée d’un passage sous presse.</p>
@@ -170,22 +172,22 @@
             littérature et de théâtre. Tout au plus peut-on esquisser un portrait impressionniste du lectorat, limité à quelques classes de la
             société, urbaines, mondaines, éduquées et amatrices de nouveautés.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les pièces de théâtre illustrées</head>
-        <p>Cette partie s’intéresse aux éditions illustrées et vise à les comparer à la production globale de pièces imprimées, afin de cerner les
+      </div><div n="4" type="part"><head n="0" type="chapter">Les pièces de théâtre illustrées</head>
+        <p n="1" type="chapter">Cette partie s’intéresse aux éditions illustrées et vise à les comparer à la production globale de pièces imprimées, afin de cerner les
           particularités de chacun des corpus. Elle cherche également à souligner les rapports entre auteurs, libraires et illustrateurs.</p>
-        <p>Il n’est pas chose facile d’étudier un livre illustré : pour l’historien du livre, le frontispice n’est que l’une des parties liminaires de
+        <p n="2" type="chapter">Il n’est pas chose facile d’étudier un livre illustré : pour l’historien du livre, le frontispice n’est que l’une des parties liminaires de
           l’ouvrage et son étude est superficielle ; pour l’historien de l’image, le rapport de force est inversé et l’ouvrage contenant la gravure
           est d’importance secondaire. L’historien de l’illustration se doit donc d’avoir une approche pluridisciplinaire, en soulignant les liens
           existant entre l’image et son support pris dans son acception large. En outre, l’estimation du nombre d’ouvrages illustrés – toutes
           disciplines confondues – est quasiment impossible et l’on ne peut que se risquer à de vagues estimations, oscillant entre un ouvrage sur
           trois selon Jeanne Duportal à un ouvrage sur dix pour Michel Pastoureau.</p>
-        <p>Le second <num>xvii<hi rend="sup">e</hi></num> siècle n’a en outre jamais réellement déchaîné les passions, coincé entre le XVI <hi rend="sup">e</hi> siècle et ses gravures sur bois à la fois simples et virtuoses et le <num>xviii<hi rend="sup">e</hi></num> siècle et ses eaux-fortes au
+        <p n="3" type="chapter">Le second <num>xvii<hi rend="sup">e</hi></num> siècle n’a en outre jamais réellement déchaîné les passions, coincé entre le XVI <hi rend="sup">e</hi> siècle et ses gravures sur bois à la fois simples et virtuoses et le <num>xviii<hi rend="sup">e</hi></num> siècle et ses eaux-fortes au
           dessin souple. Jugée sèche et maladroite, la gravure d’illustration sous Louis XIV est en outre accusée d’entretenir un langage rhétorique
           édifié dans les années 1630 sans plus en comprendre les règles et les subtilités. A partir de 1670, la production se distingue par une
           qualité fort médiocre, dont les raisons sont multiples : concurrence étrangère forte, disparition de toute une génération de graveurs
           talentueux, politique de Colbert peu favorable à l’épanouissement d’un art toujours considéré comme mineur, inspiration guidée par les
           poncifs.</p>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre premier">La production : généralités</head>
           <p>Une analyse chiffrée permet de dresser un portrait de la production illustrée de pièces de théâtre et de la comparer à la production
             totale. 246 des 1 135 éditions de pièces sont pourvues d’une ou plusieurs illustrations, soit 21,6 % de la production totale. Une édition
@@ -230,7 +232,7 @@
             une préface de l’auteur mentionne les illustrations de l’édition, que ce soit pour vanter le soin apporté à cette dernière ou pour rendre
             hommage à l’illustrateur.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre II">Le monde de la gravure et le théâtre</head>
           <p>Dessinateur et graveur se complètent parfois pour produire une image ; le plus souvent, un seul illustrateur se charge de sa réalisation.
             Certains signent, d’autres non – la présence de la signature du dessinateur est assez rare, celle des graveurs un peu plus fréquente ;
@@ -263,7 +265,7 @@
             d’ouvrages sans envergure. Ceux dont le nom nous est connu ne sont pas toujours plus faciles à cerner : quels hommes, quelles carrières
             dissimulaient ces signatures ? Presque toujours, les gravures sont le seul témoignage de leur existence.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre III">Les auteurs illustrés</head>
           <p>On a vu que les auteurs s’intéressaient rarement à l’édition de leurs pièces et que même des dramaturges comme Molière ne considéraient
             souvent celle-ci que comme un pis-aller. L’intérêt des auteurs pour leurs illustrations est encore moins bien documenté : aucun mémoire,
@@ -302,10 +304,10 @@
             nouveautés et de succès immédiats, achetant puis jetant ces livrets de piètre qualité, et d’autre part des amateurs plus exigeants,
             acheteurs de recueils coûteux et agrémentés de nombreux frontispices.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les images</head>
-        <p>Les problématiques sont multiples : le frontispice est-il une page de titre, une publicité ? Le rapport entre la scène et l’image, puis
+      </div><div n="5" type="part"><head n="0" type="chapter">Les images</head>
+        <p n="1" type="chapter">Les problématiques sont multiples : le frontispice est-il une page de titre, une publicité ? Le rapport entre la scène et l’image, puis
           entre l’image et le texte, est-il étroit et fidèle ? Quelles conclusions tirer des phénomènes de copie et de remploi ?</p>
-        <p>Les fonctions de l’image ont été souvent évoquées par les sémiologues. Dès lors que celle-ci est insérée dans un livre, son rapport au
+        <p n="2" type="chapter">Les fonctions de l’image ont été souvent évoquées par les sémiologues. Dès lors que celle-ci est insérée dans un livre, son rapport au
           texte devient une question fondamentale que l’on ne peut éluder. Etymologiquement, l’illustration projette effectivement un éclairage
           nouveau sur le texte mais, bien souvent, le rapport inverse est tout aussi vrai : consulter le texte élucide certes le thème de
           l’illustration, mais la contemplation de celle-ci crée à son tour un sens nouveau. Placée en tête d’ouvrage, elle donne une première idée du
@@ -315,7 +317,7 @@
 <hi rend="sup">e</hi> siècle marqué par des images allégoriques, rigides et complexes, aux images claires, inventives et plaisantes du
           <num>xviii<hi rend="sup">e</hi></num> siècle. Les frontispices de théâtre sont en effet un merveilleux exemple des libertés que sait prendre l’image à
           une époque où on la croit figée dans une raideur toute classique.</p>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre premier">Le frontispice, page de titre ?</head>
           <p>L’insertion d’une image en tête des livres remonte à l’apparition du <hi rend="i">codex</hi> dont le découpage en pages permettait de
             créer diverses parties liminaires. D’abord purement ornementale, la peinture puis la gravure initiale sert rapidement à mettre en valeur
@@ -341,7 +343,7 @@
             sous la forme d’un tableau nettement distinct du titre typographique. Quelques illustrations non narratives persistent de façon marginale
             et, surtout, de façon très stéréotypée.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre II">L’image et la scène</head>
           <p>Les images figurant la scène et la représentation théâtrale de façon plus ou moins explicite posent un certain nombre de problèmes :
             peuvent-elles avoir une valeur documentaire et nous renseigner sur la scénographie et les décors du <num>xvii<hi rend="sup">e</hi></num> siècle ?
@@ -369,7 +371,7 @@
             et observe bien plus souvent une certaine idée du théâtre, représentée à l’aide d’un certain nombre d’éléments iconiques
             conventionnels.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre III">Le texte et l’image</head>
           <p>Les frontispices s’appuyant directement sur le texte de la pièce qu’ils illustrent constituent plus de 80 % du corpus d’étude. Il est
             parfois facile de repérer de quelle scène est extrait l’événement représenté, lorsque le graveur a choisi un moment-clé de la pièce, mais
@@ -398,7 +400,7 @@
             frontispices allégoriques qui condensaient à leur manière l’esprit de la pièce ; ceux de la seconde moitié du siècle perpétuent cette
             tradition, à la différence près qu’ils le font au travers d’une image narrative.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre IV">Copies et remplois</head>
           <p>Copies et remplois sont des phénomènes indissociables de l’illustration à cette période ; rares sont les cas de pièces ayant fait
             l’objet de plusieurs frontispices vraiment différents au second <num>xvii<hi rend="sup">e</hi></num> siècle. Le plus souvent, l’illustration
@@ -429,9 +431,7 @@
             a ni modifié le thème, ni le sujet, ni les grandes lignes directrices. Bien que maladroits, les frontispices imaginés par les graveurs de
             la seconde moitié du siècle ont étendu leur influence bien au-delà de 1715.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le frontispice tient donc une place de choix dans la succession de pièces liminaires qui séparent le lecteur de la première page du texte.
           D’abord essentiellement publicitaire, il perd progressivement ce rôle, mais ne nous y trompons pas : il est toujours là pour séduire le
           lecteur, et s’il ne sert plus de vitrine pour le libraire, il vise néanmoins toujours à faire acheter l’ouvrage. Bien que de médiocre
@@ -444,10 +444,9 @@
           significative, en le poussant au-delà des années 1710 : la transformation que l’on peut déceler dans les modes de représentation au cours de
           la période étudiée mériterait que l’on vérifie dans quelle mesure celle-ci se poursuit au <num>xviii<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Charte de Saint-Jean de Luz. — Préface des Précieuses ridicules.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

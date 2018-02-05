@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Aspects militaires de la guerre pour la succession de Bourgogne, de Nancy au traité d’Arras (5 janvier 1477-23 décembre 1482)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Aspects militaires de la guerre pour la succession de Bourgogne, de Nancy au traité d’Arras (5 janvier 1477-23 décembre 1482)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Sablon Du Corail, Amable">Amable Sablon Du Corail</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200122.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Alors que les conséquences politiques du conflit suscité par la succession de Charles le Téméraire ont été, à juste titre, largement
           développées par les historiens, on en a négligé les aspects militaires. Ils présentent pourtant un grand intérêt. Au-delà des aléas de cette
           guerre de près de six années, on y voit à l’œuvre les grandes réformes militaires de Louis XI, ainsi que le devenir des institutions
@@ -70,7 +73,7 @@
           mettre sur pied, pour Maximilien une armée capable d’assurer seule la défense de ses Etats, pour Louis XI un instrument de conquête qui lui
           aurait permis de s’affranchir de la diplomatie et du consentement des habitants des provinces qu’il convoitait.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources sont nombreuses, mais le plus souvent indirectes. En effet, il ne reste que des épaves des archives de la Chambre des comptes
           des rois de France, et les registres des trésoriers des guerres et des receveurs de l’artillerie des ducs de Bourgogne, si riches pour la
           période précédente, ont tous disparu. Malgré cela, la recette générale des finances bourguignonnes constitue toujours une source très riche,
@@ -80,16 +83,15 @@
           française. Il autorise une approche de la vie quotidienne des hommes de l’ordonnance royale, très utilement complétée par le “ Kalendrier
           des guerres de Tournay ”, chronique rédigée au jour le jour par un clerc de Tournai, Jean Nicolay, entre 1477 et 1478.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La guerre de succession de Bourgogne (1477-1482): déroulement, aspects politiques et diplomatiques</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La guerre de succession de Bourgogne (1477-1482): déroulement, aspects politiques et diplomatiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le bateau ivre (5 janvier 1477-avril 1477)</head>
           <p>Après la mort de Charles le Téméraire, Louis s’emploie à conquérir l’héritage de sa filleule, Marie de Bourgogne. Il dispose alors d’une
             liberté de manœuvre presque complète, car la jeune duchesse doit faire face à de violentes révoltes urbaines, tandis que les Anglais
             assistent sans réagir au reflux de leurs anciens alliés. La conquête prend l’allure d’une promenade militaire, jalonnée par les défections
             des principaux chefs bourguignons et les redditions sans coup férir des principales villes de Bourgogne et de Picardie.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Conquête de l’Artois et invasion du Hainaut par Louis XI (avril 1477-septembre 1477)</head>
           <p>Après les succès des premiers mois, Louis XI se heurte à la résistance des Bourguignons qui, à défaut d’être organisée, se fait de plus
             en plus farouche. La révolte d’Arras, de la Bourgogne et de la Franche-Comté scelle la fin des triomphes faciles.</p>
@@ -98,7 +100,7 @@
             infligent des défaites sanglantes aux armées rassemblées par les Flamands. L’occupation de Tournai met en outre à portée de leurs
             chevauchées une grande partie de la Flandre et du Hainaut.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Dernières tentatives de sortir de l’impasse, échec de Louis XI en Hainaut (1473) et de Maximilien en Artois (1479)</head>
           <p>L’impasse militaire devient complète lorsque Louis XI, puis Maximilien échouent dans leurs dernières tentatives d’arracher la victoire
             en 1478 et 1479. Le roi, après avoir évacué le comté de Hainaut et diminué les effectifs de ses garnisons, se cantonne alors à une stricte
@@ -106,15 +108,15 @@
             Artois, malgré une victoire de prestige chèrement arrachée à Guinegatte, suscite une profonde déception parmi ses sujets, qui va peu à peu
             se muer en hostilité.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La forteresse assiégée (1430-1482)</head>
           <p>A partir de 1480, la situation devient de plus en plus intenable pour les Bourguignons. En butte aux rebellions de la Gueldre, des villes
             de Hollande, des seigneurs du Luxembourg, Maximilien ne peut faire autre chose que courir d’un incendie à l’autre. La mort de Marie de
             Bourgogne, la révolte des Gantois et la prise d’Aire par Philippe de Crèvecoeur le contraignent finalement à signer le traité d’Arras, qui
             marque le démantèlement de l’Etat bourguignon.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’armée bourguignonne de 1477 à 1482</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’armée bourguignonne de 1477 à 1482</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les ressources financières de Maximilien: armée du duc ou armée du pays</head>
           <p>Depuis les Etats généraux de 1477, ce sont les provinces qui déterminent le montant des impôts accordés à Marie et à Maximilien. S’ils
             consentent des sacrifices financiers très importants jusqu’en 1479, l’échec des campagnes militaires de 1479 en Artois sonne le glas d’une
@@ -123,7 +125,7 @@
             L’administration ducale réussit à recouvrer ses prérogatives, mais tout est à nouveau remis en cause par la mort de Marie de Bourgogne,
             les Etats de Flandre prétendant lever et payer eux-mêmes leurs contingents.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’armée permanente</head>
           <p>Sur le modèle de l’armée de Charles le Téméraire, des compagnies d’ordonnance sont à nouveau instituées en novembre 1477. Leurs effectifs
             varient entre 300 et 1200 lances de 1477 à 1480, puis s’effondrent à 600 lances à partir de janvier 1481. Même avec le renfort de l’hôtel
@@ -132,7 +134,7 @@
             outre les Bourguignons à affaiblir les garnisons opposées aux Français. Lorsque Marie de Bourgogne meurt, l’armée ducale est presque aussi
             inexistante qu’en 1477.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le crépuscule de l’infanterie communale</head>
           <p>La mort de Charles le Téméraire déboucha sur un renouveau de l’emploi des contingents de piquiers des villes de Flandre et de Brabant.
             Seuls à assurer la défense des Etats bourguignons durant les six premiers mois de 1477, ils contribuent dans une large mesure à endiguer
@@ -141,7 +143,7 @@
             inadaptées aux nouvelles formes de la guerre, qui exige un professionnalisme croissant. Aussi l’arrière-ban roturier n’est-il plus utilisé
             après 1480 que pour la garde des villes et des passages, ou en cas d’extrême urgence.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’armée bourguignonne à l’œuvre</head>
           <p>Maximilien doit en permanence faire face à une famine financière qui l’empêche de payer régulièrement ses armées. Une indiscipline
             chronique en résulte, qui limite beaucoup la portée de ses entreprises. Les soldats, payés avec parfois plus de six mois de retard,
@@ -151,14 +153,12 @@
             seulement après le début de la campagne. Le jeune duc, épris de prouesse chevaleresque, est ainsi confronté à une réalité qui ne
             correspond que rarement à ses ambitions.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Pièces justificatives</head>
+      </div><div type="conclusion" n="5"><head>Pièces justificatives</head>
         <p>Capitaines français soldés par Guillaume de la Croix et Denis Le Breton, trésoriers des guerres, en 1476, 1478 et 1479. ­ L’aide apportée
           par le duc aux combattants de Guinegatte, à travers les dons figurant dans la recette générale des finances des Etats bourguignons. -
           Extraits des comptes du receveur de l’artillerie des ducs de Bourgogne.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Etat des paiements des gens de guerre, réalisé à partir des archives de la recette générale des finances des Etats bourguignons. -
           Courriers adressés par Maximilien à ses capitaines, conservés dans les archives de la recette générale des finances des Etats bourguignons.
           - Prosopographie des capitaines bourguignons. ­ L’armée française, une écrasante supériorité de moyens : l’organisation militaire française
@@ -166,7 +166,6 @@
           d’escarmouche. - Les étrangers dans l’armée de Maximilien. - La tactique militaire au <num>xv<hi rend="sup">e</hi></num> siècle à travers l’exemple de
           la bataille de Guinegatte.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

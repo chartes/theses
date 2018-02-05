@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De processione Spiritus Sancti&lt;/hi&gt;[ &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;De Spiritu Sancto&lt;/hi&gt;] de Théodulfe d’Orléans</title>
-        <title type="sub">Édition, étude des sources et commentaire.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le <hi rend="i">De processione Spiritus Sancti</hi>[ <hi rend="i">De Spiritu Sancto</hi>] de Théodulfe d’Orléans</title><title xml:lang="fr" type="sub">Édition, étude des sources et commentaire.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Ménage, Christian">Christian Ménage</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200029.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Edité une première fois en 1646 par Jacques Sirmond, sous le titre <hi rend="i">De Spiritu Sancto</hi>, l’ouvrage de Théodulfe d’Orléans
           est en fait intitulé dans les manuscrits <hi rend="i">De processione Spiritus Sancti</hi>, titre qui mérite d’être rétabli. Ce recueil de
           textes patristiques fut composé à la demande de Charlemagne pour  réparer le concile d’Aix de 809, qui devait introduire la formule du <hi rend="i">Filioque</hi> dans le <hi rend="i">Credo</hi> pour exprimer la double procession du Saint-Esprit. Contrairement aux théologiens
@@ -62,13 +65,12 @@
           ou du moins les bibliothèques avec lesquelles il devait être en relation. Enfin sont envisagés les procédés de composition mis en œuvre par
           Théodulfe.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Cinq manuscrits transmettent l’ensemble du florilège, un sixième ne contient que la préface en vers. Quatre manuscrits dont s’est
           vraisemblablement servi Théodulfe d’Orléans ont été retrouvés.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Edition</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Edition</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Théodulfe d’Orléans et le <hi rend="i">De processione Spiritus Sancti</hi>
         </head>
           <p>Le Wisigoth Théodulfe d’Orléans est un personnage éminent du règne de Charlemagne, connu essentiellement pour son œuvre poétique et son
@@ -77,7 +79,7 @@
             attribuer des ouvrages qu’ils n’ont pas écrits. Théodulfe s’est manifestement efforcé de citer des Pères grecs et a montré sa préférence
             pour les auteurs espagnols tels que Prudence, dont les vers viennent clore l’ensemble des citations.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Introduction à l’édition</head>
           <p>L’édition présente l’intérêt de s’appuyer sur un manuscrit contemporain de l’auteur, le manuscrit London, Br. Libr. Harley 3024. La
             tradition manuscrite s’est poursuivie jusqu’au début du <num>xvi<hi rend="sup">e</hi></num>  siècle. Elle comprend le manuscrit Tours, Bibl. mun.,
@@ -86,14 +88,14 @@
 <hi rend="sup">e</hi>  siècle) et Paris, Bibl. nat. de Fr., lat. 5941 A (XI<hi rend="sup">e</hi>  siècle), qui ne contient que la
             préface. Ces manuscrits descendent directement ou indirectement du manuscrit de Londres.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Edition</head>
           <p>L’édition s’attache à respecter, dans la mesure du possible, le texte et l’orthographe du manuscrit de Londres. L’apparat retient non
             seulement les variantes des manuscrits, niais aussi des variantes significatives présentes dans les éditions des textes patristiques
             cités, afin de préparer la recherche des sources manuscrites de Théodulfe.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les sources de Théodulfe</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les sources de Théodulfe</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le manuscrit Berlin, Staatsbibliothek Phillipps 1671 (Rose 78)</head>
           <p>Le manuscrit Berlin, Staatsbibliothek Phillipps 1671 (Rosé 78), est un recueil de textes doctrinaux contenant quinze citations du
             florilège. La collation des textes n’interdit pas de supposer que  Théodulfe s’en soit servi, même s’il apparaît qu’il ne l’a pas annoté.
@@ -103,7 +105,7 @@
             son secrétaire. De plus, ce dernier manuscrit renferme des textes utilisés par Leidrade et par Florus, deux Wisigoths installés à Lyon.
             L’hypothèse de relations entre Théodulfe et la colonie wisigothique de Lyon est plausible.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Autres manuscrits de Fleury</head>
           <p>En fait, plusieurs manuscrits de Fleury semblent avoir intéressé Théodulfe, qui en a certainement utilisé deux autres : le manuscrit
             Orléans, Bibl. mun., 160 (137) du <num>ix<hi rend="sup">e</hi></num>  siècle, contenant le <hi rend="i">De Trinitate</hi> de saint Augustin, dont
@@ -111,7 +113,7 @@
             267 des <num>vi<hi rend="sup">e</hi></num> -VII<hi rend="sup">e</hi>  siècles, contenant l’<hi rend="i">Ad Monimum</hi> de Fulgence de Ruspe, qui a
             pu parvenir à Fleury dès le début du <num>ix<hi rend="sup">e</hi></num>  siècle. En outre, deux autres textes étaient à Fleury au début du IX <hi rend="sup">e</hi>  siècle : les <hi rend="i">Moralia in Job</hi> de Grégoire le Grand, dont il reste un fragment du manuscrit, et les <hi rend="i">Sententiae</hi> d’Isidore de Séville, qui sont citées dans un autre florilège composé à l’abbaye.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un manuscrit de Saint-Mesmin de Micy : Bern, Burgerbibliothek 224</head>
           <p>Une abbaye encore plus proche d’Orléans que ne l’est Fleury pouvait aussi fournir des textes à Théodulfe : l’abbaye Saint-Mesmin de
             Micy, que certains considèrent comme son <hi rend="i">scriptorium.</hi> Le manuscrit Bern, Burgerbibliothek 224 y fut vraisemblablement
@@ -119,7 +121,7 @@
             revanche, un manuscrit de Micy contenant les <hi rend="i">Sententiae</hi> d’Isidore de Séville n’a pas servi à la constitution du
             florilège.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Autres sources</head>
           <p>Théodulfe d’Orléans tira trente-sept citations de dix-neuf œuvres dont les manuscrits n’ont pas été repérés. Il est cependant possible
             de considérer les variantes des textes et les types de sources utilisés. Il a manifestement corrigé le texte du <hi rend="i">De
@@ -137,14 +139,14 @@
             801-802. Les relations avec Lyon paraissent probables, sans toutefois pouvoir être prouvées. En revanche, Théodulfe semble ne pas avoir
             recouru aux manuscrits de l’abbaye de Saint-Denis.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La composition du florilège</head>
-        <p>Théodulfe ne s’est pas contenté de présenter, au gré de ses lectures, les citations patristiques sur la double procession du Saint-Esprit.
+      </div><div n="5" type="part"><head n="0" type="chapter">La composition du florilège</head>
+        <p n="1" type="chapter">Théodulfe ne s’est pas contenté de présenter, au gré de ses lectures, les citations patristiques sur la double procession du Saint-Esprit.
           Il a cherché à organiser son travail de compilation afin de guider son lecteur, tout en laissant la place la plus large à la pensée des
           Pères.</p>
-        <p>Il fait précéder son florilège d’une préface en vers, par laquelle il dédie son œuvre à l’empereur Charlemagne. Le <hi rend="i">libellas</hi> personnifié vient se présenter au dédicataire, selon un procédé rhétorique utilisé par Martial dans l’un de ses poèmes ;
+        <p n="2" type="chapter">Il fait précéder son florilège d’une préface en vers, par laquelle il dédie son œuvre à l’empereur Charlemagne. Le <hi rend="i">libellas</hi> personnifié vient se présenter au dédicataire, selon un procédé rhétorique utilisé par Martial dans l’un de ses poèmes ;
           l’influence d’Ovide, de Virgile, de Prudence et de Dracontius est aussi perceptible. Surtout, Théodulfe sait mettre ses vers au service de
           la théologie, pour exprimer la double procession : <hi rend="i">quod Patre procédat seu Prole Spiritus almus</hi>(v. 11).</p>
-        <p>Il cite ensuite quatre groupes de textes classés dans un ordre chronologique général ; les Pères grecs et les Pères latins antérieurs à
+        <p n="3" type="chapter">Il cite ensuite quatre groupes de textes classés dans un ordre chronologique général ; les Pères grecs et les Pères latins antérieurs à
           saint Augustin, l’évêque d’Hippone, puis les Pères postérieurs. Théodulfe intervient de trois manières : en choisissant les textes, en
           ordonnant les citations et en rédigeant les introductions. Il extrait en effet certains textes où n’est pas exprimée la double procession,
           mais qui apportent des arguments en faveur de sa démonstration. En revanche, il cite de manière exhaustive tous les passages sur la double
@@ -159,9 +161,7 @@
           œuvres, mais réunit en un seul ensemble. Les introductions lui servent à insérer ces extraits dans une structure générale. Il ne se contente
           pas d’y donner le titre de l’œuvre et le nom de l’auteur, en résumant le contenu de la citation, mais déduit parfois la double procession en
           s’appuyant à l’occasion sur un argument développé dans un texte précédent.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le <hi rend="i">De processione Spiritus Sancti</hi> reflète une pratique de la théologie propre à l’époque carolingienne, fondée sur
           l’étude et l’assimilation de la pensée des Pères de l’Eglise. Son influence postérieure n’est pas négligeable : le traité fut largement
           réutilisé par Enée de Paris dans le troisième quart du <num>ix<hi rend="sup">e</hi></num>  siècle, copié en Italie du nord aux <num>x<hi rend="sup">e</hi></num>
@@ -175,11 +175,10 @@
           l’introduction du <hi rend="i">Filioque</hi> dans le <hi rend="i">Credo.</hi>
       </p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Planches des manuscrits du <hi rend="i">De processione Spiritus Sancti</hi> et des manuscrits utilisés par Théodulfe d’Orléans. ­ Tableaux
           récapitulatifs des collations. ­ Index.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

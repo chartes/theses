@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Entre politique et religion</title>
-        <title type="sub">Les arts à la cour de Charles de Blois et Jeanne de Penthièvre</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Entre politique et religion</title><title xml:lang="fr" type="sub">Les arts à la cour de Charles de Blois et Jeanne de Penthièvre</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Rohou, Julie">Julie Rohou</author>
       </titleStmt>
       <editionStmt>
@@ -38,37 +40,37 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2012.pos201223.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction </head>
+          <div type="introduction" n="1"><head>Introduction </head>
     <p>Le <num>xiv</num><hi rend="sup">e</hi> siècle, marqué par des troubles à la fois politiques, économiques et sociaux, fut aussi un grand siècle d’art. Les prestigieuses commandes de quelques grands mécènes comme Charles V ou Jean de Berry ont traversé les siècles pour parvenir jusqu’à nous, et ont fortement conditionné la connaissance que nous avons de ce siècle du point de vue de l’histoire de l’art et de la commande artistique. Néanmoins, ces exemples fameux faussent notre perception de ce qu’était la véritable place des arts et du mécénat dans le milieu nobiliaire en général, dans des familles qui n’avaient ni le goût ni les moyens presque illimités des princes de fleurs de lys. Le mécénat princier de la première partie du siècle, en particulier, est mal connu et mériterait qu’on s’y intéresse de plus près. </p>
     <p>Charles de Blois, candidat malheureux au trône de Bretagne, tiraillé entre les impératifs de son rang et son aspiration à une vie ascétique, apparaît comme un exemple représentatif de cette époque tout en conservant des singularités qui en font un sujet d’étude intéressant. Si par son rang, il appartient à la plus haute noblesse de France, les ressources du duché de Bretagne et les aléas politiques de la période ne lui donnent pas les même « facilités » que ses cousins Valois pour la commande artistique, sans compter qu’il ne manifeste pas le même tempérament de collectionneur que ces derniers. Son rapport aux arts est très différent de celui que l’on connaît aux grands mécènes de la fin du siècle. Pour lui, la commande artistique n’est en aucun cas une fin en soi, mais toujours un moyen : à la fois glorification de Dieu par l’intermédiaire de beaux objets, affirmation de son rang en affichant le luxe requis, et outil idéologique dans la lutte contre son rival Montfort. </p>
     
     
     
      </div>
-              <div type="sources"><head>Sources </head>
+          <div type="sources" n="2"><head>Sources </head>
     <p>Une des difficultés majeures rencontrées dans cette étude est le caractère parcellaire et subjectif des sources conservées. Cette indigence de sources écrites, à laquelle les historiens ont proposé diverses explications, comme la guerre ou une destruction volontaire par l’ennemi, est néanmoins compensée par une source exceptionnelle à tous points de vue, le procès de canonisation de Charles de Blois, édité par Albert de Sérent, sur lequel se base une bonne partie de l’étude. Parmi les autres sources éditées, ont été particulièrement utiles le recueil d’actes de Charles de Blois et Jeanne de Penthièvre, ainsi que celui de Jean IV, tous deux édités par Michael Jones. Des documents complémentaires ont été mis à profit, provenant des archives départementales de Loire-Atlantique et des Côtes-d’Armor. Enfin, les fonds de la Médiathèque de l’architecture et du patrimoine concernant les édifices étudiés dans la thèse se sont révélés riches d’enseignements. </p>
     
     
     
     </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Charles de Blois et son temps </head>
+          <div n="3" type="part"><head n="0" type="chapter">Charles de Blois et son temps </head>
     
     
     
-      <div>
+      <div n="1" type="chapter">
 <head n="Chapitre premier">Les comtes de Penthièvre avant Charles de Blois </head>
     
     <p><hi rend="i">L’apanage de Penthièvre : rappel historique. —</hi> La première création de l’apanage de Penthièvre, regroupant les deux comtés limitrophes de Tréguier et de Penthièvre, remonte à 1035, quand le duc Alain III de Bretagne le donne à son frère Eudes. À partir de cette époque, la branche Penthièvre, fière de ses origines et très ambitieuse, est à l’origine de tensions constantes avec le pouvoir ducal, qui conduisent à la confiscation du comté sous Pierre Mauclerc ; le jeune comte de Penthièvre prend alors le nom de son château de naissance, Avaugour. Les seigneurs d’Avaugour, dépourvus de leur assise territoriale mais conservant leur légitimité « familiale » à intervenir dans la vie politique du duché, ne se distinguent pas vraiment, jusqu’au début du <num>xiv</num><hi rend="sup">e</hi> siècle, des autres grandes familles bretonnes. Leur situation bascule à nouveau lorsqu’Henri III d’Avaugour obtient en 1318 de marier sa fille et unique héritière Jeanne d’Avaugour avec le frère de Jean III, Guy, pour qui a été reconstitué l’apanage de Penthièvre. Leur fille Jeanne de Penthièvre se retrouve unique héritière d’un ensemble considérable de territoires, tant du côté de son père que de sa mère, et apporte en dot à son époux Charles de Blois des possessions estimées à huit milles livres de rentes, somme considérable. </p>
@@ -77,7 +79,7 @@
     
     
       </div>
-      <div>
+      <div n="2" type="chapter">
 <head n="Chapitre II">Le contexte politique : la guerre de Succession de Bretagne </head>
     
     <p><hi rend="i">La question de la succession. —</hi> La guerre de succession de Bretagne représente la première fissure importante dans l’unité du duché. Lorsque Jean III meurt le 30 avril 1341 sans héritier, deux prétendants s’affrontent pour le titre ducal : Jean de Montfort, demi-frère de Jean III, d’une part, et Charles de Blois, époux de Jeanne de Penthièvre, d’autre part. Celle-ci, fille de Guy de Penthièvre, frère cadet de Jean III, aurait dû hériter du duché si le principe de masculinité n’avait pas été imposé dans les faits par l’accession de Philippe VI sur le trône quelques années auparavant. Charles de Blois, malgré une légitimité douteuse, possède non seulement le soutien inconditionnel du roi de France, qui voit dans l’affaire un moyen d’intervenir de façon plus directe dans le duché, mais aussi celui des grands nobles bretons. Doté de vastes territoires et d’un parti bien organisé, il est sans conteste plus favorisé que Montfort, pauvre en terre et en appuis. Pour ce dernier, la seule possibilité est de demander le soutien du roi d’Angleterre, trop heureux de pouvoir intervenir sur le territoire français. Le contexte de la guerre de Cent Ans a donc contribué à envenimer les choses, en transformant un problème de succession en affrontement franco-anglais par procuration. </p>
@@ -88,7 +90,7 @@
     
     
       </div>
-      <div>
+      <div n="3" type="chapter">
 <head n="Chapitre III">Charles de Blois : du duc au saint </head>
     
     <p><hi rend="i">Le « duc-moine ». — </hi>Charles de Blois, né en 1319 au château de Blois, est le fils cadet de Guy I<hi rend="sup">er</hi> de Châtillon, comte de Blois, et de Marguerite de Valois, fille de Charles de France et sœur du futur Philippe VI. L’essentiel de ce que l’on sait de sa vie vient des témoignages du procès de canonisation, et il est difficile de savoir dans quelle mesure certains traits de caractères ont été exagérés, et d’autres passés sous silence. Néanmoins, il semble que la foi de Charles de Blois ait conditionné son quotidien, aussi bien ses relations avec son entourage que sa conception de l’exercice du pouvoir. Tous les témoins insistent sur son égalité d’humeur, son humilité et son extrême dévotion, touchant parfois à la superstition, traits de caractère qui sont moqués par ses opposants, et parfois même par les membres de son propre parti, ce qui nuit fortement à son statut de chef de guerre. Le duc apparaît donc un chrétien exemplaire, un homme vertueux, mais sans réel talent militaire, et surtout incapable de commander ses troupes. </p>
@@ -100,11 +102,11 @@
     
     
       </div>
-    </div><div n="2" type="part"><head n="Deuxième partie">Le mécénat de Charles de Blois : étude typologique </head>
+    </div><div n="4" type="part"><head n="0" type="chapter">Le mécénat de Charles de Blois : étude typologique </head>
     
     
     
-      <div>
+      <div n="1" type="chapter">
 <head n="Chapitre premier">La commande artistique du couple ducal </head>
     
     <p><hi rend="i">L’art dans la sphère privée : les possessions du couple ducal. —</hi> Les actes de Charles de Blois permettent de déterminer ses résidences favorites, mais celles-ci ne conservent aucune trace de son passage. On sait néanmoins que le duc avait fait réaliser, réaménager et redécorer le couvent des Cordeliers de Dinan où il résidait lorsqu’il était de passage dans la ville, ce qui laisse supposer qu’il en était de même dans ses châteaux. Pour ce qui est des vêtements, des bijoux et des objets d’orfèvrerie, malgré ses aspirations à la simplicité, le couple ducal ne se démarque guère des autres grands nobles du temps. De fait, le pourpoint de Charles de Blois, conservé au musée des textiles de Lyon, ainsi que l’inventaire après décès de son épouse et une quittance des joyaux de celle-ci, permettent de constater l’existence d’un mécénat forcé par les impératifs de leur rang. Néanmoins, la véritable originalité de l’inventaire après décès de Jeanne de Penthièvre est la part très importante accordée aux objets de culte (41 % des objets mentionnés), ce qui reflète bien la dévotion extrême du couple ducal. </p>
@@ -115,7 +117,7 @@
     
     
       </div>
-      <div>
+      <div n="2" type="chapter">
 <head n="Chapitre II">Étude de cas : l’église Notre-Dame de Lamballe, un bâtiment Penthièvre </head>
     
     <p><hi rend="i">L’église depuis sa fondation jusqu’au début du <num>xiv</num><hi rend="sup">e</hi> siècle. —</hi> L’église Notre-Dame de Lamballe constitue un cas un peu particulier dans notre étude, puisque malgré l’absence de sources écrites sur la question, c’est le seul édifice que l’on puisse attribuer, en partie, au mécénat de Charles de Blois et qui soit encore debout aujourd’hui. À l’origine chapelle castrale, devenue collégiale au <num>xv</num><hi rend="sup">e</hi> siècle, le bâtiment possède une architecture assez hétéroclite résultant de campagnes de construction très éloignées dans le temps, ainsi que de restaurations qui se sont succédé depuis le Moyen Âge. La nef longue de quatre travées inégales et flanquée de bas-côtés semble majoritairement dater du <num>xiii</num><hi rend="sup">e</hi> siècle, et dénote une double influence angevine, par la décoration des chapiteaux, et normande, par l’utilisation de piles cylindriques. Le transept, en revanche, est nettement postérieur, et peut être attribué en grande partie à Guy de Penthièvre, beau-père de Charles de Blois. </p>
@@ -127,11 +129,11 @@
     
     
       </div>
-    </div><div n="3" type="part"><head n="Troisième partie">Art, religion et politique </head>
+    </div><div n="5" type="part"><head n="0" type="chapter">Art, religion et politique </head>
     
     
     
-      <div>
+      <div n="1" type="chapter">
 <head n="Chapitre premier">La commande artistique de charles de Blois : comparaison et analyse </head>
     <p>Pour caractériser au mieux le rapport aux arts de Charles de Blois, il est apparu nécessaire de dégager les grands enjeux du mécénat nobiliaire de la fin du Moyen Âge, afin d’étudier dans quelle mesure le duc de Bretagne s’intégrait au modèle traditionnel, et quels étaient les éléments qui, au contraire, le singularisaient. </p>
     
@@ -143,7 +145,7 @@
     
     
       </div>
-      <div>
+      <div n="2" type="chapter">
 <head n="Chapitre II">Pouvoir ducal et mécénat sous les premiers ducs Montfort </head>
     <p><hi rend="i">Entre négation et réutilisation : l’héritage Penthièvre aux mains des premiers ducs Montfort. —</hi> De la même façon que Charles de Blois avait utilisé son mécénat religieux comme vecteur idéologique, la commande artistique des premiers ducs Montfort est conditionnée par le souvenir de leur défunt rival. Le politique de Jean IV et de Jean V oscille en effet entre la glorification de leur victoire sur le clan Penthièvre, à travers des fondations destinées à commémorer celle-ci, et une volonté de se démarquer complètement des cultes et des ordres religieux associés à Charles de Blois. Ainsi, la collégiale d’Auray est élevée par Jean IV pour célébrer l’issue de la bataille décisive qui s’y est tenue, et le duc en fait le lieu de rassemblement de son nouvel ordre de chevalerie, l’Hermine. Néanmoins, et malgré l’instrumentalisation de la victoire sur le parti Penthièvre, il était nécessaire que Charles de Blois ne devienne pas l’objet d’un culte mémoriel et, pour cela, les ducs Montfort cherchent à affaiblir toutes les dévotions associées à sa personne : l’ordre franciscain est ainsi en disgrâce jusqu’au début du <num>xv</num><hi rend="sup">e</hi> siècle. </p>
     
@@ -154,20 +156,17 @@
     
       </div>
 
-    </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion </head>
+    </div><div type="conclusion" n="6"><head>Conclusion </head>
     <p>Le mécénat de Charles de Blois et Jeanne de Penthièvre présente donc un intérêt certain aussi bien du point de vue de l’histoire que de l’histoire de l’art. En effet, le couple ducal fournit une illustration parfaite de la façon dont les arts peuvent intervenir dans le quotidien de grands nobles qui n’ont ni des moyens illimités, ni un goût particulièrement affirmé dans ce domaine, tout en nous permettant de renouveler notre approche du personnage. </p>
     <p>Charles de Blois semble avoir tout d’abord vu dans le mécénat un moyen d’extérioriser son extrême dévotion tout en restant dans un schéma normal pour une personne de son importance. De ce fait, les dons d’objets précieux, les décorations réalisées à l’intérieur des églises et des couvents, mais aussi les constructions et reconstructions de bâtiments religieux, apparaissent comme autant de palliatifs de cette vocation contrée par les exigences de son rang. Néanmoins, l’intérêt politique de ces donations est flagrant, et il est intéressant de constater que ses successeurs ne s’y sont pas trompés. Ainsi, il serait tout aussi erroné de penser que Charles de Blois n’était qu’un dévot ignorant les réalités de son duché que de considérer que toutes ses actions n’étaient motivées que par des considérations stratégiques. Ces deux aspects sont étroitement liés dans son mécénat, et on peut donc imaginer qu’il en était de même pour sa vie. L’étude de la vie de Charles de Blois à travers son rapport avec les arts nous apporte ainsi de nouveaux éléments sur sa personnalité et sur ses qualités de dirigeant. </p>
     
     
      </div>
-              <div type="appendix"><head>Pièce justificative </head>
+          <div type="appendix" n="7"><head>Pièce justificative </head>
     <p>Édition de l’inventaire de Jeanne de Penthièvre. </p>
     
     
      </div>
-          </div>
       </body>
   </text>
 </TEI>

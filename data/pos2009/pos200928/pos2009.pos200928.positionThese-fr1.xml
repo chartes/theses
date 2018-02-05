@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’ambassade de Caulaincourt à Saint-Pétersbourg (1807-1811)</title>
-        <title type="sub">Représentation et négociations politiques durant l’alliance franco-russe</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’ambassade de Caulaincourt à Saint-Pétersbourg (1807-1811)</title><title xml:lang="fr" type="sub">Représentation et négociations politiques durant l’alliance franco-russe</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Varlan, Olivier">Olivier Varlan</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200928.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Cadre de la politique européenne des années 1807-1812, l’alliance franco-russe ne peut se comprendre sans l’étude de l’ambassade
           d’Armand-Louis de Caulaincourt à Saint-Pétersbourg, de décembre 1807 à mai 1811. Envoyé par Napoléon auprès du tsar Alexandre, Caulaincourt,
           duc de Vicence, aide de camp de l’empereur, grand écuyer de la cour impériale et général de division des armées françaises, symbolise
@@ -68,7 +71,7 @@
           diplomatique unique à cette époque et en participant aux négociations de l’alliance franco-russe, développe sa pensée et son image
           personnelles.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les <hi rend="i">Mémoires</hi> de Caulaincourt sont une des principales sources imprimées disponibles, renseignant sur la campagne de 1812
           et sur l’action du duc de Vicence en 1813 et 1814, mais éludant en grande partie l’ambassade de Saint-Pétersbourg. Cependant, dans la mesure
           où ils renseignent sur la pensée et sur le caractère de l’ambassadeur, les <hi rend="i">Mémoires</hi> sont un outil indispensable à toute
@@ -84,9 +87,8 @@
           et les moyens mis à sa disposition. Les archives des postes diplomatiques, à Nantes, complètent ces sources, avec notamment les papiers des
           consulats français en Russie.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’ambassade de Caulaincourt à Saint-Pétersbourg <lb/>une mission de représentation diplomatique</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’ambassade de Caulaincourt à Saint-Pétersbourg <lb/>une mission de représentation diplomatique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines du choix de Caulaincourt : <lb/>expériences et profil de l’envoyé de Napoléon (1796-1807)</head>
           <p>Le choix de l’ambassadeur est, pour Napoléon en 1807, d’une importance fondamentale pour la réussite et la pérennité de l’alliance
             franco-russe et pour apprivoiser la société pétersbourgeoise. Caulaincourt s’impose, du fait de son profil et de ses antécédents
@@ -113,7 +115,7 @@
             personnage. Caulaincourt, grand écuyer de l’empereur, symbolise l’importance accordée à l’alliance et, du fait de sa noblesse et des liens
             qu’il a avec la Russie, correspond parfaitement au profil de l’ambassadeur que conseille Savary.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Caulaincourt en Russie : <lb/>moyens, fonctionnement et prestige d’une ambassade extraordinaire</head>
           <p>Le choix de l’ambassadeur est essentiel mais ne suffit pas pour conquérir la société de Saint-Pétersbourg qui doute du bien-fondé de
             l’alliance. Tout est donc fait pour assurer le prestige et le faste de l’ambassade, et fonder par là la représentation diplomatique.</p>
@@ -139,7 +141,7 @@
             conditions et dans le contexte de l’alliance franco-russe, les autres ambassadeurs français en Europe reconnaissent le prestige
             particulier de Caulaincourt et de son ambassade qui s’affirme comme la première d’Europe.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Caulaincourt et la société de Saint-Pétersbourg : <lb/>représentation diplomatique et visées politiques</head>
           <p>Le choix de l’ambassadeur et les moyens mis à sa disposition permettent la mise en place d’une représentation diplomatique destinée à
             conquérir une société russe qui juge avec sévérité l’alliance et son principal représentant.</p>
@@ -167,8 +169,8 @@
           <p>Malgré la trace qu’elle laisse dans les esprits, la représentation diplomatique de Caulaincourt échoue à consolider une alliance qui
             dépend trop des événements politiques et des décisions des deux empereurs.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Caulaincourt et l’alliance franco-russe</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Caulaincourt et l’alliance franco-russe</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Napoléon, Alexandre et Caulaincourt, <lb/>l’ambassadeur entre les deux empereurs</head>
           <p>Intermédiaire entre les deux empereurs, Caulaincourt, s’il ne parvient pas à sortir du cadre imposé par son maître, développe une
             relation privilégiée avec Alexandre et élabore, durant son ambassade, une pensée personnelle qui diverge de celle de Napoléon.</p>
@@ -193,7 +195,7 @@
             Alexandre, et sans trahir son maître, il développe, dès cette époque, une pensée d’équilibre et de paix européenne qui va s’épanouir
             jusqu’à la fin de son ambassade et fonder son rôle à la fin de l’Empire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Caulaincourt et les grandes négociations de l’alliance franco-russe</head>
           <p>L’ambassadeur de France participe aux négociations qui se développent entre la France et la Russie. Mais, quelle que soit l’ampleur de
             ses pouvoirs de négociateur, des facteurs qui lui sont extérieurs font échouer les projets qui auraient pu consolider l’alliance.</p>
@@ -221,7 +223,7 @@
             donnent l’expérience qui permettra sa participation aux congrès de 1813 et 1814 comme représentant de Napoléon. En ce sens, l’ambassade de
             Saint-Pétersbourg influence la suite de sa carrière.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Caulaincourt et l’échec de l’alliance franco-russe</head>
           <p>Le duc de Vicence est acteur et témoin des crises que traverse l’alliance et qui aboutissent à la reprise de la guerre entre la France et
             la Russie, malgré ses efforts pour rechercher des accommodements.</p>
@@ -253,9 +255,7 @@
             de l’alliance, ami d’Alexandre, Caulaincourt rentre en France en disgrâce mais dans l’espérance de convaincre son maître de stopper la
             marche à la guerre.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>Malgré un bilan politique nul, l’ambassade de Saint-Pétersbourg permet l’affirmation de Caulaincourt comme figure majeure de la fin de
           l’Empire.</p>
         <p>
@@ -280,10 +280,9 @@
           Napoléon, et notamment son exil sur l’île d’Elbe. Ses tentatives pour trouver une place dans la société de la Restauration, puis son poste
           de ministre lors des Cent-Jours, le brouillent respectivement avec Napoléon et Alexandre et entraînent la fin de sa carrière politique.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Édition de textes. <hi rend="i">—</hi> Cartes. <hi rend="i">—</hi> Généalogie. <hi rend="i">—</hi> Documents iconographiques.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

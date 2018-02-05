@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Architecture et liturgie</title>
-        <title type="sub">Étude d’une interaction spatiale et mémorielle à Saint-Denis à l’époque gothique</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Architecture et liturgie</title><title xml:lang="fr" type="sub">Étude d’une interaction spatiale et mémorielle à Saint-Denis à l’époque gothique</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Berné, Damien">Damien Berné</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200804.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La connaissance de l’abbaye de Saint-Denis, enfant gâté de l’historiographie dans le champ des études médiévales, mais enfant choyé en
           raison du puissant attrait exercé trop exclusivement par la figure de l’abbé Suger et son legs artistique, a connu une avancée remarquable
           au cours des années 1980 et 1990 grâce à la convergence de travaux portant sur deux domaines complémentaires : l’architecture des parties de
@@ -94,7 +97,7 @@
           recouvrent ou coordonnent toutes les manifestations dévotionnelles dont l’abbatiale est le théâtre. Leurs convergences et leurs
           dissociations alimentent toute réflexion sur cet espace.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La liturgie dionysienne, transmise par une longue tradition orale, n’a pas donné lieu à l’abondante floraison de manuscrits qui est l’une
           des manifestations du rayonnement de l’ordre clunisien, pour ne citer que lui. Paradoxalement, les moines de Saint-Denis ont peu ressenti le
           besoin de mettre par écrit le détail du cérémonial qui structure la vie de leur communauté ; cela s’explique entre autres par le fait que
@@ -124,9 +127,8 @@
           selon un modèle similaire. Les cadres documentaires produits par la communauté et la cour abbatiale n’en sont pas moins utiles, notamment
           les comptes de la Commanderie et divers règlements ; les actes capitulaires, en revanche, sont inopérants dans la perspective choisie.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Fondations et fondateurs</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Fondations et fondateurs</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Fondations d’anniversaires dans l’abbatiale</head>
           <p>Les moines de Saint-Denis disposent, à l’attention des fidèles, d’un cadre liturgique fondé sur une gamme hiérarchisée de suffrages ; la
             fondation d’obit, qui pérennise la célébration de l’anniversaire du décès au moyen d’une messe de <hi rend="i">Requiem</hi>, en constitue
@@ -160,7 +162,7 @@
             mémoriel qui se tisse dans l’espace dionysien et finit par s’imposer, au côté de la liturgie « principale » de Saint-Denis, comme une
             dynamique majeure dont les moines doivent tenir compte.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Fondations de chapellenies à Saint-Denis : la première vague</head>
           <p>La liste des anniversaires, qui n’implique pas de contrainte spatiale particulière, conjugue ses effets à d’autres modes commémoratifs
             plus intrusifs, telles que les fondations de chapellenies, à partir de la première moitié du <num>xiii</num>
@@ -181,7 +183,7 @@
             Philippe de Valois de se réserver le droit de collation du chapelain ; quant aux messes prévues par Clémence de Hongrie, elles sont
             réduites en 1331.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La deuxième vague de fondations : une nouvelle conception de la nécropole royale</head>
           <p>Ce mouvement de fermeture n’est pourtant pas absolu : plusieurs princesses royales obtiennent de fonder des chapellenies aux autels de
             l’abbatiale. L’initiative en revient à Jeanne d’Évreux, entre 1340 et 1343. Une fille de roi, Marguerite de France, comtesse de Flandre,
@@ -201,7 +203,7 @@
             de l’arbre généalogique des personnages inhumés dans les autres angles du carré du transept, et des liens de parenté qui existent entre
             eux : elle est en effet dévolue aux Évreux-Étampes, autour de la reine Jeanne.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La troisième vague de fondations</head>
           <p>Après les efforts déployés par Isabeau de Bavière entre 1415 et 1418 pour fonder l’entretien de sa mémoire à Saint-Denis, les liens qui
             unissent l’abbaye à la monarchie se distendent. Charles VII ne manifeste pas une dévotion particulière à l’égard de saint Denis.
@@ -215,8 +217,8 @@
             la dévotion privée à saint Denis que de l’apparat monarchique. Pour peu de temps, cependant : après Louis XII, qui se préoccupe de sa
             mémoire et de celle d’Anne de Bretagne, les Valois Angoulême rompent avec les usages traditionnels.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La desserte des chapelles</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La desserte des chapelles</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le fonctionnement des chapelles rayonnantes</head>
           <p>Le fonctionnement quotidien des chapelles du chevet demeure largement méconnu, étant donné que les ordinaires liturgiques n’en tiennent
             pas compte. Malgré tout, le croisement de certains documents (extraits de règlements, actes divers, inventaires du trésor surtout) laisse
@@ -235,7 +237,7 @@
             l’abbaye avec leurs contribuables : de fait, le jour de prélèvement des rentes provenant des censives de certains officiers correspond au
             jour de la fête du saint dont ils desservent l’autel.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La desserte des chapellenies</head>
           <p>Les actes de fondation de la première vague révèlent un système de desserte des chapellenies conventionnel. En effet, l’abbaye fait
             appel à des prêtres séculiers chargés de suppléer les moines, dont l’activité liturgique est réservée aux autels principaux de
@@ -251,8 +253,8 @@
 <hi rend="sup">e</hi> siècle : les suffrages de l’ensemble de la communauté sont finalement requis à des moments qui n’entravent pas
             l’accomplissement du rite tel qu’il est prescrit par l’ordinaire.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une géographie de la mémoire</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Une géographie de la mémoire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les premières chapelles dionysiennes : entre mobilité des vocables et insertion spatiale</head>
           <p>L’élément le plus évocateur de la charge symbolique des espaces de l’abbatiale est la géométrie des vocables, soumise à des
             modifications dont il importe d’apprécier la portée. À cet égard, le phénomène qui touche les vocables assignés par Suger au massif
@@ -268,7 +270,7 @@
             principal de cet état de fait est l’inaccessibilité de ses autels à la mémoire des particuliers, en raison sans doute du système
             d’association des officiers claustraux, mais aussi de la dignité éminente du lieu, largement sous-estimée jusqu’à présent.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le flux des fondations dans la sphère liturgique de l’abbatiale</head>
           <p>Les fondations de la première vague se répartissent dans les espaces laissés vacants par la liturgie principale de l’abbaye, hors donc du
             sanctuaire. En 1209, seul l’autel Saint-Hippolyte, situé dans la nef, est accessible ; plus tard, la création de nouveaux autels permise
@@ -292,7 +294,7 @@
             L’attraction du centre liturgique de l’abbatiale, jusque lors réservé à l’exaltation de saint Denis au moyen d’un découplage spatial
             intangible, reflète une désaffection profonde et définitive de la monarchie à l’égard de la construction sacrale dionysienne.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le flux redirigé : le rôle de la collégiale Saint-Paul de Saint-Denis</head>
           <p>Reste à expliquer l’amenuisement spectaculaire de l’obituaire à partir du deuxième quart du <num>xiv</num>
 <hi rend="sup">e</hi> siècle. Outre des raisons conjoncturelles liées à des difficultés politiques et économiques généralisées, une
@@ -306,9 +308,7 @@
             quant à lui d’espace d’amplification liturgique ; il n’est dès lors plus possible d’envisager l’abbatiale indépendamment de son
             environnement urbain et religieux.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’élargissement de l’étude des chapelles de l’abbatiale de Saint-Denis à l’ensemble des pratiques mémorielles qui se déroulent à ses autels
           montre assez que la fondation de chapellenies n’est qu’un aspect, certes visible et particulièrement solennisé, de la dévotion des fidèles
           attachés à ce lieu. Elle est un épiphénomène qui n’épuise pas la variété des solutions offertes à ceux qui souhaitent être associés aux
@@ -325,14 +325,13 @@
           suffrages des moines perd une partie de sa présence au sein du sanctuaire, ainsi que le mécanisme compensatoire lisible dans la fondation de
           Jeanne d’Évreux permet de le mesurer. La mémoire est le maître-mot à Saint-Denis, et la mort y est seconde.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Introduction au corpus documentaire. Principes généraux : l’organisation des pièces justificatives. Principes d’édition des actes. — Autels
           et chapellenies : cinquante-cinq dossiers documentaires rangés selon un ordre topographique comprenant un profil de chaque fondation, l’acte
           de fondation et les mentions comptables recensées. — Anniversaires : actes de fondation dans l’abbatiale, la collégiale Saint-Paul de
           Saint-Denis (sélection), l’église Saint-Jean de Saint-Denis. — Fondations de luminaires dans l’abbatiale.</p>
         <p/>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le manuscrit Bibl. nat. de France, fr 688 et son traducteur</title>
-        <title type="sub">Édition de la &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Chronique universelle&lt;/hi&gt; et de l’&lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Histoire romaine&lt;/hi&gt;.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le manuscrit Bibl. nat. de France, fr 688 et son traducteur</title><title xml:lang="fr" type="sub">Édition de la <hi rend="i">Chronique universelle</hi> et de l’<hi rend="i">Histoire romaine</hi>.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Moreau, Nathalie">Nathalie Moreau</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200115.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le manuscrit 688 du fonds français de la Bibliothèque nationale de France constitue un précieux témoignage de la place occupée par la
           culture française dans le royaume de Naples au début du <num>xiv<hi rend="sup">e</hi></num> siècle, à la suite de l’installation des Angevins dans le
           sud de la Péninsule. Il s’agit d’un recueil de traductions d’historiens latins réalisées en français par un Italien pour un noble italien.
@@ -58,10 +61,9 @@
             romaine</hi> de Paul Diacre, font l’objet d’une édition et d’un commentaire critiques qui s’attachent notamment à apprécier le travail du
           traducteur et à mesurer la place tenue par le manuscrit dans l’histoire culturelle de la Naples angevine.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Commentaire</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le manuscrit</head>
           <p><hi rend="i">Description du manuscrit </hi>— Le manuscrit Bib. nat. de France, fr. 688 se compose de vingt-huit cahiers de huit
             feuillets, à l’exception des cahiers 13, 14, 20, 24 et 28. Le parchemin utilisé est de très bonne qualité. L’étude de la décoration du
@@ -105,7 +107,7 @@
             manuscrit a également été étudié comme un témoin de la présence de la langue française dans le royaume de Naples, mais aucune étude n’a
             porté sur l’identité et la culture du traducteur.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le traducteur</head>
           <p><hi rend="i">L’identité du traducteur </hi>— L’étude du manuscrit permet de constater que toutes les traductions sont dues à la même
             personne: la langue ne varie pas et les changements stylistiques ne font que refléter la plus ou moins grande complexité du latin des
@@ -180,7 +182,7 @@
             ces auteurs antiques, le traducteur met en avant sa culture classique, au détriment de sa culture monastique, pourtant très présente dans
             le manuscrit.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La traduction</head>
           <p><hi rend="i">Les procédés de traduction </hi>— Les éditeurs de l’<hi rend="i">Histoire des Normands</hi> se sont demandé si les
             traductions étaient fidèles au texte latin original ou en étaient une réécriture. L’édition de la <hi rend="i">Chronique universelle</hi>
@@ -217,9 +219,7 @@
             s’interroger sur la valeur historique de l’Histoire des Normands: s’agit-il bien uniquement du témoignage d’Aimé Ne s’agit-il pas plutôt
             d’un ouvrage réécrit par le traducteur à partir d’autres sources</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="3"><head>Conclusion</head>
         <p>L’étude des traductions de la <hi rend="i">Chronique universelle</hi> et de l’<hi rend="i">Histoire romaine</hi>éclaire d’un jour nouveau
           la personnalité et le rôle du traducteur. Il réalise une traduction fidèle des textes et cherche à donner à son lecteur, par les gloses,
           tous les éléments nécessaires à la compréhension du texte. Il n’hésite pas à interpoler son texte, en ajoutant des récits tirés de
@@ -229,7 +229,7 @@
           permettre de l’enrichir et de le compléter. Un tel choix confirme l’importance de ce manuscrit aux yeux de son commanditaire et la place
           occupée par la langue française dans le royaume angevin de Naples.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="4"><head>Édition</head>
         <p>L’édition porte sur les deux premiers textes du manuscrit, la <hi rend="i">Chronique universelle</hi> et l’<hi rend="i">Histoire
             romaine</hi>. Dans la mesure où les textes édités sont des traductions d’œuvres connues, il a paru intéressant de proposer une édition
           bilingue. Le texte latin adopté est celui de l’édition de Théodore Mommsen pour la <hi rend="i">Chronique</hi> et d’Amadeo Crivellucci pour
@@ -242,7 +242,6 @@
         <p>L’édition a cherché à respecter les graphies ainsi que les erreurs du manuscrit unique, ne les corrigeant que lorsqu’elles représentaient
           une gêne pour la lecture et la compréhension du texte.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

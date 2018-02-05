@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le genre quodlibétique au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle, défense et illustration de la pensée d’un maître en théologie
-        Matthieu d’Aquasparta (v. 1240-1302), O.F.M.</title>
-        <title type="sub">Édition critique et commentaire des trois premiers &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Quodlibets&lt;/hi&gt;</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le genre quodlibétique au <num>xiii<hi rend="sup">e</hi></num> siècle, défense et illustration de la pensée d’un maître en théologie
+        Matthieu d’Aquasparta (v. 1240-1302), O.F.M.</title><title xml:lang="fr" type="sub">Édition critique et commentaire des trois premiers <hi rend="i">Quodlibets</hi></title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Postec, Amandine">Amandine Postec</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201020.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Matthieu d’Aquasparta (v. 1240-1302) peut être considéré pour plusieurs raisons comme une figure emblématique de la fin du <num>xiii<hi rend="sup">e</hi></num> siècle. Maître en théologie de l’université de Paris, son œuvre est abondante ; franciscain, il est ministre
           général de l’Ordre ; nommé cardinal par Nicolas IV, il est un des plus fidèles alliés du pape Boniface VIII. Pourtant, malgré ses écrits et
           son parcours politique, Matthieu d’Aquasparta ne connaîtra aucune postérité avant d’être redécouvert au début du <num>xx<hi rend="sup">e</hi></num> siècle. Son œuvre de théologien acquiert une place croissante dans les analyses des historiens et des philosophes
@@ -74,7 +77,7 @@
           Matthieu d’Aquasparta à celui d’autres maîtres contemporains. Enfin, un commentaire historique met en évidence l’importance du contenu des
           questions quodlibétiques de Matthieu d’Aquasparta, notamment au regard de la censure de 1277, date de la rédaction du premier <hi rend="i">Quodlibet</hi>.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’édition des trois premiers <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta s’appuie sur quatre manuscrits. Le premier, Assise 134,
           est un recueil autographe du maître où se trouvent les questions quodlibétiques réparties parmi les questions disputées du maître organisées
           de façon chronologique. Todi 44 est l’exacte reproduction du manuscrit Assise 134 de la main d’un copiste employé par Matthieu
@@ -86,9 +89,8 @@
           conservés dans des manuscrits de la BNF ; quelques autographes d’auteurs contemporains conservés dans différentes bibliothèques européennes,
           dont on a pu consulter des reproductions à l’Institut de recherche et d’histoire des textes.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Matthieu d’Aquasparta (v. 1240-1302). Parcours d’un Franciscain, de l’Université à la Curie</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Matthieu d’Aquasparta (v. 1240-1302). Parcours d’un Franciscain, de l’Université à la Curie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Parcours d’un maître en théologie</head>
           <p>Matthieu est né vers 1240 à Aquasparta. Il appartient à une famille de petite noblesse, la famille Bentivenga, qui compte déjà un évêque
             de Todi et un cardinal qui a eu un rôle certain dans l’ascension de Matthieu à la Curie. La carence des sources franciscaines de l’époque
@@ -101,7 +103,7 @@
             jusqu’en 1287.</p>
           <p/>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La carrière politique et diplomatique au sein de l’Église</head>
           <p>Matthieu d’Aquasparta est élu en 1287 ministre général de l’Ordre franciscain. Son mandat est bref mais son action notable. Proche du
             pape Nicolas IV, également franciscain, il mène une politique de conciliation face aux différentes tensions qui apparaissent dans
@@ -115,7 +117,7 @@
             Florence en proie à des conflits entre guelfes et gibelins. Matthieu d’Aquasparta meurt à Rome en 1302 et se fait enterrer dans l’église
             franciscaine Santa Maria in Aracoeli.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’œuvre de Matthieu d’Aquasparta</head>
           <p>Matthieu d’Aquasparta est un auteur réputé prolixe, c’est ainsi en tout cas que les maigres témoignages le présentent. Sur les
             soixante-seize ouvrages qu’il lègue dans son testament aux bibliothèques des couvents d’Assise et de Todi, neuf sont présentés comme étant
@@ -126,9 +128,9 @@
             a été perdue (on lui en a par ailleurs faussement attribué certaines) – qui n’ont pas été éditées, quelques <hi rend="i">Introitus</hi> et
             traités d’introduction à l’Écriture Sainte, ainsi que de nombreux sermons dont on n’a malheureusement peu d’exemplaires conservés.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le maître à l’œuvre. Analyse des procédés d’écriture des <hi rend="i">Quodlibets</hi> et de la structure du
+      </div><div n="4" type="part"><head n="0" type="chapter">Le maître à l’œuvre. Analyse des procédés d’écriture des <hi rend="i">Quodlibets</hi> et de la structure du
           discours</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La rédaction des <hi rend="i">Quodlibets</hi> : de l’autographe à la version officielle</head>
           <p>L’étude comparée des manuscrits Assise 134 et Todi 44 – le premier autographe et le second apographe – permet d’analyser le processus
             d’écriture du maître en théologie en le comparant à différentes sources. En premier lieu, la graphie de Matthieu est elle-même originale :
@@ -140,7 +142,7 @@
             autant que possible, malgré quelques erreurs de lecture. Matthieu intervient beaucoup sur cette copie : il corrige les fautes du scribe,
             augmente la ponctuation et améliore son propre texte.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La culture de Matthieu d’Aquasparta</head>
           <p>Une analyse précise des citations que fait Matthieu dans ses <hi rend="i">Quodlibets</hi> permet d’examiner la culture du maître. Ce
             travail est rendu possible grâce aux logiciels informatiques de comparaison de textes que sont <hi rend="i">Philologic</hi> et <hi rend="i">Philoline.</hi> La comparaison des autorités que citent Matthieu dans ses <hi rend="i">Quodlibets</hi> et ses questions
@@ -152,7 +154,7 @@
             Pères de l’Eglise. En revanche, si Matthieu maîtrise sans nul doute une partie des œuvres d’Aristote, il le cite avec beaucoup de prudence
             et omet souvent de le mentionner sur certains points où le Stagirite est une autorité évidente pour tout autre maître en théologie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le vocabulaire de Matthieu d’Aquasparta</head>
           <p>Il est reconnu que Bonaventure possède un attirail lexical plus varié et plus littéraire que celui de Thomas d’Aquin. En comparant le
             vocabulaire de Matthieu d’Aquasparta avec celui de ces deux grands maîtres et avec celui de Jean Peckham et Henri de Gand, on obtient des
@@ -163,8 +165,8 @@
             ceux de Thomas d’Aquin, même si l’on peut, pour certains mots ou notions, entrevoir une filiation franciscaine. En revanche, le style de
             Matthieu est très littéraire et oratoire : il est proche, sur ce point, de Bonaventure.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta. Étude monographique d’un genre polyphonique</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta. Étude monographique d’un genre polyphonique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta dans l’actualité universitaire</head>
           <p>Le <hi rend="i">Quodlibet</hi> est un genre qui fait montre de l’actualité universitaire et de la circulation des idées. Les arguments
             développés dans cet exercice sont exploités et repris par différents maîtres. En étudiant quelques questions quodlibétiques de manière
@@ -178,7 +180,7 @@
             part au récit d’une question de saint Louis à Bonaventure inscrite dans un débat récurrent à la faculté de théologie de Paris : la
             question des damnés et leur préférence à être ou à ne pas être.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le rôle de Matthieu d’Aquasparta dans les condamnations de 1277</head>
           <p>La date à laquelle Matthieu d’Aquasparta dispute son premier <hi rend="i">Quodlibet</hi> correspond à celle de la célèbre censure du 19
             mars 1277. Ainsi trouve-t-on dans ce <hi rend="i">Quodlibet</hi> le témoignage rare d’une réaction immédiate d’un maître en théologie face
@@ -194,7 +196,7 @@
             Matthieu d’Aquasparta permet donc de nuancer l’historiographie qui a longtemps présenté une pensée franciscaine unifiée contre la doctrine
             de Thomas d’Aquin.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Biens et ressources ecclésiastiques : la réponse d’un Franciscain</head>
           <p>Les trois premiers <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta contiennent de nombreuses questions de morale pratique à travers
             lesquelles se dévoile une conception de l’usage des ressources des laïcs et des ecclésiastiques. On pensait que la doctrine franciscaine
@@ -205,9 +207,7 @@
             de la personne : un avocat ne peut être contraint en toute circonstance de défendre un pauvre ; un évêque a besoin de davantage de
             ressources qu’un simple clerc.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta offrent de nombreuses perspectives pour éclairer la pensée et la personnalité de
           cet auteur. Une présentation de son parcours de théologien et de cardinal est nécessaire pour appréhender plus justement ses textes. De
           même, certains de ses actes, qui ont alimenté les propos de ses contemporains et des historiens, peuvent être désormais mieux compris à la
@@ -217,14 +217,13 @@
           l’auteur et ses qualités dans l’exercice quodlibétique. Enfin, ces trois <hi rend="i">Quodlibets</hi> permettent un nouveau regard sur
           l’actualité universitaire au tournant de l’année 1277, année charnière dans l’histoire intellectuelle médiévale.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="7"><head>Édition</head>
         <p>L’édition est introduite par une présentation détaillée des différents manuscrits. On observe ainsi que les deux manuscrits de Paris
           Arsenal 457 et Londres Burney 358 sont indépendants des manuscrits autographes de Matthieu d’Aquasparta.</p>
         <p>L’édition des trois premiers <hi rend="i">Quodlibets</hi> de Matthieu d’Aquasparta est donnée avec trois apparats dont le troisième, rejeté
           en fin d’édition, propose de mettre en évidence les emprunts que fait Matthieu aux autres maîtres de son temps et la circulation de ses
           propres arguments. Un index des auteurs et un index des notions complètent enfin cette édition.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

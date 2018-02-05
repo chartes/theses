@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">le nécrologe du livre du chapitre de l’abbaye Saint-Pierre-aux-Nonnains de Metz (BNF lat. 10028)</title>
-        <title type="sub">commentaire et édition</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">le nécrologe du livre du chapitre de l’abbaye Saint-Pierre-aux-Nonnains de Metz (BNF lat. 10028)</title><title xml:lang="fr" type="sub">commentaire et édition</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Blennemann, Gordon">Gordon Blennemann</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200603.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Fondée à la fin de l’époque mérovingienne, l’abbaye de Saint-Pierre-aux-Nonnains de Metz est une des plus anciennes communautés
           religieuses de Lorraine et compte parmi les premiers monastères de femmes du diocèse de Metz. Les aléas de l’histoire ont sauvé un fragment
           d’un livre du chapitre de l’abbaye, aujourd’hui conservé à la Bibliothèque nationale de France (lat. 10028). Au nombre des pièces
@@ -60,10 +63,9 @@
           siècle, le nécrologe permet de saisir les relations qu’une communauté féminine entretenait au Moyen Âge avec son environnement social, au
           travers notamment du recrutement des moniales et de la célébration de la <hi rend="i">memoria</hi> des familles des religieuses.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Premiere partie">Saint-Pierre-aux-Nonnains <lb/>au Moyen Âge</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Saint-Pierre-aux-Nonnains <lb/>au Moyen Âge</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Saint-Pierre-aux-Nonnains <lb/>des origines à la réforme lotharingienne</head>
           <p>
             <hi rend="i">La fondation</hi>. — En l’absence de sources diplomatiques avant la deuxième moitié du <num>viii</num>
@@ -109,7 +111,7 @@
             déjà quelques points de repère pour l’évolution de l’abbaye à partir du <num>xi</num>
 <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Relations externes et organisation interne <lb/>du <num>xi</num>
 <hi rend="sup">e</hi> siècle au <num>xiv<hi rend="sup">e</hi></num> siècle</head>
           <p>
@@ -174,8 +176,8 @@
             Saint-Pierre-aux-Nonnains recouvrait, dans un sens large, des liens de fidélité et d’amitié entre le couvent et les personnes inscrites.
         </p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxieme partie">Le nécrologe du livre du chapitre <lb/>de Saint-Pierre-aux-Nonnains</head>
-        <div>
+      </div><div n="3" type="part"><head n="0" type="chapter">Le nécrologe du livre du chapitre <lb/>de Saint-Pierre-aux-Nonnains</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le manuscrit</head>
           <p>Le manuscrit lat. <num> </num>10028 de la Bibliothèque nationale de France est un fragment d’un livre du chapitre de
             Saint-Pierre-aux-Nonnains. Il est constitué de deux unités codicologiques, qui correspondent aux fol. 1-31v. et 32-105 et qui comportent
@@ -215,7 +217,7 @@
             à une lecture personnelle d’Ausone ou de Wandalbert. L’incorporation de ces interpolations a été abandonnée à partir du mois de
             septembre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Édition</head>
           <p>L’édition utilise les principes proposés par l’Union académique internationale et retenus pour la nouvelle série des obituaires du <hi rend="i">Recueil des historiens de France</hi>. Un changement a cependant dû être apporté : en raison de la forte présence de la langue
             vernaculaire dans les <hi rend="i">cognomina</hi> des personnes inscrites, les italiques ont été réservés aux passages qui sont clairement
@@ -230,11 +232,11 @@
             nombre a été restitué à partir de la taille du blanc laissé par grattage ou effacement. Enfin, les grattages sont en principe signalés par
             de doubles crochets carrés pour les parties restituées.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisieme partie">Listes prosopographiques</head>
-        <p>Face à plus de 1200 entrées d’obit, il a paru inutile de retenir toutes les personnes inscrites dans les pages du nécrologe. À l’exception
+      </div><div n="4" type="part"><head n="0" type="chapter">Listes prosopographiques</head>
+        <p n="1" type="chapter">Face à plus de 1200 entrées d’obit, il a paru inutile de retenir toutes les personnes inscrites dans les pages du nécrologe. À l’exception
           des abbesses et d’autres dignitaires, nous avons ainsi écarté toutes les religieuses de Saint-Pierre-aux-Nonnains dont seul le prénom nous
           est parvenu. Il en est de même pour les laïcs inscrits sans <hi rend="i">cognomen</hi>.</p>
-        <p>Les listes de personnes ont été reparties en trois groupes principaux : les réguliers, les séculiers et les laïcs. Parmi les réguliers,
+        <p n="2" type="chapter">Les listes de personnes ont été reparties en trois groupes principaux : les réguliers, les séculiers et les laïcs. Parmi les réguliers,
           nous avons donc placé toutes les religieuses de Saint-Pierre-aux-Nonnains pour lesquelles nous connaissons un <hi rend="i">cognomen</hi> ou
           une dignité conventuelle, ainsi que tous les religieux et toutes les religieuses d’autres communautés (moniales bénédictines et
           cisterciennes, chanoinesses régulières, moines noires et blancs, chanoines réguliers, ordres mendiants et ordres de chevaliers). La liste
@@ -243,14 +245,11 @@
           les sections des réguliers et des séculiers ; les ducs de Lorraine ont été placés en tête de la section, suivis par les familles nobles et
           les familles bourgeoises et roturières. Les notes prosopographiques renvoient aux dates et à la numérotation continue des entrées d’obits
           dans le texte de l’édition.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="5"><head>Annexes</head>
         <p>Commentaire et édition synoptique du dossier hagiographique de sainte Waldrade. — Relevé des variantes du martyrologe du livre du chapitre
           de Saint-Pierre-aux-Nonnains par rapport au texte d’Adon de Vienne. — Index des noms de lieu et de personne.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

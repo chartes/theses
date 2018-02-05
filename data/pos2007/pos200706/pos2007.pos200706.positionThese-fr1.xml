@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Pierre Germain dit le Romain (1703-1783)</title>
-        <title type="sub">Vie d’un orfèvre et de son entourage</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Pierre Germain dit le Romain (1703-1783)</title><title xml:lang="fr" type="sub">Vie d’un orfèvre et de son entourage</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Cavalié, Hélène">Hélène Cavalié</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200706.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Entre sa mort en 1783 et sa première biographie en 1887, celui qui fut l’« un des plus connus pour le bijou et la vaisselle » selon l’<hi rend="i">Almanach Dauphin</hi>(1776) ne résista à l’oubli que grâce à la signature d’un célèbre recueil de modèles, <hi rend="i">Les
             Eléments d’orfèvrerie</hi>, publié en 1748 et copié jusqu’à la fin du <num>xix<hi rend="sup">e</hi></num> siècle. Mais on avait tout oublié de
           Pierre Germain. Ce qui faisait son originalité, ses publications, sa correspondance retrouvée en partie en 1862 lui furent enlevées pour
@@ -67,7 +70,7 @@
           malheureusement peu diffusée et encore trop peu connue un siècle après fut la dernière consacrée à cet orfèvre qui se cache et se laisse
           difficilement trouver dans les archives.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources qui éclairent la vie de Pierre Germain sont dispersées entre la région avignonnaise et Paris. Les registres paroissiaux des
           Archives municipales de Villeneuve-lès-Avignon et d’Avignon livrent l’environnement familial de l’orfèvre ; les études notariales 3 E 5, 3 E
           6 et 3 E 7 aux Archives départementales de Vaucluse et II E<hi rend="sup">80</hi> et II E<hi rend="sup">81</hi> aux Archives
@@ -87,9 +90,8 @@
           1748 et 1751), et le département des estampes et de la photographie de la BnF qui conserve des dessins signés ou attribuables à l’orfèvre :
           Le 39, Le Mat 2 (III) et Le Mat 2a (III).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Vie familiale et formation (1703-1755/1756 ?)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Vie familiale et formation (1703-1755/1756 ?)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un milieu familial qui ne prédispose apparemment pas à devenir orfèvre</head>
           <p>Fils d’un boulanger, Jean Germain, et d’une fille de manouvrier, Madeleine Lhermite, Pierre Germain ne semblait pas prédisposé à devenir
             orfèvre. Sa première formation reste encore mal documentée. Cependant l’évolution de son entourage familial après le remariage de son
@@ -101,7 +103,7 @@
             apparaissent également : les Clerc, Vinay et Mézangeau, orfèvres à Avignon, les Durand et Giraud, orfèvres à Marseille. Mais l’influence
             de ces personnages sur le jeune homme reste encore floue.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Une longue période comme ouvrier à Paris et à Rome (1726-1736)</head>
           <p>
             <hi rend="i">Paris et l’atelier de Thomas Germain (1726-1729)</hi>. — C’est à partir du 24 mai 1726, date de sa première lettre conservée,
@@ -125,7 +127,7 @@
           <p>Dans la correspondance de ces années, se dessine un caractère ardent au travail, consciencieux et pointe l’ambition de devenir maître,
             source de conflits avec Jacques Roëttiers.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Apprentissage chez Besnier (1736-1744)</head>
           <p>Grâce au privilège des Galeries du Louvre, qui autorise une entrée tardive en apprentissage, – Pierre Germain a alors 33 ans, soit
             dix-neuf de plus que l’âge traditionnellement requis –, il finit par être pris comme apprenti en surnuméraire chez le beau-père de
@@ -134,7 +136,7 @@
             arrangement entre gendre et beau-père qui travaillent désormais ensemble aux commandes royales. Pierre Germain est reçu maître orfèvre le
             4 mai 1744, à 41 ans, et fait insculper son poinçon : « fleur de lys couronnée, deux grains, un germe ».</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Jeune maître orfèvre au service de Jacques Roëttiers (1744 ?-1755/1756 ?)</head>
           <p>La période qui court de 1739 à 1766 est plus difficile à aborder, puisque aucune lettre de Pierre Germain à ses proches n’a été
             retrouvée. Des preuves de son habitation chez Jacques Roëttiers, place du Carrousel, continuent au-delà de sa réception comme maître (en
@@ -146,8 +148,8 @@
             publication de deux recueils de modèles : les <hi rend="i">Eléments d’orfèvrerie</hi> en 1748, qui associe Jacques Roëttiers pour sept
             planches, et le <hi rend="i">Livre d’ornemens</hi> en 1751.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Pierre Germain dessinateur</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Pierre Germain dessinateur</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le goût et l’importance du dessin chez Pierre Germain</head>
           <p>La correspondance de jeunesse de l’orfèvre montrait déjà sa grande préoccupation pour le dessin et les estampes : ce ne sont que rapports
             de commissions de gravures auprès de Jean Mariette, d’achats de fournitures et d’outils de travail pour son oncle Jean-Baptiste Franque,
@@ -163,7 +165,7 @@
           <p>Dix ans avant la parution de ses deux recueils, Pierre Germain se soucie déjà de ses dessins et semble leur donner une réelle importance
             à en juger par le soin jaloux avec lequel il veut les faire revenir d’Avignon à Paris durant toute l’année 1734, alléguant que « <hi rend="i">Mss Germain et Roetier</hi>[…] <hi rend="i">son gros de lé voir</hi>».</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’œuvre de dessinateur : la publication de deux recueils d’orfèvrerie en 1748 et 1751</head>
           <p>En novembre 1747 est annoncée dans le <hi rend="i">Mercure de France</hi> la publication de ses <hi rend="i">Eléments d’orfèvrerie</hi>,
             recueil de 100 planches de modèles d’orfèvrerie religieuse et civile, gravées au burin par Jean-Jacques Pasquier et Baquoy. L’orfèvre
@@ -187,8 +189,8 @@
             d’inspiration majeure jusqu’à la fin du <num>xix<hi rend="sup">e</hi></num> siècle, particulièrement dans les maisons Aucoc et Cardeilhac. En
             gravure, il est largement repris dans les planches de l’Encyclopédie de Diderot et d’Alembert entre 1751 et 1772.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le maître orfèvre à « La Garde Royale » (1755/1756 ?-1783)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le maître orfèvre à « La Garde Royale » (1755/1756 ?-1783)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le corps des orfèvres de Paris</head>
           <p>
             <hi rend="i">Statuts et organisation du travail</hi>. — La vie professionnelle et les conditions de travail de Pierre Germain s’insèrent
@@ -214,7 +216,7 @@
             premier tiers du corps, mais apparaît parmi les orfèvres les moins taxés du quai des Orfèvres. Il semble donc avoir une réussite
             financière moyenne, mais en revanche certaine par rapport à ses proches avignonnais.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Pierre Germain marchand orfèvre joaillier</head>
           <p>
             <hi rend="i">Les compagnons et apprentis de Pierre Germain</hi>. — Dans la boutique qu’il loue, à La Garde Royale, Pierre Germain forme
@@ -271,7 +273,7 @@
             année. D’autres commanditaires sont attestés : le lieutenant du roi à Québec, Paul Joseph de Longueuil et son épouse Marie Geneviève de
             Joubert en Nouvelle-France en 1750-1752, ou bien encore le chevalier de Baudouin en octobre 1781.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le maître parisien et ses attaches avignonnaises</head>
           <p>
             <hi rend="i">Les relations conservées et entretenues en Avignon et à Villeneuve-lès-Avignon</hi>. — Malgré son ancrage parisien d’une
@@ -289,9 +291,7 @@
             Jean Antoine Germain à partir de 1769, ne semble guère marquée par des transactions foncières, l’orfèvre ne se risquant peut-être plus à
             des achats.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>
           <hi rend="i">Les derniers jours de Pierre Germain</hi>. — Le 6 décembre 1782, Pierre Germain fait marquer pour la dernière fois des objets
           au Bureau de la Marque. Il est alors déjà affaibli puisqu’une garde-malade est à son chevet. Il meurt le matin du 12 janvier 1783, après
@@ -311,7 +311,7 @@
           se laisse cependant pas dévoiler comme d’autres confrères contemporains. De nombreuses découvertes sont donc encore à espérer et attendre.
        </p>
       </div>
-              <div type="appendix"><head>Catalogue des œuvres de Pierre Germain et de son entourage</head>
+          <div type="appendix" n="7"><head>Catalogue des œuvres de Pierre Germain et de son entourage</head>
         <p>Deux tomes de catalogue répertorient les différentes œuvres de Pierre Germain dit le Romain (t. <num>ii</num>) et de son entourage (t.
             <num>iii</num>). Les œuvres du tome <num>ii</num>consistent en gravures, œuvres ciselées et dessins. Les gravures comprennent 93 planches
           de modèle d’orfèvrerie religieuse et civile publiées par l’orfèvre en 1748 dans son recueil des Eléments d’orfèvrerie gravées au burin par
@@ -330,7 +330,6 @@
           font l’objet d’une fiche signalétique fournissant illustration, mesures, datation, description, commentaire stylistique et/ou historique et
           bibliographie.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

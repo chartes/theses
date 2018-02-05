@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Georges Lallemant</title>
-        <title type="sub">Étude des sources de la vie d’un peintre</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Georges Lallemant</title><title xml:lang="fr" type="sub">Étude des sources de la vie d’un peintre</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Billard, Alice">Alice Billard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201003.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La destinée historiographique de Georges Lallemant (vers 1575-1636) est singulière : celui qui passe pour avoir été l’un des peintres les
           plus en vogue du Paris d’Henri IV et de Louis XIII fut par la suite rapidement oublié, et de façon durable. Ce ressortissant lorrain, devenu
           sujet du roi de France en 1616, et qui effectua toute sa carrière à Paris, entre 1601 et 1636, faisait ainsi jusqu’à peu figure
@@ -63,7 +66,7 @@
           des réalisations qu’on lui prête, et en proposant un véritable « retour aux sources », que cette thèse entend proposer la première synthèse
           sur un sujet maintes fois écarté.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées sont éparpillées et de nature très diverse. On peut diviser les sources imprimées, d’abord mises à profit, en deux
           grands ensembles. D’une part, ont été méthodiquement exploités les histoires de peintres et autres dictionnaires biographiques édités sous
           l’Ancien Régime. Muets à bien des égards, ils donnent surtout la matière pour une histoire de la postérité critique de Lallemant. Par
@@ -86,16 +89,15 @@
           sous-série H<hi rend="sup">5</hi> des Archives nationales), ainsi que, de manière annexe, dans les sources de la période révolutionnaire
           (série S des Archives nationales).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’arrivée à Paris</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">L’arrivée à Paris</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un Lorrain</head>
           <p>Né en Lorraine vers 1575, Georges Lallemant arrive dans la capitale du royaume de France en 1601. Les vingt-cinq premières années de sa
             vie nous sont inconnues. Fils d’un marchand de Toul sur lequel on sait peu de choses, Lallemant a deux frères maîtres peintres, restés en
             Lorraine pour exercer leur métier, dans l’entourage de la cour ducale. C’est dans le florissant contexte lorrain de la fin du <num>xvi<hi rend="sup">e</hi></num> siècle que le jeune Lallemant effectua sans doute sa formation, chez un maître inconnu, avant de quitter le
             duché au tout début du <num>xvii<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La venue à Paris</head>
           <p>Le Paris des années 1600 est un milieu propice à l’activité artistique : dans un contexte politique, démographique et économique à
             nouveau favorable, la capitale française connaît un regain de dynamisme en matière de grands chantiers. Les peintres n’y ont jamais été si
@@ -104,7 +106,7 @@
             arrivèrent au <num>xvii<hi rend="sup">e</hi></num> siècle, à partir des années 1620, mais qu’est-ce qui poussa Lallemant à quitter si tôt
             le duché, alors que la reprise économique s’amorçait tout juste au royaume de France ? Cela reste encore à déterminer.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’héritage Dubois</head>
           <p>à son arrivée à Paris, Lallemant se plaça très certainement chez le maître peintre Claude Dubois (vers 1562-1604), dont il épousa la
             veuve à la fin de l’année 1605. Cet apprentissage chez Claude Dubois, même si ce dernier ne semble pas lié au célèbre Ambroise Dubois, eut
@@ -116,7 +118,7 @@
             parlementaires, officiers au Châtelet, ou encore chargés de fonctions municipales. Ainsi, au bout de quelques années à Paris, plusieurs
             conditions sont réunies pour permettre à Georges Lallemant, maître peintre en 1606, d’espérer faire une jolie carrière.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">L’activité des premières années</head>
           <p>Georges Lallemant habite toute sa vie la même maison rue Saint-Martin, à l’Aigle d’or, où il prend la suite de Claude Dubois. Le quartier
             Saint-Martin est alors un milieu caractéristique, riche en peintres, et essentiel pour comprendre l’activité artistique de l’époque.</p>
@@ -124,7 +126,7 @@
             avérée. Si on en sait encore peu, il semble que Lallemant construit patiemment, et de manière très pragmatique, un réseau influent qui
             peut en partie expliquer sa rapide accession à des commandes d’envergure.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">L’entrée royale de 1610</head>
           <p>Cet événement à la fois politique, dynastique et artistique, qui doit mettre en scène l’entrée de la reine Marie nouvellement sacrée, le
             16 mai 1610, marque une étape de la carrière de Lallemant : il lui procure une commande importante, qui doit lui assurer une publicité
@@ -133,8 +135,8 @@
             aspects aurait constitué, si elle avait eu lieu, la dernière des entrées renaissantes, lance réellement la carrière parisienne du
             peintre.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’établissement (1611-1625)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’établissement (1611-1625)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La peinture municipale : portraiturer les édiles parisiens</head>
           <p>Après le moment fort que constitue la commande pour l’entrée royale de 1610, le rôle de peintre au service de la municipalité se précise
             dans la décennie qui suit. En 1611, il est avéré que Lallemant est choisi pour réaliser le traditionnel portrait collectif des échevins de
@@ -144,7 +146,7 @@
               implorant sainte Geneviève</hi>, tableau votif commandé vers 1625 par la municipalité pour fixer le souvenir de la procession solennelle
             qui eut lieu le 6 juillet 1625 afin de faire cesser les pluies continuelles.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Peintre pour la Chambre des comptes</head>
           <p>La place tenue par Georges Lallemant dans les commandes de la municipalité n’est peut-être pas étrangère au fait que le peintre soit
             attesté au service de la Chambre des comptes à la fin des années 1610. Une trop brève mention nous indique que Lallemant est chargé de
@@ -152,13 +154,13 @@
             cours souveraines en général a d’ailleurs pu faciliter l’obtention par le peintre de lettres de naturalité qui font de lui, en juillet
             1616, un sujet du roi de France.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une production atypique : Georges Lallemant topographe</head>
           <p>Une vue panoramique de Suresnes réalisée vers 1619 par Georges Lallemant donne un éclairage étonnant sur le caractère polyvalent de
             l’activité du peintre. Les circonstances de sa réalisation sont judiciaires, mais les causes de l’intervention d’un peintre parisien déjà
             réputé dans le cadre d’un procès entre l’abbesse de Longchamp et des habitants de Suresnes sont encore mal éclaircies.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Une intense production religieuse</head>
           <p>La production de Lallemant dans le domaine civil est donc bien plus riche que ce qui était jusque là soupçonné. Mais c’est aussi dans le
             contexte particulier du Paris du premier tiers du <num>xvii<hi rend="sup">e</hi></num> siècle, une capitale marquée par le triomphe de la
@@ -174,8 +176,8 @@
             couvent d’Angers, vers 1621, montre que le succès est bien présent.</p>
           <p/>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La consécration (vers 1625-1636)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La consécration (vers 1625-1636)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Peintre à Notre-Dame</head>
           <p>Souvent mentionnée, mais jusqu’ici bien mal connue, la présence de Georges Lallemant à Notre-Dame de Paris est importante et multiple. Il
             est d’abord l’auteur de plusieurs des Mays offerts par la confrérie des orfèvres de Notre-Dame, tous les ans au mois de mai. On cite
@@ -186,7 +188,7 @@
             marché a été retrouvé. D’autres traces laissent penser qu’il fut à l’œuvre ailleurs dans le monument dans la dernière décennie de sa vie,
             époque qui constitue incontestablement un apogée de la carrière du peintre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le chantier de l’abbaye Sainte-Geneviève-du-Mont</head>
           <p>La reconstruction institutionnelle de l’abbaye Sainte-Geneviève au début des années 1620 s’accompagne d’importants travaux dans les
             bâtiments eux-mêmes : c’est à Georges Lallemant que François de La Rochefoucauld commande une série de huit tableaux destinés à décorer
@@ -195,7 +197,7 @@
             intéressant : il a pu constituer un trait d’union entre la clientèle municipale et la chantier de Sainte-Geneviève, au milieu des années
             1620.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le plus fameux des peintres d’arrière-garde</head>
           <p>Entre 1625 et 1636, date de sa mort, l’activité de Lallemant se distingue à la fois par l’importance des commanditaires et des
             réalisations et le caractère conservateur, parfois même archaïque, de sa production. Les commanditaires religieux sont quelques-uns des
@@ -210,7 +212,7 @@
             France à cette époque : le camaïeu. De même, en 1634, les marguilliers de Saint-Étienne-du-Mont passent marché avec le peintre pour la
             peinture des grands volets des orgues de l’église, exercice déjà archaïque à Paris.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Approche géographique peintre parisien, peintre français, peintre lorrain ?</head>
           <p>Après une période où l’activité de Lallemant a principalement pour cadre son quartier, le peintre s’affirme plus largement dans la
             dernière décennie de sa vie comme un peintre parisien au sens large. On constate une évolution progressive vers des quartiers de Paris
@@ -222,8 +224,8 @@
           <p>En fin de compte, comment ne pas s’interroger sur la part du facteur lorrain dans l’étude de la vie et de l’œuvre de Lallemant ? La thèse
             montre que les preuves d’une grande proximité avec la Lorraine sont en réalité rares, et sans doute encore surévaluées.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Histoire sociale d’un artiste</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Histoire sociale d’un artiste</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les traces de l’aisance financière</head>
           <p>Les actes sont assez nombreux pour envisager la fortune certaine dans laquelle vit Georges Lallemant. Le patrimoine immobilier, sans être
             très fourni, doit assurer le confort au couple Lallemant. L’intérieur du peintre, connu grâce à l’inventaire après décès de 1636, révèle
@@ -231,7 +233,7 @@
             Simon Vouet. Le prix des réalisations, pour peu qu’on puisse en juger à partir des trop rares informations dont on dispose, témoigne du
             succès d’un artiste qui connut une réussite financière évidente.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’atelier</head>
           <p>L’étude minutieuse du prix des apprentissages consentis par Georges Lallemant montre d’une part qu’ils sont particulièrement élevés, et
             ce jusqu’aux dernières années, et d’autre part que leur progression confirme l’évolution de la carrière du peintre, en particulier le
@@ -246,7 +248,7 @@
             Lallemant, de même que Pierre Brebiette ; le passage de Jean Senelle dans l’atelier du peintre parisien n’est encore qu’une supposition
             qu’aucun document n’est venu étayer.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un notable dans la société</head>
           <p>Outre le fait que Lallemant soit un notable dans son quartier – il est marguillier de la paroisse Saint-Josse vers 1615-1616 – il est
             aussi impliqué dans l’organisation du métier, même si les informations nous manquent sur ce point. Davantage, des indices plus discrets
@@ -255,9 +257,7 @@
             d’ « honnorable homme » à compter du début des années 1610, puis « peintre ordinaire du roi » qualifié de « noble homme » au sens
             littéral, mais ils reflètent avec une certaine finesse le cours d’une carrière parisienne de quelques trente années.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>Georges Lallemant meurt à la fin du printemps 1636 sans que l’on en sache plus sur la cause de cette disparition, qui intervient
           semble-t-il alors que le peintre est encore au faîte de sa gloire et en plein exercice de son activité. Son histoire est celle de la
           réussite assez remarquable d’un ressortissant lorrain venu au royaume de France, dont la carrière se développa de manière privilégiée sur la
@@ -271,11 +271,10 @@
           d’envisager avec plus de justesse le rôle de Lallemant comme trait d’union entre les <num>xvi<hi rend="sup">e</hi></num> et <num>xvii<hi rend="sup">e</hi></num> siècles, et comme figure de proue d’une arrière-garde parisienne encore florissante à l’aube de l’avènement
           d’une pratique moderne de la peinture.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="8"><head>Annexes</head>
         <p>Chronologie de la période parisienne. — Reconstitution généalogique (familles Dubois et Lallemant). — Georges Lallemant dans son quartier :
           carte. — Catalogue des œuvres attribuées à Georges Lallemant. — Édition des documents d’archives exploités.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

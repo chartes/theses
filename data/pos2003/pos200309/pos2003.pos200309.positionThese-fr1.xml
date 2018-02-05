@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Sir James Hall, un homme de science dans la Révolution</title>
-        <title type="sub">Édition critique et commentaire de son journal de voyage en France (avril-août 1791).</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Sir James Hall, un homme de science dans la Révolution</title><title xml:lang="fr" type="sub">Édition critique et commentaire de son journal de voyage en France (avril-août 1791).</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Denton, Elizabeth">Elizabeth Denton</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200309.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Lorsque Sir James Hall, quatrième baronet de Dunglass, se mit en route en avril 1791 pour la France en compagnie d’un de ses beaux-frères,
           Thomas Douglas, il participait à un mouvement général d’intérêt pour la Révolution française : en Grande-Bretagne en effet, l’évolution
           politique française constituait un sujet de débats passionnés et la controverse prenait souvent la forme de pamphlets politiques. Les
@@ -67,7 +70,7 @@
           notations. Ce commentaire général est conçu comme une introduction à l’édition de texte et permet ainsi d’en comprendre le contexte et la
           portée.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La source principale sur laquelle repose ce travail est évidemment le manuscrit du journal de Sir James Hall, conservé actuellement à la
           National Library of Scotland, à Edimbourg (ms. 6329-6332). Par ailleurs, ont été étudiés d’autres journaux de Sir James Hall, en particulier
           ses journaux de Grand Tour conservés également à la National Library of Scotland, ainsi que tous les journaux et carnets personnels de Sir
@@ -78,9 +81,8 @@
           étaient les lectures de Sir James Hall et donc d’élaborer des hypothèses sur son bagage intellectuel lorsqu’il se mit en route pour la
           France en 1791.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Commentaire</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Biographie de Sir James Hall (1761-1832)</head>
           <p>Sir James Hall fut un véritable héritier des Lumières. Il vécut à une période charnière et la diversité de ses intérêts reflétait ceux de
             sa génération. Sir James Hall faisait partie de la gentry écossaise ; les biens de sa famille étaient très importants. Il hérita du
@@ -111,7 +113,7 @@
             ce qui explique son intérêt si affirmé pour l’agronomie. Lorsqu’il mourut en 1832, il laissait à son fils aîné une fortune considérable,
             composée essentiellement de biens fonciers.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le voyage de Sir James Hall, un exemple de récit de voyage en France à la fin du <num>xviii<hi rend="sup">e</hi></num>  siècle</head>
           <p>Le journal de voyage de Sir James Hall qui fait l’objet de cette étude participe de plusieurs tendances de la littérature de voyage
             britannique de la fin du <num>xviii<hi rend="sup">e</hi></num>  siècle. Il était nécessaire par conséquent de comprendre en quoi consistaient ces
@@ -158,7 +160,7 @@
             qui lui fit comprendre immédiatement l’importance politique qu’eut la tentative de fuite du roi : c’est en apprenant cette nouvelle en
             effet qu’il résolut immédiatement de rentrer à Paris pour observer sur place l’évolution des événements.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Politique et agronomie dans le journal de Sir James Hall</head>
           <p>Les deux principaux thèmes de ce journal sont la politique et l’agronomie. En ce qui concerne la politique, l’étude du contexte général
             de la controverse politique en Grande-Bretagne à l’époque du voyage de Sir James Hall est nécessaire. L’année 1791 vit en effet la
@@ -238,9 +240,7 @@
             pendant tout ce voyage, à savoir son souci du détail, son sens aigu de l’observation et surtout le sens critique dont il fit preuve tout
             au long du texte, tout en refusant de faire de ce journal un document polémique.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>Ce journal de voyage est le produit de plusieurs influences : l’auteur et sa personnalité constituent l’influence la plus importante, mais
           le contexte politique et économique de l’époque pouvait également éclairer ce document. L’obsession de l’auteur pour l’exactitude de ce
           qu’il notait dans son journal et son souci d’objectivité font de ce document un véritable cabinet de curiosités textuel : la diversité des
@@ -250,13 +250,12 @@
           provoquait des débats très virulents notamment Outre-Manche : c’est le parti pris de l’auteur de sortir de cette controverse qui rend son
           texte particulièrement intéressant.</p>
       </div>
-              <div type="appendix"><head>Édition critique</head>
+          <div type="appendix" n="5"><head>Édition critique</head>
         <p>L’édition de texte est précédée d’une description archivistique du manuscrit conservé aux National Archives of Scotland. Les principes
           d’édition de texte visent avant tout à respecter le texte original et s’attachent à refléter au plus près le travail d’élaboration du texte,
           les hésitations éventuelles de l’auteur, les rajouts ultérieurs, la place des illustrations, afin de restituer le plus fidèlement possible
           l’organisation interne du manuscrit d’origine.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

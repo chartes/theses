@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La correspondance de Joseph Bonaparte avec son frère Napoléon (1784-1818)</title>
-        <title type="sub">Édition critique intégrale</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La correspondance de Joseph Bonaparte avec son frère Napoléon (1784-1818)</title><title xml:lang="fr" type="sub">Édition critique intégrale</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Haegele, Vincent">Vincent Haegele</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200616.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La correspondance entre Napoléon et Joseph Bonaparte pourrait se caractériser par deux aspects : d’un côté les ordres et les reproches, de
           l’autre les justifications et les plaintes. Cette analyse se révèle juste, si l’on porte un regard attentif aux 1 607 lettres qui ont
           subsisté dans les nombreux fonds d’archives qu’ont laissés les deux frères Bonaparte. Joseph a été, dès le moment où son frère a accédé aux
@@ -85,7 +88,7 @@
           écriture. On s’attachera notamment à analyser le papier qu’ils utilisaient, lequel n’est pas un détail si anodin, ainsi que les différents
           canaux suivis pour transmettre le courrier.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources utilisées pour le commentaire et l’édition proviennent dans leur majeure partie des Archives nationales, où sont conservés les
           papiers de Joseph Bonaparte (cote 381 AP) ainsi que les papiers de la famille Napoléon (cote 400 AP). Ces deux sous-séries ont apporté un
           grand nombre d’éléments nouveaux pour la constitution du corpus. Il a été admis pendant un certain nombre d’années que la correspondance des
@@ -108,9 +111,8 @@
           désormais accessible à tous les historiens et contenant une foule de documents importants sur la vie de Joseph, est resté ainsi totalement
           inconnu jusqu’à ce jour.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le travail sur les sources</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le travail sur les sources</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Aspects de la correspondance des deux frères</head>
           <p>
             <hi rend="i">Approche matérielle des lettres</hi>. – La paléographie du début du <num>xix<hi rend="sup">e</hi></num> siècle n’a été que peu étudiée.
@@ -143,7 +145,7 @@
             lire les chiffres du ministère de la Guerre et des Affaires étrangères. Une des clefs de voûte des guerres napoléoniennes se trouve
             certainement dans l’acheminement du courrier.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Principes d’édition d’hier et d’aujourd’hui.</head>
           <p>
             <hi rend="i">Les précédentes éditions</hi>. – Les éditions du passé ont été lacunaires, voire orientées politiquement par des historiens
@@ -173,8 +175,8 @@
             l’orthographe originales, appareil de notes critiques, établissement d’un tableau de la tradition des lettres reprenant les originaux et
             les copies ainsi que les précédentes publications..</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Joseph Bonaparte : personnalité et idéologie politique</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Joseph Bonaparte : personnalité et idéologie politique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Biographie détaillée</head>
           <p>Il est inutile de revenir ici sur l’ensemble de la carrière politique de Joseph ainsi que sur sa vie privée. Il convient seulement de
             rappeler que de nombreux éléments nouveaux peuvent être encore apportés sur la carrière d’un homme que l’on a toujours décrit comme
@@ -197,7 +199,7 @@
             Après la défaite définitive de 1815, Joseph gagne l’Amérique, puis l’Angleterre et enfin l’Italie, en évitant soigneusement de tresser des
             couronnes de laurier à son frère Napoléon.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Joseph, honnête homme ou souverain autoritaire ?</head>
           <p>Il convient de s’interroger sur la personnalité et la pensée politique de Joseph, lesquelles sont étonnamment complexes. Joseph est un
             homme cultivé, plein de bon sens, mais manifestement vaniteux et léger. Il charme par sa conversation et excelle dans les discussions
@@ -215,30 +217,27 @@
             sévère, celui d’un grand nombre d’historiens également et si certains, comme le baron du Casse, ont tenté de le défendre, leurs arguments
             n’ont pas convaincu.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Édition de la correspondance des frères Joseph et Napoléon Bonaparte</head>
-        <p>L’édition de la correspondance des deux frères porte sur toutes les lettres qu’ils ont écrites entre 1784 et 1818 : Joseph a donc été le
+      </div><div n="5" type="part"><head n="0" type="chapter">Édition de la correspondance des frères Joseph et Napoléon Bonaparte</head>
+        <p n="1" type="chapter">L’édition de la correspondance des deux frères porte sur toutes les lettres qu’ils ont écrites entre 1784 et 1818 : Joseph a donc été le
           correspondant le plus fidèle et le plus ancien de son frère, ce qui n’est pas peu important. Au total, ce sont 1607 lettres qui ont été
           conservées jusqu’à nos jours, mais cela ne représente pas la totalité du corpus, étant donné qu’un petit nombre d’entre elles ont disparu au
           cours des événements : les lettres de Joseph remontant à la période révolutionnaire ont été perdues, ainsi que des lettres de la période
           espagnole et de la campagne de France. Certaines ne sont connues qu’à partir des minutes.</p>
-        <p>Il n’a été procédé à aucune censure, mais plutôt à de nombreuses rectifications, corrections et ajouts afin d’obtenir le premier corpus
+        <p n="2" type="chapter">Il n’a été procédé à aucune censure, mais plutôt à de nombreuses rectifications, corrections et ajouts afin d’obtenir le premier corpus
           intégral, qui ne nécessite pas de se tourner vers une dizaine de sources, dont beaucoup sont lacunaires.</p>
-        <p>La correspondance est divisée par période. La première couvre les années 1784-1805, soit les années de formation et d’ascension. La
+        <p n="3" type="chapter">La correspondance est divisée par période. La première couvre les années 1784-1805, soit les années de formation et d’ascension. La
           deuxième les années 1806-1808, c’est-à-dire le règne napolitain de Joseph. La troisième parcourt le règne espagnol, 1808-1813, et la
           dernière les années des débâcles successives, de la campagne de France à l’exil.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Une édition scientifique, raisonnée et annotée de la correspondance de Napoléon et de Joseph apporte un éclairage neuf sur l’histoire du
           Premier Empire. L’infaillibilité de Napoléon, que Du Casse prétendait reconnaître dès 1795, paraît notamment moins évidente. Il est par
           ailleurs révélateur de noter que de nombreux détails les rapprochaient, que leur niveau d’éducation et que leurs goûts en matière de
           littérature ne différaient que peu. Joseph et Napoléon partageaient beaucoup de points communs : leur rupture, après 1805 et encore plus
           après 1809, ne pouvait être que spectaculaire.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Addenda. — Tableaux synoptiques. — Cartes. — Édition de documents inédits ayant servi de sources.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

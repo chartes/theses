@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les monnayages ecclésiastiques en France (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;x&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle)</title>
-        <title type="sub">Étude iconographique.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les monnayages ecclésiastiques en France (<num>x<hi rend="sup">e</hi></num>-<num>xv<hi rend="sup">e</hi></num> siècle)</title><title xml:lang="fr" type="sub">Étude iconographique.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Cavalié, Étienne">Étienne Cavalié</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200405.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>L’objectif de ce travail a dès l’origine été double. Il s’est agi, d’une part, d’établir une synthèse des connaissances actuelles sur les
           monnayages d’abbayes et d’évêchés, avec l’ambition de comprendre si les ateliers ecclésiastiques se distinguent par leur typologie des
           ateliers laïques. D’autre part, l’enjeu était d’interroger l’iconographie extrêmement riche des monnaies médiévales en abandonnant la
@@ -103,7 +106,7 @@
           des émissions du prieuré clunisien de Souvigny. Les renvois sont constants d’un atelier à l’autre, afin de faire ressortir le mieux possible
           les innombrables influences réciproques qui déterminent souvent le choix d’un type monétaire.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Le travail effectué étant de nature iconographique, aucune publication de texte inédit n’a été faite. Deux types de sources ont été
           exploités : les textes déjà édités, dans diverses collections ou dans des monographies précises ; et les monnaies elles-mêmes, étudiées
           avant tout à travers les reproductions fournies dans les ouvrages de références, les publications de catalogues de collections publiques ou
@@ -113,9 +116,8 @@
           (pour la Lorraine). Et, bien entendu, les nombreux articles de la <hi rend="i">Revue numismatique</hi> entre 1836 et 2002 publiant
           régulièrement des monnaies inédites ont été dépouillés.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La structure de l’image circulaire</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La structure de l’image circulaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le silence historiographique sur l’iconographie numismatique</head>
           <p>Les monnaies sont très rarement exploitées comme source iconographique, si ce n’est pour localiser et dater les pièces. En effet, les
             numismates disposent certes des connaissances concernant les monnaies, mais ne maîtrisent guère les méthodes correctes d’iconographie, ni
@@ -130,7 +132,7 @@
             méthodes historiques, qui ont considérablement évolué depuis le milieu du <num>xix<hi rend="sup">e</hi></num> siècle, et tenir compte des
             découvertes nombreuses et des réattributions de monnaies qui ont été faites depuis.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Définitions</head>
           <p>Etant donné que ce travail s’intéresse à des questions qui n’ont jamais été approfondies, voire jamais posées, il a paru indispensable de
             rappeler un certain nombre de définitions. Généralement les définitions sont celles employées couramment par les numismates, mais sans
@@ -146,7 +148,7 @@
             point d’une méthode permettant d’interroger correctement les images monétaires, de saisir leurs spécificités et les traits partagés avec
             les images circulaires d’autres supports.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les images circulaires à l’époque médiévale</head>
           <p>Il était utile, avant d’aborder les images monétaires exclusivement, de s’attarder sur les autres images circulaires. Ont été
             privilégiés les rosaces, les tympans d’église, la cartographie du monde, les sceaux et la <hi rend="i">rota</hi> pontificale, et les
@@ -156,7 +158,7 @@
             clairement : même si les images monétaires n’ont que peu de rapport avec, par exemple, les tympans d’églises, il est sûr en revanche que
             la forme ronde d’un support influe sur l’image qui est placée à l’intérieur, et surtout sur la manière dont cette image est disposée.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Organisation géométrique des images circulaires sur les monnaies</head>
           <p>A l’époque antique, image et texte sur les monnaies ne sont pas séparés selon des principes réguliers. Ils ont plutôt tendance à
             s’entremêler. L’apparition du grènetis vers le milieu du <num>vii<hi rend="sup">e</hi></num>  siècle sépare clairement les lettres et le type
@@ -176,11 +178,11 @@
             monnaies médiévales : en effet les détenteurs d’ateliers monétaires, même ecclésiastiques, n’ont pas, par ailleurs, une si grande
             prédilection pour les images religieuses sur leurs émissions.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Monographies</head>
-        <p>Pour illustrer de façon plus systématique l’étude des types exploités dans la première partie, et également pour rendre compte du travail
+      </div><div n="4" type="part"><head n="0" type="chapter">Monographies</head>
+        <p n="1" type="chapter">Pour illustrer de façon plus systématique l’étude des types exploités dans la première partie, et également pour rendre compte du travail
           effectué, ont été rédigées les monographies de tous les ateliers ecclésiastiques du royaume pour lesquels on disposait, soit des documents
           écrits attestant d’une activité monétaire réelle, soit d’exemplaires conservés, soit de ces deux types de sources.</p>
-        <p>Les 73 ateliers ainsi étudiés ont été classés dans l’ordre suivi par Adolphe Dieudonné dans le tome IV de son <hi rend="i">Manuel de
+        <p n="2" type="chapter">Les 73 ateliers ainsi étudiés ont été classés dans l’ordre suivi par Adolphe Dieudonné dans le tome IV de son <hi rend="i">Manuel de
             numismatique médiévale et moderne </hi>(figurent en italique les ateliers pour lesquels les développements sont limités) : Agde, Agen,
           Albi, Amiens, Arles, Autun, Avignon, Beauvais, Besançon, Cahors, Cambrai, Châlons, <hi rend="i">Chartres</hi>, <hi rend="i">Chelles</hi>,
           Clermont, Cluny, Corbie, Die, Embrun, Gap, Grenoble, Langres, Laon, Le Puy, Lectoure, Lodève, Lyon, Meaux, Melgueil (Maguelone), Mende,
@@ -190,7 +192,7 @@
           Saint-Médard de Soissons, Saint-Mihiel, <hi rend="i">Saint-Ouen de Rouen</hi>, Saint-Oyen de Joux (Saint-Claude), Saint-Paul-Trois-Châteaux,
           Saint-Pierre de Jumièges, <hi rend="i">Saint-Romain de Rouen</hi>, <hi rend="i">Saint-Trond</hi>, <hi rend="i">Seltz</hi>, Soissons,
           Souvigny, Strasbourg, Toul, Toulouse, Tournus, Uzès, Valence, Verdun, Vienne, Viviers, Wissembourg.</p>
-        <p>La disparité de traitement est grande entre ces dossiers, et ce pour deux raisons majeures. La première tient à l’histoire monétaire
+        <p n="3" type="chapter">La disparité de traitement est grande entre ces dossiers, et ce pour deux raisons majeures. La première tient à l’histoire monétaire
           elle-même. On a peu de renseignements sur le monnayage abbatial de Nivelles, pour lequel on ne connaît que la concession monétaire octroyée
           par l’empereur en 1040. A l’inverse le monnayage des papes d’Avignon est très bien documenté, tant en sources d’archives qu’en monnaies
           connues. La seconde raison tient à la nature du travail exécuté : les recherches et la rédaction du mémoire ont dû être menées en temps
@@ -198,7 +200,7 @@
           Certains ont donc été privilégiés, pour permettre au chercheur d’apprécier le genre de renseignements que l’on peut tirer d’une étude
           iconographique appliquée aux monnaies, et éventuellement pousser plus loin encore l’enquête. On ne donnera ici que deux exemples des
           constatations auxquelles ont amené des questionnements typologiques.</p>
-        <p>Le procédé essentiel visait à comprendre un type en le comparant au reste du corpus et en voyant comment fonctionne, par exemple, la
+        <p n="4" type="chapter">Le procédé essentiel visait à comprendre un type en le comparant au reste du corpus et en voyant comment fonctionne, par exemple, la
           présence d’un buste sur une monnaie. On constate, en particulier dans le Midi, que lorsqu’un buste de face représente un prélat, la légende
           n’est pas interrompue. En revanche, lorsqu’il s’agit d’un saint, en particulier dans le cas de reliques conservées dans l’abbaye ou l’église
           cathédrale, le buste coupe la légende par le bas. Cela permet de relever l’exception que constitue le monnayage de Lodève, au nom et au
@@ -206,21 +208,21 @@
           singularité pourrait être liée à la rédaction contemporaine d’une <hi rend="i">Vie</hi> de saint Fulcran, mettant en avant l’action
           essentiellement politique de saint Fulcran, ancien évêque de Lodève, confronté à des seigneurs entreprenants. Sur la monnaie, le fait que le
           buste ne coupe pas la légende suggère que saint Fulcran est représenté beaucoup plus comme évêque de Lodève que comme saint.</p>
-        <p>Autre exemple, complètement différent : le type à la dextre bénissante de Besançon est toujours expliqué comme la représentation d’un
+        <p n="5" type="chapter">Autre exemple, complètement différent : le type à la dextre bénissante de Besançon est toujours expliqué comme la représentation d’un
           reliquaire. Or, malgré plusieurs recherches effectuées, rien pour le moment n’a pu prouver que la ville de Besançon détenait une partie des
           reliques de saint Etienne, dont le bras droit se trouve à Constantinople à partir du <num>v<hi rend="sup">e</hi></num> siècle. Le type bisontin
           pourrait donc bien être uniquement issue de l’imitation d’un denier verdunois frappé à Dieulouard.</p>
-        <p>Pour faciliter l’étude des monnaies par types, selon leur extension dans le temps et dans l’espace, et permettre l’application de méthodes
+        <p n="6" type="chapter">Pour faciliter l’étude des monnaies par types, selon leur extension dans le temps et dans l’espace, et permettre l’application de méthodes
           statistiques, un tableau a été élaboré sur tableur, prenant en compte les caractéristiques suivantes de chaque pièce.</p>
-        <p>1°. Les conditions de l’émission : lieu d’émission ; lieu d’atelier (différent/au même endroit) ; statut de l’atelier :
+        <p n="7" type="chapter">1°. Les conditions de l’émission : lieu d’émission ; lieu d’atelier (différent/au même endroit) ; statut de l’atelier :
           (épiscopal/abbatial/participation à un atelier laïc) ; bénéficiaire : (évêque/chapitre cathédral/évêque et chapitre/abbé/abbé et
           moines/laïque frappant dans un atelier ecclésiastique) ; droits monétaires (concession/usurpation/?) ; concesseur
           (empereur/roi/comte/duc/pape) ; nom du concesseur ; date de concession ; genre de monnaie (denier/gros/…) ; métal</p>
-        <p>2°. La localisation : département dans lequel se trouve aujourd’hui l’abbaye ou l’évêché ; province d’Ancien Régime ; diocèse (au Moyen
+        <p n="8" type="chapter">2°. La localisation : département dans lequel se trouve aujourd’hui l’abbaye ou l’évêché ; province d’Ancien Régime ; diocèse (au Moyen
           Age) ; province ecclésiastique ; atelier se situant (dans le royaume/en terre d’Empire) ; siècle d’émission ; tranche d’émission (avant
           950/950-1000/1000-1050/1050-1100/1100-1150/1150-1200/1200-1250/1250-1300/1300-1350/1350-1400/1400-1500) ; dates d’émission ; nom de l’évêque
           ou de l’abbé (ou du seigneur laïque) ayant fait frapper cette monnaie</p>
-        <p>3°. La description (les catégories de description concernent chacune des faces) : description ; imitation/création
+        <p n="9" type="chapter">3°. La description (les catégories de description concernent chacune des faces) : description ; imitation/création
           originale/continuation/dégénérescence ; type (de nature iconographique/lettres dans le champ/image et lettres) ; type religieux
           (oui/non/indéterminé) ; reliquaire (oui/non/indéterminé) ; présence d’une main bénissante (oui/non) ; présence d’une crosse (oui/non) ;
           présence d’une mitre (oui/non) ; édifice (oui/non) ; présence de A (oui/non) ; présence de Oméga (oui/non) ; tête de face
@@ -228,14 +230,12 @@
           (pattée/haute/longue/ornée/autre) ; cantonnement (au premier canton ; au deuxième canton ; au troisième canton ; au quatrième canton ; aux
           cantons 1 et 4 ; aux cantons 2 et 3 ; aux quatre cantons) ; dégénérescence (non/faible/forte) ; grènetis/listel/rien/grènetis
           interrompu/légende interrompue</p>
-        <p>4°. La légende : légende complète ; légende (développement) ; texte informatif/texte invocatoire ; indication de lieu ; nom du saint patron
+        <p n="10" type="chapter">4°. La légende : légende complète ; légende (développement) ; texte informatif/texte invocatoire ; indication de lieu ; nom du saint patron
           de la cathédrale ou abbatiale (oui/non/saint autre que le patron de la cathédrale ou qui n’est pas celui dont l’abbaye porte le nom) ; si
           c’est un nom de saint (au génitif/au nominatif) ; présence d’une croisette en début de légende (oui/non/autre) ; inscription du nom de
           l’évêque ou de l’abbé/nom et titre/titre/initiale et titre ; inscription du nom ou titre d’un seigneur laïc (titre/nom/titre et
           initiale/titre et nom/non/?) ; rapport entre la légende et l’image (direct/symbolique/non/?) ; ponctuation (non/sommaire/complète).</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’étude de l’iconographie numismatique reste encore largement à faire. L’histoire typologique proprement dite, c’est-à-dire l’histoire des
           meubles présents sur les monnaies, leur apparition ou leur disparition, doit être doublée d’une histoire de la disposition de ces types, qui
           n’est jamais indifférente. Ainsi, on observe que l’avers des monnaies est généralement structuré par un axe vertical, comme on le voit sur
@@ -252,10 +252,9 @@
           des sources numismatiques uniquement, par des mises en séries de monnaies et des comparaisons entre elles, et sinon uniquement, du moins de
           préférence à toute autre source.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Quatorze cartes. ­ Soixante-deux pages de planches.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

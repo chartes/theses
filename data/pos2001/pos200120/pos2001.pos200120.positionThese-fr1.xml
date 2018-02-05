@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Correspondance de Jean-Victor Schnetz, directeur de l’Académie de France à Rome, de 1841 à 1846 et de 1853 à 1866</title>
-        <title type="sub">Édition commentée.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Correspondance de Jean-Victor Schnetz, directeur de l’Académie de France à Rome, de 1841 à 1846 et de 1853 à 1866</title><title xml:lang="fr" type="sub">Édition commentée.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Robbe, Emilie">Emilie Robbe</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2001.pos200120.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le musée du Château de Flers (Orne) a consacré en l’an 2000 une exposition au peintre Jean-Victor Schnetz, né à Versailles en 1787 et mort
           à Paris en 1870. Le public a pu suivre ainsi, dans l’ancienne demeure d’Antoine Schnetz, frère du peintre, le parcours d’un élève de David
           qui, par l’originalité et la force expressive de ses œuvres, conquit la gloire en pleine “ bataille romantique ”. Schnetz avait voyagé en
@@ -75,7 +78,7 @@
           1979, d’éditer la correspondance de Jean-Victor Schnetz. Les lettres sont précédées d’un commentaire destiné à les placer dans leur contexte
           artistique, institutionnel et politique.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources de cette édition se trouvent en trois lieux différents . à l’Académie de France, à Rome, aux archives de l’institut et aux
           Archives nationales, à Paris.</p>
         <p>Les cartons de correspondance n° 45 (1841-1847), 63 (1853-1358), 64 (1858- 1863) et 67 (1964-1866) des archives de l’Académie de France à
@@ -98,13 +101,12 @@
         <p>Pour les activités intéressant l’Institut de France, nous avons également consulté les procès-verbaux de l’Académie des beaux-arts (2 E
           9-13) ainsi que les registres de correspondance de l’Académie, sous les cotes 4 E 1 (1841-1860) et 4 E 2 (1861-1888).</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Commentaire</head>
-        <p>Le commentaire accompagnant l’édition de la correspondance de Jean-Victor Schnetz s’appuie sur une assertion de Henry Lapauze, historien
+          <div n="3" type="part"><head n="0" type="chapter">Commentaire</head>
+        <p n="1" type="chapter">Le commentaire accompagnant l’édition de la correspondance de Jean-Victor Schnetz s’appuie sur une assertion de Henry Lapauze, historien
           de l’Académie de France à Rome au début du <num>xx<hi rend="sup">e</hi></num> siècle, qui, comparant Ingres à son successeur, soutenait que Schnetz “
           borna son ambition à administrer et non pas à diriger l’Académie ”. L’opinion de Lapauze demande à être nuancée et discutée : Schnetz, s’il
           ne forma pas des disciples à l’Académie de France, exerça pleinement son rôle de directeur.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">“ Administrer ”</head>
           <p>Avant d’étudier, ou de juger, les capacités du directeur et l’activité de Schnetz à l’Académie de France, il faut connaître la
             personnalité de celui-ci, sa formation et la carrière qu’il avait derrière lui au moment où il arriva à la Villa Médicis. Mais il faut
@@ -132,7 +134,7 @@
             n’avait ni le personnel, ni la formation nécessaires pour être véritablement un bon administrateur : comme ses prédécesseurs, il était
             artiste et non comptable.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">“ Diriger ”</head>
           <p>A la Villa Médicis, le directeur disposait, sur les jeunes artistes, de l’autorité que lui conférait la qualité de fonctionnaire, de
             celle, morale et artistique, que lui conféraient l’Académie des beaux-arts et sa propre réputation, ainsi que de celle que lui avaient
@@ -159,7 +161,7 @@
             prêtait une oreille attentive et voulait aider chacun selon ses possibilités. Il est difficile de ne pas le considérer comme un directeur
             à part entière, même s’il ne suit pas le modèle d’Ingres, auquel Henry Lapauze s’est attaché.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Constantes et évolutions : Vingt années de directorat</head>
           <p>Si Schnetz a pu être nommé pour un second mandat en 1853 et être prolongé ensuite pendant sept ans et demi, c’est qu’il satisfaisait fort
             bien aux vœux du gouvernement français et plaisait tout autant aux Italiens. Il était réputé pour ses bons mots et son humour ; il donnait
@@ -184,9 +186,7 @@
             convictions doctrinaires de Raoul-Rochette, accédait facilement à ses requêtes et en vint même, en 1847, à qualifier l’Académie des
             beaux-arts de “ simple corps consultant ”. Les arguments de la crise étaient prêts dès les années 1850.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="4"><head>Conclusion</head>
         <p>En 1866, Jean-Victor Schnetz quitta la Villa Médicis à contrecœur. Il lui avait voué sa vie et souhaitait y mourir. Il se rendit à Paris
           comme en exil. Mort le 15 mars 1870, il eut la chance de ne pas voir ce qu’il n’aurait pas manqué de qualifier, non sans humour cependant,
           de “ sacrilège ” : les Piémontais à Rome et l’élévation de Rome au rang de capitale du royaume d’Italie le 1<hi rend="sup">er</hi> juillet
@@ -198,7 +198,7 @@
           de l’Italie et de la Villa Médicis, sur le <hi rend="i">Pincio.</hi>
       </p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="5"><head>Édition</head>
         <p>Le grand nombre des lettres conservées sur une période de plus de vingt années rendait difficile une édition exhaustive. Ce sont les
           préceptes de sélection présidant à l’édition de nouvelle série de la <hi rend="i">Correspondance des directeurs de l’Académie de France à
             Rome</hi> qui ont été suivis : certaines lettres intéressant l’histoire de la Villa Médicis en elle-même ou le détail des comptes ont été
@@ -208,7 +208,6 @@
           ouvert, un pédagogue épris de son travail et désireux de faire au mieux pour les pensionnaires, un directeur, enfin, au sens plein du terme.
       </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

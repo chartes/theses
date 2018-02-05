@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Antoine Ruzé d’Effiat (v. 1581-1632), surintendant des finances sous Louis XIII</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Antoine Ruzé d’Effiat (v. 1581-1632), surintendant des finances sous Louis XIII</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Motte, Alice">Alice Motte</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200920.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La trajectoire sociale et politique d’Antoine Ruzé, marquis d’Effiat, est originale : fils d’un petit gentilhomme auvergnat, Gilbert
           Coiffier, mort endetté et de façon prématurée, fut recueilli dans des circonstances opportunes par son grand-oncle Martin Ruzé, secrétaire
           d’État depuis 1588, qui en fit son héritier et lui transmit son nom par le biais d’une substitution. Héritier des traditions militaires de
@@ -64,7 +67,7 @@
             <num>xvii</num>
 <hi rend="sup">e</hi> siècle, n’en restait pas moins fort obscure.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources d’archives utilisées dans le cadre de ce travail se divisent en deux ensembles. Le premier regroupe les sources qui ont livré
           des informations personnelles sur le marquis d’Effiat et sa famille. Les archives du Minutier central des notaires parisiens (études XIV,
           XIX, XC et XCVI) ont permis de retrouver plusieurs actes, tels que des contrats de mariage ou des partages successoraux, essentiels pour
@@ -87,9 +90,8 @@
           Puy-de-Dôme, ont été mises à profit afin d’examiner la nature de son intervention dans l’union des villes de Clermont et de Montferrand,
           décidée par un édit d’avril 1630.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La carrière sociale et politique d’Antoine d’Effiat</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La carrière sociale et politique d’Antoine d’Effiat</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Antoine Coiffier Ruzé d’Effiat, un double héritage</head>
           <p>Né en Auvergne vers 1581, Antoine d’Effiat rassembla en sa personne le legs de deux lignées, les Coiffier et les Ruzé, dont la richesse
             se nourrit tout à la fois de leurs différences, petits nobles auvergnats d’un côté, robins tourangeaux devenus grands commis de l’État de
@@ -116,7 +118,7 @@
             1608 fut un événement majeur dans l’existence du marquis : elle constitua tout à la fois un nouveau départ financier, social et
             professionnel.    </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les années 1600-1625</head>
           <p>Les années 1600-1625 sont parmi les moins connues de l’existence de d’Effiat. Il conclut en 1610 un mariage avantageux avec Marie de
             Fourcy, fille de Jean de Fourcy, intendant des bâtiments du roi, et s’intégra assez vite au sein de cette famille parisienne prospère et
@@ -134,7 +136,7 @@
             se lier au nouveau ministre chargé de la conduite de l’État, le cardinal de Richelieu, et d’entrer dans sa proche clientèle politique.
         </p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Sous la houlette du cardinal : les années 1626-1632</head>
           <p>Le 9 juin 1626, Antoine d’Effiat fut nommé surintendant des finances par Louis XIII. S’ouvrirent alors six années de présence au
             gouvernement, les plus riches de sa carrière, qui le conduisirent à jouer un vrai rôle politique en parallèle à l’exercice de sa charge.
@@ -162,8 +164,8 @@
             capables d’appuyer ses décisions et de l’entourer face à ses opposants. Fort de son poids politique, militaire et provincial, d’Effiat
             représenta donc pour le cardinal, bien plus qu’une simple créature limitée à une stricte dépendance, un véritable allié.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La surintendance des finances</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La surintendance des finances</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le marquis d’Effiat à la tête des finances royales</head>
           <p>Le marquis d’Effiat dirigea les finances royales pendant un peu plus de six ans, du 9 juin 1626 à sa mort, le 27 juillet 1632. Si son
             passage à la surintendance semble court, il apparaît en réalité, si on le rapporte à celui de ses prédécesseurs, d’une réelle importance,
@@ -196,7 +198,7 @@
             d’en saisir l’enchaînement. L’un de ces enjeux fut ainsi d’exercer de façon simultanée ses fonctions de ministre des finances et ses
             emplois militaires, dans le cadre de sa mission à l’armée d’Italie pendant l’été 1630 notamment.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Antoine d’Effiat et la naissance de Clermont-Ferrand</head>
           <p>Parmi les affaires que le marquis d’Effiat eut à traiter au cours de sa surintendance, la question de la fusion des villes de Clermont et
             de Montferrand, proclamée par un édit royal en avril 1630, est l’une des plus intéressantes à étudier. Elle présente en effet la
@@ -221,8 +223,8 @@
             il pouvait jouir dans sa province natale ; il éclaire également l’existence d’une marge de manœuvre assez large qui lui était laissée dans
             le traitement des affaires relevant de sa charge de surintendant.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La fortune d’Antoine d’Effiat</head>
-        <p>Antoine d’Effiat mourut à la tête d’une fortune très importante, en grande partie édifiée pendant les années passées à la surintendance,
+      </div><div n="5" type="part"><head n="0" type="chapter">La fortune d’Antoine d’Effiat</head>
+        <p n="1" type="chapter">Antoine d’Effiat mourut à la tête d’une fortune très importante, en grande partie édifiée pendant les années passées à la surintendance,
           qui s’élevait à 2,8 millions de livres et qui lui procurait alors un revenu de 385 000 livres. L’analyse de la constitution de ce patrimoine
           et de son évolution permet de mettre en regard l’enrichissement personnel du marquis et sa pratique du pouvoir ministériel. Tous deux furent
           liés de façon indissociable : la fortune du marquis reposait certes dès l’origine sur des bases saines et heureuses, puisqu’elle
@@ -235,7 +237,7 @@
           d’Effiat est donc un élément supplémentaire pour comprendre le surintendant qu’il fut, d’autant plus éclairant qu’en raison du décès du
           marquis en cours d’exercice, il représente une sorte d’instantané de la situation financière d’un ministres des finances alors au faîte de
           sa carrière.</p>
-        <p>La fortune laissée par d’Effiat à sa mort était presque entièrement neuve : près des trois quarts des investissements qui ancrèrent son
+        <p n="2" type="chapter">La fortune laissée par d’Effiat à sa mort était presque entièrement neuve : près des trois quarts des investissements qui ancrèrent son
           capital dans des postes bien déterminés furent effectués après 1626. Le principal moteur de sa croissance résida dans les revenus
           conséquents que le marquis tira des gages des charges qu’il exerça, des pensions et des dons d’argent réguliers que lui procura le roi. Le
           choix d’investissements particulièrement rentables (rentes de l’Hôtel de ville, achat d’offices et de revenus aliénés sur les impôts)
@@ -250,9 +252,7 @@
           travaillèrent des architectes et des artisans réputés. Enfin, il put faire preuve d’une réelle originalité dans ses efforts pour faire de
           son village natal d’Effiat une véritable ville neuve, selon un « projet urbanistique » qui n’est pas sans rappeler l’œuvre accomplie par le
           cardinal dans sa terre de Richelieu.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le marquis d’Effiat mourut brusquement le 27 juillet 1632 après une courte maladie, contractée alors qu’il commandait l’armée royale en
           Allemagne. Son histoire personnelle est celle d’une réussite sociale et politique assez remarquable, qui lui permit notamment d’accéder aux
           honneurs de l’ordre du Saint-Esprit et du maréchalat de France, deux insignes de dignité réservés d’ordinaire à de puissants seigneurs, dont
@@ -272,12 +272,11 @@
           finances royales se trouvait encore dans une phase modérée, que l’entrée de la France dans la guerre ouverte en 1635, en engendrant une
           augmentation brutale et décisive de la pression fiscale, viendrait définitivement clore.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Tableaux des revenus des charges du marquis d’Effiat, des rentes et obligations, des revenus des terres, des revenus des offices et des
           droits sur les impôts royaux. — Cartes des terres du marquis d’Effiat. — Reconstitutions généalogiques (Coiffier, Ruzé, Ruzé d’Effiat,
           Fourcy).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

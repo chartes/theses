@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les collections d’objets d’art d’Anne de Bretagne à travers ses inventaires</title>
-        <title type="sub">Le spectacle et les coulisses</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les collections d’objets d’art d’Anne de Bretagne à travers ses inventaires</title><title xml:lang="fr" type="sub">Le spectacle et les coulisses</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Vrand, Caroline">Caroline Vrand</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201027.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Anne de Bretagne apparaît comme l’une des figures féminines les plus étudiées de l’histoire de France. Duchesse de Bretagne, deux fois
           reine de France, cette forte personnalité qui tint un rôle primordial dans le conflit breton n’a cessé d’interroger les historiens. Adulée
           par les Bretons en tant que symbole de l’indépendance et du particularisme de leur région, cette reine demeure encore aujourd’hui au cœur de
@@ -81,7 +84,7 @@
           représentée, ils permettent en revanche une immersion dans le quotidien des collections et de leur gestion et en donnent à voir un aspect
           qui, bien que partiel, s’avère assurément représentatif de l’ensemble.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La source principale de cette étude est donc constituée par les inventaires communément appelés « inventaire d’Anne de Bretagne » contenus
           au début du manuscrit composite de la Bibliothèque nationale de France fr. 22335, dont l’édition est donnée en annexe. Une partie du travail
           a consisté à appréhender et à comprendre l’organisation de cette compilation qui apparaît, dans le panorama des inventaires princiers de la
@@ -94,9 +97,8 @@
           nous disposons de deux états des gages des officiers d’Anne, l’un aux Archives nationales, pour les années 1492-1493, et le second aux
           archives départementales de Loire-Atlantique, pour les années 1498-1499.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Gestion et administration : les lieux et les hommes</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Gestion et administration : les lieux et les hommes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Habiter et résider : les lieux de vie de la reine-duchesse</head>
           <p>Les caractéristiques de l’habitation royale, à la fin du Moyen Âge, sont intrinsèquement liées à une donnée fondamentale : le caractère
             nomade de la cour. La vie de cour dépendait de cet impératif profondément ancré dans les mentalités pour des raisons multiples. Anne de
@@ -106,7 +108,7 @@
             mobilier. De fait, les textiles, plus aisément transportables, et les menus objets, tels les arts de la table, tenaient une place plus
             importante que les meubles de menuiserie, et un soin tout particulier leur était accordé.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La reine s’entoure</head>
           <p>Chaque roi, reine ou prince de sang disposait, à la fin du Moyen Âge, d’une maison, ensemble d’officiers à son service chargé notamment
             de l’approvisionnement de la cour. La cour d’Anne de Bretagne est passée à la postérité comme la première cour féminine importante et pour
@@ -121,7 +123,7 @@
             Beaune, trésorier général des finances. Par-delà les changements de roi, la permanence relative de certains officiers à son service est
             peut-être, par ailleurs, l’expression d’une certaine autonomie que la reine entendait imposer dans la gestion de ses collections.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une gestion des objets au quotidien</head>
           <p>Les inventaires du manuscrit de la Bibliothèque nationale de France fr. 22335, compilation réalisée à différents moments et traitant à
             chaque fois d’une partie seulement des collections, ne proposent pas une liste figée d’objets extraits de leur contexte d’utilisation,
@@ -139,8 +141,8 @@
             embellir, réparer ou modifier les objets, au gré des besoins.</p>
           <p/>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Origines des collections</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Origines des collections</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les différentes voies d’acquisition</head>
           <p>L’instantanéité caractéristique des inventaires ne doit pas faire oublier que cet ensemble d’objets est le fruit d’un processus de
             constitution étalé dans le temps et obéissant à diverses modalités. Anne de Bretagne hérita ainsi des biens de ses aïeux, les ducs de
@@ -158,7 +160,7 @@
             commandes et les achats n’en sont pas moins des jalons, sinon quotidiens, du moins réguliers.</p>
           <p>L’ensemble de ces voies d’acquisition contribue à expliquer l’importance des collections d’Anne.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les artistes sollicités par la reine principaux acteurs de l’histoire des collections</head>
           <p>Les artistes sont les acteurs principaux du processus de constitution, d’accroissement et d’entretien des collections : ils suscitent des
             commandes, parfois des achats et ce sont également eux qui prennent soin des objets au fil du temps.</p>
@@ -178,7 +180,7 @@
             la reine Guillaume Charruau était, en effet, une personnalité déjà présente et active à la cour bretonne, alors que Jean Lefèvre,
             tapissier de la reine et un des administrateurs principaux de ses collections, travaillait déjà pour son père, François II.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les marchands et leurs marchandises</head>
           <p>Les artistes n’étaient pas les seuls acteurs de la vie artistique d’une cour princière : les marchands jouaient également un rôle
             primordial. Intermédiaires indispensables dans le champ artistique, l’objet de leur commerce pouvait être les matières premières
@@ -189,8 +191,8 @@
             simples marchands, mais également souvent aux grands officiers du royaume. Enfin, cette étude révèle la suprématie des marchands
             tourangeaux, qui contrôlent une large part de l’approvisionnement de la cour royale en cette fin de <num>xv<hi rend="sup">e</hi></num> siècle.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Étude des objets</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Étude des objets</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’orfèvrerie civile : la vaisselle d’apparat et les bijoux de la reine Anne</head>
           <p>Les comptes et les documents associés aux inventaires permettent d’étudier aussi bien les pièces de vaisselle que les bijoux d’Anne de
             Bretagne.</p>
@@ -203,7 +205,7 @@
             d’un foisonnement de décorations et de détails.</p>
           <p/>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Diverses pièces textiles</head>
           <p>À côté des pièces d’orfèvrerie, les textiles tenaient une place essentielle, tant à l’intérieur qu’à l’extérieur, pour le décor
             provisoire des résidences et pour celui, éphémère, des grandes cérémonies. Par les matières et les couleurs employées, les tentures
@@ -216,7 +218,7 @@
           <p>Pour les tentures d’ameublement comme pour les vêtements, rien n’était laissé au hasard et le choix des couleurs et des étoffes
             répondait, de manière générale, à une intention prééminente, la glorification des souverains, de leur puissance et de leur autorité.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les tapisseries historiées</head>
           <p>Les tapisseries comptaient parmi les composants principaux du mobilier à la fin du Moyen Âge. Correspondant à la fois aux impératifs de
             vie nomade et à ceux de représentation et, depuis le milieu du <num>xiv<hi rend="sup">e</hi></num> siècle, de grands cycles historiés
@@ -235,13 +237,13 @@
             collections d’Anne, les mêmes thèmes que chez les autres princes. Cette convergence se comprend aisément lorsque l’on considère la place
             que tiennent les tapisseries dans l’affirmation de l’autorité et du prestige de leur propriétaire.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les objets religieux</head>
           <p>Enfin, les objets religieux, d’orfèvrerie ou textiles, tiennent une place importante au sein des collections de la reine. Ils meublaient
             les chapelles et les oratoires et participaient à la glorification de Dieu et du prince. Les textiles liturgiques étaient ainsi le plus
             souvent ornés de riches orfrois de broderie et les pièces d’orfèvrerie étaient, elles aussi, particulièrement soignées.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Épilogue">La réception de Philippe le Beau et de Jeanne de Castille mise en scène et diplomatie</head>
           <p>La réception au château de Blois de Philippe le Beau et de Jeanne de Castille en décembre 1501 apparaît comme un parfait exemple de
             l’utilisation des collections royales. Bien connu grâce au récit de Théodore et Denis Godefroy, cet événement traduit de manière concrète
@@ -252,9 +254,7 @@
             acquièrent, par-delà les possessions personnelles, une dimension politique et symbolique pour affirmer non seulement la puissance actuelle
             du roi, mais encore la continuité et la permanence de cette puissance, et donc de la royauté en elle-même.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Embrasser l’ensemble des collections d’Anne de Bretagne, reine duchesse de la fin du Moyen Âge, est une vaste ambition. La difficulté de
           cette entreprise tient à la définition même du sujet : mener une étude globale à partir de composants de nature différente. L’intérêt était
           cependant bien de faire émerger une unité au sein de cette diversité et de cerner à la fois la finalité de cet ensemble d’objets et le rôle
@@ -274,14 +274,13 @@
           inventaires étudiés reflètent, à cet égard, le fort intérêt que la reine Anne de Bretagne attacha à ses collections et comment elle eut à
           cœur de s’en servir comme un moyen et une forme d’affirmation de soi.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Édition des inventaires d’Anne de Bretagne d’après le manuscrit de la Bibliothèque nationale de France fr. 22335. — Présentation succincte
           des différents inventaires selon leur ordre d’apparition dans le manuscrit. — Tableau de concordance entre les objets mentionnés dans les
           inventaires d’Anne de Bretagne et ceux présents dans les inventaires du mobilier du château de Nantes avant qu’Anne ne devienne reine de
           France, dans l’inventaire du garde-meuble de François I<hi rend="sup">er</hi> et dans les inventaires du mobilier de Louis XIV. —
           Iconographie : soixante-douze objets, tirés des collections des ducs de Bretagne et d’Anne de Bretagne ou citées à titre de comparaison.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le Trésor de Brunetto Latini</title>
-        <title type="sub">Éduquer les Laïcs</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le Trésor de Brunetto Latini</title><title xml:lang="fr" type="sub">Éduquer les Laïcs</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Boüard, Thibaud">Thibaud Boüard</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200704.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Pour quiconque étudie l’histoire de Florence au <num>xiii<hi rend="sup">e</hi></num> siècle, voire, de manière plus large, l’histoire culturelle,
           littéraire et politique de l’Italie au Moyen Âge, Brunetto Latini est tout sauf un inconnu. L’auteur du <hi rend="i">Livre du Tresor</hi>
           est en effet une figure importante du <num>xiii<hi rend="sup">e</hi></num> siècle : notaire, personnalité du parti guelfe florentin, homme de lettres,
@@ -83,10 +86,9 @@
           forme, des éléments de réponse. Une question demeure aussi : à quel public s’adressait le <hi rend="i">Tresor</hi>? S’il est évident qu’il
           ne s’adressait pas aux clercs, à quel type de laïcs était-il destiné ?</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Chapitre premier">Les connaissances et leur organisation dans le <hi rend="i">Tresor</hi> de Brunetto Latini</head>
-        <p>Ouvrage didactique à placer parmi les encyclopédies politiques, le <hi rend="i">Livre du Tresor</hi> de Brunetto Latini réunit un grand
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Les connaissances et leur organisation dans le <hi rend="i">Tresor</hi> de Brunetto Latini</head>
+        <p n="1" type="chapter">Ouvrage didactique à placer parmi les encyclopédies politiques, le <hi rend="i">Livre du Tresor</hi> de Brunetto Latini réunit un grand
           nombre de connaissances diverses, considérées comme des trésors spirituels, dans un but bien précis : la formation intellectuelle d’un
           podestat que l’on pourrait qualifier d’idéal. L’organisation de l’œuvre dans son ensemble reflète cet objectif et constitue en un sens l’une
           des originalités majeures du <hi rend="i">Tresor</hi>, tout comme l’est le titre choisi par le notaire florentin. Le titre même de l’ouvrage
@@ -102,7 +104,7 @@
           philosophie et quelles sont ses divisions, en préalable à l’étude de la philosophie théorique, objet du premier livre. D’emblée, un constat
           s’impose : l’auteur progresse étape par étape, donnant à son lecteur des clés successives pour appréhender correctement les chapitres qui
           suivent, formant en fait son esprit à la compréhension dans une optique tout à fait didactique.</p>
-        <p>Après ce prologue et ces chapitres de définition que l’on pourrait qualifier de longue introduction, Brunetto Latini entre dans le vif de
+        <p n="2" type="chapter">Après ce prologue et ces chapitres de définition que l’on pourrait qualifier de longue introduction, Brunetto Latini entre dans le vif de
           son propos et dans l’enseignement de la philosophie théorique. Le premier livre est organisé comme suit : l’auteur expose dans un premier
           temps quelques principes de théologie ; il poursuit ensuite avec une histoire universelle assez développée ; il développe après cela science
           physique et science mathématique, cette dernière réduite à l’astronomie ; musique, arithmétique et géométrie n’apparaissent pas : est-ce à
@@ -110,7 +112,7 @@
           On ne peut ici émettre que des hypothèses. La physique, quant à elle, se trouve exposée à travers la médecine, la géographie, le bestiaire.
           On trouve également cinq chapitres sur l’agriculture et l’art de bâtir des habitations, que l’on serait presque tenté de rattacher à la
           sphère économique, et donc à la pratique, plutôt qu’à la physique, et donc à la théorie.</p>
-        <p>Le second livre du <hi rend="i">Tresor</hi> traite, de manière générale, de l’éthique. Pour ce faire, Brunetto Latini puise chez Aristote
+        <p n="3" type="chapter">Le second livre du <hi rend="i">Tresor</hi> traite, de manière générale, de l’éthique. Pour ce faire, Brunetto Latini puise chez Aristote
           et d’autres penseurs et expose son propos en deux parties distinctes, un « livre d’etike » et des « ensegnemens des visces et des vertus ».
           Ce second livre a par ailleurs été, à travers un remaniement de texte, inclus dans la <hi rend="i">Chronique de Baudoin d’Avesnes</hi>,
           formant la majeure partie des enseignements d’Aristote à Alexandre. La première moitié est une traduction partielle, assortie de
@@ -121,7 +123,7 @@
             arte loquendi et tacendi</hi> d’Albertano da Brescia, du <hi rend="i">De quattuor virtutibus cardinalibus sive Formula onestae vitae</hi>
           de Martin de Braga, de la <hi rend="i">Summa de virtutibus</hi> de Guillaume Perault et du <hi rend="i">Sententiarum libri tres</hi>
           d’Isidore de Séville. Brunetto respecte ici de manière scrupuleuse l’ordre du <hi rend="i">Moralium Dogma Philosophorum</hi>.</p>
-        <p>Avec le troisième livre, Brunetto Latini aborde l’objectif véritable du <hi rend="i">Tresor</hi>, à savoir la politique. Il réunit pour ce
+        <p n="4" type="chapter">Avec le troisième livre, Brunetto Latini aborde l’objectif véritable du <hi rend="i">Tresor</hi>, à savoir la politique. Il réunit pour ce
           faire rhétorique et politique, dans le sens d’art du gouvernement. Ce regroupement a un sens très net et se trouve d’ailleurs expliqué dès
           les premiers chapitres de l’art de gouverner, mais surtout se comprend tout à fait quand on envisage l’univers socio-politique dans lequel
           évolue Latini : dans l’Italie des communes, lier éloquence et gouvernement est naturel et logique, comme a pu le faire remarquer Enrico
@@ -132,7 +134,7 @@
           l’aboutissement de l’ensemble du <hi rend="i">Tresor</hi> pour Brunetto Latini, la raison pour laquelle il a présenté connaissances et
           sciences auparavant, qui toutes trouvent leur application dans le cadre de la politique. Les deux principaux textes alimentant ce qui est
           finalement un petit traité politique sont le <hi rend="i">De regimine civitatum</hi> de Jean de Viterbe et un ouvrage anonyme, l’<hi rend="i">Oculus pastoralis</hi>.</p>
-        <p>Au final, on peut s’interroger sur l’originalité du <hi rend="i">Tresor</hi> de Brunetto Latini. L’organisation générale du texte,
+        <p n="5" type="chapter">Au final, on peut s’interroger sur l’originalité du <hi rend="i">Tresor</hi> de Brunetto Latini. L’organisation générale du texte,
           l’agencement des matières examinées sont assez classiques et se retrouvent dans bon nombre d’autres textes. Les informations transmises par
           le compilateur sont également fort répandues, d’autant plus que le <hi rend="i">Tresor</hi> partage un certain nombre de sources avec les
           autres textes encyclopédiques à succès écrits en langue vernaculaire que sont l’<hi rend="i">Image du Monde</hi> de Gossuin de Metz et le
@@ -143,8 +145,8 @@
           diffusion. Un autre aspect que l’on pourrait mettre en valeur est le projet tout à fait innovant qui sous-tend l’ouvrage : ce que Brunetto
           Latini a en point de mire lorsqu’il rédige son texte, c’est la formation intellectuelle et morale des hommes destinés à gouverner les cités
           de l’Italie du Nord au milieu du <num>xiii<hi rend="sup">e</hi></num> siècle.</p>
-      </div><div n="2" type="part"><head n="Chapitre II">Le <hi rend="i">Tresor</hi> face au monde</head>
-        <p>Le <hi rend="i">Tresor</hi> présente une certaine modernité et des aspects plus « actuels » que d’autres encyclopédies de la même époque.
+      </div><div n="3" type="part"><head n="0" type="chapter">Le <hi rend="i">Tresor</hi> face au monde</head>
+        <p n="1" type="chapter">Le <hi rend="i">Tresor</hi> présente une certaine modernité et des aspects plus « actuels » que d’autres encyclopédies de la même époque.
           En effet, certains éléments du texte sortent de la tradition livresque qui est habituellement celle des encyclopédies médiévales pour
           apporter des nouveautés, pour renouveler le savoir communiqué au lecteur : c’est le cas, par exemple, avec les chapitres consacrés aux
           oiseaux de proie, inhabituels dans un bestiaire. De fait, on peut envisager deux axes d’étude pour envisager le <hi rend="i">Tresor</hi>
@@ -153,7 +155,7 @@
           comme l’avait écrit Brunetto Latini, c’est-à-dire comme un manuel de formation de l’homme de gouvernement ? A-t-il même été simplement lu
           comme une œuvre de « formation » ou n’a-t-il finalement constitué qu’une encyclopédie en langue vernaculaire de plus dans les librairies
           nobles ou privées ? L’examen des manuscrits et des inventaires de bibliothèques apporte quelques éléments de réponse à ces questions.</p>
-        <p>Comme pour bien des textes médiévaux, on peut se demander dans quelle mesure le <hi rend="i">Tresor</hi> est ou peut être un témoin des
+        <p n="2" type="chapter">Comme pour bien des textes médiévaux, on peut se demander dans quelle mesure le <hi rend="i">Tresor</hi> est ou peut être un témoin des
           réalités de l’époque à laquelle il a été écrit. La question se pose de manière d’autant plus nette que certains passages sortent du cadre
           habituel des encyclopédies en langue vernaculaire pour se teinter d’une actualité certaine. En plusieurs aspects, le <hi rend="i">Tresor</hi> oscille entre modernité et archaïsme, de manière assez originale. Certains traits du <hi rend="i">Tresor</hi> le rendent
           incontestablement original par rapport à d’autres textes didactiques ou encyclopédies contemporains. C’est tout particulièrement le cas de
@@ -165,7 +167,7 @@
           particulièrement les divisions ecclésiastiques. Dans deux domaines en tout cas, l’auteur paraît extrêmement bien renseigné et présente au
           lecteur un reflet assez fidèle de son temps : l’Italie, son pays, et le système politique podestal, qu’il présente dans la seconde partie du
           troisième livre du <hi rend="i">Tresor</hi>.</p>
-        <p>Parmi les avantages que revêt le <hi rend="i">Tresor</hi>, se trouvent sa grande diffusion et sa relativement grande renommée, qui nous
+        <p n="3" type="chapter">Parmi les avantages que revêt le <hi rend="i">Tresor</hi>, se trouvent sa grande diffusion et sa relativement grande renommée, qui nous
           permettent de le suivre aisément dans les bibliothèques, dans la mesure où il est facilement identifiable dans les inventaires. En tant
           qu’encyclopédie, le <hi rend="i">Tresor</hi> a souvent été décoré, fréquemment assez richement, et a de ce fait attiré les bibliophiles,
           particulièrement au <num>xv<hi rend="sup">e</hi></num> siècle. Par ailleurs, son simple statut d’encyclopédie en faisait un ouvrage pour ainsi dire
@@ -177,7 +179,7 @@
           grand collectionneur, en possédait ainsi deux exemplaires. Toutefois, le <hi rend="i">Tresor</hi> n’occupe en fait qu’une place honorable,
           sans plus, dans les bibliothèques princières. En effet, l’œuvre de Brunetto Latini est souvent moins présente que les autres ouvrages
           célèbres de la littérature didactique, ou tout au plus est-elle présente dans des effectifs aussi importants.</p>
-        <p>Le <hi rend="i">Tresor</hi> se trouve copié dans des manuscrits d’une grande variété, puisqu’il est copié seul – cas le plus fréquent – ou
+        <p n="4" type="chapter">Le <hi rend="i">Tresor</hi> se trouve copié dans des manuscrits d’une grande variété, puisqu’il est copié seul – cas le plus fréquent – ou
           en compagnie d’autres textes, en intégralité ou en partie, dans des manuscrits richement décorés ou au contraire extrêmement sobres, et
           qu’il est la source d’interpolations pour différents textes. Le plus souvent, le <hi rend="i">Tresor</hi> est copié seul et apparaît ainsi
           comme une œuvre indépendante et importante. La longueur du texte, lorsqu’il est copié dans son intégralité, n’est sans doute pas étrangère à
@@ -186,7 +188,7 @@
           politique, qui a l’heur d’être mise en valeur, échec, en un sens, du projet de Brunetto pour le <hi rend="i">Tresor</hi>, qui devait amener
           le lecteur à cette section sur l’art de parler et l’art de gouverner. Ces choix reflètent en un sens le goût du public, l’« esprit du temps
           », l’inadéquation du troisième livre avec la réalité politique.</p>
-        <p>L’appréhension du texte la plus répandue, semble-t-il, était de considérer le <hi rend="i">Tresor</hi> comme une encyclopédie, avec une
+        <p n="5" type="chapter">L’appréhension du texte la plus répandue, semble-t-il, était de considérer le <hi rend="i">Tresor</hi> comme une encyclopédie, avec une
           forte mise en valeur du premier livre. Ce constat est renforcé par la décoration des manuscrits, qui met le plus souvent en valeur le
           premier livre, et tout particulièrement le bestiaire. À l’inverse, à l’exception des frontispices de début de partie et de quelques rares
           enluminures, les second et troisième livres ne sont pas enluminés, leur matière passionnant peut-être moins le public et sortant par
@@ -194,8 +196,8 @@
           également possible d’envisager une lecture politique du <hi rend="i">Tresor</hi> par les lecteurs médiévaux, comme l’avait voulu Latini
           lui-même. Un manuscrit, assez intrigant, paraît justifier une telle prise en compte du <hi rend="i">Tresor</hi>. Il s’agit du manuscrit
           français 19088 de la Bibliothèque nationale de France, copié en 1510 pour Louise de Savoie : peut-être faut-il y voir une lecture « humaniste » du texte, une « lecture Renaissance », qui serait finalement celle pensée par Latini ?</p>
-      </div><div n="3" type="part"><head n="Chapitre III">La nature de <hi rend="i">Tresor</hi> et son public</head>
-        <p>La question de la nature du <hi rend="i">Tresor</hi> en tant que texte a le plus souvent été réglée de manière rapide, en le classant trop
+      </div><div n="4" type="part"><head n="0" type="chapter">La nature de <hi rend="i">Tresor</hi> et son public</head>
+        <p n="1" type="chapter">La question de la nature du <hi rend="i">Tresor</hi> en tant que texte a le plus souvent été réglée de manière rapide, en le classant trop
           simplement parmi les encyclopédies médiévales. Tout d’ailleurs y concourait : la présence de nombreux éléments appartenant
           traditionnellement aux encyclopédies (chapitres historiques, mappemonde, cosmographie, bestiaire…) ; la rédaction du texte au XIII <hi rend="sup">e</hi> siècle, grand siècle de l’encyclopédisme ; la réflexion sur la connaissance et le savoir, ainsi que la référence à l’une
           des <hi rend="i">auctoritates</hi> à l’« origine » des encyclopédies médiévales, dans le prologue de l’ouvrage. Cependant, une lecture
@@ -213,7 +215,7 @@
           compilateur et d’auteur didactique que revêt Latini se trouve exprimé dans la littérature par des auteurs renommés, tel Alain Chartier dans
           le <hi rend="i">Livre de l’espérance</hi>. L’iconographie du <hi rend="i">Tresor</hi> est également assez significative de la perception
           encyclopédique de l’œuvre par les professionnels du livre.</p>
-        <p>L’autre grande catégorie textuelle dans laquelle est volontiers placé le <hi rend="i">Tresor</hi> est celle du miroir. En effet, le texte
+        <p n="2" type="chapter">L’autre grande catégorie textuelle dans laquelle est volontiers placé le <hi rend="i">Tresor</hi> est celle du miroir. En effet, le texte
           de Brunetto Latini se donne à voir comme un ouvrage traitant du « bon gouvernement » et des préceptes à suivre pour parvenir à ce « bon
           gouvernement ». En outre, il est le seul texte français qui parle du régime du podestat et il a de fait été perçu très tôt comme un traité
           du podestat en langue française. La définition du genre du « Miroir des princes » a généralement des contours assez flous : cette
@@ -224,7 +226,7 @@
           consacrée à cet enseignement. S’il s’agit ici d’une politique d’ordre non pas royal mais bien plutôt urbain, c’est cependant bel et bien
           l’art de <hi rend="i">governer</hi> qui est en jeu. Toutefois, la façon dont cette matière est traitée permet dans une certaine mesure de
           tracer une ligne de partage entre les genres du <hi rend="i">Miroir</hi> et de l’encyclopédie.</p>
-        <p>Une autre possibilité est d’envisager le <hi rend="i">Tresor</hi> comme un manuel de formation. Le texte du Tresor est très clair sur un
+        <p n="3" type="chapter">Une autre possibilité est d’envisager le <hi rend="i">Tresor</hi> comme un manuel de formation. Le texte du Tresor est très clair sur un
           point : le projet latinien est un projet didactique et l’ouvrage constitue en somme un « manuel de formation ». Dès le prologue, Brunetto
           Latini affirme cette volonté didactique en établissant de facto, par le biais de la hiérarchisation des matières, un programme de formation
           intellectuelle. La structure générale du <hi rend="i">Tresor</hi> suit cette logique didactique présentée dans le prologue du texte.
@@ -237,7 +239,7 @@
           où elles font sortir le texte des canons du genre encyclopédique et du miroir. On est loin, avec le <hi rend="i">Tresor</hi>, de
           l’encyclopédie comme « livre de clergie » ou du miroir nourri de glose biblique : le choix des termes, des matières abordées, de la langue
           même tire l’œuvre hors des catégories habituelles et fait, dans une large mesure, son originalité.</p>
-        <p>À quel public Brunetto Latini voulait-il confier les richesses de son <hi rend="i">Tresor</hi>? Au vu des difficultés induites par la
+        <p n="4" type="chapter">À quel public Brunetto Latini voulait-il confier les richesses de son <hi rend="i">Tresor</hi>? Au vu des difficultés induites par la
           caractérisation du texte, cette interrogation ne semble pas elle-même sans complexité. Un constat s’impose : le <hi rend="i">Tresor</hi> ne
           s’adresse pas à un public spécialement savant. Les connaissances transmises dans le texte sont majoritairement issues des sources autorisées
           ; elles sont relativement sommaires et ne comportent pas de points vraiment difficiles d’accès pour une personne sans formation scolaire.
@@ -250,27 +252,25 @@
           l’orientation purement italienne de la partie sur le gouvernement. Une manière de résoudre cette opposition binaire est de voir le <hi rend="i">Tresor</hi> comme une œuvre plus large, de plus grande ampleur, de plus grande ambition. Il faut sans doute envisager, au-delà de
           la dichotomie franco-italienne et la transcendant, une ambition européenne pour l’ouvrage de Brunetto Latini, comme le suggère le texte
           lui-même.</p>
-      </div><div n="4" type="part"><head n="Chapitre IV">Le Livre des Animaux <lb/>Un passage central, complet et complexe</head>
-        <p>Au contraire de celle des bestiaires français, la nomenclature animale du <hi rend="i">Tresor</hi> est empreinte d’une volonté
+      </div><div n="5" type="part"><head n="0" type="chapter">Le Livre des Animaux <lb/>Un passage central, complet et complexe</head>
+        <p n="1" type="chapter">Au contraire de celle des bestiaires français, la nomenclature animale du <hi rend="i">Tresor</hi> est empreinte d’une volonté
           classificatrice. Elle s’inscrit dès lors dans le désir d’organisation qui caractérise non seulement la compilation latinienne mais aussi
           l’ensemble des encyclopédies médiévales.</p>
-        <p>La critique n’est pas vraiment unanime quant aux sources utilisées par Brunetto Latini dans son <hi rend="i">Livre des animaux</hi>. Il
+        <p n="2" type="chapter">La critique n’est pas vraiment unanime quant aux sources utilisées par Brunetto Latini dans son <hi rend="i">Livre des animaux</hi>. Il
           faut dire que dans un type de texte où la tradition pèse lourd et où la connaissance livresque provient souvent d’autorités identiques, il
           n’est pas aisé d’établir des généalogies textuelles parfaitement claires. La critique s’accorde sur le fait que les sources du <hi rend="i">Livre des animaux</hi> sont multiples et variées ; le Florentin en rassemble même parfois plusieurs pour une même notice. Par certaines
           d’entre elles, il se rattache clairement à la tradition des bestiaires. S’il est vrai qu’assez souvent, Brunetto Latini ne fait que
           traduire, parfois très littéralement, ses sources, il est aussi capable de les réaménager et cela en vue de plusieurs fins : émettre une
           opinion, présenter sa matière de façon plus claire ou plus simple, la remodeler en fonction des objectifs qu’il voudrait atteindre. Le <hi rend="i">Livre des animaux</hi> est en fait le lieu d’affrontement de deux tendances visibles dans l’ensemble du <hi rend="i">Tresor</hi> : l’une qui se rattache à la tradition livresque et l’autre, vecteur des objectifs propres, pratiques, pour ainsi dire
           scientifiques de l’auteur.</p>
-        <p>Surtout, de manière assez intéressante, la description du monde animal est pour Brunetto Latini l’occasion de mettre en place un réseau
+        <p n="3" type="chapter">Surtout, de manière assez intéressante, la description du monde animal est pour Brunetto Latini l’occasion de mettre en place un réseau
           d’échos avec le second livre du <hi rend="i">Tresor</hi>, consacré à la morale et à l’éthique, et avec le troisième livre, consacré à la
           politique sous la double forme de l’éloquence et du gouvernement. En effet, toutes les formes de relations sociales et de qualités humaines
           (hostilité et tromperie, relations familiales, sagesse et prudence, amour et transmission du savoir, amitié…) se trouvent dans ce monde
           animal, qui reflète ainsi le monde humain décrit dans les parties consacrées à l’éthique et la politique. Cela permet à Latini de renforcer
           son argumentation en tissant tout un réseau de références, en annonçant dès le premier livre ses développements ultérieurs et ainsi en
           préparant l’esprit du lecteur aux idées énoncées par la suite.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le <hi rend="i">Livre du Tresor</hi> de Brunetto Latini présente, comme son nom le laisse attendre, des richesses qui paraissent presque
           inépuisables. Tout d’abord, la variété des sources employées par l’auteur et la diversité des sujets qu’il aborde dans son œuvre sont
           extrêmement nombreuses. Le caractère encyclopédique de l’œuvre est naturellement à l’origine de cela. De manière générale, si le <hi rend="i">Tresor</hi> ne paraît pas vraiment original par rapport aux autres encyclopédies dans le choix des sources ou dans les
@@ -294,7 +294,7 @@
           il l’aurait souhaité ; toutefois, la diffusion exceptionnelle du texte et son emploi comme source d’interpolations font de cet échec un
           demi-échec seulement et laissent à penser que le programme didactique latinien a cependant rencontré un certain succès.</p>
       </div>
-              <div type="appendix"><head>Annexe</head>
+          <div type="appendix" n="7"><head>Annexe</head>
         <p>Catalogue des manuscrits de <hi rend="i">Tresor</hi> de Brunetto Latini</p>
         <p>La tradition manuscrite du <hi rend="i">Tresor</hi> est une des plus foisonnantes de la littérature médiévale en langue vernaculaire. En
           effet, il est conservé dans 91 manuscrits et fragments recensés à ce jour, ce qui est considérable pour un texte en langue vulgaire et le
@@ -310,7 +310,6 @@
             dunkerquoise</hi> en 1904. En revanche, le manuscrit 5-1-6 de la Biblioteca Colombina de Séville a été supprimé du catalogue  : il s’agit
           d’une traduction castillane du Tresor.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

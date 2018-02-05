@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les Augustins déchaussés de Notre-Dame-des-Victoires (1629-1790)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les Augustins déchaussés de Notre-Dame-des-Victoires (1629-1790)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Barbiche, Jean-Marie">Jean-Marie Barbiche</author>
       </titleStmt>
       <editionStmt>
@@ -38,34 +40,34 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2007.pos200703.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Parmi les couvents parisiens de l’époque moderne, celui de Notre-Dame-des-Victoires est très mal connu. Cet établissement appartenait à la
           congrégation des Augustins déchaussés de France (aussi appelés Petits-Pères), branche de l’ordre de Saint-Augustin née à la fin du XVI <hi rend="sup">e</hi> siècle. Sa principale caractéristique était d’être une fondation royale et d’avoir entretenu des liens multiples avec la
           monarchie au cours de son histoire. Il bénéficiait en outre du statut de chef de la province de France et, au <num>xviii<hi rend="sup">e</hi></num>
           siècle, devint de fait la principale maison de la congrégation. Sa réputation reposait, en outre, sur une riche bibliothèque et sur un
           cabinet de curiosités.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>La petite partie des registres et des papiers du couvent encore disponibles est conservée aujourd’hui aux Archives nationales (séries S et
           L). S’y ajoutent des sources administratives et judiciaires variées qui éclairent certains événements particuliers. Les ouvrages généraux de
           l’époque sur Paris et les ordres religieux, ainsi que les productions de certains membres de la congrégation, fournissent des renseignements
           complémentaires utiles.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le destin d’une fondation royale</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le destin d’une fondation royale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines du couvent</head>
           <p>La première fondation parisienne date de 1609, à l’initiative de la reine Marguerite de Valois. Mais les Augustins déchaux sont chassés
             dès 1613 et remplacés par les Petits-Augustins. Ils reviennent dans la capitale en 1619 et, dix ans plus tard, acquièrent des terrains
@@ -73,7 +75,7 @@
             déclarer fondateur du couvent de Notre-Dame-des-Victoires : il impose ce nom en souvenir de ses victoires récentes sur les protestants. Il
             vient en personne poser la première pierre de l’église le 9 décembre 1629.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’âge d’or du couvent</head>
           <p>Les années 1629 à 1700 sont indiscutablement celles de l’âge d’or du couvent et de la congrégation. Mis à part l’église, le couvent de
             Paris est bâti rapidement et achevé dès les années 1680. Sa notoriété s’accroît brusquement à partir de 1637 grâce au frère Fiacre de
@@ -83,7 +85,7 @@
             austères de la congrégation et y introduisent des nouveautés. L’afflux de riches fidèles provoque l’enrichissement de la liturgie et des
             religieux qui profitent des abus concernant les pensions.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le relâchement de la discipline et la première commission d’inspection (1700-1708)</head>
           <p>Le relâchement s’accentue encore au début du <num>xviii<hi rend="sup">e</hi></num> siècle. L’indiscipline devient telle qu’en mai 1706, des
             supérieurs sont obligés d’en appeler au roi. Celui-ci mandate des commissaires qui inspectent le couvent et recueillent les témoignages.
@@ -91,7 +93,7 @@
             cela, le calme ne revient pas immédiatement. Le recours au Saint-Siège semble indispensable pour faire cesser définitivement les troubles.
             Le couvent ne se relève jamais vraiment de cet épisode qui marque la fin quasi définitive de ses liens privilégiés avec la monarchie.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La seconde commission d’inspection (1709-1711) et le premier tiers du <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>Rome envoie un commissaire apostolique dès 1709. Il inspecte tous les couvents de la province avant de rendre un nouveau règlement qui
             reprend largement le précédent. En 1711, l’ordre est globalement rétabli mais le chapitre provincial de 1717 et le chapitre général de
@@ -100,7 +102,7 @@
             les congrégations d’Augustins déchaussés en adoucissant certains points des constitutions. Il ne reste alors que quelques religieux pour
             tenter de s’y opposer.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Les Petits-Pères et la Commission des Réguliers (1766-1778)</head>
           <p>Comme tous les ordres religieux, les Petits-Pères sont concernés par la Commission des réguliers. Celle-ci ordonne principalement la
             fermeture de quelques maisons pour maintenir la conventualité ainsi qu’une nouvelle rédaction des constitutions intégrant les
@@ -110,7 +112,7 @@
             faut résorber l’énorme dette de la maison. Les Petits-Pères doivent se résoudre, en 1778, à vendre une partie de leur jardin. Si l’action
             de la Commission s’est faite sans heurts, elle n’a pas permis de maintenir le recrutement de la province, déjà en baisse vers 1760.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">Notre-Dame-des-Victoires de 1730 à sa fermeture</head>
           <p>Mis à part la Commission des réguliers, peu d’événements importants jalonnent la vie du couvent au <num>xviii<hi rend="sup">e</hi></num> siècle.
             Des agitations sporadiques éclatent de temps à autre, entraînant la présence répétée de commissaires royaux dans les chapitres généraux.
@@ -119,8 +121,8 @@
             de religieux quittent le couvent. L’église est transformée en paroisse en 1791 puis accueille la Bourse ; les bâtiments conventuels sont
             utilisés par l’armée et des administrations. Lorsque l’église est rendue au culte, seuls deux religieux sont encore sur place.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">La vie au couvent</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">La vie au couvent</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Comptes et finances</head>
           <p>À l’austérité mendiante initiale succède, dès la fin du <num>xvii<hi rend="sup">e</hi></num> siècle, une relative richesse. Les religieux
             sollicitent les dons et les fondations pour enrichir la liturgie ; ils acceptent les pensions et en jouissent au mépris des constitutions.
@@ -129,7 +131,7 @@
             sont criblés de dettes qui les forcent à vendre, en 1778 une partie de leur jardin. D’une façon générale, il semble bien qu’ils aient vécu
             au-dessus de leurs moyens à cause des abus introduits dans la vie religieuse.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La vie à Notre-Dame-des-Victoires</head>
           <p>La vie des Petits-Pères au couvent est avant tout rythmée par l’organisation de la congrégation et les chapitres qui se réunissent à
             intervalles réguliers. L’emploi du temps des journées et les fonctions des religieux sont théoriquement bien définis, mais s’agissant de
@@ -139,7 +141,7 @@
             autres des archives de fermiers généraux, des papiers de la Grande Chancellerie et le dépôt de la Marine ; dans les années 1780, ce qui
             reste de leur jardin est loué aux messageries royales.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les fidèles et les habitués de Notre-Dame-des-Victoires</head>
           <p>Situé dans un quartier récent, le couvent est fréquenté par l’élite de la population parisienne. Seul couvent sur le territoire de la
             paroisse Saint-Eustache, il ne souffre pas de la concurrence d’autres ordres. Si nous ignorons à peu près tout du petit peuple de Paris,
@@ -149,7 +151,7 @@
             fin du <num>xvii<hi rend="sup">e</hi></num> siècle, il semble cependant que les fidèles illustres soient moins nombreux et plus ou moins remplacés
             par des catégories sociales un peu inférieures comme le milieu des financiers.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="">Chapitre IV <lb/>Les religieux de Notre-Dame-des-Victoires</head>
           <p>Chef de la province de France, Notre-Dame-des-Victoires a vocation à accueillir un grand nombre de religieux. L’apogée du recrutement se
             situe au <num>xvii<hi rend="sup">e</hi></num> siècle. La population de l’établissement est difficile à estimer précisément, car les mendiants sont
@@ -161,8 +163,8 @@
             père Hyacinthe de l’Assomption, soit qu’ils aient entretenu des liens particuliers avec un grand personnage, comme le père Jacques de
             Saint-Gabriel avec le Régent. Nous évoquons à la fin de ce chapitre quelques-unes de ces personnalités.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Aspects intellectuels, artistiques et archéologiques</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Aspects intellectuels, artistiques et archéologiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La bibliothèque du couvent</head>
           <p>Comme tous les couvents de religieux mendiants, les Petits-Pères se devaient d’avoir une bibliothèque. Sous l’impulsion de certains
             clercs érudits, elle s’est accrue rapidement dès la fin du <num>xvii<hi rend="sup">e</hi></num> siècle. Située sous les combles à partir de 1682,
@@ -172,7 +174,7 @@
             Révolution lui attribue 39 545 volumes. Cette riche collection est alors stockée au dépôt littéraire situé chez les Capucins de la rue
             Saint-Honoré, puis dispersée entre différentes bibliothèques et sans doute en partie détruite.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’architecture et le mobilier de l’église</head>
           <p>L’église Notre-Dame-des-Victoires, seul élément subsistant aujourd’hui de l’ensemble conventuel, a fait l’objet de toutes les attentions
             des religieux. Commencée en 1629, la construction est interrompue régulièrement et reprise par plusieurs architectes. À Pierre Le Muet,
@@ -182,7 +184,7 @@
             religieux. Avec ses orgues créées par Lesclop, Notre-Dame-des-Victoires peut rivaliser avec les monuments contemporains comme Saint-Roch.
             Mais tout cela a un coût : le chantier est estimé à 600 000 livres au total, somme doublée par les intérêts des emprunts.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le cabinet de curiosités et les tableaux du couvent</head>
           <p>À l’instar de l’abbaye Sainte-Geneviève, Notre-Dame-des-Victoires abritait un riche cabinet de curiosités. Il a été fondé par quelques
             religieux au tout début du <num>xviii<hi rend="sup">e</hi></num> siècle et constamment enrichi par la suite. L’inventaire qui en a été dressé à la
@@ -193,7 +195,7 @@
             portraits et de toiles variées. Preuve de la notoriété des Petits-Pères, deux d’entre eux se sont fait peindre par Hyacinthe Rigaud.
             Toutes ces collections ont été dispersées à la Révolution.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les religieux célèbres</head>
           <p>Le couvent de Notre-Dame-des-Victoires a abrité un certain nombre de religieux dont les œuvres sont encore connues de nos jours. Le plus
             célèbre est peut-être le frère Fiacre, même s’il n’a laissé qu’un manuscrit. Certains religieux étaient théologiens : il faut citer entre
@@ -202,9 +204,7 @@
             la fin du <num>xvii<hi rend="sup">e</hi></num> siècle. C’est aussi le cas du père Anselme de la Vierge-Marie, auteur de l’<hi rend="i">Histoire
               généalogique et chronologique de la maison royale de France</hi>, ouvrage encore utilisé aujourd’hui par les historiens.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Le couvent de Notre-Dame-des-Victoires a été injustement oublié par les historiens. Ses liens avec la monarchie et ses richesse
           artistiques en faisaient l’un des principaux établissements religieux de Paris à l’époque moderne. C’est d’ailleurs cette notoriété qui est
           en partie responsable de son déclin spirituel, déclin dont les crises du <num>xviii<hi rend="sup">e</hi></num> siècle sont les révélateurs. La volonté
@@ -212,11 +212,10 @@
           que peu de particularités les distinguent du grand ordre à la fin du <num>xviii<hi rend="sup">e</hi></num> siècle. C’est en partie pour cela que le
           couvent n’a pas été rouvert après la Révolution.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Édition de textes relatifs à la congrégation et à son établissement parisien. — Répertoire de fidèles ayant fréquenté
           Notre-Dame-des-Victoires. — Glossaire. — Plans du couvent.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

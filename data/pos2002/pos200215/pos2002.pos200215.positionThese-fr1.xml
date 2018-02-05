@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">L’usine et la ville : le cas de l’ouest parisien au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle (Chaillot, Bas-Passy, Ternes, Batignolles)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">L’usine et la ville : le cas de l’ouest parisien au <num>xix<hi rend="sup">e</hi></num> siècle (Chaillot, Bas-Passy, Ternes, Batignolles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lohr, Évelyne">Évelyne Lohr</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200215.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>La mémoire collective continue d’oublier l’histoire industrielle de Paris au profit de celle de son artisanat. Mais en tant que premier
           centre de consommation français, la ville de Paris, formidable concentration financière et bassin de main d’œuvre situé au cœur d’un réseau
           de transport fluvial, routier et ferroviaire, a joué un rôle primordial dans l’histoire du développement de l’industrie en France. Pour
@@ -62,7 +65,7 @@
           nord, entre les Champs-Élysées et le Bois de Boulogne. Des études de cas, replacées dans leur territoire, ont servi de base à l’étude de
           certains quartiers : le <num>xvi<hi rend="sup">e</hi></num> arrondissement le long de la Seine, les Ternes et les Batignolles.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’histoire de l’industrie en milieu urbain requiert d’avoir recours à des sources variées. Les archives renseignant directement sur la vie
           des entreprises rarement conservées : elles n’ont été retrouvées que pour les établissements Gouin, au Centre des archives du monde du
           travail à Roubaix, et la maison Fichet, ainsi que pour les anciennes compagnies gazières et électriques, conservées par EDF-GDF. La seule
@@ -75,9 +78,8 @@
           les archives notariales au minutier central des Archives nationales, quand les actes peuvent être retrouvés, fournissent des renseignements
           très utiles pour approfondir la connaissance des sites industriels.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Un début d’industrialisation dans l’ouest parisien <lb/>(fin <num>xviii<hi rend="sup">e</hi></num> siècle - première moitié du <num>xix<hi rend="sup">e</hi></num> siècle)</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Un début d’industrialisation dans l’ouest parisien <lb/>(fin <num>xviii<hi rend="sup">e</hi></num> siècle - première moitié du <num>xix<hi rend="sup">e</hi></num> siècle)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Chaillot, le Bas-Passy, Auteuil-Point-du-Jour</head>
           <p>Une des fonctions de la couronne parisienne fut d’être un réservoir de matériaux de construction, pierre à bâtir, plâtre, brique, sable,
             fonction qui cessera au moment de l’annexion de 1860. A côté des carrières, sablières, tuileries, les rives de la Seine dans l’actuel XVI
@@ -109,7 +111,7 @@
             Seine se développent à l’intérieur des parcelles, sur la pente des coteaux, tandis que la première rangée de maisons sur la chaussée de
             Versailles permet souvent de loger une partie du personnel de l’usine.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les Ternes</head>
           <p>Intégré à la commune de Neuilly au moment de la Révolution, ce quartier peu étudié ne s’urbanise qu’à partir du XIX <hi rend="sup">e</hi> siècle. D’un point de vue industriel, les Ternes sont célèbres par la présence pendant un quart de siècle de la fabrique d’acide
             sulfurique de Jean-Antoine Chaptal. L’urbanisation est due en partie à l’action de certains propriétaires importants, Demours, Lombards,
@@ -120,7 +122,7 @@
             industriels d’une part et propriétaires de marque de l’autre fait naître un conflit au sujet de l’occupation et des usages de l’espace
             urbain, en particulier de la voirie, qui bénéficie aux Ternes des travaux importants effectués par la commune de Neuilly.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les Batignolles</head>
           <p>Le développement considérable qu’a connu ce qui devint, en 1830, la commune de Batignolles-Monceaux, remonte à une forme d’expansion
             générée par la limite des Fermiers Généraux, le long d’une voie d’accès à la capitale, la future avenue de Clichy. Des phases successives
@@ -143,8 +145,8 @@
             naissance des chemins de fer, elle joue un rôle social et économique notable dans le quartier. L’organisation d’un système de mutuelle et
             l’installation d’un hôpital Gouin à Clichy reflètent le fonctionnement paternaliste de l’entreprise.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Comprendre l’échec de l’industrie dans l’ouest parisien et les conditions de son maintien</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Comprendre l’échec de l’industrie dans l’ouest parisien et les conditions de son maintien</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le déséquilibre industriel parisien : le rôle des politiques locales</head>
           <p>Après l’annexion de 1860, les conditions de vie pour l’industrie en ville s’aggravent ; les droits d’octroi frappent certaines matières
             premières et la houille, et à partir de 1865 les industries des secteurs annexés sont soumises au régime parisien des patentes. C’est
@@ -167,7 +169,7 @@
             Reste la mobilisation des propriétaires, relayée par l’opposition du maire, qui font jouer parfois au plus haut niveau leurs relations.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Maintien et renouveau d’une certaine industrie</head>
           <p>Le site fluvial garde au milieu du siècle ses vertus essentielles pour les industries qui utilisent les matières pondéreuses apportées
             par l’Oise et la basse vallée de la Seine. Autre facteur de permanence, une main d’oeuvre qualifiée dans des quartiers qui ne sont pas à
@@ -202,9 +204,7 @@
             galvanoplastie pour le mobilier urbain, plomberie et fonderie artistique) sont les mieux représentés dans ces quartiers ouest de la
             capitale.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>La géographie des quartiers industriels n’est pas une donnée “ naturelle ” ; pour des raisons sociales, politiques et économiques, qui se
           traduisent dans la mise en place des infrastructures urbaines, les amorces de concentrations industrielles à l’Ouest disparaissent après
           l’annexion. Mais l’étude de l’industrie dans ces quartiers à vocation résidentielle donne une image de Paris au <num>xix<hi rend="sup">e</hi></num>
@@ -216,10 +216,9 @@
           A la fin du siècle, ces quartiers résidentiels entourés de quartiers industrialisés, ressemblent à un laboratoire, où la ville nourrit de
           ses commandes, une industrie de transformation en plein développement.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="6"><head>Annexes</head>
         <p>Vues d’usines et d’ateliers. ­ Plans.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

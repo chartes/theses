@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">« Pour le remède et salut de mon âme… ». Édition et commentaire de trente et un testaments de femmesenregistrés au Parlement de Paris
-        (1394-1420)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">« Pour le remède et salut de mon âme… ». Édition et commentaire de trente et un testaments de femmesenregistrés au Parlement de Paris
+        (1394-1420)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Chaigne, Marion">Marion Chaigne</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2006.pos200609.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Faire son testament est une étape essentielle de la vie chrétienne de la fin du Moyen Âge ; plus qu’essentiel, cet acte est indispensable
           puisqu’il permet de mettre en ordre ses affaires, tant morales que matérielles. Dans une société qu’imprègnent l’omniprésence psychologique
           de la mort, dans les mentalités comme dans les représentations, et la question lancinante du salut, dans une société bouleversée par les
@@ -79,15 +82,14 @@
           individus concernés à travers les biens qu’ils font circuler, et enfin celle de leur attitude face à la mort dans le cadre plus précis de
           l’organisation des funérailles.</p>
       </div>
-              <div type="sources"><head>Historiographie</head>
+          <div type="sources" n="2"><head>Historiographie</head>
         <p>L’historiographie de ce sujet s’articule principalement autour de quatre axes : les sources testamentaires ; la vision de la mort à la fin
           du Moyen Âge et la spiritualité ; Paris au <num>xv<hi rend="sup">e</hi></num> siècle et l’histoire du Parlement ; l’histoire des femmes et du genre,
           mais aussi de la famille et des réseaux de parenté ou de relations. Une brève étude historiographique présente les travaux concernés par ces
           thèmes, suivie d’une bibliographie des ouvrages sur ces différents sujets.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Étude de la source</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Étude de la source</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Pratiques testamentaires et enregistrement au Parlement de Paris</head>
           <p>
             <hi rend="i">La renaissance de la pratique testamentaire.</hi>— Le testament, qui avait disparu au début du Moyen Âge,
@@ -108,7 +110,7 @@
             collection Moreau, conservés à la Bibliothèque nationale de France, la totalité des copies des testaments figurant à l’origine dans le
             registre du Parlement de Paris sont accessibles aujourd’hui.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Typologie des testaments et choix du corpus</head>
           <p>
             <hi rend="i">Des sources de l’histoire des femmes.</hi>— Au sein de cet ensemble de deux cent trente-six testaments, trente
@@ -137,8 +139,8 @@
             libéralités pieuses et l’autre aux dispositions laïques. Ces parties ne sont toutefois pas distinctement séparées l’une de l’autre,
             puisque le religieux et le juridique sont sans cesse intimement mêlés.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les réseaux de parenté face à la mort</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les réseaux de parenté face à la mort</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Parenté et réseaux de solidarité</head>
           <p>
             <hi rend="i">L’identité familiale.</hi>— Comment les femmes se désignent-elles au sein de leur parenté ? Une étude anthroponymique révèle
@@ -170,7 +172,7 @@
             président Robert Mauger, ainsi que l’étude des réseaux de clientèles princières, montrent bien que c’est le milieu des parlementaires qui
             est le cadre de vie de la plupart de ces femmes. Le Parlement n’est bien qu’un vaste réseau d’alliances familiales.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La circulation des biens</head>
           <p>L’étude des biens cédés dans les testaments permet une tentative d’évaluation de la richesse et du niveau social ; tentative seulement,
             car il faut rappeler que ces biens ne constituent qu’une part des biens possédés réellement ; il est donc impossible d’en évaluer la
@@ -196,7 +198,7 @@
             société hiérarchisée, et de leur appartenance à des réseaux dominants et à des familles de parlementaires, exerçant donc un certain
             pouvoir.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Construire sa mémoire : les funérailles</head>
           <p>Les funérailles sont un moment essentiel de la vie du chrétien, celui de son passage vers l’au-delà. Comment ces réseaux de parenté
             réagissent-ils face à la mort ?</p>
@@ -220,9 +222,7 @@
             trace de leur existence sur la terre, à s’assurer le salut éternel, au moins dans la mémoire des vivants, et participent de la
             construction de l’identité des testatrices.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>L’étude montre donc l’importance des réseaux, et en premier lieu de la famille, mais d’autres liens de solidarité se dégagent : la place de
           la maisonnée, et tout particulièrement des serviteurs, n’est pas à négliger ; de même, les liens forgés par le biais de la parenté
           spirituelle, et ce à tous les niveaux de la société parisienne, montrent l’existence d’un type de relations qui sort du strict cadre de la
@@ -252,7 +252,7 @@
           spiritualité, histoire économique et politique, enfin et surtout, histoire du <hi rend="i">gender</hi>, puisque cette étude offre l’occasion
           unique de mettre en parallèle une documentation similaire produite, séparément ou conjointement, par des hommes et par des femmes.</p>
       </div>
-              <div type="appendix"><head>Édition</head>
+          <div type="appendix" n="6"><head>Édition</head>
         <p>L’étude s’appuie sur une édition des trente et un testaments de femmes. Une édition partielle de ce registre, réalisée à la fin du XIX <hi rend="sup">e</hi> siècle par Alexandre Tuetey, avait livré seulement neuf d’entre eux : il importait donc de les publier intégralement,
           selon des principes récents. C’est le registre X<hi rend="sup">1A</hi>9807 des Archives nationales qui a été choisi comme base de
           l’édition. Les testaments sont présentés dans l’ordre chronologique, et chaque testament est précédé de la mention de date, suivi du tableau
@@ -262,7 +262,6 @@
           parties des testaments (testament, codicilles…) signalées par des lettres. Enfin, pour faciliter la lecture, les testaments sont divisés en
           paragraphes autour d’unités de sens, autant que cela est possible.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

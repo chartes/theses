@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les coutumes du château de Limoges</title>
-        <title type="sub">Élaboration d’un droit urbain en pays de langue d’oc (&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt;-&lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xiv&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècles)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les coutumes du château de Limoges</title><title xml:lang="fr" type="sub">Élaboration d’un droit urbain en pays de langue d’oc (<num>xiii<hi rend="sup">e</hi></num>-<num>xiv<hi rend="sup">e</hi></num> siècles)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Caron, Bertrand">Bertrand Caron</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201006.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les textes de coutume constituent pour la ville du château de Limoges un des rares témoignages écrits du fonctionnement de l’institution
           municipale, surtout pour le <num>xiii<hi rend="sup">e</hi></num> siècle. La conservation de ces sources, alors que l’essentiel de la
           production écrite du consulat a été perdu, souligne assez le sentiment de leur valeur et de leur pérennité à travers les siècles ; ainsi
@@ -67,7 +70,7 @@
           renforce tout au long du <num>xiii<hi rend="sup">e</hi></num> siècle. Un examen de la langue montrera de même l’évolution de l’occitan
           documentaire des scribes du consulat sur trois siècles, et les facteurs historiques qui pourraient en être la cause.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’édition se fonde sur toutes les copies connues des coutumes, sous leur forme occitane ou latine, afin de déterminer plus précisément la
           genèse des textes et les étapes de leur constitution. Le « cartulaire » du consulat, livre juratoire et recueil factice constitué de divers
           éléments reliés ensemble lors de divers remaniements du <num>xiii<hi rend="sup">e</hi></num> au <num>xvii<hi rend="sup">e</hi></num> siècle,
@@ -92,9 +95,8 @@
           Ruben au <num>xix<hi rend="sup">e</hi></num> siècle, ont été mis à profit pour fournir un aperçu de l’organisation municipale sous la forme
           qu’elle revêtait immédiatement après la période étudiée.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">La ville et son consulat : repères historiques</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">La ville et son consulat : repères historiques</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les événements de l’histoire municipale</head>
           <p>Les textes de coutume, qui contiennent des articles de droit public comme de droit privé, furent conditionnés par le contexte politique
             et les rapports de force entre les pouvoirs locaux et royaux qui les confirmèrent. Il est donc nécessaire de rappeler la dynamique
@@ -136,7 +138,7 @@
             volonté de réduire le pouvoir du roi d’Angleterre à travers celui des consuls à Limoges ne pouvait que nuire au règlement pacifique du
             conflit.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les consuls et l’organisation consulaire</head>
           <p>Dans une optique comparatiste, ce chapitre est consacré au fonctionnement du consulat, à ses insignes, à son personnel et aux espaces de
             son pouvoir. Les origines du consulat, assez incertaines, sont détaillées : l’origine bourgeoise de l’organisation municipale, mentionnée
@@ -157,8 +159,8 @@
             effectifs de l’organisation municipale : la coïncidence entre le droit et sa matérialisation permet de mieux saisir les enjeux des luttes
             engagées par le consulat pour conserver ou étendre son pouvoir.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’élaboration et le contenu des coutumes</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’élaboration et le contenu des coutumes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les étapes de la rédaction</head>
           <p>La première rédaction des coutumes date de la première décennie du <num>xiii<hi rend="sup">e</hi></num> siècle, dont une bonne partie en
             1212. Si l’on ne prend en compte que ce dernier ensemble de 1212, on ne voit qu’un recueil d’articles sans ordre ni cohérence ; mais
@@ -181,7 +183,7 @@
             du siècle passé. La date de 1377 correspond à un effort majeur pour remettre en vigueur les anciennes coutumes écrites et orales, par le
             biais de l’enquête pour ces dernières.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le droit public et les attributions des consuls selon les textes</head>
           <p>L’incertitude où l’on se trouve face à des articles de coutume dont on ne sait s’ils révèlent un droit consacré ou une revendication
             fondée sur une pratique ponctuelle voire sur de simples prétentions des consuls implique la nécessité d’examiner thématiquement les
@@ -197,7 +199,7 @@
             1253, l’ensemble de la communauté s’arrogea le pouvoir de poursuivre, arrêter et bannir les criminels. Cette évolution vers des
             prétentions de plus en plus générales dut jouer un rôle non négligeable dans le déclenchement de la « Guerre de la Vicomté ».</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Le droit privé</head>
           <p>Le domaine du droit privé est largement abordé par les coutumes, comme c’est le cas pour la plupart des coutumes urbaines. Une des
             spécificités de celles de Limoges réside dans les étapes de l’élaboration de ce droit : c’est lui qui connut le plus d’ajouts et de
@@ -210,8 +212,8 @@
             plus seulement de médiateurs, leur production s’orienta vers d’autres champs moins techniques, tels que la police commerciale ou les
             règles de vie en commun (ordonnances somptuaires, port d’arme, etc.).</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Une approche matérielle des rédactions</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Une approche matérielle des rédactions</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Occitan et latin : un rapport complexe</head>
           <p>Si la première rédaction des coutumes, contenue uniquement dans le « cartulaire » du consulat, est entièrement en occitan, la rédaction
             de 1260 est connue sous deux formes, occitane et latine. La tradition lacunaire des textes de coutume – on ne conserve pas de texte latin
@@ -230,7 +232,7 @@
             occurrences dans un mémorial de 1251. Cet indice constitue un argument supplémentaire en faveur de l’évolution des pratiques notariales à
             partir de la décennie 1250, sous l’effet de la lutte juridique contre le vicomte.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les manuscrits</head>
           <p>Parmi les sept manuscrits utilisés pour établir les textes des coutumes, deux présentent un intérêt codicologique manifeste :
             le « cartulaire » du consulat et le manuscrit fr. 25219 de la Bibliothèque nationale de France. Le premier constitue un complexe recueil
@@ -250,9 +252,9 @@
             manuscrit les traces de l’affrontement avec le vicomte et la preuve que les coutumes sont fortement conditionnées par les circonstances,
             notamment politiques, qui présidèrent à leur rédaction.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">L’évolution de la langue limousine à travers les textes de coutume (<num>xiii<hi rend="sup">e</hi></num>-<num>xv<hi rend="sup">e</hi></num> siècle)</head>
-        <p/>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">L’évolution de la langue limousine à travers les textes de coutume (<num>xiii<hi rend="sup">e</hi></num>-<num>xv<hi rend="sup">e</hi></num> siècle)</head>
+        <p n="1" type="chapter"/>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">L’occitan dans les textes de coutume  : une évolution sous inﬂuence ?</head>
           <p>L’examen des modiﬁcations subies par l’occitan limousin dans les textes de l’organisation municipale du <num>xiii<hi rend="sup">e</hi></num> au début du <num>xvi<hi rend="sup">e</hi></num> siècle a permis de mettre en lumière des moments décisifs de l’évolution
             de la langue, et d’en saisir quelques-unes des causes. La décennie 1250 a constitué le premier d’entre eux ; elle a vu l’introduction de
@@ -280,7 +282,7 @@
             gallicismes, qui n’intervinrent sensiblement que dans les dernières décennies du <num>xv<hi rend="sup">e</hi></num> siècle. On possède ici
             un remarquable exemple de ce que R. Lafont nommait la « déstructuration des équilibres normatifs ».</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Expansion du français et influences mutuelles</head>
           <p>À l’aide de textes à la limite entre occitan et français produits entre le <num>xiv<hi rend="sup">e</hi></num> et le <num>xvi<hi rend="sup">e</hi></num> siècle, il convient ici de montrer comment s’est opéré le changement de code linguistique dans les documents
             de la pratique. Il apparaît que le passage de l’un à l’autre a suivi un rythme très inégal : après une longue période d’imprégnation au
@@ -304,9 +306,7 @@
             de tout le système graphique occitan jusqu’à ce que, dans les années 1510-1520, l’identité de celui-ci soit si proche du français que la
             transition se ﬁt naturellement.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Édition des coutumes</head>
+      </div><div type="conclusion" n="7"><head>Édition des coutumes</head>
         <p>Outre le corps des coutumes rédigé en 1260 et confirmé par Henri III en 1261, puis par Édouard III en 1362 et Charles V en 1371-1372,
           lequel est présenté sur deux colonnes, pour la version latine originelle (1260) et pour sa traduction occitane (décennies 1360-1370), il a
           fallu mobiliser un ensemble de textes, qui n’ont pas forcément le statut de « coutumes », afin de mettre en lumière l’élaboration du droit
@@ -318,8 +318,7 @@
         <p>Les textes sont complétés par plusieurs outils permettant différentes approches thématiques : tableau de correspondance entre les articles
           du corps principal des coutumes et les articles antérieurs et postérieurs, glossaire, index des noms et index des matières.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

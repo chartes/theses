@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les expéditions françaises en Floride (1562-1568)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les expéditions françaises en Floride (1562-1568)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Lhoumeau, Hélène">Hélène Lhoumeau</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200028.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Entre 1562 et 1565, par trois fois, les Français, menés par Jean Ribaut et René de Laudonnière, tentèrent de fonder une colonie sur le
           littoral de la Floride. Par trois fois, 1’ <hi rend="i">adelantado</hi> de la Floride Pedro Menéndez de Avilés fit égorger systématiquement
           les colons français dans les ruines de Fort Caroline et sur les plages de Matanzas. Trois expéditions devaient tirer vengeance de ces
@@ -74,7 +77,7 @@
           sa dimension éminemment européenne. La défaite des Français tenait autant à la supériorité affirmée par les armes de Menéndez de Avilés
           qu’aux enjeux européens que représentaient la paix franco-espagnole et la montée des tensions religieuses.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Deux types principaux le sources, de nature très différente mais fondamentalement complémentaires, permettent de saisir dans son ensemble
           l’aventure française dans le sud-est américain. Il s’agit, d’une part, de plusieurs récits, contemporains ou immédiatement postérieurs,
           rédigés par ou pour les protagonistes français, espagnols et anglais, et, d’autre part, des correspondances diplomatiques échangées entre
@@ -99,13 +102,12 @@
             Papers.</hi> Ont également été étudiés les documents relatifs à l’expédition de Pedro Menéndez de Avilés conservés à l’Archivo général de
           Indias à Séville. Une sélection de cartes a permis enfin d’envisager l’évolution de la cartographie du sud-est de l’Amérique du XVI <hi rend="sup">e</hi> au <num>xviii<hi rend="sup">e</hi></num>  siècle.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">«  La Floride n’est qu’une erreur d’orientation »</head>
-        <p>« La Floride n’est qu’une erreur d’orientation. » Pierre Chaunu résumait par ces quelques mots l’aventure coloniale lancée par l’amiral de
+          <div n="3" type="part"><head n="0" type="chapter">«  La Floride n’est qu’une erreur d’orientation »</head>
+        <p n="1" type="chapter">« La Floride n’est qu’une erreur d’orientation. » Pierre Chaunu résumait par ces quelques mots l’aventure coloniale lancée par l’amiral de
           Coligny, en la comparant avec la colonie du Brésil. En fait, la colonisation de la Floride s’inscrivait dans un cadre géographique,
           juridique, littéraire, stratégique, économique et religieux très clairement défini et, si elle s’acheva tragiquement, cela ne saurait être
           imputable au seul choix de la contrée, mais bien plutôt à la gestion de la colonie, en Amérique et plus encore en Europe.</p>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre premier">La <hi rend="i">Florida</hi>
          </head>
           <p>Au fur et à mesure de l’exploration de la côte nord-américaine, le toponyme <hi rend="i">Florida</hi> en était venu à désigner de façon
@@ -114,7 +116,7 @@
             retentissants échecs. En 1561, Angel de Villafane rapatriait sur Cuba les derniers survivants de l’expédition de Tristan de Luna y
             Arellano.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre II">Le <hi rend="i">Statu quo</hi> américain</head>
           <p>Depuis François I<hi rend="sup">er</hi> , la France dénonçait le partage du monde décidé à Tordesillas en 1494 et le monopole ibérique
             sur les Indes. Le développement de la piraterie, puis de la course, à la faveur des guerres franco-espagnoles ouvrait un nouveau champ de
@@ -125,7 +127,7 @@
             Français, qui, eux, tenaient toujours les mers pour libres. On aboutissait à cet apparent paradoxe que ces nations pouvaient demeurer en
             paix en Europe, tout en maintenant un état de guerre permanent de l’autre côté de l’Atlantique.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre III">Droit de découverte et droit de possession</head>
           <p>Les députés français au Cateau-Cambrésis avaient fait une très nette distinction entre les terres seulement découvertes par l’Espagne et
             celles effectivement possédées parce que colonisées. Néanmoins, chaque partie utilisa les arguments de son adversaire pour conforter sa
@@ -135,7 +137,7 @@
             à Tristan de Luna y Arellano de créer, en plus de l’établissement de Pensacola, une colonie sur le fleuve Santa Elena afin de pouvoir
             jouir de la possession effective de la province.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre IV">Une image de la Floride</head>
           <p>Les années 1550 ont vu la naissance d’un véritable courant d’intérêt en France pour les Indes occidentales, qui s’est rapidement orienté
             vers le sud-est américain à la faveur de la parution concomitante de plusieurs ouvrages, dont celui d’André Thevet sur <hi rend="i">Les
@@ -145,7 +147,7 @@
             circulait en France une vision plus populaire d’une Floride idéalisée comme une terre luxuriante, la Terre Fleurie que promettait son nom,
             et un nouvel Eldorado, qui contribua également au succès de cette aventure coloniale.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre V">Stratégies américaines et européennes</head>
           <p>Le choix de la Floride comme lieu d’implantation d’une nouvelle colonie française au Nouveau Monde a été fait assez tôt. Dès l’automne
             1559, la rumeur d’une tentative prochaine lancée sur ces côtes parvenait à la connaissance de Philippe II. Au-delà même de l’intérêt
@@ -158,20 +160,20 @@
             pas de prosélytisme protestant auprès des Indiens de Floride et la religion n’occupe qu’une place mineure dans les témoignages des
             protagonistes français, à la différence des Espagnols.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">L’ambassadeur, honorable espion</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">L’ambassadeur, honorable espion</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Espions et ambassadeurs</head>
           <p>Les personnalités parfois très marquées des ambassadeurs français et espagnols, ainsi que la qualité des réseaux de renseignement dont
             ils disposaient, ont pesé d’un poids certain sur le déroulement des événements de Floride et sur les négociations qui ont suivi.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La lettre secrète</head>
           <p>L’emploi du chiffre s’est révélé un bon indicateur du fonctionnement général des missions diplomatiques françaises et espagnoles. Aux
             méthodes déjà surannées des diplomates français, qui ne craignaient pas de confier leurs dépêches aux courriers étrangers, l’Espagne
             opposait un système très structuré, grâce à l’action du <hi rend="i">despacho universal</hi> et à l’utilisation de méthodes
             cryptographiques complexes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Premières escarmouches</head>
           <p>A l’automne 1561, l’ambassadeur espagnol en Angleterre diffusait une information indiquant l’imminence d’une nouvelle expédition
             française vers les Indes occidentales pour reprendre le Brésil aux Portugais. En décembre 1561, Thomas Perrenot de Chantonnay, ambassadeur
@@ -183,7 +185,7 @@
             d’avril en Floride et menait la reconnaissance de la côte. Sur le site de Port-Royal, il faisait élever un fortin de bois, baptisé
             Charlesfort, où il laissait une petite garnison, avant de repartir pour la France le 11 juin 1562.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Projet d’une Floride anglaise</head>
           <p>La reine Elizabeth était très attentive à la tentative française en Floride. Dès 1561, l’ambassadeur espagnol à Londres la soupçonnait de
             collusion avec l’amiral de Coligny pour interrompre la route des Indes par la piraterie. Le 20 juillet 1562, Jean Ribaut rentrait en
@@ -197,7 +199,7 @@
             menait un double jeu assez trouble avec l’ambassadeur espagnol, prenait la mer en juillet 1563 et lançait une longue campagne de piraterie
             dans le golfe de Gascogne.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Les expéditions de Lúcas Vasquez de Ayllón le jeune et de Hernand  Manrique de Rojas</head>
           <p>Les soldats laissés par Jean Ribaut en Floride se révoltèrent rapidement contre l’arbitraire de leur capitaine Albert de La Pierra,
             qu’ils tuèrent. Ils prirent pour chef Nicolas Barré, ancien compagnon de Villegagnon, et tentèrent de regagner la France. Au terme d’une
@@ -210,8 +212,8 @@
             mission de reconnaissance des positions françaises. Parti le 24 mai 1564 et guidé par Guillaume Rouffi, l’un des colons de Charlesfort qui
             était demeuré parmi les Indiens, il parvenait à repérer le site de Port-Royal, qu’il détruisait, avant de rentrer en juin à Cuba.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Massacres et diplomaties</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Massacres et diplomaties</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un voyage inattendu</head>
           <p>Après la signature de la paix d’Amboise, Coligny reprit son projet de colonisation de la Floride. Jean Ribaut étant toujours prisonnier
             en Angleterre, il confia à son lieutenant, René de Laudonnière, le soin de mener cette nouvelle expédition. La multiplicité des rapports
@@ -225,13 +227,13 @@
             Laudonnière et tentèrent de s’emparer d’établissements espagnols situés dans les Antilles. Peu nombreux, mal équipés, ils furent défaits
             par deux fois. L’interrogatoire des prisonniers apprenait aux Espagnols le retour des Français en Floride.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’ <hi rend="i">asiento</hi> de Pedro Menéndez de Avilés</head>
           <p>Philippe II passa un nouvel <hi rend="i">asiento</hi> avec Pedro Menéndez de Avilés le 20 mars 1565 : ce dernier devait reconnaître le
             littoral du continent nord-américain et fonder à ses frais, dans un délai de trois ans, trois établissements, en contrepartie du titre d’
               <hi rend="i">adelantado</hi> de la Floride et d’une part à percevoir sur les profits futurs de la colonie.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">L’entrevue de Bayonne ou une négociation avortée</head>
           <p>Le rapport du gouverneur de Cuba sur le nouvel établissement français en Floride et sur les ravages commis par les mutins dans les
             Antilles parvint en Espagne à la fin du mois de mars 1565. Philippe II fit aussitôt parvenir à Pedro Menéndez de Avilés l’ordre de doubler
@@ -243,7 +245,7 @@
             l’entrevue de Bayonne. Le sujet ne fut pourtant jamais traitée à Rayonne, le duc d’Albe ayant refusé de risquer d’entraver avec ce sujet
             les discussions prévues sur les progrès de la Réforme en France.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Matanzas</head>
           <p>A Fort Caroline, les mutineries, la famine et la guerre avec les Indiens avaient affaibli la petite colonie. Le passage de l’anglais John
             Hawkins, venu en mission de reconnaissance de la côte et de la colonie française, permit à René de Laudonnière d’acquérir quelques denrées
@@ -256,7 +258,7 @@
             rejoindre un navire resté en haute mer et à passer en France. Les survivants du naufrage de l’escadre française, dont Jean Ribaut, étaient
             rattrapés sur les plages de Matanzas et passés au fil de l’épée, les 29 septembre et 10 octobre.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Diplomaties</head>
           <p>Bien qu’il ignorât encore le résultat de l’expédition de Pedro Menéndez de Avilés, Philippe II attaquait également sur le plan
             diplomatique : il annonçait en octobre 1565 aux souverains français qu’il considérait les colons de la Floride comme des pirates et qu’il
@@ -269,7 +271,7 @@
             dûment mandatés par le roi de France. Cette véhémence conduisit Philippe II à ne pas pousser plus loin ses attaques et à confier l’examen
             des plaintes françaises au duc d’Albe, qui fit traîner l’affaire jusqu’en décembre 1566, pour n’y apporter finalement aucune réponse.</p>
         </div>
-        <div>
+        <div n="6" type="chapter">
           <head n="Chapitre VI">Vengeances : Peyrot de Monluc, Dominique de Gourgues</head>
           <p>La nouvelle des massacres avait immédiatement soulevé en France une vague de colère, habilement entretenue par les rescapés de Fort
             Caroline. Le <hi rend="i">Discours de l’histoire de la Floride</hi> du charpentier Le Challeux, accompagné d’une <hi rend="i">Requeste en
@@ -289,8 +291,8 @@
           <p>En effet, dans les deux cas, la position officielle des souverains français dénonça ces expéditions, sans toutefois répondre aux
             exigences de châtiment formulées par l’Espagne et le Portugal. La deuxième guerre de Religion venait de commencer.</p>
         </div>
-      </div><div n="4" type="part"><head n="Quatrième partie">Postérité et souvenir</head>
-        <div>
+      </div><div n="6" type="part"><head n="0" type="chapter">Postérité et souvenir</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">L’amplification d’un massacre</head>
           <p>La fin tragique de la Floride française fut très rapidement utilisée à des fins polémique par le parti protestant, particulièrement sous
             la plume d’Urbain Chauveton qui en fit l’un des éléments de la leyenda negra anti-espagnole. De fait, l’émotion suscitée par ces massacres
@@ -301,7 +303,7 @@
             qu’il ait été plus proche de trois cent cinquante ; en effet, beaucoup de soldats ont péri lors des différents naufrages, une centaine a
             réussi à s’échapper de Fort Caroline et une cinquantaine de femmes, d’enfants et de catholiques ont été épargnés.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un modèle cartographique</head>
           <p>Outre une carte manuscrite attribuée à Nicolas Barré et qui devait servir d’illustration au rapport présenté par Jean Ribaut à l’amiral
             de Coligny sur la première expédition en Floride, la principale représentation cartographique de la colonisation française est due au
@@ -315,7 +317,7 @@
             ou de Van der Aa, jusqu’à l’orée du <num>xix<hi rend="sup">e</hi></num>  siècle, avant de céder définitivement la place à la représentation
             anglaise.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Une figure littéraire</head>
           <p>Présenté dans la <hi rend="i">Reprise de la Floride</hi> comme un héros chevaleresque, courageux, désintéressé et méprisé par le pouvoir
             royal, Dominique de Gourgues devint une véritable figure littéraire à partir de la seconde moitié du <num>xix<hi rend="sup">e</hi></num>  siècle :
@@ -324,9 +326,7 @@
             aux Etats-Unis, comme le prouvent l’érection de colonnes copiées sur les dessins de Jacques Le Moyne de Morgues par les Filles de la
             Révolution ou la création du Fort Caroline National Mémorial.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="7"><head>Conclusion</head>
         <p>La Floride française expirait sous les coups conjugués de la famine, des Indiens, de la maladie, des cyclones et de la volonté implacable
           des Espagnols d’empêcher toute implantation française, qui plus est protestante, sur le sol américain. Mais avant toute chose, elle mourait
           de n’avoir vécu que par et pour la France. Il ne s’agissait pas tant d’une Floride française que Jean Ribaut et René de Laudonnière avaient
@@ -339,14 +339,13 @@
           un échec, l’observation attentive de l’expérience française devait servir plus tard de leçon pour l’établissement de la colonie de Virginie
           en 1585. En 1586, Drake et Hawkins rasaient San Agustin.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="8"><head>Pièces justificatives</head>
         <p>
           <hi rend="i">Asiento</hi> de Pedro Menéndez de Avilés. ­ Lettre autographe du duc d’Albe à Francisco de Erasso, écrite à Bayonne, justifiant
           l’abandon de la voie négociée dans l’affaire de la Floride. ­ Sélection de lettres des ambassadeurs français et espagnols, de 1565 à 1566,
           illustrant l’évolution des positions diplomatiques (1565-1566). ­ Messages chiffrés français et espagnols (1559-1565). ­ Douze cartes, dont
           celle attribuée à Nicolas Barré et celles de Le Moyne de Morgues, Mercator-Hondius, Sanson d’Abbeville, Le Maire ou Delisle.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

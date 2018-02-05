@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Le fermier général Claude Dupin (1686-1769)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Le fermier général Claude Dupin (1686-1769)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Ladant, Julie">Julie Ladant</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2000.pos200024.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Le fermier général Claude Dupin n’est guère connu aujourd’hui que par les trois grandes figures de la littérature auxquelles son nom est
           fréquemment associé : Montesquieu, dont il a dénoncé avec véhémence les attaques contre la Ferme générale formulées dans l’ <hi rend="i">Esprit des lois</hi>; Jean-Jacques Rousseau, qu’il employa pendant six ans comme secrétaire dans les années qui précédèrent la
           publication du <hi rend="i">Discours sur les sciences et les arts</hi>(1751) ; George Sand, enfin, dont il est l’arrière-grand-père
@@ -58,7 +61,7 @@
         <p>Si les travaux consacrés à Claude Dupin traduisent bien l’intérêt essentiellement littéraire qu’il a suscité, ils demeurent très succincts
           sur son parcours personnel et sur son œuvre économique et intellectuelle. Ce sont ces aspects du personnage qu’il convenait d’étudier.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources mises en œuvre dans une étude biographique sont par nature très dispersées et, dans le cas présent, parfois fragmentaires. La
           série E des archives départementales de l’Indre, les archives notariales et les dossiers généalogiques du Cabinet des titres conservés à la
           Bibliothèque nationale de France fournissent l’essentiel des informations concernant les origines familiales de Claude Dupin et ses années
@@ -69,9 +72,8 @@
           ouvrages, et du manuscrit préparatoire à la réfutation de l’ <hi rend="i">Esprit</hi>
           <hi rend="i">des lois</hi>, qui est conservé par la bibliothèque municipale de Bordeaux.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Un financier respectable</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Un financier respectable</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Origines et débuts</head>
           <p>Originaire d’une ancienne famille du Berry, Claude Dupin est le fils d’un receveur des tailles de la ville de Châteauroux. Après des
             études au collège de Blois et un passage de quelques années dans l’armée comme lieutenant d’infanterie au régiment de Noailles, il fait
@@ -82,7 +84,7 @@
             secondes noces la fille illégitime de son protecteur, Louise-Marie-Madeleine Fontaine ; elle lui donnera un second fils, Jacques-Armand,
             futur Dupin de Chenonceaux, dont la triste réputation sera rapportée par Rousseau au livre VII des <hi rend="i">Confessions</hi>.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le fermier général</head>
           <p>En 1726, une nouvelle intervention de son beau-père vaut à Dupin l’attribution de l’une des quarante places très convoitées de fermier
             général du roi. Samuel Bernard est son bailleur de fonds. Agé de quarante ans, soit sensiblement plus jeune que la moyenne d’âge de ses
@@ -95,7 +97,7 @@
             la Régie du tabac et à la Régie des grandes gabelles. Il est d’ailleurs sollicité par Diderot et d’Alembert pour rédiger l’article
             « salines » de l’Encyclopédie, dans lequel il expose avec précision les processus de production et d’extraction du sel.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Propriétés et fortune</head>
           <p>Réputé pour être l’un des hommes les plus fastueux de son temps, Claude Dupin a bâti une fortune très importante grâce à la Ferme
             générale. Cette fortune est essentiellement foncière : le fermier général a possédé des propriétés prestigieuses, telles que l’hôtel
@@ -106,7 +108,7 @@
           <p>Sa fortune demeure, pour le reste, assez traditionnelle : créances, meubles, bijoux, argenterie, etc. Il est intéressant de noter la très
             faible part des investissements industriels et commerciaux, auxquels Dupin n’a, semble-t-il, accordé qu’un intérêt très limité.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Une assimilation réussie dans la haute société</head>
           <p>Deux années seulement après son entrée dans la Ferme générale, Dupin fait l’acquisition d’une charge anoblissante de secrétaire du roi,
             moyen le plus sûr et le plus rapide d’obtenir, pour lui et sa descendance, la noblesse au premier degré. Il manifeste en cela un désir
@@ -128,7 +130,7 @@
             constitue un environnement social fortement aristocratique. Le mariage des deux fils du financier avec des demoiselles de la haute
             noblesse consacre définitivement l’intégration de la famille au second ordre.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Rousseau et les Dupin</head>
           <p>En 1743, la recommandation auprès de l’hôtel de Claude Dupin d’un jeune provincial arrivé à Paris, avec pour toute ressource un projet de
             notation musicale, peut sembler anodine à l’époque. Elle prend aujourd’hui un relief particulier, lorsque l’on sait qu’il s’agissait de
@@ -142,8 +144,8 @@
             soupçonner le moindre talent chez son protégé. Les liens qui unissent Rousseau à ses protecteurs, faits de déférence obséquieuse d’un
             côté, et de bienveillante condescendance de l’autre, se prolongent en effet jusqu’à la mort de l’écrivain, en 1778 ; les <hi rend="i">Confessions</hi> s’en font un écho ému et respectueux.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Une œuvre économique et polémique</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Une œuvre économique et polémique</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les <hi rend="i">conomiques</hi>
          </head>
           <p>Claude Dupin est au nombre des multiples auteurs d’économie politique qui s’expriment dans la première moitié du siècle. Son activité de
@@ -161,7 +163,7 @@
             ainsi qu’une conception optimiste de l’économie au service de la prospérité et de l’intérêt général. Encore influencé par les principes
             mercantilistes, Claude Dupin sait toutefois se montrer ouvert à une certaine libéralisation des échanges.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Dupin précurseur des physiocrates</head>
           <p>L’œuvre économique de Dupin s’inscrit en effet dans le contexte de la genèse de la pensée libérale en France, dont la définition
             théorique est donnée au milieu du siècle par le docteur Quesnay dans le <hi rend="i">Tableau économique.</hi> Les positions défendues par
@@ -175,7 +177,7 @@
             réglementant importations et exportations en fonction de l’abondance des récoltes. Il demeure néanmoins bien éloigné du « laissez-faire,
             laissez-passez » préconisé par les physiocrates et se montre partisan d’un libéralisme modéré et très contrôlé.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La querelle de l’ <hi rend="i">Esprit des lois</hi>
          </head>
           <p>L’ <hi rend="i">Esprit des lois</hi> paraît à Genève à la fin du mois d’octobre de l’année 1748. Au milieu du concert de louanges qui
@@ -185,7 +187,7 @@
             bordelais, elles entraînent le durcissement des positions entre partisans et détracteurs de l’ouvrage et inaugurent le véritable
             affrontement littéraire, qui durera jusqu’en 1752.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La réfutation de l’ <hi rend="i">Esprit des lois</hi>
          </head>
           <p>La réfutation de l’ <hi rend="i">Esprit des lois</hi> par Dupin se fait en deux étapes : la première date de 1749 avec la publication
@@ -201,7 +203,7 @@
           <p>L’examen des réactions, souvent dépourvues d’objectivité, suscitées par cette double réfutation permet de saisir l’ampleur du débat
             autour de l’ <hi rend="i">Esprit des lois</hi>.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">L’affrontement</head>
           <p>Avant que n’éclate la querelle de l’ <hi rend="i">Esprit des lois</hi>, les relations entre Montesquieu et Dupin sont plus que
             courtoises, le président bordelais étant un hôte apprécié du salon de l’épouse du financier. Les attaques portées à l’égard des traitants
@@ -220,9 +222,7 @@
             montre un adversaire à la mesure de Montesquieu et prend vigoureusement part au débat qui se poursuit dans la deuxième moitié du siècle
             entre les partisans du système de la Régie à ceux de la Ferme.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="5"><head>Conclusion</head>
         <p>La biographie du fermier général Claude Dupin s’avère intéressante à plusieurs titres. Sa carrière illustre à merveille le processus
           d’intégration et de reconnaissance des financiers par la haute société au milieu du <num>xviii<hi rend="sup">e</hi></num>  siècle. Sans être
           profondément originale, ni réformatrice, son œuvre apporte par ailleurs un éclairage intéressant sur la genèse de l’économie politique
@@ -233,14 +233,13 @@
           avec Mme de Tencin que Dupin doit ses lecteurs postérieurs à Montesquieu, il faut aussi reconnaître la valeur intrinsèque de son ouvrage.
        </p>
       </div>
-              <div type="appendix"><head>Pièces justificatives et annexes</head>
+          <div type="appendix" n="6"><head>Pièces justificatives et annexes</head>
         <p>Généalogie de la famille Dupin au <num>xviii<hi rend="sup">e</hi></num>  siècle. ­ Portrait de Madame Dupin. Frontispice des <hi rend="i">conomiques</hi>. <hi rend="i">­</hi> Contrat de mariage de Claude Dupin et Louise-Marie-Madeleine Fontaine. ­ Inventaire de la
           bibliothèque de Claude Dupin. ­ Inventaire du mobilier de l’hôtel de la rue Plâtrière. ­ Liste des « visitées » de Madame Dupin. ­ Testament
           de Claude Dupin. ­ Avis au lecteur des <hi rend="i">Réflexions sur l’Esprit des lois. ­</hi> Avertissement des <hi rend="i">Observations sur
             l’Esprit des lois. ­</hi> Tableaux de concordance entre les <hi rend="i">Réflexions sur l’Esprit des lois</hi> et les <hi rend="i">Observations sur l’Esprit des lois</hi>, d’une part, et l’ <hi rend="i">Esprit des lois</hi>, d’autre part. ­ Index des noms de personne.
        </p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

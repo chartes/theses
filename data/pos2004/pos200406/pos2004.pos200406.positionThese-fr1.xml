@@ -4,10 +4,12 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les pratiques halieutiques fluviales dans le bassin de la Somme du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle au &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xviii&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle : approche archéologique et
-        documentaire</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les pratiques halieutiques fluviales dans le bassin de la Somme du <num>xii<hi rend="sup">e</hi></num> siècle au <num>xviii<hi rend="sup">e</hi></num> siècle : approche archéologique et
+        documentaire</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Cloquier, Christophe">Christophe Cloquier</author>
       </titleStmt>
       <editionStmt>
@@ -39,19 +41,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2004.pos200406.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Pratiquée dès le paléolithique supérieur, la pêche fluviale constitue une activité de prédation traditionnelle chez l’homme. Elle prit
           toutefois une importance particulière au cours des périodes médiévale et moderne. En effet, l’Église conditionnait alors une large part de
           la vie quotidienne des hommes, aussi bien sur le plan spirituel que sur le plan politique, économique et social. Elle imposa notamment cent
@@ -66,7 +69,7 @@
           les limites permettaient de réunir en un temps limité une documentation riche et variée, à défaut d’être exhaustive. Le choix se porta sur
           le bassin fluvial de la Somme, entre Noyelles-sur-Mer et Péronne, du début du <num>xii<hi rend="sup">e</hi></num> siècle à la fin du XVIII <hi rend="sup">e</hi> siècle.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources archéologiques témoignant des pratiques halieutiques fluviales sont le plus souvent limitées aux éléments osseux de poissons,
           rejetés sur les sites d’habitat lors de la préparation et de la consommation. Leur collecte implique un tamisage systématique des couches
           archéologiques dans les zones de dépotoirs et de latrines et leur étude nécessite l’intervention d’un archéozoologue spécialisé puisque le
@@ -102,9 +105,8 @@
           permettent notamment de découvrir la nature et la forme des engins retrouvés lors de fouilles archéologiques et mentionnés dans les sources
           écrites.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le milieu fluvial et l’ichtyofaune</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le milieu fluvial et l’ichtyofaune</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le bassin hydrographique</head>
           <p>Comme tous les bassins fluviaux, celui de la Somme forme un ensemble géographique naturel clos et unique avec des caractéristiques
             géomorphologiques, hydrographiques et hydrologiques qui lui sont propres. Les canaux de navigation et les aires d’extraction du ballast et
@@ -116,7 +118,7 @@
             diversité hydrographique, aussi bien au niveau du fleuve que de ses affluents, des marais ou des divers plans d’eau artificiels. Il
             disposait de biotopes variés pourvus d’une flore abondante, favorable à la présence d’une ichtyofaune diversifiée.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les différentes espèces de poissons au fil des siècles</head>
           <p>La composition exacte de l’ichtyofaune de la Somme et de ses affluents ne peut être reconstituée avec une certitude absolue. Vingt-six
             espèces de poissons dulçaquicoles et une espèce de crustacé dulçaquicole, huit espèces de poissons migrateurs et cinq espèces de poissons
@@ -139,7 +141,7 @@
             feinte ( <hi rend="i">Alosa fallax</hi>) et la truite de mer ( <hi rend="i">Salmo trutta trutta</hi>), n’ont pas été identifiées parmi les
             nombreux restes osseux, ni ne sont mentionnées dans les documents.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La pêche fluviale dans le temps et l’espace</head>
           <p>Les pratiques halieutiques fluviales furent réglementées par plusieurs ordonnances royales promulguées depuis la fin du XIII <hi rend="sup">e</hi> siècle. Au fil des siècles, les différentes mesures législatives imposèrent ainsi une diminution progressive des
             périodes de pêche. Découlant d’un suivi continu de la pratique de la pêche dans tout ou partie royaume de France, cette politique
@@ -154,8 +156,8 @@
 <hi rend="sup">e</hi> siècle. En revanche, les arches des nombreux ponts construits sur le cours du fleuve et de ses affluents ne furent
             pas équipées pour la capture des poissons.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les techniques de pêche et l’économie</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les techniques de pêche et l’économie</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les techniques de pêche</head>
           <p>Afin de satisfaire les demandes croissantes en poissons tout en respectant les ordonnances royales, un large éventail d’engins, de filets
             et de pêcheries fixes assurait des prises régulières et suffisantes. Deux types de matériel furent utilisés en fonction des parties des
@@ -171,7 +173,7 @@
             sur le cours de la haute Somme et sont attestées depuis le milieu du <num>xvi<hi rend="sup">e</hi></num> siècle ; toujours en activité, elles
             constituent une partie non négligeable du patrimoine fluvial de la Somme et assurent des captures d’anguilles conséquentes.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Des pêcheurs aux consommateurs</head>
           <p>Les prélèvements de poissons réalisés durant la période étudiée sont difficilement quantifiables, faute de données statistiques précises
             et cohérentes. En effet, les informations fournies par les sources écrites et archéologiques sont insuffisantes et leur confrontation
@@ -199,8 +201,8 @@
             social des consommateurs. Une fois encore, la confrontation des sources archéologiques et des sources documentaires fournit deux visions
             complémentaires d’une même réalité historique.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Pêche fluviale et société</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Pêche fluviale et société</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les artisans de la pêche fluviale</head>
           <p>Trois catégories d’artisans pêchaient dans la Somme : les pêcheurs d’eau douce, les poissonniers d’eau douce et les meuniers. Entre le
             début du <num>xiii<hi rend="sup">e</hi></num> siècle et la fin du <num>xv<hi rend="sup">e</hi></num> siècle, les pêcheurs assuraient la capture du poisson
@@ -208,32 +210,29 @@
             moderne, les termes de pêcheurs et poissonniers qualifiaient indifféremment les fermiers des droits de pêche. A la fin du XVI <hi rend="sup">e</hi> siècle et dans la première moitié du <num>xviii<hi rend="sup">e</hi></num> siècle, quelques meuniers furent contraints de
             pratiquer la pêche pour régler une partie des fermages qu’ils devaient aux seigneurs bailleurs.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les seigneurs des eaux</head>
           <p>Les droits de pêche étaient détenus par des seigneurs laïcs, des plus petits, les écuyers, aux plus puissants, par des établissements
             religieux (évêque et chanoines du chapitre cathédral d’Amiens, abbayes, prieurés, commanderies…) et par des communautés d’habitants, en
             général urbaines. Inévitablement, la coexistence et la proximité de plusieurs seigneuries des eaux donnèrent naissance à de nombreux
             litiges entre seigneurs et avec les artisans de la pêche et les différents utilisateurs des cours d’eau.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La réglementation de la pêche fluviale</head>
           <p>Les multiples ayants droit et corps de métier qui utilisaient les cours d’eau s’opposèrent souvent sur les pratiques et les droits de
             pêche, mais aussi sur des problèmes aussi divers que les pollutions naissantes, le débit des eaux ou la présence d’entraves à la
             navigation. Au-delà de l’importance économique et sociale des rivières, la diversité de ces conflits souligne la complexité d’une étude du
             milieu fluvial, dont l’activité halieutique n’est qu’une composante.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les règles alimentaires imposées par l’Église suscitèrent une pression halieutique considérable sur les différentes espèces de poissons.
           En légiférant régulièrement sur la police de l’eau depuis la fin du <num>xiii<hi rend="sup">e</hi></num> siècle, les autorités royale, seigneuriales
           et municipales s’efforcèrent de préserver l’importance économique et, dans une moindre mesure, l’intérêt politique des systèmes fluviaux du
           royaume.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Sont donnés en annexe un lexique et des pièces justificatives : édition de documents écrits et présentation de données archéologiques.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

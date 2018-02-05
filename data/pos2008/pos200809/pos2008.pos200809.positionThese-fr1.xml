@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">La &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;Notomia de Anric de Mondavilla&lt;/hi&gt;,traduction occitane de l’Anatomia d’Henri de Mondeville</title>
-        <title type="sub">Édition critique et étude du vocabulaire scientifique</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">La <hi rend="i">Notomia de Anric de Mondavilla</hi>,traduction occitane de l’Anatomia d’Henri de Mondeville</title><title xml:lang="fr" type="sub">Édition critique et étude du vocabulaire scientifique</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Combes, Laure">Laure Combes</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2008.pos200809.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Henri de Mondeville est un chirurgien normand qui travailla au service de Philippe le Bel et enseigna la chirurgie à Montpellier et à
           Paris. Au tout début du <num>xiv</num>
 <hi rend="sup">e</hi> siècle, il entreprit de rédiger une somme complète sur la chirurgie, qu’il laissa inachevée. Son traité devait
@@ -64,10 +67,9 @@
           connu. Traduite d’un texte français lui-même traduit du latin, elle constitue également un bon point de départ pour une étude de la
           traduction à la fin du Moyen Âge et pour une comparaison du champ lexical anatomique de trois langues distinctes.</p>
       </div>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Introduction et commentaire</head>
-        <div>
+          <div type="sources"/>
+          <div n="2" type="part"><head n="0" type="chapter">Introduction et commentaire</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">À propos d’Henri de Mondeville</head>
           <p>
             <hi rend="i">Un personnage mal connu</hi> . — La biographie d’Henri de Mondeville est très incertaine. Les sources le concernant sont
@@ -112,7 +114,7 @@
             et qui proposerait un stemma de la tradition de Mondeville. Une telle entreprise dépasse le cadre de ce travail, qui a pour objet la seule
             traduction occitane de l’anatomie, mais son étude apporte un éclairage sur une partie de cette tradition.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II ">À propos de la Notomia</head>
           <p>
             <hi rend="i">Notice du manuscrit de base</hi> . — Le manuscrit Ashburnham 104 de la Biblioteca Medicea Laurenziana ne contient que la <hi rend="i">Notomia</hi>. Considérée comme la version occitane du traité d’anatomie de Mondeville, elle est précédée d’un prologue à portée
@@ -146,7 +148,7 @@
             par David Trotter dans son édition de la version française du traité de chirurgie d’Albucasis. Chaque terme a donc été recherché dans une
             série de dictionnaires et lexiques occitans et français et leurs premières attestations relevées lorsque cela présentait un intérêt.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III ">Situer la Notomia</head>
           <p>Il est difficile de se prononcer avec précision sur l’origine géographique de la <hi rend="i">Notomia</hi> ou sur la date de sa
             traduction et de sa copie. L’écriture qu’on y observe a été largement employée dans le Midi du <num>xiv</num>
@@ -175,7 +177,7 @@
 <hi rend="sup">e</hi> et le début du <num>xiv</num>
 <hi rend="sup">e</hi> siècle.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Traduction et construction du texte</head>
           <p>
             <hi rend="i">Une traduction du français</hi> . — En dépit de la coloration latine présentée par la <hi rend="i">Notomia</hi>, il est assez
@@ -237,11 +239,11 @@
             plus probable que <hi rend="i">Anatomie</hi> et <hi rend="i">Chirurgie</hi> aient été résumées et/ou traduites en même temps, à partir d’une
             des dernières étapes de rédaction du traité de Mondeville.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition</head>
-        <p>La présente édition reproduit l’intégralité du manuscrit Ash. Elle est complétée par un glossaire usuel destiné à éclairer le sens de
+      </div><div n="3" type="part"><head n="0" type="chapter">Édition</head>
+        <p n="1" type="chapter">La présente édition reproduit l’intégralité du manuscrit Ash. Elle est complétée par un glossaire usuel destiné à éclairer le sens de
           certains mots qu’on ne pouvait prendre en compte dans l’étude du vocabulaire scientifique et d’un index des noms cités dans la <hi rend="i">Notomia</hi>.</p>
-      </div><div n="3" type="part"><head n="Troisième partie ">Étude du vocabulaire scientifique</head>
-        <p>Puisqu’il reste peu de textes médicaux occitans, que très peu sont consacrés à l’anatomie, que plus rares encore sont ceux antérieurs au
+      </div><div n="4" type="part"><head n="0" type="chapter">Étude du vocabulaire scientifique</head>
+        <p n="1" type="chapter">Puisqu’il reste peu de textes médicaux occitans, que très peu sont consacrés à l’anatomie, que plus rares encore sont ceux antérieurs au
             <num>xiv</num>
 <hi rend="sup">e</hi> siècle, la <hi rend="i">Notomia</hi> offre souvent la première attestation connue des termes anatomiques et médicaux.
           Elle est d’ailleurs parfois signalée dans les dictionnaires et lexiques utilisés. De plus, les outils consacrés spécifiquement à l’occitan
@@ -251,18 +253,15 @@
           antérieurs au français, puisqu’ils sont la plupart du temps littéralement traduits du français. Enfin, de nombreux mots semblent être des
           hapax propres à ce texte. Cela est dû en partie à la rareté des outils à la disposition du chercheur, mais également au fait qu’il s’agit la
           plupart du temps de néologismes construits à partir du latin. Ils sont donc manifestement restés à l’état d’expériences sans suite.</p>
-        <p>Ces conclusions n’ont cependant rien de définitif et le présent travail peut constituer un point de départ pour d’autres études. Ainsi,
+        <p n="2" type="chapter">Ces conclusions n’ont cependant rien de définitif et le présent travail peut constituer un point de départ pour d’autres études. Ainsi,
           une observation plus poussée du manuscrit C permettra de mieux comprendre la tradition romane de Mondeville et sa traduction. De plus,
           l’étude détaillée de la langue et du vocabulaire d’autres textes médicaux et scientifiques occitans devrait venir nuancer et préciser les
           conclusions de cette étude du vocabulaire de la <hi rend="i">Notomia</hi>.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="5"><head>Annexes</head>
         <p>Liste des manuscrits connus d’Henri de Mondeville. — L’introduction au premier chapitre de l’<hi rend="i">Anatomie</hi> : un exemple de
           réduction importante du texte latin.</p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

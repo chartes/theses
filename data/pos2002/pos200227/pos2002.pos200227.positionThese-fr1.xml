@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les ingénieurs géographes des camps et armées du roi, de la guerre de Sept Ans à la Révolution (1756-1791)</title>
-        <title type="sub">Étude institutionnelle, prosopographique et sociale.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les ingénieurs géographes des camps et armées du roi, de la guerre de Sept Ans à la Révolution (1756-1791)</title><title xml:lang="fr" type="sub">Étude institutionnelle, prosopographique et sociale.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Ract, Patrice">Patrice Ract</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200227.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les ingénieurs géographes des camps et armées du roi, apparus pendant le règne de Louis XIV, étaient des militaires spécialisés dans les
           levers topographiques en temps de guerre. Ils s’étaient peu à peu distingués des ingénieurs ordinaires, davantage occupés pour leur part aux
           travaux de fortification et de poliorcétique. Ce qui n’était au départ qu’une spécialisation de quelques-uns, dictée par les circonstances,
@@ -69,7 +72,7 @@
           Enfin, il semblait important de mener une étude sociale de ce groupe d’officiers, de connaître leurs origines géographiques tout autant que
           sociales, ainsi que les milieux avec lesquels ils étaient liés.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les principales sources permettant de suivre l’histoire institutionnelle du groupe des ingénieurs géographes militaires, ainsi que leurs
           carrières, sont aujourd’hui conservées au Service historique de l’Armée de terre (SHAT), à Vincennes. Il s’agit de documents émanant du
           bureau des ingénieurs géographes et du Dépôt de la guerre (séries A1 et 3M). Le SHAT conserve également leurs travaux cartographiques
@@ -89,9 +92,8 @@
 <hi rend="sup">e</hi>  siècle, qui exposent de manière claire et détaillée les méthodes de la topographie à cette époque et permettent de
           mieux comprendre le métier des ingénieurs.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Les ingénieurs des camps et armées du roi de 1756 à 1791 : étude institutionnelle</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Les ingénieurs des camps et armées du roi de 1756 à 1791 : étude institutionnelle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le tournant de la guerre de Sept Ans et la direction de Berthier (1756-1772)</head>
           <p>La guerre de Sept Ans apparaît comme une véritable rupture dans l’histoire des ingénieurs géographes des camps et armées du roi. Ce
             conflit entraîna en effet une redéfinition des missions du groupe accompagnée d’une forte montée de son effectif. Ce changement fut le
@@ -110,7 +112,7 @@
             commandement des ingénieurs géographes, sans doute du fait de la chute du clan Choiseul quelques mois auparavant. C’est alors que commence
             une nouvelle période pour le groupe des topographes militaires : ils sont désormais rattachés au Dépôt de la guerre.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les ingénieurs du dépôt de la guerre de 1772 à 1791</head>
           <p>Organisme créé par Louvois en 1688 et chargé de conserver les archives produites par le secrétariat d’Etat à la guerre, le Dépôt de la
             guerre était dirigé depuis la guerre de Sept Ans par M. de Vault qui conserva cette place jusqu’à sa mort en 1790. Durant cette période,
@@ -129,8 +131,8 @@
             géographes militaires par le biais de mémoires polémiques, leur suppression fut prononcée en 1791 par l’Assemblée constituante, suite aux
             travaux de son comité militaire dont le rapporteur était un officier du Génie.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Le métier et les travaux</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Le métier et les travaux</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Présentation du métier d’ingénieur géographe</head>
           <p>Les qualités pour devenir un bon ingénieur géographe ne sont pas tant celles que l’on acquiert dans une école que celles développées à
             force de pratique. Si des connaissances scientifiques de base, telle que la trigonométrie, sont certes indispensables, on ne demande guère
@@ -139,7 +141,7 @@
             les techniques du dessin et du lavis et d’être doué d’une complexion robuste et d’une endurance certaine capables de supporter les
             fatigues imposées par un métier usant.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le travail de l’ingénieur géographe militaire en temps de guerre</head>
           <p>La nécessité de la topographie lors des opérations militaires n’est plus à démontrer. La carte est bien souvent l’élément décisif qui
             permet au général d’apprécier le terrain et d’y adapter ses vues stratégiques. Les ingénieurs géographes aux armées du XVIII <hi rend="sup">e</hi> siècle produisaient divers types de cartes, selon les besoins des officiers d’état-major. Il s’agissait autant de
@@ -155,7 +157,7 @@
             ressources du pays en fourrage, les richesses des villes, les mœurs des populations, etc. Ces rapports étaient donc extrêmement précieux à
             l’époque et ils apportent aujourd’hui à l’historien des informations précises et chiffrées sur les régions traversées par les armées.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La topographie de temps de paix</head>
           <p>Une fois la guerre de Sept Ans terminée, les ingénieurs géographes des camps et armées continuèrent leurs travaux cartographiques mais
             leur métier évolua sensiblement. En effet, si leurs cartes conservaient un aspect militaire puisque y étaient représentés les forts, les
@@ -172,8 +174,8 @@
             outil pour le transformer. Dans cette évolution, les topographes du Dépôt, pourtant officiers, se rapprochent peu à peu des ingénieurs
             civils.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Le groupe et les hommes</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Le groupe et les hommes</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Etre ingénieur au <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>Depuis le Moyen Âge, l’Etat s’était assuré le concours d’hommes formés aux mathématiques et capables de trouver des solutions aux
             problèmes posés par la nature. Peu à peu l’ingénieur s’était distingué du simple artisan ou de l’entrepreneur. Au XVIII <hi rend="sup">e</hi> siècle, il a acquis une place à part dans la société et le gouvernement commence à se soucier de sa formation. C’est alors que
@@ -189,7 +191,7 @@
             ingénieurs ordinaires obtiendront finalement le privilège d’être appelés <hi rend="i">officiers du corps royal du Génie</hi> et
             préféreront abandonner leur ancien titre, par trop dévalué.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le groupe des ingénieurs géographes militaires</head>
           <p>Contrairement aux ingénieurs du Génie, les ingénieurs géographes militaires peuvent difficilement être assimilés à un corps. En effet,
             certaines conditions nécessaires à la naissance d’un esprit de corps n’apparaissent pas dans l’histoire des topographes du Dépôt de la
@@ -205,7 +207,7 @@
             qui aurait pu rivaliser avec celle du Génie à Mézières. La construction voulue par Berthier d’une identité corporatiste au sein du groupe
             des géographes était trop liée à sa propre personne pour lui survivre et elle s’effondra de fait avec la fin de son commandement.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Etude sociale</head>
           <p>L’origine géographique des ingénieurs du Dépôt de la guerre fait apparaître une forte proportion de Parisiens, de Versaillais et, d’une
             manière plus large, d’hommes issus de la généralité de Paris. Ce recrutement local s’explique sans doute par le lieu d’implantation du
@@ -229,9 +231,7 @@
             grades supérieurs. Le changement politique leur offrait enfin la possibilité d’accéder à des niveaux de responsabilité qui leur étaient
             auparavant interdits du fait de leur naissance modeste.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>L’histoire des ingénieurs géographes militaires est sous-tendue par un paradoxe. Indispensables aux armées en temps de guerre, notamment
           par leurs travaux de reconnaissance, ils éprouvèrent des difficultés à redéfinir leur métier et leurs missions dans la longue période de
           paix qui suivit le dernier grand conflit du règne de Louis XV. Ils pâtirent sans doute aussi de leur manque de visibilité au sein de
@@ -242,13 +242,12 @@
           existence souvent contestée, à parfaire leurs méthodes de travail et à produire des cartes topographiques à la fois scientifiquement
           correctes et esthétiquement remarquables.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Textes réglementaires concernant les ingénieurs géographes militaires. ­ Instructions pour les ingénieurs géographes des camps et armées
           du roi en temps de guerre et en temps de paix. ­ Extraits de la carte des côtes du royaume levée par les ingénieurs géographes militaires de
           1772 à 1785. ­ Arbres généalogiques de quelques ingénieurs. ­ Notices biographiques des quatre-vingt-cinq ingénieurs géographes militaires
           actifs dans la seconde moitié du <num>xviii<hi rend="sup">e</hi></num> siècle.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

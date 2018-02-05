@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Benjamin Aubery du Maurier (1566-1636), ambassadeur protestant du Très Chrétien</title>
-        <title type="sub">« Craindre dieu et servir le roi ».</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Benjamin Aubery du Maurier (1566-1636), ambassadeur protestant du Très Chrétien</title><title xml:lang="fr" type="sub">« Craindre dieu et servir le roi ».</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Martin, Claire">Claire Martin</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2003.pos200318.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Malgré une carrière honorable au service des Réformés puis d’Henri IV et de Louis XIII, Benjamin Aubery, seigneur du Maurier, reste un
           inconnu. Pourtant, ce protestant, fils d’un paysan aisé du Maine, connut une ascension sociale remarquable qui lui permit d’acquérir la
           noblesse, puis de devenir ambassadeur du roi aux Provinces-Unies et conseiller d’Etat. Il était donc intéressant d’étudier, par le biais de
@@ -59,7 +62,7 @@
           homme profondément marqué par la théologie calviniste et les troubles de Religion, qui sut concilier l’obéissance à Dieu et le service du
           Roi, puis tenta de transmettre ces valeurs capitales à ses enfants.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les sources concernant la vie, la carrière et la personnalité de Benjamin Aubery sont nombreuses. Sur le plan professionnel, les dépêches
           diplomatiques de son ambassade à La Haye, de 1613 à 1624, sont conservées en quasi totalité au département des manuscrits occidentaux de la
           Bibliothèque nationale de France (fr. 15955-15959). Sur le plan personnel, les Mémoires inédits de Benjamin Aubery, conservés à la
@@ -71,9 +74,8 @@
           compléter les dépêches diplomatiques de Benjamin Aubery. Il faut enfin y ajouter les ressources des archives départementales de la Sarthe,
           du Maine-et-Loire et de la Vienne.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Du Maine à Paris, les débuts d’une ascension sociale</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Du Maine à Paris, les débuts d’une ascension sociale</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les origines</head>
           <p>L’obscurité de la famille Aubery au <num>xvi<hi rend="sup">e</hi></num>  siècle, avant la naissance de Benjamin Aubery en 1566, ne permet guère
             d’être catégorique. Néanmoins, les Aubery n’étaient nullement originaires d’Angleterre, comme une légende familiale tendait à l’affirmer.
@@ -87,7 +89,7 @@
             la bataille de Coutras, en 1588. L’année suivante, il entrait au service de Duplessis-Mornay, l’un des principaux conseillers d’Henri IV.
          </p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Au service des réformés (1588-1606) : un pari risqué ?</head>
           <p>De 1588 à 1592, Benjamin Aubery fut le secrétaire de Duplessis-Mornay, qu’il quitta pour devenir le secrétaire et l’intendant d’Henri de
             La Tour, vicomte de Turenne et duc de Bouillon, de 1592 à 1606. Ces deux choix montrent l’attachement d’Aubery à la cause réformée, ainsi
@@ -101,7 +103,7 @@
             le duc défia l’autorité du roi. Cette crise provoqua la rupture d’un lien de fidélité qui, au lieu de favoriser la carrière d’Aubery,
             avait failli le perdre dans l’estime d’Henri IV. Benjamin Aubery se tourna alors définitivement vers le service du roi.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">« M’employer honorablement pour le service du roi » : un choix judicieux</head>
           <p>Benjamin Aubery avait eu l’habileté, en même temps qu’il servait Duplessis-Mornay puis Bouillon, de devenir un fidèle du roi de France.
             Le phénomène était alors courant, bien qu’un fidèle dût, en théorie, se vouer corps et âme à son maître. Si Aubery n’avait guère eu de
@@ -118,8 +120,8 @@
             Ravaillac faillit être fatal à la carrière de du Maurier. Il marqua en tout cas un coup d’arrêt important dans son ascension, puisque
             Benjamin Aubery connut la disgrâce pendant trois ans, avant de retrouver la faveur de Marie de Médicis et de Villeroy.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">« Le roi mon maître » Du Maurier ambassadeur de France aux Provinces-Unies (1613-1624)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">« Le roi mon maître » Du Maurier ambassadeur de France aux Provinces-Unies (1613-1624)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La diplomatie française à l’aube du grand siècle</head>
           <p>L’étude du fonctionnement de la diplomatie française au début du <num>xvii<hi rend="sup">e</hi></num>  siècle, ainsi que de l’alliance
             traditionnelle entre la France et les Provinces-Unies, est un préalable indispensable à la bonne compréhension de l’ambassade de du
@@ -133,7 +135,7 @@
             du protestant Henri IV avait permis la conclusion d’une alliance offensive et défensive entre les deux pays. Cette alliance était encore
             en vigueur en 1613, à l’arrivée de Benjamin Aubery à La Haye.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Représenter et informer le roi</head>
           <p>Le travail d’un ambassadeur consistait avant tout à représenter le roi, à parler et à agir en son nom. Les notions de cérémonial et
             d’étiquette, au cœur de tous les gestes d’un ambassadeur en public, ne doivent donc pas être sous-estimées, en particulier dans le cas des
@@ -149,7 +151,7 @@
             Enfin, un bon ambassadeur devait, en même temps qu’il informait Paris, se tenir informé des événements de la Cour. Deux réseaux
             d’informateurs étaient donc nécessaires, l’un à Paris, l’autre à La Haye.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Conserver l’amitié de La Haye tout en gagnant celle de Madrid (1613-1617)</head>
           <p><hi rend="i">Négocier : pour quoi ? </hi> — Pendant l’ambassade de du Maurier, les subsides de la France et l’entretien des troupes
             françaises stationnées aux Provinces-Unies firent constamment l’objet de négociations. Les sommes en jeu, très importantes, étaient en
@@ -166,7 +168,7 @@
             de Xanten en 1614, fut l’occasion pour la France de confirmer son soutien à La Haye, tandis que les Etats-Généraux se déclaraient prêts à
             aider Louis XIII dans sa lutte contre les révoltes nobiliaires.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Du Maurier confronté à une « estrange revolution d’affaires »</head>
           <p>La bonne entente franco-néerlandaise commença à se dégrader en 1617, pour des raisons religieuses et politiques. Un conflit politique
             entre Maurice de Nassau et Barnevelt, les deux principaux dirigeants du pays, se greffa sur la querelle à propos de la prédestination qui
@@ -180,7 +182,7 @@
             De son côté, la France prit des mesures de rétorsion à l’encontre des navires néerlandais. Ces différends commerciaux empêchèrent toute
             négociation politique pendant plusieurs années, alors même que la fin de la Trêve entre Madrid et La Haye approchait.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">De Barnevelt à Richelieu, ou les ambiguïtés de la diplomatie française aux provinces-unies (1619-1624)</head>
           <p>Malgré la crise de 1619, la France et les Provinces-Unies restaient officiellement alliées. Dans les faits, les relations des deux pays
             furent glaciales jusqu’en 1621 au moins. Le rôle de Benjamin Aubery dans cette affaire fut capital, en raison de son ressentiment
@@ -193,8 +195,8 @@
             en préparant les conditions d’un rapprochement politique et militaire entre Paris et La Haye, Benjamin Aubery renouait avec la stratégie
             d’alliances protestantes d’Henri IV, que Richelieu allait, dans une large mesure, reprendre.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Un « homme de bien » au début du <num>xvii<hi rend="sup">e</hi></num>  siècle</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Un « homme de bien » au début du <num>xvii<hi rend="sup">e</hi></num>  siècle</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Un homme de foi cultivé</head>
           <p>Les <hi rend="i">Mémoires</hi> et la correspondance de Benjamin Aubery sont les sources privilégiées qui permettent de mieux connaître
             sa personnalité, sa culture et sa foi. Malgré la construction littéraire inhérente à ce type de sources, Aubery apparaît comme un homme
@@ -208,7 +210,7 @@
             (Horace, Plaute, Sénèque…) et des Modernes (Duplessis-Mornay, Scévole de Sainte-Marthe, Pétrarque…), mémorialiste de talent, il fut
             également épistolier et poète.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Du Maurier père et homme d’affaires</head>
           <p>Placé de facto en marge d’une société majoritairement catholique, Benjamin Aubery fut conduit à nouer des relations étroites, mais pas
             exclusives, avec la communauté protestante, en particulier parisienne. Mariages et parrainages permettaient de construire un réseau de
@@ -223,7 +225,7 @@
             de Benjamin Aubery révèlent donc un « homme de bien » qui, malgré son anoblissement, resta un homme de plume et un robin, préoccupé par le
             service de Dieu, l’obéissance au roi et l’éducation de ses enfants.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les aubery du Maurier après la mort du « fondateur »</head>
           <p>Sept des onze enfants de Benjamin Aubery survécurent à leur père, mort en 1636. Le testament de celui-ci prescrivait un partage
             égalitaire et provoqua une querelle de succession qui fut réglée à l’amiable à l’avantage de l’aîné. Malgré l’éducation robine qu’Aubery
@@ -234,9 +236,7 @@
             se convertissaient. Ce fut notamment le cas de la branche aînée des Aubery du Maurier qui, devenus bons catholiques, adoptèrent au XVIII
 <hi rend="sup">e</hi>  siècle la carrière militaire et la mentalité des nobles d’épée.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>D’abord homme de l’ombre, Benjamin Aubery comprit rapidement que seul le roi, y compris en période de minorité, était à même de récompenser
           les hommes ambitieux et efficaces. Il accomplit donc une superbe carrière, marquée par son anoblissement et par une ambassade prestigieuse
           qui démontra ses talents de négociateur et sa fidélité inébranlable. Les difficultés rencontrées en 1619 et les hésitations de la diplomatie
@@ -249,12 +249,11 @@
           certains se rallièrent au catholicisme, tous firent le choix du service du roi, qui leur permit de poursuivre l’ascension sociale engagée
           par leur ancêtre.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Actes notariés. ­ Correspondance personnelle et professionnelle de Benjamin Aubery. ­ Dépêches diplomatiques (transcription et
           fac-similés). ­ Accord commercial entre la France et les Provinces-Unies (1623). ­ Préambule des Mémoires et méditation sur le Deutéronome
           de Benjamin Aubery.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

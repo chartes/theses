@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Recueil des chartes de l’abbaye Sainte-Geneviève de Paris ([996-1016]-1200)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Recueil des chartes de l’abbaye Sainte-Geneviève de Paris ([996-1016]-1200)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Escher, Noémie">Noémie Escher</author>
       </titleStmt>
       <editionStmt>
@@ -38,28 +40,28 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2009.pos200910.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"/>
-              <div type="sources"/>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">L’abbaye Sainte-Geneviève de Paris <lb/>et son chartrier ([996-1016]-1200)</head>
-        <p>Sainte-Geneviève de Paris est l’une des plus vieilles et prestigieuses abbayes de la capitale. Située au cœur du quartier latin, elle est
+          <div type="introduction"/>
+          <div type="sources"/>
+          <div n="1" type="part"><head n="0" type="chapter">L’abbaye Sainte-Geneviève de Paris <lb/>et son chartrier ([996-1016]-1200)</head>
+        <p n="1" type="chapter">Sainte-Geneviève de Paris est l’une des plus vieilles et prestigieuses abbayes de la capitale. Située au cœur du quartier latin, elle est
           intimement liée à la vie de la ville, dont l’histoire ne pourrait se faire sans prendre en compte celle de cet établissement. Malgré
           l’importance du sujet, les études générales consacrées à l’abbaye Sainte-Geneviève au Moyen Âge sont assez anciennes et souvent dépassées ;
           seuls des aspects spécifiques ont été éclairés par des travaux récents. La plus grande lacune, en matière de publications, touche cependant
           aux sources, puisque aucune édition de quelque ampleur n’a été exclusivement dédiée à Sainte-Geneviève.</p>
-        <p>
+        <p n="2" type="chapter">
           <hi rend="i">Rappel historique.</hi>— Au début du <num>vi</num>
 <hi rend="sup">e</hi> siècle, le roi Clovis et la reine Clotilde initient la construction d’une basilique sur le tombeau de sainte Geneviève,
           et eux-mêmes y trouvent plus tard leur sépulture avec quelques autres membres de la famille royale mérovingienne. La dédicace de l’église
@@ -84,7 +86,7 @@
           l’abbaye se maintient. <num>à</num>l’époque moderne, il faut surtout évoquer la réforme mise en œuvre par le cardinal François de la
           Rochefoucauld, qui vaut à l’abbaye de devenir la maison-mère de la Congrégation de France. La Révolution française met un terme au
           fonctionnement de l’abbaye.</p>
-        <p>
+        <p n="3" type="chapter">
           <hi rend="i">Les chartes et leur tradition. —</hi> Les cent neuf actes édités pour la période [996-1016]-1200 existent actuellement sous
           plusieurs formes. Dans le meilleur des cas, ils ont traversé les siècles sans trop de dommages et sont parvenus jusqu’à nous en original. Il
           en est ainsi pour un peu moins de la moitié des documents du corpus ; ces originaux sont conservés de nos jours dans les séries K, L et S
@@ -98,7 +100,7 @@
           possible de dresser la liste des annotations les plus fréquentes (chiffres romains, analyses médiévales, lettre <hi rend="i">R</hi>, <hi rend="i">simul</hi>, chiffre du folio du cartulaire, chiffre de l’inventaire du <num>xvii</num>
 <hi rend="sup">e</hi> siècle, « cotté… », analyses brèves de l’époque moderne, longues analyses du <num>xviii</num>
 <hi rend="sup">e</hi> siècle) et d’en donner les caractéristiques principales.</p>
-        <p>Ce ne sont cependant pas les originaux qui constituent la source primordiale de l’édition, mais le seul cartulaire médiéval de l’abbaye
+        <p n="4" type="chapter">Ce ne sont cependant pas les originaux qui constituent la source primordiale de l’édition, mais le seul cartulaire médiéval de l’abbaye
           encore conservé (Bibliothèque Sainte-Geneviève, ms. 356) ; par exemple, le texte de la quasi-totalité des bulles des papes antérieures à
           1200 n’est connu que grâce au cartulaire. De plus, ce manuscrit semble être presque exhaustif pour les chartes antérieures à 1200. Très peu
           de chartes du corpus de l’édition ne comportent pas de copie dans le cartulaire. Ce dernier, ouvrage volumineux de plus de deux cents
@@ -118,7 +120,7 @@
           1200 : <hi rend="i">in</hi>
           <hi rend="i">scrinio pape, r[egum], ep[iscoporum], ab, ba et no, ca, no</hi>– tous suivis de chiffres romains – et enfin des chiffres
           romains isolés ; la  comparaison avec les mentions dorsales des originaux n’a pas révélé des parallèles assez certains.</p>
-        <p>Un inventaire détaillé en cinq volumes du <num>xvii</num>
+        <p n="5" type="chapter">Un inventaire détaillé en cinq volumes du <num>xvii</num>
 <hi rend="sup">e</hi> siècle (Archives nationales, LL 1445, S *1622 à S *1625) livre des éléments de connaissance supplémentaires sur le
           chartrier avant le démembrement du fonds à la Révolution. Ces cinq registres sont consacrés respectivement à l’abbaye en général, aux
           possessions à Paris et dans les faubourgs de Paris, ainsi qu’aux possessions extérieures qui occupent deux volumes. À l’intérieur des
@@ -131,7 +133,7 @@
           qui sont certainement survenues dans les siècles précédant la rédaction de l’inventaire, de même que l’organisation globale des cinq
           registres, laissent à penser que ce dernier donne une bonne vue d’ensemble du contenu du chartrier au <num>xvii</num>
 <hi rend="sup">e</hi> siècle.</p>
-        <p>Plusieurs observations peuvent être faites sur les cent neuf chartes antérieures à la fin du <num>xii</num>
+        <p n="6" type="chapter">Plusieurs observations peuvent être faites sur les cent neuf chartes antérieures à la fin du <num>xii</num>
 <hi rend="sup">e</hi> siècle qui forment le corpus édité. Le meilleur témoin de ces cent neuf textes est constitué dans quarante-six cas par
           un ou plusieurs originaux, dans cinquante-neuf cas par une ou plusieurs copies dans le cartulaire et dans deux autres seulement par des
           copies modernes ; enfin, deux actes ne nous sont parvenus que par l’intermédiaire d’analyses de l’inventaire. À cet ensemble s’ajoutent
@@ -158,8 +160,8 @@
           pour les cent cinquante premières années de l’histoire de la tradition écrite de Sainte-Geneviève. L’immense majorité des chartes font
           référence à des possessions extérieures à Paris ; les chartes concernant Paris sont peu nombreuses jusqu’à la fin du <num>xii</num>
 <hi rend="sup">e</hi> siècle.</p>
-      </div><div n="2" type="part"><head n="Deuxième partie">Édition et catalogues</head>
-        <p>
+      </div><div n="2" type="part"><head n="0" type="chapter">Édition et catalogues</head>
+        <p n="1" type="chapter">
           <hi rend="i">Méthode de travail et constitution du corpus</hi>
           <num>. —</num>À la Révolution française, les archives de l’abbaye Sainte-Geneviève ont été saisies et transférées aux Archives nationales,
           où le fonds de l’abbaye a été réparti dans différentes séries du cadre de classement : il s’agit, pour les chartes médiévales, des séries K,
@@ -172,18 +174,18 @@
           la trace a pu y être retrouvée. Elle n’a toutefois pas la prétention d’être exhaustive, même si elle réunit certainement la plus grande
           partie des chartes antérieures à 1200 : il existe sûrement encore quelques chartes contenues dans des sources qui n’ont pu être prises en
           compte dans le cadre limité de ce travail.</p>
-        <p>
+        <p n="2" type="chapter">
           <hi rend="i">Conventions adoptées pour l’édition. —</hi> Les principes suivis tout au long de l’édition sont globalement ceux qui sont
           énoncés dans les <hi rend="i">Conseils pour l’édition des textes médiévaux</hi> publiés par l’École des chartes (fasc. I-II, Paris, 2001).</p>
-        <p><hi rend="i">Édition des actes jusqu’à la fin du <num>xii<hi rend="sup">e</hi></num> siècle.</hi> — L’édition comprend cent neuf chartes
+        <p n="3" type="chapter"><hi rend="i">Édition des actes jusqu’à la fin du <num>xii<hi rend="sup">e</hi></num> siècle.</hi> — L’édition comprend cent neuf chartes
           latines antérieures à 1200. Le texte de chaque acte est précédé d’un numéro d’ordre, de la date de temps et de lieu, d’une analyse en
           français, d’un tableau de la tradition, et accompagné, le cas échéant, d’un apparat critique et d’une annotation historique.</p>
-        <p>
+        <p n="4" type="chapter">
           <hi rend="i">Actes non datés, peut-être antérieurs à 1200</hi>
           <num>. —</num>Trois actes non datés n’ont pu être attribués à une fourchette chronologique précise et restreinte ; ils pourraient être
           éventuellement antérieurs à 1200. Le texte de ces trois actes n’est pas édité. Ils sont simplement présentés avec la date, une analyse en
           français, le tableau de la tradition et l’exposé des arguments touchant à leur datation.</p>
-        <p>
+        <p n="5" type="chapter">
           <hi rend="i">Catalogue des actes de 1201-1222.</hi>— Les trente années de l’abbatiat de Jean de Toucy à Sainte-Geneviève s’achèvent en 1222,
           date qui avait initialement été retenue comme limite chronologique pour l’édition. Les actes du chartrier émis sous son abbatiat sont
           cependant trop nombreux pour être édités ; c’est pourquoi l’édition s’arrête au terme arbitraire de 1200 et le résultat des dépouillements
@@ -191,15 +193,12 @@
           d’eux la date, l’auteur, les cotes des originaux et copies des Archives nationales, les références au cartulaire et à l’inventaire du
             <num>xvii</num>
 <hi rend="sup">e</hi> siècle. En fin de catalogue se trouvent quelques actes sans date qui pourraient remonter à l’abbatiat de Jean.</p>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Annexes</head>
+      </div><div type="conclusion" n="3"><head>Annexes</head>
         <p>Photographies : un original, un dos d’original, une page du cartulaire et une page de l’inventaire. — Graphiques relatifs à la nature du
           meilleur témoin des actes édités, à leur répartition chronologique et à leurs auteurs. — Carte des possessions de Sainte-Geneviève. — <hi rend="i">Index nominum</hi> et <hi rend="i">index rerum.</hi>
       </p>
       </div>
-              <div type="appendix"/>
-          </div>
+          <div type="appendix"/>
       </body>
   </text>
 </TEI>

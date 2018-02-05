@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Les ducs de Bourbon face à la mort : les élections de sépulture (fin XIIIe-début XVIe siècle)</title>
-        <title type="sub"/>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Les ducs de Bourbon face à la mort : les élections de sépulture (fin XIIIe-début XVIe siècle)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Gautier, Marc-Édouard">Marc-Édouard Gautier</author>
       </titleStmt>
       <editionStmt>
@@ -38,23 +40,24 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200206.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
       <p>Les nécropoles et les tombeaux monumentaux  légués par le Moyen Âge n'ont souvent été étudiés que dans des perspectives  d'histoire de l'art et des formes. Par ailleurs, les connaissances  actuelles sur la mort des nobles demeurent influencées par un courant  historique centré sur l'étude des rituels politiques, et notamment des  cérémonies, et n'ont pas été encore modifiées largement par les travaux  plus récents sur la mémoire. Aussi de nombreuses questions méritent-elles  d'être approfondies : quelles sont les attitudes des nobles devant la mort  et les morts ? Comment leur mémoire s'organise-t-elle ? Comment se  répartissent leurs suffrages en vue de leur salut ? En amont des commandes  d'art funéraire et de l'organisation des obsèques, l'élection de sépulture  est une décision importante : elle fixe le cadre principal de la  commémoration du défunt dans l'attente de la résurrection de la chair. Chez  des seigneurs du sang de France comme les ducs de Bourbon, ce choix peut  faire s'entremêler des préoccupations politiques et dynastiques avec des  motivations religieuses. Aussi, partagés entre dévotions personnelles,  fidélité à leurs prédécesseurs, considérations de politique locale ou  nationale et modèle des autres seigneurs des lys, les ducs de Bourbon  changèrent-ils souvent de parti, hésitant entre Paris et Bourbonnais, entre  des églises déjà existantes et celles fondées par eux-mêmes, entre une  séparation superbe et novatrice d'avec leur famille et la proximité de  leurs parents. Enfin, à l'intérieur même de l'église choisie, l'emplacement  exact du tombeau par rapport aux reliques, à la clôture, aux autels et aux  tombeaux déjà en place pouvait lui-même revêtir de multiples  significations, qui rendent du reste indispensable une connaissance  détaillée des aménagements liturgiques de ces édifices pour comprendre  toute la portée des volontés des ducs. Les hésitations des Bourbons se  prolongèrent pendant toute l'histoire de la lignée et entraînèrent la  multiplication des nécropoles ducales, au nombre de cinq, sans compter  divers projets abandonnés.</p>
       
     </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
       <p>
         Les testaments constituent la première  source d'une étude des élections de sépulture puisque celles-ci y font  généralement l'objet d'un article après la confession de foi et  l'institution des héritiers. Ceux des ducs et des duchesses de Bourbon sont  rassemblés pour la plupart dans les fonds des anciennes chambres des  comptes de Moulins, de Villefranche-sur-Saône et de Montbrison, conservés  aux Archives nationales. Etant donné l'importance de la question dans la  préparation à la mort, le choix de la dernière demeure pouvait être  antérieur à la rédaction des dernières volontés et se trouve parfois  exprimé au détour des actes de fondations pieuses. Ceux-ci se retrouvent  également dans les archives des anciennes chambres des comptes des ducs de  Bourbon, mais aussi aux Archives départementales de l'Allier, dans les  fonds des bénéficiaires : le chapitre de Notre-Dame de Moulins, le prieuré  de Souvigny, ainsi que les couvents de Champaigue et de Vichy.
         <lb/>Ces derniers fonds ont permis de restituer l'histoire et les aménagements  liturgiques des nécropoles du Bourbonnais. Le
@@ -71,13 +74,12 @@
       </p>
       
     </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">
+          <div n="3" type="part"><head n="0" type="chapter">
         Entre Paris et Bourbonnais, l'identité d'un lignage à  travers ses nécropoles
       </head>
       
       
-    <div>
+    <div n="1" type="chapter">
           <head n="Chapitre premier">
         L'héritage des sires de Bourbon
       </head>
@@ -100,7 +102,7 @@
       </p>
       
     </div>
-    <div>
+    <div n="2" type="chapter">
           <head n="Chapitre II">
         Entre Paris et Bourbonnais
       </head>
@@ -121,12 +123,12 @@
       </p>
       
     </div>
-  </div><div n="2" type="part"><head n="Deuxième partie">
+  </div><div n="4" type="part"><head n="0" type="chapter">
         L'élection de sépulture de Louis II : le choix de  Souvigny
       </head>
       
       
-    <div>
+    <div n="1" type="chapter">
           <head n="Chapitre premier">
         
           Le prieuré bénédictin de souvigny au XIV
@@ -148,7 +150,7 @@
       </p>
       
     </div>
-    <div>
+    <div n="2" type="chapter">
           <head n="Chapitre II">
         Le choix de Louis II en 1376
       </head>
@@ -163,7 +165,7 @@
       </p>
       
     </div>
-    <div>
+    <div n="3" type="chapter">
           <head n="Chapitre III">
         La fidélité de Louis II à son choix
       </head>
@@ -174,12 +176,12 @@
       </p>
       
     </div>
-  </div><div n="3" type="part"><head n="Troisième partie">
+  </div><div n="5" type="part"><head n="0" type="chapter">
         Souvigny, Saint-Denis du Bourbonnais
       </head>
       
       
-    <div>
+    <div n="1" type="chapter">
           <head n="Chapitre premier">
         
           Charles I
@@ -205,7 +207,7 @@
       </p>
       
     </div>
-    <div>
+    <div n="2" type="chapter">
           <head n="Chapitre II">
         L'affirmation d'une nécropole dynastique
       </head>
@@ -218,17 +220,14 @@
       </p>
       
       </div>
-    </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+    </div><div type="conclusion" n="6"><head>Conclusion</head>
       <p>L'élection de sépulture permit aux ducs de  Bourbon d'affirmer leur identité de princes du sang de France aussi bien  que leur légitimité et leur autorité sur leurs terres. Leur exemple montre  aussi la grande unité qui apparaît dans l'habitude médiévale d'associer à  l'élection de sépulture des fondations pieuses et des projets artistiques  qui devaient fournir le cadre à la commémoration du défunt. Outre une  invitation à mieux connaître les commandes d'œuvres qui permirent  l'aménagement des nécropoles des Bourbons, ce constat appelle aussi à  porter une plus grande attention aux autres fondations pieuses faites par  les ducs en très grand nombre dans leur terres et dans le reste du royaume  en vue de leur salut. Méritent aussi une attention particulière les  cérémonies qui se déroulaient dans leurs nécropoles et dans leurs  chapelles, des funérailles solennelles aux cérémonies quotidiennes qui  devaient y être répétées à perpétuité.</p>
       
     </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
       <p>Dix testaments de ducs et de duchesses de  Bourbon. ­ Fondations de messes dans la prieurale de Souvigny. ­  Délibération de la municipalité de Moulins sur les funérailles de François  de Montpensier, duc de Châtellerault.</p>
       
     </div>
-          </div>
       </body>
   </text>
 </TEI>

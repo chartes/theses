@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Blenheim, Ramillies, Audenarde</title>
-        <title type="sub">Les défaites françaises de la guerre de Succession d’Espagne (1704-1708)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Blenheim, Ramillies, Audenarde</title><title xml:lang="fr" type="sub">Les défaites françaises de la guerre de Succession d’Espagne (1704-1708)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Oury, Clément">Clément Oury</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2005.pos200517.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Les premières batailles de la guerre de Succession d’Espagne ternirent considérablement l’éclat militaire du Grand Siècle français. À la
           fin d’un règne ouvert par la bataille de Rocroi et marqué par une glorieuse accumulation de victoires, les cuisantes défaites de Blenheim,
           sur le Danube, en 1704, de Ramillies, dans le Brabant, en 1706, et d’Audenarde, en Flandre, en 1708, anéantirent la réputation
@@ -68,7 +71,7 @@
           choc de ces défaites complètement inattendues révèle enfin les relations de patronage et de clientèle, les tensions et les jalousies de la
           cour.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Les archives les plus exploitées furent celles du Service historique de l’armée de terre, notamment, dans la série A <hi rend="sup">1</hi>, les volumes de « lettres reçues » des années 1704, 1706 et 1708. On y conserve la correspondance échangée entre, d’une part, le roi
           et Chamillart, et d’autre part, les commandants d’armée, les intendants, les gouverneurs de place, les officiers généraux. De simples
           officiers ou des officiers parlant au nom de leur régiment pouvaient également s’adresser à la cour, que ce soit pour vanter ou défendre
@@ -84,9 +87,8 @@
           admis, le type de blessure reçue et le combat au cours duquel elle a été infligée. Ces dernières informations ont été traitées à l’aide
           d’une base de données sous MySQL.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le rôle de la bataille dans le déroulement des opérations militaires</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le rôle de la bataille dans le déroulement des opérations militaires</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les enjeux stratégiques</head>
           <p>Grâce au jeu des alliances, un relatif équilibre de force fut obtenu entre les deux camps en présence dans les toutes premières années de
             la guerre. Il en résultat une alternance de succès et d’échecs de part et d’autre, les Français reculant dans les Pays-Bas espagnols
@@ -115,7 +117,7 @@
             membres de la Grande Alliance apparemment les plus faibles, comme les princes d’Empire ou la Hollande. L’Espagne en revanche, front grâce
             auquel Philippe V conserva son trône de Roi Catholique, fut négligée par les deux camps.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Campagne et bataille</head>
           <p>
             <hi rend="i">La chronologie des campagnes</hi>. — Les trois batailles de Blenheim, Ramillies et Audenarde se déroulèrent à des moments
@@ -147,7 +149,7 @@
             avait l’autorité. Ce contrôle, plutôt que cette direction, de Versailles, n’a toutefois pas inhibé toutes les actions vigoureuses, ni
             empêché les commandants de s’exposer au hasard d’une bataille.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La bataille décisive à l’aube du <num>xviii<hi rend="sup">e</hi></num> siècle</head>
           <p>Les victoires de Marlborough et du prince Eugène eurent des suites immédiates et spectaculaires. Toute la Bavière fut évacuée par les
             Français après Blenheim, les armées alliées ayant même le temps de revenir sur le Rhin pour s’emparer de Landau, de Trèves et de Trarbach.
@@ -169,8 +171,8 @@
             d’usure, où la seule donnée décisive fut en définitive l’épuisement matériel de l’adversaire, causé par l’impossibilité de pénétrer
             rapidement ses frontières.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les dimensions de la bataille</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les dimensions de la bataille</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La dimension tactique</head>
           <p>Les trois grandes défaites françaises de la guerre de Succession d’Espagne semblent, dans leurs grandes lignes, assez dissemblables. La
             bataille de Blenheim se caractérise par son intensité, c’est-à-dire sa durée – près de douze heures au total – et le fait que la totalité
@@ -203,7 +205,7 @@
             dont 4 000 prisonniers à la seconde, 11 000, dont 4 000 prisonniers à la troisième. Les ennemis eurent toujours des pertes deux à trois
             fois moindres.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">La dimension technique</head>
           <p>L’artillerie, même si elle pouvait infliger de lourdes pertes, comme à Blenheim, n’eut un effet décisif dans aucun de ces trois
             affrontements. Les escadrons de cavalerie, lors d’une bataille, étaient des formations extrêmement lourdes et difficiles à faire
@@ -221,7 +223,7 @@
             besoin, était tout à fait capable de faire face à une charge de cavalerie. En réalité, la clef du succès résidait, comme à Blenheim et
             Ramillies, dans l’intelligente combinaison des deux armes.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">La dimension humaine</head>
           <p>La perception que l’on pouvait avoir du champ de bataille dépendait largement de la place que l’on y occupait. Pour ceux qui, comme les
             généraux, avaient le loisir de se trouver sur une position élevée pour contempler les manœuvres à leur aise, il semble que le panorama ait
@@ -244,8 +246,8 @@
             s’échapper. Les soldats étaient poussés à s’enfuir, malgré les risques encourus, par la rudesse des conditions de détention. Au manque
             récurrent de vivres s’ajoutaient fréquemment, lors des longues captivités, les brimades.</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">La postérité de la bataille</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">La postérité de la bataille</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le temps de la réception des nouvelles</head>
           <p>La nouvelle de la défaite parvenait d’autant plus lentement que l’on était éloigné du champ de bataille. Les Français comprirent que les
             Alliés venaient de remporter la bataille de Blenheim en constatant les manifestations de joie de leurs ennemis, avant même que des lettres
@@ -258,7 +260,7 @@
             prisonniers, qui nous ont été transmises par Dangeau ou Sourches, étaient également souvent fautives. Elles étaient pourtant avidement
             attendues à Versailles, et plongeaient la cour dans le deuil.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Le temps des réactions</head>
           <p>Les premiers touchés par le constat de la défaite furent les militaires eux-mêmes : en eux se disputaient le souvenir de la peur éprouvée
             lors de la bataille et de la retraite, le désespoir de se voir ruinés par la déroute et la colère ressentie envers leurs généraux vaincus.
@@ -290,9 +292,7 @@
             Le désaveu royal ne toucha qu’un colonel après Blenheim, mais certains régiments, particulièrement la gendarmerie, subirent pleinement
             l’ire du Roi-Soleil.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Les armées françaises qui furent défaites à Blenheim, Ramillies et Audenarde souffraient de défauts réels, mais aucun d’entre eux ne
           suffit à lui seul à expliquer la débâcle. Seul le maréchal de Villeroy alliait l’imprudence dans la gestion des opérations à l’incapacité
           sur le champ de bataille. Les autres commandants, plus médiocres il est vrai qu’Eugène et Marlborough, souffrirent surtout de l’absence
@@ -301,12 +301,11 @@
           mais elles restaient terriblement efficaces, et le retard n’apparut manifestement que lors des défaites du milieu du XVIII <hi rend="sup">e</hi> siècle. En définitive, au matin de l’affrontement, aucune armée n’était battue d’avance, et l’issue de la bataille n’était en rien
           déterminée.</p>
       </div>
-              <div type="appendix"><head>Pièces justificatives</head>
+          <div type="appendix" n="7"><head>Pièces justificatives</head>
         <p>Mémoires stratégiques tirés de la correspondance des secrétaires d’État de la guerre et des Affaires étrangères. – Relations des
           différentes batailles. – Rapport du maréchal de Tallard en captivité sur ses conversations avec Marlborough. – Plainte des officiers du
           régiment de Navarre prisonniers de guerre. – Ordres de bataille des armées françaises en 1704 et 1708.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

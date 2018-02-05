@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">« Passé le Détroit »</title>
-        <title type="sub">le périodique &lt;hi xmlns="http://www.tei-c.org/ns/1.0" rend="i"&gt;The Studio&lt;/hi&gt; et la modernité française (1893-1914)</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">« Passé le Détroit »</title><title xml:lang="fr" type="sub">le périodique <hi rend="i">The Studio</hi> et la modernité française (1893-1914)</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Rigeade, Marine">Marine Rigeade</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2010.pos201022.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>En avril 1893, l’homme d’affaires Charles Holme crée à Londres le périodique <hi rend="i">The Studio.</hi> Traduit en français à partir de
           1898, ce magazine mensuel est l’exemple original d’une publication bilingue, alimentée par un réseau international de rédacteurs, et
           diffusée partout en Europe, en Amérique et dans le Commonwealth. Entièrement dévolu aux arts, <hi rend="i">The Studio</hi> fut durablement
@@ -70,7 +73,7 @@
           la composition de sa rédaction, introduit l’étude de la revue : son succès est assuré par l’habileté des stratégies commerciales mises en
           place dès sa création.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>Des collections complètes de <hi rend="i">The Studio</hi> sont disponibles dans les principales bibliothèques européennes et dans nombre de
           bibliothèques universitaires françaises. Tous les numéros parus d’avril 1893 à décembre 1914 ont été exploités.</p>
         <p>Plusieurs titres de la presse d’art européenne, tels que <hi rend="i">The Hobby Horse</hi>, <hi rend="i">Jugend</hi>, <hi rend="i">Art et
@@ -84,10 +87,9 @@
           gettres (454 AP) ou le dossier individuel de carrière administrative de Gabriel Mourey (F²¹ 7885), principal correspondant en France de <hi rend="i">The Studio</hi> entre 1895 et 1902, ainsi que quelques documents manuscrits et sources imprimées rassemblés à la Bibliothèque
           nationale de France, ont permis de tracer la biographie des principaux critiques français ayant collaboré à la publication.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">
+          <div n="3" type="part"><head n="0" type="chapter">
           <hi rend="i">The Studio</hi>, une revue-monde (1893-1914)</head>
-        <div>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La fondation et l’organisation de <hi rend="i">The Studio</hi></head>
           <p>En 1893, Charles Holme s’entoure des spécialistes Lewis Hind et Joseph Gleeson White pour créer à Londres un nouveau magazine consacré à
             l’art moderne : <hi rend="i">The Studio, an Illustrated Magazine of Fine and Applied Art.</hi> Rapidement évincés, Hind et White laissent
@@ -99,7 +101,7 @@
             toute l’Europe, expliquent ces bons résultats. Les comptes s’équilibrent grâce aux seules ventes, la publicité assurant un surcroît de
             chiffre d’affaire.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Un contexte concurrentiel mais favorable</head>
           <p>À la fin du <num>xix<hi rend="sup">e</hi></num> siècle, de nombreuses revues d’art existent, qui semblent autant de précurseurs de <hi rend="i">The Studio.</hi> Mais les progrès importants de l’imprimerie dans le dernier quart du siècle créent un contexte favorable à la
             nouvelle publication, qui exploite au mieux les techniques récentes.</p>
@@ -109,7 +111,7 @@
             certains chroniqueurs, le lien privilégié qu’établit le journal avec ses lecteurs, confirment dans les contenus l’impression de modernité
             qui se dégage de l’aspect de <hi rend="i">The Studio</hi>, et achève de conquérir le public.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Un programme moderne et fédérateur</head>
           <p>Le titre « <hi rend="i">The Studio</hi> » a valeur de programme. Désignant à la fois l’atelier de l’artiste et de l’artisan, il rappelle
             l’égal intérêt du magazine pour les arts appliqués et pour les beaux-arts, et sa propension à analyser la dimension technique, manuelle,
@@ -121,7 +123,7 @@
             modernité de la publication : modernité de son aspect, modernité des artistes qu’elle soutient, modernité de ses principes directeurs qui,
             dans l’esprit des Arts and Crafts, valorisent fortement la production décorative.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">La réception de <hi rend="i">The Studio</hi></head>
           <p>Le magazine a bénéficié d’un accueil extrêmement favorable dans la presse britannique et a exploité ces échos enthousiastes à des fins
             d’auto-promotion. Son succès public est de même certain. Il n’est pas possible, faute de sources archivistiques fiables, d’évaluer les
@@ -139,8 +141,8 @@
               décoration</hi>, il est un véritable épigone du magazine de Charles Holme, au plan matériel comme au plan intellectuel.</p>
           <p/>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Physionomies d’un art nouveau : <hi rend="i">The Studio</hi> et la modernité française (1893-1902)</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Physionomies d’un art nouveau : <hi rend="i">The Studio</hi> et la modernité française (1893-1902)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La France dans <hi rend="i">The Studio</hi></head>
           <p>La France occupe une place privilégiée dans <hi rend="i">The Studio.</hi> Les lecteurs francophones, courtisés par la traduction
             française, peuvent lire des articles nombreux et variés traitant des actualités parisiennes et des artistes peintres ou décorateurs
@@ -154,7 +156,7 @@
             britannique, des Arts and Crafts et des préraphaélites, angliciste distingué qui traduit Poe et Swinburne, il est le pont indispensable
             entre Paris et Londres, qui contribue à populariser la modernité anglaise parmi les intellectuels français dans des ouvrages comme <hi rend="i">Passé le Détroit, la vie et l’art à Londres</hi> (1895), fameuse déambulation dans une capitale artiste et interlope.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Passer le Détroit : commenter l’art français dans une revue anglaise</head>
           <p>L’influence des Arts and Crafts et des préraphaélites, bien qu’appartenant à la génération qui précède celle des hommes de <hi rend="i">The Studio</hi>, est déterminante pour le périodique. La valorisation des arts décoratifs comme arts à part entière, la volonté de
             rupture avec les styles historiques pour inventer des formes modernes adaptées à l’environnement contemporain, l’ambition d’un art total à
@@ -172,7 +174,7 @@
             valeur régis par des préjugés xénophobes.</p>
           <p/>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">De l’art nouveau à paris : <hi rend="i">The Studio</hi> et les arts décoratifs en France</head>
           <p>Les critiques français, qui livrent la majorité des articles sur les arts produits en France, plaident pour l’émergence d’un style
             national cohérent, d’une sorte d’école française d’arts décoratifs. Beaucoup d’espoirs sont placés dans les efforts de Siegfried Bing,
@@ -191,7 +193,7 @@
             position fait exactement écho à la lecture proposée par le magazine de l’état des arts français : tout en bannissant le pastiche, <hi rend="i">The Studio</hi> récuse l’hypothèse d’une rupture brutale pour soutenir une évolution des arts respectueuse des spécificités
             historiques de l’art français.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Les beaux-arts : une sage modernité</head>
           <p>Pierre Puvis de Chavannes et Auguste Rodin sont les deux figures tutélaires de la modernité française. Si le sculpteur laisse peu de
             place à ses jeunes émules dans les colonnes de <hi rend="i">The Studio</hi>, la mort de Puvis de Chavannes en 1898 permet à une nouvelle
@@ -208,7 +210,7 @@
             rémanent entre les deux sphères des arts, qui ne sont qu’exceptionnellement mêlées dans un même article du périodique.</p>
           <p/>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">Internationalisation de la sphère artistique et cosmopolitisme de la presse fin-de-siècle</head>
           <p>La peinture française soutenue par <hi rend="i">The Studio</hi> est sage et consensuelle. Les artistes préférés de la revue sont présents
             dans les collections publiques, parfois auteurs de grands décors pour des bâtiments officiels ; ils sont aussi soutenus par le réseau
@@ -224,8 +226,8 @@
             l’hebdomadaire allemand <hi rend="i">Jugend.</hi>
         </p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Avant-garde et avant-guerre sous l’œil de <hi rend="i">The Studio</hi> (1903-1914)</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Avant-garde et avant-guerre sous l’œil de <hi rend="i">The Studio</hi> (1903-1914)</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Le renouvellement de l’équipe française : un tournant (1902-1914) ?</head>
           <p>En 1902-1903, Gabriel Mourey est écarté au profit d’un critique assez obscur, Henri Fritsch-Estrangin, plus connu sous le pseudonyme
             d’Henri Frantz. Les deux hommes, qui sont peut-être amis, ont une véritable proximité intellectuelle : Henri Frantz est un anglophile, qui
@@ -235,7 +237,7 @@
             la période précédente. Par conséquent, les options esthétiques de la revue concernant les arts français ne se modifient pas. Le soutien à
             un Art nouveau privilégiant les formes simples et solides demeure, ainsi que la préférence pour les peintres de la Société nouvelle.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">
             <hi rend="i">The Studio</hi> et la société française contemporaine</head>
           <p><hi rend="i">The Studio</hi> manifeste un certain conservatisme social. Inquiets face au mode de vie urbain, réprobateurs face aux
@@ -250,7 +252,7 @@
             qui apportent un nouvel éclairage au rapport de <hi rend="i">The Studio</hi> à l’Art nouveau. Ainsi le magazine promeut-il une conception
             anti-élitiste des arts appliqués modernes, permise par une relecture critique des théories de Morris et Ruskin.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">
             <hi rend="i">The Studio</hi> à l’épreuve de l’avant-garde (1907-1914)</head>
           <p>Dans les années qui précédent immédiatement la Première Guerre mondiale, le décalage entre les positions de <hi rend="i">The Studio</hi>
@@ -271,9 +273,7 @@
             en France et en Belgique, alors que l’alliance entre la France et l’Angleterre est célébrée à travers le don d’un ensemble de sculptures
             de Rodin à la nation britannique.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Durant la période qui débute avec la création de la revue, en 1893, et qui s’achève avec le déclenchement de la Grande Guerre en 1914, <hi rend="i">The Studio</hi> se caractérise par son extrême cohérence. Dès 1893, la revue apporte son soutien à l’Art nouveau : soutien
           indéfectible, bien que sélectif. On préfère la ligne droite à la courbe, la rationalité à l’excentricité, les formes épurées à la débauche
           d’ornements. Le magazine prouve ensuite sa fidélité aux décorateurs distingués dans les années 1890, de même que les peintres du juste
@@ -282,11 +282,10 @@
           important jeté entre la Grande-Bretagne et le continent, qui diffuse les créations de l’Art nouveau français et des héritiers des Arts and
           Crafts partout dans le monde.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Textes relatifs à <hi rend="i">The Studio. —</hi> Diagrammes et tableaux concernant les contenus de <hi rend="i">The Studio. —</hi>
           Planches.</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>

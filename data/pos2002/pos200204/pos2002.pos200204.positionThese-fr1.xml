@@ -4,9 +4,11 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Éditer la littérature médiévale en France dans la première moitié du &lt;num xmlns="http://www.tei-c.org/ns/1.0"&gt;xix&lt;hi rend="sup"&gt;e&lt;/hi&gt;&lt;/num&gt; siècle</title>
-        <title type="sub">Éditeurs et éditions en “ Empirie ”.</title>
-        <!--TODO: ajouter ref="https://www.idref.fr/@TODO@" -->
+        <title xml:lang="fr" type="main">Éditer la littérature médiévale en France dans la première moitié du <num>xix<hi rend="sup">e</hi></num> siècle</title><title xml:lang="fr" type="sub">Éditeurs et éditions en “ Empirie ”.</title><!--
+        <title type="main"></title>
+        <title type="sub"></title>
+        TODO: ajouter ref="https://www.idref.fr/@TODO@"
+         -->
         <author key="Clot, Nathalie">Nathalie Clot</author>
       </titleStmt>
       <editionStmt>
@@ -38,19 +40,20 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section']//tei:div[@n='$2' and @type='part'])">
-          <p>This pointer pattern extracts parts</p>
+
+        <cRefPattern n="Partie" matchPattern="(\w+).(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:div[@n='$2' and @type='chapter'])">
+          <p>This pointer pattern extracts chapters</p>
         </cRefPattern>
-        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text//tei:div[@n='$1' and @type='section'])">
-          <p>This pointer pattern extracts Front, Body and Back</p>
+
+        <cRefPattern n="Section" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
+          <p>This pointer pattern extracts introduction, sources, parts, conclusion and appendix</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
   <text>
       <body xml:lang="fr" n="urn:cts:frenchLit:pos2002.pos200204.positionThese-fr1">
-          <div n="1" type="section">
-              <div type="introduction"><head>Introduction</head>
+          <div type="introduction" n="1"><head>Introduction</head>
         <p>Il est souvent dit que le <num>xix<hi rend="sup">e</hi></num> siècle a découvert le Moyen Âge. On sait aussi qu’il s’agit souvent d’un Moyen âge de
           fantaisie : le genre “ troubadour ” ou le “ médiévisme ” sont l’objet de nombreux travaux et d’un intérêt récent dans le monde anglo-saxon.
           La redécouverte des authentiques monuments littéraires médiévaux entre 1800 et 1860 est moins connue. Autant l’apport des savants de la
@@ -62,7 +65,7 @@
           d’érudits spécialisés dans la lecture et la transcription des anciens textes. Il ne s’agissait ni de faire une analyse détaillée de la
           réception de cette production, ni une étude approfondie et originale des méthodes d’édition mises en œuvre.</p>
       </div>
-              <div type="sources"><head>Sources</head>
+          <div type="sources" n="2"><head>Sources</head>
         <p>L’établissement d’un catalogue des éditions de textes littéraires du Moyen Âge de 1800 à 1870 constitue le fondement de ce travail. Il
           comprend quatre cent vingt-cinq références pour lesquelles sont donnés, outre les informations bibliographiques classiques, les prix et
           tirages, lorsque cela a été possible. Ce catalogue a été construit à partir des bibliographies classiques sur le <num>xix<hi rend="sup">e</hi></num>
@@ -75,9 +78,8 @@
           a principalement été fait appel à des sources imprimées pour dessiner le cadre institutionnel de la redécouverte de la littérature médiévale
           avant 1860, au premier rang desquels les publications émanant de ces institutions.</p>
       </div>
-          </div>
-          <div n="2" type="section"><div n="1" type="part"><head n="Première partie">Le contexte historique et institutionnel</head>
-        <div>
+          <div n="3" type="part"><head n="0" type="chapter">Le contexte historique et institutionnel</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">La littérature du Moyen Âge du <num>xvi<hi rend="sup">e</hi></num> au <num>xix<hi rend="sup">e</hi></num> siècle</head>
           <p>La littérature du Moyen Âge, avant la “ redécouverte ” du <num>xix<hi rend="sup">e</hi></num> siècle, n’est jamais tombée dans un oubli complet.
             Son souvenir se perpétue, dans une certaine continuité du <num>xvi<hi rend="sup">e</hi></num> au <num>xvii<hi rend="sup">e</hi></num> siècle, tant dans le
@@ -93,7 +95,7 @@
             européennes, force est de reconnaître que le poids des préjugés négatifs à l’encontre de la littérature médiévale ne se dissipera que
             lentement.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">L’Institut et la connaissance de la littérature du Moyen Âge, de 1800 à 1850</head>
           <p>L’étude des précurseurs de la redécouverte des textes littéraires du Moyen Âge avant 1800 a permis de montrer que leur principale
             tribune et leur champ d’action privilégié étaient l’Académie des Inscriptions. L’institution va garder pendant la première moitié du XIX
@@ -109,7 +111,7 @@
             médiévale reste négligeable, bien que <hi rend="i">l’Histoire littéraire de la France</hi> offre tout au long de la période une bonne
             synthèse de connaissances qui s’accroissent sur le sujet.</p>
         </div>
-        <div>
+        <div n="3" type="chapter">
           <head n="Chapitre III">Les sociétés savantes</head>
           <p>Le tissu des sociétés savantes prend au cours du <num>xix<hi rend="sup">e</hi></num> siècle une densité inédite dans l’Europe tout entière et
             rassemble à Paris, mais aussi dans chaque province, des érudits, notables et autres curieux à la reconquête de l’histoire à travers la
@@ -128,7 +130,7 @@
             en 1846. Sur son modèle, la Société des bibliophiles de Reims apporte, elle aussi, de 1843 à 1845, sa modeste contribution à la
             publication d’œuvres littéraires médiévales inédites.</p>
         </div>
-        <div>
+        <div n="4" type="chapter">
           <head n="Chapitre IV">Le Comité des travaux historiques et la philologie</head>
           <p>Outre la Société de l’histoire de France, une autre création de François Guizot de 1834 joue un rôle non seulement dans la publication
             de textes littéraires médiévaux, mais aussi dans l’émergence de la philologie comme champ d’étude à part entière : le Comité des travaux
@@ -147,7 +149,7 @@
             deux traits font bien du Comité une institution primordiale de la redécouverte de la littérature médiévale au <num>xix<hi rend="sup">e</hi></num>
             siècle.</p>
         </div>
-        <div>
+        <div n="5" type="chapter">
           <head n="Chapitre V">L’enseignement de la littérature médiévale en France entre 1800 et 1860</head>
           <p>
             <hi rend="i">L’enseignement général et l’enseignement supérieur</hi>. ­ La littérature médiévale ne s’impose jamais comme un contenu à
@@ -172,8 +174,8 @@
             de l’Histoire, elle devient un objet d’étude à part entière sous l’impulsion de François Guessard. C’est de ses bancs que s’élancera, à
             partir de 1850, une nouvelle génération de philologues.</p>
         </div>
-      </div><div n="2" type="part"><head n="Deuxième partie">Les publications</head>
-        <div>
+      </div><div n="4" type="part"><head n="0" type="chapter">Les publications</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Les principaux outils intellectuels</head>
           <p>L’édition des textes littéraires du Moyen Âge s’est tout d’abord heurtée à un obstacle de taille : l’absence d’instruments de travail,
             tant en ce qui concerne la connaissance des manuscrits où se trouvaient les textes, que pour l’établissement scientifique des textes.
@@ -194,7 +196,7 @@
             fiables, sans grammaire ni dictionnaire, difficile d’établir un texte de qualité… C’est peut-être là la caractéristique principale de
             l’“ Empirie. ”</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Les éditions de textes du Moyen Âge de 1800 à 1870 : un essai d’analyse</head>
           <p>De 1800 à 1870, plus de quatre cents textes médiévaux sont portés à la connaissance du public. On peut, au vu de la répartition au cours
             du temps du nombre des éditions de textes littéraires médiévaux, diviser la période en trois parties : la première embrasse les années
@@ -227,8 +229,8 @@
             d’éditions incunables. Objets d’érudition ou de curiosité, les textes médiévaux ne sont assurément pas des objets d’une activité
             éditoriale rentable !</p>
         </div>
-      </div><div n="3" type="part"><head n="Troisième partie">Les artisans de l’« Empirie »</head>
-        <div>
+      </div><div n="5" type="part"><head n="0" type="chapter">Les artisans de l’« Empirie »</head>
+        <div n="1" type="chapter">
           <head n="Chapitre premier">Francisque Michel, le défricheur (1809-1887)</head>
           <p>Un portrait sommaire de cette personnalité marquante du monde de l’Empirie s’imposait : auteur de plus de cent ouvrages, dont
             cinquante-cinq éditions de textes littéraires du Moyen Âge, inédits pour quarante d’entre eux, il mérite plus que tout autre le titre de
@@ -244,7 +246,7 @@
             fonctions officielles importantes au sein des institutions encadrant la vie érudite en France durant la période, ni à la postérité que
             garantit l’art d’avoir su former des successeurs aptes à remplacer, dépasser mais aussi perpétuer les enseignements reçus.</p>
         </div>
-        <div>
+        <div n="2" type="chapter">
           <head n="Chapitre II">Paulin Paris (1800-1881), un amoureux de la littérature médiévale</head>
           <p>La personnalité la plus attachante parmi ces artisans de la période empirique reste celle de Paulin Paris : animé d’un amour sincère
             pour la littérature médiévale, à une époque où un mépris doublé d’incompréhension est plus souvent de mise, c’est un passeur incomparable.
@@ -256,9 +258,7 @@
             son fils Gaston Paris, il peut être considéré comme le seul à avoir appliqué l’enthousiasme des Romantiques aux sévères études
             philologiques.</p>
         </div>
-      </div></div>
-          <div n="3" type="section">
-              <div type="conclusion"><head>Conclusion</head>
+      </div><div type="conclusion" n="6"><head>Conclusion</head>
         <p>Si les éditions de textes n’ont eu aucune influence ou presque sur les écrivains romantiques qui ne les lisaient pas et en savaient au
           mieux ce qu’en disaient les comptes-rendus de Jubinal dans <hi rend="i">La Quotidienne</hi>, la sensibilité de l’époque a sans doute été
           pour beaucoup dans le tropisme qui a poussé une cinquantaine d’hommes vers les bibliothèques à la recherche des anciens manuscrits. Les
@@ -269,7 +269,7 @@
           largement inédits. Parfois à compte d’auteur, rarement aidés par des souscriptions publiques, ces artisans de l’« Empirie » ont établi par
           leurs tâtonnements les bases de la recherche future. En 1870, tout était à refaire certes, mais presque plus rien n’était à découvrir.</p>
       </div>
-              <div type="appendix"><head>Annexes</head>
+          <div type="appendix" n="7"><head>Annexes</head>
         <p>Catalogue des éditions de textes médiévaux publiées de 1800 à 1870. - Répertoire biographique. - La connaissance de l’ancienne littérature
           française au <num>xviii<hi rend="sup">e</hi></num> siècle : une bibliographie. - Le contenu et les rédacteurs de <hi rend="i">l’Histoire littéraire de
             la France</hi> de 1808 à 1881. - Ministres de l’Instruction publique entre 1830 et 1863 ; Principales mesures ayant joué en faveur d’une
@@ -277,7 +277,6 @@
           1858. - Note soumise à H. Fortoul par P. Paris sur quelques points du rapport de F. Guessard sur la <hi rend="i">Collection des anciens
             poètes de la France</hi>(AN, 246 AP, 16). - Catalogue de la librairie Silvestre, 1835 (AN, F<hi rend="sup">17</hi> 2895).</p>
       </div>
-          </div>
       </body>
   </text>
 </TEI>
