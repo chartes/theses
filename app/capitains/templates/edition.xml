@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- TODO<?xml-model href="position.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="position-TODO" xml:lang="fr">
+<TEI xmlns="http://www.tei-c.org/ns/1.0"  xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <!--
-        <title type="main"></title>
-        <title type="sub"></title>
-        TODO: ajouter ref="https://www.idref.fr/@TODO@"
-         -->
         <author key=""></author>
       </titleStmt>
       <editionStmt>
@@ -28,7 +23,7 @@
         <idno type="URI">http://www.sudoc.fr/013565311</idno>
       </seriesStmt>
       <sourceDesc>
-        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de @PLACE_HOLDER@ pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
+        <bibl><title>Positions des thèses soutenues par les élèves de la promotion de PLACE_HOLDER pour obtenir le diplôme d’archiviste paléographe</title>, <pubPlace>Paris</pubPlace>, <publisher>École des chartes</publisher>, <date>1999</date>, <biblScope unit="page" from="33" to="43">33-43</biblScope>.</bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>

@@ -1,5 +1,7 @@
+from capitains.capitainizer.position import PositionThese
+import lxml.etree as ET
 
-from capitains.position import PositionThese
+import os
 
 SRC_PATH="../.."
 SRC_FOLDERS=[
@@ -24,12 +26,14 @@ SRC_FOLDERS=[
 DEST_PATH="../../data"
 METADATA = '../../theses.csv'
 
-
 if __name__ == "__main__":
-
-    pt = PositionThese(SRC_PATH, METADATA, '__cts__textgroup.xml', '__cts__work.xml', 'edition.xml')
+    pt = PositionThese(SRC_PATH, METADATA,
+                       'templates/__cts__textgroup.xml',
+                       'templates/__cts__work.xml',
+                       'templates/edition.xml')
 
     for folder_name in SRC_FOLDERS:
-        pt.write_textgroup(folder_name, DEST_PATH)
-        pt.write_work(folder_name, DEST_PATH)
-        pt.write_edition(folder_name, SRC_PATH, DEST_PATH)
+        if pt.write_textgroup(folder_name, DEST_PATH):
+            if pt.write_work(folder_name, DEST_PATH):
+                pt.write_edition(folder_name, SRC_PATH, DEST_PATH)
+
