@@ -14,10 +14,11 @@ XML_NS = "http://www.w3.org/XML/1998/namespace"
 
 class PositionThese:
 
-    def __init__(self, src_path, metadata, textgroup_template, work_template, edition_template):
+    def __init__(self, src_path, metadata, textgroup_template, work_template, edition_template, refs_decl_template):
         self.__tg_template_filename = textgroup_template
         self.__w_template_filename = work_template
         self.__e_template_filename = edition_template
+        self.__enconding_desc_template_filename = refs_decl_template
         self.__metadata = defaultdict(str)
         self.__src_path = src_path
         self.__nsmap = {"ti": 'http://www.tei-c.org/ns/1.0'}
@@ -36,8 +37,8 @@ class PositionThese:
         parts = filter(None, parts)
         return ''.join(parts).strip()
 
-    def src_edition(self, pos_year, tri):
-        src_edition_fn = os.path.join(self.__src_path, pos_year, "{0}.xml".format(tri))
+    def src_edition(self, folder_name, id):
+        src_edition_fn = os.path.join(self.__src_path, folder_name, "pos{0}.xml".format(id))
         if not os.path.isfile(src_edition_fn):
             return ET.Element("div")
         return ET.parse(src_edition_fn)
@@ -45,6 +46,10 @@ class PositionThese:
     @property
     def __tg_template(self):
         return ET.parse(self.__tg_template_filename)
+
+    @property
+    def __refs_decl_template(self):
+        return ET.parse(self.__enconding_desc_template_filename)
 
     @property
     def __wg_template(self):
@@ -60,7 +65,7 @@ class PositionThese:
                 tree_str = ET.tounicode(tree, pretty_print=True)
                 f.write(tree_str)
 
-    def write_textgroup(self, pos_year, dest_path):
+    def write_textgroup(self,  pos_year, dest_path):
         # get a fresh new etree
         template = self.__tg_template
         # Update the URN part : pos -> pos2015
@@ -90,7 +95,7 @@ class PositionThese:
             tag, ns, self.stringify(node))
         )
 
-    def write_work(self, pos_year, dest_path):
+    def write_work(self, folder_name, pos_year, dest_path, from_scratch=True):
         for meta in [m for m in self.__metadata.values() if m["promotion"] == str(pos_year)]:
             # get a fresh new etree
             template = self.__wg_template
@@ -114,8 +119,12 @@ class PositionThese:
                 work.set("groupUrn", "{0}{1}".format(work.get('groupUrn'), pos_year))
 
                 # title
-                src_edition = self.src_edition(pos_year, meta["tri"])
-                titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
+                if from_scratch is False:
+                    src_edition = self.src_edition(folder_name, meta["id"])
+                    titles = src_edition.xpath("//ti:teiHeader//ti:titleStmt//ti:title", namespaces=self.__nsmap)
+                else:
+                    src_edition = self.src_edition(folder_name, meta["id"])
+                    titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
 
                 template.getroot().insert(0, self.encapsulate("title", titles[0], CTS_NS))
 
@@ -137,7 +146,8 @@ class PositionThese:
 
         return True
 
-    def write_edition(self, pos_year, src_path, dest_path):
+    def write_edition(self, folder_name, pos_year, src_path, dest_path):
+        refs_decl = self.__refs_decl_template
         for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
             # get a fresh new etree
             template = self.__e_template
@@ -148,10 +158,14 @@ class PositionThese:
                 "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]), "positionThese-fr1.xml"
             ))
 
-            src_edition = self.src_edition(pos_year, meta["tri"])
+            src_edition = self.src_edition(folder_name, meta["id"])
 
             root = template.getroot()
             root.set("{0}id".format("{" + XML_NS + "}"), "position-{0}".format(meta["id"]))
+
+            #refs_decl
+            header = template.xpath("//ti:teiHeader//ti:encodingDesc", namespaces=self.__nsmap)
+            header[0].append(refs_decl.getroot())
 
             # titles
             titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
@@ -229,3 +243,26 @@ class PositionThese:
 
             # write the edition file
             self.write_to_file(e_filepath, template)
+
+    def add_refs_decl(self, folder_name, pos_year, src_path, dest_path):
+        refs_decl = self.__refs_decl_template
+
+        for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
+            # get a fresh new etree
+            template = self.src_edition(folder_name, meta["id"])
+
+            e_dirname = os.path.join(dest_path, "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]))
+
+            e_filepath = os.path.join(e_dirname, "{0}.{1}.{2}".format(
+                "pos{0}".format(meta["promotion"]), "pos{0}".format(meta["id"]), "positionThese-fr1.xml"
+            ))
+
+            #src_edition = self.src_edition(folder_name, meta["id"])
+
+            header = template.xpath("//ti:teiHeader//ti:encodingDesc", namespaces=self.__nsmap)
+            header[0].append(refs_decl.getroot())
+
+            # write the edition file
+            self.write_to_file(e_filepath, template)
+
+        return True
