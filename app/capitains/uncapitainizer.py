@@ -1,4 +1,3 @@
-from capitains.capitainizer.position import PositionThese
 import lxml.etree as ET
 
 import os
@@ -23,7 +22,7 @@ SRC_FOLDERS=[
     '2015'
 ]
 
-DEST_PATH="../../data"
+SRC_PATH="../../data"
 METADATA = '../../theses.csv'
 
 
@@ -31,7 +30,7 @@ def uncapitanize(dest):
     positions = []
 
     for folder_name in SRC_FOLDERS:
-        edition_path = os.path.join(DEST_PATH, "pos"+folder_name)
+        edition_path = os.path.join(SRC_PATH, "pos"+folder_name)
         editions = []
         for dirname, dirnames, filenames in os.walk(edition_path):
             for subdirname in dirnames:

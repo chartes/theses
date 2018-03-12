@@ -1,3 +1,4 @@
+import csv
 import os
 from collections import defaultdict
 from itertools import chain
@@ -21,30 +22,11 @@ class PositionThese:
         self.__src_path = src_path
         self.__nsmap = {"ti": 'http://www.tei-c.org/ns/1.0'}
 
-        # remove double quotes then trim
-        clean = lambda s: s[1:-1].strip()
+        with open(metadata, 'r', newline='') as meta:
+            reader = csv.DictReader(meta, delimiter=',', quotechar='"', dialect="unix")
+            for line in reader:
+                self.__metadata[line["id"]] = line
 
-        with open(metadata, 'r') as meta:
-            for line in meta.readlines()[1::]:
-                line = line.split(",")
-                line.extend([""] * (13 - (len(line) - 1)))  # fill with empty str
-                self.__metadata[line[0]] = {
-                    "id": line[0],
-                    "promotion": line[1],
-                    "tri": clean(line[2]),
-                    "nom": clean(line[3]),
-                    "prenom": clean(line[4]),
-                    "sexe": line[5],
-                    "titre": clean(line[6]),
-                    "notBefore": line[7],
-                    "notAfter": line[8],
-                    "authorKey": clean(line[9]),
-                    "authorRef": clean(line[10]),
-                    "ppn_position": line[11],
-                    "ppn_these": line[12],
-                    "an_these": line[13],
-                    "sous_titre": ""
-                }
 
     @staticmethod
     def stringify(node):
@@ -83,14 +65,17 @@ class PositionThese:
         template = self.__tg_template
         # Update the URN part : pos -> pos2015
         textgroup = template.xpath("//ti:textgroup", namespaces=template.getroot().nsmap)
-        textgroup[0].set("urn", textgroup[0].get("urn") + pos_year)
 
         if textgroup is None:
             raise ValueError('No textgroup detected in the textgroup template document')
         else:
+            textgroup[0].set("urn", textgroup[0].get("urn") + pos_year)
             # Update the groupe name : Position de thèse -> Position de thèse 2015
             groupname = template.xpath("//ti:groupname", namespaces=template.getroot().nsmap)
             groupname[0].text = "{0} {1}".format(groupname[0].text, pos_year)
+
+            year = template.xpath("//ti:textgroup//dc:date", namespaces=template.getroot().nsmap)
+            year[0].text=pos_year
 
             # write files
             tg_dirname = os.path.join(dest_path, textgroup[0].get("urn").split(':')[-1])
@@ -106,18 +91,28 @@ class PositionThese:
         )
 
     def write_work(self, pos_year, dest_path):
-        for meta in [m for m in self.__metadata.values() if m["promotion"] == pos_year]:
+        for meta in [m for m in self.__metadata.values() if m["promotion"] == str(pos_year)]:
             # get a fresh new etree
             template = self.__wg_template
 
             # Update the URN parts : pos -> pos2015
             work = template.xpath("//ti:work", namespaces=template.getroot().nsmap)[0]
-            work.set("urn", "{0}{1}.pos{2}".format(work.get('urn'), pos_year, meta["id"]))
-            work.set("groupUrn", "{0}{1}".format(work.get('groupUrn'), pos_year))
+
+            year = template.xpath("//ti:work//dc:date", namespaces=template.getroot().nsmap)
+            year[0].text=pos_year
+
+            creator = template.xpath("//ti:work//dc:creator", namespaces=template.getroot().nsmap)
+            creator[0].text = "{0}, {1}".format(meta["nom"], meta["prenom"])
+
+            is_version_of = template.xpath("//ti:work//dct:relation", namespaces=template.getroot().nsmap)
+            is_version_of[0].text = is_version_of[0].text + meta["ppn_these"]
 
             if work is None:
                 raise ValueError('No work detected in the work template document')
             else:
+                work.set("urn", "{0}{1}.pos{2}".format(work.get('urn'), pos_year, meta["id"]))
+                work.set("groupUrn", "{0}{1}".format(work.get('groupUrn'), pos_year))
+
                 # title
                 src_edition = self.src_edition(pos_year, meta["tri"])
                 titles = src_edition.xpath("//ti:front/ti:head", namespaces=self.__nsmap)
@@ -138,7 +133,6 @@ class PositionThese:
                 if os.path.isdir(w_dirname):
                     shutil.rmtree(w_dirname)
                 os.makedirs(w_dirname)
-
                 self.write_to_file(os.path.join(w_dirname, "__cts__.xml"), template)
 
         return True
@@ -171,9 +165,9 @@ class PositionThese:
                 sub_title.set('type', 'sub')
                 titleStmt[0].insert(1, sub_title)
 
-            # author : en attendant meta["authorKey"] et meta["authorRef"]
             auth = template.xpath("//ti:teiHeader//ti:author", namespaces=self.__nsmap)
-            auth[0].set("key", "{0}, {1}".format(meta["nom"], meta["prenom"]))
+            auth[0].set("key", meta["authorKey"])
+            auth[0].set("ref", meta["authorRef"])
             auth[0].text = "{1} {0}".format(meta["nom"], meta["prenom"])
 
             # publicationStmt

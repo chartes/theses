@@ -1,0 +1,13 @@
+<ti:work xmlns:cpt="http://purl.org/capitains/ns/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ti="http://chs.harvard.edu/xmlns/cts" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" urn="urn:cts:frenchLit:pos2015.pos201508" xml:lang="fr" groupUrn="urn:cts:frenchLit:pos2015">
+
+  <ti:title xml:lang="fr">Thomas d’Aquin contre Grégoire Palamas</ti:title><ti:edition urn="urn:cts:frenchLit:pos2015.pos201508.positionThese-fr1" workUrn="urn:cts:frenchLit:pos2015.pos201508">
+  <ti:label xml:lang="fr">Thomas d’Aquin contre Grégoire Palamas</ti:label><ti:description xml:lang="fr">La <emph xmlns="http://www.tei-c.org/ns/1.0">Réfutation de la profession de foi des Athonites</emph> de Prochoros Kydonès</ti:description></ti:edition>
+  
+  <cpt:structured-metadata>
+    <dc:publisher xml:lang="fr">École nationale des chartes</dc:publisher>
+    <dc:date rdf:datatype="xsd:gYear">2015</dc:date>
+    <dct:relation xml:lang="fr">http://www.sudoc.fr/183697987</dct:relation>
+    <dc:creator xml:lang="fr">Feeser, Romain</dc:creator>
+  </cpt:structured-metadata>
+
+</ti:work>

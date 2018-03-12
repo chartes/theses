@@ -1,7 +1,8 @@
-from capitains.capitainizer.position import PositionThese
 import lxml.etree as ET
 
 import os
+
+from app.capitains.capitainizer.position import PositionThese
 
 SRC_PATH="../.."
 SRC_FOLDERS=[

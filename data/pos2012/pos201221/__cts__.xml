@@ -1,0 +1,13 @@
+<ti:work xmlns:cpt="http://purl.org/capitains/ns/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ti="http://chs.harvard.edu/xmlns/cts" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" urn="urn:cts:frenchLit:pos2012.pos201221" xml:lang="fr" groupUrn="urn:cts:frenchLit:pos2012">
+
+  <ti:title xml:lang="fr">L’histoire de Troie au <num xmlns="http://www.tei-c.org/ns/1.0">xv</num><hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup">e</hi> siècle</ti:title><ti:edition urn="urn:cts:frenchLit:pos2012.pos201221.positionThese-fr1" workUrn="urn:cts:frenchLit:pos2012.pos201221">
+  <ti:label xml:lang="fr">L’histoire de Troie au <num xmlns="http://www.tei-c.org/ns/1.0">xv</num><hi xmlns="http://www.tei-c.org/ns/1.0" rend="sup">e</hi> siècle</ti:label><ti:description xml:lang="fr">Édition critique de la première traduction française de l’<hi xmlns="http://www.tei-c.org/ns/1.0" rend="i">Historia destructionis Troiae</hi> de Guido delle Colonne</ti:description></ti:edition>
+  
+  <cpt:structured-metadata>
+    <dc:publisher xml:lang="fr">École nationale des chartes</dc:publisher>
+    <dc:date rdf:datatype="xsd:gYear">2012</dc:date>
+    <dct:relation xml:lang="fr">http://www.sudoc.fr/159123704</dct:relation>
+    <dc:creator xml:lang="fr">Milhat, Morgane</dc:creator>
+  </cpt:structured-metadata>
+
+</ti:work>
