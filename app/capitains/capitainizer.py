@@ -1,8 +1,4 @@
-import lxml.etree as ET
-
-import os
-
-from app.capitains.capitainizer.position import PositionThese
+from capitainizer.position import PositionThese
 
 SRC_PATH="../.."
 SRC_FOLDERS=[
@@ -38,6 +34,7 @@ if __name__ == "__main__":
         if pt.write_textgroup(year, DEST_PATH):
             #if pt.write_work(folder_name, year, DEST_PATH):
             #    pt.write_edition(folder_name, year, SRC_PATH, DEST_PATH)
+
+            # from_scratch = False : se base sur les fichiers decapitainisés
             if pt.write_work(folder_name, year, DEST_PATH, from_scratch=False):
                 pt.add_refs_decl(folder_name, year, SRC_PATH, DEST_PATH)
-

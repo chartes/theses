@@ -1,0 +1,12 @@
+language: python
+
+python:
+  - '3.5'
+
+install:
+  - pip3 install HookTest>=1.0.0
+
+before_script:
+  - cd app/capitains && python3 capitainizer.py
+
+script: hooktest ./ --scheme tei --workers 3 --verbose 10 --console table --countword
