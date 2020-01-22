@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0"
-    version="2.0">
-       <xsl:template match="lb">
-            <xsl:text>&#xa;</xsl:text>
-            <xsl:apply-templates/>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns="http://www.w3.org/TR/xhtml1/strict"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <xsl:template match="/">
+        <xsl:apply-templates/>
+    </xsl:template>
+    <xsl:template match="tei:teiHeader">
+    </xsl:template>
+    <xsl:template match="tei:lb">
+        <xsl:text> </xsl:text>
     </xsl:template>
 </xsl:stylesheet>
