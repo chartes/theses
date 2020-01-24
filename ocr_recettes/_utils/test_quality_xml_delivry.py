@@ -227,7 +227,9 @@ def check_image(xml_file, namespaces, name_file):
         listcontrol.append(page.split("/")[-1])
     mypath = "{}/ENCPOS/{}/{}/TIFF/".format(path_image, name_file.split("_")[1],name_file.split(".")[0])
     list_image_brut = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    if list_image_brut == listcontrol:
+    print(len(list_image_brut))
+    print(len(listcontrol))
+    if set(list_image_brut) == set(listcontrol):
         return ("Toutes les images ont été traités")
     elif list_image_brut < listcontrol:
         return ("Manque les images {} dans les images envoyées".format(str(list(set(listcontrol)-set(list_image_brut)))))
@@ -250,7 +252,7 @@ def flat_gen(x):
 def test_file(name_file, d_recollement):
     # si le fichier ne peut être parsé, c'est qu'il est non conforme et donc on renvoie directement l'erreur
     try:
-        tree = etree.parse("../ENCPOS_{}/{}".format(name_file.split("_")[1], name_file))
+        tree = etree.parse("../ENCPOS_{}_01/{}".format(name_file.split("_")[1], name_file))
     except:
         return list([name_file,"Non-conforme"])
     namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
@@ -278,12 +280,12 @@ def recup_files_xml(name_folder):
         #si on demande de traiter une décénnie
     elif name_folder[-1] == "*":
         for x in range(0, 10):
-            for root, dirs, files in walk("{}/ENCPOS_{}".format(path_text, name_folder[:-1]+str(x))):
+            for root, dirs, files in walk("{}/ENCPOS_{}_01".format(path_text, name_folder[:-1]+str(x))):
                 for name in files:
                     list_name.append(name)
     #Traite une année
     else:
-        for root, dirs, files in walk("{}/ENCPOS_{}".format(path_text, name_folder)):
+        for root, dirs, files in walk("{}/ENCPOS_{}_01".format(path_text, name_folder)):
             for name in files:
                 list_name.append(name)
     return list_name
@@ -337,5 +339,7 @@ def main(name):
         writer = csv.writer(f)
         writer.writerow(wrong_files_names)
         writer.writerow(list_files_unexist)
+
+
 if __name__ == "__main__":
     main()
