@@ -250,7 +250,7 @@ def flat_gen(x):
 def test_file(name_file, d_recollement):
     # si le fichier ne peut être parsé, c'est qu'il est non conforme et donc on renvoie directement l'erreur
     try:
-        tree = etree.parse("../ENCPOS_{}_01_20/{}".format(name_file.split("_")[1], name_file))
+        tree = etree.parse("../ENCPOS_{}/{}".format(name_file.split("_")[1], name_file))
     except:
         return list([name_file,"Non-conforme"])
     namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
