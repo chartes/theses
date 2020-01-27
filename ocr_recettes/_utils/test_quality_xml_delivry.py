@@ -227,12 +227,10 @@ def check_image(xml_file, namespaces, name_file):
         listcontrol.append(page.split("/")[-1])
     mypath = "{}/ENCPOS/{}/{}/TIFF/".format(path_image, name_file.split("_")[1],name_file.split(".")[0])
     list_image_brut = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(len(list_image_brut))
-    print(len(listcontrol))
     if set(list_image_brut) == set(listcontrol):
         return ("Toutes les images ont été traités")
     elif list_image_brut < listcontrol:
-        return ("Manque les images {} dans les images envoyées".format(str(list(set(listcontrol)-set(list_image_brut)))))
+        return ("Manque les images {} dans les images envoyées".format(str(list(set (listcontrol)-set(list_image_brut)))))
     elif list_image_brut > listcontrol:
         return ("Manque les images {} sur le fichier xml".format(str(list(set(list_image_brut)-set(listcontrol)))))
 
@@ -254,7 +252,7 @@ def test_file(name_file, d_recollement):
     try:
         tree = etree.parse("../ENCPOS_{}_01/{}".format(name_file.split("_")[1], name_file))
     except:
-        return list([name_file,"Non-conforme"])
+        return list([name_file, "Non-conforme"])
     namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
     rep_pagination = pagination(tree, namespaces, d_recollement, name_file)
     rep_check_image = check_image(tree, namespaces, name_file)
@@ -328,7 +326,7 @@ def main(name):
     list_control.append(["article","Fichier XML conforme ?", "Nombre d'intertitre > 3", "Suite logique des pages", "1er - dernier page correspond avec le fichier de recollement" ,"Toutes les images envoyés numérisés", "Faute d'orthographe","Liste des fautes d'orthographe commençant par une majuscule","Faute de mots commencant avec une minuscule","Faute de typographie","Schéma RNG présent","Schéma tei2html.xsl présent","Fichier valide","Auteur présent", "Titre présent", "Auteur correspond au fichier de recollement" ])
     for name_file in list_file:
         list_control.append(test_file(name_file, d_recollement))
-    f = open('IsakoFilesChecking.csv', 'w')
+    f = open('IsakoFilesChecking_{}.csv'.format(name), 'w')
     with f:
         writer = csv.writer(f)
         for row in list_control:
