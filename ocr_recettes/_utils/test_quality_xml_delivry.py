@@ -8,10 +8,13 @@ from os import listdir
 from os.path import isfile, join
 from os import walk
 import collections
+import re
+from unicodedata import normalize
 
 # Différent path pour trouver les données nécessairs à l'exécution de ces tests
 path_image = "/media/corentink/INTENSO/IIIF_Image/"
 path_text = "/home/corentink/Bureau/theses/ocr_recettes"
+list_apo_error = []
 
 
 # Affiche la liste des positions encore non livrés par le prestataire :
@@ -98,8 +101,25 @@ def ocrquality(xml_file):
     dict_error_gram = dict(Counter(list_error_gram))
     dict_unknow_world = dict(Counter(list_unknown_word))
     dict_minus_world = dict(Counter(list_minus_word))
+    del dict_minus_world["xml"]
+    number_minus_world = sum(value for value in dict_minus_world.values())
     #renvoie une liste avec les différents dictionnaires sous forme de string
-    return [str(dict_error_spell), str(dict_unknow_world), str(dict_minus_world), str(dict_error_gram)]
+    return [str(dict_error_spell), str(dict_unknow_world), str(dict_minus_world), str(number_minus_world), str(dict_error_gram)]
+
+
+def apostrophe_error(xml_file):
+    xslt = etree.parse("Extractionfichier.xsl")
+    transform = etree.XSLT(xslt)
+    text_file = transform(xml_file)
+    text_file = str(text_file)
+    list_word_text = re.split("[ \t]", text_file)
+    list_word_error = []
+    for word in list_word_text:
+        if word is not "":
+            if word[-1] == "'" or word[-1] == "’" or word[-1] == '"':
+                list_word_error.append(normalize('NFKD', word))
+    return list_word_error
+
 
 
 # check si la pagination a le bon ordre et si elle correspond au fichier de recollement
@@ -128,12 +148,19 @@ def pagination (xml_file, namespaces, d_recollement, name_file):
     else:
         list_return.append(False)
     dict_file = d_recollement.get(name_file.split(".")[0])
-    if dict_file.get("num:pp").split("-")[0] != str(listcontrol[0]):
+    try :
+        print(dict_file.get("num:pp"))
+    except:
+        print(name_file.split(".")[0])
+    num_pair = int(dict_file.get("benc:pp").split("-")[-1]) % 2
+    print(num_pair)
+        #Test première page est la même et que la dernière est la même ou que la dernière est la même +1 si elle est pair
+    if dict_file.get("benc:pp").split("-")[0] != str(listcontrol[0]):
         list_return.append("premier page non ok")
-    elif dict_file.get("num:pp").split("-")[-1] != str(listcontrol[-1]):
+    elif (num_pair == 1 and int(dict_file.get("benc:pp").split("-")[-1]) + 1 != listcontrol[-1]) or (num_pair == 0 and dict_file.get("benc:pp").split("-")[-1] != str(listcontrol[-1])):
         list_return.append("dernière page non ok")
     else :
-        list_return.append("pagination ok")
+        list_return.append("True")
     return list_return
 
 
@@ -156,9 +183,9 @@ def check_number_head(xml_file, namespaces):
     for page in xml_file.xpath("//tei:body/tei:div/tei:head", namespaces=namespaces):
         counter_control += 1
     if counter_control < 4:
-        return "Il y a moins de 3 intertitres"
+        return "False"
     else:
-        return "Le nombre d'intertitres semblent normales"
+        return "True"
 
     
 # Validation XML des fichiers livrés et vérification des appels au schéma et à la transformation
@@ -184,6 +211,7 @@ def structure_xml(xml_file):
     return list_rep
 
 
+
 #Contrôle la présence d'une balise auteur et d'une balise titre et compare la balise auteur avec celle du fichier de recollement
 def metadata_xml (xml_file, namespaces, d_recollement, name_file):
     '''
@@ -206,10 +234,15 @@ def metadata_xml (xml_file, namespaces, d_recollement, name_file):
         list_rep.append(True)
     except:
         list_rep.append(False)
-    if author.text == "{} {}".format(dict_file.get("site :prenom"), dict_file.get("site :nom")):
+    if author.text == "{} {}".format(dict_file.get("site:prenom"), dict_file.get("site:nom")):
         list_rep.append(True)
     else:
         list_rep.append(False)
+        try:
+            name_author = "{} {}".format(dict_file.get("site:prenom"), dict_file.get("site:nom")) + " - " + author.text
+            list_rep.append(name_author)
+        except:
+            list_rep.append("")
     return list_rep
 
 
@@ -230,10 +263,9 @@ def check_image(xml_file, namespaces, name_file):
     if set(list_image_brut) == set(listcontrol):
         return ("Toutes les images ont été traités")
     elif list_image_brut < listcontrol:
-        return ("Manque les images {} dans les images envoyées".format(str(list(set (listcontrol)-set(list_image_brut)))))
+        return ("Manque les images {} dans les images envoyées".format(str(list(set(listcontrol)-set(list_image_brut)))))
     elif list_image_brut > listcontrol:
         return ("Manque les images {} sur le fichier xml".format(str(list(set(list_image_brut)-set(listcontrol)))))
-
 
 
 def flat_gen(x):
@@ -250,40 +282,40 @@ def flat_gen(x):
 def test_file(name_file, d_recollement):
     # si le fichier ne peut être parsé, c'est qu'il est non conforme et donc on renvoie directement l'erreur
     try:
-        tree = etree.parse("../ENCPOS_{}_01/{}".format(name_file.split("_")[1], name_file))
+        tree = etree.parse("../ENCPOS_{}/{}".format(name_file.split("_")[1], name_file))
     except:
         return list([name_file, "Non-conforme"])
     namespaces = {'tei': 'http://www.tei-c.org/ns/1.0'}
+    rep_apostrophe_error = apostrophe_error(tree)
+    list_apo_error.append(rep_apostrophe_error)
     rep_pagination = pagination(tree, namespaces, d_recollement, name_file)
     rep_check_image = check_image(tree, namespaces, name_file)
     rep_ocr = ocrquality(tree)
     rep_structure = structure_xml(tree)
     rep_number_head = check_number_head(tree, namespaces)
     rep_metadata = metadata_xml(tree, namespaces, d_recollement, name_file)
-    return list(flat_gen([name_file,"Conforme", rep_number_head, rep_pagination, rep_check_image,rep_ocr, rep_structure,rep_metadata]))
+    return list(flat_gen([name_file,"Conforme", rep_number_head, rep_pagination, rep_check_image, rep_ocr, str(rep_apostrophe_error), rep_structure, rep_metadata]))
 
 
 def recup_files_xml(name_folder):
     '''
-
     :param name_folder:
     :return: renvoie la liste des noms des fichiers à traiter
     '''
     #récupère la liste des fichiers xml présent dans le fichier demandé
     list_name = []
-    print(name_folder)
     #Si un seul fichier demandé
     if ".xml" in name_folder:
         list_name.append(name_folder)
         #si on demande de traiter une décénnie
     elif name_folder[-1] == "*":
         for x in range(0, 10):
-            for root, dirs, files in walk("{}/ENCPOS_{}_01".format(path_text, name_folder[:-1]+str(x))):
+            for root, dirs, files in walk("{}/ENCPOS_{}".format(path_text, name_folder[:-1]+str(x))):
                 for name in files:
                     list_name.append(name)
     #Traite une année
     else:
-        for root, dirs, files in walk("{}/ENCPOS_{}_01".format(path_text, name_folder)):
+        for root, dirs, files in walk("{}/ENCPOS_{}".format(path_text, name_folder)):
             for name in files:
                 list_name.append(name)
     return list_name
@@ -291,8 +323,8 @@ def recup_files_xml(name_folder):
 
 def recup_files_recollement ():
     d_recollement = {}
-    with open("ENCPOS_recolement_BENC.csv",newline='') as csvfile:
-        fichierrecollement = csv.reader(csvfile, delimiter='\t', quotechar='|')
+    with open("../ENCPOS_recolement_BENC.tsv",newline='') as tsvfile:
+        fichierrecollement = csv.reader(tsvfile, delimiter='\t', quotechar='|')
         flag = True
         for lignerecollement in fichierrecollement:
             tempd = {}
@@ -305,7 +337,7 @@ def recup_files_recollement ():
                 except :
                    continue
             try :
-                d_recollement[lignerecollement[6]] = tempd
+                d_recollement[lignerecollement[0]] = tempd
             except:
                 break
     return d_recollement
@@ -323,16 +355,18 @@ def main(name):
     list_files_unexist = check_files_exist(list_file, d_recollement)
     check_files_folder(name, list_file)
     list_control = []
-    list_control.append(["article","Fichier XML conforme ?", "Nombre d'intertitre > 3", "Suite logique des pages", "1er - dernier page correspond avec le fichier de recollement" ,"Toutes les images envoyés numérisés", "Faute d'orthographe","Liste des fautes d'orthographe commençant par une majuscule","Faute de mots commencant avec une minuscule","Faute de typographie","Schéma RNG présent","Schéma tei2html.xsl présent","Fichier valide","Auteur présent", "Titre présent", "Auteur correspond au fichier de recollement" ])
+    list_control.append(["article","Fichier XML conforme ?", "Nombre d'intertitre > 3", "Suite logique des pages", "1er - dernier page correspond avec le fichier de recollement" ,"Toutes les images envoyés numérisés", "Faute d'orthographe","Liste des fautes d'orthographe commençant par une majuscule","Faute de mots commencant avec une minuscule","Nombre de faute minuscule","Faute de typographie", "Apostrophe problème", "Schéma RNG présent","Schéma tei2html.xsl présent","Fichier valide","Auteur présent", "Titre présent", "Auteur correspond au fichier de recollement", "Auteur recollement - Auteur xml" ])
     for name_file in list_file:
         list_control.append(test_file(name_file, d_recollement))
+    flat_list_apo = [item for sublist in list_apo_error for item in sublist]
+    dict_error_apo = dict(Counter(flat_list_apo))
     f = open('IsakoFilesChecking_{}.csv'.format(name), 'w')
     with f:
         writer = csv.writer(f)
         for row in list_control:
             writer.writerow(row)
 
-    f = open('Missingfiles.csv', 'w')
+    f = open('Missingfiles_{}.csv'.format(name), 'w')
     with f:
         writer = csv.writer(f)
         writer.writerow(wrong_files_names)
